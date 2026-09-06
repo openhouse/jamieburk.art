@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { validateCloseReadingEvidence } from "./close-reading-evidence.mjs";
 
 const scriptPath = fileURLToPath(import.meta.url);
 const defaultRepoRoot = path.resolve(path.dirname(scriptPath), "../..");
@@ -122,6 +123,7 @@ export function evaluateAudioKnowledgeJob(job = {}) {
   for(const key of ["census_recorded","all_attributed_speakers_covered","every_observation_cited","speaker_attribution_checked","current_source_revision","reciprocal_graph_links","uncertainties_preserved","substantive_reading_complete"]){
     if(personReturns[key]!==true)closeReadingReasons.push("person-return-"+key.replaceAll("_","-")+"-missing");
   }
+  closeReadingReasons.push(...validateCloseReadingEvidence(closeReading.evidence));
   if (closeReadingReasons.length) return result("hold", "close-reading", closeReadingReasons);
 
   const graphReasons = [];
@@ -304,7 +306,13 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       contract.person_readings?.unresolved_speakers_retained === true &&
       contract.person_readings?.missing_body_creates_explicit_gap === true &&
       contract.person_readings?.automatic_candidate_is_completed_close_reading === false &&
-      contract.person_readings?.participant_approval_inferred === false
+      contract.person_readings?.participant_approval_inferred === false,
+    evidence_backed_close_reading:
+      contract.close_reading_evidence?.schema_version === 1 &&
+      contract.close_reading_evidence?.checkbox_only_completion === false &&
+      contract.close_reading_evidence?.semantic_certification === false &&
+      contract.close_reading_evidence?.artifact_scoped_authority_required === true &&
+      contract.close_reading_evidence?.acceptance_within_cited_exchange_required === true
   };
   const hardFailures = Object.entries(hardCriteria)
     .filter(([, passed]) => !passed)
@@ -318,7 +326,7 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       actual
     };
   });
-  const candidateFiles = [rfcPath, contractPath, suitePath, "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs", "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs"];
+  const candidateFiles = [rfcPath, contractPath, suitePath, "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs", "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs", "scripts/rfcs/close-reading-evidence.mjs", "evals/knowledge-bank/fixtures/close-reading-evidence.json"].sort();
   const fingerprint = createHash("sha256");
   for (const relativePath of candidateFiles) {
     fingerprint.update(relativePath);
@@ -339,6 +347,7 @@ export function evaluateAudioKnowledgeWorkflowRFC(options = {}) {
       results
     },
     candidate_fingerprint: fingerprint.digest("hex"),
+    candidate_files: candidateFiles,
     implementation_authorized: contract.authority?.implementation_authorized ?? false,
     live_external_upload_authorized:
       contract.authority?.live_external_upload_authorized ?? false,

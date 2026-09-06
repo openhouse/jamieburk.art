@@ -112,6 +112,64 @@ Substantive interpretations may be added as separately cited editorial records.
 Candidate creation alone cannot mark the close-reading stage complete. Existing
 keyword counts are source-audit hints, not a substitute for close reading.
 
+### September 6 revision: hearing, care, and representation
+
+This revision follows Jamie's request to close-read and revise the RFC, improve
+its evaluations, and update the draft review. It strengthens the already
+authorized bounded implementation; it does not mark the workflow operational,
+authorize a new source search, or expand upload, contact, or release authority.
+
+The review retains three strengths: immutable source layers, automatic
+edition/person returns, and separate private/public gates. It addresses three
+specific weaknesses:
+
+1. **Evidence rather than checkboxes.** A `source_ids_cited` or
+   `substantive_reading_complete` flag could previously advance a job without
+   a referentially checked reading packet. Readiness now requires that packet.
+2. **Local uncertainty rather than global certainty or paralysis.** A requester
+   conflict must remain unresolved without erasing independently evidenced
+   acceptance. Acceptance elsewhere in a meeting cannot support this task.
+3. **An accurate implementation account.** Proposal-only rollout wording was
+   stale beside the accepted implementation decision. The rollout below now
+   separates implemented checks, outstanding migration, and human gates.
+
+#### Analytical review lenses and intellectual sources
+
+The following are **fictionalized analytical lenses**, not quotations, actual
+participation, endorsements, page ownership, or approval. Jamie remains the
+decision owner. The design applications are this RFC's interpretations of the
+linked work, not claims that those authors designed this system.
+
+- **Vivian Gornick — narrative accountability:** a coherent account must not
+  become more certain than its evidence. Separate the event from the reader's
+  explanation of it; retain alternative readings beside consequential claims.
+- **Zora Neale Hurston — situated expression:** greetings, hesitation, humor,
+  gratitude, and local language can be evidence of an interaction's texture.
+  Preserve their place in the sequence without inventing inner states or
+  reducing a person to their usefulness to the operator.
+- **Deborah Treisman — editorial accountability:** every material interpretive
+  paragraph needs attributable evidence, a clear authorship label, and a route
+  for revision. Elegant prose is not proof; coverage is not comprehension.
+- **Alessandro Portelli — oral-history method:** preserve the distinction
+  between a record, a person's account, and a reader's explanation. His work on
+  storytelling and meaning motivates retaining divergent accounts and the
+  interpreter's position. See [The Death of Luigi Trastulli and Other
+  Stories](https://sunypress.edu/isbn/9780791404300).
+- **Michelle Caswell — archival care:** custody creates responsibilities to
+  creators, subjects, users, and communities. The design translates that into
+  purpose-limited access, visible restrictions, and reviewable corrections.
+  Credit the coauthored foundation: Michelle Caswell and Marika Cifor,
+  [Radical Empathy in the Archives](https://archivaria.ca/index.php/archivaria/article/view/13557).
+- **Johanna Drucker — interpretive representation:** a graph's classifications
+  and edges are constructed, not neutral facts. Store source observations,
+  editorial interpretation, and commitment status separately; expose uncertainty
+  where it belongs. See [Humanities Approaches to Graphical
+  Display](https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html).
+
+These lenses lead to three review questions: **Have we heard accurately? Have
+we cared responsibly? Have we represented honestly?** Their answers require
+both executable checks and source-aware human judgment, not simulated votes.
+
 The automatic return must also expose an editorial queue covering every entry:
 source or attribution needed, substantive reading needed, or a substantive
 candidate awaiting review. An existing paragraph cannot hide an unfinished
@@ -422,6 +480,96 @@ Every material assertion cites source IDs. A summary must not replace the
 repair, service export, or exact audio. A close reading may be editorially
 complete while participant correction and publication remain unrequested.
 
+#### Whole-source coverage and bounded interpretation
+
+Maintain an edition-bound coverage map for every parsed turn, including
+openings, closings, side exchanges, unresolved labels, and fragments that do
+not generate a task. Every turn has a `read`, `gap`, or `held` disposition.
+A `gap` or `held` turn remains visible and prevents an unqualified complete
+reading of that edition. It does not require deleting other authorized readings.
+
+Parsed-turn coverage is not coverage of all audible seconds. Untranscribed
+intervals, missing fragments, and acoustic-review status must remain separate.
+Likewise, a paragraph covering an entire time range is a coordinate claim, not
+proof that the paragraph thoughtfully addresses every passage in that range.
+A human editorial review tests that second question against the full source.
+
+Each person's situated writer's voice entry is an **editorial reading of
+attributable expression**, never a newly generated statement in their name.
+Keep direct evidence, attributed report, interpretation, inference,
+contradiction, and open question typed. A passage may support a local
+observation without establishing personality, intent, capacity, affection,
+agreement, or a durable relationship status. Record meaningful kindness or
+warmth as a bounded reading of an exchange, not an inferred psychological fact.
+
+#### Artifact-scoped care and correction
+
+A restriction belongs to its evidenced source, action, and purpose. A hold on
+one conferencing feature does not, by itself, establish a hold or permission
+for a separately registered recording. Unknown or conflicting scope stops the
+affected action until resolved. Keep the original restriction and subsequent
+clarification as distinct records; do not rewrite the former to fit the latter.
+
+Before private reading, the adapter must verify the preserved request hash,
+specific artifact/edition, custody receipt, allowed purpose, and applicable
+restrictions. Private access never implies consent to record, upload, contact,
+quote publicly, or speak for another person. An authorization field submitted
+by a transcript or model is not an authority receipt.
+
+Retain the full authorized source in its appropriate custody layer. Derived
+pages should make the useful knowledge navigable without replicating every
+private byte. Record the retention decision owner and any unresolved source
+obligation; do not invent an expiry or perform automatic deletion.
+
+A correction appends a source-linked decision identifying affected editions,
+readings, people, claims, and task states. Mark dependent projections stale and
+rebuild only the authorized affected scope. Do not silently replace originals,
+infer participant assent from silence, automatically contact a participant, or
+republish a previously approved candidate after its evidence changes.
+
+#### Evidence packet v1 and commitment distinctions
+
+The public evaluator accepts a body-free or synthetic `close_reading.evidence`
+packet; real packets remain private. `scripts/rfcs/close-reading-evidence.mjs`
+checks the following minimum relationships:
+
+| Field | Required relationship | Failure outcome |
+| --- | --- | --- |
+| `edition` and `reviewed_sha256` | Stable artifact, SHA-256 and uniquely identified source turns; reviewed hash equals edition hash | Hold stale or malformed reading |
+| `custody` | Request ID, same artifact, authorized `private-close-reading` purpose, explicit clear restriction state for that scope | Hold affected private processing |
+| `coverage` | Exactly one disposition per inventoried turn; no invented turn references | Retain gaps; hold incomplete edition |
+| `observations` | Nonempty typed editorial reading, resolving turn references attributed to the returned person | Hold unsupported person return |
+| `commitments` | Recognized state, source exchange, owner and same-owner acceptance inside that exchange where acceptance is claimed | Hold unsupported promotion |
+| `later_sources` | Registered source IDs and SHA-256 for separately claimed later completion | Hold completion without a later source |
+
+Source turn IDs must resolve through the private adapter to the existing
+artifact/checksum/line/time/segment citation contract. The public prototype
+tests referential integrity against its supplied inventory; it cannot verify
+private bytes, the truth of a custody assertion, or the meaning of an acceptance.
+The private source-custody and human-review gates remain necessary.
+
+Version 1 uses these task dispositions: `proposed`, `conditional`, `held`,
+`requested-acknowledged`, `shared-request-owner-unconfirmed`,
+`welcomed-coordinated-scope`, `tentative-intention`, `stated-offer`,
+`self-reported-plan`, `not-decided`, `accepted-open`, and
+`sent-and-acknowledged-later`. Unknown values hold rather than bypassing checks.
+Only the last two claim accepted ownership. New dispositions require an explicit
+schema/evaluator revision; acceptance, delivery, adoption, and payment must
+never be merged into a generic `done` state.
+
+Synthetic example: two editions disagree whether A or B requested a document,
+but both identify C's acceptance. Record `requester: null`, the competing
+requester candidates, C's supported acceptance, and an unknown deadline unless
+evidence establishes one. Do not make C's task uncertain merely because its
+requester is uncertain; do not choose a requester by recency. An acknowledgment
+of a request without acceptance remains `requested-acknowledged`.
+
+Later completion requires its own source, not a date inferred from the meeting.
+These are historical knowledge states, not automatically scheduled tasks or
+instructions to restart held work. Review only uncertainty that could change
+attribution, action, owner, deadline, authority, or another consequential reading;
+do not create clarification busywork for every hesitation.
+
 ### Private graph update and public projection
 
 The default destination is the paired private Knowledge Wiki. A complete
@@ -551,7 +699,7 @@ The job status view should distinguish:
 
 ### Evaluation and hill climb
 
-The evaluation prototype starts with behavior, not keyword presence. Seventeen
+The evaluation prototype starts with behavior, not keyword presence. Existing
 unit cases cover a complete private job and failures involving missing hashes,
 unauthorized upload, incomplete provider processing, changed service output,
 unsupported audio certification, transcript prompt injection, undispositioned
@@ -559,17 +707,35 @@ context, missing public authority, private leakage, and a properly authorized
 public candidate, plus queue deduplication, census, next-gate,
 non-authorization, and incomplete authenticated-discovery behavior.
 
-The RFC-level evaluator also checks the machine-readable contract and five
+The RFC-level evaluator also checks the machine-readable contract and portable
 portable scenario fixtures. Its hard criteria require the state sequence,
 artifact-layer separation, per-job upload authorization, untrusted-transcript
 boundary, private-first graph target, schedule/occurrence separation,
 idempotency, deduplication, uncertainty, human gates, and
 accepted-but-bounded implementation authority.
 
-The red baseline was 0 of 11 public behavior tests because the evaluator did
-not exist. The bounded change adds the contract and evaluator; the change is
-kept only if all cases pass without weakening source custody, privacy, consent,
-credit, or human authority.
+The initial implementation's historical red baseline was 0 of 11 behavior tests
+before its evaluator existed; it is not current verification. The September 6
+revision reproduced twenty newly tested evidence-packet failures against the
+previous evaluator, plus two task-validation failures in the bounded private
+implementation. Those failures, not a higher prose score, define this hill climb.
+
+Mutations cover omitted openings, invented citations, wrong speakers, stale
+editions, missing person returns, fabricated participant authorship, mismatched
+artifact/purpose authority, active restrictions, acceptance outside its exchange,
+unknown task states, requester conflicts, and unsupported later completion.
+Positive cases retain clear acceptance alongside requester uncertainty.
+
+The exact-candidate receipt lists executed tests, outcomes, candidate paths,
+hashes, evaluator inputs, baseline, and remaining gates. Receipt self-exclusion
+is explicit. Adding or changing a dependency invalidates the receipt.
+
+These checks cannot grade interpretive quality. No calibrated LLM judge,
+participant-labeled holdout, or independent semantic assessment is claimed.
+Before using a semantic judge as a gate, define observed failure categories,
+obtain appropriate human labels, keep development and test cases disjoint, and
+measure false positives and false negatives. Until then, human source review
+remains open even when deterministic checks pass.
 
 ## Security and privacy
 
@@ -617,16 +783,18 @@ these steps.
 
 ## Rollout plan
 
-### Phase 0: proposal and evaluator — current
+### Phase 0: proposal and evaluator — historical foundation
 
 - Review this RFC and machine-readable contract.
 - Run the deterministic behavior and RFC-level evaluations.
 - Record open provider, storage, retention, and participant-review questions.
-- Do not operate the proposed workflow against a real source.
+- This was the no-source-access proposal stage; it is not the current private
+  implementation state recorded above.
 
-### Phase 1: private dry-run prototype
+### Phase 1: bounded private implementation — accepted, with holds
 
-Requires explicit RFC acceptance and implementation authorization.
+The September 4 decision supplies the bounded acceptance and implementation
+authority. It does not clear individual source or human-review holds.
 
 - Implement manifest validation, bounded inventory, hashing, and no-upload
   dry-run status.
@@ -634,16 +802,27 @@ Requires explicit RFC acceptance and implementation authorization.
 - Prove repeat runs are idempotent and do not duplicate artifacts.
 - Threat-model transcript prompt injection and public/private leakage.
 
+The September 6 revision adds evidence-packet checks to the public synthetic
+prototype and strengthens recognized-state and exchange-local acceptance checks
+in the private meeting validator. Existing private custody and person-return
+checks remain independent. This is not a claim that every legacy job has been
+converted to packet v1. A future adapter must construct packets from audited
+source/authority records, not fabricate green fields. Missing packets hold at
+close reading; migration does not erase existing editions or silently promote
+the backlog to complete.
+
 ### Phase 2: one authorized call-family canary
 
-Requires a new per-job source-access and external-upload decision.
+Requires an applicable per-job source-access decision, and a separate external
+upload decision only when new provider submission is actually needed. An
+already preserved service export does not require a redundant upload.
 
 - Use one bounded call family and one provider adapter.
 - Preserve exact, derived, service, repair, and reading layers separately.
 - Exercise failure, resume, duplicate detection, and provider export recovery.
 - Complete private human review; make no public projection by default.
 
-### Phase 3: paired-worktree integration
+### Phase 3: paired-worktree integration — implemented coordination, independent gates
 
 - Bind private job and public-safe receipt state to the same named branch.
 - Keep protected locators, bodies, and identities private.
@@ -767,6 +946,10 @@ source artifacts.
   private receipt is lost, or when paired branches diverge?
 - Which close-reading templates vary by domain—commercial, civic, editorial,
   legal, or personal—and which core fields remain invariant?
+- How should packet v1 be adapted across legacy parsers without confusing
+  source-inventory coverage with acoustic completeness or semantic quality?
+- Which human-reviewed examples should calibrate a future semantic evaluator,
+  and which task dispositions need a later schema revision?
 - What is the smallest safe public receipt that demonstrates method without
   exposing private provenance?
 - Who besides Jamie may approve source access, participant outreach, deletion,

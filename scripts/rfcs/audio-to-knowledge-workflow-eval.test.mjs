@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFileSync } from "node:fs";
+
+const evidenceFixture = () => JSON.parse(readFileSync(new URL("../../evals/knowledge-bank/fixtures/close-reading-evidence.json", import.meta.url), "utf8"));
 
 const evaluatorModule = await import("./audio-to-knowledge-workflow-eval.mjs").catch(() => null);
 
@@ -44,6 +47,7 @@ function completePrivateJob(overrides = {}) {
       participant_review_completed: false
     },
     close_reading: {
+      evidence: evidenceFixture(),
       source_ids_cited: true,
       fact_report_inference_separated: true,
       contradictions_and_gaps_preserved: true,
@@ -85,6 +89,55 @@ test("automatic entries cannot imply participant approval or bypass missing pers
 async function evaluate(job) {
   assert.ok(evaluatorModule, "audio-to-knowledge evaluator module must exist");
   return evaluatorModule.evaluateAudioKnowledgeJob(job);
+}
+
+test("a close-reading checkbox cannot replace its evidence packet", async () => {
+  const job=completePrivateJob(); delete job.close_reading.evidence;
+  assert.deepEqual(await evaluate(job), {decision:"hold",stage:"close-reading",reasons:["reading-evidence-missing"]});
+});
+
+const evidenceMutations = [
+  ["omitted opening", p=>p.coverage.shift(), "reading-turn-uncovered:opening"],
+  ["stale source edition", p=>p.reviewed_sha256="b".repeat(64), "reading-source-revision-mismatch"],
+  ["duplicate source turn", p=>p.edition.turns.push({...p.edition.turns[0]}), "reading-turn-id-invalid"],
+  ["explicit source gap", p=>{p.coverage[0].disposition="gap";p.coverage[0].reason="Unavailable words";}, "reading-turn-not-read:opening"],
+  ["invented citation", p=>p.observations[0].turn_ids=["nonexistent"], "reading-observation-citation:reading-a"],
+  ["wrong speaker", p=>p.observations[0].person_id="person.b", "reading-observation-attribution:reading-a"],
+  ["synthetic participant authorship", p=>p.observations[0].authorship="participant", "reading-authorship:reading-a"],
+  ["missing person reading", p=>p.observations.pop(), "reading-person-return-missing:person.b"],
+  ["wrong processing purpose", p=>p.custody.scope="publication", "reading-custody-scope-invalid"],
+  ["wrong authorized artifact", p=>p.custody.artifact_id="another-recording", "reading-custody-scope-invalid"],
+  ["missing authority receipt", p=>p.custody.request_id="", "reading-custody-scope-invalid"],
+  ["active artifact restriction", p=>p.custody.restriction="held", "reading-custody-scope-invalid"],
+  ["acceptance by another person", p=>p.commitments[0].acceptance_turn_ids=["request"], "reading-acceptance:task-a"],
+  ["acceptance outside the cited exchange", p=>p.commitments[0].turn_ids=["request"], "reading-acceptance:task-a"],
+  ["invented task state", p=>p.commitments[0].state="accepted-maybe", "reading-task-state:task-a"],
+  ["disputed requester promoted", p=>p.commitments[0].requester="person.a", "reading-requester-conflict:task-a"],
+  ["uncited later completion", p=>{p.commitments[0].state="sent-and-acknowledged-later";p.commitments[0].later_source_ids=["unregistered"];}, "reading-later-evidence:task-a"],
+  ["claimed count replaces actual coverage", p=>{p.coverage=[];p.covered_turn_count=3;}, "reading-turn-uncovered:opening"],
+  ["empty interpretation", p=>p.observations[0].text=" ", "reading-observation-content:reading-a"],
+];
+for(const [name,mutate,reason] of evidenceMutations){
+  test(`evidence packet rejects ${name}`, async()=>{
+    const job=completePrivateJob(); mutate(job.close_reading.evidence);
+    const actual=await evaluate(job);
+    assert.equal(actual.decision,"hold"); assert.equal(actual.stage,"close-reading");
+    assert.ok(actual.reasons.includes(reason),JSON.stringify(actual));
+  });
+}
+
+test("unresolved requester coexists with cited acceptance and no invented deadline", async()=>{
+  const job=completePrivateJob();
+  assert.equal(job.close_reading.evidence.commitments[0].requester,null);
+  assert.deepEqual(await evaluate(job),{decision:"ready-for-private-review",stage:"private-review",reasons:[]});
+});
+for(const field of ["coverage","observations","commitments","later_sources"]){
+  test(`missing ${field} is not an empty audited evidence layer`,async()=>{
+    const job=completePrivateJob(); delete job.close_reading.evidence[field];
+    const actual=await evaluate(job);
+    assert.equal(actual.decision,"hold");
+    assert.ok(actual.reasons.includes("reading-evidence-shape-invalid:"+field));
+  });
 }
 
 function completeQueue() {

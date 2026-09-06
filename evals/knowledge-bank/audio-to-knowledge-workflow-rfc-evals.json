@@ -45,6 +45,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -222,6 +223,7 @@
           "audio_certified": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -302,6 +304,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -382,6 +385,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -462,6 +466,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -542,6 +547,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -622,6 +628,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -702,6 +709,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -782,6 +790,7 @@
           "participant_review_completed": false
         },
         "close_reading": {
+          "evidence": {"schema_version":1,"edition":{"artifact_id":"synthetic-repaired-edition","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","turns":[{"id":"opening","speaker_id":"person.a"},{"id":"request","speaker_id":"person.a"},{"id":"acceptance","speaker_id":"person.b"}]},"reviewed_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","custody":{"artifact_id":"synthetic-repaired-edition","request_id":"synthetic-request","scope":"private-close-reading","decision":"authorized","restriction":"clear-for-this-scope"},"coverage":[{"turn_id":"opening","disposition":"read"},{"turn_id":"request","disposition":"read"},{"turn_id":"acceptance","disposition":"read"}],"observations":[{"id":"reading-a","person_id":"person.a","kind":"interpretation","authorship":"editorial","turn_ids":["opening","request"],"text":"The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},{"id":"reading-b","person_id":"person.b","kind":"interpretation","authorship":"editorial","turn_ids":["acceptance"],"text":"This response accepts the particular return without establishing a wider role."}],"commitments":[{"id":"task-a","state":"accepted-open","owner":"person.b","turn_ids":["request","acceptance"],"acceptance_turn_ids":["acceptance"],"requester":null,"requester_candidates":["person.a","person.b"],"deadline":null}],"later_sources":[]},
           "source_ids_cited": true,
           "fact_report_inference_separated": true,
           "contradictions_and_gaps_preserved": true,
@@ -817,6 +826,583 @@
         "stage": "close-reading",
         "reasons": [
           "person-return-substantive-reading-complete-missing"
+        ]
+      }
+    },
+    {
+      "id": "missing-reading-evidence",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "reading-evidence-missing"
+        ]
+      }
+    },
+    {
+      "id": "uncovered-opening",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "evidence": {
+            "schema_version": 1,
+            "edition": {
+              "artifact_id": "synthetic-repaired-edition",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "turns": [
+                {
+                  "id": "opening",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "request",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "acceptance",
+                  "speaker_id": "person.b"
+                }
+              ]
+            },
+            "reviewed_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "custody": {
+              "artifact_id": "synthetic-repaired-edition",
+              "request_id": "synthetic-request",
+              "scope": "private-close-reading",
+              "decision": "authorized",
+              "restriction": "clear-for-this-scope"
+            },
+            "coverage": [
+              {
+                "turn_id": "request",
+                "disposition": "read"
+              },
+              {
+                "turn_id": "acceptance",
+                "disposition": "read"
+              }
+            ],
+            "observations": [
+              {
+                "id": "reading-a",
+                "person_id": "person.a",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "opening",
+                  "request"
+                ],
+                "text": "The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."
+              },
+              {
+                "id": "reading-b",
+                "person_id": "person.b",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "acceptance"
+                ],
+                "text": "This response accepts the particular return without establishing a wider role."
+              }
+            ],
+            "commitments": [
+              {
+                "id": "task-a",
+                "state": "accepted-open",
+                "owner": "person.b",
+                "turn_ids": [
+                  "request",
+                  "acceptance"
+                ],
+                "acceptance_turn_ids": [
+                  "acceptance"
+                ],
+                "requester": null,
+                "requester_candidates": [
+                  "person.a",
+                  "person.b"
+                ],
+                "deadline": null
+              }
+            ],
+            "later_sources": []
+          },
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "reading-turn-uncovered:opening"
+        ]
+      }
+    },
+    {
+      "id": "scoped-artifact-restriction",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "evidence": {
+            "schema_version": 1,
+            "edition": {
+              "artifact_id": "synthetic-repaired-edition",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "turns": [
+                {
+                  "id": "opening",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "request",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "acceptance",
+                  "speaker_id": "person.b"
+                }
+              ]
+            },
+            "reviewed_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "custody": {
+              "artifact_id": "synthetic-repaired-edition",
+              "request_id": "synthetic-request",
+              "scope": "private-close-reading",
+              "decision": "authorized",
+              "restriction": "held"
+            },
+            "coverage": [
+              {
+                "turn_id": "opening",
+                "disposition": "read"
+              },
+              {
+                "turn_id": "request",
+                "disposition": "read"
+              },
+              {
+                "turn_id": "acceptance",
+                "disposition": "read"
+              }
+            ],
+            "observations": [
+              {
+                "id": "reading-a",
+                "person_id": "person.a",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "opening",
+                  "request"
+                ],
+                "text": "The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."
+              },
+              {
+                "id": "reading-b",
+                "person_id": "person.b",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "acceptance"
+                ],
+                "text": "This response accepts the particular return without establishing a wider role."
+              }
+            ],
+            "commitments": [
+              {
+                "id": "task-a",
+                "state": "accepted-open",
+                "owner": "person.b",
+                "turn_ids": [
+                  "request",
+                  "acceptance"
+                ],
+                "acceptance_turn_ids": [
+                  "acceptance"
+                ],
+                "requester": null,
+                "requester_candidates": [
+                  "person.a",
+                  "person.b"
+                ],
+                "deadline": null
+              }
+            ],
+            "later_sources": []
+          },
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "reading-custody-scope-invalid"
+        ]
+      }
+    },
+    {
+      "id": "requester-uncertainty-promoted",
+      "job": {
+        "request": {
+          "preserved": true,
+          "bounded_scope": true,
+          "source_access_authorized": true,
+          "external_upload_authorized": true
+        },
+        "audio": {
+          "discovered_fragment_count": 2,
+          "registered_fragment_count": 2,
+          "exact_originals_immutable": true,
+          "hashes_verified": true,
+          "fragment_order_evidenced": true,
+          "every_fragment_dispositioned": true
+        },
+        "context": {
+          "bounded": true,
+          "every_source_dispositioned": true,
+          "scheduled_event_treated_as_occurrence": false,
+          "unrelated_private_material_included": false
+        },
+        "transcription": {
+          "derived_upload_checksum_recorded": true,
+          "provider_job_id_recorded_privately": true,
+          "status": "complete",
+          "diarization_status": "complete",
+          "service_export_preserved_unchanged": true,
+          "service_export_hash_verified": true,
+          "transcript_treated_as_executable_instructions": false
+        },
+        "repair": {
+          "separate_from_service_export": true,
+          "segment_decisions_recorded": true,
+          "uncertainties_preserved": true,
+          "invented_speech_detected": false,
+          "audio_certified": false,
+          "full_audio_review_completed": false,
+          "participant_review_completed": false
+        },
+        "close_reading": {
+          "evidence": {
+            "schema_version": 1,
+            "edition": {
+              "artifact_id": "synthetic-repaired-edition",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "turns": [
+                {
+                  "id": "opening",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "request",
+                  "speaker_id": "person.a"
+                },
+                {
+                  "id": "acceptance",
+                  "speaker_id": "person.b"
+                }
+              ]
+            },
+            "reviewed_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "custody": {
+              "artifact_id": "synthetic-repaired-edition",
+              "request_id": "synthetic-request",
+              "scope": "private-close-reading",
+              "decision": "authorized",
+              "restriction": "clear-for-this-scope"
+            },
+            "coverage": [
+              {
+                "turn_id": "opening",
+                "disposition": "read"
+              },
+              {
+                "turn_id": "request",
+                "disposition": "read"
+              },
+              {
+                "turn_id": "acceptance",
+                "disposition": "read"
+              }
+            ],
+            "observations": [
+              {
+                "id": "reading-a",
+                "person_id": "person.a",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "opening",
+                  "request"
+                ],
+                "text": "The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."
+              },
+              {
+                "id": "reading-b",
+                "person_id": "person.b",
+                "kind": "interpretation",
+                "authorship": "editorial",
+                "turn_ids": [
+                  "acceptance"
+                ],
+                "text": "This response accepts the particular return without establishing a wider role."
+              }
+            ],
+            "commitments": [
+              {
+                "id": "task-a",
+                "state": "accepted-open",
+                "owner": "person.b",
+                "turn_ids": [
+                  "request",
+                  "acceptance"
+                ],
+                "acceptance_turn_ids": [
+                  "acceptance"
+                ],
+                "requester": "person.a",
+                "requester_candidates": [
+                  "person.a",
+                  "person.b"
+                ],
+                "deadline": null
+              }
+            ],
+            "later_sources": []
+          },
+          "source_ids_cited": true,
+          "fact_report_inference_separated": true,
+          "contradictions_and_gaps_preserved": true,
+          "private_minimum_necessary": true,
+          "person_returns": {
+            "census_recorded": true,
+            "all_attributed_speakers_covered": true,
+            "every_observation_cited": true,
+            "speaker_attribution_checked": true,
+            "current_source_revision": true,
+            "reciprocal_graph_links": true,
+            "uncertainties_preserved": true,
+            "substantive_reading_complete": true,
+            "participant_approval_inferred": false
+          }
+        },
+        "graph_update": {
+          "target": "private",
+          "request_crosswalk_complete": true,
+          "candidate_fingerprint_recorded": true,
+          "publication_authorized": false
+        },
+        "public_projection": {
+          "requested": false,
+          "human_authorized": false,
+          "private_locator_present": false,
+          "raw_transcript_present": false,
+          "private_identity_present": false
+        }
+      },
+      "expected": {
+        "decision": "hold",
+        "stage": "close-reading",
+        "reasons": [
+          "reading-requester-conflict:task-a"
         ]
       }
     }

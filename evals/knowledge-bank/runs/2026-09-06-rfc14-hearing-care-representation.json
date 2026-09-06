@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "kind": "rfc14-hearing-care-representation-hill-climb",
+  "status": "focused-checks-passed-full-public-release-held",
+  "baseline_commit": "120315f11b91c913485b7896a1ea84b3ce630d87",
+  "verified_at": "2026-09-06T16:11:52.381Z",
+  "environment": "v26.5.0",
+  "candidate_fingerprint": "209c5a94ff395022589cd18a1e303ce203c7d8103e6a6397ba7047fff9d824f8",
+  "candidate_files": [
+    "evals/knowledge-bank/audio-to-knowledge-workflow-rfc-evals.json",
+    "evals/knowledge-bank/fixtures/close-reading-evidence.json",
+    "rfcs/0014-governed-audio-to-knowledge-workflow.contract.json",
+    "rfcs/0014-governed-audio-to-knowledge-workflow.md",
+    "scripts/rfcs/audio-to-knowledge-workflow-eval.mjs",
+    "scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
+    "scripts/rfcs/close-reading-evidence.mjs"
+  ],
+  "fingerprint_method": "SHA-256 of sorted candidate paths, NUL, exact file bytes, NUL, as implemented by the RFC evaluator. The listed seven RFC inputs are the scope, not the whole website. This generated receipt is excluded to avoid self-reference.",
+  "results": [
+    {
+      "command": "node --test scripts/rfcs/audio-to-knowledge-workflow-eval.test.mjs",
+      "exit": 0,
+      "output_sha256": "7ce188b6613eaf066703019d084dbddea628287fbb4d777e2aabdf7dc033251e"
+    },
+    {
+      "command": "node scripts/check-rfcs.mjs",
+      "exit": 0,
+      "output_sha256": "866b41542f857bb525a148ed3c829f01782b8b5a5d3106062ffde1e8cfd9e693"
+    },
+    {
+      "command": "npm run public-safety",
+      "exit": 0,
+      "output_sha256": "4b552dd9a22c7af6a5789e27856317f50652b08996d619edae68a2e9f3a681ca"
+    },
+    {
+      "command": "npm run check",
+      "exit": 1,
+      "output_sha256": "f8cca8d2eac3ffedbfeb2878bd715056287f02bbcc96dfb2ea5ec56c759ef8f6"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "counts": {
+    "unit_tests": 44,
+    "unit_passed": 44,
+    "new_unit_cases": 25,
+    "hard_criteria_passed": 16,
+    "hard_criteria_total": 16,
+    "scenarios_passed": 16,
+    "scenarios_total": 16,
+    "numbered_rfcs_valid": 15,
+    "public_safety_existing_warnings": 11
+  },
+  "hill_climb": [
+    {
+      "failure": "Twenty missing or malformed evidence packets incorrectly reached private review.",
+      "red": "20 failing negative tests; old tests and new positive control remained passing.",
+      "change": "Require source-bound coverage, editorial attribution, artifact/purpose custody and relationship-specific commitment evidence."
+    },
+    {
+      "failure": "Missing collection layers were conflated with explicitly empty audited layers.",
+      "red": "Four focused shape cases failed; missing commitments and later-source layers still reached review.",
+      "change": "Require explicit coverage, observations, commitments and later_sources arrays."
+    },
+    {
+      "failure": "New behavior was absent from portable scenarios used by the normal RFC gate.",
+      "change": "Added four negative evidence scenarios to the same gate; no private access required."
+    }
+  ],
+  "review_limits": {
+    "semantic_certification": false,
+    "calibrated_llm_judge": false,
+    "participant_review": false,
+    "full_corpus_migration_claimed": false,
+    "actual_lens_participation": false
+  },
+  "full_release_hold": {
+    "command": "npm run check",
+    "exit": 1,
+    "gate": "professor-lens bound holdout requirements",
+    "passing_final_scorecards": 0,
+    "total_final_scorecards": 6,
+    "candidate_sha256": "b977fff8b0a5595b3f6ffebd1ddc2941787ae3f13d27f24f15d5f49dd51d4e49",
+    "later_chained_checks_reached": false
+  },
+  "authority": {
+    "new_external_upload": false,
+    "publication": false,
+    "merge": false,
+    "deployment": false,
+    "operational_adoption": false
+  }
+}

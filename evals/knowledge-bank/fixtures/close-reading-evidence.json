@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "edition": {
+    "artifact_id": "synthetic-repaired-edition",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "turns": [
+      {"id": "opening", "speaker_id": "person.a"},
+      {"id": "request", "speaker_id": "person.a"},
+      {"id": "acceptance", "speaker_id": "person.b"}
+    ]
+  },
+  "reviewed_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "custody": {"artifact_id": "synthetic-repaired-edition", "request_id": "synthetic-request", "scope": "private-close-reading", "decision": "authorized", "restriction": "clear-for-this-scope"},
+  "coverage": [
+    {"turn_id": "opening", "disposition": "read"},
+    {"turn_id": "request", "disposition": "read"},
+    {"turn_id": "acceptance", "disposition": "read"}
+  ],
+  "observations": [
+    {"id": "reading-a", "person_id": "person.a", "kind": "interpretation", "authorship": "editorial", "turn_ids": ["opening", "request"], "text": "The opening acknowledgment precedes a bounded request; its relational role remains an interpretation."},
+    {"id": "reading-b", "person_id": "person.b", "kind": "interpretation", "authorship": "editorial", "turn_ids": ["acceptance"], "text": "This response accepts the particular return without establishing a wider role."}
+  ],
+  "commitments": [{"id": "task-a", "state": "accepted-open", "owner": "person.b", "turn_ids": ["request", "acceptance"], "acceptance_turn_ids": ["acceptance"], "requester": null, "requester_candidates": ["person.a", "person.b"], "deadline": null}],
+  "later_sources": []
+}

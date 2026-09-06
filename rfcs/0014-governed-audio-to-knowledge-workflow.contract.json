@@ -79,6 +79,16 @@
     "automatic_candidate_is_completed_close_reading": false,
     "participant_approval_inferred": false
   },
+  "close_reading_evidence": {
+    "schema_version": 1,
+    "checkbox_only_completion": false,
+    "semantic_certification": false,
+    "artifact_scoped_authority_required": true,
+    "acceptance_within_cited_exchange_required": true,
+    "required_layers": ["edition", "reviewed_sha256", "custody", "coverage", "observations", "commitments", "later_sources"],
+    "legacy_packets_without_evidence": "held-for-migration",
+    "full_corpus_migration_claimed": false
+  },
   "migration_queue": {
     "bounded_discovery_required": true,
     "deduplication_required": true,
