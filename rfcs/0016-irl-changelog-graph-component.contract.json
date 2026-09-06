@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "rfc": 16,
+  "stage": "proposed",
+  "scope": "synthetic-review-model-only",
+  "authority": {
+    "implementation_authorized": false,
+    "migration_authorized": false,
+    "publication_authorized": false,
+    "activates_work": false
+  },
+  "entry_version": 2,
+  "entry_kinds": ["development", "evidence-return", "interpretation", "correction", "challenge"],
+  "node_types": ["person", "team", "project", "practice", "claim", "decision", "commitment"],
+  "relation_targets": {
+    "about": ["person", "team", "project", "practice"],
+    "informs": ["claim", "decision", "commitment"],
+    "updates": ["entry"],
+    "corrects": ["entry"],
+    "challenges": ["entry"]
+  },
+  "evidence_classes": ["primary-record", "attributed-report", "derived-analysis", "user-instruction"],
+  "source_states": ["current", "changed", "unavailable", "withdrawn"],
+  "default_visibility": "private",
+  "public_journal_export": false,
+  "unknown_learning_time": "null-not-inferred",
+  "historical_view": "recorded-at-cutoff",
+  "revision_policy": "append-with-explicit-relation",
+  "retention_exception": "authorized-separate-remediation",
+  "branch_conflict_policy": "hold-for-reviewed-rebase"
+}

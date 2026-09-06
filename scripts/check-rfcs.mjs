@@ -9,6 +9,7 @@ import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eva
 import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
 import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
 import { evaluateWeeklyPracticeReviewRFC } from "./rfcs/weekly-practice-review-eval.mjs";
+import { evaluateIrlChangelogRFC } from "./rfcs/irl-changelog-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -230,6 +231,16 @@ try {
     path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
     `weekly practice review evaluation could not run: ${error.message}`
   );
+}
+
+try {
+  const evaluation = evaluateIrlChangelogRFC({ repoRoot });
+  for (const scenario of evaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), `IRL semantic scenario failed: ${scenario.id}`);
+  }
+  if (!evaluation.passed) fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), "IRL review model failed");
+} catch (error) {
+  fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), `IRL evaluation could not run: ${error.message}`);
 }
 
 if (failures.length) {

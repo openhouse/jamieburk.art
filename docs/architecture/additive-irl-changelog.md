@@ -6,6 +6,12 @@ without rewriting earlier observations. It is separate from adoption of the
 The RFC remains proposed; its commitment slate, priorities and human gates are
 not activated by this implementation.
 
+[RFC 0016](../../rfcs/0016-irl-changelog-graph-component.md) now proposes formal
+component ownership, temporal/revision semantics, typed graph relations and
+governed migration. Its synthetic review model does not replace this utility or
+change the current record format. The RFC remains proposed; no live journal is
+migrated by these tests.
+
 The public repository contains the generic utility and synthetic regression
 cases only. Actual life events, relationship states, source pointers, citations
 and interpretations remain in permissioned custody. A public build never reads

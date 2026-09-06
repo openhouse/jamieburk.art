@@ -14,3 +14,5 @@ jobs:
         with:
           node-version: 26
       - run: npm run test:irl-changelog
+      - run: npm run test:irl-rfc
+      - run: npm run evals:irl-rfc
