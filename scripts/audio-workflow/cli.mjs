@@ -3,6 +3,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { createHash } from "node:crypto";
+import { evaluateArtifactReading } from "./artifact-access.mjs";
 import { loadVoiceCorpus, syncVoicePages, voiceSummary } from "./situated-voices.mjs";
 import {
   completeStage,
@@ -38,6 +40,17 @@ export function run(argv) {
   const [command, ...args] = argv;
   const manifestPath = valueAfter(args, "--manifest");
   const write = args.includes("--write");
+
+  if (command === "read-access") {
+    const source = valueAfter(args, "--source");
+    if (!source) throw new Error("source-path-required");
+    try {
+      const digest = createHash("sha256").update(readFileSync(path.resolve(source))).digest("hex");
+      return evaluateArtifactReading(loadJson(manifestPath, "manifest"), digest);
+    } catch {
+      throw new Error("reading-input-unreadable-or-invalid");
+    }
+  }
 
   if (command === "queue") {
     return evaluateQueue(loadJson(manifestPath, "manifest"));

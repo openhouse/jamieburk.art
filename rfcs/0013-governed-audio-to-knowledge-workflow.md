@@ -572,6 +572,19 @@ purpose cannot be safely inferred from pipeline completion.
 
 ## Unresolved questions
 
+### Implemented clarification: artifact-scoped existing-source reading
+
+The [artifact-specific reading gate](../docs/knowledge-bank/artifact-specific-reading.md)
+separates event identity from artifact provenance. It checks an observed source
+digest, a bounded private-reading grant and evidenced restriction targets. A
+feature-specific hold does not silently become an event-wide hold; an actual
+event-wide restriction still controls a separately recorded artifact. Unknown
+scope fails closed. This additive read-only gate does not bypass an existing
+held job, authorize a new provider transfer, adopt a private interpretation or
+advance this RFC's implementation status.
+
+### Remaining design questions
+
 - Which manifest schema and command package should become canonical after RFC
   acceptance?
 - Which source-vault locations and retention schedules should adapters support?
