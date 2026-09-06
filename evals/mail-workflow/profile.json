@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "visibility": "public-safe",
+  "scope": "synthetic correspondence protocol",
+  "command": "npm run test:mail-runtime",
+  "tests": "scripts/mail-workflow/core.test.mjs",
+  "hard_gates": [
+    "private-authorized-input",
+    "source-and-header-revision-binding",
+    "every-message-participant-covered-or-held",
+    "own-authored-evidence",
+    "exact-segment-quotation",
+    "settled-folder-message-reconciliation",
+    "no-inherited-forwarder-access",
+    "literal-safe-rendering",
+    "no-credentials-or-authenticated-locators",
+    "no-publication-authority"
+  ],
+  "subjective_limits": "No LLM judge, literary-quality score, human approval, exhaustive real-corpus claim, or permission inference.",
+  "hill_climb": "Improve a demonstrated failing adversarial case; retain only with all prior affected cases passing and unchanged human gates."
+}

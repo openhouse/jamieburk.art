@@ -8,6 +8,30 @@ permissions:
   contents: read
 
 jobs:
+  mail-workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Test private-only correspondence protocol with synthetic sources
+        run: npm run test:mail-runtime
+  audio-workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Test source-bound audio and situated voice workflow
+        run: npm run test:audio-runtime
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 20

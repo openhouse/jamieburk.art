@@ -116,7 +116,45 @@ model, package, repository, or cross-system proposals. Follow
 `exploring` RFC is preserved for review; it is not implementation authorization.
 Agents may draft, critique, prototype, and test an RFC but may not advance a
 decision that the RFC reserves for Jamie or another named human decision owner.
+
+## Paired Private Workspace
+
+For every permitted transcript ingest or repair, the audio workflow must refresh
+one cited situated writer's voice entry per attributed speaker. Use the
+source-bound `wiki` stage and its explicit private-root/voice-manifest inputs.
+Complete generated reading tasks from permitted source context; do not mark
+pending entries as close readings. Preserve source hashes, fragment/time/line
+citations, attribution uncertainty, and interpretive limits. Never treat a
+person mentioned in a transcript as its speaker, impersonate a participant,
+or publish a private person page. Run `npm run test:audio-runtime` for changes
+to this contract.
+
+When `.workspace-pair.local.json` is present, this checkout participates in the
+paired public/private development protocol defined by RFC 0011.
+
+- Use `npm run pair:switch -- <branch>` instead of a raw branch switch.
+- Run `npm run pair:status` before committing, pushing, or updating a pull
+  request.
+- Keep head branch, base branch, pull-request title, and draft posture aligned.
+- Keep commits, checks, descriptions, approvals, merges, and rollback
+  independent.
+- Never commit the counterpart repository name, URL, pull request, local path,
+  private IDs, source locators, or protected topology here.
+- Never make a public build, test, deployment, or rollback depend on private
+  access.
+- A paired branch or review is coordination evidence, not publication, merge,
+  deployment, consent, rights, or relationship authority.
 ## Scope Rules
+
+Correspondence runtime changes use synthetic fixtures only in this repository.
+Never add private mailbox inventories, coverage counts, source identifiers,
+subjects, people mappings, or excerpts to public code, eval receipts, or PRs.
+The private adapter owns source custody and per-message readings. Run
+`npm run test:mail-runtime` after changing the shared protocol. A recipient is
+not an author; a quoted reply is not a separately recovered outgoing message.
+New or revised sources require cited analysis before their entries are current.
+The runtime projects approved-for-private-analysis inputs; it does not grant
+source access, perform autonomous mailbox collection, or approve publication.
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
 private document browser, full photo archive, heavy animation, or major framework
