@@ -333,6 +333,20 @@ or confer human authority. This is a private record, not a scheduled monitor or
 an automatic public build log. No private event, person, source locator, or
 counterpart topology is part of this public RFC extension.
 
+The separately authorized IRL component now has a bounded shadow review
+implementation. Its contract distinguishes occurrence, evidence availability
+to the system, and journal recording; historical-as-was and retrospective
+views must not substitute one clock for another. Earlier records without
+availability evidence remain explicit migration gaps.
+
+The shadow surface keeps scoped corrections and competing accounts visible,
+binds consumer review receipts to exact source, mapping, permission and
+candidate revisions, and offers at most three proposed attention cards.
+It does not create a second task ledger. A reviewed page update is not a
+settled claim or an accepted commitment. Real-data migration, independently
+reviewed interpretations, canonical promotion, and recurring automation
+retain separate gates. This does not accept the full weekly-review proposal.
+
 ### Full weekly-review proposal
 
 1. **Proposal:** Review the vocabulary, three-outcome limit, meeting-ending
