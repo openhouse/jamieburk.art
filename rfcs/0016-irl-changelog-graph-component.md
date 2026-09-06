@@ -1,7 +1,7 @@
 ---
 rfc: 16
 title: IRL Changelog as a Source-Bound Knowledge Graph Component
-stage: proposed
+stage: implementing
 start_date: 2026-09-06
 authors:
   - Jamie Burkart
@@ -14,17 +14,18 @@ review_areas:
   - privacy-governance
   - editorial
   - developer-experience
-implementation: null
+implementation: ../docs/architecture/irl-changelog-v2.md
 supersedes: []
 superseded_by: null
 ---
 
 # IRL Changelog as a Source-Bound Knowledge Graph Component
 
-> Proposed, not adopted. This revision develops the earlier outline and reviews
-> the existing additive journal. It authorizes no migration, collection,
-> assignment, public projection, merge, or deployment. The accompanying code is
-> a synthetic review model, not an installed version-two journal runtime.
+> Accepted for implementation by Jamie's September 6, 2026 instruction,
+> “Implement the IRL Change Log RFC.” The version-two runtime and local adapter
+> contract are implemented. Historical migration, source-grounded human review,
+> selection and evaluation of a real canary, publication, merge and deployment
+> retain their separate gates. Stage is `implementing`, not `operational`.
 
 ## Summary
 
@@ -172,8 +173,9 @@ diary or a complete inventory of the period.
 
 ### 3. Proposed version-two record
 
-The persisted schema is a design contract to finalize before migration. Required
-field groups are:
+The persisted schema is implemented in the [version-two component](../scripts/irl-changelog/component.mjs)
+and specified in the [runtime guide](../docs/architecture/irl-changelog-v2.md).
+Required field groups are:
 
 | Group | Required meaning |
 |---|---|
@@ -417,6 +419,13 @@ require corresponding private facts to appear publicly.
 
 ## Rollout plan
 
+Implementation status: the generic v2 runtime, local serialized storage adapter,
+synthetic behavioral regressions, and candidate-bound review receipt are present.
+Version one remains readable and byte-preserved. A read-only migration inventory
+does not assign new IDs, infer learning dates or choose revision relations.
+Actual historical admission and the human canary remain held. See the
+[implementation coverage and stop gates](../docs/architecture/irl-changelog-v2.md).
+
 1. **Review now:** publish this proposed RFC and synthetic model in the existing
    review lane. Leave the live journal, its source pointers, and runtime unchanged.
 2. **Acceptance gate:** Jamie approves or revises ownership, revision vocabulary,
@@ -442,7 +451,8 @@ old writes. Keep release receipts candidate-bound and repository-specific.
 
 ## Decision gates
 
-- Jamie accepts the RFC; proposed-stage merge is not acceptance.
+- Jamie accepted implementation on September 6, 2026; this does not grant the
+  remaining migration, editorial, publication or release authorities.
 - Jamie authorizes any private source access, migration rehearsal, or canary.
 - The persistence schema, unknown-date representation, identity mapping, typed
   registry, permission boundary, and concurrency behavior are specified and tested.

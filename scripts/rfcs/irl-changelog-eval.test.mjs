@@ -49,3 +49,21 @@ test('CLI returns a failing exit code for a stale receipt', () => {
   assert.equal(run.status, 1);
   assert.deepEqual(JSON.parse(run.stdout), { receipt_current: false, publication_authorized: false });
 });
+test('operator implementation authorization remains distinct from evaluator-granted authority', () => {
+  const evaluation = evaluateIrlChangelogRFC();
+  assert.equal(evaluation.stage, 'implementing');
+  assert.equal(evaluation.operator_implementation_authorized, true);
+  assert.equal(evaluation.implementation_authorized, false);
+  assert.equal(evaluation.migration_authorized, false);
+});
+test('an RFC receipt expires when the installed runtime candidate changes', () => {
+  const evaluation = evaluateIrlChangelogRFC();
+  const fixture = mkdtempSync(resolve(tmpdir(), 'irl-runtime-receipt-'));
+  for (const { path } of evaluation.inputs) {
+    mkdirSync(dirname(resolve(fixture, path)), { recursive: true });
+    cpSync(resolve(root, path), resolve(fixture, path));
+  }
+  mkdirSync(resolve(fixture, 'scripts/irl-changelog'), { recursive: true });
+  writeFileSync(resolve(fixture, 'scripts/irl-changelog/component.mjs'), '// altered runtime candidate\n');
+  assert.equal(validateIrlReceipt({ evaluation }, fixture), false);
+});

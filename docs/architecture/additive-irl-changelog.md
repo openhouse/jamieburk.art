@@ -6,11 +6,11 @@ without rewriting earlier observations. It is separate from adoption of the
 The RFC remains proposed; its commitment slate, priorities and human gates are
 not activated by this implementation.
 
-[RFC 0016](../../rfcs/0016-irl-changelog-graph-component.md) now proposes formal
-component ownership, temporal/revision semantics, typed graph relations and
-governed migration. Its synthetic review model does not replace this utility or
-change the current record format. The RFC remains proposed; no live journal is
-migrated by these tests.
+[RFC 0016](../../rfcs/0016-irl-changelog-graph-component.md) is accepted for
+implementation. The [version-two runtime guide](irl-changelog-v2.md) covers typed
+relations, temporal views, source currentness and safe migration holds. The v1
+utility below remains for legacy history; installing v2 does not rewrite it.
+No live historical migration or human editorial approval is implied by tests.
 
 The public repository contains the generic utility and synthetic regression
 cases only. Actual life events, relationship states, source pointers, citations

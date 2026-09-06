@@ -1,5 +1,5 @@
 // Review-only semantic model. This does not read the live journal, validate
-// prose, verify access, or implement the proposed persistence/migration API.
+// prose or verify access. The installed persistence API has separate tests.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -11,6 +11,7 @@ const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const inputPaths = [
   '.github/workflows/irl-changelog.yml',
   'docs/architecture/additive-irl-changelog.md',
+  'docs/architecture/irl-changelog-v2.md',
   'evals/knowledge-bank/irl-changelog-rfc-cases.mjs',
   'package.json',
   'rfcs/0016-irl-changelog-graph-component.contract.json',
@@ -19,6 +20,10 @@ const inputPaths = [
   'scripts/check-rfcs.mjs',
   'scripts/irl-changelog/journal.mjs',
   'scripts/irl-changelog/journal.test.mjs',
+  'scripts/irl-changelog/component.mjs',
+  'scripts/irl-changelog/component.test.mjs',
+  'scripts/irl-changelog/storage.mjs',
+  'scripts/irl-changelog/storage.test.mjs',
   'scripts/rfcs/irl-changelog-eval.mjs',
   'scripts/rfcs/irl-changelog-eval.test.mjs'
 ];
@@ -38,6 +43,7 @@ export function evaluateIrlChangelogRFC({ repoRoot = defaultRoot } = {}) {
     scenarios: { total: results.length, passed: results.length - failed, failed, results },
     candidate_fingerprint: sha256(JSON.stringify(inputs)), inputs,
     implementation_authorized: false, migration_authorized: false,
+    operator_implementation_authorized: contract.authority.implementation_authorized,
     publication_authorized: false, activates_work: false,
     human_editorial_review_established: false
   };
@@ -67,9 +73,10 @@ const response = (decision, reasons, entries = []) => ({
 
 export function reviewIrlPacket(contract, packet) {
   try {
-    if (contract?.stage !== 'proposed' || contract?.scope !== 'synthetic-review-model-only' ||
+    if (!['proposed', 'implementing'].includes(contract?.stage) || contract?.scope !== 'synthetic-review-model-only' ||
         contract?.default_visibility !== 'private' || contract?.public_journal_export !== false ||
-        ['implementation_authorized', 'migration_authorized', 'publication_authorized', 'activates_work']
+        contract?.authority?.implementation_authorized !== (contract.stage === 'implementing') ||
+        ['migration_authorized', 'publication_authorized', 'activates_work']
           .some(key => contract?.authority?.[key] !== false)) reject('unsafe-contract');
     if (packet?.visibility !== 'private') reject('public-journal-export-forbidden');
     if (packet.requested_effect !== 'review') reject('authority-promotion');

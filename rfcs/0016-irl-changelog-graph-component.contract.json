@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "rfc": 16,
-  "stage": "proposed",
+  "stage": "implementing",
   "scope": "synthetic-review-model-only",
   "authority": {
-    "implementation_authorized": false,
+    "implementation_authorized": true,
     "migration_authorized": false,
     "publication_authorized": false,
     "activates_work": false
