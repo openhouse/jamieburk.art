@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "label_provenance": "provisional-engineering-fixtures-not-human-labels",
+  "base": {
+    "schema_version": 1,
+    "visibility": "synthetic",
+    "title": "A bounded return",
+    "references": [
+      {
+        "id": "opening",
+        "repository": "example/wiki",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "path": "sources/exchange.md",
+        "semantic_id": "exchange.opening",
+        "scope": "offer",
+        "assertion": "proposed"
+      },
+      {
+        "id": "later",
+        "repository": "example/wiki",
+        "revision": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "path": "sources/followup.md",
+        "semantic_id": "exchange.followup",
+        "scope": "introduction",
+        "assertion": "sent"
+      },
+      {
+        "id": "clarification",
+        "repository": "example/wiki",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "path": "sources/clarification.md",
+        "semantic_id": "reply.target",
+        "scope": "reply-1",
+        "assertion": "offer"
+      }
+    ],
+    "reading": {
+      "kind": "authored-interpretation",
+      "before": "An introduction was proposed.",
+      "after": "The introduction was sent; scheduling remains open.",
+      "interpretation": "The next useful step has narrowed.",
+      "source_ids": [
+        "opening",
+        "later"
+      ],
+      "context": {
+        "previous": "turn-1",
+        "turn": "turn-2",
+        "next": "turn-3",
+        "addressee": "explicit-unknown"
+      },
+      "uncertainty": "The earlier reply target remains unresolved.",
+      "human_reviewed": false,
+      "scaffolds": [
+        "A question mark occurs in turn-2."
+      ]
+    },
+    "disagreements": [
+      {
+        "id": "reply-1",
+        "alternatives": [
+          "offer",
+          "date"
+        ],
+        "disposition": "unresolved",
+        "resolution": null
+      }
+    ],
+    "transition": {
+      "scope": "introduction",
+      "from": "proposed",
+      "to": "sent",
+      "evidence": "later"
+    },
+    "drafts": [
+      {
+        "id": "draft-introduction",
+        "scope": "introduction",
+        "target_state": "sent"
+      }
+    ],
+    "disposition": "waiting-for",
+    "action": null,
+    "feedback": {
+      "id": "comment-1",
+      "state": "open",
+      "text": "Please separate availability from endorsement.",
+      "next_version": null,
+      "response": null
+    },
+    "publication_authorized": false,
+    "adoption_claimed": false
+  },
+  "cases": [
+    {
+      "id": "authored-return-retains-earlier-disagreement",
+      "expected_decision": "review-candidate",
+      "changes": [],
+      "expected_reason": null
+    },
+    {
+      "id": "scaffold-remains-scaffold",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "kind"
+          ],
+          "value": "automated-scaffold"
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "reference-fragment-creates-no-task",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "disposition"
+          ],
+          "value": "reference"
+        },
+        {
+          "path": [
+            "transition"
+          ],
+          "value": null
+        },
+        {
+          "path": [
+            "drafts"
+          ],
+          "value": []
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "explicit-target-correction-resolves-only-that-dispute",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "disposition"
+          ],
+          "value": "resolved"
+        },
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "resolution"
+          ],
+          "value": {
+            "reference": "clarification",
+            "alternative": "offer",
+            "reason": "An explicit follow-up identifies the earlier offer."
+          }
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "feedback-influences-a-version",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "feedback",
+            "state"
+          ],
+          "value": "incorporated"
+        },
+        {
+          "path": [
+            "feedback",
+            "next_version"
+          ],
+          "value": "poll-v2"
+        },
+        {
+          "path": [
+            "feedback",
+            "response"
+          ],
+          "value": "Split the question into availability and endorsement."
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "feedback-can-be-declined-with-reason",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "feedback",
+            "state"
+          ],
+          "value": "declined"
+        },
+        {
+          "path": [
+            "feedback",
+            "response"
+          ],
+          "value": "Retained the combined historical item; the next survey separates them."
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "open-feedback-does-not-pretend-to-change-version",
+      "expected_decision": "review-candidate",
+      "changes": [
+        {
+          "path": [
+            "feedback",
+            "state"
+          ],
+          "value": "open"
+        }
+      ],
+      "expected_reason": null
+    },
+    {
+      "id": "missing-packet-fields",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading"
+          ],
+          "value": null
+        }
+      ],
+      "expected_reason": "reading-shape"
+    },
+    {
+      "id": "moving-branch-is-not-an-edition",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "references",
+            "0",
+            "revision"
+          ],
+          "value": "work/today"
+        }
+      ],
+      "expected_reason": "reference-edition"
+    },
+    {
+      "id": "duplicate-reference-id",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "references",
+            "1",
+            "id"
+          ],
+          "value": "opening"
+        }
+      ],
+      "expected_reason": "reference-id"
+    },
+    {
+      "id": "same-number-does-not-identify-a-proposal",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "references",
+            "0",
+            "semantic_id"
+          ],
+          "value": ""
+        }
+      ],
+      "expected_reason": "reference-identity"
+    },
+    {
+      "id": "unregistered-evidence-is-held",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "source_ids"
+          ],
+          "value": [
+            "missing"
+          ]
+        }
+      ],
+      "expected_reason": "reading-source"
+    },
+    {
+      "id": "authored-interpretation-needs-a-source",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "source_ids"
+          ],
+          "value": []
+        }
+      ],
+      "expected_reason": "reading-source"
+    },
+    {
+      "id": "missing-adjacent-turn-context",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "context",
+            "next"
+          ],
+          "value": null
+        }
+      ],
+      "expected_reason": "dialogue-context"
+    },
+    {
+      "id": "automatic-markers-cannot-be-human-reviewed",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "kind"
+          ],
+          "value": "automated-scaffold"
+        },
+        {
+          "path": [
+            "reading",
+            "human_reviewed"
+          ],
+          "value": true
+        }
+      ],
+      "expected_reason": "scaffold-promotion"
+    },
+    {
+      "id": "unknown-reading-kind-cannot-be-promoted",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "reading",
+            "kind"
+          ],
+          "value": "complete"
+        }
+      ],
+      "expected_reason": "reading-kind"
+    },
+    {
+      "id": "no-last-write-wins-resolution",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "disposition"
+          ],
+          "value": "resolved"
+        }
+      ],
+      "expected_reason": "resolution-evidence"
+    },
+    {
+      "id": "later-send-cannot-resolve-earlier-reply-target",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "disposition"
+          ],
+          "value": "resolved"
+        },
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "resolution"
+          ],
+          "value": {
+            "reference": "later",
+            "alternative": "offer",
+            "reason": "This happened later."
+          }
+        }
+      ],
+      "expected_reason": "resolution-scope"
+    },
+    {
+      "id": "competing-reading-cannot-silently-disappear",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "alternatives"
+          ],
+          "value": [
+            "offer"
+          ]
+        }
+      ],
+      "expected_reason": "disagreement-alternatives"
+    },
+    {
+      "id": "sent-does-not-establish-booking",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "transition",
+            "to"
+          ],
+          "value": "booked"
+        }
+      ],
+      "expected_reason": "transition-evidence"
+    },
+    {
+      "id": "other-scope-evidence-does-not-close-this-action",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "transition",
+            "scope"
+          ],
+          "value": "booking"
+        }
+      ],
+      "expected_reason": "transition-evidence"
+    },
+    {
+      "id": "reference-is-not-an-obligation",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "disposition"
+          ],
+          "value": "reference"
+        },
+        {
+          "path": [
+            "action"
+          ],
+          "value": "Send another invitation"
+        }
+      ],
+      "expected_reason": "reference-action"
+    },
+    {
+      "id": "unknown-disposition-is-held",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "disposition"
+          ],
+          "value": "done-ish"
+        }
+      ],
+      "expected_reason": "disposition"
+    },
+    {
+      "id": "incorporated-feedback-needs-a-version-and-response",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "feedback",
+            "state"
+          ],
+          "value": "incorporated"
+        }
+      ],
+      "expected_reason": "feedback-return"
+    },
+    {
+      "id": "feedback-cannot-disappear-with-a-vague-status",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "feedback",
+            "state"
+          ],
+          "value": "processed"
+        }
+      ],
+      "expected_reason": "feedback-state"
+    },
+    {
+      "id": "draft-is-not-a-published-result",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "publication_authorized"
+          ],
+          "value": true
+        }
+      ],
+      "expected_reason": "authority"
+    },
+    {
+      "id": "passing-checks-do-not-establish-adoption",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "adoption_claimed"
+          ],
+          "value": true
+        }
+      ],
+      "expected_reason": "authority"
+    },
+    {
+      "id": "real-private-input-is-outside-prototype",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "visibility"
+          ],
+          "value": "private"
+        }
+      ],
+      "expected_reason": "synthetic-only"
+    },
+    {
+      "id": "malformed-references-fail-closed",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "references"
+          ],
+          "value": null
+        }
+      ],
+      "expected_reason": "reference-shape"
+    },
+    {
+      "id": "unknown-schema-is-held",
+      "expected_decision": "hold",
+      "changes": [
+        {
+          "path": [
+            "schema_version"
+          ],
+          "value": 2
+        }
+      ],
+      "expected_reason": "schema-version"
+    },
+    {
+      "id": "entire-earlier-dispute-cannot-be-omitted",
+      "expected_decision": "hold",
+      "expected_reason": "disagreement-omitted",
+      "changes": [
+        {
+          "path": [
+            "disagreements"
+          ],
+          "value": []
+        }
+      ]
+    },
+    {
+      "id": "earlier-alternative-cannot-be-replaced",
+      "expected_decision": "hold",
+      "expected_reason": "disagreement-rewritten",
+      "changes": [
+        {
+          "path": [
+            "disagreements",
+            "0",
+            "alternatives"
+          ],
+          "value": [
+            "offer",
+            "other"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "real-repository-cannot-be-mislabeled-synthetic",
+      "expected_decision": "hold",
+      "expected_reason": "synthetic-reference",
+      "changes": [
+        {
+          "path": [
+            "references",
+            "0",
+            "repository"
+          ],
+          "value": "organization/real-repository"
+        }
+      ]
+    },
+    {
+      "id": "source-path-cannot-escape-packet",
+      "expected_decision": "hold",
+      "expected_reason": "reference-path",
+      "changes": [
+        {
+          "path": [
+            "references",
+            "0",
+            "path"
+          ],
+          "value": "../protected.md"
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "revision": "dddddddddddddddddddddddddddddddddddddddd",
+    "disagreements": [
+      {
+        "id": "reply-1",
+        "alternatives": [
+          "offer",
+          "date"
+        ]
+      }
+    ]
+  }
+}

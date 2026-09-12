@@ -113,6 +113,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0013](./0013-public-paid-working-session-hiring-pathway.md) | Public Paid Working Session Hiring Pathway | `implementing` | Jamie Burkart |
 | [0014](./0014-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
 | [0015](./0015-human-scale-weekly-review-and-real-world-commitment-closure.md) | Human-Scale Weekly Review and Real-World Commitment Closure | `proposed` | Jamie Burkart |
+| [0017](./0017-situated-knowledge-reading-and-reader-returns.md) | Situated Knowledge Reading, Reconciliation, and Reader Returns | `proposed` | Jamie Burkart |
 
 ## Validation
 

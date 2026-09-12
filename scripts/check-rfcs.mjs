@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { verifyKnowledgeReadingReceipt } from "./rfcs/knowledge-reading-eval.mjs";
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
@@ -15,6 +16,7 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), ".."
 const rfcRoot = path.join(repoRoot, "rfcs");
 const indexPath = path.join(rfcRoot, "README.md");
 const failures = [];
+try { verifyKnowledgeReadingReceipt(); } catch (error) { failures.push(error.message); }
 
 const allowedStages = new Set([
   "proposed",
