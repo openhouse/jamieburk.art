@@ -133,5 +133,7 @@ contract as the application, Knowledge Bank, and Knowledge Wiki checks.
 
 ## Prior art
 
+- [RFC 0017: Default evidence-first opportunity packets](./0017-default-opportunity-packets.md) — implementing the user-requested preparation default; no automatic submission or public promotion.
+
 - [Ember RFCs](https://github.com/emberjs/rfcs)
 - [Ember RFC template](https://github.com/emberjs/rfcs/blob/main/0000-template.md)

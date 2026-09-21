@@ -96,6 +96,16 @@ readers, and use collective-work language where the work was collective.
 
 ## Recursive Evals
 
+Every newly discovered or materially changed opportunity inherits the OTI
+evidence-first packet process in `resumes/README.md`; do not wait for a second
+request or maintain a separate per-role allowlist. Run `npm run wiki:graph` at
+intake; it admits every typed opportunity to `reports/opportunity-packets.json`.
+Complete the ten preparation stages in `scripts/opportunity-packets.mjs` using
+authorized source access. Events and unclassified leads first receive a routing
+decision, not invented job applications. Native Docs/PDF, voice, reader review,
+and human gates cannot be replaced by a successful scaffolding check. Never
+publish private opportunity details or submit applications automatically.
+
 Use `.agents/evals/portfolio-production-readiness.json` for recursive launch
 improvement. Hard gates are invariants and cannot be averaged away by a high
 judge score. Improve the lowest-scoring criterion with one bounded change,

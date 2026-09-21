@@ -10,12 +10,14 @@
     "npm": ">=11"
   },
   "scripts": {
+    "packets:check": "node scripts/sync-opportunity-packets.mjs --check",
+    "packets:test": "node --test scripts/opportunity-packets.test.mjs",
     "dev": "npm run dev -w @jamie-burkart/www",
     "build": "npm run build -w @jamie-burkart/www",
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "precheck": "npm run test:audio-runtime && npm run test:mail-runtime && npm run test:irl-changelog && npm run test:irl-rfc",
+    "precheck": "npm run packets:check && npm run packets:test && npm run test:audio-runtime && npm run test:mail-runtime && npm run test:irl-changelog && npm run test:irl-rfc",
     "test:irl-changelog": "node --test scripts/irl-changelog/*.test.mjs",
     "test:irl-rfc": "node --test scripts/rfcs/irl-changelog-eval.test.mjs",
     "evals:irl-rfc": "node scripts/rfcs/irl-changelog-eval.mjs",
