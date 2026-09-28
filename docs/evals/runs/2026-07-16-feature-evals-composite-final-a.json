@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-source-integrity-2026-09-27-a84105a8",
+  "judgeId": "composite-source-integrity-2026-09-28-3a834de6",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "a84105a895c9509111be52afdee286d4a4dadc4d1c530b9010cc9ec858e6434d",
+  "candidateFingerprint": "3a834de635e9aed668f3b0be159cc348b3dcd1965f600a70a696832aff88d029",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,114 +12,118 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh inventory verification found all 14 frozen A–N decisions, matching heads, and zero missing commit objects or remote-reference discrepancies.",
-        "docs/integration/feature-evals-composite.json explicitly identifies feature/knowledge-h, develop, and reference-only treatment of frozen branches."
+        "Fresh evaluator execution verified all 14 A–N decisions, with zero missing frozen commit objects and no branch-reference mismatches.",
+        "docs/integration/feature-evals-composite.json explicitly records feature/knowledge-h, develop, and reference-only treatment of frozen branches."
       ],
-      "rationale": "The frozen family is complete, inspectable, and distinguished from the writable integration branch."
+      "rationale": "The complete frozen inventory remains available and consistently identified. No repository files or refs were changed during this review."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 14 decisions contain substantive rationales, existing destinations, and valid verification criteria.",
-        "The register matches its pinned digest and explicitly retains selective website composition without adding copy merely to demonstrate integration."
+        "All 14 integration decisions contain substantive rationale, existing destinations, and criterion references.",
+        "The recomputed integration-register digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The register explicitly retains the selected public composition without adding copy merely to demonstrate integration."
       ],
-      "rationale": "The decisions explain both architectural adoption and deliberate public non-projection."
+      "rationale": "The decisions describe inspectable adaptations and deliberate non-projection, rather than decorative branch accounting."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 11 canonical files exist; none of the three forbidden parallel lifecycle roots exists.",
-        "public.ts consumes the redacted registry, index.ts exports public/schema interfaces, and inspected rendering imports avoid canonical research records.",
-        "Fresh citation generation check confirmed the public registry is current and redacted."
+        "The evaluator verified 11 canonical files and zero forbidden parallel lifecycle roots.",
+        "The public citation index exports the redacted public module and schema; inspected application citation components import that public interface.",
+        "The generated public registry passed exact-currentness and redaction checks."
       ],
-      "rationale": "The H-derived architecture remains canonical, with a controlled boundary between research records and public rendering."
+      "rationale": "Canonical source custody and the public rendering projection remain separate. Protected locators, internal excerpts, and private evidence relationships are excluded from the public registry."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All four lifecycle tests passed: identical replay, linked duplicate preservation, changed-content collision rejection, and lifecycle queries.",
-        "Fresh queries exposed 61 mature held claims, 71 unresolved inquiries, five corrections, projection counts, and zero orphan sources."
+        "The lifecycle test suite passed identical replay, linked duplicate preservation, changed-content collision rejection, and lifecycle-query cases.",
+        "Fresh lifecycle queries found 61 mature held claims, 71 unresolved inquiries, five corrections, explicit projection counts, and zero orphan sources."
       ],
-      "rationale": "Intake preserves identity and incoming duplicates while making unresolved and unselected knowledge inspectable."
+      "rationale": "Intake preserves incoming records without silently overwriting stable identities, while unresolved and unselected knowledge remains inspectable."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Canonical validation returned no errors across 331 sources, 119 claims, 34 agency relations, and five corrections.",
-        "Every source retains does-not-establish boundaries; every claim has evidence; every agency relation has boundaries. Credit scopes remain individual, shared, collective, and institutional.",
-        "The inspected coalition population claim distinguishes 3,123 recovered records from the 5,124 profile counter and preserves the 2,001-record recovery gap.",
-        "Generated Wiki and employment outputs passed currentness checks; all 32 deterministic Knowledge Bank criteria met their thresholds with prior holdout loading disabled."
+        "Fresh canonical validation covered 331 sources, 119 claims, 34 agency relations, and five corrections.",
+        "Agency records preserve 11 individual, seven shared, five collective, and 11 institutional credit scopes.",
+        "Inspected coalition population wording distinguishes the 3,123-record retrievable union from the unrecovered remainder and separates reposts from authorship, endorsement, and impact.",
+        "Citation, public-safety, sourcebook, lifecycle, and knowledge-integrity checks passed.",
+        "Fresh recomputation found no Wiki or employment-output differences; separate checks confirmed current Wiki outputs and eight employment-context and hiring-acceptance reports."
       ],
-      "rationale": "Source roles, correction history, population limits, and collective credit remain explicit without promoting protected evidence into public source material."
+      "rationale": "Source limitations, evidence roles, correction history, population denominators, and collective-credit boundaries are substantive and consistent with the inspected public wording. Generated-currentness was verified directly."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Homepage and Technical Operations composition give readers selected role-to-proof paths; mature held claims remain outside public projection.",
-        "About connects Open House, commercial operations, coalition work, hospitality, WOWList, and knowledge practice through relationships, use, learning, and handoff.",
-        "Case studies distinguish reconstructions from original artifacts, independent prototypes from official services, collective outcomes from individual contributions, and proposed engagements from delivered work.",
-        "All four retained homepage/About screenshots were visually inspected and matched their recorded hashes and dimensions. The 60-row responsive receipt matches the current public-surface fingerprint."
+        "Independently inspected homepage, About, HJE, coalition, WOWList, Sunday Dinner, and Knowledge Wiki Graphs source content.",
+        "The public citation projection contains 41 claims while 61 mature claims remain held.",
+        "The homepage foregrounds the intended role and usable work; case studies identify Jamie's contribution while preserving collaborators and institutional responsibility.",
+        "About reconstructs relationships, models, interfaces, use, learning, and continuity across commercial, civic, artistic, and community work.",
+        "Inspected desktop homepage and mobile About screenshots after checksum-currentness tests passed."
       ],
-      "rationale": "The portfolio supports professional legibility and artistic, civic, relational, and technical continuity. The named lenses remain evaluative frameworks, not endorsements."
+      "rationale": "The composition supports the Chad, Margaret Morse, and Warren Sack analytical lenses without treating those lenses as human endorsements. It remains selective, preserves relational practice, and distinguishes historical delivery and current research from completed client adoption."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five required human-evidence controls remain open under the pinned blind-spot digest.",
-        "Each control specifies required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
-        "Current Wiki reports retain open or blocked collaborator, consent, editorial, production, reader-study, and hiring-outcome gates."
+        "All five required human-evidence controls remain explicitly open under the verified blind-spot digest.",
+        "The inspected controls specify evidence requirements, anti-gaming rules, next actions, and public-projection boundaries.",
+        "The audit and interaction-evidence contracts retain human usability, screen-reader, visual/content, production, and indexing gates."
       ],
-      "rationale": "Passing controls mean governed gaps. Automated review is not represented as collaborator testimony, consent, hiring validation, or outcome evidence."
+      "rationale": "Governed absence is not represented as corroboration, collaborator approval, hiring effectiveness, or external validation. Missing human evidence remains actionable and unresolved."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The recomputed semantic rubric digest matches both the supplied digest and the separately pinned evaluator constant; base-suite, register, and blind-spot digests also match.",
-        "All 15 focused composite tests passed, including branch omission, fabricated heads, checksum-refreshed weakening, decorative decisions, self-grading, synthetic human evidence, and blocker compensation.",
-        "All 16 selected source-integrity tests passed, including protected-source publication, private-path and raw-text leakage, unsupported agency, and population-disposition mutations.",
-        "Prior scorecard loading was disabled through in-memory test hooks; repository files were not edited."
+        "The recomputed semantic rubric digest matches both the declared digest and the evaluator's separately pinned constant.",
+        "All 15 executed composite mutation tests passed, covering omissions, fabricated heads, decorative decisions, refreshed-checksum weakening, stale outputs, self-grading, receipt-label collapse, synthesized human evidence, and blocker compensation.",
+        "Executed knowledge-integrity tests cover private-source URL leakage, raw-body leakage, custody-to-authorship inflation, population drift, and causal overclaiming.",
+        "Filesystem-mutating public-safety tests were inspected as contracts without executing their writes; the current public-safety scan passed."
       ],
-      "rationale": "The inspected contract and exercised mutations resist semantic weakening and preserve blocking failures independently of aggregate scores."
+      "rationale": "The controls bind reviewed semantics and reject concrete weakening attempts. Blocking failures cannot be averaged away, and automated review cannot manufacture missing human evidence."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent recomputation before completion reproduced the exact supplied fingerprint over 2,144 files, excluding only the two declared holdout records.",
-        "Fresh citation, lifecycle, route, generated-currentness, focused mutation, accessibility, and non-emitting TypeScript checks passed.",
-        "Receipt validation binds reviewer label, provider, time, complete judgment digest, rubric, and candidate; the prescribed attestation explicitly limits identity authentication.",
-        "This judgment supplies one side of the stopping rule, as commissioned. It does not establish that a second receipt exists."
+        "The repository evaluator reproduced the expected fingerprint over exactly 2,144 source-tree files, excluding only the two declared holdout records.",
+        "A final recomputation reproduced the same fingerprint; git status and git diff --check were clean.",
+        "Receipt tests verified distinct reviewer labels and judgment-digest sensitivity to receipt changes.",
+        "Evaluation with holdouts explicitly unavailable retained the expected unsatisfied two-receipt stopping gate."
       ],
-      "rationale": "The candidate merits acceptance by this reviewer. Recording the judgment digest and establishing the paired stopping condition remain separate recorder/orchestration steps; human production approval remains open."
+      "rationale": "Pass applies to this independently commissioned judgment as one side of the requested stopping rule. This review accepts the substantive exact candidate; it does not establish a second receipt, completion of the two-review gate, authenticated reviewer-process identity, or human release approval."
     }
   ],
   "notObserved": [],
   "findings": [
-    "The candidate fingerprint remained unchanged throughout this read-only review.",
-    "Verification used focused checks and exact retained rendered evidence. Prior holdout scores were not used; the receipt-dependent aggregate was excluded from the final focused test run.",
-    "Human publication, production, indexing, consent, collaborator-review, hiring-outcome, and application-submission gates remain open."
+    "The requested evals/knowledge-wiki/feature-evals-composite.json path is absent. The evaluator's actual rubric, .agents/evals/feature-evals-composite.json, reproduces the supplied frozen digest exactly.",
+    "No existing holdout scores or conclusions were used as evidence for this judgment.",
+    "Verification was read-only. Existing screenshot bindings and generated outputs were checked; a new build, browser capture, full deployment preflight, or external-source recapture was not performed.",
+    "The two-review stopping gate and all identified human corroboration, consent, production, deployment, and indexing gates remain open."
   ],
-  "recommendation": "Accept this independent judgment for the exact candidate. Record its digest and verify the separately commissioned second judgment before declaring the stopping rule complete. Preserve every human gate.",
+  "recommendation": "Accept this judgment as one independent side of the exact-candidate review. Bind its complete payload digest when recording the receipt, obtain the separately commissioned second judgment, and rerun the composite gate before declaring the stopping rule satisfied.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "source-integrity-reviewer-a-2026-09-27-a84105a8",
-    "reviewedAt": "2026-09-28T01:28:34Z",
+    "reviewerLabel": "source-integrity-reviewer-a-2026-09-28-3a834de6",
+    "reviewedAt": "2026-09-28T02:46:35Z",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "819cfd9005c6a5360c4204d9591ab5c9736831d0b919f072871cf42be2ca86b7"
+    "judgmentSha256": "73493a32baf2ded8499a33f21e263d9f498541f63887e9d2210b958302c258b7"
   }
 }
