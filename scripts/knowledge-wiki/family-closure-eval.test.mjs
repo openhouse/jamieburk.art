@@ -154,7 +154,7 @@ test("pull-request CI cannot substitute the synthetic merge ref", () => {
     defaultRepoRoot,
     ".github/workflows/portfolio-readiness.yml"
   );
-  const workflow = readFileSync(workflowPath, "utf8").replace(
+  const workflow = readFileSync(workflowPath, "utf8").replaceAll(
     "ref: ${{ github.event.pull_request.head.sha || github.sha }}",
     "ref: ${{ github.sha }}"
   );

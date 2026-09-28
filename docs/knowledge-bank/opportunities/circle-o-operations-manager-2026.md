@@ -134,9 +134,11 @@ The opportunity was still open on September 27, 2026. Circle O's
 Wednesday, September 30 as the deadline.
 
 This is a part-time contractor role averaging 20 hours per week at $50 per
-hour. It works closely with Founder and Artistic Director Kayla Hamilton and
-joins calendar ownership, contractor coordination, knowledge systems,
-communications and accessible program operations.
+hour. It works closely with [Founder and Artistic Director Kayla
+Hamilton](../people/kayla-hamilton.md) at [Circle
+O](../organizations/circle-o.md) and joins calendar ownership, contractor
+coordination, knowledge systems, communications and accessible program
+operations.
 
 ## Why the fit is strong
 

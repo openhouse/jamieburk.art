@@ -9,7 +9,7 @@ last_reviewed: 2026-09-27
 review_by: 2026-09-30
 canonical_path: docs/knowledge-bank/sources/circle-o-open-positions-2026.md
 summary: Official Circle O source for the 2026 part-time Operations Manager opening, scope, terms and September 30 deadline.
-source_kind: official-employer
+source_kind: official-job-posting
 source_url: https://circleo.org/open-positions
 authority: direct-official-page
 registry_ids:
