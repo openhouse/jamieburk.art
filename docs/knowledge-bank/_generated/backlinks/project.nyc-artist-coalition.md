@@ -3,7 +3,7 @@
 
 **Source commit:** `7c86741c8f2c5ac8ab7095e5231d95f05ff85d7d`
 **Generation time:** 2026-09-21T13:07:57-04:00
-**Source fingerprint:** `1ca8cca4fe58578cbce5647c9456079d16be2a7ad642069415eac227806504dd`
+**Source fingerprint:** `fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -200,6 +200,7 @@
 - [Participation and Relational Infrastructure](../../methods/participation-and-relational-infrastructure.md) - `related_to` (frontmatter)
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
+- [Circle O - Operations Manager](../../opportunities/circle-o-operations-manager-2026.md) - `related_to` (frontmatter)
 - [NYC PEU - Chief Strategy Officer 787960](../../opportunities/peu-chief-strategy-officer-787960.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)

@@ -119,6 +119,35 @@
       "publication_authorized": false
     },
     {
+      "id": "opportunity.circle-o.operations-manager.2026",
+      "title": "Circle O - Operations Manager",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+          "sha256": "45a57e8e8e975e8dd061410c770255fb181499da95a77c9f7d47ada76a811ec0"
+        }
+      ],
+      "source_hash": "d830ae63898ffe5a044a25de0bd11c2470a57f8dc3fc23c28ca2b35108cc5cbb",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "title": "CodePath - Senior Program Manager, Claude Corps",
       "method": "oti-evidence-first-v1",

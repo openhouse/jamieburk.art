@@ -1,10 +1,10 @@
 {
-  "reportVersion": 6,
-  "checkedAt": "2026-08-24T23:40:11.460Z",
+  "reportVersion": 7,
+  "checkedAt": "2026-09-28T01:05:24.726Z",
   "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
+  "publicSurfaceFingerprint": "ed1f1dcb8b4e46c45f20c201e9ce93fcac9be86fc8ac5e869a02d6712e457918",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 153,
+  "publicSurfaceFileCount": 154,
   "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
@@ -22,7 +22,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
+          "sha256": "7ff02c019578cce0298caf900c7b880e3d9ffc2e0e97dd15c789ad85dbcd8b80",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -35,7 +35,7 @@
           "pixelWidth": 375,
           "pixelHeight": 812,
           "httpStatus": 200,
-          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
+          "sha256": "a3233b7565d0417ded117b0b2cfd5d504bbee270ae408026853739b8008a3ef1",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -55,11 +55,11 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
-            "currentPracticeDocumented": true
+            "currentPracticeDocumented": false
           }
         },
         {
@@ -72,11 +72,11 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "e2bb09e69b8c0eac22119b9995c4b3c2a2a2edba4f26a2b96960e0d0436e24d9",
+          "sha256": "64b7151340ab86ecd0bac55d83c05fb68d6d13e836797b33457e53027a743df5",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
-            "currentPracticeDocumented": true
+            "currentPracticeDocumented": false
           }
         }
       ]
@@ -85,10 +85,10 @@
   "passed": true,
   "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without browser warnings or errors; the complete route matrix separately exercises the colophon route.",
   "refresh": {
-    "candidateChange": "The knowledge graph gained a held, source-backed proposition and proposed RFC for wiki-shaped shared memory; no public portfolio page changed.",
+    "candidateChange": "The knowledge graph gained a bounded Circle O opportunity record and application-preparation linkage; no public portfolio page or citation claim changed.",
     "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
-    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected; the separate page-owner packet retains exact desktop and mobile colophon captures.",
-    "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
+    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected.",
+    "responsiveRun": "All 60 route-width combinations were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
     "browserDiagnostics": "No browser warnings or errors were observed."
   }
 }

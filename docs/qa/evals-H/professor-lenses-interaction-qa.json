@@ -1,10 +1,10 @@
 {
-  "reportVersion": 4,
-  "checkedAt": "2026-08-24T23:40:11.460Z",
+  "reportVersion": 5,
+  "checkedAt": "2026-09-28T01:05:24.726Z",
   "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
+  "publicSurfaceFingerprint": "ed1f1dcb8b4e46c45f20c201e9ce93fcac9be86fc8ac5e869a02d6712e457918",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 153,
+  "publicSurfaceFileCount": 154,
   "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
@@ -213,7 +213,7 @@
   ],
   "passed": true,
   "refresh": {
-    "candidateChange": "The knowledge graph and internal governance changed without changing the public portfolio; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
+    "candidateChange": "The governed knowledge graph changed without changing the public portfolio; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
     "currentChecks": [
       "Keyboard order and visible focus were freshly exercised on the exact homepage.",
       "The mobile menu opened from its summary control and transferred focus to its first link.",

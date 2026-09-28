@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-21T13:07:57-04:00",
   "sourceCommit": "7c86741c8f2c5ac8ab7095e5231d95f05ff85d7d",
-  "sourceFingerprint": "1ca8cca4fe58578cbce5647c9456079d16be2a7ad642069415eac227806504dd",
+  "sourceFingerprint": "fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 504,
+    "records": 510,
     "byKind": {
       "project": 15,
-      "person": 16,
-      "organization": 2,
+      "person": 17,
+      "organization": 3,
       "event": 20,
       "place": 1,
-      "source": 116,
+      "source": 119,
       "asset": 195,
       "claim": 3,
       "research-run": 14,
@@ -29,43 +29,58 @@
       "evaluation": 8,
       "index": 32,
       "capability": 5,
-      "opportunity": 16,
+      "opportunity": 17,
       "projection": 18
     },
-    "typedRelations": 1798,
-    "evidenceRelations": 33,
+    "typedRelations": 1818,
+    "evidenceRelations": 36,
     "relationTypeCounts": {
       "collaborated_with": 2,
       "documents": 42,
-      "evidence:context": 12,
-      "evidence:direct-support": 18,
+      "evidence:context": 13,
+      "evidence:direct-support": 20,
       "evidence:private-support": 3,
       "has_asset": 22,
       "informed_by": 49,
       "part_of": 14,
       "participated_in": 3,
       "projected_to": 22,
-      "related_to": 1151,
+      "related_to": 1166,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 38,
       "uses_method": 40,
-      "uses_source": 408
+      "uses_source": 413
     },
-    "proseLinks": 575,
-    "rootReachable": 274,
-    "orphanCount": 0,
+    "proseLinks": 576,
+    "rootReachable": 275,
+    "orphanCount": 2,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
     "correctionCount": 4,
     "rightsReviewCount": 185,
-    "opportunityCount": 16,
-    "liveOpportunityCount": 14,
-    "criticalRequirementCount": 57,
-    "criticalRequirementGapCount": 19,
-    "warningCount": 0,
-    "warnings": []
+    "opportunityCount": 17,
+    "liveOpportunityCount": 15,
+    "criticalRequirementCount": 59,
+    "criticalRequirementGapCount": 20,
+    "warningCount": 2,
+    "warnings": [
+      {
+        "code": "ORPHAN",
+        "message": "organization.circle-o is not reachable from the root",
+        "file": "docs/knowledge-bank/organizations/circle-o.md",
+        "line": 1,
+        "severity": "warning"
+      },
+      {
+        "code": "ORPHAN",
+        "message": "person.kayla-hamilton is not reachable from the root",
+        "file": "docs/knowledge-bank/people/kayla-hamilton.md",
+        "line": 1,
+        "severity": "warning"
+      }
+    ]
   },
   "humanGates": [
     {
@@ -99,7 +114,20 @@
       "authority": "external readers and employers"
     }
   ],
-  "orphans": [],
+  "orphans": [
+    {
+      "id": "organization.circle-o",
+      "kind": "organization",
+      "path": "docs/knowledge-bank/organizations/circle-o.md",
+      "reason": "not reachable from root"
+    },
+    {
+      "id": "person.kayla-hamilton",
+      "kind": "person",
+      "path": "docs/knowledge-bank/people/kayla-hamilton.md",
+      "reason": "not reachable from root"
+    }
+  ],
   "deadEnds": [],
   "wanted": [
     {
