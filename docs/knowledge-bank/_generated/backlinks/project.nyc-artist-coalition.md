@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `5576b2897d15ccaf3a76a474bed35fb3f6db7af8`
-**Generation time:** 2026-09-27T21:39:18-04:00
-**Source fingerprint:** `fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841`
+**Source commit:** `880d16f6fe6abcee871d166665d4bd95c60b569d`
+**Generation time:** 2026-09-27T22:35:35-04:00
+**Source fingerprint:** `3f28aec77005465aa69c66d525f74eea47a4bfa7c5f4bee24cea22122df757d4`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)

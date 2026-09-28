@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T21:39:18-04:00",
-  "sourceCommit": "5576b2897d15ccaf3a76a474bed35fb3f6db7af8",
-  "sourceFingerprint": "fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841",
+  "generatedAt": "2026-09-27T22:35:35-04:00",
+  "sourceCommit": "880d16f6fe6abcee871d166665d4bd95c60b569d",
+  "sourceFingerprint": "3f28aec77005465aa69c66d525f74eea47a4bfa7c5f4bee24cea22122df757d4",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3388,8 +3388,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-09-01",
-      "reviewBy": "2026-09-14"
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2026-10-05"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -5187,8 +5187,8 @@
       "sensitivity": "low",
       "summary": "Recurring editorial discovery source for civic-technology jobs, events, public-service developments, community tools, and employer leads.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
-      "reviewBy": "2026-08-29"
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2026-10-04"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -25214,6 +25214,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "toPath": "docs/knowledge-bank/people/kayla-hamilton.md",
+      "to": "person.kayla-hamilton",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "toPath": "docs/knowledge-bank/organizations/circle-o.md",
+      "to": "organization.circle-o",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "from": "opportunity.codepath.claude-corps.5182020007",
       "toPath": "docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md",
@@ -26560,7 +26578,7 @@
       "toPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
       "to": "method.betanyc-opportunity-loop",
       "fragment": null,
-      "line": 23,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -26569,7 +26587,7 @@
       "toPath": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
-      "line": 24,
+      "line": 27,
       "kind": "link"
     },
     {

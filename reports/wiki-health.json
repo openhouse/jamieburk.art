@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T21:39:18-04:00",
-  "sourceCommit": "5576b2897d15ccaf3a76a474bed35fb3f6db7af8",
-  "sourceFingerprint": "fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841",
+  "generatedAt": "2026-09-27T22:35:35-04:00",
+  "sourceCommit": "880d16f6fe6abcee871d166665d4bd95c60b569d",
+  "sourceFingerprint": "3f28aec77005465aa69c66d525f74eea47a4bfa7c5f4bee24cea22122df757d4",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
@@ -52,9 +52,9 @@
       "uses_method": 40,
       "uses_source": 413
     },
-    "proseLinks": 576,
-    "rootReachable": 275,
-    "orphanCount": 2,
+    "proseLinks": 578,
+    "rootReachable": 277,
+    "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
     "stalePageCount": 0,
@@ -64,23 +64,8 @@
     "liveOpportunityCount": 15,
     "criticalRequirementCount": 59,
     "criticalRequirementGapCount": 20,
-    "warningCount": 2,
-    "warnings": [
-      {
-        "code": "ORPHAN",
-        "message": "organization.circle-o is not reachable from the root",
-        "file": "docs/knowledge-bank/organizations/circle-o.md",
-        "line": 1,
-        "severity": "warning"
-      },
-      {
-        "code": "ORPHAN",
-        "message": "person.kayla-hamilton is not reachable from the root",
-        "file": "docs/knowledge-bank/people/kayla-hamilton.md",
-        "line": 1,
-        "severity": "warning"
-      }
-    ]
+    "warningCount": 0,
+    "warnings": []
   },
   "humanGates": [
     {
@@ -114,20 +99,7 @@
       "authority": "external readers and employers"
     }
   ],
-  "orphans": [
-    {
-      "id": "organization.circle-o",
-      "kind": "organization",
-      "path": "docs/knowledge-bank/organizations/circle-o.md",
-      "reason": "not reachable from root"
-    },
-    {
-      "id": "person.kayla-hamilton",
-      "kind": "person",
-      "path": "docs/knowledge-bank/people/kayla-hamilton.md",
-      "reason": "not reachable from root"
-    }
-  ],
+  "orphans": [],
   "deadEnds": [],
   "wanted": [
     {

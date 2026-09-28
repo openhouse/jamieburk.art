@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Talks Not Raids orientation
 
-**Source commit:** `5576b2897d15ccaf3a76a474bed35fb3f6db7af8`
-**Generation time:** 2026-09-27T21:39:18-04:00
-**Source fingerprint:** `fbe97a4f85ab8731f59bbe0109bc3a26137e1c953a9f430d7929862a90134841`
+**Source commit:** `880d16f6fe6abcee871d166665d4bd95c60b569d`
+**Generation time:** 2026-09-27T22:35:35-04:00
+**Source fingerprint:** `3f28aec77005465aa69c66d525f74eea47a4bfa7c5f4bee24cea22122df757d4`
 
 - [NYC Artist Coalition / Talks Not Raids: save nyc spaces nyc artist coalition [7cao5kfz]](../../assets/photographs/project-sites/nyc-artist-coalition-talks-not-raids-save-nyc-spaces-nyc-artist-coalitio.md) - `related_to` (frontmatter)
 - [Save NYC Spaces / Talks Not Raids: save nyc spaces nyc artist coalition [44iyucy6]](../../assets/photographs/project-sites/save-nyc-spaces-talks-not-raids-save-nyc-spaces-nyc-artist-coalition-44i.md) - `related_to` (frontmatter)

@@ -125,10 +125,10 @@
       "sources": [
         {
           "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
-          "sha256": "45a57e8e8e975e8dd061410c770255fb181499da95a77c9f7d47ada76a811ec0"
+          "sha256": "2012fa8c070a038f8d52318924c1fc99bbf11e1d44133be267c8f67b5d0061d2"
         }
       ],
-      "source_hash": "d830ae63898ffe5a044a25de0bd11c2470a57f8dc3fc23c28ca2b35108cc5cbb",
+      "source_hash": "d977acb0da03bdcb3d501dc83b74f0b13ceb1a791215303a4d83f373deb27d49",
       "required_stages": [
         "official-posting-and-form",
         "eligibility-and-evidence",
