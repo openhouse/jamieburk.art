@@ -50,7 +50,9 @@ const composition = {
     width: 1200,
     height: 630,
     contentType: "image/png",
-    sha256: "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42"
+    // Re-rendered and visually inspected with Next.js 16.3.8 on 2026-10-13.
+    // Jamie's selected composition, copy, photograph and fonts are unchanged.
+    sha256: "b5a5562ec7e966852f7efe4c416497b0f5d711ade97be0def46b7ed4005e348c"
   },
   layout: {
     canvas: { width: 1200, height: 630 },

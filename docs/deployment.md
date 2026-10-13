@@ -8,7 +8,28 @@ production receives the same reviewed commit.
 ```txt
 jamieburk-art-staging -> staging.jamieburk.art
 jamieburk-art         -> jamieburk.art
+jamieburkart-staging-c -> staging-c.jamieburk.art
 ```
+
+## C review staging
+
+The C review app was checked on October 13, 2026. Its deploy branch is `main`,
+its domain is `staging-c.jamieburk.art`, and its runtime/build policy is
+`noindex`. Use the approved C pull-request commit from an isolated checkout:
+
+```bash
+git push dokku@staging.jamieburk.art:jamieburkart-staging-c HEAD:main
+```
+
+Before pushing, read the app's current domain, build arguments and running
+revision and retain the previous commit for rollback. After pushing, compare the
+running container's `GIT_REV` with the deployed commit and check `/api/health`,
+`/robots.txt`, response indexing headers and private-path 404s. Dokku's Git report
+alone is insufficient when its cached SHA differs from the running container.
+
+Staging provides the public candidate for browser and reader review. Report
+stale review receipts and failed release gates explicitly; a staging deployment
+does not establish production readiness or authorize production/indexing.
 
 ## Staging Setup Draft
 

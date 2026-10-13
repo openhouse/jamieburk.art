@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-10-13",
+  "baseline": "99c6d8f557e790f216174e95c7345fcdf0eb9dcf",
+  "purpose": "C public review staging refresh",
+  "runtime": "Node 26.5.0",
+  "candidate_inputs": {
+    "apps/www/next-env.d.ts": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+    "apps/www/package.json": "fe59f2c82a0af32868c62153562ddac077584319e5e3121727b8aca8db61cd04",
+    "package-lock.json": "f587dd55b532a1072cf185c5dbcbb4aaafc64b7960b3a5532f886c0df84ddb2a",
+    "apps/www/src/data/social-preview.ts": "2ff4626e07175305852122584eface41bdf453f4fdadabb19e595822aaa67a4a",
+    "scripts/knowledge-wiki/named-reader-acceptance-lib.mjs": "c34c7c7b9f1d3224a197b3758962cfe817ed77c6aae55a92964aeca03cf13db5",
+    "scripts/knowledge-wiki/check-named-reader-acceptance.mjs": "d82c861a0c6890a6e77e0f247fd84e8c692855580ae18721db961c74e93ef74d",
+    "scripts/knowledge-wiki/named-reader-acceptance.test.mjs": "6dc7b02b72b48112c2b2bcff2bfaed3e4ce8878f67232637b2351f9380a1922d",
+    "docs/deployment.md": "d0604e4202a74a706bd47c31a00b95188da64224c9bbb54bd48877660e602812"
+  },
+  "changes": [
+    "Named-reader receipt currentness now checks commit, expected HTTPS origin, and unchanged runtime inputs.",
+    "Compatible Next.js 16.3.8 security patch, matching MDX/ESLint packages, and transitive lock updates.",
+    "C staging target and runtime revision verification documented.",
+    "Existing social-preview composition re-rendered and visually inspected after the renderer patch; selected content and design unchanged."
+  ],
+  "verification": {
+    "build": "pass; staging C URL and noindex; rendered language 16 HTML pages",
+    "typecheck": "pass",
+    "lint": "pass",
+    "routes": "pass",
+    "public_safety": "pass; 11 retained knowledge-bank warnings",
+    "named_reader_tests": {
+      "passed": 21,
+      "failed": 0,
+      "red_baseline": {
+        "passed": 13,
+        "failed": 8
+      }
+    },
+    "irl_hillclimb": "pass",
+    "production_dependency_audit": {
+      "before": {
+        "critical": 1,
+        "high": 5,
+        "moderate": 3
+      },
+      "after": {
+        "critical": 0,
+        "high": 0,
+        "moderate": 4
+      },
+      "residual": "gray-matter dependency chain; suggested breaking downgrade not applied"
+    },
+    "social_preview": {
+      "width": 1200,
+      "height": 630,
+      "sha256": "b5a5562ec7e966852f7efe4c416497b0f5d711ade97be0def46b7ed4005e348c",
+      "visual_inspection": "Name, proposition, destination, photograph continuity and clipping checked in the generated image."
+    },
+    "full_check": {
+      "passed": false,
+      "stop": "professor-lens candidate binding and 0/6 current scorecards",
+      "candidate_fingerprint": "6b2de8c7c4fb74fe4ec80908e00b6cc28b8395bfb1e0071d9d5e1d554c171c9f"
+    }
+  },
+  "release": {
+    "staging": "build verified; deployment result recorded separately after execution",
+    "production": "held",
+    "responsive_matrix": "stale; no hash-only rebind",
+    "reader_acceptance": "historical; no current approval inferred",
+    "thresholds_changed": false
+  },
+  "official_security_source": "https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4"
+}
