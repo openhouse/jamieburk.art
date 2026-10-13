@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Portfolio snapshot:** `31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a`
+**Candidate commit:** `8b7fbc013d639ac4a511bc7b1cfefe13bc64ab7d`
+**Portfolio snapshot:** `6c5f7b3f78468a8e16ace6bc53367d0700455fa597eefe4f2f910332dcc363fc`
 **Role-context hash:** `eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
@@ -33,8 +33,8 @@
 ### ACLU - Senior Project Manager, Learning and Project Solutions
 
 - Deterministic disposition: `evidence-gap-review`
-- Critical signals observed: 3/4
-- All signals observed: 4/5
+- Critical signals observed: 2/4
+- All signals observed: 3/5
 - Opportunity status live: yes
 - Historical benchmark: no
 - Role context current at candidate time: no
@@ -42,9 +42,9 @@
 - Public reporting context: Senior Director, Learning and Project Solutions (role-only)
 - Public vision context: Chief Operating Officer (role-identity-matched)
 
-- `requirement.aclu.project-strategy`: **observed** on `/resume`, `/work/technical-operations`
+- `requirement.aclu.project-strategy`: **observed** on `/work/technical-operations`
 - `requirement.aclu.cross-department-delivery`: **observed** on `/work/technical-operations`
-- `requirement.aclu.business-analysis`: **observed** on `/resume`
+- `requirement.aclu.business-analysis`: **not observed**
 - `requirement.aclu.budget-and-resources`: **not observed**
 - `requirement.aclu.organizational-standards`: **observed** on `/work/technical-operations`
 
@@ -72,7 +72,7 @@
 - All signals observed: 5/7
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
 - Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
@@ -92,7 +92,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Executive Director, Product Management (role-only)
 - Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
@@ -108,7 +108,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Executive Director, Product Management (role-only)
 - Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)

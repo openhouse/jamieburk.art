@@ -1,36 +1,149 @@
 {
-  "evaluator": "Independent Codex judgment using a fictionalized Margaret Morse analytical lens. Margaret Morse did not participate, speak, review, or endorse.",
-  "reviewerId": "morse-circleo-20260927-b",
   "phase": "holdout",
-  "lensId": "PR-015",
-  "candidateSha256": "1ca50baaaf3e190877ebc1717815262c57e6c05e468939c22cdf2c1f219fd7f5",
+  "reviewer": "independent-visitor-y",
+  "reviewedAt": "2026-10-13T17:21:26.175Z",
+  "candidateSha256": "7f952b3bdbe8870e27c2ce55f85bcfff28536ddd40df358c00502e811248a6bf",
+  "candidateFingerprintMethod": "Independently imported professorCandidateRelativePaths and fingerprintProfessorCandidate; read and hashed all 156 candidate files.",
+  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFingerprintVerifiedIndependently": true,
+  "filesEdited": false,
+  "receiptFilesOnlyWrittenOutsideCandidate": true,
+  "lensStatus": "Fictionalized analytical lens; not the named person's participation, evaluation, endorsement, or approval.",
+  "independence": {
+    "priorScorecardsRead": false,
+    "otherReviewersScoresRead": false,
+    "implementationDiscussionRead": false,
+    "rubricEdits": false,
+    "candidateEdits": false
+  },
+  "evidenceScope": {
+    "rubric": ".agents/evals/portfolio-production-readiness.json",
+    "design": "DESIGN.md",
+    "liveBaseUrl": "http://127.0.0.1:3224",
+    "liveRoutesReviewed": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/harry-j-epstein",
+      "/work/fair-rent-nyc",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory"
+    ],
+    "captureReceipt": "visitor-copy-browser-artifacts/early-professor-capture.json",
+    "capturedAt": "2026-10-13T17:19:12.174Z",
+    "screenshotHashesIndependentlyVerified": true,
+    "screenshots": [
+      {
+        "file": "early-candidate-home-desktop.png",
+        "viewport": "1280x900",
+        "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0"
+      },
+      {
+        "file": "early-candidate-home-viewport.png",
+        "viewport": "375x812",
+        "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e"
+      },
+      {
+        "file": "early-professor-lenses-about-desktop.png",
+        "viewport": "1280x900",
+        "sha256": "06711757e56bf06e021ecb43c1bdf036f7d07a052b2b1081518a274b1e7bffa5"
+      },
+      {
+        "file": "early-professor-lenses-about-mobile.png",
+        "viewport": "375x1200",
+        "sha256": "03ecf72d7f01f852a719c8a778935fbbff6690bf074c25528ccdeac7e07af048"
+      }
+    ],
+    "fullResponsiveMatrix": "Still running at receipt time; not verified or claimed complete by this holdout.",
+    "externalSourceRevalidation": "Not performed. This is a rendered portfolio and bounded source-projection review, not a fresh archival authentication or rights audit."
+  },
+  "designFindings": [
+    "The desktop and mobile screenshots name Jamie and the literal professional role. The full-bleed photograph, restrained color, serif landmarks, and unframed About section support the Human Index composition.",
+    "The About through-line and links remain readable at 375px with no visible horizontal clipping.",
+    "Nonblocking for PR-015/PR-016: the 375x812 homepage screenshot does not show a hint of the next section. This does not fully meet that specific DESIGN.md composition preference; desktop does show the next section."
+  ],
+  "releaseBoundary": "A pass here is one independent lens judgment. It is not a three-judge median, complete responsive/accessibility QA, hosted CI, rights clearance, human content approval, production approval, deployment, or indexing authorization.",
+  "evalId": "PR-015",
+  "lens": "Fictionalized Margaret Morse lens: inhabited systems",
   "score": 4,
   "pass": true,
-  "evidence": [
-    "Read all 156 exported professorCandidateRelativePaths, totaling 11,086,671 bytes. Independently recomputed SHA-256 using Python hashlib over each sorted path, NUL, complete file bytes, and NUL. Initial and final hashes matched the requested candidate.",
-    "The independently checked runtime fingerprint was ed1f1dcb8b4e46c45f20c201e9ce93fcac9be86fc8ac5e869a02d6712e457918 across 154 runtime inputs, matching all three requested QA reports. All four PNG checksums and dimensions matched; each image was visually inspected.",
-    "Two-click requirement passes: desktop homepage → About is one click; About links directly to the project continuities. Mobile Menu → About takes two activations. The desktop About PNG visibly renders 'Systems people can inhabit' and the collective Open House claim. Navigation and interaction evidence corroborates the route and heading sequence.",
-    "The homepage visibly foregrounds technical project management, product operations, and implementation. About connects artistic, civic, technical, and social practice through participation and continuity without displacing that professional purpose with an artist biography.",
-    "Sunday Dinner / 196 trace: hospitality and artist agency become invitation, orientation, space configuration, independent access, continued support, and minimal continuity records. The two explicitly labeled workflow reconstructions make care operational while withholding participant-level values.",
-    "NYC Artist Coalition / FairRentNYC trace: listening, priority ballots, cultural spaces, practical sessions, and public gatherings become campaign interfaces, source maps, running minutes, decisions, and action trackers. Participants can influence the work, recover context, and continue it; the website is explicitly situated within collective activity.",
-    "WOWList trace: organizers' existing community vocabulary informs collaboratively editable natural-language events, followable keyword communities, distribution, and support. Richard Caceres and the wider organizer network retain credit. Historical operation and the limited 2026 return threshold remain distinct.",
-    "Knowledge Wiki Graph trace: shared knowledge becomes source-linked records, visible uncertainty, correction paths, and human-reviewed outputs. The concrete CallNYC chronology correction demonstrates revisable memory; proposed pilots remain proposals rather than claimed client adoption.",
-    "The responsive evidence covers all 60 route-width combinations with successful responses, no reported axe violations or overflow, and completed image loading. Interaction evidence records visible keyboard focus, functioning skip navigation, mobile-menu operation, and 320/640-pixel reflow checks.",
-    "Circle O remains a documentation-graph opportunity addition. No Circle O website page, citation claim, or public-registry delta was inferred. Older helper holdout references were excluded from the candidate-content judgment."
+  "decision": "pass",
+  "scoreRationale": "The portfolio connects artistic, civic, technical, and social practice through concrete forms people can enter, change, and continue. Three distinct project continuities supply specific evidence, while the literal technical-project-management role remains the organizing frame. The lived settings have a functional relation to the systems rather than serving as decorative biography.",
+  "twoClickPath": {
+    "method": "Observed live homepage About link and followed it; followed Sunday Dinner from About to its rendered case study.",
+    "threshold": [
+      "/",
+      "/about"
+    ],
+    "projectPaths": [
+      [
+        "/",
+        "/about",
+        "/work/196-sunday-dinner"
+      ],
+      [
+        "/",
+        "/about",
+        "/work/wowlist"
+      ],
+      [
+        "/",
+        "/about",
+        "/work/fair-rent-nyc"
+      ]
+    ],
+    "evidence": "About visibly names Systems people can inhabit, the four connected practice dimensions, and the method; screenshot pair preserves the desktop and mobile through-line."
+  },
+  "projectContinuityTrace": [
+    {
+      "project": "Sunday Dinner / 196",
+      "route": "/work/196-sunday-dinner",
+      "continuity": "Hospitality, trust, shared space, and the rhythms of returning become invitations, response handling, onboarding, space configuration, practical handoffs, and continued support.",
+      "inspectableEvidence": "The gathering photograph places the work at a shared table and map. Two rendered five-step reconstructions show residency handoff and recurring gathering continuity. The residency sequence treats proposals as inquiry and preserves the artist's ability to change direction.",
+      "boundary": "All participant rows and values remain withheld. The operating-sheet schema is not treated as consent or as a census; public milestones retain co-organizer credit."
+    },
+    {
+      "project": "WOWList",
+      "route": "/work/wowlist",
+      "continuity": "Calendars made with Sunday Dinner and the language used by scenes become collaboratively editable natural-language event posts and followable keyword communities.",
+      "inspectableEvidence": "The live case study connects organizer need to product decision, historical use across 35 city ecosystems, public support materials, an independent tutorial, and a concrete Sunday Dinner event-to-WOWList path.",
+      "boundary": "Richard Caceres is named as co-founder and co-builder; organizers, editors, maintainers, and participants retain credit. The current return is explicitly a landing/About/tester threshold, not a restored calendar service."
+    },
+    {
+      "project": "NYC Artist Coalition / FairRentNYC",
+      "route": "/work/fair-rent-nyc",
+      "continuity": "Listening, cultural-space experience, meetings, and collective questions become campaign surfaces, practical sessions, public action paths, meeting memory, and recoverable next steps.",
+      "inspectableEvidence": "The rendered participation sequence pairs a public campaign interface, a working-session photograph, and a collective town-hall photograph with Align, Translate, Implement, and Sustain. Documentation is tied to continuing across meetings rather than merely storing records.",
+      "boundary": "Recollection is labeled as recollection; retained web history separately supports implementation. Policy outcomes, public rooms, and campaign accomplishments remain collective."
+    }
   ],
+  "safety": {
+    "pass": true,
+    "findings": [
+      "The Open House projection is one bounded, cited account of initiation, ten-day form, communal decision-making, and many-perspective documentation. It does not identify participants or turn their work into sole authorship.",
+      "The public-safe source note explicitly withholds protected educational records, private correspondence, and unapproved faculty testimonial. The raw Open House article was not supplied as a reproduced review artifact.",
+      "The candidate file manifest has no raw Open House, UCSC narrative, or faculty artifact path. The public registry contains the bounded Open House projection but excludes the held social-information-spaces coursework claim.",
+      "Photo metadata marks reviewed occurrences as Jamie-authorized for public Git/staging, with production and indexing still open. This review does not confer further rights.",
+      "No romanticized participant vulnerability, participant-level operating data, or unapproved private praise appeared on the inspected live surfaces."
+    ]
+  },
   "gaps": [
-    "Non-blocking evidence-label discrepancy: the mobile About PNG stops before the through-line heading, although its framedContent flag says that heading is present. Correct that flag or retain a scrolled capture. The desktop screenshot, route evidence, and rendered heading inventory satisfy PR-015's substantive path-and-render requirement."
+    {
+      "severity": "nonblocking",
+      "finding": "Mobile homepage at 375x812 does not reveal the next section; recorded as a DESIGN.md composition observation, not a failure of this practice-lineage rubric."
+    },
+    {
+      "severity": "scope-limit",
+      "finding": "Private source evidence and independent consent records were deliberately not opened; safety findings concern public projection and its stated boundaries."
+    },
+    {
+      "severity": "separate-gate",
+      "finding": "Full responsive matrix and release authorization remain unclaimed."
+    }
   ],
-  "safety_findings": [
-    "Collective-credit audit passes: Open House separates initiation from communal governance; coalition outcomes remain collective; WOWList names its co-builder and wider contributors; Sunday Dinner preserves community and co-organizer credit.",
-    "Protected-source exclusion audit found no raw Open House article reproduction, faculty testimonial, educational-record quotation, or private correspondence in the reviewed public presentation. Educational claims remain held outside the public citation registry; participant records and access details are withheld.",
-    "Anti-overclaim boundaries distinguish reconstruction from original artifacts, historical implementation from present proficiency, platform responses from attendance or impact, and research or proposed pilots from completed deployments. No romanticized vulnerability was identified."
-  ],
-  "recommendation": "Accept this individual PR-015 holdout at 4: all substantive candidate criteria pass. Correct the non-blocking screenshot metadata. This score does not establish the three-reviewer median or replace human accessibility, content, publication, or deployment approval.",
-  "provenance": {
-    "provider": "independent-codex-review",
-    "reviewMode": "exact-current-public-candidate independent holdout",
-    "reviewedAt": "2026-09-27",
-    "filesEdited": false
-  }
+  "recommendation": "Accept this PR-015 holdout at 4 for this exact candidate. Preserve the source and collective-credit boundaries; carry the mobile composition observation into the separate design/release review."
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
-  "publicReportHash": "fd57053f0c71fc1b3e0ae3ec92fac8b390f287572ad1d6356b0ee96c68d379a2",
+  "candidateSha": "8b7fbc013d639ac4a511bc7b1cfefe13bc64ab7d",
+  "portfolioSnapshotHash": "6c5f7b3f78468a8e16ace6bc53367d0700455fa597eefe4f2f910332dcc363fc",
+  "publicReportHash": "7f44ca4eb3a51b717c5ece69463a1d51fc7ed353f464172fb1ded669856bc308",
   "wikiSourceFingerprint": "55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f",
   "findings": [
     {
@@ -42,6 +42,21 @@
       "currentStatus": "visible-qualified",
       "gapType": "wording",
       "smallestResponsibleChange": "Demonstrate one measured automation loop tied to delivery or QA.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.business-analysis",
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "requirementId": "requirement.aclu.business-analysis",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Show one before-and-after workflow and the stakeholder evidence behind it.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

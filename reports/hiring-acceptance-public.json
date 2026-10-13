@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "runId": "hiring-public-29745b537e57",
-  "generatedAt": "2026-08-31T19:49:24-04:00",
-  "candidateSha": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
+  "runId": "hiring-public-8b7fbc013d63",
+  "generatedAt": "2026-10-13T13:18:40-04:00",
+  "candidateSha": "8b7fbc013d639ac4a511bc7b1cfefe13bc64ab7d",
   "candidatePathsClean": true,
-  "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
+  "portfolioSnapshotHash": "6c5f7b3f78468a8e16ace6bc53367d0700455fa597eefe4f2f910332dcc363fc",
   "roleContextHash": "eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d",
   "readerContextHash": "e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f",
   "promptHash": "ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762",
@@ -347,9 +347,9 @@
         "boundary": "The role sits in the COO's office; this does not make the COO the direct manager or hiring lead."
       },
       "decision": "evidence-gap-review",
-      "observed": 4,
+      "observed": 3,
       "requirementTotal": 5,
-      "criticalObserved": 3,
+      "criticalObserved": 2,
       "criticalTotal": 4,
       "requirementCoverage": [
         {
@@ -359,11 +359,9 @@
           "matchedPublicText": true,
           "declaredPublicStatus": "visible-proven",
           "routes": [
-            "/resume",
             "/work/technical-operations"
           ],
           "evidenceNeedles": [
-            "turning ambiguous work into requirements, workflows, documentation",
             "Build planning cycles, team rituals, decision frameworks"
           ]
         },
@@ -384,15 +382,11 @@
         {
           "requirementId": "requirement.aclu.business-analysis",
           "importance": "critical",
-          "observed": true,
-          "matchedPublicText": true,
+          "observed": false,
+          "matchedPublicText": false,
           "declaredPublicStatus": "visible-qualified",
-          "routes": [
-            "/resume"
-          ],
-          "evidenceNeedles": [
-            "requirements, workflows, documentation"
-          ]
+          "routes": [],
+          "evidenceNeedles": []
         },
         {
           "requirementId": "requirement.aclu.budget-and-resources",
@@ -508,7 +502,7 @@
       "roleContextHash": "6c94e520783c2df97d0e02614bf932a729e2d37c266b55b90ff6e5284ed1cbcc",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "PIT Crew operational lead",
@@ -625,7 +619,7 @@
       "roleContextHash": "e91a2239cb3b7cb379dc19de571ca1e5c877e23eb3494fa1050d53513de17e58",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Executive Director, Product Management",
@@ -681,7 +675,7 @@
       "roleContextHash": "3bfc5d552974f75288a5238923db232687c298c8beaf8f319a87285868acec77",
       "benchmark": false,
       "live": true,
-      "fresh": true,
+      "fresh": false,
       "hardScreenBlocked": false,
       "publicReportingContext": {
         "role": "Executive Director, Product Management",
