@@ -1,0 +1,134 @@
+{
+  "runVersion": 3,
+  "judgeId": "b-repair-composite-a",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
+  "candidateFingerprint": "384ca1b2b69477a77ddf78fe198d31f3823497b0c41904bfe78d8d1fd0385744",
+  "verdict": "accepted",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Node 26 execution of verify-candidate.mjs confirmed all 2169 candidate files and all 195 semantic copies.",
+        "The recomputed preflight confirmed 14 distinct A-N decisions matching the frozen heads, with no missing frozen commit objects.",
+        "The integration register explicitly identifies feature/knowledge-h, develop, and reference-only treatment of the frozen family."
+      ],
+      "rationale": "The frozen inventory is complete. Mutable reference movement is reported without replacing the pinned identity."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "source/docs/integration/feature-evals-composite.json records a permitted decision, substantive rationale, destination paths, and verification criteria for every branch.",
+        "The recomputed preflight verified destination existence and the reviewed register digest.",
+        "The register explicitly retains the selected public composition and explains deliberate non-projection."
+      ],
+      "rationale": "The integration decisions are inspectable and identify concrete destinations and checks rather than merely declaring adoption."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed preflight confirmed all 11 canonical files and absence of the three forbidden parallel lifecycle roots.",
+        "The knowledge-bank entry point exports public.ts and schema.ts; public.ts consumes the redacted public registry.",
+        "The reviewed application imports use the public citation interface and selected public proof data rather than canonical records."
+      ],
+      "rationale": "One canonical knowledge architecture remains in place, with a separate redacted application projection."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Independent in-memory checks confirmed identical replay, linked duplicate preservation, and rejection of changed content under an existing stable ID.",
+        "Lifecycle queries returned 61 mature held claims, 71 unresolved inquiries, five corrections, active and held projection counts, and zero orphan sources.",
+        "source/scripts/tests/lifecycle-operations.test.mjs covers the same required contracts."
+      ],
+      "rationale": "Intake preserves incoming duplicates without overwriting stable records, and the required lifecycle states are queryable."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed preflight validated 331 sources, 119 claims, 34 agency relations, five corrections, and current derived outputs.",
+        "The reviewed schema and records retain evidence roles, source limitations, projection states, and distinct individual, shared, collective, and institutional credit.",
+        "Rendered population statements distinguish capture-date recovery, reposts, platform responses, account authorship, and recovery gaps from attendance or impact.",
+        "Independent synthetic probes confirmed rejection of protected-source URL exposure and private-path leakage."
+      ],
+      "rationale": "The canonical validation and reviewed public wording preserve source scope, attribution, correction history, and population boundaries."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Reviewed the 28 supplied rendered views across 14 routes at 375 and 1280 pixels; independently verified every screenshot checksum and the 158-file component fingerprint.",
+        "Homepage, Technical Operations, and lead case studies identify Jamie's role, actions, usable results, and deeper proof paths while retaining contribution limits.",
+        "The homepage screen-and-room section and About through-line connect artistic, civic, technical, relational, and social practice through WOWList, Sunday Dinner, and coalition work.",
+        "WOWList organizer workflows, coalition invitation-to-next-meeting records, and KC Town Hall's service interface and completed collection make relationships, models, interfaces, use, and continuation reconstructable.",
+        "The lab supplies a concrete chronology correction and propagation example; workflow reconstructions and unresolved feedback-to-redesign histories remain explicitly bounded.",
+        "Verified all 16 header-followup screenshot checksums and geometry rows; settled initial and restored views show headings below the header on the four investigated routes."
+      ],
+      "rationale": "The site is a purposeful professional projection rather than a knowledge-bank mirror. Agency and inhabited practice remain legible, and the recurring method has concrete evidence without inventing causal iteration or completed client delivery."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The reviewed blind-spot controls retain all five required human-evidence gaps as open.",
+        "Each control specifies required evidence, anti-gaming rules, a next action, and a public-projection boundary.",
+        "Browser interaction evidence explicitly retains human screen-reader, browser-zoom, visual/content, production, and indexing gates.",
+        "Current simulated reader records explicitly deny actual named-person participation and hiring authority."
+      ],
+      "rationale": "Passing controls represent governed absence. The candidate does not substitute simulated judgments or automated checks for corroboration, collective review, human usability, outcomes, or permission."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The verifier recomputed the frozen rubric digest and confirmed the bound base-suite, integration-register, and blind-spot digests.",
+        "The evaluator separately pins the semantic rubric and branch-family digests.",
+        "Eleven independent in-memory governance probes were rejected, including branch omission, missing destinations, checksum-refreshed weakening, fabricated heads, decorative decisions, base-suite removal, self-grading, not-observed acceptance, synthesized human evidence, stale outputs, and blocker compensation.",
+        "Reviewed mutation tests additionally cover protected leakage, attribution inflation, and population-boundary violations."
+      ],
+      "rationale": "The frozen contract and independently exercised rejection behavior resist the specified score-gaming attacks. Blocking failures cannot be offset by other scores."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Actual candidate bytes match the commissioned fingerprint, and the verifier excludes only the two declared composite judgment records.",
+        "The fresh deterministic preflight passes COMP-001 through COMP-008.",
+        "This independently commissioned judgment supplies one complete exact-candidate review with the assigned distinct label and required public attestation.",
+        "The evaluator requires two distinct accepted judgments with complete payload digests and preserves human production approval."
+      ],
+      "rationale": "Under REVIEW.md's individual-review scope, this judgment can contribute one required acceptance. It does not establish that another judgment exists or that the combined stopping gate has passed; the recorder supplies this result's digest and the combined evaluator determines completion."
+    }
+  ],
+  "notObserved": [],
+  "findings": [
+    "The preflight reports movement of the mutable feature/evals-K reference while confirming availability of its frozen commit; this does not invalidate the pinned inventory.",
+    "Full-page captures contain sticky-header overlays. The checksum-bound settled follow-up resolves that concern for the four investigated routes, without constituting human accessibility acceptance.",
+    "The About page and several case studies remain lengthy on mobile. Summary rows, headings, and proof links preserve access, but further editorial compression would improve scanning.",
+    "Specific feedback-caused redesign histories remain unresolved for WOWList and KC Town Hall. Reconstructions, documented use, repeatable operations, and proposed work remain distinguished.",
+    "This is one advisory acceptance. A second separately commissioned exact-candidate judgment and the combined evaluator result are not established here.",
+    "Human corroboration, collective review, hiring usability, job-funnel evidence, external validity, production approval, operational cutover verification, and indexing approval remain open. This judgment supplies no rights, consent, endorsement, or release authority."
+  ],
+  "recommendation": "Accept this candidate as one independent composite advisory judgment. Have the recorder bind the complete result, then evaluate the required review pair against the unchanged candidate. Preserve every unresolved human and production gate.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "b-repair-composite-a",
+    "reviewedAt": "2026-10-13T18:23:53Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "d9174c19add2308f2184f4dfe39f90a0553816036c42cf2c50a75b29e751a504"
+  }
+}

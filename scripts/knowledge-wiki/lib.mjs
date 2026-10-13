@@ -25,6 +25,10 @@ export const defaultRepoRoot = path.resolve(
 export const wikiRelativeRoot = "docs/knowledge-bank";
 export const generatedRelativeRoot = `${wikiRelativeRoot}/_generated`;
 
+// Preserve the original comparison snapshot. A mutable remote-tracking branch
+// must not change a committed report or make local and hosted checks disagree.
+export const graphDeltaBaseCommit = "4b6bc3bff48f4fbefdda2f42aec327645f6a357c";
+
 function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
 }
@@ -1346,9 +1350,7 @@ function graphDeltaMarkdown(result, baseGraph) {
   const lines = [
     generatedHeader("Knowledge Wiki graph delta", result).trimEnd(),
     "",
-    baseGraph
-      ? "Compared with the graph artifact on `origin/develop`."
-      : "`origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.",
+    `Compared with the graph artifact at immutable baseline \`${graphDeltaBaseCommit}\` (the original develop snapshot).`,
     "",
     `- Nodes added: ${addedNodes.length}`,
     `- Nodes removed: ${removedNodes.length}`,
@@ -1368,14 +1370,18 @@ function graphDeltaMarkdown(result, baseGraph) {
 function loadBaseGraph(repoRoot) {
   try {
     return JSON.parse(
-      execFileSync("git", ["show", "origin/develop:reports/wiki-graph.json"], {
+      execFileSync("git", ["show", `${graphDeltaBaseCommit}:reports/wiki-graph.json`], {
         cwd: repoRoot,
         encoding: "utf8",
+        maxBuffer: 16 * 1024 * 1024,
         stdio: ["ignore", "pipe", "ignore"]
       })
     );
-  } catch {
-    return null;
+  } catch (cause) {
+    throw new Error(
+      `Cannot read immutable Wiki graph baseline ${graphDeltaBaseCommit}; fetch full Git history before generating or checking reports.`,
+      { cause }
+    );
   }
 }
 

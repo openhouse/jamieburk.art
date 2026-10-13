@@ -77,3 +77,26 @@ Prior browser evidence is retained in the pre-repair history folder. Fresh
 professor readings bind the repaired public candidate. Two fresh composite
 reviews must bind the final complete source tree. Full checks and staging runtime
 verification remain separate gates. Existing named-human gaps stay open.
+
+## Hosted reproducibility repair
+
+The first repaired candidate passed the complete local check and both composite
+reviews. Hosted run 38447543984 then exposed a separate report dependency:
+`wiki-graph-delta.md` loaded its baseline from mutable `origin/develop`. The
+local reference held the original 107-node, 435-edge graph while GitHub fetched
+a 445-node, 1598-edge graph. Source identity matched, but regenerated output did
+not. The deployment remained held.
+
+The compiler now names the original baseline by immutable commit
+`4b6bc3bff48f4fbefdda2f42aec327645f6a357c`, also displayed in the report. This
+preserves the original comparison and its counts. Failure to load that snapshot
+now fails with a full-history diagnostic instead of reporting an empty graph.
+The Git output buffer is explicitly sized for graph data.
+
+Two regressions failed before repair and passed afterward: moving a remote
+reference cannot change the report, and missing baseline data cannot pass as an
+empty graph. The existing cross-locale test also passes. After fetching the
+current develop reference, the Wiki check still passes with all generated
+outputs current. No portfolio, source claim, media, or professor-reviewed public
+surface changed. The full-source composite reviews must be renewed for this
+compiler repair; the earlier accepted pair remains historical.

@@ -5,7 +5,7 @@
 **Generation time:** 2026-10-13T12:37:35-04:00
 **Source fingerprint:** `65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7`
 
-Compared with the graph artifact on `origin/develop`.
+Compared with the graph artifact at immutable baseline `4b6bc3bff48f4fbefdda2f42aec327645f6a357c` (the original develop snapshot).
 
 - Nodes added: 398
 - Nodes removed: 0
