@@ -60,6 +60,45 @@ test("an axe violation fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("an invisible resume action fails even when axe reports no violation", () => {
+  const report = structuredClone(current.report);
+  report.resumeActionReview = {
+    route: "/work/technical-operations",
+    occurrences: [360, 375, 768, 1280].map((viewport) => ({
+      viewport, label: "Download resume PDF", contrastRatio: 1, visible: true
+    }))
+  };
+  const result = validateResponsiveAccessibilityEvidence(defaultRepoRoot, report);
+  assert.equal(result.resumeActionReviewPasses, false);
+  assert.equal(result.passed, false);
+});
+
+test("a low-contrast focused resume action cannot hide behind a passing summary", () => {
+  const report = structuredClone(current.report);
+  report.resumeActionReview = {
+    route: "/work/technical-operations",
+    occurrences: [360, 375, 768, 1280].map((viewport) => ({
+      viewport, label: "Download resume PDF", contrastRatio: 5.59, visible: true,
+      states: { default: { contrastRatio: 5.59 }, hover: { contrastRatio: 5.59 }, focus: { contrastRatio: 1 } },
+      keyboardFocusVisible: true
+    }))
+  };
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).resumeActionReviewPasses, false);
+});
+
+test("a focused resume action requires a contrasting keyboard outline", () => {
+  const report = structuredClone(current.report);
+  report.resumeActionReview = {
+    route: "/work/technical-operations",
+    occurrences: [360, 375, 768, 1280].map((viewport) => ({
+      viewport, label: "Download resume PDF", contrastRatio: 5.59, visible: true,
+      states: { default: { contrastRatio: 5.59 }, hover: { contrastRatio: 5.59 }, focus: { contrastRatio: 5.59 } },
+      keyboardFocusVisible: true, keyboardFocus: { contrastRatio: 1 }
+    }))
+  };
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).resumeActionReviewPasses, false);
+});
+
 test("an unverified lazy-image follow-up fails closed", () => {
   const report = structuredClone(current.report);
   report.summary.lazyImageFollowUpPerformed = false;

@@ -154,6 +154,25 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.navigationReview?.renderedScreenshot?.byteLength > 0 &&
     report.navigationReview?.pass === true;
 
+  const resumeActions = report.resumeActionReview?.occurrences ?? [];
+  const resumeActionReviewPasses =
+    report.resumeActionReview?.route === "/work/technical-operations" &&
+    resumeActions.length === canonicalAccessibilityViewports.length &&
+    new Set(resumeActions.map((item) => item.viewport)).size === canonicalAccessibilityViewports.length &&
+    resumeActions.every((item) =>
+      canonicalAccessibilityViewports.includes(item.viewport) &&
+      item.label === "Download resume PDF" &&
+      item.visible === true &&
+      Number.isFinite(item.contrastRatio) && item.contrastRatio >= 4.5 &&
+      ["default", "hover", "focus"].every((state) =>
+        Number.isFinite(item.states?.[state]?.contrastRatio) &&
+        item.states[state].contrastRatio >= 4.5
+      ) &&
+      item.keyboardFocusVisible === true &&
+      Number.isFinite(item.keyboardFocus?.contrastRatio) &&
+      item.keyboardFocus.contrastRatio >= 3
+    );
+
   return {
     passed:
       report.reportVersion === 1 &&
@@ -165,6 +184,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       summaryPasses &&
       focusedVisualReviewPasses &&
       navigationReviewPasses &&
+      resumeActionReviewPasses &&
       report.publicSurfaceFingerprintPolicy === current.policy &&
       report.publicSurfaceFingerprint === current.fingerprint &&
       report.publicSurfaceFileCount === current.fileCount,
@@ -175,6 +195,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     rowsPass,
     summaryPasses,
     focusedVisualReviewPasses,
-    navigationReviewPasses
+    navigationReviewPasses,
+    resumeActionReviewPasses
   };
 }
