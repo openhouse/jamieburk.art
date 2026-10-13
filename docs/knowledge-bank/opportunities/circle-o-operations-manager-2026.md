@@ -2,19 +2,19 @@
 id: opportunity.circle-o.operations-manager.2026
 title: Circle O - Operations Manager
 kind: opportunity
-status: governed-open
+status: archived
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-09-27
-review_by: 2026-09-30
+last_reviewed: 2026-10-13
+review_by: 2026-11-13
 canonical_path: docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md
-summary: Strong-fit part-time arts-operations opportunity joining calendars, contractor coordination, knowledge systems, communications and accessible program support; open through September 30, 2026 when verified.
+summary: Applications closed September 30, 2026; the official form confirmed closure October 13. Historical role research remains available.
 canonical_url: https://circleo.org/open-positions
 source_type: official-employer
-opportunity_status: live
-application_state: not-applied
+opportunity_status: closed
+application_state: unknown
 application_deadline: 2026-09-30
-verified_at: 2026-09-27
+verified_at: 2026-10-13
 portfolio_routes:
   - /
   - /work/fair-rent-nyc
@@ -30,6 +30,8 @@ discovery_terms:
   - accessibility
   - contractor coordination
 confirmed_facts:
+  - On October 13, the official application URL returned a closure notice stating that the position closed September 30, 2026; HTTP 200 did not mean the form accepted applications.
+  - The former official opening URL returned HTTP 404 on October 13; the employer-authored Dance/NYC listing retained the original deadline.
   - Circle O's official opening and live form agreed on a September 30, 2026 application deadline when checked September 27.
   - The role is a part-time contractor engagement averaging 20 hours per week at $50 per hour.
   - The role is primarily remote, with hybrid work preferred and strong fully remote candidates encouraged.
@@ -39,6 +41,7 @@ inferences:
   - Jamie's recurring arts convenings, shared knowledge systems, community-calendar operations and public communications make this a strong substantive match.
   - The strongest application story is practical connective tissue for artists and collaborators, not general senior-product leadership.
 unknowns:
+  - Whether Jamie submitted before the deadline; the public sources do not establish any individual application or hiring outcome.
   - Whether Jamie can commit to the average weekly hours, November start, contractor terms and preferred hybrid rhythm.
   - Which existing systems need repair first and how Circle O divides ongoing ownership across current contractors.
   - Whether Circle O prefers a resume upload or a concise experience summary from candidates with hybrid operating backgrounds.
@@ -116,7 +119,7 @@ evidence:
   - target: source.circle-o.operations-manager-application.2026
     relationship: direct-support
     confidence: high
-    supports: [live status, deadline, requested materials, application questions and accepted formats]
+    supports: [official closure observed October 13, original deadline, historical requested materials and questions]
   - target: source.circle-o.about-and-team.2026
     relationship: context
     confidence: high
@@ -128,12 +131,17 @@ human_review: governed-open
 
 ## Answer first
 
-The opportunity was still open on September 27, 2026. Circle O's
-[official opening](https://circleo.org/open-positions) and
-[live application](https://form.jotform.com/262424060516146) both named
-Wednesday, September 30 as the deadline.
+**Applications are closed.** On October 13, 2026, the
+[official application page](https://form.jotform.com/262424060516146) stated
+that the position closed Wednesday, September 30. It returned HTTP 200 with a
+closure notice and no application fields. The former opening URL returned 404.
 
-This is a part-time contractor role averaging 20 hours per week at $50 per
+The role was open when researched September 27. The
+[employer-authored Dance/NYC listing](https://www.dance.nyc/for-artists/listings/2026/09/Circle-O-Operations-Manager-part-time-contractor/)
+still records the original terms and deadline. No extension or public hiring
+outcome was verified. The following fit analysis describes that advertised role.
+
+The advertised part-time contractor role averaged 20 hours per week at $50 per
 hour. It works closely with [Founder and Artistic Director Kayla
 Hamilton](../people/kayla-hamilton.md) at [Circle
 O](../organizations/circle-o.md) and joins calendar ownership, contractor
@@ -158,8 +166,9 @@ truthful application can offer genuine willingness to learn from Disabled
 knowledge; it should not convert adjacent accessibility-aware work into
 expertise.
 
-## Human gates
+## Current action
 
-Jamie must still confirm weekly availability, November onboarding, contractor
-terms, the preferred hybrid rhythm, any access-needs disclosure, and the final
-application. No application, referral, interview or hiring outcome is recorded.
+Retain the role research. If Jamie submitted before the deadline, a confirmation
+can establish the next follow-up step. Otherwise, a fresh invitation or reopened
+posting would be needed to resume application preparation. The advertised
+mid-October interview schedule does not establish Jamie's candidacy or an outcome.

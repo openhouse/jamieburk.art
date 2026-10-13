@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-27T22:35:35-04:00",
   "sourceCommit": "880d16f6fe6abcee871d166665d4bd95c60b569d",
-  "sourceFingerprint": "3f28aec77005465aa69c66d525f74eea47a4bfa7c5f4bee24cea22122df757d4",
+  "sourceFingerprint": "55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3981,13 +3981,13 @@
       "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
       "title": "Circle O - Operations Manager",
       "kind": "opportunity",
-      "status": "governed-open",
+      "status": "archived",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Strong-fit part-time arts-operations opportunity joining calendars, contractor coordination, knowledge systems, communications and accessible program support; open through September 30, 2026 when verified.",
+      "summary": "Applications closed September 30, 2026; the official form confirmed closure October 13. Historical role research remains available.",
       "aliases": [],
-      "lastReviewed": "2026-09-27",
-      "reviewBy": "2026-09-30"
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "opportunity.codepath.claude-corps.5182020007",
@@ -5187,8 +5187,8 @@
       "sensitivity": "low",
       "summary": "Recurring editorial discovery source for civic-technology jobs, events, public-service developments, community tools, and employer leads.",
       "aliases": [],
-      "lastReviewed": "2026-09-27",
-      "reviewBy": "2026-10-04"
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-10-18"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -5237,10 +5237,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official Circle O source for the 2026 part-time Operations Manager opening, scope, terms and September 30 deadline.",
+      "summary": "Historical official posting for Circle O's Operations Manager role; the URL returned 404 on October 13, 2026.",
       "aliases": [],
-      "lastReviewed": "2026-09-27",
-      "reviewBy": "2026-09-30"
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.circle-o.operations-manager-application.2026",
@@ -5250,10 +5250,10 @@
       "status": "maintained",
       "visibility": "public",
       "sensitivity": "low",
-      "summary": "Official live Jotform supporting the deadline, accepted formats and three application questions for Circle O's Operations Manager opening.",
+      "summary": "Official Jotform confirmed September 30 closure when checked October 13, 2026; historical fields remain dated September 27.",
       "aliases": [],
-      "lastReviewed": "2026-09-27",
-      "reviewBy": "2026-09-30"
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.civic-match.candidate-network",
@@ -16652,10 +16652,9 @@
       "source": "evidence",
       "confidence": "high",
       "supports": [
-        "live status",
-        "deadline",
-        "requested materials",
-        "application questions and accepted formats"
+        "official closure observed October 13",
+        "original deadline",
+        "historical requested materials and questions"
       ]
     },
     {
@@ -25219,7 +25218,7 @@
       "toPath": "docs/knowledge-bank/people/kayla-hamilton.md",
       "to": "person.kayla-hamilton",
       "fragment": null,
-      "line": 12,
+      "line": 17,
       "kind": "link"
     },
     {
@@ -25228,7 +25227,7 @@
       "toPath": "docs/knowledge-bank/organizations/circle-o.md",
       "to": "organization.circle-o",
       "fragment": null,
-      "line": 13,
+      "line": 18,
       "kind": "link"
     },
     {
@@ -26578,7 +26577,7 @@
       "toPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
       "to": "method.betanyc-opportunity-loop",
       "fragment": null,
-      "line": 26,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -26587,7 +26586,7 @@
       "toPath": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
-      "line": 27,
+      "line": 30,
       "kind": "link"
     },
     {

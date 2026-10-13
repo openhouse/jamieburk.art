@@ -125,10 +125,10 @@
       "sources": [
         {
           "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
-          "sha256": "2012fa8c070a038f8d52318924c1fc99bbf11e1d44133be267c8f67b5d0061d2"
+          "sha256": "4213cd41805beae949e950b7f28173f4ebef7315fc33c33ad0dab8bbae6d7351"
         }
       ],
-      "source_hash": "d977acb0da03bdcb3d501dc83b74f0b13ceb1a791215303a4d83f373deb27d49",
+      "source_hash": "02e99f5f5db8023c0e1536c1464c74996b22776923c9ee9f27e27d5090c733d1",
       "required_stages": [
         "official-posting-and-form",
         "eligibility-and-evidence",
@@ -141,8 +141,8 @@
         "pdf-export-and-all-page-review",
         "field-guide-and-human-handoff"
       ],
-      "suspended": null,
-      "next_action": "official-posting-and-form",
+      "suspended": "retain-history",
+      "next_action": "retain-history",
       "ready": false,
       "submission_authorized": false,
       "publication_authorized": false

@@ -54,6 +54,23 @@ test('closed roles and hard-screen failures are retained but do not start fresh 
   const [p] = admitOpportunities([{ ...role(), eligibility: 'failed' }]);
   assert.equal(p.next_action, 'resolve-eligibility');
 });
+test('closure in source status suspends a prepared packet even when all earlier stages passed', () => {
+  for (const closure of [{opportunity_status: 'closed'}, {source_review: {application_status: 'closed'}}]) {
+    const [packet] = admitOpportunities([{...role(), status: 'prepared-for-review', ...closure}]);
+    const context = {artifact_hash: 'b'.repeat(64), policy_hash: 'c'.repeat(64), voice_version: 'v1'};
+    const binding = {...context, source_hash: packet.source_hash, method: METHOD};
+    const receipt = {context, stages: Object.fromEntries(STAGES.map(id => [id, {status: 'passed', binding, evidence: ['historical/review.json']}]))};
+    const current = packetState(packet, receipt);
+    assert.equal(current.next_action, 'retain-history');
+    assert.equal(current.ready, false);
+    assert.equal(current.submission_authorized, false);
+  }
+});
+test('a closed posting preserves established existing candidacy as a separate maintenance task', () => {
+  const [packet] = admitOpportunities([{...role(), opportunity_status: 'closed', application_state: 'submitted'}]);
+  assert.equal(packet.next_action, 'maintain-existing-candidacy');
+  assert.equal(packet.ready, false);
+});
 test('input ordering does not invalidate work; removal cannot silently erase a packet', () => {
   const a = role(), b = { ...role(), source_path: 'other.md' };
   const first = admitOpportunities([a, b]);

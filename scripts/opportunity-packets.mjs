@@ -26,7 +26,8 @@ export function admitOpportunities(records, previous = []) {
     const records = unsorted.sort((a, b) => a.source_path.localeCompare(b.source_path));
     const sources = [...new Map(records.map(r => [r.source_path, { path: r.source_path, sha256: r.source_hash }])).values()];
     const isJob = records.some(r => r.opportunity_type === 'job');
-    const closed = records.some(r => ['expired', 'closed', 'withdrawn'].includes(r.status));
+    const closed = records.some(r => [r.status, r.opportunity_status, r.source_review?.application_status]
+      .some(status => ['expired', 'closed', 'withdrawn'].includes(status)));
     const failed = records.some(r => r.eligibility === 'failed');
     const active = records.some(r => ['submitted', 'interviewing', 'offer', 'active-candidacy'].includes(r.application_state || r.status));
     const suspended = active ? 'maintain-existing-candidacy' : closed ? 'retain-history' : failed ? 'resolve-eligibility' : !isJob ? 'classify-opportunity' : null;
