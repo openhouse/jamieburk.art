@@ -1,0 +1,39 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Margaret Morse analytical lens; not the named person and no endorsement.",
+  "reviewerId": "repair-cli-3-morse",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 28 rendered text/screenshot views across 14 routes at 375 and 1280 pixels. All screenshot hashes match rendered/manifest.json. Independently recomputed the candidate fingerprint from the 158 sorted listed paths, NUL delimiters, and actual source bytes; it matches.",
+    "The homepage's 'The system lives between the screen and the room' section pairs coalition facilitation with a public campaign interface. The relationship between embodied gathering and technical infrastructure is visible before entering a case study.",
+    "The homepage navigation reaches /about directly on desktop and through Menu then About on mobile. 'Systems people can inhabit' connects the bounded Open House lineage to artistic, civic, technical, and social practice while retaining technical project management and implementation as the professional frame.",
+    "WOWList connects shared scenes, places, and Sunday Dinner calendars to collaboratively editable event text, followed communities, organizer support, and independent continuation. Richard Caceres and the participating communities retain explicit credit.",
+    "Sunday Dinner / 196 connects the shared-table photograph to invitations, welcome, artist orientation, working conditions, independent access, minimal documentation, and continued support. The workflow specimens preserve participant agency rather than reducing hospitality to administrative throughput.",
+    "NYC Artist Coalition / FairRentNYC joins public campaign surfaces, a facilitated garden working session, a collective town hall, participatory naming, shared letter work, and subsequent invitations. People appear as contributors to the system, not merely recipients of Jamie's work.",
+    "KC Town Hall adds a distinct continuity: a public service promise, household eligibility, recurring collection, collective field work, and a matched before-and-after pair documenting one completed collection."
+  ],
+  "gaps": [
+    "The Sunday Dinner and residency specimens are reconstructions; they do not establish completed residency outcomes or a uniform participant experience. The About page makes that distinction explicit.",
+    "Some supplied screenshots show navigation overlapping opening content, including the mobile About view. The through-line remains visible, but the packet alone does not establish the cause or normal initial-load behavior.",
+    "This review supplies one independent reading, not the three-reader median required by the frozen evaluation."
+  ],
+  "safety_findings": [
+    "The public Open House projection is a concise attributed synthesis, not republication of the article. No faculty testimonial, raw educational record, or private correspondence appears in the reviewed public surfaces.",
+    "Collective credit is substantive: WOWList names Richard Caceres, Sunday Dinner preserves co-organizer credit, coalition outcomes remain collective, and the tire service names its partnership.",
+    "Participant-level records and access details remain withheld. Photographs are captioned and bounded; their presence is not treated as proof of exact remarks, attendance totals, endorsement, or universal benefit.",
+    "The source catalog records occurrence-specific publication boundaries and unresolved release states. This advisory score does not independently establish consent, rights, production approval, or indexing authority."
+  ],
+  "recommendation": "Pass in this individual advisory reading. The candidate makes inhabited systems specific through participation, hospitality, place, public interfaces, and continuity across at least three projects. Assess the required three-reader aggregate separately; this score does not authorize publication or deployment.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

@@ -47,9 +47,33 @@ its new bytes. The event corpus, population controls, and other locks are
 unchanged. This is source-and-boundary acceptance, not professor scoring,
 human-reader acceptance, or a deployment receipt.
 
+## Fresh component verification
+
+Three separately commissioned read-only advisory readers evaluated the repaired
+public candidate `4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d`.
+Each returned 4 for PR-015 and PR-016. Both medians are 4, and neither lens has a
+score below 3. The six complete judgments are retained in the repair scorecards;
+these are fictionalized analytical lenses, not actual named-person participation.
+
+The browser route matrix covers 60 responsive cases with no observed axe
+violations, horizontal overflow, broken images, or failed required requests.
+Keyboard, skip-link, source-disclosure, mobile navigation, and CSS reflow checks
+passed. Four fresh required viewport captures passed their freshness checks.
+Two readers noted header overlap in long-page captures. The separate header
+follow-up observes 16 settled initial and restored normal viewports at 375 and
+1280 pixels: all have scroll position zero and no header/title intersection.
+It is browser QA, not human accessibility acceptance, and does not edit or
+erase the reviewers' findings.
+
+The 89-command check census completed with 85 passing commands. The only four
+failures at that point were professor/composite commands awaiting these fresh
+reviews. A final serial full check is still required after recording the
+composite judgments. Named-human reader acceptance remains 0/8 and is not
+replaced by these advisory or browser results.
+
 ## Release protocol
 
 Prior browser evidence is retained in the pre-repair history folder. Fresh
-professor readings must bind the repaired public candidate. Two fresh composite
+professor readings bind the repaired public candidate. Two fresh composite
 reviews must bind the final complete source tree. Full checks and staging runtime
 verification remain separate gates. Existing named-human gaps stay open.

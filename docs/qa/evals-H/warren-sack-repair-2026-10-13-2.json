@@ -1,0 +1,40 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Warren Sack analytical lens; not Warren Sack and no endorsement.",
+  "reviewerId": "repair-cli-2-sack",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "The actual-byte fingerprint matches the declared candidate. All 28 rendered views were examined, with mobile text compared against desktop text; substantive project content is preserved despite navigation and sidebar-order differences.",
+    "About plainly states the recurring method: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. This visible surface is reachable within two homepage interactions and links its examples to project evidence.",
+    "WOWList makes the sequence reconstructable: shared calendars expose relationships among scenes, interests, and places; editable text and keyword communities model those relationships; publishing, following, and email supply interfaces; historical support and independent organizer routes demonstrate use; onboarding materials and tutorials support continuation. The model is explicitly labeled a reconstruction.",
+    "NYC Artist Coalition makes a second sequence reconstructable: organizers gather around a shared concern; the participation model connects invitation, discussion, naming, letter-making, and another meeting; the public discussion and poll provide interfaces and collective use; the subsequent invitation carries the selected identity into continuing organizing. The knowledge bank preserves dated observations and limits for each step.",
+    "KC Town Hall makes a third sequence reconstructable: households, volunteers, the neighborhood association, and City recycling become an eligibility/intake/scheduling/handoff model; the archived service page and actual outreach flyer express the interface; matched field photographs document one completed collection; recurring schedules and public reporting support continuation. This supports an operating sequence without establishing a finer feedback-to-redesign history.",
+    "CallNYC supplies additional information-architecture evidence through recognizable resident issues, district context, and next-step pathways, supported by an original launch screenshot. Its archived, independent, unofficial status is explicit; public interactions are not presented as resident usability results.",
+    "The lab distinguishes semantic meaning, evidentiary support, and source custody. Its synthetic example and CallNYC chronology correction make review states and propagated documentation concrete. The proposed sprint and acceptance conditions remain proposals rather than evidence of a completed client deployment."
+  ],
+  "gaps": [
+    "The third principal trace establishes delivered service and repeatable handoffs, not a documented resident-feedback-to-redesign chain. WOWList similarly lacks a recovered comment-to-release causal trace. Neither stronger claim is needed or inferred for the reconstructable sequence assessed here.",
+    "The HJE workflow and residency acceptance specimen are reconstructions, and the lab pilot is proposed. They cannot substitute for observed historical use.",
+    "External source availability and interactive navigation were not tested because the review was confined to the packet without network access.",
+    "This single reading cannot establish the required three-judge median and minimum scores."
+  ],
+  "safety_findings": [
+    "The historical social-information-spaces coursework projection remains held in the knowledge bank. Rendered pages do not turn it into current Max/Jitter proficiency, disciplinary invention, peer-reviewed research, or production deployment.",
+    "About explicitly rejects structural-equivalence claims and distinguishes historical implementation from present proficiency. The lab preserves its developing-method status and human review boundary.",
+    "Shared product, coalition, neighborhood-association, and community contributions retain collective credit. Poll percentages, public interactions, and before-and-after photographs are not converted into sole authorship, audited totals, endorsement, or policy causation.",
+    "No named professor participated. This score and the fingerprint verification establish neither human acceptance nor publication, indexing, or deployment authority."
+  ],
+  "recommendation": "Individual advisory pass at 4. Three bounded project traces connect relationships and models to interfaces, collective use, documentation, and continuation. The explicit distinctions among observation, reconstruction, historical operation, and proposed work make the method trustworthy. Aggregate review and release approval remain outstanding separate gates.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

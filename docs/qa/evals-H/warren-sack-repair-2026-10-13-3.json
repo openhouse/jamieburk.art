@@ -1,0 +1,40 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Warren Sack analytical lens; not the named person and no endorsement.",
+  "reviewerId": "repair-cli-3-sack",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 28 rendered text/screenshot views and the packet's frozen criteria, public-safe source note, and relevant listed source evidence. Independently hashing all 158 candidate paths and actual bytes produced the declared fingerprint.",
+    "Within two navigation clicks of the homepage, /about plainly states the recursive sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its project links make the method traceable.",
+    "WOWList sequence: shared calendars reveal relationships among scenes and places; editable text and keyword communities model those relationships; event entry, followed lists, and email provide interfaces; support exchanges and external organizer routes document use; support records and an independent tutorial support continuation. The public registry distinguishes product rationale from corroborated workflows.",
+    "NYC Artist Coalition sequence: cultural-space organizers gather around a shared concern; invitation, discussion, naming, letter-making, and the next meeting form a recoverable participation model; event discussion and campaign sites provide interfaces; the naming-poll display and collaborative actions document participation; the subsequent Floasis invitation carries the collective identity forward.",
+    "KC Town Hall sequence: household needs connect residents, volunteers, project partners, and City recycling; eligibility, intake, scheduling, collection, recycling, and reporting form the operating model; the archived service-page record and visible flyer provide interfaces; the matched field photographs document one delivered collection; recurring scheduling and public reporting support repetition and handoff.",
+    "CallNYC supplies additional information-architecture evidence through its original launch screenshot: administrative records become recognizable issue pathways, district context, and possible next steps. Its archived and unofficial status is explicit.",
+    "The Knowledge Wiki Graph lab distinguishes meaning, evidence, and source custody, presents a bounded synthetic example, and shows a concrete CallNYC chronology correction propagated across public surfaces. Its proposed client sprint remains separate from demonstrated delivery."
+  ],
+  "gaps": [
+    "The evidence supports social use and continuation, but not three documented feedback-caused redesigns. WOWList does not tie a support comment to a release; KC Town Hall explicitly leaves its finer resident-feedback-to-redesign history unresolved. Those stronger claims are not required to reconstruct the frozen sequence.",
+    "Harry J. Epstein's workflow specimen and the residency acceptance specimen are reconstructions, so I did not count them as independent historical testing records.",
+    "External source destinations were not fetched under the packet-only, no-network constraint. Source routing and boundaries were assessed from the supplied public evidence.",
+    "This review does not establish the required three-reader aggregate."
+  ],
+  "safety_findings": [
+    "The historical social-information-spaces prototype projection is marked hold with no public surfaces and is absent from the public citation registry. The rendered candidate does not infer current Max/Jitter proficiency, disciplinary invention, peer-reviewed research, or production deployment from that coursework.",
+    "The About page explicitly treats the cross-project sequence as an analytical pattern rather than proof of structural equivalence.",
+    "WOWList's historical operating platform is distinguished from its limited current return threshold. The Knowledge Wiki Graph is presented as developing research and method, not completed SaaS or a delivered client pilot.",
+    "The coalition poll is bounded as a platform display, not attendance or a legal founding vote. Shared authorship, collective policy outcomes, and project-level service evidence remain distinct from Jamie's individual contribution."
+  ],
+  "recommendation": "Pass in this individual advisory reading. Three distinct projects make relationships, models, interfaces, social use, and documentation reconstructable without inventing causal iteration evidence. Assess the three-reader threshold separately; this finding establishes neither production readiness as a whole nor release authority.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

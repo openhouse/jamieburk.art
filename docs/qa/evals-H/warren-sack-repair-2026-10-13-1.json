@@ -1,0 +1,42 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "phase": "holdout",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "reviewerId": "repair-reader-1-sack",
+  "lensId": "PR-016",
+  "evidence": [
+    "Independently recomputed the exact candidate fingerprint from all 158 listed source paths and inspected all 28 rendered text/screenshot pairs. The assessment uses the visible candidate together with relevant listed source and claim records, not an implementation narrative.",
+    "The About page plainly states the sequence: 'observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue.' The section links directly to project evidence and is reachable through the desktop About link or mobile Menu and About path.",
+    "WOWList sequence: Sunday Dinner calendars expose relationships among scenes, interests, and places; editable text and followable keywords supply the product model; natural-language event entry provides the interface; public support exchanges, an independent organizer tutorial, and a local calendar route document social use; joining, publishing, following, and email guidance provide inspectable continuation records. The source relationships in records.ts and the social-practice records support this reconstruction without claiming that one support comment caused a release.",
+    "NYC Artist Coalition sequence: a public invitation identifies a collective need around the January 2017 DCLA meeting; the invitation, discussion, naming, letter-making, and next-meeting chronology makes the participation model recoverable; event discussion, a naming poll, and a shared letter provide the interfaces; the displayed poll records participant input; the March meeting invitation carries the selected public identity into a subsequent usable participation path. participation-continuity-2026-07.ts preserves the dated observations, sources, and limits behind this account.",
+    "KC Town Hall sequence: the resident service connects households, volunteers, the neighborhood association, and City recycling; eligibility, intake, scheduling, collection, and reporting make the operating model legible; the service page and visible outreach flyer supply the interface; the matched before-and-after photographs establish one completed collection; the recurring schedule, volunteer route, recycling handoff, and public reporting make continuation reconstructable. The source record establishes Jamie's participation while retaining shared ownership and unresolved component attribution.",
+    "These are three different forms of collective use: organizer support, participatory identity formation, and delivered resident service. The candidate supplies actual public artifacts or source-linked operating records for each rather than relying exclusively on an abstract systems vocabulary or tool list.",
+    "The lab adds a distinct correction example: recovered public chronology changes CallNYC from 2014–2015 to 2016 across the work index, case study, and resume. Its synthetic worked example and proposed client sprint are explicitly separated from completed client delivery.",
+    "The held Social Information Spaces claim in historical-knowledge.ts has no active public surface. About and the lab explicitly reject structural-equivalence inference, peer-reviewed-research claims, finished-platform claims, and present proficiency inferred solely from historical implementation."
+  ],
+  "gaps": [
+    "WOWList's historical interaction model is reconstructed from records; the visible cover shows the current return threshold, not the former working calendar. The reconstruction is labeled and supported, so it is not counted as an original interface capture.",
+    "The coalition chronology does not allocate every person's labor or establish letter delivery, meeting attendance, or policy effect. Its supported contribution is the observable participation and continuation sequence.",
+    "KC Town Hall does not establish a specific resident-feedback-to-redesign chain or Jamie's authorship of every service component. This prevents a stronger causal learning claim, but the frozen criterion's observation-to-model-to-interface-to-social-use-to-documentation sequence remains reconstructable.",
+    "External source destinations were not visited during this packet-only reading. Source support is assessed from the supplied public records, citation mappings, rendered evidence, and declared boundaries."
+  ],
+  "safety_findings": [
+    "Historical implementations, the current WOWList threshold, the evolving knowledge method, and the proposed client sprint are visibly distinguished.",
+    "No public claim of inventing structural equivalence, producing peer-reviewed research, deriving current Max/Jitter proficiency from coursework, or solely authoring collective coursework was observed.",
+    "Platform response and poll displays are not converted into attendance, legal founding, endorsement, or impact. A photographed collection is not converted into an audited program total.",
+    "Private operating rows, user data, resident records, protected coursework, and raw correspondence are not needed to understand the rendered sequences and were not sought.",
+    "This is an individual advisory judgment. It supplies no human consent, rights clearance, hiring outcome, production approval, or endorsement by Warren Sack."
+  ],
+  "recommendation": "Accept this individual PR-016 advisory reading at 4. Three source-bounded project sequences make relationships, models, interfaces, collective use, and continuation reconstructable, and the public method statement connects them clearly. Preserve the explicit distinction between documented use, retrospective reconstruction, unresolved causal learning, and proposed work. Aggregate passage requires the other independent scorecards.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-10-13T18:09:20.535Z",
+  "baseUrl": "http://localhost:3213",
+  "publicSurfaceFingerprint": "13ed9060d7cdb135affeb193a0e6e252ff0e8db9019a4675702b8d4aa61cd110",
+  "method": "Settled viewport captures and DOM measurements at initial load and after instant scroll restoration. This is browser QA, not human accessibility acceptance.",
+  "rows": [
+    {
+      "width": 375,
+      "route": "/",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "overlap": false,
+      "screenshot": "375-home-initial.png",
+      "sha256": "8418dd355b2bb6806146623f75820b7edd81be38babf89277a98f5082dd821c1"
+    },
+    {
+      "width": 375,
+      "route": "/",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "overlap": false,
+      "screenshot": "375-home-restored.png",
+      "sha256": "8418dd355b2bb6806146623f75820b7edd81be38babf89277a98f5082dd821c1"
+    },
+    {
+      "width": 375,
+      "route": "/about",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 155.96875,
+      "overlap": false,
+      "screenshot": "375-about-initial.png",
+      "sha256": "946b5580634ecc9d53e0ba49188c88e0b574254f57d6b4cf3fa0ad441dbeeb15"
+    },
+    {
+      "width": 375,
+      "route": "/about",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 155.96875,
+      "overlap": false,
+      "screenshot": "375-about-restored.png",
+      "sha256": "946b5580634ecc9d53e0ba49188c88e0b574254f57d6b4cf3fa0ad441dbeeb15"
+    },
+    {
+      "width": 375,
+      "route": "/work/wowlist",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "375-work--wowlist-initial.png",
+      "sha256": "ca7c1ead0e7eb6d9ca0d94c967ddd05c2ac5398482eff02fb31a476e65dada3b"
+    },
+    {
+      "width": 375,
+      "route": "/work/wowlist",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "375-work--wowlist-restored.png",
+      "sha256": "ca7c1ead0e7eb6d9ca0d94c967ddd05c2ac5398482eff02fb31a476e65dada3b"
+    },
+    {
+      "width": 375,
+      "route": "/work/kc-town-hall",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "375-work--kc-town-hall-initial.png",
+      "sha256": "2e8c70c01dab114e460abeed06ee96bf830aa625e6fce9309cef6ea36b6029a4"
+    },
+    {
+      "width": 375,
+      "route": "/work/kc-town-hall",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "375-work--kc-town-hall-restored.png",
+      "sha256": "2e8c70c01dab114e460abeed06ee96bf830aa625e6fce9309cef6ea36b6029a4"
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "overlap": false,
+      "screenshot": "1280-home-initial.png",
+      "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0"
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "overlap": false,
+      "screenshot": "1280-home-restored.png",
+      "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0"
+    },
+    {
+      "width": 1280,
+      "route": "/about",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 155.96875,
+      "overlap": false,
+      "screenshot": "1280-about-initial.png",
+      "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7"
+    },
+    {
+      "width": 1280,
+      "route": "/about",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 155.96875,
+      "overlap": false,
+      "screenshot": "1280-about-restored.png",
+      "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7"
+    },
+    {
+      "width": 1280,
+      "route": "/work/wowlist",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "1280-work--wowlist-initial.png",
+      "sha256": "b8d0f3cd948408dd887fd71be6cbb18d0b9e03819adb84a3db379c2575c2afd7"
+    },
+    {
+      "width": 1280,
+      "route": "/work/wowlist",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "1280-work--wowlist-restored.png",
+      "sha256": "b8d0f3cd948408dd887fd71be6cbb18d0b9e03819adb84a3db379c2575c2afd7"
+    },
+    {
+      "width": 1280,
+      "route": "/work/kc-town-hall",
+      "state": "initial",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "1280-work--kc-town-hall-initial.png",
+      "sha256": "986f9d53b68c9234494b29d81d6551a45c33bc9c8f1c18a8fd3808b6dd9bb2d2"
+    },
+    {
+      "width": 1280,
+      "route": "/work/kc-town-hall",
+      "state": "restored",
+      "scrollY": 0,
+      "headerBottom": 73,
+      "h1Top": 157,
+      "overlap": false,
+      "screenshot": "1280-work--kc-town-hall-restored.png",
+      "sha256": "986f9d53b68c9234494b29d81d6551a45c33bc9c8f1c18a8fd3808b6dd9bb2d2"
+    }
+  ],
+  "passed": true
+}

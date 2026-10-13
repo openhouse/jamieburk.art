@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `db3725c381e5053c835200c4b6e3b49232d5e88b`
-**Portfolio snapshot:** `247400f4e184f2822bf3e7e0e6072ef8ffd61a528d6b3358e18c1dfc7cdb2cba`
+**Candidate commit:** `7e19570d42fc3134e44a1121fe318da94854c4c9`
+**Portfolio snapshot:** `86671fda94aec4616d5a8d5c3b5eaef1197c5932e64bccdb2417e8a1b2bc1d90`
 **Role-context hash:** `eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`

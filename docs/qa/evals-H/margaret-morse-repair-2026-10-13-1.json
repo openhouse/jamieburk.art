@@ -1,0 +1,38 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "phase": "holdout",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "reviewerId": "repair-reader-1-morse",
+  "lensId": "PR-015",
+  "evidence": [
+    "Independently hashed all 158 sorted candidate paths as path, NUL, raw source bytes, NUL; the result matches the commissioned fingerprint. Read all 28 rendered text views and inspected all 28 corresponding screenshots at 1280 and 375 pixels. All screenshot hashes also match the rendered manifest.",
+    "The homepage visibly joins a coalition working-session photograph to a public campaign interface under 'The system lives between the screen and the room.' This makes social participation part of the operating practice while the hero retains clear Technical Project Manager, Product Operations, and Implementation positioning.",
+    "The About page's 'Systems people can inhabit' section connects Open House to WOWList, Sunday Dinner and 196, NYC Artist Coalition, and Knowledge Wiki Graphs. The desktop header supplies a direct About link; SiteHeader.tsx supplies the mobile Menu and About path. The lineage is therefore available within two actions from the homepage.",
+    "WOWList connects shared scenes, interests, and places to editable event text, keyword communities, followed calendars, and organizer support. Its case study preserves Richard Caceres's co-builder credit and distinguishes the historical operating calendar from the current return threshold. The visible gathering photograph and product surface reinforce the relationship between social life and software.",
+    "Sunday Dinner and 196 connect hospitality to repeatable operating work: invitations, response handling, food and space preparation, minimal continuity records, and follow-up. The rendered photograph establishes a situated shared gathering, while the two labeled workflow reconstructions explain how attention and artist agency shape onboarding and handoffs.",
+    "The coalition case study supplies a third distinct continuity: shared public campaign surface, garden working session, and collective public room. Its captions, narrative, and source boundaries connect facilitation, translation, implementation, and continued participation without treating a photograph as proof of exact remarks or policy causation.",
+    "The Open House source note and historical-knowledge.ts support a concise public-source lineage with communal governance and many-perspective documentation. The rendered About page uses that bounded claim rather than faculty praise, participant biography, or an extended reproduction of the article."
+  ],
+  "gaps": [
+    "The portfolio is lengthy, particularly on mobile, and the About comparison carries substantial explanatory qualification. The relevant threshold and three project continuities nevertheless remain identifiable through headings, links, photographs, and concrete actions.",
+    "Workflow reconstructions explain the form of care and continuity; they do not independently prove every participant's experience or the completion of a particular residency. The pages explicitly retain those limits."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, protected educational-record quotation, participant-level attendance record, or private correspondence was observed in the reviewed public surfaces.",
+    "Collective credit remains visible for Open House participants, Richard Caceres and WOWList communities, NYC Artist Coalition collaborators, and the Sunday Dinner community. Named co-organizer credit is retained where the public milestone record supports it.",
+    "The photography catalog records bounded portfolio occurrences and distinguishes approval states. This review does not independently grant rights, participant consent, indexing approval, or production authority.",
+    "No romanticized account of participant vulnerability was observed. Care is expressed through hosting conditions, practical access, privacy, collective decisions, and the ability to continue."
+  ],
+  "recommendation": "Accept this individual PR-015 advisory reading at 4. The candidate makes artistic, civic, technical, and social practice visible as one inhabited operating practice, with at least three specific project continuities and clear professional positioning. Aggregate passage still requires the other independent scorecards; this judgment is neither participation by Margaret Morse nor publication or deployment approval.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

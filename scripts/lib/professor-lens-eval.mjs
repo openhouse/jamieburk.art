@@ -43,17 +43,17 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-1.json",
-  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-2.json",
-  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-3.json",
-  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-1.json",
-  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-2.json",
-  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-3.json"
+  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-1.json",
+  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-2.json",
+  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-3.json",
+  "docs/qa/evals-H/warren-sack-repair-2026-10-13-1.json",
+  "docs/qa/evals-H/warren-sack-repair-2026-10-13-2.json",
+  "docs/qa/evals-H/warren-sack-repair-2026-10-13-3.json"
 ];
 
-// Last independently reviewed candidate; its held findings are not rebound to
-// subsequent wording or occurrence-binding corrections.
-const approvedCandidateSha256 = "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19";
+// Three separately commissioned advisory readers assessed these exact bytes.
+// Historical held judgments remain preserved and are not rebound to this repair.
+const approvedCandidateSha256 = "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

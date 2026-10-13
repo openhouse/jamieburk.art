@@ -1,0 +1,38 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Margaret Morse analytical lens; not Margaret Morse and no endorsement.",
+  "reviewerId": "repair-cli-2-morse",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Independently recomputed SHA-256 from all 158 sorted candidate paths, each followed by NUL, actual source bytes, and NUL. The result matches the declared fingerprint. Reviewed the 28 rendered text/screenshot views; all screenshot hashes match rendered/manifest.json.",
+    "The homepage's 'The system lives between the screen and the room' joins an invitation, meeting, public action path, and handoff. Its working-session photograph beside a campaign interface gives the connection visible form rather than relying exclusively on professional positioning.",
+    "The path / → About → linked project places the lineage within two clicks on desktop. Mobile navigation exposes About through Menu. Both About views contain 'Systems people can inhabit,' the bounded Open House account, and links connecting artistic, civic, technical, and social practice while retaining the technical project manager introduction.",
+    "WOWList supplies one specific continuity: Sunday Dinner calendars and community vocabulary become editable event text, keyword communities, followed lists, and distribution. Historical support, an independent tutorial, and the SBDIY calendar route support participation and continuation. Richard Caceres and participating communities retain explicit credit.",
+    "Sunday Dinner / 196 supplies a second continuity through hospitality, space, welcome, artist orientation, independent access, and continued support. Its two labeled reconstructions make care operationally specific. The shared-table photograph supplies embodied context without claiming to prove attendance, remarks, or artistic outcomes.",
+    "NYC Artist Coalition supplies a third continuity through public invitation, participatory naming, collaborative letter-making, facilitated discussion, campaign interfaces, and subsequent meetings. The FairRentNYC sequence distinguishes the public surface, working alignment, and collective room; the exact Shoestring agreement remains attributed to Jamie's recollection.",
+    "The public source note and knowledge-bank Open House record support initiation, collective governance, participation, and many-perspective documentation. The rendered account uses this bounded lineage without reproducing the article or presenting faculty praise as authority."
+  ],
+  "gaps": [
+    "Several supplied screenshots place the sticky header over introductory content, particularly on mobile. The relevant through-line and project sequences remain readable, but these captures do not establish consistently unobscured first viewports.",
+    "This scorecard supplies one independent reading. It cannot establish the frozen requirement for three judges, a median of 4, and no score below 3."
+  ],
+  "safety_findings": [
+    "No raw Open House article, educational evaluation, private correspondence, or faculty testimonial was encountered as a rendered artifact. The source note explicitly withholds testimonial material and protected educational records.",
+    "Collective credit remains visible across Open House, WOWList, Sunday Dinner, and coalition work. Platform responses and gathering aggregates are bounded separately from attendance, endorsement, consent, and policy causation.",
+    "Photograph captions use creator or project courtesy credits and restrained descriptions. photography.ts records occurrence-specific authorization and separate release states; this review does not confer rights, represented-person consent, or production approval.",
+    "The presentation does not depend on romanticized vulnerability or disclosure of participant records."
+  ],
+  "recommendation": "Individual advisory pass at 4. The candidate makes inhabited systems specific through participation, hospitality, collective influence, documentation, and continuation while supporting the professional role. The three-reader aggregate requirement and publication authority remain separate, unestablished gates.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "44fc54fd76317aff89738703b890cd50952aa3d4",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}
