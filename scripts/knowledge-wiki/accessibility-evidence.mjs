@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { isVerifiedPrefetchCancellation } from "../lib/browser-request-classification.mjs";
 
 export const accessibilityEvidencePath = "docs/qa/evals-H/responsive-route-matrix.json";
 export const canonicalAccessibilityRoutes = Object.freeze([
@@ -107,6 +108,16 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.mainPresent === true &&
       /^4\./.test(row.axeVersion)
   );
+  // Only fully evidenced background prefetch aborts may be separated from
+  // failures. This does not infer their cause or relax the zero-failure gate.
+  const requestClassificationPasses = report.rows.every((row) => {
+    const records = row.prefetchCancellations ?? [];
+    return Array.isArray(records) && records.every((record) =>
+      isVerifiedPrefetchCancellation(record, { baseUrl: report.baseUrl })) &&
+      (records.length === 0 && row.rawFailedRequestCount === undefined ||
+        row.rawFailedRequestCount === row.failedRequests.length + records.length);
+  }) && (report.summary.prefetchCancellations ?? 0) === report.rows.reduce(
+    (count, row) => count + (Array.isArray(row.prefetchCancellations) ? row.prefetchCancellations.length : 0), 0);
   const summaryPasses =
     report.summary.rowCount === expectedRows &&
     report.summary.axeViolations === 0 &&
@@ -162,6 +173,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       canonicalCoverage &&
       completeMatrix &&
       rowsPass &&
+      requestClassificationPasses &&
       summaryPasses &&
       focusedVisualReviewPasses &&
       navigationReviewPasses &&
@@ -173,6 +185,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     canonicalCoverage,
     completeMatrix,
     rowsPass,
+    requestClassificationPasses,
     summaryPasses,
     focusedVisualReviewPasses,
     navigationReviewPasses
