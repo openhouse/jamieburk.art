@@ -113,15 +113,29 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(sourceNote, /Official document/);
 });
 
-test("the About page renders endnotes for its Open House and Knowledge Wiki Graph citations", () => {
+test("the About page renders ordered endnotes for its lineage and documented participation systems", () => {
   const aboutPage = readFileSync("apps/www/src/app/about/page.tsx", "utf8");
   assert.deepEqual(
     resolveCitationReferences("about").map((reference) => reference.source.id),
     [
       "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-WOWLIST-X-POPULATION-MANIFEST",
+      "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "SRC-WOWLIST-SBDIY-ADOPTION",
+      "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+      "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+      "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+      "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+      "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+      "SRC-URBANHERM-X-KCTH-TIRES-2019",
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
       "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
     ]
   );
   assert.match(aboutPage, /<References pageId="about" \/>/);
+  for (const occurrence of ["wowlist-product-model", "wowlist-organizer-support", "coalition-participation-path", "resident-service-path"]) {
+    assert.ok(aboutPage.includes(`occurrenceId="${occurrence}"`), occurrence);
+  }
 });

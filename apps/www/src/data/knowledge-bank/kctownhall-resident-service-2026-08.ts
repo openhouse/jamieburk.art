@@ -325,6 +325,13 @@ export const kcTownHallResidentServiceAugust2026 = {
       status: "confirmed-with-boundary",
       projections: [
         {
+          key: "case-study",
+          text: "Tired of Tires connected household eligibility, form and phone intake, scheduled collection, volunteer participation, City recycling, and public reporting. KC Town Hall and Oak Park Neighborhood Association jointly presented the service; public records establish Jamie's participation in pickup work, not sole or component-level authorship.",
+          status: "active",
+          citationRequired: true,
+          surfaces: ["/about"]
+        },
+        {
           key: "resume-html",
           text: "Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.",
           status: "active",

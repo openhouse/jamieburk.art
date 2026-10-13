@@ -107,7 +107,9 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
   governanceBindingsSha256: "c0e9a1f65754e8e7aa6a1def6e16fec105f7f78009dbf3ebd38585282a78cef3",
   publicReportSha256: "0e8dc37b79624e2ac86a026fca40741ee578aeb22bc5002e795775c1df5e650e",
-  wowListMdxSha256: "75c0189f30d4d0a793ebb64dbc275bbdf1dc4279c860cb3a34bbe045a27a2e92",
+  // Independent source-and-boundary review, 2026-10-13 repair edition:
+  // model reconstruction added; event population and collective credit unchanged.
+  wowListMdxSha256: "a9c6ed7c80e7926b1da38a53b70fb20a7de6069f3b8ff55287f6d455df87a397",
   sundayDinnerMdxSha256: "098409207d2e3745856a193504916b557476ce2492e12df7c5927a59f84e205d",
   proofContentSha256: "d5cf5c92c9ed3499fc70194232d96990525afc0a80e766ed395a6845f5e2c1be"
 });

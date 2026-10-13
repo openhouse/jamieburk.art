@@ -386,6 +386,46 @@
       ]
     },
     {
+      "id": "SRC-URBANHERM-X-KCTH-TIRES-2019",
+      "title": "KC Town Hall Tired of Tires operating update",
+      "organization": "KC Town Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-06-02",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1135246124883861504",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall, public Tired of Tires operating update naming Jamie Burkart among participants, June 2, 2019.",
+      "publicNote": "The project account names Jamie among participants in a recurring pickup and free-disposal workflow; its exact tire and savings figures remain first-party claims.",
+      "doesNotEstablish": [
+        "Jamie's sole operation or design of the program",
+        "individual authorship of the post",
+        "every participant's task",
+        "independently audited totals"
+      ]
+    },
+    {
+      "id": "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+      "title": "Jimmy Fitzner first-hand account of a tire-pickup shift with Jamie",
+      "author": "Jimmy Fitzner",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2022-04-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/JimmyFitzner/status/1510067983456026629",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jimmy Fitzner, first-hand public account of driving a dump truck with Jamie Burkart to pick up tires in Northeast Kansas City, April 1, 2022.",
+      "doesNotEstablish": [
+        "Jamie's sole operation or design of the program",
+        "a complete operating period",
+        "every shift",
+        "a complete participant roster",
+        "independently audited totals"
+      ]
+    },
+    {
       "id": "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "title": "WOW List X full-population and engagement manifest",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -567,6 +607,30 @@
         "sole ownership of collective project work",
         "receipt or expenditure of the City appropriation",
         "construction or project completion"
+      ]
+    },
+    {
+      "id": "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+      "title": "Tired of Tires? Free Tire Pickup",
+      "organization": "KC Town Hall",
+      "author": "Julia and Jamie",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2019-05-02",
+      "capturedAt": "2020-10-30",
+      "accessedAt": "2026-08-14",
+      "canonicalUrl": "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "KC Town Hall, 'Tired of Tires? Free Tire Pickup,' shared byline 'Julia and Jamie,' archived October 30, 2020.",
+      "publicNote": "The public capture documents the resident-facing service model and first-party result reporting. Contact details, form identifiers, and embedded implementation data are not reproduced.",
+      "doesNotEstablish": [
+        "Jamie's sole or component-level authorship of the service",
+        "Jamie's individual responsibility for every intake, route, pickup, transport, or log entry",
+        "independently audited tire totals, household counts, savings, coverage, or outcomes",
+        "a representative resident-research process",
+        "the complete operating period or Indian Mound expansion"
       ]
     },
     {
@@ -1860,6 +1924,15 @@
           "surfaces": [
             "/work/wowlist"
           ]
+        },
+        {
+          "key": "archive-note",
+          "text": "WOW List grew from Sunday Dinner calendars, with Richard Caceres and Jamie sharing founding credit. Historical support exchanges explain organizer workflows; an independent tutorial and the SBDIY calendar route document use beyond the founding team, not current availability or a complete adoption census.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
         }
       ],
       "evidence": [
@@ -2105,6 +2178,78 @@
         "This is Jamie's approved first-party professional account, not an independent municipal or collaborator attribution.",
         "Co-leadership does not imply sole ownership of collective project work.",
         "This claim is separate from the municipal decision record; Jamie's award-seeking role is governed by CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-RESIDENT-SERVICE-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Tired of Tires connected household eligibility, form and phone intake, scheduled collection, volunteer participation, City recycling, and public reporting. KC Town Hall and Oak Park Neighborhood Association jointly presented the service; public records establish Jamie's participation in pickup work, not sole or component-level authorship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/about"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "Helped deliver Tired of Tires, a recurring free resident service connecting household eligibility, form and phone intake, scheduled field collection, City recycling coordination, volunteer participation, and public result reporting; public records document Jamie's participation in pickup operations.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "resumes/2026-08-14/nyc-oti-senior-product-manager-782366/Jamie-Burkart-Resume-NYC-OTI-Senior-Product-Manager-782366.md"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Helped operate Tired of Tires, a recurring free resident service connecting intake, field collection, volunteers, and a City recycling handoff; public records document Jamie's participation in pickup operations.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "resumes/2026-08-14/nyc-oti-technical-operations-manager-782369/Jamie-Burkart-Resume-NYC-OTI-Technical-Operations-Manager-782369.md"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+          "relationship": "direct-support",
+          "supports": [
+            "a recurring free household tire-pickup service jointly presented by KC Town Hall and Oak Park Neighborhood Association",
+            "residential eligibility, recurring cadence, form and phone intake, a volunteer pathway, neighborhood collection, and City recycling handoff",
+            "a shared Julia and Jamie page byline"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's direct participation in a neighborhood tire-pickup shift",
+            "use of a dump truck"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-URBANHERM-X-KCTH-TIRES-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's named participation",
+            "recurring public intake and disposal coordination"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public records establish the service model and Jamie's participation, not sole program ownership, component-level design authorship, complete coordination, or every shift.",
+        "The shared Julia and Jamie byline establishes page credit, not authorship of every graphic, form, workflow, or operating decision.",
+        "The page's savings figure is first-party reporting; it is not an independent audit and is not used in the resume projections.",
+        "Participant memory about the block-by-block route, paired handbills, logging, and research-to-requirements loop remains held pending artifact or collaborator corroboration."
       ]
     },
     {
@@ -2560,7 +2705,8 @@
           "status": "active",
           "citationRequired": true,
           "surfaces": [
-            "/work/wowlist"
+            "/work/wowlist",
+            "/about"
           ]
         }
       ],
@@ -2778,7 +2924,8 @@
           "status": "active",
           "citationRequired": true,
           "surfaces": [
-            "/work/wowlist"
+            "/work/wowlist",
+            "/about"
           ]
         },
         {
@@ -3074,6 +3221,17 @@
       "surface": "/about",
       "sourceOrder": [
         "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-WOWLIST-X-POPULATION-MANIFEST",
+        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+        "SRC-WOWLIST-SBDIY-ADOPTION",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+        "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+        "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+        "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+        "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+        "SRC-URBANHERM-X-KCTH-TIRES-2019",
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
       ],
@@ -3084,6 +3242,45 @@
           "projection": "archive-note",
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"
+          ]
+        },
+        {
+          "id": "wowlist-product-model",
+          "claimId": "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+            "SRC-WOWLIST-X-POPULATION-MANIFEST"
+          ]
+        },
+        {
+          "id": "wowlist-organizer-support",
+          "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+          "projection": "archive-note",
+          "sourceIds": [
+            "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+            "SRC-WOWLIST-SBDIY-ADOPTION"
+          ]
+        },
+        {
+          "id": "coalition-participation-path",
+          "claimId": "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+            "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+            "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+            "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"
+          ]
+        },
+        {
+          "id": "resident-service-path",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-RESIDENT-SERVICE-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+            "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+            "SRC-URBANHERM-X-KCTH-TIRES-2019"
           ]
         },
         {

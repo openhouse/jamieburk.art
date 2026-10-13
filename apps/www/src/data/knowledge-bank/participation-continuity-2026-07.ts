@@ -516,7 +516,7 @@ const claims: KnowledgeBank["claims"] = [
       text: "The combined record supports Jamie's account that Call Script became one bridge from WOW List's popular.vote calendar into early NYC Artist Coalition organizing: Jamie publicly mobilized for the January 2017 DCLA meeting; its discussion ran a participatory naming poll in which ‘NYC Artist Coalition’ displayed 57%; and Call Script then promoted the coalition's next general meeting.",
       status: "active",
       citationRequired: true,
-      surfaces: ["/work/wowlist"]
+      surfaces: ["/work/wowlist", "/about"]
     }],
     evidence: [
       { sourceId: "SRC-WOWLIST-FACEBOOK-POST-CENSUS-2026", relationship: "direct-support", supports: ["November 14, 2016 popular.vote route", "civic-mobilization classification", "bounded displayed interactions"], locator: "Public-safe ordinal 21 and posted URL inventory.", confidence: "high", renderCitation: false },

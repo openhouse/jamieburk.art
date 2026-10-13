@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Claim } from "@/components/citations/Claim";
+import { Cite } from "@/components/citations/Cite";
 import { References } from "@/components/citations/References";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
@@ -103,11 +104,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
-            <p className="jb-section-label">Three systems loops</p>
+            <p className="jb-section-label">Three documented participation systems</p>
             <p className="mt-2 max-w-3xl leading-7 text-jb-ink/72">
-              Each example follows the same movement from observed relationships
-              to a working model, an interface used with people, and a documented
-              way to learn, revise, and continue.
+              These examples connect a need, a working model, a public interface,
+              collective use, and a way to continue. Their evidence differs:
+              product support, an organizing sequence, and a delivered service.
+              None is presented as a formal user study or proof that a particular
+              comment caused a software release.
             </p>
           </div>
           <div className="mt-8 divide-y divide-jb-ink/12 border-y border-jb-ink/12">
@@ -116,36 +119,42 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-jb-ink">
                   <Link
                     className="text-jb-blue hover:text-jb-green"
-                    href="/work/harry-j-epstein"
+                    href="/work/wowlist"
                   >
-                    Harry J. Epstein Company
+                    WOWList: from shared calendars to organizer support
                   </Link>
                 </h3>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  customer language, product judgment, public voice, and
-                  internal operating habits.
+                  calendars made with Sunday Dinner connected people through
+                  shared scenes, interests, and places. Richard Caceres and I
+                  co-founded and co-built WOWList around that organizing practice.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Model:</strong>{" "}
-                  product, content, marketing, ordering, and follow-up treated
-                  as one customer and team system rather than separate tasks.
+                  editable event text → keyword communities → followed lists →
+                  event distribution. This is a reconstruction of the documented
+                  product model, not an original interface screenshot.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  a maintained storefront joining product discovery, content,
-                  marketing, ordering, and customer follow-up, released and
-                  refined through real customer and team use.
+                  instead of a complex event form, collaborators could work with
+                  natural-language event text. Public support records document
+                  publishing, profiles, followed lists, and weekly email.
+                  <Cite pageId="about" occurrenceId="wowlist-product-model" />
                 </p>
                 <p>
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  recurring operational questions and carefully scoped analytics guided
-                  incremental releases, reusable content patterns, and clearer
-                  workflows for the team.
+                  support exchanges made joining and publishing explainable;
+                  an independent organizer tutorial and the SBDIY calendar route
+                  show use beyond the founding team. These are inspectable
+                  onboarding and continuation records, not retention metrics or
+                  evidence of current availability.
+                  <Cite pageId="about" occurrenceId="wowlist-organizer-support" />
                 </p>
               </div>
             </article>
@@ -156,33 +165,40 @@ export default function AboutPage() {
                     className="text-jb-blue hover:text-jb-green"
                     href="/work/fair-rent-nyc"
                   >
-                    NYC Artist Coalition and FairRentNYC
+                    NYC Artist Coalition: an invitation becomes a shared process
                   </Link>
                 </h3>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  lived experience in cultural spaces, recurring meetings,
-                  public sources, open questions, and city and state actors.
+                  cultural-space organizers needed a way to gather around the
+                  January 2017 DCLA meeting. I publicly invited people into that
+                  meeting; Call Script was one bridge into collective organizing.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Model:</strong>{" "}
-                  testimony, policy lineage, unresolved questions, decisions,
-                  and accountable actors held in one recoverable civic record.
+                  public invitation → meeting discussion → participatory naming
+                  and letter-making → next general meeting. This timeline models
+                  the documented participation path, not sole authorship.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  campaign sites, town halls, hearings, practical sessions, and
-                  public action pathways built and used with many collaborators.
+                  the January 27 event discussion invited people to choose a name
+                  and read, edit, and sign a shared letter. The naming poll
+                  displayed 57% for “NYC Artist Coalition.” That is the result
+                  displayed by the platform, not an attendance count or legal founding vote.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  running minutes, source maps, question logs, and action
-                  trackers let collaborators recover context, review decisions,
-                  and carry the work forward.
+                  Call Script then promoted the March 6 general meeting at
+                  Floasis. The next invitation carried the coalition identity
+                  forward, leaving a dated path others could join. The record
+                  does not establish who wrote every line, letter delivery,
+                  meeting attendance, or a resulting policy change.
+                  <Cite pageId="about" occurrenceId="coalition-participation-path" />
                 </p>
               </div>
             </article>
@@ -191,36 +207,43 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-jb-ink">
                   <Link
                     className="text-jb-blue hover:text-jb-green"
-                    href="/work/196-sunday-dinner"
+                    href="/work/kc-town-hall#resident-service-sequence-title"
                   >
-                    Sunday Dinner and 196
+                    KC Town Hall: a resident request becomes a completed service
                   </Link>
                 </h3>
               </div>
               <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
                 <p>
                   <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  hospitality, trust, artist support, shared space, recurring
-                  participants, and the rhythms of returning.
+                  Tired of Tires connected households, volunteers, KC Town Hall,
+                  Oak Park Neighborhood Association, and City recycling. Public
+                  records establish my participation in pickup work, not sole
+                  ownership of the program or each service component.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Model:</strong>{" "}
-                  invitations, hosting, onboarding, access handoffs,
-                  documentation, and follow-up treated as one participation
-                  system.
+                  eligibility → form or phone request → scheduled collection →
+                  City recycling → public reporting. The archived service page
+                  makes that operating sequence recoverable.
                 </p>
                 <p>
                   <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  recurring gatherings and artist-residency workflows used with
-                  participants and resident artists over time.
+                  a public service page and outreach flyer explained what
+                  residents could request and when pickup would happen. The
+                  linked case study pairs the governed flyer with before-and-after
+                  field photographs of one completed collection.
                 </p>
                 <p>
                   <strong className="text-jb-ink">
                     Learning and continuity:
                   </strong>{" "}
-                  repeatable invitation, response, attendance, follow-up, and
-                  residency handoff patterns helped the practice continue while
-                  private participant records remained private.
+                  the recurring schedule, volunteer pathway, recycling handoff,
+                  and public reporting made participation repeatable. This is
+                  service-delivery evidence, not an audited program total or a
+                  demonstrated resident-feedback-to-redesign chain; that finer
+                  learning history remains unresolved.
+                  <Cite pageId="about" occurrenceId="resident-service-path" />
                 </p>
               </div>
             </article>
@@ -237,30 +260,30 @@ export default function AboutPage() {
               <h3 className="text-xl font-semibold text-jb-ink">
                 <Link
                   className="text-jb-blue hover:text-jb-green"
-                  href="/work/wowlist"
+                  href="/work/harry-j-epstein"
                 >
-                  WOWList
+                  Harry J. Epstein Company
                 </Link>
               </h3>
-              <div className="mt-3 space-y-2 leading-7 text-jb-ink/76">
-                <p>
-                  <strong className="text-jb-ink">Relationships:</strong>{" "}
-                  the language organizers already used for scenes, interests,
-                  places, and venues.
-                </p>
-                <p>
-                  <strong className="text-jb-ink">Interface and use:</strong>{" "}
-                  followable keyword communities, event publishing, digests,
-                  and embeddable calendars for distributed organizers.
-                </p>
-                <p>
-                  <strong className="text-jb-ink">
-                    Learning and continuity:
-                  </strong>{" "}
-                  organizer distribution needs became reusable publishing and
-                  low-cost deployment patterns rather than one central calendar.
-                </p>
-              </div>
+              <p className="mt-3 leading-7 text-jb-ink/76">
+                The 2009–2015 engagement joins storefront, content, marketing,
+                and operations. Its case-study handoff specimen is a reconstruction,
+                not a recovered log proving a particular customer question caused
+                a particular release.
+              </p>
+            </article>
+            <article className="py-6">
+              <h3 className="text-xl font-semibold text-jb-ink">
+                <Link className="text-jb-blue hover:text-jb-green" href="/work/196-sunday-dinner">
+                  Sunday Dinner and 196
+                </Link>
+              </h3>
+              <p className="mt-3 leading-7 text-jb-ink/76">
+                Recurring hospitality connects invitations, hosting, return,
+                and artist support. Historical gatherings and later residency
+                planning remain distinct: the case-study acceptance specimen is
+                a planning template, not proof of a completed residency.
+              </p>
             </article>
             <article className="py-6">
               <h3 className="text-xl font-semibold text-jb-ink">

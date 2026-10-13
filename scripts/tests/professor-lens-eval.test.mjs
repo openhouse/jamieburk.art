@@ -90,7 +90,7 @@ test("guard rejects weakening the public analytical limits", () => {
 
 test("guard rejects labeling the ended HJE engagement as current", () => {
   const mutatedAbout = aboutText
-    .replace("Three systems loops", "Three current systems loops")
+    .replace("Three documented participation systems", "Three current systems loops")
     .replace(
       "Harry J. Epstein Company\n                  </Link>\n                </h3>",
       "Harry J. Epstein Company\n                  </Link>\n                </h3>\n                <span className=\"jb-section-label\">Current</span>"
@@ -251,4 +251,38 @@ test("guard cannot count one professor lens six times", () => {
   const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("holdout aggregation follows the frozen median-four and minimum-three rule", () => {
+  for (const { scores, expected } of [
+    { scores: [3, 4, 4], expected: true },
+    { scores: [4, 3, 4], expected: true },
+    { scores: [3, 3, 4], expected: false },
+    { scores: [2, 4, 4], expected: false },
+    { scores: [4, 4, 5], expected: false },
+    { scores: [3.5, 4, 4], expected: false }
+  ]) {
+    const { candidateFiles, scorecards } = syntheticReviewerFixture();
+    scorecards.filter((card) => card.lensId === "PR-015").forEach((card, index) => {
+      card.score = scores[index];
+      card.pass = card.score === 4;
+    });
+    const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
+    assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass,
+      expected, JSON.stringify(scores));
+    assert.equal(result.pass, false, "Synthetic cards must never approve the real candidate");
+  }
+});
+
+test("holdout aggregation rejects stale cards and explicit failure at score four", () => {
+  for (const mutation of [
+    (card) => { card.candidateSha256 = "0".repeat(64); },
+    (card) => { card.pass = false; },
+    (card) => { card.phase = "development"; }
+  ]) {
+    const { candidateFiles, scorecards } = syntheticReviewerFixture();
+    mutation(scorecards[0]);
+    const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
+    assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+  }
 });

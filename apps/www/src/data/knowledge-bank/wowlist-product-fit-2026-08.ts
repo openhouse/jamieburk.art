@@ -216,7 +216,7 @@ const claims: KnowledgeBank["claims"] = [
         text: "The product decision was intentionally light: rather than force organizers through a complex event form, WOW List treated each post as collaboratively editable natural-language text. Natural-language processing and followable keyword communities turned that writing into event distribution, profiles, followed lists, and weekly email.",
         status: "active",
         citationRequired: true,
-        surfaces: ["/work/wowlist"]
+        surfaces: ["/work/wowlist", "/about"]
       },
       {
         key: "resume-html",

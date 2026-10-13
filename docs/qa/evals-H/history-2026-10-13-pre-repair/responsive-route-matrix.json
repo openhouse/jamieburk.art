@@ -1,0 +1,3188 @@
+{
+  "reportVersion": 1,
+  "checkedAt": "2026-10-13T16:34:36.619Z",
+  "baseUrl": "http://localhost:3213",
+  "publicSurfaceFingerprint": "c38809114d3735bf68b50f382c8dba61430ebc33a50237caac9c33bd9a11479b",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 156,
+  "routes": [
+    "/",
+    "/work",
+    "/work/technical-operations",
+    "/resume",
+    "/about",
+    "/contact",
+    "/colophon",
+    "/lab/source-backed-team-memory",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/callnyc",
+    "/work/kc-spaces-fund",
+    "/work/wowlist",
+    "/work/196-sunday-dinner",
+    "/work/kc-town-hall"
+  ],
+  "viewports": [
+    360,
+    375,
+    768,
+    1280
+  ],
+  "rows": [
+    {
+      "viewport": 360,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 360,
+      "path": "/work",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 360,
+      "path": "/work/technical-operations",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/resume",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/about",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/contact",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/colophon",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/lab/source-backed-team-memory",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fknowledge-wiki-collective-map.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fai-evals%2Fcompletion-certificate.jpg&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/harry-j-epstein",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/fair-rent-nyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Flet-nyc-dance-public-surface.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/wowlist",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/196-sunday-dinner",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 360,
+      "path": "/work/kc-town-hall",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-tired-of-tires-flyer.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-before.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-after.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-walkshed.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 375,
+      "path": "/work",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 375,
+      "path": "/work/technical-operations",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/resume",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/about",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/contact",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/colophon",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/lab/source-backed-team-memory",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fknowledge-wiki-collective-map.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fai-evals%2Fcompletion-certificate.jpg&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/harry-j-epstein",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/fair-rent-nyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Flet-nyc-dance-public-surface.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/wowlist",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/196-sunday-dinner",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work/kc-town-hall",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-tired-of-tires-flyer.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-before.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-after.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-walkshed.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 768,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/technical-operations",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=53I66VXXDGa6SV-S",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=VjlMSS4YXHuA8m8C",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/resume",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=TPFN06gW-xoSO2Nf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=47wDP9IoknsXZtty",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/about",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=yMFZbW3py_RmPDJX",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/contact",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=mTa8tpfUvA8h8GpF",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/colophon",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=xeZ6mVChFIEGPL0y",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=wJuRGbfBuHMXElJC",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/lab/source-backed-team-memory",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fknowledge-wiki-collective-map.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fai-evals%2Fcompletion-certificate.jpg&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=W6E6pQVODHgfmRfe",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/harry-j-epstein",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 768,
+      "path": "/work/fair-rent-nyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Flet-nyc-dance-public-surface.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=Xc3IMLghCBRdWIHV",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=HnqECM4JznjjE8ct",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/wowlist",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=gLUWpq67GF27aoat",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/196-sunday-dinner",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 768,
+      "path": "/work/kc-town-hall",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-tired-of-tires-flyer.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-before.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-after.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-walkshed.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=yLUdkRGz0mrmRhK7",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/technical-operations",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=53I66VXXDGa6SV-S",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=VjlMSS4YXHuA8m8C",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/resume",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=TPFN06gW-xoSO2Nf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=47wDP9IoknsXZtty",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/about",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 1280,
+      "path": "/contact",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=mTa8tpfUvA8h8GpF",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/colophon",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=xeZ6mVChFIEGPL0y",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=wJuRGbfBuHMXElJC",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/lab/source-backed-team-memory",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fknowledge-wiki-collective-map.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fai-evals%2Fcompletion-certificate.jpg&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?_rsc=OHtr_Ev5seEkYWww",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=W6E6pQVODHgfmRfe",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/harry-j-epstein",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Small%20Business&_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Small%20Business&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=bkL0b33bCmi5XITf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/fair-rent-nyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Flet-nyc-dance-public-surface.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Source-Backed%20Memory&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=6WZ71Ia1u4tZi5ax",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/callnyc",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=Dy6sk4H5x1Cco-9U",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Open%20Data&_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Civic%20Technology&_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=5AGoy2f1p068YQjD",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/kc-spaces-fund",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=HnqECM4JznjjE8ct",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=HnqECM4JznjjE8ct",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=pGCloRdGX2Li5z5r",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=pGCloRdGX2Li5z5r",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Technical%20Operations&_rsc=pGCloRdGX2Li5z5r",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=pGCloRdGX2Li5z5r",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/wowlist",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=dY7Tmye21jlM3HRQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=gLUWpq67GF27aoat",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=gLUWpq67GF27aoat",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=gLUWpq67GF27aoat",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/196-sunday-dinner",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Implementation&_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=O7t3y6AZ6I1SWhzv",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Community%20Systems&_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?_rsc=IT39HS1u7GVuDrcQ",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        }
+      ]
+    },
+    {
+      "viewport": 1280,
+      "path": "/work/kc-town-hall",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 0,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-tired-of-tires-flyer.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-before.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-tired-of-tires-after.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Fartifacts%2Fkc-town-hall-walkshed.webp&w=3840&q=75"
+      ],
+      "failedRequests": [],
+      "cancelledSpeculativePrefetches": [
+        {
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?_rsc=WeJHchyJ-WKH7lj1",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "rowCount": 60,
+    "axeViolations": 0,
+    "criticalAxeViolations": 0,
+    "overflowElements": 0,
+    "brokenImagesAfterScroll": 0,
+    "unlabeledImages": 0,
+    "failedRequests": 0,
+    "cancelledSpeculativePrefetches": 208,
+    "nonSuccessResponses": 0,
+    "invalidHeadingOrLandmarkRows": 0,
+    "lazyImagesObserved": 112,
+    "unloadedImagesBeforeScroll": 80,
+    "lazyImageFollowUpPerformed": true,
+    "allImagesLoadedAfterScroll": true
+  },
+  "focusedVisualReview": {
+    "route": "/",
+    "expectedCaption": "At the East River beneath the Manhattan Bridge, 2022.",
+    "expectedCredit": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+    "minimumCaptionFontSizePx": 12.48,
+    "occurrences": [
+      {
+        "viewport": 360,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
+      },
+      {
+        "viewport": 375,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
+      },
+      {
+        "viewport": 768,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
+      },
+      {
+        "viewport": 1280,
+        "captionPresent": true,
+        "captionPartCount": 2,
+        "captionText": "At the East River beneath the Manhattan Bridge, 2022.",
+        "creditText": "Photograph by Elana Gordon. From Jamie Burkart's photo archive.",
+        "computedFontSizePx": 12.48,
+        "computedLineHeight": "17.472px",
+        "captionWithinViewport": true,
+        "captionAndCreditSeparated": true,
+        "captionOverlapsPrimaryCopy": false
+      }
+    ],
+    "passed": true
+  },
+  "navigationReview": {
+    "checkedAt": "2026-10-13T16:34:36.619Z",
+    "startRoute": "/",
+    "destinationRoute": "/about",
+    "startHttpStatus": 200,
+    "selector": "a[href=\"/about\"]",
+    "linkVisible": true,
+    "linkText": "About",
+    "navigationCompleted": true,
+    "destinationH1": "About",
+    "destinationMainPresent": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "renderedScreenshot": {
+      "sha256": "938773c9f28a3dd5b6e69f86f2251562cb4785740f2cb002eea8d0892d90847d",
+      "byteLength": 663325,
+      "width": 1280,
+      "fullPage": true,
+      "retainedInPublicGit": false,
+      "reviewBoundary": "The rendered screenshot is retained outside public Git; this receipt records its hash and observed page properties."
+    },
+    "pass": true
+  },
+  "resumeActionReview": {
+    "route": "/work/technical-operations",
+    "occurrences": [
+      {
+        "viewport": 360,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 375,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 768,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 1280,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      }
+    ]
+  },
+  "networkObservationPolicy": {
+    "failedRequestsInclude": "Failed document, stylesheet, font, script, image, data, and unclassified fetch requests.",
+    "separatelyReportedCancellation": "Only same-origin fetch requests with RSC=1 and a Next router-prefetch or segment-prefetch header that the browser reports as net::ERR_ABORTED are recorded as canceled speculative prefetches. These are retained per row rather than treated as required-content load failures."
+  }
+}

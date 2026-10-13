@@ -548,6 +548,17 @@ const knowledgeBankInput = {
     surface: "/about",
     sourceOrder: [
       "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+      "SRC-WOWLIST-X-POPULATION-MANIFEST",
+      "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+      "SRC-WOWLIST-SBDIY-ADOPTION",
+      "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+      "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+      "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+      "SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30",
+      "SRC-URBANHERM-X-JIMMY-TIRES-2022",
+      "SRC-URBANHERM-X-KCTH-TIRES-2019",
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
       "SRC-KNOWLEDGE-WIKI-RFC-0006-2026"
     ],
@@ -557,6 +568,30 @@ const knowledgeBankInput = {
         claimId: "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
         projection: "archive-note",
         sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28"]
+      },
+      {
+        id: "wowlist-product-model",
+        claimId: "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+        projection: "case-study",
+        sourceIds: ["SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-X-POPULATION-MANIFEST"]
+      },
+      {
+        id: "wowlist-organizer-support",
+        claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+        projection: "archive-note",
+        sourceIds: ["SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"]
+      },
+      {
+        id: "coalition-participation-path",
+        claimId: "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017",
+        projection: "case-study",
+        sourceIds: ["SRC-CALLSCRIPT-FACEBOOK-PAGE", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27", "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25", "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"]
+      },
+      {
+        id: "resident-service-path",
+        claimId: "CLM-KCTH-TIRED-OF-TIRES-RESIDENT-SERVICE-SYSTEM",
+        projection: "case-study",
+        sourceIds: ["SRC-WAYBACK-KCTH-TIRED-OF-TIRES-2020-10-30", "SRC-URBANHERM-X-JIMMY-TIRES-2022", "SRC-URBANHERM-X-KCTH-TIRES-2019"]
       },
       {
         id: "knowledge-wiki-graph-method",

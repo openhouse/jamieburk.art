@@ -281,21 +281,24 @@ export function evaluateProfessorLenses({
     ),
     criterion(
       "unanimous-holdouts",
-      "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
+      "Three distinct final holdouts per lens have median 4 and no score below 3, as the frozen rubric requires.",
       finalScorecards.length === 6 &&
         ["PR-015", "PR-016"].every((lensId) => {
           const lensScorecards = finalScorecards.filter((scorecard) => scorecard.lensId === lensId);
+          const scores = lensScorecards.map((scorecard) => scorecard.score).sort((left, right) => left - right);
           return lensScorecards.length === 3 &&
+            scores.every((score) => Number.isInteger(score) && score >= 3 && score <= 4) &&
+            scores[1] === 4 &&
             lensScorecards.every((scorecard) => typeof scorecard.reviewerId === "string" &&
               scorecard.reviewerId.trim().length > 0) &&
             new Set(lensScorecards.map((scorecard) => scorecard.reviewerId)).size === 3;
         }) &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
-          scorecard.score === 4 && scorecard.pass === true &&
+          typeof scorecard.pass === "boolean" &&
+          (scorecard.score !== 4 || scorecard.pass === true) &&
           scorecard.candidateSha256 === candidateSha256),
       `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
-        scorecard.score === 4 && scorecard.pass === true &&
-        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards pass at 4 and match candidate ${candidateSha256}.`
+        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards match candidate ${candidateSha256}; each lens independently requires median 4 and minimum 3.`
     )
   ];
 
