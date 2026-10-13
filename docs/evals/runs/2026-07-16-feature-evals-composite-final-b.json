@@ -1,10 +1,10 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-public-committed-reader-b-2026-10-13",
+  "judgeId": "composite-public-baseline-reader-b-2026-10-13",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "c4a0a39b8dfb912c4f36b7e1e49ba7d94e8b4908f219fc81ac689bed1b0bbf4d",
+  "candidateFingerprint": "bb97d4e98c8207cac6892f1cb4b809a2b569dcc93bcf7b7a2432800c3373f985",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,125 +12,122 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh deterministic evaluation resolves all fourteen frozen A-N commit objects and matches all fourteen register decisions to the rubric heads.",
-        "The register retains feature/knowledge-h as the integration branch, develop as its pull-request base, and the frozen source branches as reference-only.",
-        "The mutable feature/evals-K reference is fb228f8ee5001a3320f42317c5612e0835e2d264 while its required frozen commit 5b0cbcd1a7f913d2281c671e46903ad997a743f5 remains available."
+        "Fresh deterministic evaluation confirms fourteen exact frozen branch decisions and zero missing frozen commit objects.",
+        "All refreshed origin/feature/evals-A through origin/feature/evals-N references now match their frozen heads; the evaluation reports no reference mismatches. feature/evals-K resolves to 5b0cbcd1a7f913d2281c671e46903ad997a743f5.",
+        "The register retains the explicit feature/knowledge-h integration branch, develop pull-request base, and reference-only source-branch policy."
       ],
-      "rationale": "The immutable inventory is complete. Mutable-reference drift is visible and does not replace the frozen object or broaden write authority. The committed metadata refresh changes none of these records."
+      "rationale": "The frozen inventory and current reference evidence agree. There is no remaining stale-reference finding to carry forward, and the comparison refresh does not change the immutable family or source-branch write boundary."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh evaluation confirms fourteen substantive decisions with existing destinations and verification criteria; the register digest remains 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "The register explicitly retains selective H-derived website composition while adapting append/query, governance, and operating-documentation contracts.",
-        "Fresh mutation checks reject missing destinations and decorative decision explanations."
+        "Fresh evaluation validates all fourteen substantive branch decisions, existing destinations, and verification IDs under register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The website projection decision remains selective: deeper integration does not automatically add public copy.",
+        "Fresh mutation tests reject missing destinations and decorative decision text. The commit comparison shows the register is unchanged."
       ],
-      "rationale": "The integration remains inspectable through rationale, actual destination files, and verification obligations. No changed metadata line alters an adoption decision or turns deeper research into automatic public projection."
+      "rationale": "Each adoption or adaptation remains inspectable and grounded in a real destination and verification obligation. Correcting generated comparison data does not rewrite the integration rationale."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh evaluation finds all eleven canonical files, zero forbidden parallel lifecycle roots, and the required three-key public registry shape.",
-        "The base suite remains version 3 with its reviewed digest 09bf36049d6947d5200814ee7afe6ab4810ba7797d98ee573ef7eba1a2bdd8d7 and composite-suite link.",
-        "Fresh citation generation in check mode reports a current, redacted public registry. Public citation resolution continues to restrict rendering to active projections approved for their surfaces.",
-        "The complete commit diff contains no changes under apps, scripts, .agents, or rfcs and no package or AGENTS.md changes."
+        "Fresh evaluation finds all eleven canonical files and zero forbidden parallel lifecycle roots; the reviewed version-3 base suite remains bound to digest 09bf36049d6947d5200814ee7afe6ab4810ba7797d98ee573ef7eba1a2bdd8d7.",
+        "Fresh citation checking confirms that the redacted public registry is current and canonical page plans and boundaries remain consistent.",
+        "The complete diff from 61c94b0e9 changes only reports/wiki-graph-delta.md. apps, scripts, .agents, rfcs, package files, AGENTS.md, and reports/wiki-graph.json are unchanged."
       ],
-      "rationale": "The candidate keeps one canonical knowledge architecture and its redacted public projection. Updating generated provenance metadata neither introduces a second schema nor exposes canonical protected context to page components."
+      "rationale": "The H-derived canonical architecture, proof layer, and redacted rendering boundary remain intact. The changed report is a derived comparison, not a new knowledge architecture or public import of protected canonical records."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh lifecycle tests pass stable-record replay, linked preservation of a duplicate with a new ID, and rejection of changed content under an existing stable ID.",
-        "Fresh lifecycle queries expose 61 mature held claims, 71 unresolved inquiries, 5 corrections, 71 active projections, 57 held projections, and zero orphan sources.",
-        "The combined citation/lifecycle test command completed 15 tests with zero failures."
+        "Fresh citation/lifecycle tests pass all fifteen cases, including identical stable-record replay, linked duplicate preservation, and rejection of a changed record under an existing stable ID.",
+        "Fresh evaluation exercises held-claim, inquiry, correction, and orphan queries successfully.",
+        "The lifecycle implementation and canonical records are unchanged by the comparison-report commit."
       ],
-      "rationale": "Required append and query behavior is demonstrated on this committed candidate. The generated provenance update does not overwrite intake records, discard unresolved evidence, or promote held projections."
+      "rationale": "Append safety and inspectable lifecycle states remain demonstrated behavior on this candidate. The baseline correction does not alter intake identity, maturity, or projection decisions."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh canonical validation passes for 331 sources, 119 claims, 34 agency relations, and 5 corrections. The four credit scopes remain individual, shared, collective, and institutional.",
-        "Fresh Wiki health checks pass for 510 records, 1,854 semantic/evidence edges, and 578 prose links, with all generated outputs current. All eight employment-context and hiring-acceptance reports pass their currentness check.",
-        "Inspected every changed line in 4080bb3f1..e190e053c: 520 generated files contain 2,080 added/removed lines, exclusively source-commit and generation-time replacements. No sourceFingerprint, relationship, prose body, claim, rights decision, or code changed.",
-        "The generated source commit is 4080bb3f11130a241e789b11d5d83d473251f689 and generation time is its commit time, 2026-10-13T11:59:42-04:00. sourceMetadata selects the latest source-path commit and excludes generated outputs, matching the observed candidate.",
-        "Fresh citation tests preserve correction retirement, scoped negative research, source distinction, and private/metadata-only exclusion. An in-memory protected-locator injection is rejected; public-safety and Sourcebook checks pass.",
-        "The canonical population projection still bounds the July 2026 coalition-account capture to 3,123 retrievable records and a 2,001-record gap, retaining its authorship, endorsement, and impact limits."
+        "Fresh canonical validation passes for 331 sources, 119 claims, 34 agency relations, and 5 corrections; fresh Wiki health passes for 510 records, 1,854 semantic/evidence edges, and 578 prose links with all generated outputs current.",
+        "Independently loaded the graph artifact from origin/develop at a8fdd57617c3667ac4d9db7d28f57e9022c11a81: 445 nodes and 1,598 edges. Compared node IDs and from/type/to edge identities against the candidate's 510 nodes and 1,854 edges.",
+        "The independent set comparison produces exactly 65 added nodes, zero removed nodes, 264 added edges, and 8 removed edges. Every added-node ID listed in reports/wiki-graph-delta.md matches the independent sorted set.",
+        "The current graph source fingerprint remains 55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f. The changed report has three insertions and 341 deletions; no source graph, canonical claim, authored page, source metadata, or code changed.",
+        "Inspected the eight removed comparison relations and docs/knowledge-bank/corrections/project-photo-courtesy-credits-2026-08-20.md. The existing correction removes an incorrect individual photographer attribution while preserving correction history, unresolved creator status, and rights/consent gates; this report commit removes no underlying graph relation.",
+        "Fresh employment currentness passes all eight reports. Citation tests preserve scoped negative research, correction retirement, source distinction, and private/metadata-only exclusion. A protected-locator injection is rejected, and public-safety plus Sourcebook checks pass."
       ],
-      "rationale": "Currentness is now verified against the committed source history rather than assumed from generated files. The exhaustive metadata-only diff and fresh checks show that the repair updates provenance without changing facts, source relationships, agency, population denominators, rights, or privacy boundaries."
+      "rationale": "The report now accurately describes the candidate relative to the observed current baseline. The smaller delta reflects work already present on develop, not loss of source evidence. Agency, population limits, corrections, and private-source boundaries remain unchanged and validated."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Re-inspected the current hero, About through-line and comparison limits, and technical-operations decision evidence. The target role is explicit and Jamie is named as the actor in requirements, incremental delivery, civic information architecture, documentation, and handoff work.",
-        "The About composition connects artistic, civic, technical, social, and relational practice through Open House, WOWList, hospitality and artist support, coalition work, commercial systems, and the evolving knowledge method.",
-        "Project-specific relationships, models, interfaces, use, learning, revision, and continuity make the recursive practice reconstructable; labeled HJE and residency/community workflow specimens preserve their reconstruction and privacy boundaries.",
-        "Current comparison text rejects structural-equivalence, invention, client-adoption, peer-review, and historical-tool-proficiency inflation. Technical operations identifies areas needing stronger public evidence.",
-        "The complete diff proves public composition unchanged by the metadata commit. Fresh route checks pass, with no proofs, knowledge-bank, or public-claims route, and fresh lifecycle queries retain 61 mature held claims."
+        "The complete source diff confirms unchanged public composition. Current public copy still connects Jamie's requirements, implementation, civic information architecture, documentation, and handoff work to usable results.",
+        "The About through-line retains artistic, civic, technical, social, and relational continuity through public examples and the observe/model/prototype/use/learn/revise/handoff sequence.",
+        "Current HJE and residency/community specimens retain their reconstruction and privacy labels. FairRentNYC retains collective policy credit. The lab and About text retain evolving-method, client-adoption, structural-equivalence, peer-review, and historical-proficiency limits.",
+        "The current technical-operations page identifies demonstrated practice, evidence gaps, and unclaimed authority. Fresh route checks pass, and mature held claims remain outside public proofs-style routes."
       ],
-      "rationale": "My judgment of the actual composition is that it remains purposeful, selective, and legible to a hiring reader while preserving broader practice and collective credit. The metadata commit affects the provenance of internal generated reports, not the public story or the evidentiary limits that make that story defensible. Prior scores are not the basis of this assessment."
+      "rationale": "I assess the unchanged authored composition as purposeful and selective, with legible individual agency and concrete continuity across creative, civic, technical, and relational work. A corrected internal graph comparison does not change the visitor's story or justify broader factual projection. This judgment is based on the candidate and its bounded evidence, not prior review scores."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh evaluation confirms all five required human-evidence controls remain open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "Human corroboration, collective review, hiring usability, job-funnel, and external-validity controls retain evidence requirements, anti-gaming rules, next actions, and public-projection boundaries.",
-        "Fresh mutations reject both closing a human-evidence control and substituting synthetic human-validation instructions.",
-        "The inspected current generated Wiki health report keeps collaborator/editorial review governed-open, media rights and consent human-blocked, and fresh-reader, production-observation, and hiring-outcome evidence separate."
+        "Fresh evaluation confirms five of five required human-evidence controls remain explicitly open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Human corroboration, collective review, hiring usability, job-funnel, and external-validity controls retain evidence requirements, anti-gaming instructions, next actions, and projection boundaries.",
+        "Fresh mutations reject closing a human-evidence gap and substituting synthetic validation. The comparison retains zero new type-aware orphans and 185 current rights-review records."
       ],
-      "rationale": "Metadata freshness does not convert an open human-evidence gap into approval or validation. The controls and generated report continue to distinguish governed absence from consent, corroboration, comprehension, or real-world outcomes."
+      "rationale": "Correct comparison data is technical evidence, not new human testimony, rights clearance, usability evidence, or hiring outcomes. The candidate continues to govern those absences honestly rather than treating current generated reports as human approval."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh semantic digest recomputation matches 00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d and the separately pinned implementation constant. Reviewed base-suite, register, blind-spot, and branch-head digests remain bound.",
-        "All 15 executed composite mutation tests pass, including branch omission, fabricated heads, checksum-only weakening, decorative decisions, base-suite changes, optimizer self-grading, duplicate labels, synthetic human evidence, and inability to compensate for blocking failures.",
-        "The stale-derived-output mutation still fails canonical integrity and governance, while fresh real Wiki and employment outputs pass. The metadata repair therefore satisfies the currentness gate without disabling it.",
-        "The mutation process supplies empty prior-review inputs in memory and excludes the receipt-dependent ordinary success case; source files are unchanged and no existing holdout or peer judgment was inspected.",
-        "A direct protected-locator mutation is rejected. Text/binary candidate-identity and reviewer-label judgment-digest mutations also pass their rejection checks."
+        "Fresh rubric recomputation matches 00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d and the pinned implementation constant. The base suite, register, blind-spot controls, and frozen branch family remain bound.",
+        "All fifteen executed composite mutation tests pass, including omitted or fabricated branches, missing destinations, semantic weakening with refreshed checksums, decorative decisions, base-suite weakening, stale generated outputs, optimizer self-grading, duplicate labels, synthetic human evidence, and compensation for blocking failures.",
+        "The isolated mutation process supplies empty prior-review inputs in memory and excludes the ordinary receipt-dependent success case. No repository source was edited and no existing holdout judgment was inspected.",
+        "Fresh locale-determinism testing confirms generated outputs agree across the tested process locales. A separate protected-locator injection is rejected.",
+        "The actual comparison was independently recomputed against the observed baseline, and fresh derived-currentness checks pass without changing or bypassing a gate."
       ],
-      "rationale": "The candidate repairs a real committed-provenance mismatch while retaining the gate that detected it. Frozen semantics and adversarial checks still resist semantic weakening, self-grading, human-evidence synthesis, privacy leakage, and score averaging."
+      "rationale": "The correction replaces inaccurate generated data with an independently verified comparison. It preserves the stale-output gate and frozen semantics, and current adversarial tests still reject score gaming and privacy or authority inflation."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Recomputed the 2,144-file complete-source-tree fingerprint as c4a0a39b8dfb912c4f36b7e1e49ba7d94e8b4908f219fc81ac689bed1b0bbf4d against the unchanged frozen rubric. Only the two declared composite holdout paths are excluded.",
-        "This review independently completes candidate-merit acceptance for the committed candidate. The separately commissioned peer also declares independently completed acceptance for exactly this fingerprint and rubric; only acceptance and identity declarations were exchanged.",
-        "The public receipt contract requires distinct reviewer labels and judge IDs, review times, provider, the exact public attestation, and a digest of each complete judgment payload. This complete receipt is supplied for parent digest assembly and ordinary pair validation.",
-        "Fresh bounded checks pass: Wiki health/currentness, eight employment reports, composite derived-currentness, canonical citations and registry generation in check mode, 15 citation/lifecycle tests, 15 isolated composite mutation tests, protected-locator mutation, public-safety, Sourcebook boundaries, and route checks.",
-        "The committed generated report and frozen suite retain human production, deployment observation, rights/consent, and indexing gates. Public receipt labels are not claimed to authenticate private reviewer process identity."
+        "The complete 2,144-file candidate fingerprint recomputes to bb97d4e98c8207cac6892f1cb4b809a2b569dcc93bcf7b7a2432800c3373f985 against the unchanged rubric. Only the two declared composite holdout records are excluded.",
+        "I independently completed candidate-merit acceptance. The separately commissioned peer independently declared acceptance for this identical candidate fingerprint and rubric; only the minimal acceptance and identity declarations were exchanged.",
+        "This complete receipt uses a distinct reviewer label, review time, independent-codex-review provider, and exact public attestation. The parent will compute its judgment digest and validate the assembled pair before claiming the installed repository gate passes.",
+        "Fresh checks pass: independent baseline graph set comparison, Wiki health/currentness, all eight employment reports, composite derived-currentness, citation registry check, fifteen citation/lifecycle tests, fifteen isolated composite mutation tests, locale determinism, protected-locator mutation, public-safety, Sourcebook boundaries, and routes.",
+        "The comparison evidence is scoped to origin/develop a8fdd57617c3667ac4d9db7d28f57e9022c11a81. Human production, deployment observation, rights/consent, and explicit indexing approval remain separate gates; public labels do not authenticate private process identity."
       ],
-      "rationale": "The changed candidate has its own independent acceptance and observed second acceptance. Its affected currentness contracts pass fresh checks, and its exact complete-tree identity is recorded. The completed pair still requires mechanical digest assembly and ordinary gate validation; this judgment does not authorize production, deployment, or indexing."
+      "rationale": "The changed candidate has its own observed independent acceptance pair and fresh affected-contract evidence. Its comparison baseline is recorded explicitly. Mechanical digest assembly and ordinary final validation remain necessary, and this review does not claim a hosted CI result or authorize deployment."
     }
   ],
   "notObserved": [],
   "findings": [
-    "Nonblocking: all 520 changed generated files alter only sourceCommit/source-commit and generatedAt/generation-time metadata; source fingerprints and semantic bodies are unchanged.",
-    "Nonblocking: the mutable feature/evals-K reference has moved while the required frozen commit object remains present and authoritative.",
-    "Nonblocking: public-safety retains eleven expected careful-claim warnings requiring contribution, collective-credit, privacy, and proposal-status guardrails.",
-    "Scope: this is a fresh committed-candidate review with focused read-only regression and currentness checks. It does not claim a new browser session, full build, typecheck, hosted CI run, external human validation, or deployment verification."
+    "Nonblocking: the graph delta is correct for origin/develop a8fdd57617c3667ac4d9db7d28f57e9022c11a81. A later baseline movement can change this generated comparison and must be evaluated for currentness.",
+    "All fourteen refreshed frozen-family references now match; the previous stale feature/evals-K observation is no longer current.",
+    "Public-safety reports eleven expected careful-claim guardrail warnings; they do not represent newly cleared rights, attribution, or public-use boundaries.",
+    "Scope: this receipt records focused read-only comparison, currentness, and regression checks. It does not claim a new browser session, full build, typecheck, hosted CI result, external human validation, or live deployment verification."
   ],
-  "recommendation": "Accept the exact committed candidate for composite receipt assembly. Compute both complete judgment digests, install the two excluded receipts, and run the ordinary deterministic stopping gate. Keep human production, deployment, rights, consent, and indexing approvals separate.",
+  "recommendation": "Accept this exact candidate for complete judgment-digest assembly and the ordinary final pair gate. Run final hosted checks on the resulting exact commit and preserve separate human production, deployment, rights, consent, and indexing authority.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "composite-public-committed-reader-b-2026-10-13",
-    "reviewedAt": "2026-10-13T16:06:30Z",
-    "judgmentSha256": "bfe8395a8d6321b65f73fba3395ffed8c9c3c270b0470ba0cce25dc7a9b72f5a",
+    "reviewerLabel": "composite-public-baseline-reader-b-2026-10-13",
+    "reviewedAt": "2026-10-13T16:16:19Z",
+    "judgmentSha256": "df29ad346aa3cde8bc71271469b987dd7d41e561bc9bc832743fe280b89c6e05",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }
