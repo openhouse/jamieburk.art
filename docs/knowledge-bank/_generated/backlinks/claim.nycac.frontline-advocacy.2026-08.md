@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYCAC and Fair Rent NYC frontline advocacy, July-August 2026
 
-**Source commit:** `880d16f6fe6abcee871d166665d4bd95c60b569d`
-**Generation time:** 2026-09-27T22:35:35-04:00
+**Source commit:** `4080bb3f11130a241e789b11d5d83d473251f689`
+**Generation time:** 2026-10-13T11:59:42-04:00
 **Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
 
 - [Empty Storefronts, High Rents public report launch](../../events/sbu-report-launch-2026-07-29.md) - `related_to` (frontmatter)
