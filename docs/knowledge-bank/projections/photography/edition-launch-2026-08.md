@@ -6,10 +6,10 @@ projection_type: portfolio-edition
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-15
+last_reviewed: 2026-10-13
 review_by: 2027-02-13
 canonical_path: docs/knowledge-bank/projections/photography/edition-launch-2026-08.md
-summary: Dated launch-candidate edition retaining the East River homepage hero and binding ten governed visual occurrences across the homepage, colophon, social preview, work index, and situated-work case studies.
+summary: Dated launch-candidate edition retaining the East River homepage hero and eleven governed occurrence records, including the October reconciliation of already-rendered project covers.
 projection_status: active
 candidate_lineage:
   base_branch: develop
@@ -24,6 +24,7 @@ occurrences:
   - projection.photo.social-preview.east-river
   - projection.photo.fair-rent-nyc.shoestring-facilitation
   - projection.photo.fair-rent-nyc.market-hotel-banner
+  - projection.photo.fair-rent-nyc.market-hotel-covers
   - projection.photo.sunday-dinner.shared-map
   - projection.photo.kc-town-hall.roof-work
   - projection.visual.kc-town-hall.tired-of-tires-flyer
@@ -40,6 +41,9 @@ human_gates:
   - Jamie exact-candidate production approval
   - indexing approval
 relations:
+  - type: related_to
+    target: projection.photo.fair-rent-nyc.market-hotel-covers
+    href: fair-rent-nyc-market-hotel-covers.md
   - type: related_to
     target: projection.photo.layout-c.home.east-river
     href: layout-c-home-east-river.md
@@ -78,10 +82,13 @@ relations:
 # August 2026 launch-candidate photographic edition
 
 This edition keeps the existing East River homepage hero unchanged. It binds
-ten governed visual occurrences: the hero, its colophon editorial-path use, its complete-frame social preview,
+eleven governed occurrence records: the hero, its colophon editorial-path use, its complete-frame social preview,
 two Fair Rent NYC participation images, one Sunday Dinner shared-table image,
 one KC Town Hall field-work image, and the Tired of Tires flyer-to-field
 sequence.
+The October 13 reconciliation adds the missing Market Hotel cover record and
+includes the already-rendered homepage uses of the Sunday Dinner and KC Town
+Hall covers. It does not add photographs, crops, permissions, or production releases.
 The work index composes those photographs with truthful product screenshots so
 every project has a visual threshold without assigning unrelated archive
 photography to digital work.
@@ -96,6 +103,7 @@ open until Jamie approves the exact candidate commit.
 - [East River social preview](social-preview-east-river.md)
 - [Shoestring Press facilitation](fair-rent-nyc-shoestring-facilitation.md)
 - [Market Hotel public room](fair-rent-nyc-market-hotel-banner.md)
+- [Market Hotel homepage and project covers](fair-rent-nyc-market-hotel-covers.md)
 - [Sunday Dinner shared table](sunday-dinner-shared-map.md)
 - [KC Town Hall roof work](kc-town-hall-roof-work.md)
 - [Tired of Tires resident-service flyer](kc-town-hall-tired-of-tires-flyer.md)

@@ -5,7 +5,7 @@ kind: asset
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-13
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md
 summary: Public-safe record for an October 11, 2017 NYC Artist Coalition photograph of the collective Save NYC Spaces town hall room at Market Hotel.
@@ -22,6 +22,8 @@ public_display_status: cleared
 projection:
   status: active
   surfaces:
+    - /
+    - /work
     - /work/fair-rent-nyc
 public_derivatives:
   - id: derivative.photo.nycac-market-hotel-banner.v1
@@ -81,6 +83,9 @@ visible_observations:
 interpretation_boundary: The image supports a collective public-room context. It does not establish an attendance count, every depicted identity, exact remarks, endorsement, outcome, or Jamie's sole credit.
 relations:
   - type: projected_to
+    target: projection.photo.fair-rent-nyc.market-hotel-covers
+    href: ../../../projections/photography/fair-rent-nyc-market-hotel-covers.md
+  - type: projected_to
     target: projection.photo.fair-rent-nyc.market-hotel-banner
     href: ../../../projections/photography/fair-rent-nyc-market-hotel-banner.md
   - type: uses_source
@@ -105,9 +110,11 @@ relations:
 
 The archived-project-site census first preserved this image family in a held
 state. Jamie's album-scoped authorization, credit review, exact derivative,
-caption review, and destination review now support one limited occurrence in
-the Fair Rent NYC case study. The public display credit is "Photo courtesy of
-NYC Artist Coalition."
+caption review, and destination review support the Fair Rent NYC participation
+sequence and the existing homepage, work-index, and case-study covers. The
+October 13 reconciliation records those cover destinations under the existing
+portfolio staging authorization; it grants no new permission. The public display
+credit remains "Photo courtesy of NYC Artist Coalition."
 
 ## Evidence boundary
 
