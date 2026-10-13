@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Public-only hiring acceptance baseline
 
-**Candidate commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Portfolio snapshot:** `31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a`
+**Candidate commit:** `db3725c381e5053c835200c4b6e3b49232d5e88b`
+**Portfolio snapshot:** `247400f4e184f2822bf3e7e0e6072ef8ffd61a528d6b3358e18c1dfc7cdb2cba`
 **Role-context hash:** `eab2214da000932f3182fe6cba1472a3cee379edb8803ff5f24995c1f10a0b2d`
 **Reader-context hash:** `e055b82642616d52177ad68ae4d3bbaeb3953ef3c75cfa3e159c65166862e29f`
 **Evaluation contract:** `ae645d3b5b871eedbbec1f838c5e1b613fe5d5de924749270c9c5daf024ad762`
@@ -72,7 +72,7 @@
 - All signals observed: 5/7
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: PIT Crew operational lead (nearest-public-operational-lead)
 - Public vision context: Commissioner and Chief Technology Officer (official-initiative-leader)
@@ -92,7 +92,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Executive Director, Product Management (role-only)
 - Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)
@@ -108,7 +108,7 @@
 - All signals observed: 0/3
 - Opportunity status live: yes
 - Historical benchmark: no
-- Role context current at candidate time: yes
+- Role context current at candidate time: no
 - Exclusionary hard screen recorded: no
 - Public reporting context: Executive Director, Product Management (role-only)
 - Public vision context: Commissioner and Chief Technology Officer (official-agency-leader)

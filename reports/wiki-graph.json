@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T19:49:24-04:00",
-  "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "sourceFingerprint": "27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4",
+  "generatedAt": "2026-10-13T12:37:35-04:00",
+  "sourceCommit": "bacdfd7f58d098363ef625db5da5ad6a9cbc594d",
+  "sourceFingerprint": "65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -2433,7 +2433,7 @@
       "sensitivity": "low",
       "summary": "Public-safe record for an October 11, 2017 NYC Artist Coalition photograph of the collective Save NYC Spaces town hall room at Market Hotel.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-10-13",
       "reviewBy": "2027-02-20"
     },
     {
@@ -2899,9 +2899,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Dated launch-candidate edition retaining the East River homepage hero and binding ten governed visual occurrences across the homepage, colophon, social preview, work index, and situated-work case studies.",
+      "summary": "Dated launch-candidate edition retaining the East River homepage hero and eleven governed occurrence records, including the October reconciliation of already-rendered project covers.",
       "aliases": [],
-      "lastReviewed": "2026-08-15",
+      "lastReviewed": "2026-10-13",
       "reviewBy": "2027-02-13"
     },
     {
@@ -4671,6 +4671,19 @@
       "reviewBy": "2027-02-20"
     },
     {
+      "id": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "path": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-covers.md",
+      "title": "Fair Rent NYC Market Hotel cover occurrences",
+      "kind": "projection",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Existing homepage, work-index, and case-study covers bound to the already-authorized Market Hotel derivative, separate from its participation-sequence occurrence.",
+      "aliases": [],
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2027-02-20"
+    },
+    {
       "id": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "path": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "title": "Fair Rent NYC Shoestring Press facilitation occurrence",
@@ -4704,9 +4717,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.",
+      "summary": "Exact existing cover occurrences binding the KC Town Hall roof-work derivative to the homepage, work index, and case study under the existing portfolio staging authorization.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-10-13",
       "reviewBy": "2027-02-20"
     },
     {
@@ -4782,9 +4795,9 @@
       "status": "maintained",
       "visibility": "public-safe",
       "sensitivity": "low",
-      "summary": "Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.",
+      "summary": "Exact existing cover occurrences binding the Sunday Dinner shared-map derivative to the homepage, work index, and case study under the existing portfolio staging authorization.",
       "aliases": [],
-      "lastReviewed": "2026-08-20",
+      "lastReviewed": "2026-10-13",
       "reviewBy": "2027-02-20"
     },
     {
@@ -11732,6 +11745,14 @@
     },
     {
       "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "type": "projected_to",
+      "to": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "source": "frontmatter",
+      "href": "../../../projections/photography/fair-rent-nyc-market-hotel-covers.md",
+      "context": null
+    },
+    {
+      "from": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
       "type": "related_to",
       "to": "index.photo-set.nycac-project-sites.2017-2026",
       "source": "frontmatter",
@@ -12911,6 +12932,14 @@
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "source": "frontmatter",
       "href": "fair-rent-nyc-market-hotel-banner.md",
+      "context": null
+    },
+    {
+      "from": "edition.launch.2026-08",
+      "type": "related_to",
+      "to": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "source": "frontmatter",
+      "href": "fair-rent-nyc-market-hotel-covers.md",
       "context": null
     },
     {
@@ -18681,6 +18710,38 @@
     },
     {
       "from": "projection.photo.fair-rent-nyc.market-hotel-banner",
+      "type": "uses_source",
+      "to": "source.permission.jamie-portfolio-album.2026-08-13",
+      "source": "frontmatter",
+      "href": "../../sources/permissions/jamie-portfolio-album-2026-08-13.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "type": "related_to",
+      "to": "edition.launch.2026-08",
+      "source": "frontmatter",
+      "href": "edition-launch-2026-08.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "type": "related_to",
+      "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
+      "source": "frontmatter",
+      "href": "fair-rent-nyc-market-hotel-banner.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "type": "uses_source",
+      "to": "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
+      "source": "frontmatter",
+      "href": "../../assets/photographs/project-sites/save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2.md",
+      "context": null
+    },
+    {
+      "from": "projection.photo.fair-rent-nyc.market-hotel-covers",
       "type": "uses_source",
       "to": "source.permission.jamie-portfolio-album.2026-08-13",
       "source": "frontmatter",
@@ -25401,7 +25462,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/layout-c-home-east-river.md",
       "to": "projection.photo.layout-c.home.east-river",
       "fragment": null,
-      "line": 18,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -25410,7 +25471,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/colophon-east-river.md",
       "to": "projection.photo.colophon.east-river",
       "fragment": null,
-      "line": 19,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -25419,7 +25480,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/social-preview-east-river.md",
       "to": "projection.photo.social-preview.east-river",
       "fragment": null,
-      "line": 20,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -25428,7 +25489,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "to": "projection.photo.fair-rent-nyc.shoestring-facilitation",
       "fragment": null,
-      "line": 21,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -25437,7 +25498,16 @@
       "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
       "to": "projection.photo.fair-rent-nyc.market-hotel-banner",
       "fragment": null,
-      "line": 22,
+      "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
+      "from": "edition.launch.2026-08",
+      "toPath": "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-covers.md",
+      "to": "projection.photo.fair-rent-nyc.market-hotel-covers",
+      "fragment": null,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -25446,7 +25516,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md",
       "to": "projection.photo.sunday-dinner.shared-map",
       "fragment": null,
-      "line": 23,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -25455,7 +25525,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",
       "to": "projection.photo.kc-town-hall.roof-work",
       "fragment": null,
-      "line": 24,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -25464,7 +25534,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-flyer.md",
       "to": "projection.visual.kc-town-hall.tired-of-tires-flyer",
       "fragment": null,
-      "line": 25,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -25473,7 +25543,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-before.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-before",
       "fragment": null,
-      "line": 26,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -25482,7 +25552,7 @@
       "toPath": "docs/knowledge-bank/projections/photography/kc-town-hall-tired-of-tires-after.md",
       "to": "projection.photo.kc-town-hall.tired-of-tires-after",
       "fragment": null,
-      "line": 27,
+      "line": 31,
       "kind": "link"
     },
     {

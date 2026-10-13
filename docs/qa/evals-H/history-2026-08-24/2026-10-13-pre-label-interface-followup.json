@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-13T16:09:52.462Z",
+  "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+  "publicCandidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "method": "Fresh local production-build observations after initial load and after explicit scroll restoration followed by two animation frames.",
+  "initialViewports": [
+    {
+      "width": 360,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 375,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 768,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 1280,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    }
+  ],
+  "restoredViewports": [
+    {
+      "width": 360,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 375,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 768,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 1280,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    }
+  ],
+  "mobileMenu": [
+    {
+      "width": 360,
+      "open": true,
+      "linkCount": 5,
+      "menuText": "Close menu\nWork\nTechnical Operations\nAbout\nResume\nContact",
+      "aboutLinkVisible": true,
+      "navigationCompleted": true,
+      "destinationH1": "About"
+    },
+    {
+      "width": 375,
+      "open": true,
+      "linkCount": 5,
+      "menuText": "Close menu\nWork\nTechnical Operations\nAbout\nResume\nContact",
+      "aboutLinkVisible": true,
+      "navigationCompleted": true,
+      "destinationH1": "About"
+    }
+  ],
+  "sourceDisclosure": [
+    {
+      "width": 360,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 375,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 768,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 1280,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    }
+  ],
+  "browserPageErrors": [],
+  "findings": [
+    "The header did not overlap the homepage heading at any of the four supported widths, either on initial load or after scroll restoration.",
+    "Both mobile widths opened the five-link menu and navigated to About.",
+    "The About page expanded three visible source notes at all four widths.",
+    "The resume action has measured 5.59:1 default, hover, keyboard-focus text and keyboard-outline contrast at all four canonical widths."
+  ],
+  "limits": [
+    "These browser observations are automated checks and an advisory follow-up to the retained reviewer caveats.",
+    "Actual human screen-reader use, browser-zoom review, content approval, and production authority remain separate."
+  ],
+  "resumeActionReview": {
+    "route": "/work/technical-operations",
+    "occurrences": [
+      {
+        "viewport": 360,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 375,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 768,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      },
+      {
+        "viewport": 1280,
+        "label": "Download resume PDF",
+        "visible": true,
+        "contrastRatio": 5.59124505280645,
+        "states": {
+          "default": {
+            "foreground": "rgb(255, 255, 255)",
+            "effectiveBackground": [
+              47,
+              111,
+              137
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "hover": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          },
+          "focus": {
+            "foreground": "rgb(47, 111, 137)",
+            "effectiveBackground": [
+              255,
+              255,
+              255
+            ],
+            "contrastRatio": 5.59124505280645
+          }
+        },
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true,
+          "outlineWidth": 3,
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 255)",
+          "outlineOffset": "4px",
+          "effectiveBackground": [
+            47,
+            111,
+            137
+          ],
+          "contrastRatio": 5.59124505280645
+        },
+        "keyboardFocusVisible": true
+      }
+    ]
+  }
+}

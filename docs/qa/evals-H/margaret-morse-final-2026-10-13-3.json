@@ -1,0 +1,33 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "public-b-reviewer3-pr015-20261013",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 13 packet routes and inspected all 26 desktop/mobile screenshots. The substantive text remains present across widths.",
+    "The homepage identifies Technical Project Manager - Product Operations & Implementation, then connects a facilitated coalition session and campaign website under 'The system lives between the screen and the room.' Artistic and social practice support the professional role.",
+    "Homepage → About is one click. 'Systems people can inhabit' connects Open House's participatory gallery experiment and communal decision-making to WOWList, Sunday Dinner / 196, coalition work, and Knowledge Wiki Graphs.",
+    "WOWList connects community vocabulary and organizer needs to collaboratively editable event entry, followable keyword communities, distribution, support materials, and organizer adoption. It names Richard Caceres as co-founder and co-builder and credits the wider community.",
+    "Sunday Dinner / 196 makes hospitality and participant agency operational: proposal inquiry, orientation, space configuration, independent access, continued support, invitations, hosting, minimal documentation, and follow-up. Its two visible reconstructions show how people enter and continue within the system.",
+    "FairRentNYC connects listening meetings and priority ballots to practical sessions, town halls, campaign interfaces, source maps, minutes, and follow-through. Its photographs and captions connect public tools to shared physical settings while preserving collective credit.",
+    "The public-safe source note bounds Open House to public reporting and withholds faculty recommendations and protected educational records. No raw article, educational evaluation, private correspondence, or faculty testimonial appears in the reviewed pages."
+  ],
+  "gaps": [
+    "Several frozen screenshots show navigation obscuring headings or crossing page content, including About and Sunday Dinner / 196. The packet cannot establish whether this is capture-state behavior or a persistent interface defect; verify normal page entry and scrolling before broader visual release.",
+    "Photo consent and protected-source exclusions are represented by the supplied public-safe documentation; this advisory reading did not independently inspect underlying permission records."
+  ],
+  "safety_findings": [],
+  "recommendation": "Meets this lens at 4/4: three concrete project continuities explain participation, hospitality, documentation, and collective care without displacing the target role. No lens-specific content revision is required. Check the observed navigation overlap separately. Aggregate review requirements and human publication authority remain separate.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

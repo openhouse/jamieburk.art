@@ -1,0 +1,36 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-3-morse",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 26 manifest-listed rendered text/screenshot views and the required public source note. Independently hashed all 158 sorted candidate paths using path + NUL + raw source bytes + NUL; the result matches the declared candidate fingerprint. All 26 screenshot hashes also match.",
+    "The homepage's 'The system lives between the screen and the room' pairs coalition facilitation with a public campaign interface. Participation is visibly part of the operating practice rather than an incidental biographical interest.",
+    "The About page connects Open House to WOWList, Sunday Dinner/196, coalition work, and Knowledge Wiki Graphs while retaining technical project management as the professional frame. SiteHeader.tsx provides a one-click desktop path and a two-action mobile Menu/About path from the homepage.",
+    "Sunday Dinner/196 supplies a concrete continuity: hospitality and shared space become invitations, onboarding, working conditions, independent access, and follow-up. Its rendered residency specimen explicitly preserves the artist's ability to change direction.",
+    "WOWList supplies a second continuity: vocabulary already used by arts and music communities becomes collaboratively editable event text, followable communities, calendars, and distribution workflows. The case credits Richard Caceres and participating organizers alongside Jamie.",
+    "NYC Artist Coalition supplies a third continuity: the working-session photograph, shared campaign surface, and collective public room connect attention, place, facilitation, public participation, and continuing documentation. The exact Shoestring meeting agreement remains attributed to Jamie's recollection.",
+    "The public source note and Open House registry entry support a bounded account of initiation, communal governance, and many-perspective documentation. The public presentation does not depend on faculty praise or protected educational records."
+  ],
+  "gaps": [
+    "Several supplied captures obscure headings with the sticky header, including the About introduction and WOWList title. The substantive lineage remains readable, but these captures do not establish an unobstructed initial reading experience; the packet alone cannot distinguish capture-state effects from a live layout defect."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, protected educational-record quotation, or private correspondence was observed in the reviewed public presentation. The required source note explicitly withholds those materials.",
+    "Collective credit and interpretation limits are substantive: photographs are not treated as proof of agreement, individual remarks, endorsement, attendance totals, or policy causation. Sunday Dinner reconstructions withhold participant-level and access information.",
+    "photography.ts records portfolio-use boundaries and separate production/indexing states, several of which remain open. This advisory pass does not establish new consent, broader reuse rights, or authority to publish the exact candidate."
+  ],
+  "recommendation": "This individual reading meets PR-015's exceptional standard. Three specific project continuities explain how people can inhabit, influence, remember, and continue the systems Jamie helps build. Retain the collective-credit and privacy boundaries. This score is one advisory judgment, not the required three-reviewer aggregate or production approval.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

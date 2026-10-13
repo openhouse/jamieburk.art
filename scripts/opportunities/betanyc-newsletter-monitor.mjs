@@ -112,6 +112,7 @@ function cityDisposition(lead, row, config, asOf) {
     jobId: String(row.job_id),
     cityJobId: String(row.job_id),
     officialUrl: lead.sourceUrl,
+    deadline: score.screen.deadline ?? lead.deadline,
     fitScore: score.fitScore,
     secureScore: score.secureScore,
     compositeScore: score.compositeScore,

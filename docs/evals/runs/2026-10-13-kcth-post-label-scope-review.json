@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "kcth-shared-public-surfaces-20261013-post-label-correction",
+  "reviewedOn": "2026-10-13",
+  "reviewer": "Root agent independently reviewing the implementation agent's exact scoped diff",
+  "reviewType": "public-safe-source-and-boundary-delta-review; not a blind portfolio score",
+  "decision": "renew-only-shared-surface-lock-supported",
+  "findings": [],
+  "sharedPublicSurfaces": {
+    "previousReviewedSha256": "008c3f82e707178738b74ba625e66cb47e93c122970d96cf1247628cfe8efada",
+    "actualSha256": "b94e4a80222a6f66898f2a75842f79f4a36732751f0bc7a98d968f48a28ecfd3",
+    "hashInputs": ["apps/www/src/data/work.ts", "apps/www/src/app/work/technical-operations/page.tsx"],
+    "composition": "UTF-8 contents in listed order joined by one newline, SHA-256",
+    "observedDiff": "Technical Operations replaces Inspectable artifact with Public evidence and distinguishes HJE reconstruction, withheld coalition source records, and CallNYC launch screenshot. FairRentNYC's three descriptive cards explicitly identify themselves as public summaries with underlying records withheld. No KC Town Hall claim or prose changed."
+  },
+  "observedBoundaryChecks": [
+    "KC Town Hall metadata, case-study MDX and proof wording preserve co-development and the Board and Council's institutional authority.",
+    "The award remains distinct from payment, disbursement, expenditure, executed funding agreement, construction completion and personal receipt.",
+    "Resident-service records remain collective workflow evidence, not audited completed pickups, household totals, endorsement or attribution of every post to Jamie.",
+    "The receiving organization, legal mechanics, private legal/financial/property details, correspondence and resident records remain protected.",
+    "The reviewed wording changes narrow artifact-access claims; they do not strengthen historical outcomes or promote a held KC Town Hall claim."
+  ],
+  "unchangedLocksObserved": {
+    "corpusSha256": "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
+    "canonicalRecordsSha256": "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
+    "governedKnowledgeSha256": "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
+    "proofProjectionSha256": "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
+    "caseStudyMdxSha256": "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
+    "publicReviewReportSha256": "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
+  },
+  "verification": {
+    "sharedHashIndependentlyRecomputed": true,
+    "sixOtherLocksMatch": true,
+    "fullKnowledgeEvaluationPassed": false,
+    "observedFailures": "The unreconciled candidate still fails knowledge and review gates; this delta receipt does not declare those gates passing. Rerun after source/derived reconciliation."
+  },
+  "limits": [
+    "AI advisory review, not human approval, new permission, historical corroboration, or consent.",
+    "Applies only to the exact scoped shared-surface hash above; it does not renew professor or composite judgments.",
+    "PR-016 historical evidence gaps remain unresolved. No deployment, merge, production or indexing authority is granted."
+  ]
+}

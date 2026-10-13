@@ -6,6 +6,7 @@ import test from "node:test";
 
 import {
   evaluateProfessorLenses,
+  fingerprintProfessorCandidate,
   professorCandidateRelativePaths
 } from "../lib/professor-lens-eval.mjs";
 
@@ -207,5 +208,47 @@ test("guard binds visual-system and photo changes to a new candidate", () => {
   });
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+function syntheticReviewerFixture() {
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((relativePath) => [
+    relativePath, readFileSync(path.join(repoRoot, relativePath))
+  ]));
+  candidateFiles["apps/www/src/components/Hero.tsx"] = Buffer.concat([
+    candidateFiles["apps/www/src/components/Hero.tsx"],
+    Buffer.from("\n// Synthetic unit-test candidate; not review evidence.\n")
+  ]);
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const scorecards = ["PR-015", "PR-016"].flatMap((lensId) =>
+    [1, 2, 3].map((reviewer) => ({
+      evaluator: "Synthetic unit-test fixture; not an independent review.",
+      reviewerId: `synthetic-${lensId}-${reviewer}`,
+      lensId, phase: "holdout", candidateSha256, score: 4, pass: true
+    }))
+  );
+  return { candidateFiles, scorecards };
+}
+
+test("guard requires three distinct reviewer records for each professor lens", () => {
+  const { candidateFiles, scorecards } = syntheticReviewerFixture();
+  const initial = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
+  assert.equal(initial.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, true);
+  assert.equal(initial.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
+  scorecards[1].reviewerId = scorecards[0].reviewerId;
+
+  const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
+  assert.equal(result.pass, false);
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("guard cannot count one professor lens six times", () => {
+  const { candidateFiles, scorecards } = syntheticReviewerFixture();
+  assert.equal(evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards })
+    .criteria.find((item) => item.id === "unanimous-holdouts")?.pass, true);
+  for (const scorecard of scorecards) scorecard.lensId = "PR-015";
+
+  const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: scorecards });
+  assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
 });

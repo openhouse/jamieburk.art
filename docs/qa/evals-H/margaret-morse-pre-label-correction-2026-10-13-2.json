@@ -1,0 +1,35 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-2-morse",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Read all 26 manifest-listed rendered text views and inspected all 26 screenshots, covering 13 routes at 1280 and 375 pixels. Read the required public source note and relevant allowed source files. Independently hashed all 158 sorted candidate paths using path + NUL + raw source bytes + NUL; the aggregate fingerprint and all 158 individual file hashes matched.",
+    "The homepage preserves professional positioning while explicitly connecting screens, rooms, invitations, meetings, public action, and handoffs. Its coalition working-session photograph and campaign screenshot make that connection visible rather than leaving community practice in a biography.",
+    "The homepage navigation leads directly to /about. Both About renders contain 'Systems people can inhabit,' a bounded Open House account, and links connecting artistic, civic, technical, and social work. The source note and CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY distinguish Jamie's initiation from participants' communal governance and documentation.",
+    "WOWList connects Sunday Dinner calendars and organizers' existing vocabulary to collaboratively editable natural-language publishing, followable communities, and distribution workflows. The cited public support, independent tutorial, local-calendar adoption, and Sunday Dinner event link provide specific continuity evidence. Richard Caceres and wider contributors retain credit.",
+    "Sunday Dinner / 196 connects hospitality and place to operational form: proposal review, discussable expectations, space configuration, independent access, minimal documentation, and continued support. The two labeled reconstructions preserve artist agency and participant privacy instead of reducing care to attendance metrics.",
+    "FairRentNYC connects listening meetings and priority ballots to practical sessions, campaign interfaces, public gatherings, running minutes, and follow-through. The participation sequence makes collective work visible and distinguishes Jamie's recollection, implementation evidence, and collective policy outcomes.",
+    "The Knowledge Wiki Graph lab connects the collective working-map photograph to correction, source custody, and human review. Its CallNYC date-correction example demonstrates remembering and revising a public record without claiming ownership of contributors' knowledge."
+  ],
+  "gaps": [
+    "No consequential PR-015 content failure identified. This individual scorecard does not establish the rubric's three-judge median or minimum-score requirements."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, protected educational-record quotation, or romanticized participant vulnerability was observed in the reviewed material. The allowed knowledge bank contains bounded educational-record metadata and paraphrases; the held coursework claim and educational-evaluation sources are absent from the public citation registry.",
+    "Participant-level operating records remain withheld, photographs carry collective courtesy credits, and reconstructions disclose their limits. Photography records distinguish portfolio-use authorization from release authority: production and indexing remain open for several displayed assets. This advisory pass does not close those gates."
+  ],
+  "recommendation": "Pass this individual PR-015 advisory reading. The portfolio specifically demonstrates how participation, hospitality, place, care, and documentation shape Jamie's operating practice while preserving the target professional role. Aggregate independent judgments and human publication approval remain separate requirements.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

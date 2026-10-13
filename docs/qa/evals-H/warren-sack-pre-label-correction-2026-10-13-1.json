@@ -1,0 +1,41 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-1-sack",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Read all 26 manifest-listed text captures and inspected their screenshots, the required public source note, and relevant permitted source records. Independently recomputed the matching candidate SHA-256 from all 158 sorted paths and raw bytes.",
+    "Within two clicks of the homepage, /about plainly names the sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its project headings link to evidence pages.",
+    "Harry J. Epstein supplies a reconstructable account from customer and team friction through requirements, incremental implementation, verification, reusable patterns, and owned next actions. Its five-stage specimen is explicitly identified as a reconstruction rather than an original company document.",
+    "FairRentNYC connects listening meetings and priority ballots to campaign sites, public action pathways, collective use, running minutes, source maps, and follow-up. The campaign screenshots and participation photographs substantiate public interfaces and collective settings.",
+    "Sunday Dinner and 196 connect participant needs to hosting and onboarding models, space configuration, access handoffs, documentation, and recurring follow-up. The public-safe specimens expose coordination structure while withholding identities and operational security details.",
+    "WOWList provides a particularly clear relationship-to-interface account: Sunday Dinner calendars and organizer language informed followable keyword communities, with public support materials, organizer tutorials, and historical production aggregates supporting actual use. Co-builder and wider community credit remain explicit.",
+    "CallNYC shows administrative categories becoming resident-facing issue pathways and public documentation. Its archive disclaimer rejects current-service and official-affiliation interpretations.",
+    "The lab supplies a concrete CallNYC date-correction example and distinguishes current research from a completed client pilot. The public registry excludes the held historical coursework claim; the rendered pages make no claim of current Max/Jitter proficiency, disciplinary invention, or peer-reviewed research."
+  ],
+  "gaps": [
+    "The sequence is reconstructable as an account of practice, but three complete loops are not equally inspectable. FairRentNYC's 'Campaign-memory spine', 'Source map', and 'Policy question log' are descriptive cards rather than displayed structures or worked examples. source/apps/www/src/data/work.ts confirms those entries contain descriptions without accompanying artifacts.",
+    "The Technical Operations page calls the campaign-memory spine and source map inspectable artifacts, although the linked case study mainly describes them. This materially overstates what a reader can inspect about the information architecture and handoff.",
+    "The Epstein specimen names verification and continuation generically, while its July 2026 storefront capture cannot itself demonstrate changes made during the documented 2009-2015 engagement. No specific customer or team observation is traced through a resulting revision and handoff in the supplied views.",
+    "The 196 source record in google-drive-production-2026-07.ts explicitly limits the acceptance template to a planned workflow, not completion or a measured outcome. The Sunday Dinner sheet supports coordination schema. These are useful evidence, but do not independently demonstrate how collective use tested or revised the model.",
+    "CallNYC's public interactions establish dissemination and response, not resident usability testing. The lab's proposed pilot and synthetic states cannot fill missing historical testing evidence. Its concrete correction demonstrates one learning loop, not three."
+  ],
+  "safety_findings": [
+    "The principal claim risk is treating retrospective reconstructions and descriptive artifact cards as equivalent to observed testing, revision, or completed handoffs. Preserve their existing labels and distinguish what the underlying records actually establish.",
+    "The candidate appropriately bounds historical production, current research, collective authorship, public-account interactions, and archived civic guidance. No protected coursework was projected as present proficiency in the reviewed public surfaces.",
+    "The photo destination-coverage discrepancies identified in photography.ts also affect this lens's collective-use evidence. Image reuse and technical integrity do not establish participant consent or publication authority."
+  ],
+  "recommendation": "Hold PR-016 advisory acceptance. The method is clear and the project connections are strong, but the exceptional threshold needs three better-evidenced loops. Provide bounded, public-safe examples connecting an observed need to a model, interface, actual use, and documented continuation; label missing stages openly. Do not expose protected records to close the gap. This scorecard does not establish the required three-reader median or deployment approval.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

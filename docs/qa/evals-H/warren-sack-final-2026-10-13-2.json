@@ -1,0 +1,35 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Warren Sack analytical lens; not the named person and no endorsement.",
+  "reviewerId": "reviewer2-pr016-public-b-20261013",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 13 packet routes, their desktop text and mobile text differences, all 26 desktop/mobile PNGs, the frozen PR-016 rubric, and the public-safe UCSC source note.",
+    "About states the method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It is one desktop navigation link from the homepage, links project evidence, and presents three distinct systems loops.",
+    "Harry J. Epstein provides a reconstructable sequence: recurring customer/team friction is observed; Jamie frames a scoped requirement and analytical limits; the team implements an incremental change; Jamie verifies the public customer path with stakeholders; reusable patterns, ownership, and next actions support continuation. Its five-step specimen is explicitly identified as a reconstruction rather than an original internal document.",
+    "FairRentNYC provides a second sequence: listening meetings, lived experience, public sources, and priority ballots inform the work; testimony, policy lineage, questions, decisions, and actors form a recoverable model; campaign sites, town halls, hearings, and action pathways become interfaces used collectively; running minutes, source maps, question logs, and action trackers preserve learning and handoff.",
+    "Sunday Dinner / 196 provides a third sequence: proposals, orientation conversations, participant responses, and hosting needs reveal relationships; invitations, onboarding, space configuration, access, and follow-up form a participation model; residencies and recurring gatherings put it into use; minimal operating records and explicit independent-access handoffs support continuation while protecting participant information.",
+    "WOWList adds a strong social-to-information-architecture trace: calendars made with Sunday Dinner informed the problem, community language became followable keyword communities, and support threads plus independent organizer materials supported use and maintenance. The current return threshold is clearly distinguished from the historical working calendar.",
+    "CallNYC shows administrative categories becoming resident-recognizable issue pathways and district context, with a preserved implementation and public documentation. It is explicitly archived, unofficial, and unsuitable as present-day constituent-service guidance.",
+    "Knowledge Wiki Graphs distinguishes semantic meaning, evidence, and custody. Its concrete CallNYC date-correction example shows evidence changing multiple public surfaces. Proposed pilot acceptance conditions are labeled as proposed, and the page does not claim completed client adoption.",
+    "About rejects structural-equivalence inference and present proficiency inferred from historical implementation. Protected UCSC coursework is not projected as disciplinary invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The separate Maven certificate is bounded as professional development."
+  ],
+  "gaps": [
+    "The evidence establishes recurring professional sequences through public-safe summaries and labeled reconstructions; it does not independently expose or validate private operational records. Historical Epstein and CallNYC evidence must retain their displayed dates and scope.",
+    "Several frozen screenshots partially obscure top headings with the sticky header, notably About and Technical Operations. The method and project traces remain readable; live initial-view behavior and mobile menu interaction were not observed."
+  ],
+  "safety_findings": [],
+  "recommendation": "Pass this independent advisory reading at 4/4. The named method is supported by three reconstructable project sequences and bounded supporting examples. No substantive PR-016 revision is required; recheck the header capture issue. This score does not establish the three-reviewer median or authorize publication or deployment.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

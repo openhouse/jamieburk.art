@@ -10,6 +10,7 @@
     "permission_scope_exact_and_fail_closed": true,
     "caption_assertions_source_bound": true,
     "manifest_wiki_placement_alignment": true,
+    "rendered_photo_occurrences_bound": true,
     "project_courtesy_credit_policy": true,
     "revocation_and_rollback_available": true,
     "protected_absence_not_auto_filled": true,
@@ -31,8 +32,8 @@
   "failedHardGates": [],
   "failedCriteria": [],
   "candidate": {
-    "fingerprint": "693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019",
-    "fileCount": 261,
+    "fingerprint": "a22b72901a8c81e8dd77bb163930857bac90d3485dffbb3525085f5b35689de2",
+    "fileCount": 262,
     "files": [
       "apps/www/public/artifacts/wowlist/public-threshold.webp",
       "apps/www/public/images/artifacts/kc-town-hall-tired-of-tires-flyer.webp",
@@ -264,6 +265,7 @@
       "docs/knowledge-bank/projections/photography/edition-launch-2026-08.md",
       "docs/knowledge-bank/projections/photography/edition-layout-c-2026-07.md",
       "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-banner.md",
+      "docs/knowledge-bank/projections/photography/fair-rent-nyc-market-hotel-covers.md",
       "docs/knowledge-bank/projections/photography/fair-rent-nyc-shoestring-facilitation.md",
       "docs/knowledge-bank/projections/photography/home-screen-room-shoestring.md",
       "docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md",

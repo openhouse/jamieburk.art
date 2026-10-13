@@ -1,0 +1,33 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized Margaret Morse analytical lens; not the named person and no endorsement.",
+  "reviewerId": "reviewer2-pr015-public-b-20261013",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 13 packet routes, their desktop text and mobile text differences, all 26 desktop/mobile PNGs, the frozen PR-015 rubric, and the public-safe UCSC source note.",
+    "The homepage identifies Jamie as a Technical Project Manager and connects public tools to invitations, meetings, rooms, source maps, and handoffs. Its desktop About navigation provides a one-click path to the explicit artistic, civic, technical, and social through-line.",
+    "About's 'Systems people can inhabit' section connects Open House's collective decision-making and many-perspective documentation to WOWList, Sunday Dinner / 196, coalition work, and Knowledge Wiki Graphs. The surrounding introduction and role-focused closing keep this lineage relevant to implementation work.",
+    "WOWList supplies a concrete continuity: Sunday Dinner calendars clarified a community need; organizers' existing vocabulary became collaboratively editable event text and followable keyword communities; support materials and organizer tutorials helped people publish and maintain their own calendars. Richard Caceres and the wider organizer community receive explicit credit.",
+    "Sunday Dinner / 196 makes hospitality operational without reducing it to throughput. Its residency reconstruction treats a proposal as inquiry, learns participant needs through orientation, configures conditions around the practice, and preserves the artist's agency after independent access. The recurring-gathering reconstruction connects invitation, welcome, food, space, minimal documentation, and follow-up.",
+    "FairRentNYC connects listening meetings and priority ballots to run-of-show documents, practical sessions, public action pathways, and shared campaign memory. 'The website was one part of the room' is supported visually by the public campaign interface, working-session photograph, and collective town-hall photograph.",
+    "The reviewed pages explicitly preserve collective policy credit, distinguish platform responses from attendance, and withhold participant-level records. No raw Open House article, protected educational-record text, private faculty correspondence, or unapproved faculty testimonial appears in the reviewed materials. The source note explains those exclusions."
+  ],
+  "gaps": [
+    "Several frozen captures show the sticky header overlapping top page headings, including About. The through-line remains visible below it; the packet does not establish whether this is a capture artifact or a live layout defect.",
+    "The frozen packet does not demonstrate mobile menu interaction or independently verify underlying photograph permissions. This review assesses the visible projection and its stated boundaries."
+  ],
+  "safety_findings": [],
+  "recommendation": "Pass this independent advisory reading at 4/4. No substantive PR-015 revision is required. Recheck unobstructed page-header captures as a presentation follow-up. Three-reviewer aggregation, consent, and publication authority remain separate.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

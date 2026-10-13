@@ -1,0 +1,38 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-2-sack",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Read all 26 manifest-listed rendered text views and inspected all 26 screenshots, plus the required public source note and relevant allowed source files. Independently recomputed the documented SHA-256 over all 158 candidate paths and bytes; it matches the candidate fingerprint.",
+    "Within one navigation step from the desktop homepage, /about plainly states the sequence: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its three systems loops link to project evidence and distinguish analytical comparison from structural equivalence.",
+    "Harry J. Epstein provides a reconstructable narrative sequence from customer and team friction through requirements, incremental implementation, verification, and continued ownership. The five-step specimen makes the operating logic understandable, but explicitly identifies itself as a reconstruction rather than an original company record.",
+    "NYC Artist Coalition / FairRentNYC connects lived experience and listening to a recoverable civic record, campaign interfaces, collective public use, and documentation for continuation. The screenshots and photographs establish concrete interfaces and social settings; the memory and decision artifacts are primarily described.",
+    "Sunday Dinner / 196 connects participant needs to a participation model, recurring gatherings and residency workflows, and documented handoffs. The allowed Google Drive knowledge-bank records corroborate the 2023 planned onboarding structure and 2025 operating-sheet schema while explicitly limiting claims about realized residency outcomes.",
+    "WOWList connects community vocabulary and Sunday Dinner calendars to keyword communities, publishing interfaces, organizer use, and support materials. CallNYC visibly translates administrative categories into resident-facing issue pathways. These are coherent relationships between social organization and information architecture, rather than disconnected tool lists.",
+    "The lab's CallNYC correction trace supplies a concrete example of evidence changing an output across surfaces. The proposed teammate handoff tests are clearly identified as future acceptance conditions rather than completed client validation."
+  ],
+  "gaps": [
+    "Inspectable proof is uneven across the required sequence. FairRentNYC's campaign-memory spine, source map, and policy question log are descriptive gallery cards, not displayed schemas or worked records. HJE's generic reconstruction supplies no particular customer question, resulting release, observed use, and retained handoff that a reader can follow together.",
+    "WOWList's gallery labels a keyword-community model as a diagram but renders only a textual description. The visible screenshot shows the current return threshold, not the historical event-editing and distribution interface. Public source notes support historical organizer use, but the model-to-use-to-learning chain remains less inspectable than the prose suggests.",
+    "CallNYC's screenshot establishes information architecture, and Council-account interactions establish public circulation. Neither establishes resident testing, resulting interface changes, or a demonstrated handoff. The page's claim of iteration is not accompanied by a specific example in the packet.",
+    "Three project sequences are reconstructable at a narrative level, but the evidence does not consistently reach the rubric's exceptional, specific, inspectable standard for social testing and continuation. One scorecard also cannot establish the required three-judge median."
+  ],
+  "safety_findings": [
+    "No public claim of disciplinary invention, peer-reviewed research, current Max/Jitter proficiency, or sole authorship derived from protected coursework was observed. CLM-SOCIAL-INFO-SPACES-PROTOTYPE remains held and is excluded from the public citation registry.",
+    "The candidate appropriately distinguishes archived CallNYC, WOWList's limited return threshold, and the proposed Knowledge Wiki pilot. Historical screenshots, public reposts, planned workflows, and technical checks must retain those limits; they do not independently establish present proficiency, successful user testing, client adoption, endorsement, or release authority."
+  ],
+  "recommendation": "Hold PR-016 at 3/4. The recurring method is clear and professionally useful, but several critical proof objects remain descriptions of evidence. A higher score needs public-safe worked artifacts that make the relationship model, interface, social use, and documented continuation inspectable across three projects, without exposing protected records or inventing missing outcomes.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

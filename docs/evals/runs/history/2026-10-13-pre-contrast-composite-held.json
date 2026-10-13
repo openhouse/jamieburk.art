@@ -1,0 +1,142 @@
+{
+  "runVersion": 3,
+  "judgeId": "composite-evidence-reviewer-2026-10-13",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
+  "candidateFingerprint": "ce32fcd681232fc2ca4f96f4930857148a2fd72e8e849f091fb42cd068ccd742",
+  "verdict": "held",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The frozen rubric and integration register contain exactly fourteen decisions for feature/evals-A through feature/evals-N, with matching frozen heads, feature/knowledge-h as the integration branch, and develop as the pull-request base.",
+        "A fresh evaluateCompositeIntegration call with holdouts explicitly empty found all fourteen frozen commit objects available.",
+        "The evaluator reports the moved mutable feature/evals-K remote-tracking ref separately while preserving its frozen commit identity. The integration documentation declares the frozen family reference-only."
+      ],
+      "rationale": "The family is complete and reproducible from the frozen objects; mutable branch movement cannot replace the reviewed inventory."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/integration/feature-evals-composite.json gives every branch an allowed decision, specific strength, substantive rationale, existing destination paths, and verification IDs.",
+        "The fresh evaluator verified the reviewed register digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d and all destination paths.",
+        "The register and integration documentation explicitly retain the selective H-derived website composition and explain why architectural integration does not warrant additional public copy."
+      ],
+      "rationale": "The decisions can be inspected individually and traced to a destination and test, including deliberate non-projection."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The canonical schema, records aggregator, historical knowledge, agency graph, lifecycle operations, redacted registry, public resolver, and proof layer remain present; the three forbidden parallel lifecycle roots are absent.",
+        "public.ts loads public-registry.json and rejects inactive or unauthorized claim projections. Public evidence omits internal excerpts and locators, and public source records require public visibility.",
+        "The public page and component import scan found no direct import of records.ts, historical-knowledge.ts, or agency-graph.ts. The fresh composite preflight verifies the complete pinned base portfolio rubric."
+      ],
+      "rationale": "One canonical architecture supplies selective redacted application projections rather than importing an alternative lifecycle or protected canonical records into the public interface."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "lifecycle-operations.ts compares the complete record for a stable-ID replay, rejects changed content under the same ID, and preserves a new-ID duplicate with duplicateOfIntakeId.",
+        "Fresh lifecycle tests passed all four cases: identical replay, linked duplicate, collision rejection, and lifecycle queries.",
+        "queryKnowledgeLifecycle exposes mature held claims, unresolved inquiries, corrections, all four projection states, and orphan sources. The canonical bank has held claims, open inquiries, active projections, corrections, and zero orphan sources."
+      ],
+      "rationale": "Append and query behavior is implemented and exercised, with preservation and factual maturity independent of public selection."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh canonical validation passed for 331 sources, 119 claims, 34 agency relations, and five corrections; generated Wiki and employment outputs were current.",
+        "The source and claim schemas retain visibility, doesNotEstablish boundaries, evidence roles, projections, review dates, anti-claims, and correction records. Agency relations retain explicit actors, actions, purpose, result, sources, boundaries, and individual, shared, collective, or institutional credit.",
+        "The current knowledge-evaluation and lifecycle test command completed successfully, including mutations against protected publication, private URLs and paths, advocacy rewritten as enactment, funding appropriation rewritten as receipt, population identity loss, attendance inflation, and shared-account authorship inflation.",
+        "Rendered FairRentNYC distinguishes retrievable populations from complete exports, Facebook responses from attendance, individual implementation from collective campaigns, and advocacy from institutional outcomes. The current KC Town Hall advisory receipt preserves held field-practice claims and separates award, non-disbursement, expenditure, construction, and institutional action."
+      ],
+      "rationale": "The public-safe knowledge layer preserves proposition-level support and credit boundaries, and current mutation checks exercise the main inflation and leakage risks. This does not independently authenticate the underlying private historical sources."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Read all thirteen desktop route bodies and inspected all twenty-six desktop/mobile packet screenshots. The packet manifest reports successful responses, no horizontal overflow, and no broken images; its screenshot digests match the actual packet files.",
+        "The homepage immediately states Technical Project Manager - Product Operations & Implementation and provides a short role-fit path. Technical Operations pairs named decisions and Jamie's actions with inspectable artifacts and usable results. The work index selects project families rather than mirroring the knowledge corpus.",
+        "About is directly linked from the main navigation. Systems people can inhabit connects Open House's collective governance with WOWList, Sunday Dinner / 196, coalition work, and current knowledge-system research. Hospitality, place, participation, documentation, and care are concrete operating practices in the project pages.",
+        "About states the observe, model, prototype, test with people, and document sequence. Epstein's labeled maintenance reconstruction, FairRentNYC's public interface and collective participation sequence, and Sunday Dinner / 196's two bounded handoff specimens make learning and continuation reconstructable.",
+        "The six active professor scorecards are distinct advisory readings of the current public candidate; each scores four and preserves the named-person, historical-service, coursework, and research limits. The current Civic Match readings explicitly preserve unresolved employer eligibility, technical currency, posting freshness, references, consent, and actual-person participation boundaries.",
+        "Fresh browser entry to About at desktop and 375 pixels showed the heading below the header with no overflow. This resolves the packet's overlapping About heading for those observed entry states, without asserting full browser interaction acceptance."
+      ],
+      "rationale": "The composition satisfies the content-specific criterion: supported agency, professional legibility, connected practice, and reconstructable systems sequences remain visible. The separate resume-action accessibility defect prevents final acceptance under COMP-009."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The blind-spot control file matches reviewed digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Human corroboration, collective review, unfamiliar hiring usability, the job funnel, and external validity remain explicitly open with zero-evidence baselines where appropriate.",
+        "Each of those five controls specifies required evidence, a stopping condition, anti-gaming rules, next action, and public-projection boundary. The documentation states that passing means governed absence and cannot synthesize testimony, human results, outcomes, or publication permission.",
+        "Current Civic Match and professor receipts label their judgments advisory or fictionalized and expressly disclaim actual named-person participation. Fresh mutation probes reject synthesized closure of the human corroboration control."
+      ],
+      "rationale": "The gaps remain useful and actionable without being represented as recovered evidence or actual human validation."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Independently recomputed the frozen semantic rubric digest as 00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d; it matches both the suite and separately pinned evaluator constant.",
+        "The evaluator binds the complete base suite, register, blind-spot controls, and frozen branch-head set, while keeping optimizer self-grading and passing not-observed evidence prohibited.",
+        "Eight fresh in-memory probes passed: checksum-refreshed semantic weakening, branch omission, fabricated branch identity, decorative decisions, optimizer self-grading, synthesized human closure, blocking-failure compensation, and changed runtime dependency bytes.",
+        "Read the current composite mutation implementations and exercised the knowledge mutations through their test command. Acceptance requires every blocking criterion, rather than a compensating weighted score."
+      ],
+      "rationale": "The frozen governance resists the specified known attacks. Its passing deterministic result is evidence about those controls, not proof that the rendered interface has no undiscovered accessibility defects."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "Independently recomputed the candidate fingerprint twice with computeCompositeCandidateFingerprint: ce32fcd681232fc2ca4f96f4930857148a2fd72e8e849f091fb42cd068ccd742 across 2,138 tracked or unignored existing source files, excluding exactly the two declared active composite result records.",
+        "This is one separately commissioned read-only advisory judgment with a distinct public reviewer label and time. The result intentionally omits the recorder-owned judgment digest; no second composite judgment is asserted or inspected.",
+        "The supplied preflight and fresh evaluation pass COMP-001 through COMP-008. Fresh lifecycle and static contrast tests pass eight of eight cases, but the contrast tests do not cover the ResumeCTA outlined action on its blue section.",
+        "Fresh browser inspection of the current Technical Operations page at 375 pixels reports the Download resume PDF link with text color rgb(47, 111, 137), transparent background, opacity 1, visible CSS state, and enclosing section background rgb(47, 111, 137). The resulting normal-state text contrast is 1:1, matching the nearly invisible action in both packet screenshots.",
+        "ResumeCTA.tsx renders the secondary JBButton inside bg-jb-blue; JBButton.tsx gives that secondary variant text-jb-blue and border-jb-blue. This confirms the defect in the exact fingerprinted source as well as the rendered page.",
+        "Exact production approval, deployment and domain verification, and explicit indexing approval remain open human gates."
+      ],
+      "rationale": "I cannot supply an accepting half of the stopping rule while an application action is visually indistinguishable from its background. The pinned base rubric includes accessible use and identifiable primary actions; a passing static preflight cannot override the observed defect. The second judgment and final combined gate remain the recorder's responsibility."
+    }
+  ],
+  "notObserved": [],
+  "findings": [
+    {
+      "id": "COMPOSITE-B-001",
+      "severity": "blocking",
+      "criterionId": "COMP-009",
+      "title": "The Technical Operations resume download action has 1:1 text contrast",
+      "evidence": [
+        "Route: /work/technical-operations; action: Download resume PDF.",
+        "Observed computed text and enclosing-section colors are both rgb(47, 111, 137), with a transparent link background and opacity 1.",
+        "apps/www/src/components/ResumeCTA.tsx uses a secondary JBButton within a blue section; apps/www/src/components/JBButton.tsx assigns blue text and border to that secondary variant.",
+        "The desktop and mobile packet screenshots show the same effectively invisible action. Existing static contrast tests pass without exercising this component combination."
+      ],
+      "requiredAction": "Give the action an accessible foreground/background pair in its actual section and verify its rendered default, hover, and focus states. Add coverage for this component combination, then recompute candidate identity and renew affected exact-candidate reviews."
+    }
+  ],
+  "recommendation": "Hold this exact candidate. Preserve the current knowledge, credit, projection, and human-evidence boundaries; repair and verify the resume-action contrast before commissioning acceptance of a new fingerprint. This advisory judgment neither establishes actual named-person approval nor authorizes publication, deployment, indexing, or closure of human evidence gaps.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "composite-evidence-reviewer-2026-10-13",
+    "reviewedAt": "2026-10-13T15:55:11.000Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+  }
+}

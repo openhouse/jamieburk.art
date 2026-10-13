@@ -1,0 +1,40 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-3-sack",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Reviewed all 26 manifest-listed rendered text/screenshot views and the required public source note. Independently recomputed the candidate fingerprint from all 158 sorted paths and raw bytes; it matches the declared SHA-256.",
+    "Within the homepage-to-About path, the method is stated plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Three linked project summaries distinguish relationships, model, interface/use, and learning/continuity.",
+    "Harry J. Epstein provides a reconstructable sequence from customer/team friction through requirements and incremental implementation to verification and continuing ownership. The storefront is visible, and the workflow is explicitly labeled as a reconstruction.",
+    "Coalition work connects lived experience and public questions to a recoverable civic record, campaign interfaces, collective gatherings, and continuing minutes/source maps. The participation sequence supplies genuine public surfaces and photographs.",
+    "Sunday Dinner/196 connects hospitality and participant needs to a participation model, recurring gatherings, residency onboarding, and two source-bounded handoff reconstructions. These are more informative than a tool list.",
+    "WOWList explains a consequential information-architecture choice: community language becomes editable event text and followable keyword communities. Historical support threads and organizer examples support social use, while current calendar availability remains explicitly limited.",
+    "The lab's CallNYC date correction is a concrete recursive example: conflicting chronology was resolved against sources and propagated across public surfaces. The proposed sprint separately describes future handoff testing without claiming that a client pilot occurred."
+  ],
+  "gaps": [
+    "The three About loops are legible, but their inspectable support is uneven. FairRentNYC's 'Campaign-memory spine', 'Source map', and 'Policy question log' are descriptive cards without a displayed schema, worked entry, or handoff artifact. CaseStudyBlocks.tsx confirms that these cards render only titles and descriptions. A reader cannot inspect the information model or its use from those objects.",
+    "WOWList's 'Keyword-community model' is labeled as a diagram but displays only a descriptive card. The current landing-page screenshot does not demonstrate the historical text-to-event transformation, organizer workflow, or documented continuation that the systems argument relies on.",
+    "The HJE reconstruction describes a plausible recurring process but supplies no specific question, resulting change, observed verification, or completed handoff. Together with the missing coalition and WOWList objects, this leaves too much of the cross-project recursion asserted for an exceptional, inspectable score. A bounded worked trace could address this without exposing private records.",
+    "The lab contributes one concrete correction trace, but its synthetic review-state example and proposed acceptance conditions cannot establish completed social testing across three projects."
+  ],
+  "safety_findings": [
+    "The About page explicitly distinguishes an analytical pattern from structural equivalence and distinguishes historical implementation from present technical proficiency. No disciplinary-invention, peer-reviewed-research, or current Max/Jitter proficiency claim was observed on the rendered surfaces.",
+    "CLM-SOCIAL-INFO-SPACES-PROTOTYPE is absent from public-registry.json. The required source note keeps the protected coursework record held rather than using it as present professional proof.",
+    "Historical WOWList operation, archived unofficial CallNYC, and the developing Knowledge Wiki Graph method are visibly differentiated. Stronger evidence should come from public-safe examples, not publication of protected records or conversion of social interactions into endorsement.",
+    "This review establishes neither independent participant consent nor production authority. The fingerprint match and rendered manifest checks do not satisfy those human decisions."
+  ],
+  "recommendation": "Score 3: the recurring systems method is strong and understandable, but this individual reading does not meet PR-016's required exceptional standard. Supply inspectable public-safe models and completed use-to-learning-to-handoff traces where descriptive cards currently carry the proof. This judgment does not determine the three-reviewer median or authorize release.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

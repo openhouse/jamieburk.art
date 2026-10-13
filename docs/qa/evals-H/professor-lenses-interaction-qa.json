@@ -1,11 +1,11 @@
 {
-  "reportVersion": 4,
-  "checkedAt": "2026-08-24T23:40:11.460Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
+  "reportVersion": 5,
+  "checkedAt": "2026-10-13T16:34:43.956Z",
+  "baseUrl": "http://localhost:3213",
+  "publicSurfaceFingerprint": "c38809114d3735bf68b50f382c8dba61430ebc33a50237caac9c33bd9a11479b",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 153,
-  "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 156,
+  "method": "Fresh Playwright keyboard interaction, visible-focus checks, DOM reading order and CSS viewport reflow observations on the Node 26 production build; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -84,7 +84,7 @@
     "passed": true
   },
   "reflow": {
-    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is the more stringent WCAG reflow proxy for 400% zoom.",
+    "interpretation": "CSS viewport proxies at 640 and 320 pixels; actual browser zoom remains a human gate.",
     "rows": [
       {
         "route": "/",
@@ -211,15 +211,5 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true,
-  "refresh": {
-    "candidateChange": "The knowledge graph and internal governance changed without changing the public portfolio; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
-    "currentChecks": [
-      "Keyboard order and visible focus were freshly exercised on the exact homepage.",
-      "The mobile menu opened from its summary control and transferred focus to its first link.",
-      "Home and About passed fresh 640-pixel and 320-pixel reflow checks.",
-      "About retained one main landmark, one h1, and a coherent heading sequence."
-    ],
-    "humanBoundary": "No human screen-reader or browser-zoom completion claim is made."
-  }
+  "passed": true
 }

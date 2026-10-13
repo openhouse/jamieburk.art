@@ -1,0 +1,37 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "cli-independent-1-morse",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    "Read all 26 manifest-listed rendered text captures and inspected all 26 screenshots, covering 13 routes at 1280 and 375 pixels. Read the required public source note and relevant permitted source records.",
+    "Independently hashed all 158 sorted candidate paths using relative path, NUL, raw source bytes, NUL. The result matches the stated candidate SHA-256; individual candidate-file hashes, screenshot hashes, and the public source-note hash also match.",
+    "The homepage's 'The system lives between the screen and the room' connects public tools to invitations, meetings, decisions, participation, and handoffs while retaining clear Technical Project Manager positioning.",
+    "The homepage navigation reaches /about within two clicks at both supplied widths. Its 'Systems people can inhabit' section explicitly connects artistic, civic, technical, and social practice. Open House remains a concise, collectively governed precedent rather than an artist biography.",
+    "Three substantial continuities are legible: WOWList translates community vocabulary into collaboratively editable calendars; Sunday Dinner and 196 connect hospitality and artist agency to invitations, orientation, space configuration, and continuity; FairRentNYC connects listening, collective prioritization, campaign interfaces, practical sessions, and public gatherings.",
+    "The Sunday Dinner reconstructions preserve participant-level privacy and describe support for changing artistic direction. FairRentNYC distinguishes participant recollection, implementation evidence, collective accomplishments, and historical response counts.",
+    "The public registry includes the bounded Open House paraphrase and excludes the held social-information-spaces coursework claim. The packet manifest contains no raw Open House article or raw educational evaluation. No faculty testimonial or romanticized participant vulnerability appeared in the rendered views."
+  ],
+  "gaps": [
+    "The photo authorization metadata does not explicitly cover every observed destination. In source/apps/www/src/data/photography.ts, the Market Hotel photograph lists only fair-rent-nyc, although both homepage and work-index captures display it. The Sunday Dinner photograph lists 196-sunday-dinner and work-index, although the homepage also displays it. source/apps/www/src/data/work-covers.ts and WorkCard.tsx reuse these images without carrying destination-specific authorization records.",
+    "The inhabited-systems content is strong, but the unresolved destination coverage prevents an exceptional, fully inspectable privacy-and-credit conclusion. This packet supports identifying the discrepancy; it does not establish whether broader authorization exists elsewhere."
+  ],
+  "safety_findings": [
+    "The photograph-placement discrepancy is an authorization-verification gap involving identifiable people, not evidence that consent was denied. General portfolio authorization should not silently substitute for the recorded occurrence boundaries.",
+    "The relevant field-note WebP files contain no EXIF or XMP chunks. Captions retain courtesy credits, and the reviewed public text does not expose participant lists, access instructions, raw correspondence, or protected educational-record quotations.",
+    "Several relevant photographs retain production and indexing states of open in photography.ts. Public-source availability, staging approval, this advisory review, and the fictionalized lens do not supply production publication authority."
+  ],
+  "recommendation": "Hold PR-015 advisory acceptance pending reconciliation of photo authorization records with the displayed destinations. The substantive inhabited-systems through-line is strong and supports the professional role. This single scorecard establishes neither the required three-reader median nor human production approval.",
+  "provenance": {
+    "provider": "codex-cli-ephemeral-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": true,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

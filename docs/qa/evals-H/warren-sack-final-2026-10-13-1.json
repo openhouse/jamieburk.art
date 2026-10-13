@@ -1,0 +1,34 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "reviewer1-pr016-public-b-20261013",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 13 required route bodies and all 26 desktop/mobile screenshots, together with the frozen PR-016 rubric and the allowed public-safe source note.",
+    "About is directly reachable from the desktop homepage navigation. It states the recurring sequence plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Linked project examples make the statement inspectable.",
+    "FairRentNYC supplies a current civic sequence: listening meetings, priority ballots, lived experience, and public sources become a model of testimony, policy lineage, questions, decisions, and accountable actors; campaign sites and collective sessions make that model usable; running minutes, source maps, question logs, and action trackers preserve learning and continuation.",
+    "Sunday Dinner / 196 supplies a continuing participation sequence: artists' and participants' needs inform one model joining invitations, onboarding, hosting, access, and follow-up; gatherings and residency workflows are the interface; orientation and continued availability support adjustment; operating schemas and explicit handoffs preserve continuity.",
+    "Knowledge Wiki Graphs supplies a current, bounded research sequence: relationships and knowledge friction inform distinct semantic, evidence, and custody responsibilities; the portfolio is an early reviewed interface; human correction and iterative review test it; the concrete CallNYC date correction propagates to the work index, case study, and resume while retaining the correction's reason. The proposed client sprint is explicitly distinguished from an engagement that occurred.",
+    "Harry J. Epstein adds a clearly historical implementation trace: customer or team friction leads to a scoped requirement, incremental implementation, inspection with stakeholders, and reusable patterns with ownership and next actions. The specimen is explicitly a reconstruction rather than an original internal document.",
+    "WOWList connects social vocabulary to the keyword-community model, working publishing interfaces, organizer adoption and support, and reusable distribution patterns. CallNYC connects administrative categories to resident issue pathways, a public implementation, public documentation, and explicit archive limits. Neither is presented as a restored or current full production service.",
+    "About explicitly rejects inferred structural equivalence and current proficiency from historical implementation. The lab distinguishes research from a finished platform, client adoption, or peer-reviewed research. The source note keeps protected UCSC coursework held; the public Maven certificate is bounded as professional development."
+  ],
+  "gaps": [
+    "Several screenshots contain navigation bands superimposed over page content. This is an unresolved visual observation; its cause cannot be diagnosed from the frozen packet.",
+    "Interactive correction controls, expanded citation disclosures, and mobile menu behavior were not exercised. The review establishes reconstructable method and rendered evidence, not end-to-end interaction acceptance."
+  ],
+  "safety_findings": [],
+  "recommendation": "This individual reading meets PR-016 at 4/4. The method is supported by three continuing public-safe practices, with historical projects supplying additional evidence. Preserve the explicit research, historical-service, collective-credit, and coursework limits. Resolve the screenshot overlays separately. This score does not establish the three-reader median or authorize publication, deployment, consent, or endorsement.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

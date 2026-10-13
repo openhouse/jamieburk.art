@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-reader-run-2026-10-13-B",
+  "evaluatedAt": "2026-10-13T15:34:45.899Z",
+  "guideSha256": "b59d91890e5d1eb00d8c05d56d3cd8f7fbdb885e32d3c1ee0df9f32d55847493",
+  "resumeSha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786",
+  "selectionConfigSha256": "cf8ba35bd0fa4421a844c44a4300b8efd7096dd854ba84f6390370443a2e7e1e",
+  "hiringReaderConfigSha256": "1ce0072379fa56b48919237f6618ca9df8f4c832f921338627a266edfd49a365",
+  "publicOnly": true,
+  "actualPeopleParticipated": false,
+  "provider": "codex-native-independent-review",
+  "mode": "four-fictionalized-public-source-lenses-reviewed-by-two-independent-agents",
+  "assessments": [
+    {
+      "personId": "person.luke-farrell",
+      "kind": "hiring-reader",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "The packet makes end-to-end responsibility legible: Thick Arts connects product direction, release sequencing, collaborator coordination, launch, and continuing production ownership, while WOW List supplies a concrete publicly operated digital product.",
+        "CallNYC connects constituent-services data to 61 resident-facing issue pathways, giving the PIT Crew role a directly relevant example of translating government information into something people can use.",
+        "Tired of Tires connects outreach, intake, recurring field delivery, City recycling coordination, listening, and a dated tracker total of 1,970 tires; this demonstrates attention to the whole resident service beyond its web page.",
+        "The resume distinguishes Jamie's contribution from collective outcomes and historical technical implementation from present proficiency, making its delivery claims more credible."
+      ],
+      "risks": [
+        "The Senior IT Architect minimum-qualification screen remains unresolved; the packet does not supply the full education and employment chronology needed for an employer determination.",
+        "The strongest detailed digital examples are historical. Current proficiency and the depth of recent senior product responsibility, including team scope and difficult prioritization decisions, still require interview and reference validation.",
+        "The packet names measurement, accessibility, privacy, and production quality but provides limited detail about how Jamie tested those requirements or changed a release in response to findings.",
+        "The opportunity record was last checked in August and explicitly requires a fresh official-posting check before outward use."
+      ],
+      "followUp": [
+        "Advance through the employer's formal process and have its eligibility reviewer assess the complete chronology against the Senior IT Architect requirements.",
+        "Use one product walkthrough to examine an actual discovery finding, MVP tradeoff, release decision, post-launch measure, and subsequent change, with Jamie's responsibility and collaborators' responsibility distinguished.",
+        "Validate recent technical and cross-functional delivery through references and concrete accessibility, privacy, and production-quality examples.",
+        "Recheck the official posting and the already-submitted application's current status without treating Civic Match tracking as an employer decision."
+      ],
+      "narrative": "In this fictionalized operational hiring-reader lens, the packet justifies wanting Jamie for the PIT Crew Senior Product Manager role and advancing him through the formal process. It presents a credible combination of shipped digital products, resident-service operations, government translation, and continuing delivery responsibility. The remaining checks are material employer validations, not reasons to reject this profile at the candidate-interest stage. This is an advisory simulation; Luke Farrell did not participate or approve a hire.",
+      "packetSha256": "ee5e1df4d2b2cb71bb4859fcb445e0e41d24a08da63eccf7c9bd10f3ba7ee69c"
+    },
+    {
+      "personId": "person.lisa-gelobter",
+      "kind": "hiring-reader",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "The Tired of Tires narrative begins with a resident problem and shows Jamie linking a public recycling service to people's doorsteps, then using recurring contact to learn what other services residents wanted.",
+        "WOW List and CallNYC provide concrete digital-product examples: a simpler natural-language calendar used by organizers across roughly 35 city ecosystems and constituent-services information translated into 61 issue pathways.",
+        "The packet connects product delivery to adoption, maintenance, documentation, and handoff, which supports the initiative's stated interest in stronger capacity to deliver public services.",
+        "The coalition account assigns repeal to the City Council after years of collective advocacy, and the resume identifies CallNYC as unofficial and historical. These boundaries support a public-trust-oriented reading of Jamie's judgment."
+      ],
+      "risks": [
+        "Formal Senior IT Architect eligibility is not established by project fit and still requires the employer's review of Jamie's complete chronology.",
+        "The packet offers output and reach measures, including tires collected and city ecosystems, but gives limited evidence of measured resident experience, equitable access, or learning that changed a digital product after launch.",
+        "Rapid prototyping, accessibility and compliance practice, and effectiveness leading within a City agency remain interview and reference questions; experience across independent projects does not settle those questions.",
+        "The current opportunity details rely on an August check and must be refreshed before outward use."
+      ],
+      "followUp": [
+        "Advance Jamie through the formal employer process, including the separate civil-service qualification screen and reference checks.",
+        "Ask for a service walkthrough showing how listening changed priorities, how an MVP was bounded, what was tested with users, and what changed after launch.",
+        "Validate one concrete accessibility or privacy decision and one example of transferring knowledge so a partner team could operate the service after handoff.",
+        "Confirm the official posting and application status, and use interviews to test how Jamie would work with agency partners and senior decision-makers in a resident-facing PIT Crew."
+      ],
+      "narrative": "In this fictionalized initiative-leadership lens, the packet supports wanting to hire Jamie for the current Senior Product Manager opportunity and advancing him through the employer's formal process. Its strongest case is the connection between resident needs, practical delivery, adoption, and sustained operations, supported by both digital and community-service examples. Formal eligibility, references, and deeper evidence of rapid learning and accessible delivery remain open. This is an advisory simulation; Lisa Gelobter did not participate, endorse Jamie, or make a hiring decision.",
+      "packetSha256": "f8f4937a24dcb6d6630715527a2ccd71e94b82e814604a4105116f83bfaea4bd"
+    },
+    {
+      "personId": "person.josh-gee",
+      "kind": "civic-match-helper",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "The packet supports a specific match to the supplied PIT Crew Senior Product Manager opportunity: public-facing digital delivery, resident problem framing, cross-functional coordination, and government-facing translation all appear in named projects.",
+        "WOW List supplies a co-built and operated digital product with a concrete usability choice and organizer adoption across roughly 35 city ecosystems; CallNYC supplies a direct civic-information product example.",
+        "The Tired of Tires account demonstrates delivery across public communication, resident contact, City coordination, recurring operations, and recorded results, broadening the candidate's relevance to implementation-heavy government work.",
+        "The profile states a New York-based government search and preserves the distinction between Civic Match assistance and the official employer application, whose status is submitted and pending."
+      ],
+      "risks": [
+        "The supplied posting is time-sensitive and last checked in August; its availability and application status need confirmation before actual matching activity.",
+        "The Senior IT Architect civil-service requirements may constrain this otherwise plausible product match and cannot be resolved from the packet's project evidence alone.",
+        "The five desired role families give a matcher flexibility but leave the priority among senior product, implementation, program, project, and operations work unclear.",
+        "References and interviews must validate Jamie's individual responsibility, recent delivery scope, technical currency, and outcome claims before an employer relies on them."
+      ],
+      "followUp": [
+        "Use the PIT Crew Senior Product Manager role as a concrete evidence-supported match, with a short brief connecting WOW List, CallNYC, Thick Arts, and resident-service operations to the posting's duties.",
+        "Check current official-posting and application status, and route the full education and employment chronology to the employer's qualification process.",
+        "Confirm Jamie's preferred role order and current location or relocation constraints before introducing additional opportunities.",
+        "Prepare a recent delivery example covering discovery, a prioritization tradeoff, launch, measurement, and handoff for employer interview and reference validation."
+      ],
+      "narrative": "In this fictionalized Civic Match strategy lens, the packet clears the active-matching gate. It offers a concrete employer problem and enough relevant delivery evidence to explain why Jamie belongs in the supplied PIT Crew candidate conversation, while also supporting implementation-oriented government matching. This finding does not establish eligibility or an employer decision, and Josh Gee did not participate, recommend Jamie, or endorse this assessment.",
+      "packetSha256": "9c178c8863e66eb8685f10be998a3899326c143930f0c184cb020c5f4039cb5f"
+    },
+    {
+      "personId": "person.courtney-kishbaugh",
+      "kind": "civic-match-helper",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "The profile makes a nonlinear background usable for matching by stating Jamie's product and implementation responsibilities, New York location, government interest, and desired roles in plain language.",
+        "The two short narratives give distinct, memorable evidence: coalition facilitation that helped people make a shared request, and a recurring resident service connecting neighborhood needs with City recycling operations.",
+        "The summary connects lifecycle responsibility to named examples and bounded measures, including the Epstein modernization, CallNYC's issue pathways, WOW List's organizer ecosystems, and the Tired of Tires tracker.",
+        "The signup guide supports accurate candidate representation by keeping protected-category answers, relocation, visibility, consent, and final submission as Jamie's own decisions."
+      ],
+      "risks": [
+        "The broad list of target roles and dense profile summary could make the candidate harder to place quickly without a clear first-choice role and a concise opportunity-specific introduction.",
+        "PIT Crew job fit does not establish the separate Senior IT Architect qualification screen; complete chronology and employer review are still needed.",
+        "The packet does not establish current posting availability, completed Civic Match submission, or Jamie's final relocation and visibility choices.",
+        "Recent delivery scope, present technical proficiency, and the specific outcomes attributable to Jamie still need interview and reference validation."
+      ],
+      "followUp": [
+        "Prepare a focused introduction for the supplied PIT Crew Senior Product Manager opportunity using the packet's concrete digital-product and resident-service examples.",
+        "Confirm Jamie's preferred role order and final profile choices, then have Jamie verify the attached resume and submit the profile through the steps reserved for him.",
+        "Recheck the official opportunity and already-submitted employer application, and flag the civil-service screen explicitly in any matching preparation.",
+        "Prepare one recent project walkthrough and relevant references so an employer can validate ownership, tradeoffs, launch quality, and measured learning."
+      ],
+      "narrative": "In this fictionalized candidate-program lens, I would actively match Jamie to the supplied PIT Crew Senior Product Manager opportunity. The profile gives a matcher a coherent account of public-service motivation, digital delivery, and hands-on implementation, with examples specific enough to start an employer conversation. Remaining eligibility, profile-completion, and reference checks should accompany that work. Courtney Kishbaugh did not participate or make a real recommendation, endorsement, or hiring decision.",
+      "packetSha256": "8fdcae224055d3bc216cd3903103bd530efec8b04370c0e240ee3c73b34505a5"
+    }
+  ]
+}

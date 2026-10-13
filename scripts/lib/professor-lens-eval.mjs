@@ -43,15 +43,17 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-x.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-y.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-z.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-x.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-y.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-z.json"
+  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-1.json",
+  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-2.json",
+  "docs/qa/evals-H/margaret-morse-pre-label-correction-2026-10-13-3.json",
+  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-1.json",
+  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-2.json",
+  "docs/qa/evals-H/warren-sack-pre-label-correction-2026-10-13-3.json"
 ];
 
-const approvedCandidateSha256 = "dc13c845472b6b9042d649ef6cce48784724140c4bfb3fa3e81388965f406203";
+// Last independently reviewed candidate; its held findings are not rebound to
+// subsequent wording or occurrence-binding corrections.
+const approvedCandidateSha256 = "d0eee54723f9d1e8f420ec7a0e933f5cc6e6fd39e9d23b13eea0a7f0242a1f19";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -281,6 +283,13 @@ export function evaluateProfessorLenses({
       "unanimous-holdouts",
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
       finalScorecards.length === 6 &&
+        ["PR-015", "PR-016"].every((lensId) => {
+          const lensScorecards = finalScorecards.filter((scorecard) => scorecard.lensId === lensId);
+          return lensScorecards.length === 3 &&
+            lensScorecards.every((scorecard) => typeof scorecard.reviewerId === "string" &&
+              scorecard.reviewerId.trim().length > 0) &&
+            new Set(lensScorecards.map((scorecard) => scorecard.reviewerId)).size === 3;
+        }) &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),

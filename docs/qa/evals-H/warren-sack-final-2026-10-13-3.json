@@ -1,0 +1,35 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "public-b-reviewer3-pr016-20261013",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Homepage → About is one click. About plainly states: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Linked project examples make the method inspectable within two clicks.",
+    "Harry J. Epstein trace: customer language and team friction → an integrated product/content/ordering model → incremental storefront changes → inspection of the customer path and stakeholder signals → reusable patterns, ownership, and next actions. The visible five-step specimen explicitly identifies itself as a reconstruction rather than an original company document.",
+    "FairRentNYC trace: lived experience, listening meetings, public sources, and open questions → a recoverable civic record → campaign sites and public participation pathways → collective sessions and sustained use → minutes, source maps, decision records, and action trackers. The project distinguishes Jamie's implementation from collective campaign outcomes.",
+    "Sunday Dinner / 196 trace: participant needs and recurring relationships → hosting and onboarding models → gathering and residency interfaces → use with participants and resident artists → minimal continuity records, follow-up, and handoffs. Two rendered workflow reconstructions supply concrete steps while withholding participant-level values.",
+    "WOWList adds a distinct technical example: Sunday Dinner calendars and organizer language → followable keyword communities → editable event workflows → organizer calendars, support threads, and tutorials → reusable publishing and distribution patterns. Historical production scale is separated from the limited current return threshold.",
+    "CallNYC connects administrative categories to recognizable resident concerns, issue-page architecture, a delivered prototype, public interactions, preserved implementation, and documentation. It is explicitly archived, independent, unofficial, and unsuitable as current constituent-service guidance.",
+    "Knowledge Wiki Graphs supplies a concrete correction trace: source recovery changed CallNYC's date to 2016 across the work index, case study, and resume. Its synthetic example and proposed pilot are labeled, and the page does not claim completed client adoption.",
+    "About explicitly rejects structural equivalence and treats historical implementation as insufficient proof of present proficiency. The reviewed pages make no protected-record-derived claim of disciplinary invention, peer-reviewed research, sole authorship, or current Max/Jitter proficiency."
+  ],
+  "gaps": [
+    "WOWList's artifact gallery labels a 'Keyword-community model' but displays a descriptive text card rather than a visible diagram. The surrounding project narrative supports the model; an actual public-safe specimen would improve inspection.",
+    "The frozen screenshots show navigation overlapping headings or content in several routes. Live navigation, scrolling, and keyboard behavior were not tested in this packet-only review.",
+    "Historical examples demonstrate recurring practice; their inclusion does not establish that every described system is currently operating."
+  ],
+  "safety_findings": [],
+  "recommendation": "Meets this lens at 4/4: three project sequences can be reconstructed from specific public-safe evidence, with additional technical and correction examples. No lens-specific content revision is required. Improve the WOWList model specimen when available and resolve the screenshot navigation uncertainty separately. This result is advisory and grants no publication, deployment, consent, or endorsement authority.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

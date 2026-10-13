@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "kcth-shared-public-surfaces-20261013",
+  "reviewedOn": "2026-10-13",
+  "reviewer": "Independent Codex advisory review",
+  "reviewType": "public-safe-source-and-boundary-review",
+  "candidateHead": "82f550d56c48a67990f350eea4d859555a2e56fa",
+  "decision": "review-lock-renewal-supported",
+  "findings": [],
+  "scope": [
+    "KC Town Hall field-practice intake and canonical records",
+    "KC Town Hall funding, stewardship, transition, and planning claim boundaries",
+    "KC Town Hall proof projections and case-study source",
+    "KC Town Hall work metadata and technical-operations page",
+    "ContactCTA behavior and resident-service component boundaries"
+  ],
+  "sharedPublicSurfaces": {
+    "recordedSha256": "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
+    "actualSha256": "008c3f82e707178738b74ba625e66cb47e93c122970d96cf1247628cfe8efada",
+    "hashInputs": [
+      "apps/www/src/data/work.ts",
+      "apps/www/src/app/work/technical-operations/page.tsx"
+    ],
+    "composition": "UTF-8 file contents in the listed order, joined with one newline, hashed with SHA-256",
+    "difference": "The technical-operations page passes showWorkingSession to ContactCTA, displaying a link to the paid working-session section. This change adds no KC Town Hall prose or claim.",
+    "counterfactualCheck": "Replacing the single <ContactCTA showWorkingSession /> invocation with <ContactCTA /> in memory reproduces the recorded hash exactly. No source file was changed for this check.",
+    "counterfactualSha256": "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00"
+  },
+  "unchangedReviewLocks": {
+    "corpusSha256": "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
+    "canonicalRecordsSha256": "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
+    "governedKnowledgeSha256": "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
+    "proofProjectionSha256": "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
+    "caseStudyMdxSha256": "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
+    "publicReviewReportSha256": "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
+  },
+  "boundaryChecks": [
+    {
+      "boundary": "held claims and participant memory",
+      "pass": true,
+      "evidence": "The four field-practice claims retain use-with-care status, hold projections, and empty public-surface arrays. General-contractor title, detailed daily field coordination, survey-component authorship, Indian Mound expansion, and Cleveland Avenue role or causation remain research propositions. The synthesis identifies itself as AI-assisted and does not convert memory into independent corroboration."
+    },
+    {
+      "boundary": "collective credit and institutional authority",
+      "pass": true,
+      "evidence": "Current wording preserves co-development, project collaboration, and shared-account boundaries. The Board recommendation and Council acceptance or appropriation remain institutional actions. The shared service record does not assign every post, pickup, or component to Jamie."
+    },
+    {
+      "boundary": "award versus receipt, expenditure, and completion",
+      "pass": true,
+      "evidence": "Funding claims distinguish the successful request and appropriation from an executed agreement, receipt, disbursement, expenditure, construction, and completion. The canonical lifecycle preserves non-disbursement and return of the unused appropriation. The shared-surface change introduces none of the prohibited stronger assertions."
+    },
+    {
+      "boundary": "construction role and chronology",
+      "pass": true,
+      "evidence": "The proposal is treated as evidence of project-manager attribution, multi-trade scope, reported 2018 progress, and plans. It is not treated as independent proof of general-contractor title or final Phase One completion in 2019. No reviewed public surface assigns those held propositions as established facts."
+    },
+    {
+      "boundary": "resident service and measurement",
+      "pass": true,
+      "evidence": "The later service claim supports the service model and Jamie's bounded participation while retaining limits on sole ownership, every shift, component authorship, and audited totals. The resident-service component describes a project-level interface and one completed collection, with no audited program total. Workflow-record counts remain distinct from pickups or households served."
+    },
+    {
+      "boundary": "source custody and privacy",
+      "pass": true,
+      "evidence": "The reviewed public-safe records retain exclusions for raw archives, resident records, credentials, correspondence, and financial or legal materials. This review did not access private source artifacts or publish protected source locators."
+    }
+  ],
+  "verification": {
+    "evaluator": "evaluateKnowledgeBank().contentApprovals.kcTownHallFieldPractice",
+    "corpusMatchesRecordedHash": true,
+    "reviewLocksMatchBeforeRenewal": false,
+    "onlyDifferingLock": "sharedPublicSurfacesSha256",
+    "passingChecksBeforeRenewal": [
+      "counts",
+      "intakes",
+      "observations",
+      "sources",
+      "claims",
+      "semantics",
+      "inquiries",
+      "coverage",
+      "report",
+      "safety"
+    ],
+    "passingSemanticParts": [
+      "overclaimFree",
+      "epistemicallyBounded",
+      "outcomeInflationFree",
+      "heldFromRenderedProof",
+      "evidenceClosed"
+    ]
+  },
+  "recommendation": "Renew only the sharedPublicSurfacesSha256 lock to the reviewed actual hash, then rerun the affected deterministic evaluation. Preserve the other six locks and all claim, evidence, credit, and projection boundaries.",
+  "limits": [
+    "This is an AI advisory review, not human approval, eyewitness testimony, or independent verification of the underlying historical events.",
+    "The recommendation applies to the exact reviewed surface hash and does not authorize promotion of held claims.",
+    "This receipt does not establish publication, merge, deployment, consent, or rights authority.",
+    "No repository source or review-lock value was changed by this reviewer."
+  ]
+}

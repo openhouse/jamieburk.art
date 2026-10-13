@@ -62,10 +62,10 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
   caseStudyMdxSha256: "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
-  // Re-reviewed 2026-08-21 after the public hiring projection was shortened
-  // while the canonical lifecycle, no-receipt/no-expenditure boundary,
-  // collective-credit limits, and field-practice evidence remained intact.
-  sharedPublicSurfacesSha256: "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
+  // Independently re-reviewed 2026-10-13 after the working-session CTA and
+  // truthful artifact-label corrections. KC Town Hall claims and all six
+  // other locks are unchanged; both source-and-boundary receipts are retained.
+  sharedPublicSurfacesSha256: "b94e4a80222a6f66898f2a75842f79f4a36732751f0bc7a98d968f48a28ecfd3",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-08-21 after governed public-safe records gained new linked

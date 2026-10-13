@@ -2,8 +2,8 @@
 
 # Photo knowledge health
 
-Candidate fingerprint: `693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019`
-Candidate files: 261
+Candidate fingerprint: `a22b72901a8c81e8dd77bb163930857bac90d3485dffbb3525085f5b35689de2`
+Candidate files: 262
 
 | Check | State |
 |---|---|
@@ -15,6 +15,7 @@ Candidate files: 261
 | permission_scope_exact_and_fail_closed | PASS |
 | caption_assertions_source_bound | PASS |
 | manifest_wiki_placement_alignment | PASS |
+| rendered_photo_occurrences_bound | PASS |
 | project_courtesy_credit_policy | PASS |
 | revocation_and_rollback_available | PASS |
 | protected_absence_not_auto_filled | PASS |

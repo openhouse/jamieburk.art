@@ -1,0 +1,33 @@
+{
+  "evaluator": "Independent advisory reviewer applying a fictionalized analytical lens; not the named person and no endorsement.",
+  "reviewerId": "reviewer1-pr015-public-b-20261013",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    "Reviewed all 13 required route bodies and all 26 desktop/mobile screenshots. Mobile text preserves the substantive project content, with responsive changes to navigation, ordering, and repeated sidebar actions.",
+    "The homepage identifies the target professional role immediately, then connects the public tool to invitation, meeting, source map, action path, and handoff under 'The system lives between the screen and the room.' The artistic and social dimensions support the professional positioning.",
+    "The homepage's About navigation leads directly to 'Systems people can inhabit.' That section explicitly connects artistic, civic, technical, and social practice and links to WOWList, Sunday Dinner / 196, NYC Artist Coalition, and Knowledge Wiki Graphs. Open House is described as Jamie's initiation followed by participants' communal decision-making and many-perspective documentation.",
+    "WOWList connects organizers' existing language and distributed scenes to collaboratively editable event text, followable keyword communities, calendars, and email. Its Sunday Dinner origin and a public 200th-dinner event link supply a concrete continuity between hospitality and the technical platform. Richard Caceres and the wider community receive credit.",
+    "Sunday Dinner / 196 makes care and place operationally specific: proposal inquiry, discussion of artists' needs, preparation of working conditions, independent access, continued availability, food, welcome, introductions, and minimal continuity records. The two clearly labeled reconstructions preserve participant agency while withholding participant-level information.",
+    "FairRentNYC connects a shared campaign surface, a facilitated working session, and a public gathering. Listening meetings and priority ballots become practical sessions, public pathways, decision records, and sustained follow-through. The page explicitly keeps campaign positions and policy outcomes collective.",
+    "The allowed public-safe source note explains the Open House source and withholds faculty testimonial and protected educational-record content. No raw Open House article, protected UCSC evaluation, private correspondence, or faculty testimonial was observed in the reviewed packet."
+  ],
+  "gaps": [
+    "Several screenshots show header and skip-link bands covering content, including the About heading, WOWList heading, and portions of other pages. The packet alone cannot establish whether this is a live layout defect or a capture artifact.",
+    "The static packet does not demonstrate mobile menu activation or expanded source-note disclosures. The desktop homepage-to-About path is visible; the mobile interaction remains unobserved."
+  ],
+  "safety_findings": [],
+  "recommendation": "This individual reading meets PR-015 at 4/4. No lineage revision is required. Resolve or explain the screenshot overlays and verify mobile navigation before treating the packet as complete visual acceptance evidence. This score does not establish the three-reader median or authorize publication, deployment, consent, or endorsement.",
+  "provenance": {
+    "provider": "codex-native-independent-review",
+    "reviewMode": "rendered-public-candidate independent advisory holdout",
+    "reviewedAt": "2026-10-13",
+    "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+    "candidateFingerprintRecomputed": false,
+    "filesEdited": false,
+    "actualNamedPersonParticipated": false
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-13T14:41:02.193Z",
+  "sourceCommit": "82f550d56c48a67990f350eea4d859555a2e56fa",
+  "publicCandidateSha256": "56cead5660a3a4d1d2aaa22fc3288e67f00922971c78fafcf11783c2374417f1",
+  "method": "Fresh local production-build observations after initial load and after explicit scroll restoration followed by two animation frames.",
+  "initialViewports": [
+    {
+      "width": 360,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 375,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 768,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 1280,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    }
+  ],
+  "restoredViewports": [
+    {
+      "width": 360,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 375,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 181.78125,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 768,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    },
+    {
+      "width": 1280,
+      "scrollY": 0,
+      "headerTop": 0,
+      "headerBottom": 73,
+      "h1Top": 369.140625,
+      "headerOverlapsH1": false
+    }
+  ],
+  "mobileMenu": [
+    {
+      "width": 360,
+      "open": true,
+      "linkCount": 5,
+      "menuText": "Close menu\nWork\nTechnical Operations\nAbout\nResume\nContact",
+      "aboutLinkVisible": true,
+      "navigationCompleted": true,
+      "destinationH1": "About"
+    },
+    {
+      "width": 375,
+      "open": true,
+      "linkCount": 5,
+      "menuText": "Close menu\nWork\nTechnical Operations\nAbout\nResume\nContact",
+      "aboutLinkVisible": true,
+      "navigationCompleted": true,
+      "destinationH1": "About"
+    }
+  ],
+  "sourceDisclosure": [
+    {
+      "width": 360,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 375,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 768,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    },
+    {
+      "width": 1280,
+      "open": true,
+      "sourceCount": 3,
+      "visible": true
+    }
+  ],
+  "browserPageErrors": [],
+  "findings": [
+    "The header did not overlap the homepage heading at any of the four supported widths, either on initial load or after scroll restoration.",
+    "Both mobile widths opened the five-link menu and navigated to About.",
+    "The About page expanded three visible source notes at all four widths."
+  ],
+  "limits": [
+    "These browser observations are automated checks and an advisory follow-up to the retained reviewer caveats.",
+    "Actual human screen-reader use, browser-zoom review, content approval, and production authority remain separate."
+  ]
+}

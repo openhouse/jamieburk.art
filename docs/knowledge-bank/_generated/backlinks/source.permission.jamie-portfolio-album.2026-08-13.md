@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Jamie Burkart portfolio-album publication authorization
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `bacdfd7f58d098363ef625db5da5ad6a9cbc594d`
+**Generation time:** 2026-10-13T12:37:35-04:00
+**Source fingerprint:** `65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7`
 
 - [KC Town Hall roof work, 2019](../../assets/photographs/kc-town-hall-roof-work-2019.md) - `uses_source` (frontmatter)
 - [NYC Artist Coalition shared working map, 2017](../../assets/photographs/knowledge-wiki-collective-map-2017.md) - `uses_source` (frontmatter)
@@ -12,6 +12,7 @@
 - [Sunday Dinner shared map and table, 2013](../../assets/photographs/sunday-dinner-shared-map-2013.md) - `uses_source` (frontmatter)
 - [Photography knowledge loop](../../indexes/photography.md) - `prose_link` (markdown)
 - [Fair Rent NYC Market Hotel public-room occurrence](../../projections/photography/fair-rent-nyc-market-hotel-banner.md) - `uses_source` (frontmatter)
+- [Fair Rent NYC Market Hotel cover occurrences](../../projections/photography/fair-rent-nyc-market-hotel-covers.md) - `uses_source` (frontmatter)
 - [Fair Rent NYC Shoestring Press facilitation occurrence](../../projections/photography/fair-rent-nyc-shoestring-facilitation.md) - `uses_source` (frontmatter)
 - [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `uses_source` (frontmatter)
 - [KC Town Hall roof-work occurrence](../../projections/photography/kc-town-hall-roof-work.md) - `uses_source` (frontmatter)
