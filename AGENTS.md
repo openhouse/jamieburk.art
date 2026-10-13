@@ -86,6 +86,13 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 
 The website should read as a composed portfolio, not a claims database.
 
+Keep editorial instructions and publication backlog out of visitor-facing copy.
+Fields such as `publicSafety.note` and `knownOpenProtected.editorialOpen` guide
+authors; do not render them in components. Preserve reader-useful limitations,
+collective credit, reconstruction labels and archived-service warnings. Run the
+public-language source, rendered and live-route gates after copy changes; add
+negative and legitimate-neighbor fixtures for newly observed leakage patterns.
+
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
 ## Chad Lens

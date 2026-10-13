@@ -20,7 +20,29 @@ async function collectHtmlFiles(directory) {
 export function inspectablePublicMarkup(html) {
   return html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ");
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<!--[\s\S]*?-->/g, "");
+}
+
+// Next's generated HTML has quoted attributes. Inspect reader text, metadata
+// and accessible labels, not class names, URLs or serialized application state.
+function readerText(markup) {
+  const labels = [...markup.matchAll(/\s(?:content|alt|aria-label|aria-description|title)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi)]
+    .map((match) => match[1] ?? match[2]);
+  const text = markup
+    .replace(/<\/?(?:p|div|section|article|ul|ol|li|dl|dt|dd|table|tr|td|th|h[1-6]|br|hr|main|header|footer|nav)\b[^>]*>/gi, " ")
+    .replace(/<[^>]*>/g, "");
+  return [text, ...labels].join("\n")
+    .replace(/&#(x[0-9a-f]+|\d+);/gi, (entity, code) => {
+      const point = /^x/i.test(code) ? parseInt(code.slice(1), 16) : Number(code);
+      return point > 0 && point <= 0x10ffff ? String.fromCodePoint(point) : entity;
+    })
+    .replace(/&(?:nbsp|Tab|NewLine);/gi, " ")
+    .replace(/&(?:apos|#x27);/gi, "'")
+    .replace(/&quot;/gi, '"')
+    .replace(/&amp;/gi, "&")
+    .replace(/[\u2010\u2011]/g, "-")
+    .replace(/\s+/g, " ").trim();
 }
 
 function excerptAround(markup, index, length) {
@@ -40,11 +62,21 @@ export function evaluateRenderedMarkup({ config, html, relativePath }) {
     `\\b(?:${config.forbiddenStandaloneTerms.join("|")})\\b`,
     "gi"
   );
-  return [...markup.matchAll(pattern)].map((match) => ({
+  const findings = [...markup.matchAll(pattern)].map((match) => ({
     path: relativePath,
     term: match[0],
     excerpt: excerptAround(markup, match.index, match[0].length)
   }));
+  const text = readerText(markup);
+  for (const rule of [...(config.forbiddenPatterns ?? []), ...(config.forbiddenRenderedPatterns ?? [])]) {
+    for (const match of text.matchAll(new RegExp(rule.pattern, "gi"))) {
+      findings.push({
+        path: relativePath, term: match[0], patternId: rule.id,
+        excerpt: excerptAround(text, match.index, match[0].length)
+      });
+    }
+  }
+  return findings;
 }
 
 export async function evaluateRenderedPublicLanguage({
@@ -79,7 +111,7 @@ async function main() {
     return;
   }
   console.log(
-    `Rendered public-language eval passed: ${result.renderedPages} built HTML pages contain no prohibited standalone terms outside application scripts.`
+    `Rendered public-language eval passed: ${result.renderedPages} built HTML pages contain no prohibited terms or editorial instructions in inspected reader text and metadata.`
   );
 }
 
