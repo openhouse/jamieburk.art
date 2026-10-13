@@ -2,7 +2,7 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { defaultConfigPath, repositoryRoot } from "./check-public-language.mjs";
+import { defaultConfigPath, evaluatePublicText, repositoryRoot } from "./check-public-language.mjs";
 
 const defaultBuildRoot = path.join(repositoryRoot, "apps/www/.next/server/app");
 
@@ -20,31 +20,57 @@ async function collectHtmlFiles(directory) {
 export function inspectablePublicMarkup(html) {
   return html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ");
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<!--[\s\S]*?-->/g, "");
 }
 
-function excerptAround(markup, index, length) {
-  return markup
-    .slice(Math.max(0, index - 100), Math.min(markup.length, index + length + 160))
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&(?:#x27|apos);/gi, "'")
-    .replace(/&quot;/gi, '"')
-    .replace(/&amp;/gi, "&")
-    .replace(/\s+/g, " ")
-    .trim();
+function decodeEntities(value) {
+  const named = { amp: "&", quot: '"', apos: "'", nbsp: " ", ensp: " ", emsp: " ", thinsp: " ", tab: " ", newline: " ", lt: "<", gt: ">", eacute: "é" };
+  return value.replace(/&(#x[\da-f]+|#\d+|amp|quot|apos|nbsp|ensp|emsp|thinsp|tab|newline|lt|gt|eacute);/gi, (entity, key) => {
+    if (!key.startsWith("#")) return named[key.toLowerCase()] ?? entity;
+    const point = key[1].toLowerCase() === "x"
+      ? Number.parseInt(key.slice(2), 16)
+      : Number.parseInt(key.slice(1), 10);
+    return point > 0 && point <= 0x10ffff ? String.fromCodePoint(point) : entity;
+  });
 }
 
 export function evaluateRenderedMarkup({ config, html, relativePath }) {
   const markup = inspectablePublicMarkup(html);
-  const pattern = new RegExp(
-    `\\b(?:${config.forbiddenStandaloneTerms.join("|")})\\b`,
-    "gi"
-  );
-  return [...markup.matchAll(pattern)].map((match) => ({
-    path: relativePath,
-    term: match[0],
-    excerpt: excerptAround(markup, match.index, match[0].length)
-  }));
+  const findings = [];
+  let visibleText = "";
+  const scan = (text, surface) => {
+    findings.push(...evaluatePublicText({
+      config,
+      relativePath,
+      text: decodeEntities(text).replace(/\s+/g, " ").trim()
+    }).map((finding) => ({ ...finding, surface })));
+  };
+  const flush = () => {
+    scan(visibleText, "text");
+    visibleText = "";
+  };
+  // HTML emitted by the Next build: retain contiguous inline prose, separate
+  // block elements and attributes, and never treat classes/URLs as reader copy.
+  for (const token of markup.matchAll(/<(?:[^"'<>]|"[^"]*"|'[^']*')*>|[^<]+/g)) {
+    const value = token[0];
+    if (!value.startsWith("<")) {
+      visibleText += value;
+      continue;
+    }
+    if (/^<br\b/i.test(value)) visibleText += " ";
+    if (/^<\/?(?:html|head|body|main|header|footer|nav|section|article|aside|div|p|h[1-6]|li|ul|ol|dl|dt|dd|table|tr|td|th|blockquote|hr|meta|img|input|button)\b/i.test(value)) flush();
+    const attributes = new Map([...value.matchAll(/\s([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi)].map((attribute) => [
+      attribute[1].toLowerCase(), attribute[2] ?? attribute[3] ?? attribute[4]
+    ]));
+    for (const [name, attributeValue] of attributes) {
+      const readerAttribute = /^(?:aria-label|aria-description|alt|title|placeholder|content)$/.test(name);
+      const buttonValue = name === "value" && /^<input\b/i.test(value) && /^(?:submit|button|reset)$/i.test(decodeEntities(attributes.get("type") ?? ""));
+      if (readerAttribute || buttonValue) scan(attributeValue, `attribute:${name}`);
+    }
+  }
+  flush();
+  return findings;
 }
 
 export async function evaluateRenderedPublicLanguage({
@@ -53,6 +79,7 @@ export async function evaluateRenderedPublicLanguage({
 } = {}) {
   const config = JSON.parse(await readFile(configPath, "utf8"));
   const htmlFiles = await collectHtmlFiles(buildRoot);
+  if (!htmlFiles.length) throw new Error(`No built HTML pages found in ${buildRoot}; build the public app before checking rendered language.`);
   const findings = [];
   for (const filePath of htmlFiles) {
     findings.push(
@@ -79,7 +106,7 @@ async function main() {
     return;
   }
   console.log(
-    `Rendered public-language eval passed: ${result.renderedPages} built HTML pages contain no prohibited standalone terms outside application scripts.`
+    `Rendered public-language eval passed: ${result.renderedPages} built HTML pages contain no prohibited terms or publishing instructions in text, metadata, or accessible labels.`
   );
 }
 

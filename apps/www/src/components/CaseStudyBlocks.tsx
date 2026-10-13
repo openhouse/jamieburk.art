@@ -161,14 +161,13 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           <strong className="text-jb-ink">Source basis:</strong> {item.sourceLayer}
         </p>
       ) : null}
-      {item.careNote || item.publicSafety?.note ? (
+      {item.careNote ? (
         <details className="mt-4 max-w-4xl border-l-4 border-jb-ochre bg-jb-lemon/20 px-4 py-3 text-sm text-jb-ink/76">
           <summary className="cursor-pointer font-semibold text-jb-blue">
             Claim and care limits
           </summary>
           <div className="mt-3 space-y-2 leading-6">
-            {item.careNote ? <p>{item.careNote}</p> : null}
-            {item.publicSafety?.note ? <p>{item.publicSafety.note}</p> : null}
+            <p>{item.careNote}</p>
           </div>
         </details>
       ) : null}
@@ -216,15 +215,6 @@ export function VisibilityNote({ item }: { item: WorkMeta }) {
         {" "}
         {item.currentStatus}
       </p>
-    </NoteBlock>
-  );
-}
-
-export function PublicSafetyNote({ item }: { item: WorkMeta }) {
-  if (!item.publicSafety?.note) return null;
-  return (
-    <NoteBlock title="Public-safety note" tone="ochre">
-      <p>{item.publicSafety.note}</p>
     </NoteBlock>
   );
 }

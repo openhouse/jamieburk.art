@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "public-surface-terminology",
-  "currentRunPath": "evals/public-language/runs/2026-08-20-public-surface-terminology-hillclimb.json",
+  "currentRunPath": "evals/public-language/runs/2026-10-13-reader-facing-publication-language.json",
   "purpose": "Keep visitor-facing portfolio prose and hiring artifacts clear, specific, and free of internal systems vocabulary.",
   "forbiddenStandaloneTerms": [
     "bound",
@@ -27,6 +27,34 @@
     {
       "id": "wowlist-database-key-language",
       "pattern": "city-region\\s+keys"
+    },
+    {
+      "id": "publication-status-resume-label",
+      "pattern": "\\bcurrent\\s+public\\s+r[eé]sum[eé]\\s+PDF\\b"
+    },
+    {
+      "id": "resume-publication-artifact",
+      "pattern": "\\bapproved\\s+r[eé]sum[eé]\\s+artifact\\b"
+    },
+    {
+      "id": "publication-approval-placeholder",
+      "pattern": "\\b(?:TODO:\\s*)?Jamie\\s+approval\\s+required\\b"
+    },
+    {
+      "id": "publisher-only-claims-instruction",
+      "pattern": "\\bUse\\s+only\\s+public[- ]safe\\s+claims\\b"
+    },
+    {
+      "id": "publisher-only-collective-language-instruction",
+      "pattern": "\\bCollective[- ]work\\s+language\\s+is\\s+required\\b"
+    },
+    {
+      "id": "publisher-only-page-status-instruction",
+      "pattern": "\\bThis\\s+page\\s+must\\s+make\\s+the\\s+archived\\s+and\\s+unofficial\\s+status\\s+visible\\b"
+    },
+    {
+      "id": "publisher-only-organizer-credit-instruction",
+      "pattern": "\\bKeep\\s+public\\s+organizer\\s+credit\\s+with\\b"
     }
   ],
   "standaloneTermExemptPaths": [
@@ -48,16 +76,11 @@
       "extensions": [".md", ".mdx"]
     },
     {
-      "root": "apps/www/src/data/work.ts",
-      "extensions": [".ts"]
-    },
-    {
-      "root": "apps/www/src/data/proofs.ts",
-      "extensions": [".ts"]
-    },
-    {
-      "root": "apps/www/src/data/photography.ts",
-      "extensions": [".ts"]
+      "root": "apps/www/src/data",
+      "extensions": [".ts", ".json"],
+      "recursive": false,
+      "excludeFiles": ["page-owner-registry.json"],
+      "exclusionRationale": "The page-owner registry is review configuration, not rendered portfolio copy. Nested knowledge records are scanned through their explicit public projection below and through rendered output."
     },
     {
       "root": "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -75,6 +98,14 @@
       "root": "resumes",
       "extensions": [".md"],
       "fileNamePattern": "^Jamie-Burkart-(?:Resume|Cover-Letter)-.*\\.md$"
+    }
+  ],
+  "internalFieldExemptions": [
+    {
+      "path": "apps/www/src/data/work.ts",
+      "object": "publicSafety",
+      "field": "note",
+      "rationale": "Publisher instructions remain in the governed data model but must not render. The built HTML gate has no such exemption."
     }
   ],
   "lineExemptions": [

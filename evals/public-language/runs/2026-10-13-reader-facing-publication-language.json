@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "evalId": "reader-facing-publication-language-2026-10-13",
+  "evaluatedOn": "2026-10-13",
+  "targetCriterion": "visitor-facing-language-clarity",
+  "baselineCommit": "aa0cd516eed41bc792d08826369bc0a571e77df0",
+  "baseline": {
+    "reportedDefect": "The resume introduction displayed instructions about the current public PDF and the approved resume artifact.",
+    "oldEvaluatorResult": "The exact multiline note produced no findings; rendered scanning ignored every configured forbiddenPattern.",
+    "newEvaluatorAgainstCommittedResume": {
+      "path": "apps/www/src/app/resume/page.tsx",
+      "line": 38,
+      "findings": 2,
+      "patternIds": ["publication-status-resume-label", "resume-publication-artifact"]
+    },
+    "testFirstRun": { "tests": 13, "passed": 8, "failed": 5 },
+    "fieldSeparationAndCensusRedRun": { "tests": 19, "passed": 14, "failed": 5 },
+    "attributeAndEntityRedRun": { "tests": 21, "passed": 20, "failed": 1 },
+    "independentReviewFollowUp": {
+      "finding": "A br tag incorrectly ended a phrase; visible input button labels were not scanned.",
+      "redRun": { "tests": 23, "passed": 21, "failed": 2 },
+      "resolution": "Treat br as whitespace and scan value only on submit, button, and reset input types. Hidden and ordinary user-input values remain outside the publisher-copy gate."
+    },
+    "preRebuildHtmlObservation": {
+      "findings": 2,
+      "paths": ["work/callnyc.html", "work/kc-spaces-fund.html"],
+      "qualification": "Observed pre-rebuild HTML state, not a verified complete historical-commit HTML census. A later attempt overlapped the new build and correctly failed on zero HTML files."
+    }
+  },
+  "change": {
+    "description": "Extend existing source and build gates with phrase-level publishing-instruction checks, complete configured-pattern reuse, inline and entity handling, accessible metadata coverage, automatic top-level data scanning, and empty-build failure.",
+    "preservedInternalFields": ["work.ts publicSafety.note", "photography.ts knowledgeStatus"],
+    "scopeProtection": "Internal field exemptions never apply to rendered HTML or neighboring public fields.",
+    "historicalReceiptsRewritten": false,
+    "newDependencyAdded": false,
+    "claimOrConsentGatesWeakened": false
+  },
+  "result": {
+    "sourceScannedFiles": 81,
+    "sourceProhibitedOccurrences": 0,
+    "deterministicTests": 23,
+    "deterministicTestsPassing": 23,
+    "renderedPages": 16,
+    "renderedProhibitedOccurrences": 0,
+    "renderedVerification": "passed-final-local-build-html"
+  },
+  "commands": [
+    "node --test scripts/tests/public-language.test.mjs",
+    "node scripts/check-public-language.mjs",
+    "node scripts/check-rendered-public-language.mjs"
+  ],
+  "decision": "keep-change",
+  "limitations": [
+    "Known-phrase checks are not a semantic guarantee against every future form of internal publishing language.",
+    "Runtime-only content, PDF copy, unusual encodings, and visual hierarchy require separate review.",
+    "This receipt records deterministic execution, not named-human editorial approval or deployment authorization."
+  ]
+}

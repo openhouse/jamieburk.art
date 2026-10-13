@@ -1,6 +1,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import ts from "typescript";
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 export const repositoryRoot = path.resolve(scriptDirectory, "..");
@@ -13,7 +14,7 @@ function escapeRegularExpression(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-async function collectFiles(targetPath) {
+async function collectFiles(targetPath, recursive = true) {
   const targetStat = await stat(targetPath);
   if (targetStat.isFile()) return [targetPath];
 
@@ -21,16 +22,41 @@ async function collectFiles(targetPath) {
   const files = [];
   for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
     const entryPath = path.join(targetPath, entry.name);
-    if (entry.isDirectory()) files.push(...(await collectFiles(entryPath)));
+    if (entry.isDirectory() && recursive) files.push(...(await collectFiles(entryPath)));
     if (entry.isFile()) files.push(entryPath);
   }
   return files;
 }
 
+function maskInternalFields(config, relativePath, text) {
+  const exemptions = (config.internalFieldExemptions ?? []).filter((entry) => entry.path === relativePath);
+  if (!exemptions.length) return text;
+  const source = ts.createSourceFile(relativePath, text, ts.ScriptTarget.Latest, true);
+  const ranges = [];
+  const visit = (node) => {
+    if (ts.isPropertyAssignment(node) && ts.isObjectLiteralExpression(node.initializer)) {
+      for (const exemption of exemptions) {
+        if (node.name.getText(source).replace(/^["']|["']$/g, "") !== exemption.object) continue;
+        for (const property of node.initializer.properties) {
+          if (ts.isPropertyAssignment(property) && property.name.getText(source).replace(/^["']|["']$/g, "") === exemption.field) {
+            ranges.push([property.initializer.getStart(source), property.initializer.end]);
+          }
+        }
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(source);
+  for (const [start, end] of ranges.sort((a, b) => b[0] - a[0])) {
+    text = text.slice(0, start) + text.slice(start, end).replace(/[^\r\n]/g, " ") + text.slice(end);
+  }
+  return text;
+}
+
 export function evaluatePublicText({ config, relativePath, text }) {
   const exemptions = config.lineExemptions
     .filter((entry) => entry.path === relativePath)
-    .map((entry) => new RegExp(entry.pattern, "i"));
+    .map((entry) => new RegExp(entry.pattern, "gi"));
   const termPattern = new RegExp(
     `\\b(?:${config.forbiddenStandaloneTerms
       .map(escapeRegularExpression)
@@ -46,31 +72,32 @@ export function evaluatePublicText({ config, relativePath, text }) {
     expression: new RegExp(entry.pattern, "gi")
   }));
 
-  return text.split(/\r?\n/).flatMap((line, index) => {
-    if (exemptions.some((pattern) => pattern.test(line))) return [];
-    const matches = scanStandaloneTerms
-      ? [...line.matchAll(termPattern)].map((match) => ({
-          match,
-          patternId: null
-        }))
-      : [];
-    for (const entry of forbiddenPatterns) {
-      matches.push(
-        ...[...line.matchAll(entry.expression)].map((match) => ({
-          match,
-          patternId: entry.id
-        }))
-      );
-    }
-    return matches
-      .sort((a, b) => (a.match.index ?? 0) - (b.match.index ?? 0))
-      .map(({ match, patternId }) => ({
+  // Exempt only the known internal field, never unrelated prose on its line.
+  // Preserve offsets and line breaks so source findings still locate the text.
+  const inspectable = exemptions.reduce((value, expression) =>
+    value.replace(expression, (match) => match.replace(/[^\r\n]/g, " ")), maskInternalFields(config, relativePath, text));
+  const matches = scanStandaloneTerms
+    ? [...inspectable.matchAll(termPattern)].map((match) => ({ match, patternId: null }))
+    : [];
+  for (const entry of forbiddenPatterns) {
+    matches.push(...[...inspectable.matchAll(entry.expression)].map((match) => ({
+      match,
+      patternId: entry.id
+    })));
+  }
+  return matches
+    .sort((a, b) => (a.match.index ?? 0) - (b.match.index ?? 0))
+    .map(({ match, patternId }) => {
+      const line = inspectable.slice(0, match.index).split(/\r?\n/).length;
+      return {
         path: relativePath,
-        line: index + 1,
+        line,
         term: match[0],
         patternId,
-        excerpt: line.trim()
-      }));
+        excerpt: match[0].includes("\n")
+          ? match[0].replace(/\s+/g, " ").trim()
+          : text.split(/\r?\n/)[line - 1].trim()
+      };
   });
 }
 
@@ -86,8 +113,9 @@ export async function evaluatePublicLanguage({
     const namePattern = surface.fileNamePattern
       ? new RegExp(surface.fileNamePattern)
       : null;
-    for (const filePath of await collectFiles(absoluteRoot)) {
+    for (const filePath of await collectFiles(absoluteRoot, surface.recursive !== false)) {
       if (!surface.extensions.includes(path.extname(filePath))) continue;
+      if ((surface.excludeFiles ?? []).includes(path.basename(filePath))) continue;
       if (namePattern && !namePattern.test(path.basename(filePath))) continue;
       selected.set(filePath, path.relative(root, filePath));
     }
@@ -127,7 +155,7 @@ async function main() {
   }
 
   console.log(
-    `Public-language eval passed: ${result.scannedFiles} public-surface and hiring-artifact files contain no prohibited standalone terms.`
+    `Public-language eval passed: ${result.scannedFiles} public-surface and hiring-artifact files contain no prohibited terms or publishing instructions.`
   );
 }
 

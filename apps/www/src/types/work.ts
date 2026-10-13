@@ -76,6 +76,7 @@ export type WorkMeta = {
   careNote?: string;
   sourceLayer?: string;
   credits?: string[];
+  /** Internal editorial instructions. Render careNote for visitor-facing limits. */
   publicSafety?: { note: string };
   currentStatus: string;
   group:

@@ -18,13 +18,14 @@ export default function ResumePage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
         <p className="mt-4 text-2xl font-semibold text-jb-green">
-          Technical Project Manager - Product Operations & Implementation
+          Technical Project Manager
+        </p>
+        <p className="mt-1 text-lg font-medium text-jb-green">
+          Product Operations & Implementation
         </p>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          I create operating structure for complex public-facing teams,
-          turning ambiguous work into requirements, workflows, documentation,
-          decision trails, launch support, onboarding materials, and durable
-          handoffs.
+          I help public-facing teams turn ambiguous work into clear plans,
+          practical workflows, and reliable handoffs.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <JBButton href={site.resumePath} download>
@@ -34,10 +35,6 @@ export default function ResumePage() {
             Contact Jamie
           </JBButton>
         </div>
-        <p className="mt-4 text-sm text-jb-ink/62">
-          Current public resume PDF. Phone remains inside the approved resume
-          artifact; email is available on the contact page.
-        </p>
       </div>
       <section aria-labelledby="selected-impact" className="mt-12 border-y border-jb-ink/18 py-7">
         <h2 className="text-3xl font-semibold text-jb-ink" id="selected-impact">

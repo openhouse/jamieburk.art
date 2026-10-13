@@ -129,18 +129,22 @@
       "grader": "llm_judge",
       "blocking": false,
       "weight": 4,
-      "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
+      "inputs": ["homepage", "work index", "lead case studies", "resume and contact pages", "shared CTAs", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
-        "Identify repeated claims, internal editorial scaffolding, and sections that explain what an artifact could show instead of showing it."
+        "Identify repeated claims, internal editorial scaffolding, and sections that explain what an artifact could show instead of showing it.",
+        "Run source and built-HTML public-language checks. Give a fresh reader the rendered pages without implementation context and ask who each helper note is addressing: a visitor or the publishing team.",
+        "Inspect the resume introduction at mobile widths. Confirm the role, specialty, download and contact actions remain easy to scan without internal approval instructions."
       ],
       "pass_criteria": [
         "Each lead page establishes context, Jamie's action, and outcome within the first 250 words.",
         "No adjacent sections repeat the same central claim without adding evidence or consequence.",
         "Public copy sounds warm and precise rather than corporate, defensive, or overqualified.",
-        "Governance language supports trust without dominating the hiring narrative."
+        "Governance language supports trust without dominating the hiring narrative.",
+        "Visitor-facing copy contains no internal publishing instructions, approval status narration, or artifact custody notes. Keep necessary privacy, attribution, and evidence limits in plain reader-facing language.",
+        "Every helper note changes a visitor's understanding or next action; it does not merely restate a control or explain our internal process."
       ],
-      "evidence_required": ["judge scorecard", "page excerpts", "redundancy findings"],
+      "evidence_required": ["judge scorecard", "page excerpts", "redundancy findings", "source and built-HTML language results", "mobile resume capture", "audience-mismatch findings"],
       "remediation_hint": "Let artifacts carry proof, shorten repeated explanation, and move detailed governance to concise scope notes."
     },
     {
