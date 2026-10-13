@@ -1,11 +1,11 @@
 {
-  "reportVersion": 6,
-  "checkedAt": "2026-08-24T23:40:11.460Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
+  "reportVersion": 8,
+  "checkedAt": "2026-10-13T17:25:53.770Z",
+  "baseUrl": "http://127.0.0.1:3224",
+  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 153,
-  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix.",
+  "publicSurfaceFileCount": 154,
+  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix. These exact captures were visually inspected while the unchanged-candidate matrix continued.",
   "routes": [
     {
       "path": "/",
@@ -23,7 +23,9 @@
           "pixelHeight": 900,
           "httpStatus": 200,
           "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
-          "file": "candidate-home-desktop.png"
+          "file": "candidate-home-desktop.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
         },
         {
           "route": "/",
@@ -36,7 +38,9 @@
           "pixelHeight": 812,
           "httpStatus": 200,
           "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
-          "file": "candidate-home-viewport.png"
+          "file": "candidate-home-viewport.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
         }
       ]
     },
@@ -55,12 +59,10 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
+          "sha256": "06711757e56bf06e021ecb43c1bdf036f7d07a052b2b1081518a274b1e7bffa5",
           "file": "professor-lenses-about-desktop.png",
-          "framedContent": {
-            "systemsPeopleCanInhabitHeadingPresent": true,
-            "currentPracticeDocumented": true
-          }
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
         },
         {
           "route": "/about",
@@ -72,23 +74,25 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "e2bb09e69b8c0eac22119b9995c4b3c2a2a2edba4f26a2b96960e0d0436e24d9",
+          "sha256": "03ecf72d7f01f852a719c8a778935fbbff6690bf074c25528ccdeac7e07af048",
           "file": "professor-lenses-about-mobile.png",
-          "framedContent": {
-            "systemsPeopleCanInhabitHeadingPresent": true,
-            "currentPracticeDocumented": true
-          }
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
         }
       ]
     }
   ],
   "passed": true,
-  "verification": "Fresh desktop and mobile captures show the role-led homepage and public About-page systems lineage without browser warnings or errors; the complete route matrix separately exercises the colophon route.",
-  "refresh": {
-    "candidateChange": "The knowledge graph gained a held, source-backed proposition and proposed RFC for wiki-shaped shared memory; no public portfolio page changed.",
-    "productionBuild": "The Next.js production build, TypeScript check, social-preview render contract, and rendered public-language check completed under the declared Node 26 runtime.",
-    "currentRenderedInspection": "The exact desktop and mobile homepage and About captures were freshly inspected; the separate page-owner packet retains exact desktop and mobile colophon captures.",
-    "responsiveRun": "All 60 route-width combinations, including the colophon, were freshly checked at 360, 375, 768, and 1280 CSS pixels.",
-    "browserDiagnostics": "No browser warnings or errors were observed."
+  "verification": "Fresh home viewport and About through-line captures, complete responsive route matrix, and separate keyboard/mobile/reflow observations are bound to this public candidate. Human visual and accessibility approval remains separate.",
+  "browserDiagnostics": [],
+  "screenshotCapturedAt": "2026-10-13T17:19:12.174Z",
+  "visualInspection": {
+    "performed": true,
+    "observations": [
+      "Desktop and mobile homepage captures show the role, name, value statement, actions, photo caption, and credit without clipping or overlap.",
+      "Desktop and mobile About captures frame Systems people can inhabit and the stated recursive method beneath the sticky navigation.",
+      "A later duplicate capture produced during smooth scrolling was rejected; retained images are the inspected earlier captures of the identical public-surface fingerprint."
+    ],
+    "boundary": "Agent visual inspection is not human accessibility review, endorsement, or publication approval."
   }
 }

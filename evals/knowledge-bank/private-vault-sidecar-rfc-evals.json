@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "private-vault-sidecar-rfc",
+  "objective": "Keep public and private development lanes coordinated by branch and review identity while denying private-topology disclosure and public runtime dependence.",
+  "cases": [
+    {
+      "id": "paired-review-is-ready",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/2026-09-03-A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "RFC 0010-0011: Federation canary and private vault sidecar", "head_branch": "work/2026-09-03-A", "base_branch": "work/2026-09-01-A"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/2026-09-03-A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "RFC 0010-0011: Federation canary and private vault sidecar", "head_branch": "work/2026-09-03-A", "base_branch": "work/2026-09-01-A"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "ready-for-paired-review", "reasons": []}
+    },
+    {
+      "id": "branch-mismatch-holds",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/B", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "hold", "reasons": ["branch-name-mismatch"]}
+    },
+    {
+      "id": "pull-request-title-mismatch-holds",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Public title", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Private title", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "hold", "reasons": ["pull-request-title-mismatch"]}
+    },
+    {
+      "id": "non-private-counterpart-is-denied",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "deny", "reasons": ["private-repository-visibility-unsafe"]}
+    },
+    {
+      "id": "public-private-locator-is-denied",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false, "private_local_path": "/not/public-safe"}
+      },
+      "expected": {"decision": "deny", "reasons": ["public-manifest-forbidden-field:private_local_path"]}
+    },
+    {
+      "id": "public-runtime-dependency-is-denied",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": true}
+      },
+      "expected": {"decision": "deny", "reasons": ["public-runtime-dependency-on-private"]}
+    },
+    {
+      "id": "missing-private-review-holds",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/A", "clean": true, "pull_request": null},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "hold", "reasons": ["private-pull-request-missing"]}
+    },
+    {
+      "id": "dirty-private-worktree-holds",
+      "state": {
+        "pair_id": "portfolio-public-private-v1",
+        "public": {"role": "public", "visibility": "PUBLIC", "branch": "work/A", "clean": true, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "private": {"role": "private", "visibility": "PRIVATE", "branch": "work/A", "clean": false, "pull_request": {"state": "OPEN", "draft": true, "title": "Paired review", "head_branch": "work/A", "base_branch": "work/base"}},
+        "public_manifest": {"pair_id": "portfolio-public-private-v1", "role": "public", "counterpart_locator": "operator-local-only", "public_runtime_dependency": false}
+      },
+      "expected": {"decision": "hold", "reasons": ["private-worktree-dirty"]}
+    }
+  ],
+  "human_gates": [
+    "private access",
+    "record classification",
+    "rights and consent",
+    "public projection",
+    "public merge",
+    "private merge",
+    "deployment",
+    "production indexing"
+  ]
+}

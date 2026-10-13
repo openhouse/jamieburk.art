@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "evalId": "visitor-copy-editorial-boundary-2026-10-13",
+  "targetCriterion": "visitor-facing-language-clarity",
+  "baselineCommit": "da44f49ed68cf2eeff3b9d3060dafb3e04d7a462",
+  "baseline": {
+    "observedFailure": "The resume displayed a publishing-process note about the approved resume artifact and phone placement. Shared case-study components also displayed instructions addressed to authors.",
+    "coverageGap": "The existing rendered gate enforced standalone terms but not configured phrase rules. Generated HTML alone did not cover the dynamic work index.",
+    "originalRegressionResult": "The newly added phrase regression tests failed before implementation; the old detector returned no finding for the resume note."
+  },
+  "iterations": [
+    {
+      "change": "Remove the resume's internal note; shorten its introduction; remove the shared footer's publishing label and stop rendering publicSafety.note.",
+      "testFirst": "Nine of the first eighteen public-language tests failed before the phrase implementation; all eighteen passed after it."
+    },
+    {
+      "reviewFinding": "Independent review found publishing backlog still rendered under Open, plus missing definition-list/accessibility-label normalization and dynamic-route coverage.",
+      "change": "Preserve five backlog strings in editorialOpen, omit absent visitor Open blocks, extend phrase fixtures, and add a production-server route gate.",
+      "testFirst": "Four of twenty-one phrase tests failed before normalization/backlog fixes. Thirteen initial live-gate tests failed before implementation. Final suites contain twenty-one phrase/source tests and nineteen live-gate tests."
+    }
+  ],
+  "verifiedResult": {
+    "nodeVersion": "26.5.0",
+    "focusedTestsPassing": 40,
+    "focusedTestsFailing": 0,
+    "sourceFilesInspected": 75,
+    "builtHtmlDocumentsInspected": 16,
+    "livePageRequestsInspected": 17,
+    "remainingConfiguredLanguageFindings": 0,
+    "typecheck": "passed",
+    "lint": "passed",
+    "stagingBuild": "passed"
+  },
+  "preserved": [
+    "Resume PDF and contact actions; no change to the approved PDF bytes.",
+    "Canonical claim wording, source relationships and asset permissions.",
+    "Collective credit, archived/unofficial service warnings, reconstruction labels, genuine uncertainty and care limits.",
+    "Editorial records remain available internally rather than being silently discarded."
+  ],
+  "futureProtection": [
+    "Both static and live language checks run as part of every application build, including CI and staging builds.",
+    "Live coverage derives from build manifests; new page routes are discovered without extending a fixed allowlist. Parameter pages without generated examples fail visibly.",
+    "Known phrases are checked in reader text, metadata and accessible labels after inline-markup and entity normalization.",
+    "Positive controls retain legitimate approval workflows, artifacts, privacy statements, source custody and visitor-useful limits.",
+    "HTTP failures, redirects, non-HTML, empty inventories, timeouts and unavailable servers cannot pass as zero findings. The gate cleans up its own server."
+  ],
+  "decision": "keep-change",
+  "limits": [
+    "Finite phrase regressions do not detect every possible paraphrase or replace editorial judgment.",
+    "Automated and fictionalized-reader judgments are not human approval, real-person participation or endorsement.",
+    "This focused receipt is not hosted-CI, browser-review or deployment evidence. Those gates are checked separately against the release candidate."
+  ]
+}

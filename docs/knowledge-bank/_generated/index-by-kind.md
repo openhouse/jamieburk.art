@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `d6fcfb941ba0c373844929000cd81a1ddef3971b`
+**Generation time:** 2026-10-13T13:43:41-04:00
+**Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
 
 ## application
 
@@ -340,6 +340,7 @@
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md) - `opportunity.aclu.senior-project-manager.8620968002`
 - [Asana - AI Implementation Manager, Service Management](../opportunities/asana-ai-implementation.md) - `opportunity.asana.ai-implementation.8027437`
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md) - `opportunity.benepass.product-operations.7f963a7a`
+- [Circle O - Operations Manager](../opportunities/circle-o-operations-manager-2026.md) - `opportunity.circle-o.operations-manager.2026`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
 - [NYC OTI - PIT Crew Senior Product Designer 782373](../opportunities/oti-pit-senior-product-designer-782373.md) - `opportunity.nyc-oti.pit-senior-product-designer.782373`
@@ -355,6 +356,7 @@
 
 ## organization
 
+- [Circle O](../organizations/circle-o.md) - `organization.circle-o`
 - [NYC Artist Coalition organization map](../organizations/nyc-artist-coalition.md) - `organization.nyc-artist-coalition`
 - [NYC Public Engagement Unit](../organizations/nyc-public-engagement-unit.md) - `organization.nyc-public-engagement-unit`
 
@@ -370,6 +372,7 @@
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
 - [Josh Gee](../people/josh-gee.md) - `person.josh-gee`
 - [Kathrin Aste](../people/kathrin-aste.md) - `person.kathrin-aste`
+- [Kayla Hamilton](../people/kayla-hamilton.md) - `person.kayla-hamilton`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
@@ -457,6 +460,9 @@
 - [BetaNYC weekly civic-technology newsletter and public archive](../sources/betanyc-civic-tech-newsletter-2026-08-20.md) - `source.betanyc.civic-tech-newsletter`
 - [CallNYC public source repository](../sources/callnyc-source-repository.md) - `source.callnyc.source-repository`
 - [Campaign-site repository family, 2020-2022](../sources/campaign-site-repository-family-2020-2022.md) - `source.campaign-site.repository-family.2020-2022`
+- [Circle O About and Team](../sources/circle-o-about-and-team-2026.md) - `source.circle-o.about-and-team.2026`
+- [Circle O Open Positions - Operations Manager](../sources/circle-o-open-positions-2026.md) - `source.circle-o.open-positions.2026`
+- [Circle O Operations Manager Application Form](../sources/circle-o-operations-manager-application-2026.md) - `source.circle-o.operations-manager-application.2026`
 - [Civic Match candidate network and authenticated profile flow](../sources/civic-match-candidate-network-2026-08-20.md) - `source.civic-match.candidate-network`
 - [Civic Hall hackathon announcement](../sources/civichall-hackathon-announcement-2016.md) - `source.civichall.hackathon-announcement.2016`
 - [CodePath official leadership pages - 2026](../sources/codepath-leadership-2026.md) - `source.codepath.leadership.2026`

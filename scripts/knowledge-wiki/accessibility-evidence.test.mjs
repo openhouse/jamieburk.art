@@ -9,8 +9,83 @@ import {
   validateResponsiveAccessibilityEvidence
 } from "./accessibility-evidence.mjs";
 import { defaultRepoRoot } from "./lib.mjs";
+import { isVerifiedPrefetchCancellation } from "../lib/browser-request-classification.mjs";
 
 const current = validateResponsiveAccessibilityEvidence(defaultRepoRoot);
+
+const prefetchBaseUrl = "http://127.0.0.1:3224";
+const prefetchFixture = () => ({
+  url: `${prefetchBaseUrl}/work?tag=Open%20Data&_rsc=abc`,
+  method: "GET",
+  resourceType: "fetch",
+  errorText: "net::ERR_ABORTED",
+  isNavigationRequest: false,
+  headers: { rsc: "1", "next-router-prefetch": "1" },
+  verifiedDestination: {
+    url: `${prefetchBaseUrl}/work?tag=Open%20Data`,
+    status: 200,
+    redirected: false,
+    contentType: "text/html; charset=utf-8"
+  }
+});
+
+test("prefetch classification requires affirmative request and destination evidence", () => {
+  assert.equal(isVerifiedPrefetchCancellation(prefetchFixture(), { baseUrl: prefetchBaseUrl }), true);
+  const mixedCase = prefetchFixture();
+  mixedCase.headers = { RSC: "1", "Next-Router-Prefetch": "1" };
+  assert.equal(isVerifiedPrefetchCancellation(mixedCase, { baseUrl: prefetchBaseUrl }), true);
+});
+
+test("prefetch classification never exempts real resource or unverified failures", () => {
+  const mutations = [
+    (r) => { r.errorText = "net::ERR_CONNECTION_REFUSED"; },
+    ...["document", "image", "script", "stylesheet", "xhr"].map((type) => (r) => { r.resourceType = type; }),
+    (r) => { r.method = "POST"; },
+    (r) => { r.isNavigationRequest = true; },
+    (r) => { delete r.isNavigationRequest; },
+    (r) => { r.url = "https://elsewhere.invalid/work?_rsc=abc"; },
+    (r) => { r.url = `${prefetchBaseUrl}/work?tag=Open%20Data`; },
+    (r) => { r.url = `${prefetchBaseUrl}/work?tag=Open%20Data&_rsc=`; },
+    (r) => { delete r.headers.rsc; },
+    (r) => { delete r.headers["next-router-prefetch"]; },
+    (r) => { r.headers["next-router-prefetch"] = "0"; },
+    (r) => { delete r.verifiedDestination; },
+    (r) => { r.verifiedDestination.status = 500; },
+    (r) => { r.verifiedDestination.status = 302; },
+    (r) => { r.verifiedDestination.redirected = true; },
+    (r) => { delete r.verifiedDestination.redirected; },
+    (r) => { r.verifiedDestination.contentType = "application/json"; },
+    (r) => { r.verifiedDestination.url = `${prefetchBaseUrl}/`; },
+    (r) => { r.url = "not a URL"; }
+  ];
+  for (const mutate of mutations) {
+    const record = prefetchFixture();
+    mutate(record);
+    assert.equal(isVerifiedPrefetchCancellation(record, { baseUrl: prefetchBaseUrl }), false);
+  }
+  assert.equal(isVerifiedPrefetchCancellation(null, { baseUrl: prefetchBaseUrl }), false);
+});
+
+test("prefetch report classification is explicit, balanced and fails closed", () => {
+  const report = structuredClone(current.report);
+  for (const row of report.rows) {
+    delete row.prefetchCancellations;
+    delete row.rawFailedRequestCount;
+  }
+  report.baseUrl = prefetchBaseUrl;
+  report.rows[0].prefetchCancellations = [prefetchFixture()];
+  report.rows[0].rawFailedRequestCount = report.rows[0].failedRequests.length + 1;
+  report.summary.prefetchCancellations = 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).requestClassificationPasses, true);
+  report.rows[0].rawFailedRequestCount += 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).requestClassificationPasses, false);
+  report.rows[0].rawFailedRequestCount -= 1;
+  report.rows[0].prefetchCancellations[0].resourceType = "image";
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).requestClassificationPasses, false);
+  report.rows[0].prefetchCancellations[0] = prefetchFixture();
+  report.summary.prefetchCancellations = 0;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).requestClassificationPasses, false);
+});
 
 test("the responsive accessibility matrix includes every featured project route", () => {
   assert.equal(canonicalAccessibilityRoutes.includes("/work/kc-spaces-fund"), true);

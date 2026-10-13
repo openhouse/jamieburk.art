@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Hiring acceptance Wiki gap resolution
 
-**Candidate commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Public report hash:** `fd57053f0c71fc1b3e0ae3ec92fac8b390f287572ad1d6356b0ee96c68d379a2`
-**Wiki fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Candidate commit:** `8b7fbc013d639ac4a511bc7b1cfefe13bc64ab7d`
+**Public report hash:** `7f44ca4eb3a51b717c5ece69463a1d51fc7ed353f464172fb1ded669856bc308`
+**Wiki fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
 
 The gap resolver runs after the public-only evaluator. It can identify Wiki evidence, but every public change remains human-reviewed.
 
@@ -12,6 +12,7 @@ The gap resolver runs after the public-only evaluator. It can identify Wiki evid
 - `requirement.codepath.qa-and-bug-pipeline` - **visible-weak-evidence-gap**; Inventory real QA and issue-triage work; do not substitute general project coordination.
 - `requirement.codepath.technical-test-fluency` - **source-needs-close-reading**; Verify current hands-on evidence and prepare a bounded technical demonstration if supportable.
 - `requirement.codepath.ai-automation` - **role-context-or-evidence-unknown**; Demonstrate one measured automation loop tied to delivery or QA.
+- `requirement.aclu.business-analysis` - **role-context-or-evidence-unknown**; Show one before-and-after workflow and the stakeholder evidence behind it.
 - `requirement.aclu.budget-and-resources` - **visible-weak-evidence-gap**; Identify exact budget and resource authority; do not imply procurement or financial authority not held.
 - `requirement.benepass.quantified-prioritization` - **visible-weak-evidence-gap**; Use only supported HJE figures and explain the decision they informed.
 - `requirement.oti-senior-product-manager.discovery-research` - **role-context-or-evidence-unknown**; Use the bounded Tired of Tires service example in the application; distinguish direct field contact, project-level survey evidence, and held component-authorship details.

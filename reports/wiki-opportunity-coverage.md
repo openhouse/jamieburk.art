@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Wiki fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -42,6 +42,13 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.benepass.product-engineering-translation` | critical | visible-qualified | wording | Name the operational consequence, not merely the stakeholder list. |
 | `requirement.benepass.runbooks-and-learning` | critical | visible-proven | none | Prepare one inspectable sample. |
 | `requirement.benepass.quantified-prioritization` | critical | visible-weak | source | Use only supported HJE figures and explain the decision they informed. |
+
+## Circle O - Operations Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.circle-o-operations-manager-2026.arts-operations` | critical | visible-qualified | none | Lead with specific recurring arts-operating examples and preserve collective credit. |
+| `requirement.circle-o-operations-manager-2026.access-practice` | critical | experience-gap | role-context | State genuine willingness to learn; do not claim lived Disabled experience or access-provider booking expertise. |
 
 ## CodePath - Senior Program Manager, Claude Corps
 

@@ -1,10 +1,11 @@
 {
   "runVersion": 3,
-  "judgeId": "composite-source-integrity-2026-08-29-04c0d718",
+  "judgeId": "visitor-composite-a-2026-10-13",
   "grader": "independent_llm_judge",
+  "phase": "holdout",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "04c0d718f66834cf873340576c76340cbad7b16f8739e699456e34824d26c1a7",
+  "candidateFingerprint": "cf1f06d66d3f40355de8319f9b8678c5ed2a4e06b2a5f52b78de1c774c6a4b11",
   "verdict": "accepted",
   "scores": [
     {
@@ -12,115 +13,140 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records 14/14 matching frozen branch decisions and zero missing frozen commit objects.",
-        "The frozen rubric enumerates exactly one head for each feature/evals-A through feature/evals-N, identifies the integration branch and develop base, and treats frozen branches as reference-only.",
-        "The integration register repeats the frozen heads and expressly prohibits wholesale merging of the reference branches."
+        "Read the frozen rubric and integration register. Fresh evaluation resolved fourteen distinct A-N pinned commit objects, with no missing commits or namespace mismatches.",
+        "Independent omitted-branch mutation failed the inventory criterion."
       ],
-      "rationale": "The frozen family inventory, object availability, branch identities, and reference-only boundary are fully observed."
+      "rationale": "The complete family inventory preserves exact reference commits and names the integration branch and develop base. Mutable remote names do not replace the frozen objects."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records 14 decisions containing rationale, destinations, verification, and the reviewed register digest.",
-        "Every A-N register entry has an allowed disposition, substantive rationale, destination paths, and verification criterion identifiers.",
-        "The register explicitly retains the existing public composition and explains why the integration produces no additional public copy."
+        "All fourteen integration decisions have substantive rationale, existing destination files and verification criteria. Register digest matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "Read docs/integration/feature-evals-composite.md and the explicit projection/non-projection decisions. A nonexistent-destination mutation failed."
       ],
-      "rationale": "Every branch has an inspectable integration decision, and public projection or non-projection is deliberate and recorded."
+      "rationale": "The register describes inspectable adopted contracts, not just branch labels. It preserves the distinction between stronger internal knowledge and deliberately selective public composition."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records all 11 canonical architecture files and no copied parallel lifecycle roots.",
-        "The frozen rubric names the H-derived schema, records, public registry, and proof layer as canonical and identifies forbidden parallel roots.",
-        "The supplied public registry exposes only the redacted claims, pages, and sources projection."
+        "All eleven canonical files are present; no forbidden parallel lifecycle architecture exists.",
+        "Read schema.ts, records.ts aggregation, lifecycle-operations.ts, public.ts and index.ts. The public interface uses the redacted registry, filters visibility and surface authorization, and omits source locators and internal excerpts.",
+        "Fresh public-safety and canonical evaluation passed."
       ],
-      "rationale": "The packet observes one canonical knowledge architecture, rejects parallel lifecycle roots, and preserves a redacted public boundary."
+      "rationale": "The H-derived knowledge system remains the single source of truth. The public app consumes bounded projections rather than the underlying research corpus."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records exercised intake replay, duplicate preservation, collision rejection, held claims, inquiries, corrections, projections, and orphan queries.",
-        "The intake-and-maturation evidence defines append-safe lifecycle handling.",
-        "The evaluator and tests require identical replay to be idempotent, new-ID repetition to remain a linked duplicate, changed-content stable-ID collision to fail, and required lifecycle states to remain queryable."
+        "Fresh lifecycle tests verify idempotent replay, preserved linked duplicates, rejection of changed content under a stable ID, and queryable states.",
+        "Own lifecycle query found 11 open intake items, two duplicates, 71 unresolved inquiries, 61 mature held claims, five corrections and zero orphan sources; projection states remain explicit."
       ],
-      "rationale": "All append-safety behaviors and lifecycle-query requirements are fully observed in the accepted preflight and supplied implementation evidence."
+      "rationale": "Intake preserves identity and provenance without silently overwriting or discarding material. Factual maturity and public selection remain separate states."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records successful validation of 326 sources, 119 claims, 34 agency relations, and five corrections, with current derived Wiki and employment outputs.",
-        "The public registry preserves claim evidence roles and source limitations without exposing protected source locators.",
-        "The governance evidence keeps individual, shared, collective, and institutional credit distinct and requires population claims to retain surface, capture-date, denominator, and recovery-gap boundaries."
+        "Fresh deterministic validation passed for 331 sources, 119 claims, 34 agency relations and five corrections; derived Wiki and employment outputs were current.",
+        "Sources retain doesNotEstablish boundaries and claims retain evidence relationships. Agency records distinguish 11 individual, seven shared, five collective and 11 institutional scopes.",
+        "Read HJE, FairRentNYC, CallNYC, KC Town Hall, WOWList and Sunday Dinner case sources. Revenue contribution, coalition outcomes, archived prototype status, institutional decisions and response-versus-attendance boundaries remain explicit.",
+        "Fresh public safety, photo/sourcebook checks and citation tests passed; the safety report retained eleven careful-claim warnings."
       ],
-      "rationale": "Source, claim, agency, correction, and population integrity are coherently observed without protected leakage or authority inflation."
+      "rationale": "The canonical and rendered layers preserve credit, rights, population denominators, recovery gaps and protected-source boundaries. Existing publication decisions are not enlarged by this review."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records 18/18 professor-lens criteria passing and mature held claims remaining off a public proofs route.",
-        "The rendered site selectively presents an about page, bounded case studies, a technical-operations surface, and a team-memory method rather than mirroring the knowledge bank.",
-        "The rendered material preserves collective credit and supported agency while making relationship, interface, use, learning, revision, continuity, and handoff reconstructable across the named lenses."
+        "Independently read the public pages and case sources, and inspected the live home, About, Technical Operations, FairRentNYC and expanded citation experience.",
+        "The home names the target role and what Jamie makes usable. Technical Operations connects decisions, actions, artifacts and bounded results; the site selects projects instead of exposing a knowledge-bank mirror.",
+        "About and the project cases connect artistic, civic, relational, social and technical practice. HJE, coalition work and Sunday Dinner make observation, modeling, prototyping, use, learning, revision and continuation reconstructable.",
+        "Independently viewed desktop and mobile home/About screenshots. Fresh screenshot hashes, source binding and browser evidence validated. The current professor-lens evidence evaluated 18/18, without substituting its scores for this judgment."
       ],
-      "rationale": "The public composition is purposeful, and all three lens requirements are fully observed without inflated agency, self-erasure, or indiscriminate projection."
+      "rationale": "The visitor can identify Jamie's role, follow supported individual and collective work, and understand recurring practice. Reconstructed artifacts and early research are labeled. The composition is selective and clear enough to satisfy the frozen rubric."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records all five human-evidence controls explicitly open.",
-        "The blind-spot controls leave human corroboration, collective review, hiring usability, job-funnel evidence, and external validity unresolved.",
-        "Each relevant control records required evidence, anti-gaming rules, a next action, and a public-projection boundary; the public reports likewise label human authority gates as open, blocked, or not requested."
+        "Read the blind-spot controls and approval/launch boundaries. All five human-evidence controls remain open: corroboration, collective review, hiring usability, job funnel and external validity.",
+        "Each gap states evidence requirements, anti-gaming rules, next action and projection boundary. Control digest matches 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "An in-memory human-corroboration closure mutation was rejected."
       ],
-      "rationale": "The blind spots are governed and actionable, but are not falsely treated as recovered evidence or closed human decisions."
+      "rationale": "The pass recognizes governed absence, not external validation. Fictional evaluative lenses are not real participation, consent, endorsement or human approval."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The deterministic preflight records the frozen semantic rubric digest matching its separately pinned contract.",
-        "The rubric content-binds the base suite, decision register, blind-spot controls, and branch namespace while prohibiting optimizer self-grading and not-observed passes.",
-        "The supplied tests reject semantic weakening after checksum refresh, fabricated heads, omitted branches, decorative decisions, stale outputs, synthesized human evidence, candidate omissions, and compensation for a blocking failure."
+        "The declared rubric matches the independently pinned semantic digest; the base suite, register and controls remain unchanged.",
+        "Six fresh no-holdout probes rejected an omitted branch, nonexistent destination, semantic weakening despite a refreshed mutable checksum, optimizer self-grading, fabricated human closure and a changed Hero fingerprint.",
+        "Forty-six focused tests passed after freeze across visual evidence freshness, accessibility evidence, professor lenses, lifecycle operations and citations."
       ],
-      "rationale": "Frozen recursive governance, dependency binding, grader separation, mutation resistance, and non-compensatory blocking are fully observed."
+      "rationale": "The frozen contract resists the tested score-gaming and stale-evidence substitutions. A high score cannot compensate for a hard-gate failure, and human approval cannot be generated by an automated pass."
     },
     {
       "criterionId": "COMP-009",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The packet identifies the exact candidate fingerprint and rubric digest, records COMP-001 through COMP-008 passing, and keeps production approval unresolved.",
-        "The candidate-identity contract binds the complete source tree except the two declared holdout records, and the evaluator tests bind complete judgments to exact-candidate receipts with distinct public labels and recorder-computed digests.",
-        "This judgment uses the prescribed exact-candidate identifiers, public reviewer label, provider, and review time; gives every criterion score 4; has no not-observed evidence; omits the recorder-owned judgment digest; and neither exposes private process information nor claims that a second receipt exists."
+        "Independently computed the whole-source-tree fingerprint across 2149 files, excluding only the two declared composite receipt paths. Recalculation after peer exchange still matched cf1f06d66d3f40355de8319f9b8678c5ed2a4e06b2a5f52b78de1c774c6a4b11.",
+        "Locked COMP-001 through COMP-008 merit acceptance before reading any peer result. No prior composite holdout judgments were read.",
+        "After both standalone decisions were recorded, verified the newly commissioned visitor-copy-composite-reviewer-b receipt: distinct public label, same candidate and frozen rubric, valid complete-payload digest, and independently accepted COMP-001 through COMP-008.",
+        "Final reciprocal peer receipt and pair validation are required before this acceptance is handed off as a completed two-review gate."
       ],
-      "rationale": "This exact-candidate judgment is acceptable and, after schema validation and recorder digesting, satisfies one side of the two-review stopping rule. Only the later combined repository gate can establish that two separately commissioned accepted receipts exist."
+      "rationale": "The exact-candidate evidence and independently reached merit decisions support reciprocal completion of the holdout gate. This receipt grants no production or indexing authority."
     }
   ],
   "notObserved": [],
   "findings": [
-    "Message-signal states remain distinct from delivery, reading, agreement, endorsement, verified authority, consent, and external action.",
-    "Configured source access does not count as observed coverage, and snapshot currentness does not count as live currentness.",
-    "Private-source returns are limited to minimum necessary governed facts; raw bodies, contact details, protected locators, and automatic action authority remain excluded.",
-    "Public receipt labels bind judgments but do not authenticate reviewer identity or establish separate commissioning; that boundary is expressly reserved to private orchestration.",
-    "Collaborator review, rights and consent, hiring validation, editorial approval, publication, merge, deployment, indexing, and other production decisions remain open to their designated humans."
+    {
+      "severity": "information",
+      "scope": "independence",
+      "finding": "Read-only review was separately commissioned from the optimizer. Standalone merit scores were fixed before the new peer receipt was examined. Deterministic review explicitly used an empty holdouts argument until peer exchange."
+    },
+    {
+      "severity": "information",
+      "scope": "browser-evidence",
+      "finding": "The fresh matrix covers 60 route/viewport rows with zero Axe violations, overflow, broken or unlabeled images, invalid H1/landmark counts, non-success responses or unclassified failed requests. Lazy-image follow-up completed. Screenshot hashes and runtime/build binding were validated."
+    },
+    {
+      "severity": "information",
+      "scope": "prefetch-classification",
+      "finding": "Five raw background RSC fetch aborts remain visible in the evidence. Every classified record has GET/fetch/non-navigation/ERR_ABORTED evidence, same-origin RSC query, affirmative RSC/prefetch headers and a verified matching 200 HTML destination. Their causes remain unproven. The narrowly reviewed classifier and negative tests do not excuse genuine navigation, asset or transport failures."
+    },
+    {
+      "severity": "information",
+      "scope": "staging-noindex",
+      "finding": "Independent HTTP checks returned successful home, health and resume PDF responses. Home and PDF carried noindex,nofollow, robots disallowed crawling, and health identified staging with robotsIndexable false. These observations do not establish a production deployment."
+    },
+    {
+      "severity": "information",
+      "scope": "rights-and-credit",
+      "finding": "Reviewed source, photo and approval boundaries preserve authorized public/staging uses, descriptive credits and collective-work language. Held photo leads, private participants, protected coursework and private research are not permission to publish. This reviewer grants no rights or consent."
+    },
+    {
+      "severity": "open-human-gate",
+      "scope": "release",
+      "finding": "Jamie exact-production-commit approval, deployment/domain/TLS/smoke/rollback verification and explicit indexing approval remain open. Human corroboration, collective review, hiring usability, job funnel and external validity also remain open."
+    }
   ],
-  "recommendation": "Accept this judgment for schema validation and recorder digesting as one side of the stopping rule, while preserving the combined-repository check and every unresolved human authority gate.",
+  "recommendation": "Accept the exact candidate's composite integration once the reciprocal final pair validates. Preserve staging noindex and every open human production, rights and external-evidence gate; this is not release authorization.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "source-integrity-reviewer-a-2026-08-29-04c0d718",
-    "reviewedAt": "2026-08-29T22:00:00Z",
-    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "d8c76c87de1904803469f582c89d64e021618c1290286c41f342a802a7a99f39"
+    "reviewerLabel": "visitor-composite-reviewer-a",
+    "reviewedAt": "2026-10-13T17:51:00.000Z",
+    "judgmentSha256": "54433508642c16aeed98be21245f598933a9beb27578a6daee9fbbc422773216",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }

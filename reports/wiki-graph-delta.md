@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `d6fcfb941ba0c373844929000cd81a1ddef3971b`
+**Generation time:** 2026-10-13T13:43:41-04:00
+**Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 59
+- Nodes added: 65
 - Nodes removed: 0
-- Edges added: 241
+- Edges added: 264
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -28,16 +28,19 @@ Compared with the graph artifact on `origin/develop`.
 - `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
 - `method.private-application-status-loop`
+- `opportunity.circle-o.operations-manager.2026`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
 - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - `opportunity.nyc-peu.chief-strategy-officer.787960`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
+- `organization.circle-o`
 - `organization.nyc-public-engagement-unit`
 - `person.courtney-kishbaugh`
 - `person.josh-gee`
 - `person.kathrin-aste`
+- `person.kayla-hamilton`
 - `person.thomas-edlinger`
 - `portfolio.work.kc-spaces-fund`
 - `projection.photo.colophon.east-river`
@@ -56,6 +59,9 @@ Compared with the graph artifact on `origin/develop`.
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`
+- `source.circle-o.about-and-team.2026`
+- `source.circle-o.open-positions.2026`
+- `source.circle-o.operations-manager-application.2026`
 - `source.civic-match.candidate-network`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`
