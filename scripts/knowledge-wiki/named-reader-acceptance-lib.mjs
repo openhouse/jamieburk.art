@@ -38,7 +38,7 @@ function receiptCurrentness(repoRoot, run, expectedOrigin) {
   try {
     const changes = execFileSync("git", [
       "status", "--porcelain=v1", "-z", "--untracked-files=all", "--",
-      "apps/www", "package.json", "package-lock.json"
+      "apps/www", "package.json", "package-lock.json", "Dockerfile", ".dockerignore"
     ], {
       cwd: repoRoot,
       encoding: "utf8",

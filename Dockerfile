@@ -26,7 +26,8 @@ ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
 ENV NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=$NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 ENV NEXT_PUBLIC_CLOUDINARY_PILOT=$NEXT_PUBLIC_CLOUDINARY_PILOT
-COPY --from=deps /repo/node_modules ./node_modules
+# Preserve workspace-local dependencies as well as hoisted dependencies.
+COPY --from=deps /repo/ ./
 COPY . .
 RUN npm run build -w @jamie-burkart/www
 

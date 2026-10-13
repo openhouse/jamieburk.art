@@ -80,7 +80,7 @@ function cliFixture(t, { stale = false } = {}) {
   const root = mkdtempSync(path.join(tmpdir(), "named-reader-cli-"));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   execFileSync("git", ["clone", "--quiet", "--shared", "--no-checkout", repoRoot, root]);
-  execFileSync("git", ["checkout", "HEAD", "--", "apps/www", "package.json", "package-lock.json", ".gitignore"], { cwd: root });
+  execFileSync("git", ["checkout", "HEAD", "--", "apps/www", "package.json", "package-lock.json", "Dockerfile", ".dockerignore", ".gitignore"], { cwd: root });
   const fixture = syntheticPassingReceipt(stale ? "0".repeat(40) : currentHead(root));
   mkdirSync(path.join(root, "scripts/knowledge-wiki"), { recursive: true });
   mkdirSync(path.join(root, "evals/knowledge-wiki"), { recursive: true });
@@ -174,7 +174,9 @@ for (const [label, relativePath, stage] of [
   ["a staged app source change", "apps/www/src/app/page.tsx", true],
   ["an app dependency change", "apps/www/package.json", false],
   ["a root dependency change", "package.json", false],
-  ["a root lockfile change", "package-lock.json", false]
+  ["a root lockfile change", "package-lock.json", false],
+  ["a Docker build change", "Dockerfile", false],
+  ["a Docker context exclusion change", ".dockerignore", false]
 ]) {
   test(`matching HEAD cannot pass after ${label}`, (t) => {
     const invoke = cliFixture(t);
