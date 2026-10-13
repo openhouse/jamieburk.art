@@ -6,20 +6,21 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-13
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/kc-town-hall-roof-work.md
-summary: Exact public occurrence binding the KC Town Hall roof-work derivative to the work index and case study.
+summary: Exact existing cover occurrences binding the KC Town Hall roof-work derivative to the homepage, work index, and case study under the existing portfolio staging authorization.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.kc-town-hall.roof-work.2019.001
 derivative: derivative.photo.kc-town-hall.roof-work.v1
 routes:
+  - /
   - /work
   - /work/kc-town-hall
 components:
   - WorkCard
-  - ArtifactGallery
+  - CaseStudyLayout
 purpose:
   - situated-work-evidence
   - field-implementation-context
@@ -43,7 +44,7 @@ approval:
   production: open
   indexing: open
 rollback:
-  action: Remove the occurrence from WorkCard and ArtifactGallery while retaining the governed asset and source records.
+  action: Remove the cover occurrences from WorkCard and CaseStudyLayout while retaining the governed asset and source records.
   preserves_history: true
 relations:
   - type: uses_source
@@ -63,3 +64,7 @@ This occurrence makes situated field implementation visible while preserving
 the boundary between visible action and claims about credentials, ownership,
 completed scope, outcomes, or sole authorship. Production and indexing remain
 open.
+
+The homepage and work-index uses are `WorkCard`; the case-study cover is
+`CaseStudyLayout`. This records existing rendered uses under the August 13
+portfolio authorization. It adds no image, crop, permission, or production release.

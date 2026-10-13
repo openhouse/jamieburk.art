@@ -12,6 +12,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import matter from "gray-matter";
 import ts from "typescript";
+import { validateResponsiveAccessibilityEvidence } from "../knowledge-wiki/accessibility-evidence.mjs";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -341,7 +342,38 @@ export async function loadPhotoKnowledgeModel(repoRoot = defaultRepoRoot, option
     privateBinding
   };
   model.bindingRelevant = computePhotoBindingFingerprintFromModel(model);
+  const responsive = readJson(path.join(repoRoot, "docs/qa/evals-H/responsive-route-matrix.json"));
+  model.photoOccurrenceEvidenceCurrent = validateResponsiveAccessibilityEvidence(repoRoot, responsive).passed &&
+    responsive.rows.every(row => Array.isArray(row.imageSources));
+  const observed = new Map();
+  for (const row of responsive.rows) for (const src of row.imageSources ?? []) {
+    const url = new URL(src, "https://jamieburk.art");
+    const imagePath = url.searchParams.get("url") ?? url.pathname;
+    for (const photo of model.publicPhotoManifest) if (photo.src === imagePath) {
+      observed.set(`${row.path}:${photo.id}`, { photoId: photo.id, route: row.path });
+    }
+  }
+  model.observedPhotoOccurrences = [...observed.values()];
   return model;
+}
+
+export function validateObservedPhotoOccurrences(model, observations = model.observedPhotoOccurrences) {
+  return observations?.length > 0 && observations.every(({ photoId, route }) => {
+    const photo = model.publicPhotoManifest.find(item => item.id === photoId);
+    const label = route === "/" ? "home" : route === "/work" ? "work-index" :
+      route === "/lab/source-backed-team-memory" ? "knowledge-wiki-graph" : route.split("/").at(-1);
+    return photo?.placements?.includes(label) && photo.placementIds.some(id => {
+      const occurrence = model.recordsById[id];
+      const routes = occurrence?.routes ?? [occurrence?.route];
+      const permission = model.recordsById[occurrence?.permission_source];
+      const scope = permission?.authorization ?? permission?.permission_capsule;
+      return occurrence?.asset === photo.wikiId && occurrence?.derivative === photo.derivativeId &&
+        routes.includes(route) && occurrence.approval?.public_git === "approved" &&
+        occurrence.approval?.staging === "approved" && scope?.public_git === "approved" &&
+        scope?.staging === "approved" &&
+        (scope.asset === photo.wikiId || scope.selected_assets?.includes(photo.wikiId));
+    });
+  });
 }
 
 function hasStatement(asset, id) {
@@ -722,11 +754,15 @@ export function evaluatePhotoKnowledgeModel(model) {
       asset?.statements?.every((item) => Array.isArray(item.references) && item.references.length > 0),
     manifest_wiki_placement_alignment:
       manifestAligned &&
+      model.photoOccurrenceEvidenceCurrent === true &&
+      validateObservedPhotoOccurrences(model) &&
       placement?.asset === canary.assetId &&
       placement?.derivative === canary.derivative.id &&
       placement?.route === canary.publicCopy.route &&
       placement?.component === canary.publicCopy.component &&
       edition?.occurrences?.includes(canary.placementId),
+    rendered_photo_occurrences_bound:
+      model.photoOccurrenceEvidenceCurrent === true && validateObservedPhotoOccurrences(model),
     project_courtesy_credit_policy: projectCourtesyCreditPolicy,
     revocation_and_rollback_available:
       placement?.rollback?.preserves_history === true &&

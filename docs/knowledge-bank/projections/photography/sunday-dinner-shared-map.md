@@ -6,20 +6,21 @@ projection_type: photo-occurrence
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-20
+last_reviewed: 2026-10-13
 review_by: 2027-02-20
 canonical_path: docs/knowledge-bank/projections/photography/sunday-dinner-shared-map.md
-summary: Exact public occurrence binding the Sunday Dinner shared-map derivative to the work index and case study.
+summary: Exact existing cover occurrences binding the Sunday Dinner shared-map derivative to the homepage, work index, and case study under the existing portfolio staging authorization.
 projection_status: active
 portfolio_edition: edition.launch.2026-08
 asset: asset.photo.sunday-dinner.shared-map.2013.001
 derivative: derivative.photo.sunday-dinner.shared-map.v1
 routes:
+  - /
   - /work
   - /work/196-sunday-dinner
 components:
   - WorkCard
-  - ArtifactGallery
+  - CaseStudyLayout
 purpose:
   - situated-work-evidence
   - participation-context
@@ -43,7 +44,7 @@ approval:
   production: open
   indexing: open
 rollback:
-  action: Remove the occurrence from WorkCard and ArtifactGallery while retaining the governed asset and source records.
+  action: Remove the cover occurrences from WorkCard and CaseStudyLayout while retaining the governed asset and source records.
   preserves_history: true
 relations:
   - type: uses_source
@@ -62,3 +63,7 @@ relations:
 This occurrence gives the participation-infrastructure project a situated,
 human-scale threshold without publishing participant identities or treating a
 social photograph as outcome proof. Production and indexing remain open.
+
+The homepage and work-index uses are `WorkCard`; the case-study cover is
+`CaseStudyLayout`. This records existing rendered uses under the August 13
+portfolio authorization. It adds no image, crop, permission, or production release.

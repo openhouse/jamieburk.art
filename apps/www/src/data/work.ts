@@ -226,19 +226,19 @@ const workItemsInput = [
       {
         title: "Campaign-memory spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "Public summary of a shared documentation structure for meetings, next steps, decision context, and continuity. The underlying meeting records are not published here.",
         type: "meeting memory"
       },
       {
         title: "Source map",
         description:
-          "A structured way to separate public sources, private notes, open questions, and materials that require review.",
+          "Public summary of how public sources, private notes, open questions, and review-needed materials are separated. The source map itself is withheld.",
         type: "source map"
       },
       {
         title: "Policy question log",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
+          "Public summary of a working list of unresolved legal, policy, city, and state questions. The internal question log is not published here.",
         type: "decision record"
       },
       {

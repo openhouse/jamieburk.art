@@ -23,7 +23,7 @@ const decisionEvidence = [
     question: "How does recurring customer and team friction become a maintainable release?",
     decision:
       "Jamie translated the question into a well-scoped requirement, coordinated an incremental change, inspected the public customer path and available signals, then preserved ownership and next actions.",
-    artifact: "Maintenance-to-handoff workflow specimen",
+    artifact: "Public workflow reconstruction; original company records withheld",
     result:
       "Repeatable patterns across product information, marketing, e-commerce operations, and customer follow-up."
   },
@@ -33,7 +33,7 @@ const decisionEvidence = [
     question: "How can a coalition keep sensitive, shifting work recoverable without overexposing it?",
     decision:
       "Jamie separated public sources, protected context, open policy questions, decisions, and next actions across 30+ pages of shared campaign memory.",
-    artifact: "Campaign-memory spine and source map",
+    artifact: "Public summary; source map and meeting records withheld",
     result:
       "Collaborators could recover decision context, review public evidence, and continue work across city and state strategy lanes."
   },
@@ -43,7 +43,7 @@ const decisionEvidence = [
     question: "How can administrative data become a pathway a resident can recognize and use?",
     decision:
       "Jamie organized constituent-services records around recognizable issues and possible next steps rather than requiring people to understand the source dataset first.",
-    artifact: "Issue-page information architecture and public implementation",
+    artifact: "Original launch screenshot and public implementation",
     result:
       "A small, complete civic product with source data, issue pathways, public documentation, and explicit limits."
   }
@@ -166,7 +166,7 @@ export default function TechnicalOperationsPage() {
                   <dd className="mt-2 text-sm leading-6 text-jb-ink/72">{item.decision}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-jb-ink">Inspectable artifact</dt>
+                  <dt className="font-semibold text-jb-ink">Public evidence</dt>
                   <dd className="mt-2 text-sm leading-6 text-jb-ink/72">{item.artifact}</dd>
                 </div>
                 <div>

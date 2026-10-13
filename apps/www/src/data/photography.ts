@@ -174,7 +174,10 @@ export const portfolioPhotos = {
     wikiId:
       "asset.photo.project-site.save-nyc-spaces-save-nyc-spaces-group-photo-nyc-artist-coalition-6y2gjc2",
     derivativeId: "derivative.photo.nycac-market-hotel-banner.v1",
-    placementIds: ["projection.photo.fair-rent-nyc.market-hotel-banner"],
+    placementIds: [
+      "projection.photo.fair-rent-nyc.market-hotel-banner",
+      "projection.photo.fair-rent-nyc.market-hotel-covers"
+    ],
     captionAssertionIds: [
       "statement.photo.nycac-market-hotel.place.v1",
       "statement.photo.nycac-market-hotel.capture-date.v1",
@@ -184,7 +187,7 @@ export const portfolioPhotos = {
       "statement.photo.nycac-market-hotel.courtesy-credit.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["fair-rent-nyc"],
+    placements: ["home", "work-index", "fair-rent-nyc"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -215,7 +218,7 @@ export const portfolioPhotos = {
       "statement.photo.sunday-dinner.shared-map.courtesy-credit.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["196-sunday-dinner", "work-index"],
+    placements: ["home", "196-sunday-dinner", "work-index"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",
@@ -245,7 +248,7 @@ export const portfolioPhotos = {
       "statement.photo.kc-town-hall.roof-work.courtesy-credit.v1"
     ],
     knowledgeStatus: "bound",
-    placements: ["kc-town-hall", "work-index"],
+    placements: ["home", "kc-town-hall", "work-index"],
     publicationStatus: "jamie-authorized",
     releaseState: {
       publicGit: "approved",

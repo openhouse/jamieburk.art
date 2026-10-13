@@ -5,7 +5,8 @@ import {
   computePhotoBindingFingerprintFromModel,
   evaluatePhotoKnowledgeModel,
   loadPhotoKnowledgeModel,
-  renderPhotoReport
+  renderPhotoReport,
+  validateObservedPhotoOccurrences
 } from "../photo-knowledge/lib.mjs";
 
 let loaded;
@@ -80,6 +81,36 @@ test("the generated placement inventory includes the social-preview occurrence",
   assert.match(report, /derivative\.photo\.east-river\.social-preview\.v1/);
   assert.match(report, /Photo: Elana Gordon|Photograph by Elana Gordon/);
   assert.doesNotMatch(report, /undefined/);
+});
+
+test("rendered home photo uses require an explicitly bound occurrence", async () => {
+  const model = await baselineModel();
+  model.observedPhotoOccurrences = [{ photoId: "nycac-market-hotel-banner", route: "/" }];
+  for (const record of Object.values(model.recordsById)) {
+    if (record.asset === model.portfolioPhotos.nycacMarketHotelBanner.wikiId) {
+      if (record.route === "/") record.route = "/work/fair-rent-nyc";
+      if (record.routes) record.routes = record.routes.filter(route => route !== "/");
+    }
+  }
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.rendered_photo_occurrences_bound, false);
+});
+
+test("rendered project photos cannot claim an absent permission source", async () => {
+  const model = await baselineModel();
+  model.observedPhotoOccurrences = [{ photoId: "sunday-dinner-shared-map", route: "/" }];
+  delete model.recordsById["source.permission.jamie-portfolio-album.2026-08-13"];
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.rendered_photo_occurrences_bound, false);
+});
+
+test("current home project covers have source-authorized occurrence bindings", async () => {
+  const model = await baselineModel();
+  assert.equal(validateObservedPhotoOccurrences(model, [
+    { photoId: "nycac-market-hotel-banner", route: "/" },
+    { photoId: "sunday-dinner-shared-map", route: "/" },
+    { photoId: "kc-town-hall-roof-work", route: "/" }
+  ]), true);
 });
 
 test("private source locators fail closed", async () => {
