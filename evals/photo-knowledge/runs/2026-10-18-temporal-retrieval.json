@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-18",
+  "baseCommit": "316bb9bc43dc37bc1c3504ce73ef9e96350eab16",
+  "scope": "Synthetic timestamp-led photo retrieval; no source library access or public photo additions",
+  "change": "Replace prose-only temporal safeguards with a pure capture-time classifier and behavioral regressions while preserving all existing photo gates.",
+  "candidateFiles": {
+    "scripts/photo-knowledge/temporal-retrieval.mjs": "0bea007e0e14f04489cc0518749fdb7c7d8f79ea7bec3d1b98d6d9b19a035eb5",
+    "scripts/tests/photo-temporal-retrieval.test.mjs": "1f4af4669e4781e8d8b6f7635b050dc76a8a3811ebfe47e8ca96ed7171bfe2e8",
+    "scripts/photo-knowledge/lib.mjs": "b58fc44087dc79ca41d70ef1a6595e2b17949373c25d5c96fa6f233ebcee93fa",
+    "package.json": "451c06c81b5f441d06127a54c38575a5e93abd70aa4faa391c2e27bb2368dd33",
+    "docs/knowledge-bank/notebooks/photography/event-transcript-photo-constellations.md": "5f98f035309a27e415556681598c902cef74e572555a64bf8e2e526ad935eea9"
+  },
+  "red": {
+    "command": "node --test scripts/tests/photo-temporal-retrieval.test.mjs",
+    "exitCode": 1,
+    "passed": 0,
+    "failed": 23,
+    "reason": "The required classifier was absent; each behavior first failed the missing-function assertion."
+  },
+  "green": {
+    "command": "npm run photos:hillclimb",
+    "exitCode": 0,
+    "photoChecks": 17,
+    "photoCriteria": 6,
+    "testsPassed": 57,
+    "testsFailed": 0,
+    "newTemporalCases": 23,
+    "wikiCheck": "passed",
+    "testSha256": "3f6c0c928133c117bc02c5a28991ec9b96691df1c2e296e3c190a0e4d2f0308b"
+  },
+  "followupRegression": {
+    "reason": "Protect the capture-date boundary for later photographs of documents and for imports occurring after capture.",
+    "syntheticOnly": true,
+    "productionBehaviorChanged": false,
+    "testFirstObservation": "Both added characterization cases passed existing behavior on their first execution; no new failing-to-passing implementation claim is made.",
+    "command": "npm run photos:hillclimb",
+    "exitCode": 0,
+    "photoChecks": 17,
+    "photoCriteria": 6,
+    "testsPassed": 59,
+    "testsFailed": 0,
+    "temporalCases": 25,
+    "testSha256": "1f4af4669e4781e8d8b6f7635b050dc76a8a3811ebfe47e8ca96ed7171bfe2e8",
+    "wikiCheck": "passed",
+    "boundary": "A photo capture interval cannot establish the date of an underlying document or event; a later import cannot move the capture instant."
+  },
+  "permissionReceipt": {
+    "state": "verified-carried-forward",
+    "candidateFingerprint": "abe2882585eecb337c1c1dc7e753ca82ec0835937b41b3a555361deefac88fbf",
+    "unchangedBindingFingerprint": "588bb64836229931727d7236a633f3eecfe8bd95446479260ff86d37d1946741",
+    "explanation": "The existing helper independently compared the frozen base checkout and current binding-relevant records. This preserves prior verification for an unchanged approved derivative; it is not fresh source-library verification."
+  },
+  "fullCheck": {
+    "command": "npm run check",
+    "exitCode": 1,
+    "state": "hold",
+    "firstAttempt": "Sandbox denied local loopback listeners; rerun with permitted loopback access passed the 40 public-language tests.",
+    "blockingStage": "evals:professor-lenses",
+    "failedCriteria": ["candidate-fingerprint", "unanimous-holdouts"],
+    "currentCandidateSha256": "ea63cae85d422bac902f81b0236702d5065133749be643fe70ab46a94d7df788",
+    "matchingHoldouts": 0,
+    "requiredHoldouts": 6,
+    "resolution": "Fresh independent exact-candidate reviews are required. No prior scorecard was relabeled."
+  },
+  "publicSafety": {
+    "command": "npm run public-safety",
+    "exitCode": 0,
+    "existingCarefulClaimWarnings": 11,
+    "applicationFilesChanged": 0,
+    "newPhotosPublished": 0
+  },
+  "limits": [
+    "An explicit offset is supplied evidence, not validation of an IANA time zone or a camera clock.",
+    "Temporal overlap yields only a candidate requiring visual review.",
+    "Identity, event membership, captions and publication rights are never established by this classifier.",
+    "Synthetic passing cases do not establish source-library coverage or human approval.",
+    "Full portfolio readiness and exact-candidate hosted checks remain separate; the prior professor-lens hold is not cleared here."
+  ],
+  "humanApproval": "not-asserted",
+  "hostedChecks": "not-run-for-this-candidate",
+  "deployment": "not-performed"
+}

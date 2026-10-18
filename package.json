@@ -63,7 +63,7 @@
     "photos:health": "node scripts/photo-knowledge/cli.mjs health",
     "photos:edition": "node scripts/photo-knowledge/cli.mjs edition",
     "photos:recollection": "node scripts/photo-knowledge/cli.mjs recollection",
-    "photos:test": "node --test scripts/tests/photo-knowledge.test.mjs",
+    "photos:test": "node --test scripts/tests/photo-knowledge.test.mjs scripts/tests/photo-temporal-retrieval.test.mjs",
     "photos:hillclimb": "npm run photos:check && npm run photos:test && npm run photos:report && npm run wiki:graph && npm run wiki:report && npm run wiki:check",
     "evals:portfolio": "node scripts/check-portfolio-evals.mjs",
     "evals:public-language": "node scripts/check-public-language.mjs",
