@@ -94,10 +94,57 @@ test("public project-site UUID filenames do not become private locator findings"
   model.sourceTexts[
     "docs/knowledge-bank/assets/photographs/project-sites/public-uuid.md"
   ] =
-    "https://example.org/content/images/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg";
+    `---
+id: asset.photo.project-site.example-93383c1e-5096-48d2-9667-1b4f82221c88
+canonical_path: docs/knowledge-bank/assets/photographs/project-sites/example-93383c1e-5096-48d2-9667-1b4f82221c88.md
+family_hint: 93383c1e-5096-48d2-9667-1b4f82221c88
+original_public_urls:
+  - https://example.org/content/images/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg
+archived_evidence_urls:
+  - https://web.archive.org/web/20260101000000id_/https://example.org/content/images/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg
+---
+Held public image source, not a private catalog binding.
+`;
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.no_private_locator_leakage, true);
 });
+
+for (const [name, source] of [
+  ["a bare catalog UUID", "Photo UUID: 123e4567-e89b-42d3-a456-426614174000"],
+  ["a native Photos identifier", "PHAsset.localIdentifier: opaque-catalog-id/L0/001"],
+  ["a SQLite Photos identifier", "ZUUID: opaque-catalog-id"],
+  ["a private temporary path", "/private/tmp/photo-review/selection.json"],
+  ["a temporary path", "/tmp/photo-review/selection.json"],
+  ["a file URI", "file:///photo-review/selection.json"],
+  ["a Photos library locator", "Example.photoslibrary/database/Photos.sqlite"],
+  ["an unsupported derived family identifier", "---\nfamily_hint: 123e4567-e89b-42d3-a456-426614174000\n---\n"],
+  ["an archive URL without an original public source", "---\narchived_evidence_urls:\n  - https://web.archive.org/web/20260101000000id_/https://example.org/123e4567-e89b-42d3-a456-426614174000.jpeg\n---\n"]
+]) {
+  test(`project-site census exemption cannot hide ${name}`, async () => {
+    const model = await baselineModel();
+    model.sourceTexts["docs/knowledge-bank/assets/photographs/project-sites/private-fixture.md"] = source;
+    const result = evaluatePhotoKnowledgeModel(model);
+    assert.equal(result.checks.no_private_locator_leakage, false);
+    assert.equal(result.passed, false);
+  });
+}
+
+for (const [name, suffix] of [
+  ["a private identifier field", "\nprivate_catalog_uuid: 93383C1E-5096-48D2-9667-1B4F82221C88\n---\n"],
+  ["a frontmatter comment", "\nfamily_hint: 93383C1E-5096-48D2-9667-1B4F82221C88 # Private catalog UUID: 93383C1E-5096-48D2-9667-1B4F82221C88\n---\n"],
+  ["a hyphenated private field", "\nprivate-urls:\n  - https://example.org/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg\n---\n"],
+  ["a body identifier", "\n---\nCatalog UUID: 93383C1E-5096-48D2-9667-1B4F82221C88\n"],
+  ["a query-string identifier", "\narchived_evidence_urls:\n  - https://web.archive.org/web/20260101000000id_/https://example.org/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg?private_id=93383C1E-5096-48D2-9667-1B4F82221C88\n---\n"]
+]) {
+  test(`a public UUID cannot whitelist ${name}`, async () => {
+    const model = await baselineModel();
+    model.sourceTexts["docs/knowledge-bank/assets/photographs/project-sites/public-and-private.md"] =
+      "---\noriginal_public_urls:\n  - https://example.org/93383C1E-5096-48D2-9667-1B4F82221C88.jpeg" + suffix;
+    const result = evaluatePhotoKnowledgeModel(model);
+    assert.equal(result.checks.no_private_locator_leakage, false);
+    assert.equal(result.passed, false);
+  });
+}
 
 test("project-site census files still reject private paths", async () => {
   const model = await baselineModel();

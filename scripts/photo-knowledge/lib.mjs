@@ -357,6 +357,68 @@ function dateOnly(value) {
   return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
 }
 
+function maskDocumentedPublicCensusIds(source) {
+  const uuidPattern = /\b[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}\b/gi;
+  let data;
+  try {
+    data = matter(source).data;
+  } catch {
+    return source;
+  }
+  const originals = (Array.isArray(data.original_public_urls) ? data.original_public_urls : [])
+    .filter((value) => {
+      try {
+        const url = new URL(value);
+        return /^https?:$/.test(url.protocol) && !url.username && !url.password &&
+          /\.(?:jpe?g|png|gif|webp|avif)$/i.test(url.pathname);
+      } catch {
+        return false;
+      }
+    });
+  const publicIds = new Set(originals.flatMap((value) =>
+    (new URL(value).pathname.match(uuidPattern) ?? []).map((id) => id.toLowerCase())
+  ));
+  const maskIds = (value) => value.replace(uuidPattern, (id) =>
+    publicIds.has(id.toLowerCase()) ? "public-image-id" : id
+  );
+  const allowedUrls = new Set(originals);
+  for (const value of Array.isArray(data.archived_evidence_urls) ? data.archived_evidence_urls : []) {
+    try {
+      const url = new URL(value);
+      if (/^https?:$/.test(url.protocol) && url.hostname === "web.archive.org" &&
+          !url.username && !url.password && originals.some((original) =>
+            url.pathname.replace(/^\/web\/\d+(?:[a-z]+_)?\//, "") === original
+          )) allowedUrls.add(value);
+    } catch { /* Malformed values remain visible to the leakage check. */ }
+  }
+
+  // Exempt only source-derived values in these exact frontmatter fields. Do not
+  // remove comments, body text, query strings, or private fields from the scan.
+  return source.replace(/^(---\r?\n)([\s\S]*?)(\r?\n---)/, (_, open, frontmatter, close) => {
+    let field = "";
+    const lines = frontmatter.split(/\r?\n/).map((line) => {
+      const key = line.match(/^([^\s:#][^:]*):/);
+      if (key) field = key[1];
+      if (key && ["id", "canonical_path", "family_hint"].includes(field)) {
+        const scalar = line.match(/^([^:]+:\s*)(["']?)([^"'#\r\n]+?)\2(\s*(?:#.*)?)$/);
+        if (scalar && typeof data[field] === "string" && scalar[3].trim() === data[field]) {
+          return `${scalar[1]}${scalar[2]}${maskIds(scalar[3])}${scalar[2]}${scalar[4]}`;
+        }
+      }
+      if (["original_public_urls", "archived_evidence_urls"].includes(field)) {
+        const item = line.match(/^\s+-\s+["']?(https?:\/\/[^\s"']+)["']?\s*$/);
+        if (item && allowedUrls.has(item[1])) {
+          const url = new URL(item[1]);
+          url.pathname = maskIds(url.pathname);
+          return line.replace(item[1], url.href);
+        }
+      }
+      return line;
+    });
+    return `${open}${lines.join("\n")}${close}`;
+  });
+}
+
 function candidateReceiptState(model, bindingRelevant) {
   const receipt = model.candidateReceipt;
   const exactCandidate =
@@ -421,18 +483,16 @@ export function evaluatePhotoKnowledgeModel(model) {
   const bindingRelevant = computePhotoBindingFingerprintFromModel(model);
   const receiptState = candidateReceiptState(model, bindingRelevant);
   const forbiddenMetadataChunks = model.webp.chunks.filter((item) => ["EXIF", "XMP ", "ICCP"].includes(item));
-  const privateLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
-  const publicCensusLeakPattern = /(?:\/(?:Users|Volumes)\/|Mobile Documents|supporting-materials|\bIMG_\d+\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
+  const privateLeakPattern = /(?:\/(?:Users|Volumes|private|tmp)\/|file:\/\/|Mobile Documents|supporting-materials|\.photoslibrary\b|Photos\.sqlite|\b(?:PHAsset|localIdentifier|ZUUID)\b|\bIMG_\d+\b|\b[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}\b|\bpfp-[a-f0-9]+\b|sourceAssetId|privatePreview)/i;
   const projectSiteCensusPrefix = "docs/knowledge-bank/assets/photographs/project-sites/";
   const governanceTexts = Object.entries(model.sourceTexts)
     .filter(([file]) => !file.startsWith("scripts/"));
   const leakage = governanceTexts
     .filter(([file]) => !file.startsWith("scripts/"))
     .filter(([file, source]) =>
-      (file.startsWith(projectSiteCensusPrefix)
-        ? publicCensusLeakPattern
-        : privateLeakPattern
-      ).test(source)
+      privateLeakPattern.test(file.startsWith(projectSiteCensusPrefix)
+        ? maskDocumentedPublicCensusIds(source)
+        : source)
     )
     .map(([file]) => file);
   const requiredRecords = [
