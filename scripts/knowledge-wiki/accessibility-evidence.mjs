@@ -101,6 +101,7 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.violations.length === 0 &&
       row.overflowElements === 0 &&
       row.brokenImagesAfterScroll === 0 &&
+      row.unloadedImagesAfterScroll === 0 &&
       row.unlabeledImages === 0 &&
       row.failedRequests.length === 0 &&
       row.h1Count === 1 &&
@@ -125,6 +126,8 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.focusedVisualReview?.route === "/" &&
     report.focusedVisualReview?.passed === true &&
     report.focusedVisualReview?.occurrences?.length ===
+      canonicalAccessibilityViewports.length &&
+    new Set(report.focusedVisualReview.occurrences.map((occurrence) => occurrence.viewport)).size ===
       canonicalAccessibilityViewports.length &&
     report.focusedVisualReview.occurrences.every(
       (occurrence) =>

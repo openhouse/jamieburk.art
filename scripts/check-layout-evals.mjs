@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readApprovedRender } from "./check-social-preview-render.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const defaultRoot = path.resolve(scriptDir, "..");
@@ -16,7 +17,16 @@ function walkFiles(root, relative = "") {
   });
 }
 
-export function evaluateLayout(root = defaultRoot, overrides = {}) {
+function requiresProductionRenderApproval(environment) {
+  if (["APP_ENV", "SITE_ENV", "NEXT_PUBLIC_DEPLOY_ENV"].some((key) => environment[key] === "production") ||
+      environment.NEXT_PUBLIC_ROBOTS_POLICY === "index") return true;
+  return ["SITE_URL", "NEXT_PUBLIC_SITE_URL"].some((key) => {
+    try { return ["jamieburk.art", "www.jamieburk.art"].includes(new URL(environment[key]).hostname); }
+    catch { return false; }
+  });
+}
+
+export function evaluateLayout(root = defaultRoot, overrides = {}, environment = process.env) {
   const readText = (relativePath) =>
     overrides[relativePath] ?? readFileSync(path.join(root, relativePath), "utf8");
   const failures = [];
@@ -436,6 +446,28 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
   const socialPlacement = readText(
     "docs/knowledge-bank/projections/photography/social-preview-east-river.md"
   );
+  let currentRender;
+  try {
+    // The build's byte contract is not a replacement for Jamie's dated approval
+    // of a particular render. The build separately checks the real PNG bytes.
+    currentRender = readApprovedRender(socialPreview);
+  } catch (error) {
+    fail("social-preview-contract", error.message);
+  }
+  const humanApprovedSha256 = socialPlacement.match(/^  rendered_sha256: ([a-f0-9]{64})$/m)?.[1];
+  const renderMatchesHumanApprovedBytes = Boolean(
+    humanApprovedSha256 && currentRender?.sha256 === humanApprovedSha256
+  );
+  const socialPreviewRelease = {
+    currentRenderSha256: currentRender?.sha256 ?? null,
+    humanApprovedSha256: humanApprovedSha256 ?? null,
+    renderMatchesHumanApprovedBytes,
+    production: renderMatchesHumanApprovedBytes ? "approved-render" : "review-required",
+    indexing: renderMatchesHumanApprovedBytes ? "approved-render" : "review-required"
+  };
+  if (requiresProductionRenderApproval(environment) && !renderMatchesHumanApprovedBytes) {
+    fail("social-preview-contract", "Production or indexing requires human approval of the current social-preview render bytes; technical verification cannot inherit approval for another render.");
+  }
   const socialPermission = readText(
     "docs/knowledge-bank/sources/permissions/elana-gordon-east-river-portfolio-2026.md"
   );
@@ -487,7 +519,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     compositionInstructions.some((instruction) => !socialPreview.includes(instruction)) ||
     !socialPreview.includes('renderedFields: ["name", "proposition", "siteLabel"]') ||
     !socialPreview.includes('metadataOnlyFields: ["role", "creatorCredit"]') ||
-    !socialPreview.includes('sha256: "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42"') ||
+    !currentRender ||
+    !humanApprovedSha256 ||
     !appPackage.includes('"social-preview:verify"') ||
     !appPackage.includes("npm run social-preview:verify") ||
     !repositoryScripts.includes("check-social-preview-render.mjs") ||
@@ -564,7 +597,8 @@ export function evaluateLayout(root = defaultRoot, overrides = {}) {
     passed: failures.length === 0,
     failures,
     criteriaCount: evaluation.criteria.length,
-    photoCount: sources.length
+    photoCount: sources.length,
+    socialPreviewRelease
   };
 }
 
@@ -577,4 +611,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
   console.log(`Layout evals passed: ${result.criteriaCount} blocking criteria; ${result.photoCount} manifest-bound photographs.`);
+  if (!result.socialPreviewRelease.renderMatchesHumanApprovedBytes) {
+    console.log("Social preview: current renderer bytes are checked separately by the build; production and indexing require renewed human review of these bytes.");
+  }
 }

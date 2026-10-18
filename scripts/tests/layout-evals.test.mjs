@@ -13,6 +13,58 @@ test("current photographic layout passes every hard gate", () => {
   assert.equal(result.passed, true, JSON.stringify(result.failures, null, 2));
 });
 
+test("a renderer re-verification cannot inherit approval for different historical PNG bytes", () => {
+  const result = evaluateLayout();
+  assert.equal(result.socialPreviewRelease?.renderMatchesHumanApprovedBytes, false);
+  assert.equal(result.socialPreviewRelease?.production, "review-required");
+  assert.equal(result.socialPreviewRelease?.indexing, "review-required");
+});
+
+test("every production or indexing signal blocks render bytes without matching human approval", () => {
+  for (const environment of [
+    { APP_ENV: "production" }, { SITE_ENV: "production" },
+    { NEXT_PUBLIC_DEPLOY_ENV: "production" }, { NEXT_PUBLIC_ROBOTS_POLICY: "index" },
+    { SITE_URL: "https://jamieburk.art/" }, { NEXT_PUBLIC_SITE_URL: "https://jamieburk.art" },
+    { SITE_URL: "https://www.jamieburk.art" },
+    { APP_ENV: "staging", SITE_ENV: "production", NEXT_PUBLIC_ROBOTS_POLICY: "noindex" }
+  ]) {
+    const result = evaluateLayout(undefined, {}, environment);
+    assert.equal(result.passed, false, JSON.stringify(environment));
+    assert.ok(result.failures.some(({ criterion, message }) =>
+      criterion === "social-preview-contract" && /human approval.*current.*render/i.test(message)));
+  }
+});
+
+test("non-indexable staging remains a technical review, while matching approval passes the production byte gate", () => {
+  const staging = evaluateLayout(undefined, {}, { APP_ENV: "staging", SITE_URL: "https://staging-c.jamieburk.art", NEXT_PUBLIC_ROBOTS_POLICY: "noindex" });
+  assert.equal(staging.passed, true);
+  assert.equal(staging.socialPreviewRelease.production, "review-required");
+  const sourcePath = "apps/www/src/data/social-preview.ts";
+  const source = readFileSync(sourcePath, "utf8").replace(staging.socialPreviewRelease.currentRenderSha256, staging.socialPreviewRelease.humanApprovedSha256);
+  const production = evaluateLayout(undefined, { [sourcePath]: source }, { APP_ENV: "production" });
+  assert.equal(production.passed, true);
+  assert.equal(production.socialPreviewRelease.renderMatchesHumanApprovedBytes, true);
+});
+
+test("the current render contract may differ from historical approval without inventing a new human decision", () => {
+  const sourcePath = "apps/www/src/data/social-preview.ts";
+  const source = readFileSync(sourcePath, "utf8").replace(
+    /sha256: "[a-f0-9]{64}"/,
+    `sha256: "${"a".repeat(64)}"`
+  );
+  const result = evaluateLayout(process.cwd(), { [sourcePath]: source });
+  assert.equal(result.passed, true, JSON.stringify(result.failures));
+  assert.equal(result.socialPreviewRelease.production, "review-required");
+});
+
+test("missing historical approval bytes fail closed instead of making the technical render authoritative", () => {
+  const sourcePath = "docs/knowledge-bank/projections/photography/social-preview-east-river.md";
+  const source = readFileSync(sourcePath, "utf8").replace(/  rendered_sha256: [a-f0-9]{64}\n/, "");
+  const result = evaluateLayout(process.cwd(), { [sourcePath]: source });
+  assert.equal(result.passed, false);
+  assert(result.failures.some(({ criterion }) => criterion === "social-preview-contract"));
+});
+
 test("a private archive identifier fails closed", () => {
   const path = "apps/www/src/data/photography.ts";
   const source = `// 12345678-1234-1234-1234-123456789ABC\n${readFileSync(path, "utf8")}`;
@@ -352,14 +404,25 @@ test("the approved-render verifier reads the declarative composition contract", 
     width: 1200,
     height: 630,
     contentType: "image/png",
-    sha256: "abc123"
+    sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
   },`);
   assert.deepEqual(contract, {
     width: 1200,
     height: 630,
     contentType: "image/png",
-    sha256: "abc123"
+    sha256: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
   });
+});
+
+test("the current-render verifier rejects malformed digest and non-PNG contracts", () => {
+  for (const [contentType, sha256] of [["image/png", "abc123"], ["image/jpeg", "a".repeat(64)]]) {
+    assert.throws(() => readApprovedRender(`approvedRender: {
+      width: 1200,
+      height: 630,
+      contentType: "${contentType}",
+      sha256: "${sha256}"
+    },`), /SHA-256|PNG/);
+  }
 });
 
 test("the approved-render verifier reads PNG dimensions and bytes", () => {

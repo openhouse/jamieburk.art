@@ -11,7 +11,7 @@
   "sourceRegistryPath": "evals/opportunity-intake/sources.json",
   "selectionConfigPath": "evals/resumes/public-resume-selection.json",
   "hiringReaderConfigPath": "evals/resumes/hiring-reader-portfolio.json",
-  "currentRunPath": "evals/civic-match/runs/2026-08-20-current.json",
+  "currentRunPath": "evals/civic-match/runs/2026-10-18-current.json",
   "resume": {
     "markdownPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.md",
     "uploadPath": "resumes/2026-08-15/public-active-opportunity-portfolio/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",

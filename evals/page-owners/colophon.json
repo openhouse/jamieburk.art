@@ -7,6 +7,7 @@
   "publicAssetRecordPath": "apps/www/src/data/photography.ts",
   "registryPath": "apps/www/src/data/page-owner-registry.json",
   "currentRunPath": "evals/page-owners/runs/2026-08-22-colophon-page-owners.json",
+  "registryBindingMigrationPath": "evals/page-owners/runs/2026-10-18-colophon-registry-binding-migration.json",
   "publicPacket": {
     "renderedTextPath": "docs/qa/page-owners/colophon-public-page.txt",
     "defaultRenderedTextPath": "docs/qa/page-owners/colophon-public-page-default.txt",

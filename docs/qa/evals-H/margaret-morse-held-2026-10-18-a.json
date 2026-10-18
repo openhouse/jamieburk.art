@@ -1,0 +1,53 @@
+{
+  "evaluator": "fictionalized independent model lens",
+  "reviewerId": "margaret-morse-a-2026-10-18",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    {
+      "route": "/ -> /about",
+      "finding": "The homepage navigation links directly to About, placing the lineage one click away. About's Systems people can inhabit passage names Open House's communal decision-making and many-perspective documentation, then explicitly connects artistic, civic, technical, and social practice to WOWList, Sunday Dinner/196, coalition work, and Knowledge Wiki Graphs. The surrounding technical-project-management framing keeps this relevant to the professional role."
+    },
+    {
+      "route": "/ -> /work/196-sunday-dinner",
+      "finding": "The homepage directly links the project. Its residency reconstruction makes hospitality operational through proposal inquiry, orientation around actual needs, space configuration, independent access, and continued support that preserves the artist's agency. Its gathering reconstruction connects invitation, welcome, food and space, minimal documentation, and follow-up. These are specific ways people enter, influence, and continue a system."
+    },
+    {
+      "route": "/ -> /work/fair-rent-nyc",
+      "finding": "The homepage directly links the case. The website was one part of the room joins a public action surface, the Shoestring Press working circle, and the Market Hotel town hall. Running minutes, source maps, question logs, and next actions show how participation and situated attention become continuity. Jamie's meeting recollection is explicitly distinguished from retained implementation evidence and collective policy outcomes."
+    },
+    {
+      "route": "/ -> /work/wowlist",
+      "finding": "The homepage directly links the case. Natural-language posts and followable keywords use the vocabulary organizers already use; the Sunday Dinner origin, public support workflows, and independent organizer examples explain a social practice becoming a technical interface. The dated historical scale and limited 2026 return threshold remain distinct."
+    },
+    {
+      "route": "/ -> /about -> /lab/source-backed-team-memory",
+      "finding": "The current research method extends the lineage into memory that teammates can inspect, correct, protect, and hand off. The proposed pilot tests another person's ability to find and revise a decision trail. The concrete CallNYC date correction demonstrates documentation changing the public record; proposed client use remains explicitly unproven."
+    },
+    {
+      "route": "Public-safe source note and rendered project text",
+      "finding": "The packet uses a bounded Open House summary and source link, excludes raw educational records and recommendation text, names Richard Caceres and collective contributors, and describes participant-level data as withheld. It does not turn protected praise into faculty authority."
+    }
+  ],
+  "gaps": [
+    "The rubric expressly requires a two-click path and rendered screenshot. Link destinations establish the textual path, but this packet contains extracted text and image alternatives, not rendered screenshots. Visual visibility and hierarchy of the lineage cannot be confirmed from this evidence, so the complete evidence requirement is unmet.",
+    "The assigned inputs include the work index and source-bounded knowledge bank; neither is supplied as an inspectable route or canonical record set. Source notes and public-safe reconstructions support the textual judgment, but do not permit a complete audit of claim wording against canonical source boundaries.",
+    "This is one independent scorecard. The required three-reviewer median and no-score-below-three condition must be calculated separately after the other independent reviews; this review does not establish that aggregate result."
+  ],
+  "safety_findings": [
+    "No raw protected educational record, private correspondence, faculty testimonial, phone number, or participant-level private record was observed in the supplied text.",
+    "Collective credit is explicit for Open House, WOWList, Sunday Dinner, and coalition work. The coalition copy separates implementation from policy causation, and the current knowledge method does not claim finished SaaS or client adoption.",
+    "No romanticized vulnerability was observed. Care is expressed through practical conditions, participant agency, limited documentation, and continuity.",
+    "Photographs are represented only by alternative text and captions; image contents, metadata exclusion, and authorization records were not independently inspected. These observations are a bounded text audit, not a visual, accessibility, privacy-system, or deployment certification."
+  ],
+  "recommendation": "The observed writing strongly satisfies the inhabited-systems concept and warrants a score of 3. Preserve the concise About threshold and the concrete residency, gathering, and coalition sequences. Supply candidate-bound rendered screenshots showing the homepage-to-About path and the relevant public-safe canonical records before treating the complete rubric as passed. Calculate the three-reviewer aggregate separately. No private-source projection is needed to remedy these evidence gaps.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-page-text packet",
+    "reviewedAt": "2026-10-18T19:14:23Z",
+    "filesEdited": false
+  }
+}

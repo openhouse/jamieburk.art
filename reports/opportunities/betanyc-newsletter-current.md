@@ -1,27 +1,29 @@
-# BetaNYC opportunity review — 2026-08-21
+# BetaNYC opportunity review — 2026-10-18
 
-Source: [This week in NYC’s #CivicTech – August 20, 2026](https://www.beta.nyc/2026/08/20/this-week-in-nycs-civictech-august-20-2026/)
+Source: [This week in NYC’s #CivicTech – October 15, 2026](https://www.beta.nyc/2026/10/15/newsletter-2026-week42/)
 
-The issue surfaced 19 leads. 2 cleared the maintained strong-match gate. Promotion is provisional only; official-posting, named-reader, and human review remain required.
+The issue surfaced 21 leads. 0 cleared the maintained strong-match gate. Promotion is provisional only; official-posting, named-reader, and human review remain required.
 
 | Rank | Role | Organization | Fit | Secure | Composite | Disposition |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 1 | Associate Director of Policy Implementation | Campaign Finance Board | 100 | 87 | 94.15 | provisional-strong-match |
-| 2 | Product Manager (First Product Hire) | Polimorphic | 92 | 70 | 82.1 | provisional-strong-match |
-| 3 | Policy Director — NY Senate District 59 (Sen. Kristen Gonzalez) — NY State Senate | Office of Sen. Kristen Gonzalez | 84 | 58 | 72.3 | not-promoted |
-| 4 | Federal Big Tech Accountability Advocate | Public Citizen | 78 | 55 | 67.65 | not-promoted |
-| 5 | Webmaster | Police Department | 54 | 78 | 64.8 | not-promoted |
-| 6 | PROJECT MANAGER | Hra/dept of Social Services | 61 | 68 | 64.15 | not-promoted |
-| 7 | Policy Analyst for Budget, Finance, and Labor | Office of the Mayor | 41 | 75 | 56.3 | not-promoted |
-| 8 | Project Coordinator — Safety Projects / Daylighting | Department of Transportation | 51 | 55 | 52.8 | not-promoted |
-| 9 | Strategic Performance Analyst | Department for the Aging | 53 | 48 | 50.75 | not-promoted |
-| 10 | Assistant Cloud Administrator for the Division of HPD TECH | Housing Preservation & Dvlpmnt | 35 | 63 | 47.6 | not-promoted |
-| 11 | Data Analytics Specialist | Department of Finance | 35 | 63 | 47.6 | not-promoted |
-| 12 | EEO Program Analyst | Equal Employ Practices Comm | 41 | 55 | 47.3 | not-promoted |
-| 13 | Budget Research Analyst | Office of the Comptroller | 39 | 55 | 46.2 | not-promoted |
-| 14 | Wetlands Mitigation Coordinator | Dept of Parks & Recreation | 33 | 55 | 42.9 | not-promoted |
-| 15 | Wetlands Project Associate | Dept of Parks & Recreation | 43 | 40 | 41.65 | not-promoted |
-| 16 | Paragon Policy Fellowship — Fall 2026 Cohort (Fellows & Project Leads) | Paragon Policy Fellowship | 60 | 10 | 37.5 | not-promoted |
-| 17 | Civil Service Pathways Fellowship | DCAS | 55 | 10 | 34.75 | not-promoted |
-| 18 | GIS Lead Specialist | Department of Finance | 23 | 48 | 34.25 | not-promoted |
-| 19 | Community Affairs Advocate | Public Advocate | 31 | 30 | 30.55 | not-promoted |
+| 1 | Community Engagement, Capacity Building Program and Data Manager | NYC Department of Health and Mental Hygiene | 76 | 68 | 72.4 | not-promoted |
+| 2 | Data Governance & Special Projects Coordinator, Bureau of Vital Statistics | NYC Department of Health and Mental Hygiene | 62 | 68 | 64.7 | not-promoted |
+| 3 | Senior Advisor, Multifamily Climate Solutions | NYC Department of Environmental Protection | 57 | 70 | 62.85 | not-promoted |
+| 4 | Health Product Development & Engineering Lead, Bureau of Data and Technology & Strategy | NYC Department of Health and Mental Hygiene | 69 | 55 | 62.7 | not-promoted |
+| 5 | Research Advisor | NYC Office of the Mayor | 47 | 75 | 59.6 | not-promoted |
+| 6 | Senior Director of Product Delivery | NYC Housing Authority | 60 | 55 | 57.75 | not-promoted |
+| 7 | Program Coordinator, Cycling & Micromobility Unit | NYC Department of Transportation | 57 | 55 | 56.1 | not-promoted |
+| 8 | Industry & Market Senior Analyst | NYC Taxi & Limousine Commission | 45 | 58 | 50.85 | not-promoted |
+| 9 | Mainframe Programmer Analyst | NYC Financial Information Services Agency | 39 | 65 | 50.7 | not-promoted |
+| 10 | Youth Liaison | NYC Office of the Mayor | 41 | 60 | 49.55 | not-promoted |
+| 11 | Senior Environmental Planner, Division of Building and Land Development Services | NYC Department of Housing Preservation and Development | 43 | 48 | 45.25 | not-promoted |
+| 12 | Director of Project and Business Operations Management | NYC Department of Environmental Protection | 32 | 55 | 42.35 | not-promoted |
+| 13 | City Research Scientist | NYC Police Department | 29 | 48 | 37.55 | not-promoted |
+| 14 | Senior Investigative Analyst | Manhattan District Attorney’s Office | 33 | 40 | 36.15 | not-promoted |
+| 15 | Assistant Deputy Director, Intergovernmental Relations | NYC Office of Management and Budget | 14 | 55 | 32.45 | not-promoted |
+| 16 | Director of Curb Planning and Management | NYC Department of Transportation | 14 | 48 | 29.3 | not-promoted |
+| — | Call for proposals, Digital Democracy Edinburgh | TICTeC and mySociety | — | — | — | official-verification-required |
+| — | Data Scientist, Technology, Data, & Knowledge Management | National Center for State Courts | — | — | — | official-verification-required |
+| — | Digital Director | New America | — | — | — | official-verification-required |
+| — | Director of Evaluation, CUNY CARES | Research Foundation of CUNY | — | — | — | official-verification-required |
+| — | Principal Court Management Consultant, Tech, Data, and Knowledge Management | National Center for State Courts | — | — | — | official-verification-required |

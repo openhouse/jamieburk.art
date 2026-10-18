@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { cpSync, mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -8,7 +9,8 @@ import {
   discoveryChecks,
   evaluatePublicHiring,
   loadHiringSuite,
-  resolveHiringGaps
+  resolveHiringGaps,
+  writeOrCheckOutputs
 } from "./employment-lib.mjs";
 import { compileWiki, defaultRepoRoot } from "./lib.mjs";
 
@@ -245,4 +247,33 @@ test("exclusionary hard screens fail closed", () => {
   const oti = evaluatePublicHiring(root).report.opportunities.find((item) => item.id.includes("nyc-oti"));
   assert.equal(oti.hardScreenBlocked, true);
   assert.equal(oti.decision, "hard-screen-exclusion");
+});
+
+test("employment reports refuse dirty-source publication and remain stable after a report-only commit", () => {
+  const root = candidateFixture();
+  const git = (...args) => execFileSync("git", args, { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+  git("init", "-q");
+  git("config", "user.name", "Report regression fixture");
+  git("config", "user.email", "fixture@example.invalid");
+  git("add", ".");
+  git("commit", "-qm", "Commit candidate source");
+  const source = path.join(root, "apps/www/src/app/page.tsx");
+  writeFileSync(source, `${readFileSync(source, "utf8")}\n`);
+  const dirty = evaluatePublicHiring(root);
+  assert.equal(dirty.report.candidatePathsClean, false);
+  assert.throws(
+    () => writeOrCheckOutputs(root, dirty.outputs),
+    /commit.*candidate.*source/i,
+    "A report generated against uncommitted source would become stale on commit."
+  );
+  git("add", "apps/www/src/app/page.tsx");
+  git("commit", "-qm", "Commit revised source before generating evidence");
+  const clean = evaluatePublicHiring(root);
+  assert.equal(clean.report.candidatePathsClean, true);
+  assert.deepEqual(writeOrCheckOutputs(root, clean.outputs), []);
+  git("add", "reports");
+  git("commit", "-qm", "Record evidence for committed source");
+  const after = evaluatePublicHiring(root);
+  assert.equal(after.report.candidateSha, clean.report.candidateSha);
+  assert.deepEqual(writeOrCheckOutputs(root, after.outputs, true), []);
 });

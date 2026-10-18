@@ -1,0 +1,99 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the supplied Warren Sack rubric; not Warren Sack's participation, endorsement, or approval",
+  "reviewerId": "warren-sack-b-2026-10-18-r2",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Plain-language recursive method within two clicks of the homepage",
+      "routes": ["/", "/about"],
+      "finding": "The desktop homepage screenshot visibly offers About in its navigation. The rendered /about route states: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. The same page links to project evidence and supplies three parallel systems loops plus additional continuities. This gives a one-click desktop path to the method and a second click to the linked project pages."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace: WOW List",
+      "route": "/work/wowlist",
+      "observe": "Calendars made with Sunday Dinner and organizers' existing language of scenes, interests, venues, and places establish the social problem: event distribution should follow community vocabulary and distributed organizers.",
+      "model": "Followable keyword communities and collaboratively editable natural-language posts translate those relationships into a product model.",
+      "interface": "Event publishing, profiles, followed lists, weekly email, and embedded local calendars turn the model into usable interfaces.",
+      "social_use_and_learning": "The packet names an independent organizer tutorial, the Santa Barbara DIY calendar route, and the 200th Sunday Dinner event's direct WOW List link. These are concrete historical use traces, bounded separately from the July 2017 production snapshot across 35 city ecosystems. Public support threads show how joining, publishing, and following were made understandable to users.",
+      "documentation_and_handoff": "The linked product-support thread, organizer tutorial, and reusable local publishing/distribution workflows supply inspectable continuity beyond a landing-page image. The About comparison connects this operating pattern to organizer distribution needs.",
+      "source_records": [
+        "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+        "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+        "CLM-FACEBOOK-WOWLIST-IN-PRACTICE",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
+        "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
+        "SRC-WOWLIST-SBDIY-ADOPTION"
+      ],
+      "boundary": "This is a historical systems sequence on a current public portfolio page. The present service is explicitly limited to a return threshold and tester invitation; the restored calendar and current adoption are not claimed. Credit stays shared with Richard Caceres and participating organizers."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace: NYC Artist Coalition / FairRentNYC",
+      "route": "/work/fair-rent-nyc",
+      "observe": "Listening meetings, priority ballots, lived experience in cultural spaces, and distinct city/state actors establish the relationship field and its unresolved questions.",
+      "model": "The About loop names the model as testimony, policy lineage, questions, decisions, and accountable actors in a recoverable civic record. The case page explains separation of supported public material, open questions, and protected coordination context.",
+      "interface": "Campaign sites combine issue explanation, Council contact paths, public data, coalition credit, and sources. Meetings, practical sessions, town halls, and hearings are also interfaces through which people participate.",
+      "social_use_and_learning": "The supplied public event records, reporting, and official testimony document collective use across repeated meetings and campaign activity. The Shoestring Press account connects working alignment to a shared site and email list while expressly attributing the exact agreement to Jamie's recollection. The public implementation and meeting evidence remain distinct.",
+      "documentation_and_handoff": "Run-of-show documents, call scripts, running minutes, source maps, question logs, and action trackers form a documented continuation path. The described campaign-memory spine lets collaborators recover context, review decisions, and carry next actions across meetings.",
+      "source_records": [
+        "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION",
+        "CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017",
+        "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"
+      ],
+      "boundary": "The 30+ page quantity and Jamie's role remain approved first-party claims; protected documents are described rather than exposed. Event response counts are not attendance. The recurring use is evidence of a social operating process, not a controlled usability study or proof that Jamie caused legislative outcomes."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace: Sunday Dinner / 196",
+      "route": "/work/196-sunday-dinner",
+      "observe": "Recurring invitations and responses, artist proposals, and video-call orientation make the needs of guests, artists, and collaborators part of the work rather than presuming them from a technical specification.",
+      "model": "The operating-sheet schema relates invitations, responses, attendance, follow-up, and continuity. The residency model relates proposal review, orientation, configuration, independent access, and ongoing availability.",
+      "interface": "The gathering itself, the invitation, and the artist's onboarding/access handoff are interfaces that make the participation model usable.",
+      "social_use_and_learning": "Public 100th and 200th event pages, their organizer attributions, and the bounded 300+ aggregate support recurring collective use. The residency reconstruction explicitly makes expectations discussable, configures conditions around the artist's practice, and allows changes in direction while preserving agency.",
+      "documentation_and_handoff": "Two concrete, labeled reconstructions expose the steps needed to continue: proposal-to-independent-work for residents, and invitation-to-follow-up for recurring gatherings. This is more inspectable than simply calling the work community operations, while keeping participant values and access information private.",
+      "source_records": [
+        "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025",
+        "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES",
+        "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION"
+      ],
+      "boundary": "The workflow reconstructions are identified as reconstructions, not original documents. Milestone titles and aggregate counts establish bounded continuity rather than exact attendance, unique people, consent, or measured community outcomes."
+    },
+    {
+      "requirement": "Learning and correction are connected to a usable current method",
+      "route": "/lab/source-backed-team-memory",
+      "finding": "The CallNYC correction provides a specific recursive example: recovered public chronology changed the project date from 2014-2015 to 2016, and the correction propagated to the work index, case study, and resume. The three graph responsibilities distinguish meaning, evidence, and custody; the proposed handoff test asks another person to find an answer, trace it, correct it, and recognize protected or unresolved material. The page accurately distinguishes this demonstrated portfolio correction from a proposed client pilot."
+    },
+    {
+      "requirement": "Rendered screenshot inspection",
+      "images_inspected": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "finding": "All four supplied images were opened with view_image. The desktop homepage shows the About destination and a legible role/method introduction. The mobile homepage keeps the introduction and principal actions readable. The About desktop screenshot shows the practice framing and the start of Systems people can inhabit; the mobile About screenshot visibly preserves the Open House attribution, citation marker, and linked continuities. These are coherent public reading surfaces rather than a tool list.",
+      "scope_limit": "The supplied screenshots are viewport crops. The exact recursive-method sentence and subsequent comparison rows are established by the rendered route text, not visible in these four cropped images. Menu interaction, keyboard use, and the full lower-page layout were not tested."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof and anti-overclaim audit",
+      "finding": "No protected UCSC evaluation text, grades, testimonial, or faculty endorsement appears in the rendered public routes. Open House is grounded in a bounded public article and collective governance. About explicitly rejects structural-equivalence inference and present proficiency inferred from historical implementation. The lab separates research and proposed acceptance conditions from production SaaS, client adoption, and completed deployment. No Max/Jitter proficiency, disciplinary invention, peer-reviewed research, or sole authorship is inferred from coursework."
+    }
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No material public-safety violation was observed in the supplied rendered text, claim records, or four screenshots. This is an observation about the bounded packet, not an independent audit of omitted private sources or publication permissions.",
+    "The reviewed HTML text does not display Jamie's phone number.",
+    "Collective credits and limitations are visible where social participation, campaign outcomes, and historical scale are discussed.",
+    "This assessment is model analysis under a fictionalized named-person lens; it is not a human study, accessibility certification, the named professor's judgment, or deployment approval."
+  ],
+  "recommendation": "Pass this individual PR-016 rubric assessment for the exact supplied candidate. The method is plainly named, and at least three public project pages allow the full social systems sequence to be reconstructed with concrete interfaces, use traces, and continuity materials. Keep the dated-use, reconstruction, first-party-evidence, and collective-credit boundaries intact. The separate three-reviewer aggregate remains for the parent process to calculate; no claim is made about the other reviews.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:22:24Z",
+    "filesEdited": false
+  }
+}

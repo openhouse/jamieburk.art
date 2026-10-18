@@ -13,6 +13,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import matter from "gray-matter";
 import ts from "typescript";
 
+import { readApprovedRender } from "../check-social-preview-render.mjs";
+
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "../.."
@@ -534,7 +536,17 @@ export function evaluatePhotoKnowledgeModel(model) {
   const selectedRenderSha =
     "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42";
   const selectedVariant = "image-4-editorial-proposition";
+  const currentRenderMatchesHumanDecision = (() => {
+    try {
+      return readApprovedRender(
+        model.sourceTexts["apps/www/src/data/social-preview.ts"] ?? ""
+      ).sha256 === selectedRenderSha;
+    } catch {
+      return false;
+    }
+  })();
   const socialPreviewReleaseHumanApproved =
+    currentRenderMatchesHumanDecision &&
     socialPreviewPhoto?.releaseState?.production === "approved" &&
     socialPreviewPhoto?.releaseState?.indexing === "approved" &&
     socialPreviewPhoto?.releaseState?.decision?.authority === "Jamie Burkart" &&

@@ -1,0 +1,127 @@
+{
+  "evaluator": "Fictionalized independent model lens inspired by Margaret Morse; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-c-2026-10-18-r2",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible threshold connecting artistic, civic, technical, and social practice while preserving professional role",
+      "routes": [
+        "/",
+        "/about"
+      ],
+      "finding": "The homepage identifies the Technical Project Manager - Product Operations & Implementation role and describes requirements, workflows, implementation, and usable documentation. About begins with the same role, then connects Open House's communal decision-making and many-perspective documentation to WOW List, Sunday Dinner/196, coalition work, and Knowledge Wiki Graphs. The lineage explains the operating practice without becoming an extended artist biography.",
+      "source_binding": "The Open House sentence matches CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY and its public Good Times source note. Initiation belongs to Jamie; governance and documentation belong to participants."
+    },
+    {
+      "requirement": "Two-click path and rendered evidence",
+      "routes": [
+        "/ -> /about",
+        "/ -> /about -> /work/196-sunday-dinner",
+        "/ -> /about -> /work/wowlist",
+        "/ -> /about -> /work/fair-rent-nyc"
+      ],
+      "finding": "The desktop homepage screenshot visibly includes About in the header, and packet link destinations identify /about. The mobile screenshot visibly provides Menu, and the rendered navigation includes About. About's mobile screenshot shows the readable 'Systems people can inhabit' section and its linked continuities; the desktop screenshot shows this section directly following the professional introduction. The path requires one desktop navigation click, or opening Menu and selecting About on mobile. Link activation itself was not exercised.",
+      "inspected_screenshots": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "visual_observation": "Both homepage crops retain the professional role, actionable work/resume routes, and a specifically credited shoreline photograph. The About crops retain readable type and hierarchy. The mobile through-line passage visibly joins participation, memory, continuing work, and the four dimensions of practice."
+    },
+    {
+      "requirement": "Project-continuity trace: hospitality, agency, embodiment, and continuity",
+      "routes": [
+        "/about",
+        "/work/196-sunday-dinner"
+      ],
+      "finding": "The residency reconstruction makes care operational: proposal review invites inquiry, orientation makes expectations discussable, configuration responds to the artist's actual practice, access enables independent work, and continued availability preserves artistic agency. The gathering reconstruction joins invitations, responses, food, space, welcome, introductions, minimal documentation, and follow-up. These are concrete ways people inhabit and continue a system.",
+      "source_binding": "The packet labels both specimens as reconstructions from protected workflow/schema evidence, not raw participant records. CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025 supports the coordination claim; the milestone and aggregate-control records bound scale and preserve Julia Fredenburg's co-organizer credit."
+    },
+    {
+      "requirement": "Project-continuity trace: experimentation and participatory interface",
+      "routes": [
+        "/about",
+        "/work/wowlist"
+      ],
+      "finding": "WOW List translated organizers' existing language for scenes, interests, places, and venues into collaboratively editable posts and followable keyword communities. The Sunday Dinner origin, historical support workflows, independent tutorial, and local-calendar example make the connection between social practice and technical interface inspectable. Organizers could shape and distribute their own community calendars.",
+      "source_binding": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT and CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026 distinguish Jamie's account of rationale from public corroboration of workflows. Richard Caceres and community contributors remain credited. The current tester threshold is explicitly separate from the historical calendar."
+    },
+    {
+      "requirement": "Project-continuity trace: place, listening, participation, and collective memory",
+      "routes": [
+        "/about",
+        "/work/fair-rent-nyc"
+      ],
+      "finding": "Listening meetings and priority ballots become practical sessions, public action pathways, hearings, and continued follow-through. 'The website was one part of the room' connects a shared campaign surface, a Shoestring Press working session, and the collective Market Hotel town hall. Minutes, question logs, source maps, and action trackers make it possible for collaborators to recover context and continue decisions.",
+      "source_binding": "CLM-NYCAC-PARTICIPATION-SYSTEM, CLM-NYCAC-CABARET-SAFETY-ORGANIZING, and CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026 bound these claims. The Shoestring meeting agreement is labeled Jamie's recollection; retained implementation evidence is described separately. Legislative outcomes remain collective."
+    },
+    {
+      "requirement": "Current continuation of the inhabited-systems practice",
+      "routes": [
+        "/about",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "Knowledge Wiki Graphs carries attention and care into current research through source custody, correction paths, protected context, and human review. The proposed handoff asks a teammate to find an answer, trace it, correct it, and recognize what remains open or protected. The actual CallNYC date-correction example gives this continuity a concrete instance beyond abstract values.",
+      "source_binding": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026 and the exploring/proposed RFC source records support a developing method. The page distinguishes that method, its synthetic example, and a proposed engagement from a completed client pilot or production platform."
+    },
+    {
+      "requirement": "Explain why these systems exceed conventional administration",
+      "routes": [
+        "/about",
+        "/work/196-sunday-dinner",
+        "/work/wowlist",
+        "/work/fair-rent-nyc",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "Across the examples, participants can influence the form of the work: artists discuss needs and retain agency, organizers use their own community language, coalition collaborators recover and revise shared context, and teammates can challenge a knowledge record. Documentation preserves the ability to continue together while withholding private participant details. This gives the stated through-line specific operational meaning."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "scope-limit",
+      "finding": "The permitted evidence supports all individually assessable PR-015 requirements. Source URLs and live interactions were not independently reopened; the review assesses the supplied rendered text, selected public claim records, and four images."
+    },
+    {
+      "severity": "scope-limit",
+      "finding": "The screenshots cover the home hero and About threshold, not every project section. Detailed project continuities are supported by the supplied rendered route text. No inference is made about unseen visual layouts, accessibility certification, or participant outcomes."
+    },
+    {
+      "severity": "aggregate-out-of-scope",
+      "finding": "This is one independent model scorecard. The three-reviewer median and minimum must be calculated separately."
+    }
+  ],
+  "safety_findings": [
+    {
+      "status": "no-violation-observed",
+      "area": "collective credit",
+      "finding": "Open House participants retain communal governance and documentation credit; WOW List names Richard Caceres and community contributors; Sunday Dinner names Julia Fredenburg for the 200th event; coalition pages expressly preserve collective campaign and policy credit."
+    },
+    {
+      "status": "no-violation-observed",
+      "area": "participant privacy and protected sources",
+      "finding": "The reviewed routes show bounded descriptions and labeled workflow reconstructions, with no participant rows, private correspondence, access instructions, raw coalition notes, or raw educational evaluations observed. Public source records contain citations, notes, and limitations rather than raw source bodies. The Open House article is summarized and linked, not reproduced. The source note explicitly withholds the unapproved Morse recommendation and protected UCSC records."
+    },
+    {
+      "status": "no-violation-observed",
+      "area": "testimonials and romanticized vulnerability",
+      "finding": "No faculty testimonial or private praise is projected in the rendered routes. Hospitality and care are demonstrated through working conditions, agency, safety, and continuity; no participant hardship is used to manufacture authority or emotional spectacle."
+    },
+    {
+      "status": "no-violation-observed",
+      "area": "current status, authority, and protected locators",
+      "finding": "WOW List's current threshold is distinguished from its historical service; Knowledge Wiki Graphs is identified as research and a developing method. The supplied rendered-route text yielded no phone link, conventional parenthesized phone number, private /Users or /Volumes locator, or faculty-name projection in a bounded text check. This is not an exhaustive HTML or asset audit."
+    }
+  ],
+  "recommendation": "Pass this individual PR-015 holdout review at 4/4. The candidate makes the artistic, civic, technical, and social continuity specific, legible, and bounded by public evidence. Preserve the distinctions between first-person account, public corroboration, reconstruction, historical operation, and current research. This score is fictionalized model analysis, not a human study, Margaret Morse's participation, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:22:21Z",
+    "filesEdited": false
+  }
+}

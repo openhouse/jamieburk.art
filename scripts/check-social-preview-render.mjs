@@ -23,12 +23,19 @@ export function readApprovedRender(source) {
     return value;
   };
 
-  return {
+  const contract = {
     width: readNumber("width"),
     height: readNumber("height"),
     contentType: readString("contentType"),
     sha256: readString("sha256")
   };
+  if (!/^[a-f0-9]{64}$/.test(contract.sha256)) {
+    throw new Error("approvedRender.sha256 must be a complete SHA-256 digest.");
+  }
+  if (contract.contentType !== "image/png" || contract.width !== 1200 || contract.height !== 630) {
+    throw new Error("The social preview must declare the 1200x630 PNG contract.");
+  }
+  return contract;
 }
 
 export function inspectPng(bytes) {

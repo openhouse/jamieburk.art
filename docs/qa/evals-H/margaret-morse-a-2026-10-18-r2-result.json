@@ -1,0 +1,64 @@
+{
+  "evaluator": "Fictionalized independent Margaret Morse model lens; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-a-2026-10-18-r2",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible threshold within two clicks, supporting the professional role",
+      "routes": ["/", "/about"],
+      "finding": "The desktop homepage visibly offers About in its primary navigation, giving a one-click route to the lineage. The mobile homepage shows Menu, and the supplied rendered navigation includes About, supporting a two-action menu route. The desktop and mobile About screenshots visibly render Systems people can inhabit and the bounded Open House account. The mobile screenshot also shows the linked continuation through WOWList, Sunday Dinner and 196, NYC Artist Coalition, and Knowledge Wiki Graphs. The prominent technical-project-manager role and implementation introduction frame this as a practice lineage rather than an artist biography. Menu operation was not interactively tested."
+    },
+    {
+      "requirement": "Project continuity: experimentation and participant influence",
+      "routes": ["/about", "/work/wowlist"],
+      "finding": "Open House establishes communal decision-making and many-perspective documentation, with initiation distinguished from collective governance. WOW List makes the continuing design principle concrete: organizers' own language becomes collaboratively editable event text, followable keyword communities, local calendars, and distribution workflows. The public support record, independent tutorial reference, and the 200th Sunday Dinner's direct event-page link provide specific evidence routes. Credit remains shared with Richard Caceres and organizers, while the historical service is distinguished from the small 2026 return threshold."
+    },
+    {
+      "requirement": "Project continuity: hospitality, place, and agency",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "finding": "The residency reconstruction moves through proposal, orientation, preparation of actual working conditions, independent access, and continued availability. Treating a proposal as an opening for inquiry and leaving the artist agency over changes makes the human purpose of the handoff inspectable. The gathering reconstruction specifies food, space, welcome, introductions, minimal continuity records, and follow-up. These are concrete conditions for inhabiting a system, not merely administrative task labels. Both specimens are explicitly reconstructions and withhold participant-level values."
+    },
+    {
+      "requirement": "Project continuity: civic participation, attention, and documentation",
+      "routes": ["/", "/about", "/work/fair-rent-nyc"],
+      "finding": "The homepage's screen-and-room passage and the case study's shared public surface, Shoestring Press working session, and Market Hotel public room connect web implementation to situated collective activity. Listening meetings and priority ballots lead to practical sessions, campaign pathways, minutes, question logs, and action trackers. The specific Shoestring alignment claim is marked as Jamie's recollection, with implementation supported separately. Campaign outcomes remain collective. The account explains why source maps and handoffs help people remember, question, and continue work across meetings."
+    },
+    {
+      "requirement": "Continuity into current research without inflated maturity",
+      "routes": ["/about", "/lab/source-backed-team-memory"],
+      "finding": "The current research extends the participant-oriented method into a proposed small handoff: a teammate should find an answer, inspect its source, correct it, recognize protected material, and decide whether to continue. The concrete CallNYC date correction illustrates revision across portfolio surfaces. The lab preserves disagreement and human release authority, and explicitly denies finished-platform or completed-client-pilot status. Historical work is not used to claim current proficiency automatically."
+    },
+    {
+      "requirement": "Why these systems differ from conventional administration",
+      "routes": ["/about", "/work/wowlist", "/work/196-sunday-dinner", "/work/fair-rent-nyc"],
+      "finding": "The through-line gives the reader an explicit question about recognizing relationships, participating, remembering, and continuing. The cases supply observable mechanisms for each: editable community vocabulary, artist-led changes to residency conditions, listening and priority-setting practices, and recoverable decisions and next actions. This is supported by project detail rather than resting solely on the phrase Systems people can inhabit."
+    },
+    {
+      "requirement": "Rendered visual evidence",
+      "imagesInspected": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "finding": "All four images were directly inspected with view_image. The homepage combines an identifiable shoreline and bodily presence with an explicit professional role, usable-systems promise, work and resume routes, and photographic credit. The About views keep the lineage legible through restrained hierarchy, readable wrapping, and a visible citation. The screenshots do not establish interaction behavior or constitute an accessibility certification."
+    },
+    {
+      "requirement": "Collective credit, participant privacy, and protected-source exclusion",
+      "finding": "The reviewed packet contains a bounded Open House paraphrase and source record, not the raw article. No protected UCSC evaluation text, grades, student identifiers, private recommendation wording, or private correspondence was observed. The source note expressly withholds the unverified testimonial. WOW List shares builder and organizer credit; Sunday Dinner names Julia Fredenburg as co-organizer for the documented 200th event; coalition testimony, implementation, and policy outcomes are kept distinct. The reconstructed workflows publish neither participant values nor access details. No romanticized vulnerability or phone number in the supplied rendered website text was observed. These findings apply to the supplied packet and four images, not an independent audit of unseen source custody or linked destinations."
+    }
+  ],
+  "gaps": [],
+  "safety_findings": [],
+  "recommendation": "Pass this individual PR-015 holdout review. The candidate makes the artistic, civic, technical, and social lineage specific, legible, and useful to its professional framing while preserving the reviewed privacy and collective-credit boundaries. Calculate the three-reviewer aggregate separately. This model review is not real-person participation, a human study, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:20:21Z",
+    "filesEdited": false
+  }
+}

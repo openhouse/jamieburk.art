@@ -24,6 +24,66 @@ export function pageRegistryBinding(registry, pageId) {
   };
 }
 
+function scopedRegistryMatches(candidate) {
+  const { config, registry, run, registryBindingMigration: migration } = candidate;
+  const scopedHash = sha256(
+    JSON.stringify(pageRegistryBinding(registry, config.pageId))
+  );
+  if (run.registryBinding === "page-and-public-boundary-v1") {
+    return run.pageRegistrySha256 === scopedHash;
+  }
+  // A legacy full-registry binding is stronger than this page-scoped binding.
+  // Preserve its review intact and require a frozen, hash-verified bridge; do
+  // not infer that a new review happened or rebind changed reviewed material.
+  return (
+    !run.registryBinding &&
+    !run.pageRegistrySha256 &&
+    migration?.version === 1 &&
+    migration?.kind === "full-registry-to-page-scope" &&
+    migration.pageId === config.pageId &&
+    migration.newReviewExecuted === false &&
+    migration.publicationAuthorized === false &&
+    migration.reviewedRunSha256 === sha256(JSON.stringify(run)) &&
+    migration.registrySnapshot != null &&
+    sha256(JSON.stringify(migration.registrySnapshot)) === run.registrySha256 &&
+    sha256(
+      JSON.stringify(pageRegistryBinding(migration.registrySnapshot, config.pageId))
+    ) === scopedHash
+  );
+}
+
+export function createColophonRegistryBindingMigration(candidate) {
+  const { registry, run, config } = candidate;
+  if (
+    !run ||
+    run.registryBinding ||
+    run.pageRegistrySha256 ||
+    run.registrySha256 !== sha256(JSON.stringify(registry))
+  ) {
+    throw new Error("The historical full registry must match exactly before migration.");
+  }
+  const migration = {
+    version: 1,
+    kind: "full-registry-to-page-scope",
+    pageId: config.pageId,
+    reviewedRunSha256: sha256(JSON.stringify(run)),
+    registrySnapshot: structuredClone(registry),
+    newReviewExecuted: false,
+    publicationAuthorized: false,
+    note: "Deterministic schema migration only. The historical run, source, prompt version, rendered text, responsive screenshots, assessments, and verdicts are unchanged. The frozen full-registry snapshot reproduces the original binding and derives the existing page-and-public-boundary scope. Human approval remains separate."
+  };
+  const result = evaluateColophonPageOwners({
+    ...candidate,
+    registryBindingMigration: migration
+  });
+  if (!result.pass) {
+    throw new Error(
+      `The reviewed candidate must remain valid before migration: ${result.failures.join(" ")}`
+    );
+  }
+  return migration;
+}
+
 export function loadColophonCandidate(root = repoRoot) {
   const config = readJson(root, configPath);
   const packet = config.publicPacket;
@@ -51,6 +111,11 @@ export function loadColophonCandidate(root = repoRoot) {
       : null,
     run: existsSync(path.join(root, config.currentRunPath))
       ? readJson(root, config.currentRunPath)
+      : null,
+    registryBindingMigration:
+      config.registryBindingMigrationPath &&
+      existsSync(path.join(root, config.registryBindingMigrationPath))
+      ? readJson(root, config.registryBindingMigrationPath)
       : null
   };
 }
@@ -170,7 +235,13 @@ export function evaluateColophonPageOwners(
   check(
     "protected-material-excluded",
     !/\/(?:Users|Volumes|private|tmp)\/|private transcript|private email|signed url/i.test(
-      JSON.stringify({ config, registry, pageSource, run })
+      JSON.stringify({
+        config,
+        registry,
+        pageSource,
+        run,
+        registryBindingMigration: candidate.registryBindingMigration
+      })
     ),
     "The public page-owner packet exposes a private locator or protected source class."
   );
@@ -198,9 +269,7 @@ export function evaluateColophonPageOwners(
       check(
         "exact-candidate-bindings",
         run.pageSourceSha256 === sha256(pageSource) &&
-          run.registryBinding === "page-and-public-boundary-v1" &&
-          run.pageRegistrySha256 ===
-            sha256(JSON.stringify(pageRegistryBinding(registry, config.pageId))) &&
+          scopedRegistryMatches(candidate) &&
           run.promptVersion === config.modelGate.promptVersion &&
           run.defaultPublicPageTextSha256 === sha256(defaultRenderedText) &&
           run.publicPageTextSha256 === sha256(renderedText) &&

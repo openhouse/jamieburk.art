@@ -102,3 +102,21 @@ test("a coordinated canonical-viewport substitution fails closed", () => {
   }
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
+
+test("duplicating one caption viewport cannot stand in for four observed widths", () => {
+  const report = structuredClone(current.report);
+  report.publicSurfaceFingerprint = current.current.fingerprint;
+  report.publicSurfaceFileCount = current.current.fileCount;
+  report.focusedVisualReview.occurrences = Array.from({ length: 4 }, () =>
+    structuredClone(report.focusedVisualReview.occurrences[0])
+  );
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});
+
+test("an image still unloaded after scrolling fails even if the summary claims success", () => {
+  const report = structuredClone(current.report);
+  report.publicSurfaceFingerprint = current.current.fingerprint;
+  report.publicSurfaceFileCount = current.current.fileCount;
+  report.rows[0].unloadedImagesAfterScroll = 1;
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
+});

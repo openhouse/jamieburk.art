@@ -1,0 +1,76 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the packet's Margaret Morse rubric; not Margaret Morse's participation, opinion, endorsement, or approval",
+  "reviewerId": "margaret-morse-b-2026-10-18-r2",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible threshold connecting artistic, civic, technical, and social practice within two clicks",
+      "routes": ["/", "/about"],
+      "observation": "The desktop home screenshot visibly offers About in the primary navigation, and the rendered destination is /about: a one-click path. The About screenshot places the target professional role before the distinct heading Systems people can inhabit and the Open House claim. The mobile About screenshot visibly carries the same heading, the communal decision-making and many-perspective documentation wording, and linked continuities through WOWList, Sunday Dinner and 196, NYC Artist Coalition, and Knowledge Wiki Graphs. This is a bounded account of how the practice works, not an artist biography displacing the professional purpose."
+    },
+    {
+      "requirement": "Source-bounded experimental lineage",
+      "routes": ["/about"],
+      "observation": "Open House is described as a ten-day experiment Jamie initiated, with governance and documentation performed by participants. CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY and SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28 supply the public reporting basis and explicit collective-credit and participant-privacy limits. The packet contains a bounded paraphrase and source note, not a reproduction of the article or an educational evaluation."
+    },
+    {
+      "requirement": "Project continuity 1: hospitality and participant agency become an operating system",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "observation": "The two workflow reconstructions make care operational: learn what the artist and collaborator need, configure actual working conditions, hand over independent access, and remain available while preserving the artist's agency. The recurring gathering specimen joins invitations, responses, food, space, welcome, introductions, minimal documentation, and follow-up. These are concrete conditions for people to inhabit and influence a space. The operating-sheet claim and public milestone records support continuity while participant-level data stays withheld."
+    },
+    {
+      "requirement": "Project continuity 2: embodied civic participation and documentation shape implementation",
+      "routes": ["/", "/about", "/work/fair-rent-nyc"],
+      "observation": "The homepage explicitly joins the screen and the room. The coalition case explains the campaign interface, Shoestring Press working alignment, and Market Hotel public room as connected forms of participation, then shows how listening meetings and priority ballots become practical sessions, public pathways, running minutes, source maps, question logs, and next actions. Jamie's recollection of the Shoestring agreement remains attributed to him; the photograph is not promoted into evidence of exact decisions. Public reporting, event records, and implementation history have distinct roles in the supplied claim layer."
+    },
+    {
+      "requirement": "Project continuity 3: community language and participation influence the technical interface",
+      "routes": ["/about", "/work/wowlist", "/work/196-sunday-dinner"],
+      "observation": "WOW List's natural-language event entry and followable keyword communities grow from the language of organizers and Sunday Dinner calendars. The case connects that choice to publishing, profiles, followed lists, weekly email, an independent tutorial, a local organizer calendar, and the 200th Sunday Dinner event's direct WOW List link. The packet explicitly shares credit with Richard Caceres and participating communities and distinguishes historical operation from the limited 2026 public return. This supplies a particular social-to-technical continuity rather than a generic claim about collaboration."
+    },
+    {
+      "requirement": "Current practice carries attention, memory, correction, and human agency forward",
+      "routes": ["/about", "/lab/source-backed-team-memory"],
+      "observation": "The developing knowledge practice starts with knowledge already in people and relationships, preserves disagreement and protected context, and proposes a handoff test in which a teammate finds an answer, traces it, corrects it, and recognizes what remains open. The CallNYC 2016 correction provides a concrete instance of documentary revision affecting public output. The lab labels the client pilot as proposed and the method as early research; its human-review language does not claim a completed deployment or automated trust."
+    },
+    {
+      "requirement": "The lineage supports the professional role and distinguishes the practice from conventional administration",
+      "routes": ["/", "/about", "/work/technical-operations"],
+      "observation": "The home screenshots prominently identify Technical Project Manager - Product Operations & Implementation and show clear work and resume routes. About's recurring sequence and the case specimens let a reader explain the difference: operating structure must make room for participant vocabulary, discussable expectations, independent action, recoverable decisions, correction, and continuity. The claims are connected to implementation and handoffs rather than to atmosphere alone."
+    },
+    {
+      "requirement": "Rendered visual inspection",
+      "screenshots": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "observation": "All four images were opened with view_image. The home uses a credited shoreline portrait that establishes place while maintaining a clear professional headline. Both About views visibly distinguish the through-line from the introductory role copy. The mobile image shows readable continuous lineage prose and project links without visible horizontal clipping. This is a visual observation, not an accessibility certification or an interaction test."
+    }
+  ],
+  "gaps": [
+    "No blocking gap for the individually assessable PR-015 requirements in the supplied packet. External source bodies, private records, and independent consent records were intentionally not inspected; the judgment concerns the bounded public projection and its supplied canonical claim records.",
+    "The screenshots are selected viewports rather than full-route visual captures. The desktop About route is visible from the homepage; opening the mobile Menu and following links were not interaction-tested.",
+    "The longer coalition and knowledge-method pages contain substantial documentary detail. That adds reading effort but does not erase the concise inhabited-systems threshold or the concrete project continuities required by this lens.",
+    "The three-reviewer aggregate is outside this individual scorecard and has not been inferred."
+  ],
+  "safety_findings": [
+    "No protected UCSC educational-record text, grades, identifiers, private correspondence, faculty testimonial, or raw Open House article was observed in the rendered routes or supplied public claim layer.",
+    "Collective credit is preserved in Open House participant governance, WOW List's Richard Caceres credit, Julia Fredenburg's Sunday Dinner co-organizer credit, and coalition collaborators and collective policy outcomes.",
+    "The residency and recurring-gathering specimens identify themselves as reconstructions and withhold participant identities, access details, correspondence, attendance rows, and other private values. The supplied image-use notes describe bounded portfolio authorization; this review does not create additional consent or publication rights.",
+    "Historical platform response counts are separated from attendance, unique reach, endorsement, and policy causation. The Shoestring agreement is explicitly a recollection, and the lab's proposed pilot remains a proposal.",
+    "No phone number, credentials, private source locator, or raw protected source material was observed in the provided rendered content. This packet review is not a complete security or release audit."
+  ],
+  "recommendation": "Record an individual PR-015 score of 4 for this exact candidate. Preserve the concise About threshold, the specific hospitality and civic participation specimens, and the shared-credit and privacy boundaries. Calculate the separate three-reviewer aggregate without treating this fictionalized model judgment as human research, faculty endorsement, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:20:08Z",
+    "filesEdited": false
+  }
+}

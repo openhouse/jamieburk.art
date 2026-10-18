@@ -6,6 +6,7 @@ import test from "node:test";
 
 import {
   evaluateProfessorLenses,
+  fingerprintProfessorCandidate,
   professorCandidateRelativePaths
 } from "../lib/professor-lens-eval.mjs";
 
@@ -208,4 +209,20 @@ test("guard binds visual-system and photo changes to a new candidate", () => {
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+test("six copies of one review cannot substitute for three independent reviewers per lens", () => {
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((file) => [file, readFileSync(path.join(repoRoot, file))]));
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const card = { phase: "holdout", score: 4, pass: true, candidateSha256, reviewerId: "duplicate-reviewer", lensId: "PR-015" };
+  const result = evaluateProfessorLenses({ candidateFiles, finalScorecards: Array.from({ length: 6 }, () => ({ ...card })) });
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts").pass, false);
+});
+
+test("review roster requires exactly three scorecards for each professor lens", () => {
+  const candidateFiles = Object.fromEntries(professorCandidateRelativePaths.map((file) => [file, readFileSync(path.join(repoRoot, file))]));
+  const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const finalScorecards = Array.from({ length: 6 }, (_, i) => ({ phase: "holdout", score: 4, pass: true, candidateSha256, reviewerId: `reviewer-${i}`, lensId: i < 4 ? "PR-015" : "PR-016" }));
+  const result = evaluateProfessorLenses({ candidateFiles, finalScorecards });
+  assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts").pass, false);
 });

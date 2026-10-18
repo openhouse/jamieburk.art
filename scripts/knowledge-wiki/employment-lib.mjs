@@ -520,6 +520,12 @@ export function buildEmploymentOutputs(result, publicEvaluation, gapResolution) 
 }
 
 export function writeOrCheckOutputs(repoRoot, outputs, check = false) {
+  const hiringOutput = outputs["reports/hiring-acceptance-public.json"];
+  if (hiringOutput && JSON.parse(hiringOutput).candidatePathsClean !== true) {
+    const message = "Commit the candidate source before generating employment reports; then commit reports separately and check the final clean revision.";
+    if (check) return [message];
+    throw new Error(message);
+  }
   const issues = [];
   for (const [relativePath, content] of Object.entries(outputs)) {
     const absolute = path.join(repoRoot, relativePath);

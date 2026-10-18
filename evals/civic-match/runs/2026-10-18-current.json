@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "civic-match-reader-run-2026-10-18-C",
+  "evaluatedAt": "2026-10-18T19:10:47.264Z",
+  "guideSha256": "b59d91890e5d1eb00d8c05d56d3cd8f7fbdb885e32d3c1ee0df9f32d55847493",
+  "resumeSha256": "194cf14cf3f6bf84e09af8c5b0890d74fa18f9d62165124ccae81f2577a4f786",
+  "selectionConfigSha256": "cf8ba35bd0fa4421a844c44a4300b8efd7096dd854ba84f6390370443a2e7e1e",
+  "hiringReaderConfigSha256": "1ce0072379fa56b48919237f6618ca9df8f4c832f921338627a266edfd49a365",
+  "publicOnly": true,
+  "actualPeopleParticipated": false,
+  "mode": "four-isolated-fictionalized-public-source-lenses",
+  "provider": "independent-codex-review",
+  "model": "inherited execution model; exact model identifier not exposed in reviewer tool result",
+  "assessments": [
+    {
+      "personId": "person.luke-farrell",
+      "kind": "hiring-reader",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "WOW List and CallNYC provide concrete examples of taking public-facing digital services through implementation and release, with collective credit and the unofficial status of CallNYC stated clearly.",
+        "Tired of Tires connects resident needs, accessible intake, field operations, City coordination, and documented service output; this is persuasive evidence of attention to whether a service actually reaches people.",
+        "The combination of stakeholder discovery, hands-on technical delivery, legacy-business modernization, and sustained coalition work fits the PIT Crew's need to translate among residents, technical collaborators, and institutional partners."
+      ],
+      "risks": [
+        "The strongest named digital-product examples are historical. The packet gives limited recent evidence of roadmap decisions, explicit MVP tradeoffs, production reliability, or changes made after measuring user outcomes.",
+        "Twofold revenue growth, 35 city ecosystems, and 1,970 tires collected are useful scope or outcome signals, but the packet alone does not establish causal attribution, product effectiveness, or Jamie's exact authority across every example.",
+        "Civil-service eligibility, current technical proficiency, references, and interview performance remain unresolved. The supplied job information also requires a current official-source check."
+      ],
+      "followUp": [
+        "Advance Jamie to a structured product interview using a recent service: establish the resident problem, discovery evidence, collaborators, Jamie's decisions, competing priorities, MVP boundary, launch criteria, and what changed after feedback.",
+        "Request a public-safe walkthrough of one shipped digital product and one operational service, separating Jamie's responsibility from collaborators' work and explaining the basis and limits of the reported results.",
+        "Through the employer's process, verify the opportunity's current status, complete the separate civil-service qualification review, and validate experience and delivery responsibility through references."
+      ],
+      "narrative": "In this fictionalized hiring-reader simulation, the packet supports wanting to hire Jamie for a role that joins public-facing product delivery with institutional and community implementation, and advancing him through the formal process. The named digital products and resident service make that interest concrete. The remaining questions concern recency, depth of product judgment, and formal validation; they warrant focused interviews rather than an automatic rejection. This is a packet-only assessment, not Luke Farrell's view, participation, endorsement, or hiring decision.",
+      "packetSha256": "ee5e1df4d2b2cb71bb4859fcb445e0e41d24a08da63eccf7c9bd10f3ba7ee69c"
+    },
+    {
+      "personId": "person.lisa-gelobter",
+      "kind": "hiring-reader",
+      "acceptanceQuestion": "I want to hire this person for this current opportunity and advance them through the employer's formal process.",
+      "pass": true,
+      "strengths": [
+        "WOW List connects a concrete user problem, a simpler interaction, hands-on implementation, organizer onboarding, and sustained operations across 35 city ecosystems. That is relevant evidence of carrying a public-facing digital product beyond a prototype.",
+        "Tired of Tires makes resident needs and service delivery tangible: Jamie describes outreach, recurring collection, City recycling coordination, direct field work, and a tracker recording 1,970 tires collected.",
+        "CallNYC and the coalition work show experience translating public data and community concerns into usable public-facing systems, while the packet distinguishes unofficial work and collective contributions from government authority or sole causation.",
+        "The combination of technical implementation, long-term production responsibility, municipal coordination, and documentation gives a credible basis for contributing to a cross-functional public-interest technology team."
+      ],
+      "risks": [
+        "The packet gives fewer concrete examples of prioritization decisions, rapid testing, accessibility validation, and measured digital user outcomes than its broad lifecycle summary promises. Reach and activity counts do not establish service effectiveness.",
+        "The strongest named digital-product examples are historical. Recent hands-on proficiency, senior product leadership in a team, and readiness for City production and compliance requirements still need validation.",
+        "Civil-service eligibility, references, the attribution and measurement basis of the commercial revenue result, and the pending application's current status remain unresolved. The supplied posting was last checked in August and cannot establish the current hiring timeline."
+      ],
+      "followUp": [
+        "Use a structured case interview on WOW List or another shipped product: establish Jamie's individual decisions, collaborators' responsibilities, user evidence, the MVP tradeoff, launch quality checks, and what changed after observing outcomes.",
+        "Review one recent technical delivery example and one concrete accessibility or privacy decision, including the implementation evidence and how success was assessed.",
+        "Have the employer verify the complete education and employment chronology against the civil-service requirements, check references and material outcome claims, and confirm the submitted application's status through its official process."
+      ],
+      "narrative": "In this fictionalized model-only reading, the packet justifies a positive hiring intention and advancement through the employer's formal process. Jamie presents a coherent record of making community-facing products and services usable, sustaining their operation, and working across technical, civic, and resident concerns. The specificity of WOW List and Tired of Tires makes the fit more persuasive than the skills inventory alone. The remaining questions are substantive interview and eligibility checks, not reasons to reject this profile at the matching stage. This is a simulation based only on the supplied packet; Lisa Gelobter did not participate, endorse Jamie, or make a hiring decision.",
+      "packetSha256": "f8f4937a24dcb6d6630715527a2ccd71e94b82e814604a4105116f83bfaea4bd"
+    },
+    {
+      "personId": "person.josh-gee",
+      "kind": "civic-match-helper",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "The packet makes a credible match to the OTI PIT Crew product role through public-facing digital delivery: CallNYC reached public release, WOW List combined participatory discovery with implementation and ongoing operations, and Thick Arts connects product direction to releases and maintenance.",
+        "Tired of Tires and KC Town Hall show practical experience connecting resident needs, municipal coordination, field delivery, and feedback; the coalition work adds facilitation and translation across stakeholders while preserving collective credit."
+      ],
+      "risks": [
+        "The separate Senior IT Architect minimum-qualification screen is unresolved, and broad founder experience does not by itself establish the required qualifying chronology.",
+        "The profile provides limited detail about individual product tradeoffs, team scope, measured digital-service outcomes, and current accessibility or production-quality practice; these need interview and reference validation.",
+        "The posting was last checked August 20 and lists an October 16 deadline. The submitted application remains pending, but the packet does not establish that new matching or applications remain available."
+      ],
+      "followUp": [
+        "Confirm the current status of Job ID 782366 and Jamie's existing application before coordinating any further matching activity; do not create a duplicate application.",
+        "Map Jamie's complete education and employment chronology to the published minimum qualifications for employer review.",
+        "Prepare one concise product case showing Jamie's specific decisions, collaborators, launch responsibilities, accessibility and quality checks, and measured post-launch learning."
+      ],
+      "narrative": "In this fictionalized public-source lens, the packet supports actively matching Jamie to the OTI product opportunity already in his application pipeline. His described work connects discovery, implementation, public launch, and sustained operations with resident and government-facing coordination. That is sufficient for a matching recommendation, while formal eligibility, current recruitment status, and depth of senior product practice remain follow-up questions. This is a model assessment, not participation, endorsement, or a hiring decision by Josh Gee.",
+      "packetSha256": "9c178c8863e66eb8685f10be998a3899326c143930f0c184cb020c5f4039cb5f"
+    },
+    {
+      "personId": "person.courtney-kishbaugh",
+      "kind": "civic-match-helper",
+      "acceptanceQuestion": "I would actively match this candidate to a current opportunity their evidence supports.",
+      "pass": true,
+      "strengths": [
+        "CallNYC and WOW List give concrete examples of turning community needs into public digital products, with implementation, launch, organizer support, and continuing operations relevant to the OTI product-delivery remit.",
+        "Tired of Tires connects resident listening, accessible intake, field delivery, City coordination, and recorded results; the coalition and small-business work adds experience translating across stakeholders and maintaining services."
+      ],
+      "risks": [
+        "The packet does not establish that Jamie satisfies the separate Senior IT Architect minimum qualifications or document five years of product-management responsibilities in enough detail for formal screening.",
+        "The posting was last checked in August and lists an October 16 deadline. The submitted application is described as pending, but continued hiring activity and any matching route require confirmation.",
+        "Product outcomes, Jamie's precise decision authority, current technical proficiency, and delivery of accessibility and compliance requirements still need validation beyond the profile's statements."
+      ],
+      "followUp": [
+        "Confirm the status of Job ID 782366 and the existing pending application before making an outward match or suggesting another application.",
+        "Map Jamie's complete education and employment chronology to the posted minimum qualifications and let the employer determine eligibility.",
+        "Prepare one concise product case showing the user problem, Jamie's decisions and collaborators, an MVP tradeoff, launch evidence, measured learning, and an accessibility or privacy decision; validate material claims through appropriate references."
+      ],
+      "narrative": "In this fictionalized reader simulation, the packet supports an active match between Jamie's existing pending OTI candidacy and the role's resident-facing product-delivery work. The combination of shipped civic products, continuing operations, and direct resident-service delivery is specific enough to justify matching attention. This is a judgment of substantive fit, with current hiring status and formal screening still unresolved; Courtney Kishbaugh did not participate or endorse the candidate.",
+      "packetSha256": "8fdcae224055d3bc216cd3903103bd530efec8b04370c0e240ee3c73b34505a5"
+    }
+  ],
+  "boundaries": [
+    "No application, contact, matching referral, or human endorsement occurred.",
+    "Current employer status and eligibility remain unresolved; model judgments do not verify either."
+  ]
+}

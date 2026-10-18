@@ -1,0 +1,93 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the supplied Warren Sack rubric; not Warren Sack's participation, endorsement, or approval",
+  "reviewerId": "warren-sack-c-2026-10-18-r2",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Plainly stated recursive method within two clicks",
+      "route": "/about",
+      "finding": "The homepage links directly to About. About states the sequence plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its three systems loops name relationships, model, interface and use, and learning and continuity, with direct links to the relevant cases. A reader reaches the method in one navigation and each linked case in two from the homepage. This is a working explanation rather than a historical tool list."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "route": "/work/harry-j-epstein",
+      "observation": "Customer language, product judgment, institutional voice, internal habits, and recurring customer or team questions reveal friction.",
+      "model": "Product information, content, marketing, ordering, and follow-up are treated as one customer and staff system; Jamie translates a recurring question into a scoped requirement.",
+      "interface": "The storefront and incremental changes to product information, publishing, marketing, or commerce are the public interface.",
+      "social_use_and_learning": "The case explicitly describes customer and team use, inspecting the public customer path, and reviewing operational or analytical signals with stakeholders before further changes.",
+      "documentation_and_handoff": "Reusable patterns, ownership, and next actions provide continuity for staff and later maintainers. The five-stage maintenance-to-handoff reconstruction makes this sequence inspectable while clearly stating that it is not an original internal company document.",
+      "boundary": "The work is dated 2009-2015. The July 2026 storefront capture is evidence of the maintained public surface, not proof that Jamie personally implemented all present storefront details. The trace establishes a bounded portfolio case, not current employment or present proficiency in a particular tool."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Listening meetings, priority ballots, lived cultural-space experience, public records, and unresolved policy questions identify relationships and coordination needs.",
+      "model": "The account separates supported public material, protected context, open questions, decisions, accountable actors, and city/state strategy lanes into recoverable campaign memory.",
+      "interface": "Campaign sites, public action pathways, practical sessions, town halls, and hearings connect the information structure to collective participation. The retained implementation history and public source records give these interfaces more substance than an abstract systems claim.",
+      "social_use_and_learning": "The case connects recurring participation to practical safety work, public explanation, reviewable decisions, source recovery, and sustained follow-through. It describes several interfaces to the same shared problem rather than disconnected deliverables.",
+      "documentation_and_handoff": "Running minutes, source maps, question logs, action trackers, and 30+ pages of shared campaign memory let collaborators recover context and continue the work. CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026 explicitly bounds the quantity and role as approved first-party claims; CLM-NYCAC-PARTICIPATION-SYSTEM and the campaign-web implementation records supply complementary public context.",
+      "boundary": "The Shoestring agreement remains attributed to Jamie's recollection. The work and policy outcomes remain collective, and platform responses are not converted into attendance or impact."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "route": "/work/196-sunday-dinner",
+      "observation": "The case starts from hospitality, trust, recurring participants, artist needs, and the difficulty of keeping participation open and repeatable.",
+      "model": "Invitation, response, hosting, minimal documentation, follow-up, and residency access are arranged as a participation system. The schema-level operating-sheet claim makes the information architecture explicit.",
+      "interface": "The gathering itself and the residency onboarding workflow are interfaces: proposal review, a video-call orientation, space configuration, and a practical handoff enable an artist and collaborator to work independently.",
+      "social_use_and_learning": "Recurring gathering operations and the governed 2023 residency workflow show use with people. The sequences include learning what an artist needs, preparing around that practice, remaining available for changed direction, and carrying relationships into the next gathering.",
+      "documentation_and_handoff": "Two clearly labeled redacted reconstructions expose the coordination logic and the independent-access handoff while withholding participant-level values. Public milestone records, aggregate controls, and CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025 support the bounded continuity account.",
+      "boundary": "The evidence establishes operating structure and recurring continuity; it does not establish precise attendance, unique people, participant consent to publication, or artistic outcomes."
+    },
+    {
+      "requirement": "Social structure, information architecture, and prototype-to-public-system continuity",
+      "routes": ["/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory"],
+      "finding": "WOW List provides an additional concrete relationship-to-interface trace: Sunday Dinner calendars and organizer vocabulary lead to collaboratively editable natural-language posts and followable keyword communities, then to publishing, local calendars, support threads, an independent tutorial, and historical organizer use. Richard Caceres and other contributors retain credit. CallNYC maps administrative categories to recognizable issues and resident next steps, with a surviving implementation and explicit archived status. The lab shows actual recursion in the portfolio's correction of CallNYC's date from 2014-2015 to 2016 across the index, case study, and resume, while keeping its proposed teammate pilot separate from completed work."
+    },
+    {
+      "requirement": "Rendered screenshot inspection",
+      "files": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "finding": "Inspected all four images using view_image. The desktop homepage visibly offers About navigation. The home images visibly establish the usable-systems role and documentation emphasis. The About images show a readable practice introduction and the public-source-backed Open House through-line; the mobile image also visibly links onward to WOWList, Sunday Dinner and 196, coalition work, and Knowledge Wiki Graphs. The full method and three-loop wording were inspected in the supplied rendered page text; they lie below the supplied screenshot crops."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof audit and anti-overclaim findings",
+      "routes": ["/about", "/lab/source-backed-team-memory", "/work/wowlist", "/work/callnyc"],
+      "finding": "The public lineage uses the 2006 Open House article and preserves collective governance. The protected UCSC records are not reproduced or used as claims of present tool proficiency. About explicitly rejects an inference of structural equivalence and states that historical implementation does not itself establish present technical proficiency. The lab repeatedly distinguishes research and proposed work from production SaaS or client adoption; the completion certificate remains professional development. WOW List's present threshold is separated from its historical calendar service, and CallNYC is archived, independent, and unofficial. No claim of disciplinary invention, peer-reviewed research, sole authorship, or current Max/Jitter proficiency was observed."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "non-blocking evidence limit",
+      "finding": "The packet supports a reconstruction of practice, not an independent audit of the protected business, coalition, or participant records. Several specimens are explicitly reconstructions or schema-level summaries. The score credits their bounded explanatory and evidentiary value without treating them as original private documents or independently measured outcomes."
+    },
+    {
+      "severity": "non-blocking capture limit",
+      "finding": "The four screenshot crops show the homepage and the beginning of About, not the lower three-loop section. The method and its linked examples are present in the supplied rendered HTML text. A future review packet would be easier to inspect if it also captured that section at desktop and mobile widths."
+    },
+    {
+      "severity": "interpretation boundary",
+      "finding": "The three-project requirement is assessed against the projects presented in the current public candidate. Their dates remain operative: the score does not reclassify the 2009-2015 business case, 2016 archived prototype, or historical WOW List operation as three simultaneous current deployments."
+    }
+  ],
+  "safety_findings": [
+    "No protected educational-record body, private correspondence, raw participant record, credential, private source locator, or phone number was observed in the reviewed rendered pages and screenshot evidence.",
+    "Collective credit and the boundaries between public evidence, first-person recollection, protected support, and analytical comparison remain visible.",
+    "No safety blocker was identified within this packet. External linked destinations and private source files were not opened or audited.",
+    "This is one independent fictionalized model scorecard. It is not a human study, accessibility certification, named-person endorsement, aggregate three-reviewer result, or deployment approval."
+  ],
+  "recommendation": "Pass PR-016 for this individual holdout review. The candidate makes the recurring method reconstructable through specific public-safe cases, connecting relationships and information structures to interfaces, collective use, learning, and continuity. Retain the dates, reconstruction labels, research boundaries, and shared credit. Calculate the three-reviewer aggregate separately.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:23:08Z",
+    "filesEdited": false
+  }
+}

@@ -9,10 +9,18 @@ import {
 } from "../photo-knowledge/lib.mjs";
 
 let loaded;
+const socialPreviewSourcePath = "apps/www/src/data/social-preview.ts";
+const historicalSelectedRenderSha =
+  "1f83d66b7e35e8a3a955819cf2104b79a88c9a8bd3953fd6fa691143bdb6da42";
 
 async function baselineModel() {
   if (!loaded) loaded = await loadPhotoKnowledgeModel();
   const model = structuredClone(loaded);
+  // Hypothetical historical-render fixture only: no source or approval record is
+  // written. The actual current renderer is tested separately below.
+  model.sourceTexts[socialPreviewSourcePath] = model.sourceTexts[
+    socialPreviewSourcePath
+  ].replace(/(sha256:\s*")[a-f0-9]{64}("\s*)/, `$1${historicalSelectedRenderSha}$2`);
   model.candidateReceipt = {
     candidateFingerprint: model.candidate.fingerprint,
     candidateFileCount: model.candidate.fileCount,
@@ -65,7 +73,7 @@ function appendPendingPhoto(model) {
   return pending;
 }
 
-test("East River canary passes every hard gate and criterion", async () => {
+test("hypothetical historical-render East River fixture passes every hard gate and criterion", async () => {
   const result = evaluatePhotoKnowledgeModel(await baselineModel());
   assert.equal(result.passed, true);
   assert.deepEqual(result.failedHardGates, []);
@@ -334,11 +342,66 @@ test("production and indexing approval cannot be automated", async () => {
   assert.equal(result.checks.production_and_indexing_human_gated, false);
 });
 
-test("the selected social preview release is bound to Jamie's exact visual decision", async () => {
+test("the historical social preview release is bound to Jamie's exact visual decision", async () => {
   const model = await baselineModel();
   const result = evaluatePhotoKnowledgeModel(model);
   assert.equal(result.checks.social_preview_release_human_approved, true);
 });
+
+test("a fresh technical receipt cannot approve changed social-preview renderer bytes", async () => {
+  const model = await baselineModel();
+  model.sourceTexts[socialPreviewSourcePath] = model.sourceTexts[
+    socialPreviewSourcePath
+  ].replace(historicalSelectedRenderSha, "f".repeat(64));
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.exact_candidate_receipt_current, true);
+  assert.equal(result.checks.social_preview_release_human_approved, false);
+  assert.equal(result.checks.manifest_wiki_placement_alignment, false);
+  assert.equal(result.criteria.placement_coherence, false);
+  assert.equal(result.passed, false);
+});
+
+test("the actual current renderer remains held by the historical human decision", async () => {
+  const model = await baselineModel();
+  model.sourceTexts[socialPreviewSourcePath] = loaded.sourceTexts[socialPreviewSourcePath];
+  const result = evaluatePhotoKnowledgeModel(model);
+  assert.equal(result.checks.exact_candidate_receipt_current, true);
+  assert.equal(result.checks.social_preview_release_human_approved, false);
+  assert.equal(result.passed, false);
+});
+
+for (const [name, source] of [
+  ["missing source", undefined],
+  ["missing approvedRender contract", "export const composition = {};"],
+  ["malformed SHA-256", `approvedRender: {
+    width: 1200,
+    height: 630,
+    contentType: "image/png",
+    sha256: "invalid"
+  }`],
+  ["invalid dimensions", `approvedRender: {
+    width: 600,
+    height: 630,
+    contentType: "image/png",
+    sha256: "${historicalSelectedRenderSha}"
+  }`],
+  ["invalid content type", `approvedRender: {
+    width: 1200,
+    height: 630,
+    contentType: "image/jpeg",
+    sha256: "${historicalSelectedRenderSha}"
+  }`]
+]) {
+  test(`social-preview human approval fails closed with ${name}`, async () => {
+    const model = await baselineModel();
+    if (source === undefined) delete model.sourceTexts[socialPreviewSourcePath];
+    else model.sourceTexts[socialPreviewSourcePath] = source;
+    const result = evaluatePhotoKnowledgeModel(model);
+    assert.equal(result.checks.exact_candidate_receipt_current, true);
+    assert.equal(result.checks.social_preview_release_human_approved, false);
+    assert.equal(result.passed, false);
+  });
+}
 
 test("status changes alone cannot approve the social preview release", async () => {
   const model = await baselineModel();

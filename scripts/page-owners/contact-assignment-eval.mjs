@@ -4,20 +4,30 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import {
+  evaluateContactPageOwners,
+  loadContactCandidate
+} from "./contact-evaluate.mjs";
 
 const scriptPath = fileURLToPath(import.meta.url);
 const defaultRepoRoot = path.resolve(path.dirname(scriptPath), "../..");
 const registryPath = "apps/www/src/data/page-owner-registry.json";
-const pageId = "contact-engagement-pathway";
+const proposedPageId = "contact-engagement-pathway";
 const ownerOrder = ["katie-lane", "adrienne-r-fields", "blair-enns"];
 
 export function loadContactOwnerAssignment(repoRoot = defaultRepoRoot) {
   const registry = JSON.parse(
     readFileSync(path.join(repoRoot, registryPath), "utf8")
   );
+  const page =
+    registry.pages?.find((entry) => entry.pageId === "contact") ??
+    registry.pages?.find((entry) => entry.pageId === proposedPageId) ??
+    null;
   return {
     registry,
-    page: registry.pages?.find((entry) => entry.pageId === pageId) ?? null
+    page,
+    implementationCandidate:
+      page?.pageId === "contact" ? loadContactCandidate(repoRoot) : null
   };
 }
 
@@ -28,6 +38,9 @@ export function evaluateContactOwnerAssignment(candidate) {
   };
   const { registry, page } = candidate;
   const owners = page?.owners ?? [];
+  let acceptanceState = "invalid";
+
+  check(Boolean(page), "The Contact assignment is missing from the registry.");
 
   check(
     registry.publicBoundary?.actualPeopleParticipated === false &&
@@ -37,46 +50,71 @@ export function evaluateContactOwnerAssignment(candidate) {
       ),
     "The owner desk must not imply real participation, approval, or endorsement."
   );
-  check(
-    page?.route === "/contact" &&
-      page?.status === "proposed" &&
-      page?.candidateState === "not-implemented-no-owner-acceptance",
-    "The Contact owner assignment must remain proposed until a rendered implementation candidate exists."
-  );
-  check(
-    owners.length === 3 &&
-      JSON.stringify(owners.map((owner) => owner.id)) ===
-        JSON.stringify(ownerOrder),
-    "The Contact pathway must retain exactly three ordered fictionalized owners."
-  );
-  check(
-    new Set(owners.map((owner) => owner.focus)).size === owners.length &&
-      owners.every(
-        (owner) =>
-          owner.publicProfileUrl.startsWith("https://") &&
-          owner.publicEvidenceState === "default-public-state" &&
-          owner.question.length >= 120 &&
-          owner.passDefinition.length >= 150
-      ),
-    "Every Contact owner needs a distinct criterion, public basis, public-only state, and substantive pass definition."
-  );
-  check(
-    /every fictionalized page-owner lens returns Pass/i.test(
-      page?.acceptanceRule ?? ""
-    ) && /Jamie separately approves publication/i.test(page?.acceptanceRule ?? ""),
-    "Modeled unanimity and Jamie's publication decision must remain separate gates."
-  );
+  if (page?.pageId === "contact") {
+    check(
+      Boolean(candidate.implementationCandidate) &&
+        JSON.stringify(page) ===
+          JSON.stringify(
+            registry.pages?.find((entry) => entry.pageId === "contact")
+          ),
+      "The implemented Contact assignment must be evaluated with its current registry and implementation contract."
+    );
+    if (candidate.implementationCandidate) {
+      // This is a lifecycle/assignment gate, not a substitute for model review.
+      // The maintained implementation evaluator owns the current roster and
+      // validates its authorization, public packet, and publication boundary.
+      const implementation = evaluateContactPageOwners(
+        { ...candidate.implementationCandidate, registry },
+        { deterministicOnly: true }
+      );
+      failures.push(...implementation.failures);
+      if (implementation.pass) {
+        acceptanceState = "implementation-candidate-not-publication-approval";
+      }
+    }
+  } else {
+    check(
+      page?.pageId === proposedPageId &&
+        page?.route === "/contact" &&
+        page?.status === "proposed" &&
+        page?.candidateState === "not-implemented-no-owner-acceptance",
+      "The Contact owner assignment must remain proposed until a rendered implementation candidate exists."
+    );
+    check(
+      owners.length === 3 &&
+        JSON.stringify(owners.map((owner) => owner.id)) ===
+          JSON.stringify(ownerOrder),
+      "The Contact pathway must retain exactly three ordered fictionalized owners."
+    );
+    check(
+      new Set(owners.map((owner) => owner.focus)).size === owners.length &&
+        owners.every(
+          (owner) =>
+            owner.publicProfileUrl.startsWith("https://") &&
+            owner.publicEvidenceState === "default-public-state" &&
+            owner.question.length >= 120 &&
+            owner.passDefinition.length >= 150
+        ),
+      "Every Contact owner needs a distinct criterion, public basis, public-only state, and substantive pass definition."
+    );
+    check(
+      /every fictionalized page-owner lens returns Pass/i.test(
+        page?.acceptanceRule ?? ""
+      ) && /Jamie separately approves publication/i.test(page?.acceptanceRule ?? ""),
+      "Modeled unanimity and Jamie's publication decision must remain separate gates."
+    );
+    if (page?.candidateState === "not-implemented-no-owner-acceptance") {
+      acceptanceState = "queued-for-implementation-candidate";
+    }
+  }
 
   return {
     pass: failures.length === 0,
-    page_id: pageId,
+    page_id: page?.pageId ?? null,
     route: page?.route ?? null,
     owner_count: owners.length,
     owners: owners.map((owner) => ({ id: owner.id, focus: owner.focus })),
-    acceptance_state:
-      page?.candidateState === "not-implemented-no-owner-acceptance"
-        ? "queued-for-implementation-candidate"
-        : "invalid",
+    acceptance_state: failures.length === 0 ? acceptanceState : "invalid",
     registry_sha256: createHash("sha256")
       .update(JSON.stringify(registry))
       .digest("hex"),

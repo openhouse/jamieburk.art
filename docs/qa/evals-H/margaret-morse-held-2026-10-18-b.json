@@ -1,0 +1,54 @@
+{
+  "evaluator": "Fictionalized independent model lens inspired by the assigned Margaret Morse rubric; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-b-2026-10-18",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    {
+      "route": "/ → /about",
+      "finding": "The homepage navigation reaches the lineage in one click. About's 'Systems people can inhabit' connects the cited ten-day Open House experiment and its communal decisions and many-perspective documentation to WOWList, Sunday Dinner / 196, coalition work, and Knowledge Wiki Graphs. The page explicitly connects artistic, civic, technical, and social practice while retaining the technical project manager and implementation lead positioning."
+    },
+    {
+      "route": "/ → /work/196-sunday-dinner",
+      "finding": "The homepage links directly to this continuity. The residency reconstruction treats a proposal as inquiry, makes expectations discussable, configures conditions around the artist's practice, enables independent access, and preserves the artist's agency as direction changes. The gathering reconstruction makes food, space, welcome, introductions, minimal documentation, and follow-up part of operating practice. Hospitality and care have concrete operational consequences here."
+    },
+    {
+      "route": "/ → /work/fair-rent-nyc",
+      "finding": "The homepage links directly to this continuity. 'The website was one part of the room' connects a shared campaign interface, a Shoestring Press working session, and the collective Market Hotel town hall. Listening meetings and priority ballots become programs, action paths, practical sessions, source records, and follow-through. This explains how participants can influence, remember, and continue the system, with photographs described through contextual captions and alternatives."
+    },
+    {
+      "route": "/ → /work/wowlist",
+      "finding": "The homepage links directly to this continuity. Calendars made with Sunday Dinner, community vocabulary, collaboratively editable natural-language posts, followable keywords, public support, and independent organizer materials connect social participation to technical design. Richard Caceres is named as co-founder and co-builder, and the historical service is distinguished from the limited 2026 return threshold."
+    },
+    {
+      "route": "/ → /about → /lab/source-backed-team-memory",
+      "finding": "Within two clicks, the current research practice starts with knowledge present in people, artifacts, and relationships. Its proposed handoff asks a teammate to find, trace, correct, and protect a record. The concrete CallNYC date correction demonstrates documentation changing the portfolio. The method is explicitly early research rather than a completed client pilot or production platform."
+    },
+    {
+      "route": "/ and /about",
+      "finding": "The homepage's screen-and-room passage and About's concrete continuities make inhabited systems legible without requiring an artist biography. The professional role remains prominent, and the recurring method is expressed through implementation, public tools, coordination, documentation, and handoffs."
+    }
+  ],
+  "gaps": [
+    "The rubric explicitly requires a rendered screenshot. The packet contains rendered text, image alternatives, captions, destinations, and HTML hashes, but no rendered screenshot. The two-click route is supported textually; the visual visibility of the lineage is unobserved. This prevents an unconditional score of 4 under the packet's instruction not to award passing scores when material required evidence is missing.",
+    "The assigned input list names the work index and source-bounded knowledge bank. Neither is supplied as a distinct inspected input. Candidate source notes and the source-boundary synthesis offer useful support, but they are not a complete canonical-bank or work-index inspection.",
+    "This isolated review cannot establish the required three-scorecard median or minimum. That aggregate requirement must be checked after independent reviews are collected."
+  ],
+  "safety_findings": [
+    "No protected educational record, private correspondence, unapproved faculty testimonial, or raw Open House article is reproduced in the supplied packet. The public source note explicitly withholds the recommendation research lead and protected educational records.",
+    "Open House governance remains communal; WOWList credits Richard Caceres and its organizers; Sunday Dinner cites Julia Fredenburg as a co-organizer of the 200th event and credits the community; coalition outcomes are repeatedly attributed collectively. No sole-causation claim was observed in the reviewed continuities.",
+    "The residency and gathering specimens are labeled reconstructions and omit participant values, identities, access instructions, and private correspondence. Hospitality and artistic agency are described concretely without romanticizing vulnerability.",
+    "No phone number appears in the supplied website text. Knowledge Wiki Graphs is bounded as early research with human review and proposed acceptance conditions. No production deployment authorization is assessed.",
+    "These findings apply to the supplied rendered-text packet. They do not certify unseen image pixels, linked source contents, all 159 bound files, or the deployed website."
+  ],
+  "recommendation": "Retain the substantive lineage and project continuities: the supplied prose strongly demonstrates inhabited systems and supports the target professional role. Complete the missing required evidence with a candidate-bound rendered screenshot and the named work-index and source-bounded input surfaces, then reconcile the three independent scorecards before claiming the full PR-015 gate passes. No additional private material or testimonial is needed.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-page-text packet",
+    "reviewedAt": "2026-10-18T19:14:19Z",
+    "filesEdited": false
+  }
+}

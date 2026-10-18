@@ -68,3 +68,20 @@ test("the Knowledge Wiki photo credit and numbered method steps remain AA", () =
   assert.ok(!lab.includes('className="mt-1 block text-jb-ink/60"'));
   assert.ok(!lab.includes('className="font-semibold tabular-nums text-jb-ochre"'));
 });
+
+test("Contact conversation and engagement-boundary text remain AA on the blue panel", () => {
+  const tokens = readFileSync(path.join(repoRoot, "apps/www/src/styles/tokens.css"), "utf8");
+  const contact = readFileSync(path.join(repoRoot, "apps/www/src/app/contact/page.tsx"), "utf8");
+  const blue = tokens.match(/--jb-broadway-blue:\s*(#[0-9a-f]{6})/i)?.[1];
+  const panel = contact.match(/<section aria-labelledby="discuss-a-working-session"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(blue && panel);
+  const paragraphs = [...panel.matchAll(/<p className="([^"]+)"/g)];
+  assert.equal(paragraphs.length, 2);
+  for (const [, classes] of paragraphs) {
+    const text = classes.match(/(?:^|\s)text-white(?:\/(\d+))?(?:\s|$)/);
+    assert.ok(text, "The blue-panel text color must remain explicit for contrast verification");
+    const opacity = text[1] ? Number(text[1]) / 100 : 1;
+    const ratio = contrast(blend("#ffffff", blue, opacity), blue);
+    assert.ok(ratio >= 4.5, `${classes}: measured ${ratio.toFixed(2)}:1; body text needs 4.5:1`);
+  }
+});

@@ -88,8 +88,8 @@ export default function ContactPage() {
           <h2 className="text-3xl font-semibold" id="discuss-a-working-session">
             Start with a conversation
           </h2>
-          <p className="mt-4 leading-7 text-white/84">{contactAction.prompt}</p>
-          <p className="mt-3 text-sm leading-6 text-white/72">{engagementPathway.termsNote}</p>
+          <p className="mt-4 leading-7 text-white">{contactAction.prompt}</p>
+          <p className="mt-3 text-sm leading-6 text-white">{engagementPathway.termsNote}</p>
         </div>
         <a
           className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-5 py-3 font-semibold text-jb-blue hover:bg-jb-warm hover:text-jb-green"

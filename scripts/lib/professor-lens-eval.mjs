@@ -43,15 +43,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-x.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-y.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-z.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-x.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-y.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-z.json"
+  "docs/qa/evals-H/margaret-morse-a-2026-10-18-r2-result.json",
+  "docs/qa/evals-H/margaret-morse-b-2026-10-18-r2-result.json",
+  "docs/qa/evals-H/margaret-morse-c-2026-10-18-r2-result.json",
+  "docs/qa/evals-H/warren-sack-a-2026-10-18-r2-result.json",
+  "docs/qa/evals-H/warren-sack-b-2026-10-18-r2-result.json",
+  "docs/qa/evals-H/warren-sack-c-2026-10-18-r2-result.json"
 ];
 
-const approvedCandidateSha256 = "dc13c845472b6b9042d649ef6cce48784724140c4bfb3fa3e81388965f406203";
+const approvedCandidateSha256 = "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -281,6 +281,9 @@ export function evaluateProfessorLenses({
       "unanimous-holdouts",
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
       finalScorecards.length === 6 &&
+        new Set(finalScorecards.map((scorecard) => scorecard.reviewerId)).size === 6 &&
+        finalScorecards.every((scorecard) => typeof scorecard.reviewerId === "string" && scorecard.reviewerId.trim().length > 0) &&
+        ["PR-015", "PR-016"].every((lensId) => finalScorecards.filter((scorecard) => scorecard.lensId === lensId).length === 3) &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),

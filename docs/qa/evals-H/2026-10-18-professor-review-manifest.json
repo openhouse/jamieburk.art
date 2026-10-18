@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "boundary": "Six separately commissioned fictionalized model reviews. No real named person participated; no human approval, rights verification, or deployment authorization is established.",
+  "receiptProjection": "Only temporary screenshot locators were replaced with their equivalent checked-in public screenshot paths. Scores, evidence, gaps, findings, recommendations and provenance are unchanged. Original returned review hashes are retained below; original process-local files remain outside Git.",
+  "round1": {
+    "status": "held-incomplete-packet",
+    "receipts": [
+      "margaret-morse-held-2026-10-18-a.json",
+      "margaret-morse-held-2026-10-18-b.json"
+    ],
+    "score": 3,
+    "candidateChanged": false
+  },
+  "round2": {
+    "inputs": "Current production-build rendered text with destinations for twelve routes, four current screenshots, the public-safe source note, selected canonical public claims and linked source records, assigned frozen rubric.",
+    "privateSourceBodiesIncluded": false,
+    "reviewers": [
+      {
+        "reviewerId": "margaret-morse-a-2026-10-18-r2",
+        "receipt": "margaret-morse-a-2026-10-18-r2-result.json",
+        "packetSha256": "c0b9734d8c6f7dc1b5d2a7ec98c8ada599c49f8462276c64ece4cd3b53d9bcee",
+        "originalReviewSha256": "3c8d0ea637968af304cb54b2bf1f2784114eb9d9f849e9742f0774005bf7d36a"
+      },
+      {
+        "reviewerId": "margaret-morse-b-2026-10-18-r2",
+        "receipt": "margaret-morse-b-2026-10-18-r2-result.json",
+        "packetSha256": "3f51117584fc90232f0965c605bac52445f76cb69d35215798316a894790389b",
+        "originalReviewSha256": "73b5ef2bc6ea4c988c76e607a4acbb34898c4a411db9c26ba23d70945a4e440d"
+      },
+      {
+        "reviewerId": "margaret-morse-c-2026-10-18-r2",
+        "receipt": "margaret-morse-c-2026-10-18-r2-result.json",
+        "packetSha256": "b94c2eeb95529d599d90aff7f28ce910851d66e6011892f0cc830feb5fb84a8b",
+        "originalReviewSha256": "bf53f15a1818350085806809da0a8bd4c6e17955fcd6e9b7890dd9eddc487338"
+      },
+      {
+        "reviewerId": "warren-sack-a-2026-10-18-r2",
+        "receipt": "warren-sack-a-2026-10-18-r2-result.json",
+        "packetSha256": "9077f19bbda147d76dfa0b4e222267e6983b7d861019537ef509072efe8baba0",
+        "originalReviewSha256": "0fc1f811078ca1ef73476e0d92d93e49937e448d3e0c46d9d39e407da3c6d51b"
+      },
+      {
+        "reviewerId": "warren-sack-b-2026-10-18-r2",
+        "receipt": "warren-sack-b-2026-10-18-r2-result.json",
+        "packetSha256": "5710100655ad21ca105f23db31455f64484eca5adc4a56e8ce520cd19a2e05c4",
+        "originalReviewSha256": "4898480810d30264c059586c35ee6f376349434ab7398988a434a696406e9b9e"
+      },
+      {
+        "reviewerId": "warren-sack-c-2026-10-18-r2",
+        "receipt": "warren-sack-c-2026-10-18-r2-result.json",
+        "packetSha256": "e8f0ab03b6eb91705dbfea04941b03a650f8cf30d470d6b949d8984c69493408",
+        "originalReviewSha256": "2987e3ab804ec8515de208df9a007ac8f59c43ff98e296577b1897f4de9fb1c2"
+      }
+    ],
+    "score": 4
+  },
+  "limitations": "The packet hashes bind the supplied review inputs. Public reviewer labels do not authenticate process identity. Separate commissioning is retained in task orchestration; unrelated human and photo-verification holds remain open."
+}
