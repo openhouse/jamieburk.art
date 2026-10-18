@@ -1,0 +1,74 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the packet's Margaret Morse rubric; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-a-2026-10-18-r6",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "3d69745351e63fc8b16ce9109a48f1e14119173a4b3dffc89c009caea2d3c55b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible threshold within two clicks, with the professional role preserved",
+      "routes": [
+        "/",
+        "/about"
+      ],
+      "observation": "The homepage names Technical Project Manager - Product Operations & Implementation and provides an About navigation destination. The desktop screenshot visibly exposes About; the mobile screenshot exposes Menu and the rendered text includes its About destination. About is therefore one navigation selection on desktop and available through Menu then About on mobile. The rendered About screenshots show Systems people can inhabit and the bounded Open House paragraph. Its ten-day communal experiment connects directly to WOWList, Sunday Dinner and 196, coalition work, and Knowledge Wiki Graphs. The surrounding prose keeps requirements, implementation, product operations, and usable handoffs explicit. Artistic practice explains the operating approach rather than replacing the role with an artist biography. The mobile menu interaction itself was not exercised in this static-packet review."
+    },
+    {
+      "requirement": "Current practice continuity: hospitality and participant agency",
+      "routes": [
+        "/about",
+        "/work/196-sunday-dinner"
+      ],
+      "observation": "The Sunday Dinner and 196 loop connects hospitality, shared space, trust, and returning participants to invitations, hosting, onboarding, access handoffs, and follow-up. The case page supplies two clearly labeled reconstructions. In the residency sequence, a proposal opens inquiry, orientation makes needs discussable, the space is configured around the actual practice, practical knowledge permits independent work, and continued support preserves the artist's agency. The gathering sequence joins food, welcome, introductions, minimal documentation, and follow-through. These are concrete ways of inhabiting and influencing a system, with private participant values withheld. The desktop and mobile loop screenshots make this connection readable."
+    },
+    {
+      "requirement": "Current practice continuity: civic participation, place, and memory",
+      "routes": [
+        "/about",
+        "/work/fair-rent-nyc",
+        "/"
+      ],
+      "observation": "The coalition loop starts with lived experience, cultural spaces, recurring meetings, public sources, and unresolved questions. Its public interfaces include practical sessions, town halls, hearings, and campaign sites; its continuity mechanisms include minutes, question logs, source maps, and action trackers. The case page makes the room-to-screen relation specific through the Shoestring Press working session, the shared Let NYC Dance surface, and the Market Hotel gathering. Jamie's recollection of agreement is kept distinct from repository evidence of implementation. Fire-safety education and cultural-space continuity make care operational rather than sentimental. The About loop is visibly legible at both supplied widths."
+    },
+    {
+      "requirement": "Current practice continuity: attentive, revisable knowledge work",
+      "routes": [
+        "/about",
+        "/lab/source-backed-team-memory"
+      ],
+      "observation": "The developing Knowledge Wiki Graph practice begins with knowledge held by people, artifacts, language, and relationships. A proposed small pilot asks a teammate to find an answer, trace its source, correct the record, and identify what remains protected or unresolved. The CallNYC date correction is a concrete existing trace: the date changes from 2014-2015 to 2016 across public surfaces while the reason remains recoverable. This shows attention, documentation, correction, and continuity in a current practice. The client sprint and its acceptance conditions are explicitly proposed, so they are not counted as completed adoption evidence."
+    },
+    {
+      "requirement": "Additional historical continuity and distinction from conventional administration",
+      "routes": [
+        "/about",
+        "/work/wowlist",
+        "/work/harry-j-epstein"
+      ],
+      "observation": "WOWList translates organizers' existing vocabulary into collaboratively editable natural-language events and followable communities, with Sunday Dinner provenance and shared Richard Caceres credit. Its current return is bounded to a threshold, not the restored calendar. The Epstein loop treats customer language, product judgment, and institutional voice as material shaping a maintained storefront and incremental releases. Across these examples, people help shape the system and retain context for continuing it; administrative outputs are connected to the social conditions they serve. The practical-sequence and Epstein screenshots at 375 and 1280 widths visibly support that reading."
+    },
+    {
+      "requirement": "Complete permitted evidence inspection",
+      "observation": "Read all 5,398 lines of the supplied packet, including the rendered routes, public claim records, source records, frozen rubric, and output instructions. Re-read the overlapping range containing the sole truncated output segment. Inspected all 12 referenced screenshots using view_image: both home images, both About images, and practical-sequence, Harry J. Epstein, FairRentNYC, and Sunday Dinner crops at 375 and 1280 widths. No prior reviews, repository files, network sources, or private records were inspected."
+    }
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No disqualifying publication or attribution problem observed in the permitted evidence. This is a bounded packet finding, not independent verification of the underlying private source custody or consent process.",
+    "Open House is a concise attributed public-source projection with collective governance; the raw article is not reproduced. Protected educational records, private correspondence, and unapproved faculty testimonial text are absent.",
+    "WOWList credit includes Richard Caceres and wider participants; Sunday Dinner preserves Julia Fredenburg's co-organizer credit; coalition advocacy and policy outcomes remain collective. The Shoestring agreement is expressly recollection, not a fact established by a photograph.",
+    "Participant-level invitation, attendance, contact, proposal, and access details remain withheld. Aggregate gathering evidence is not presented as unique people or consent. The workflow specimens identify themselves as reconstructions.",
+    "The lab remains an evolving research method, with proposed client work distinguished from completed practice. No automatic trust, completed SaaS, or instructor endorsement is claimed. No phone number was observed in the rendered website text or screenshots."
+  ],
+  "recommendation": "Accept this individual PR-015 scorecard at 4. The candidate supplies a specific, readable, source-bounded connection between artistic experimentation and systems people can inhabit, influence, remember, and continue. No material gap under this lens requires remediation. Calculate the three-reviewer aggregate separately; this scorecard does not establish a human study, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T20:32:00Z",
+    "reviewStartedAt": "2026-10-18T20:30:54Z",
+    "reviewElapsedSeconds": 66,
+    "filesEdited": false
+  }
+}

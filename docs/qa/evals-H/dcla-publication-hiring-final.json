@@ -1,0 +1,270 @@
+{
+  "judgeId": "dcla-publication-holdout-hiring-credit-2026-10-18-final-a",
+  "completedAt": "2026-10-18T20:30:26Z",
+  "sourceCommit": "aef15c36de3d25749a53f585141c38661dfdfe64",
+  "comparisonCommit": "2a82ffd0579b111aaa5077267780f8c48554809a",
+  "reviewerType": "independent-model-review-not-human-approval",
+  "weightedScore": 5,
+  "criterionScores": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "accepted": true,
+  "blockers": [],
+  "acceptanceExplanation": "Fresh bounded re-review of the final candidate supports all 32 control-quality criteria. The locator defect is repaired and verified; complete-population, source-ownership, custody and actual-calendar-date guards preserve the stated evidence boundaries. The pending final two-review ledger is procedural and does not alter this independent content verdict.",
+  "evidence": [
+    {
+      "criterionId": "KB-EVAL-INTAKE",
+      "score": 5,
+      "finding": "The final candidate integrates exactly one intake, four source records, six observations, one credit claim and one inquiry. Exact-inventory, reciprocal linkage, project ownership and duplicate guards now reject deleted or substituted records. Fresh integration tests pass."
+    },
+    {
+      "criterionId": "KB-EVAL-ATOMICITY",
+      "score": 5,
+      "finding": "All six observations now have meaningful public-safe anchors: adjacent article caption, article embed region, upload_date/duration metadata, visual bins 0-29 with bin 26 spot-check, bounded sampled range, and the fifth screenshot's collaborator panel. The sequence is a bounded description of the edited artifact, not certified speech. Each observation retains limits and inquiry links. Twelve fresh tests reject missing and whitespace-only locators. The original locator defect is resolved."
+    },
+    {
+      "criterionId": "KB-EVAL-SCOPE",
+      "score": 5,
+      "finding": "The article, reel metadata, sampled derivative and screenshot panel remain distinct sources with explicit support and non-support scopes. October 3 is the article header date, October 7 is the reel metadata date, and October 18 is inspection. First embed publication remains unknown. Real-calendar-date validation and source/claim date-alignment checks now pass, with four fresh adversarial tests."
+    },
+    {
+      "criterionId": "KB-EVAL-MATURATION",
+      "score": 5,
+      "finding": "The only matured claim is the article's explicit photo-animation attribution to Jamie for NYC Artist Coalition. Its confirmed-with-boundary status, direct article evidence, confidence, review date, anti-claims and partially recovered role/reuse inquiry remain present and enforced."
+    },
+    {
+      "criterionId": "KB-EVAL-PROJECTION",
+      "score": 5,
+      "finding": "The new claim remains hold with empty surfaces. Fresh tests establish no page occurrence and no claim or source in the public registry. No visitor-facing app/content/public file changed from the comparison commit."
+    },
+    {
+      "criterionId": "KB-EVAL-COVERAGE",
+      "score": 5,
+      "finding": "Fresh deterministic evaluation retains evidence dispositions for all 17 existing proof claims. This source-depth addition does not overload the selected site composition or strengthen existing public claims."
+    },
+    {
+      "criterionId": "KB-EVAL-SAFETY",
+      "score": 5,
+      "finding": "Fresh canonical validation has zero errors. The new record contains clean public source URLs and protected metadata identifiers, no media payload or raw private source. Fixed custody guards reject promotion of the private inspection and screenshots into live public sources."
+    },
+    {
+      "criterionId": "KB-EVAL-RECOMPOSITION",
+      "score": 5,
+      "finding": "The later credit and unresolved component roles remain discoverable through the project relationship and inquiry. Existing unselected depth, memory leads and photo-feedback controls remain intact. Future selection and reuse are still separate decisions."
+    },
+    {
+      "criterionId": "KB-EVAL-AGENCY",
+      "score": 5,
+      "finding": "Jamie is credited specifically for photo-animation for the coalition. Photography, audio editing, caption selection, payment, institutional endorsement, attendance and policy adoption are not inferred. The existing agency graph is unchanged. Removing only this new held claim reproduces the prior related-claims digest."
+    },
+    {
+      "criterionId": "KB-EVAL-PRESS-ARCHIVE",
+      "score": 5,
+      "finding": "Preservation review: final fresh evaluation retains the 45 appearances across four campaign indexes, 44 distinct readings, source scope and duplicate provenance. No changed archive module or new external retrieval is claimed."
+    },
+    {
+      "criterionId": "KB-EVAL-SOCIAL-ARCHIVE",
+      "score": 5,
+      "finding": "Preserved source/role/account controls pass freshly. The new six-account panel is expressly co-publication context, not an endorsement, attendance record, professional testimonial or impact metric."
+    },
+    {
+      "criterionId": "KB-EVAL-CALLNYC-FULL-POPULATION",
+      "score": 5,
+      "finding": "Preservation review: the final evaluation reconciles 110 population dispositions, 107 recovered objects and three unresolved records, with URL, role, authorship and projection boundaries intact."
+    },
+    {
+      "criterionId": "KB-EVAL-WOWLIST-FULL-POPULATION",
+      "score": 5,
+      "finding": "Preservation review: 38 recovered profile objects, 35 resolved URLs, account-owned engagement, bounded external uses and selective projection retain passing controls."
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION",
+      "score": 5,
+      "finding": "Preservation review: the 3,123-record retrieved union and 2,001-record owner-archive gap remain distinct. Exact review locks and source/authorship/response limits pass on the final commit."
+    },
+    {
+      "criterionId": "KB-EVAL-URBANHERM-FULL-POPULATION",
+      "score": 5,
+      "finding": "Preservation review: 434 live-profile records, 321 URLs, personal-context exclusions, mutable interaction boundaries and owner-archive gap retain matching locks and passing checks."
+    },
+    {
+      "criterionId": "KB-EVAL-KCTH-FULL-POPULATION",
+      "score": 5,
+      "finding": "Preservation review: all 183 surviving objects and associated URLs, workflow and official-role checks remain reconciled, with outreach, amplification, endorsement and private service data explicitly separated."
+    },
+    {
+      "criterionId": "KB-EVAL-KCTH-FIELD-PRACTICE",
+      "score": 5,
+      "finding": "Preservation review: 13 observations across five bounded sources preserve participant-memory and protected-evidence distinctions. The four individual-role claims remain held; content and review locks match freshly."
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "score": 5,
+      "finding": "Preservation review: 34 displayed slots retain 33 recovered records and one unresolved slot. Response-label, source-route, privacy, collective-credit and owner-export controls pass with matching locks."
+    },
+    {
+      "criterionId": "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      "score": 5,
+      "finding": "Preservation review: 511 event-card instances across 502 parent events, selected organizer-attributed records and the zero-current-card WOW surface retain explicit denominators and privacy/association boundaries."
+    },
+    {
+      "criterionId": "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      "score": 5,
+      "finding": "Preservation review: 57 exposed capture-date posts and 55 routes retain source relationships, interaction semantics, shared credit and native-export limits, with no projection expansion."
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      "score": 5,
+      "finding": "Preservation review: 445 posts and 67 cleaned routes retain reconciliation, authorship and public-safety controls. All final locks pass and the evaluator detects no unsafe editorial sentences."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-HUMAN-CORROBORATION",
+      "score": 5,
+      "finding": "The unchanged control retains zero governed collaborator notes, a permissioned three-note/two-project protocol and anti-synthesis rules. The new article credit is explicitly not a performance testimonial and creates no collaborator-note intake."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-DENOMINATOR",
+      "score": 5,
+      "finding": "Capture surfaces, dates, denominators and owner-export gaps stay explicit. DCLA has a fixed inspected record inventory, a 30-second derivative, 30 sampled bins and six displayed accounts; none represents a full session or lifetime account history."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-COLLECTIVE-REVIEW",
+      "score": 5,
+      "finding": "Zero formal collaborator-review rounds remains explicit. Correction/dissent paths and the prohibition on silence-as-approval remain preserved; the collaborator panel does not satisfy that review requirement."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-RECENT-OPERATIONS",
+      "score": 5,
+      "finding": "The three governed proof leads and target of two paid end-to-end engagements remain unchanged. This publication record supplies artifact follow-through without asserting a paid commission or complete client-delivery evidence."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-OUTCOMES",
+      "score": 5,
+      "finding": "The source note distinguishes publication follow-through from policy success and rejects adopted commitments, consensus, causal enactment and impact from reactions/views. Existing activity/output/outcome/impact and independent-evidence controls remain intact."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-POSITIONING",
+      "score": 5,
+      "finding": "Technical project management, product operations and implementation retain canonical-fact-preserving role/proof controls and real-reader requirements. The held addition makes no claim of tested hiring fit."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-HIRING-USABILITY",
+      "score": 5,
+      "finding": "The zero-session baseline and five unfamiliar readers, two role families and three realistic tasks remain explicit. No coaching, simulated-human-results or raw-participant-data substitution is introduced."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-JOB-FUNNEL",
+      "score": 5,
+      "finding": "Zero governed aggregate periods, private raw-event data, de-identified reporting, required fields and anti-causation rules remain preserved and pass final checks."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-EXTERNAL-VALIDITY",
+      "score": 5,
+      "finding": "Deterministic checks, mutation tests and model reviews remain internal evidence. The zero governed human-judge baseline is unchanged. This review does not claim human validation or hiring impact."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-VISUAL-EVIDENCE",
+      "score": 5,
+      "finding": "The reel retains permission-needed rights, review-needed consent, hold display and website authorization false. Visual bins do not certify speech, speaker identity or a full transcript. August photo permissions and photography/social-preview records are unchanged from the baseline; no new reuse is granted."
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-VOICE",
+      "score": 5,
+      "finding": "The note states a concrete contribution and follow-through without fabricated motives, emotions, speech or endorsement. Jamie's confirmation and situated support remain required by the preserved voice control for later public composition."
+    }
+  ],
+  "repairReview": {
+    "previousRejectedSourceCommit": "27fe365d6839a94a731cee04a43b0f2a62b47650",
+    "previousResultPreserved": true,
+    "previousResultSha256": "35c5eecdc1528683243f951f7d18dff2928b68c137b14917e08b172857505fea",
+    "locatorRepair": "Read every final observation and both publication evaluator/test files. Six meaningful nonempty locators now identify the reported source positions without claiming exact caption timestamps.",
+    "fixedPopulation": "Read and ran the exact one-intake/four-source/six-observation/one-claim/one-inquiry inventory checks plus deletion, reassignment, source-type and protected-custody mutations.",
+    "lastDelta": "After the full review of 74b50046d0b1326d587510dc74fda70fa1de0988, reviewed the final two-file date-validation delta and reran both DCLA checks, all DCLA tests and the deterministic 32-criterion evaluation at aef15c36de3d25749a53f585141c38661dfdfe64. Application data and documentation were unchanged by that delta."
+  },
+  "freshVerification": {
+    "sourceFilesMatchFrozenCommit": true,
+    "trackedChangesOutsideQa": [],
+    "dclaHistoricalEvaluation": {
+      "exitCode": 0,
+      "checks": 41,
+      "passed": true,
+      "fullTranscriptReviewed": false,
+      "publicationReady": false
+    },
+    "dclaPublicationEvaluation": {
+      "exitCode": 0,
+      "checks": 112,
+      "passed": true,
+      "websiteMediaReady": false
+    },
+    "dclaTests": {
+      "exitCode": 0,
+      "tests": 113,
+      "passed": 113,
+      "failed": 0,
+      "skipped": 0
+    },
+    "deterministicKnowledgeEvaluation": {
+      "exitCode": 0,
+      "weightedScore": 5,
+      "criteriaCount": 32,
+      "belowMinimum": [],
+      "errors": [],
+      "accepted": false,
+      "holdoutComplete": false,
+      "holdoutRuns": 0,
+      "requiredHoldoutRuns": 2,
+      "interpretation": "Fresh final-code evaluation. Overall gate is pending the two final review receipts; no criterion or canonical validation failure."
+    },
+    "relatedClaimsSha256": "ea7cf1cb41ca9bb36aa667463f4cc67ba48af399449760524929fe3473c95338",
+    "relatedClaimsSha256AfterRemovingOnlyNewClaim": "8077daece776613fc08850cc70c4c4be47c1f5d032b93ce62a5ddebc72ed7066",
+    "candidateFileSha256": {
+      "apps/www/src/data/knowledge-bank/dcla-animation-publication-2026-10.ts": "12a200a698f7e87e704313bcc9a226b80e7a3bb542664c858254daf944b3f450",
+      "scripts/knowledge-wiki/dcla-animation-publication-eval.mjs": "42829bdb8395c447e8ba052ce1b7049a46b8cd10599eac458d326167270c1906",
+      "scripts/knowledge-wiki/dcla-animation-publication-eval.test.mjs": "2662308b73a5dd21e7fa84630d5fcc29f1026882f517532deab1897bd02cce44",
+      "docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md": "3415a6fe7b036224152be21d5f531dd46972b0272dc086114927374ba595d580"
+    }
+  },
+  "reviewLimits": [
+    "No network, raw-media playback, live article retrieval, screenshot retrieval or private transcript access was performed. DCLA judgment concerns the supplied canonical records, quoted source credit, source note, source locators and their stated limits; it does not independently authenticate external source bytes.",
+    "Legacy archive claims received a preservation review through the baseline diff, current records/control locks and freshly executed deterministic checks. No new close reading of every legacy external source is asserted.",
+    "This was a fresh candidate review after the first rejection, not a mechanical score or hash rebind. The first rejected result was not overwritten or converted into a pass.",
+    "No other review verdict or scorecard was read or used. The coordinator identified the final date-validation delta for bounded re-review; I independently read its code and tests and ran them before this verdict.",
+    "The generic deterministic atomicity population remains the older 341-observation set. The package workflow separately invokes the DCLA evaluator, which now enforces observation locators and the complete inspected inventory. Acceptance uses both current checks and direct content review.",
+    "The pattern-based prose checks reject known unsafe assertions; they are not a complete semantic proof. Direct review of the final wording remains part of this verdict.",
+    "No repository source or fixture was edited. Only this final result file was written. Concurrent QA/rendered-capture changes were excluded from the frozen source review.",
+    "Actual human comprehension, collaborator agreement, hiring outcomes and policy impact remain unverified and separately governed. Scores measure preserved controls and honest limits, not completion of those external outcomes.",
+    "The held claim, unresolved media rights, transcript limitations and separate publication/deployment decisions remain held. This is one independent model review, not human approval or authorization to publish, reuse media, merge or deploy."
+  ]
+}

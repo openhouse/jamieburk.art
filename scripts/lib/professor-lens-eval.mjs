@@ -43,15 +43,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-a-2026-10-18-r3-result.json",
-  "docs/qa/evals-H/margaret-morse-b-2026-10-18-r3-result.json",
-  "docs/qa/evals-H/margaret-morse-c-2026-10-18-r3-result.json",
-  "docs/qa/evals-H/warren-sack-a-2026-10-18-r4-result.json",
-  "docs/qa/evals-H/warren-sack-b-2026-10-18-r4-result.json",
-  "docs/qa/evals-H/warren-sack-c-2026-10-18-r4-result.json"
+  "docs/qa/evals-H/margaret-morse-a-2026-10-18-r6-result.json",
+  "docs/qa/evals-H/margaret-morse-b-2026-10-18-r6-result.json",
+  "docs/qa/evals-H/margaret-morse-c-2026-10-18-r6-result.json",
+  "docs/qa/evals-H/warren-sack-a-2026-10-18-r6-result.json",
+  "docs/qa/evals-H/warren-sack-b-2026-10-18-r6-result.json",
+  "docs/qa/evals-H/warren-sack-c-2026-10-18-r6-result.json"
 ];
 
-const approvedCandidateSha256 = "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0";
+const approvedCandidateSha256 = "3d69745351e63fc8b16ce9109a48f1e14119173a4b3dffc89c009caea2d3c55b";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

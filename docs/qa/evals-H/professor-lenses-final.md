@@ -80,3 +80,30 @@ guard prevents this regression.
 - These fictionalized analytical lenses are evaluation devices. They are not
   real-person participation, endorsement, editorial authority, or permission
   to publish, merge, deploy, contact, or act.
+
+## Publication-intake refresh — 2026-10-18
+
+The held DCLA publication records changed files included in the public-candidate
+fingerprint. Prior scorecards therefore remained historical. The initial
+post-intake review round also became stale when source anchors were added.
+Neither round was relabeled as current.
+
+Six new isolated model reviewers read the complete rendered-site packet, its
+public-safe claim records and source note, and all twelve fresh screenshots.
+The packet excluded raw protected educational records and the raw third-party
+article. Each reviewer inspected the final candidate independently.
+
+- Candidate fingerprint: `3d69745351e63fc8b16ce9109a48f1e14119173a4b3dffc89c009caea2d3c55b`.
+- Current scorecards: `margaret-morse-{a,b,c}-2026-10-18-r6-result.json` and
+  `warren-sack-{a,b,c}-2026-10-18-r6-result.json` in this directory.
+- Each lens: 4, 4, 4; median 4. No failing reviewer.
+- Fresh controls: 18/18. Mutation tests: 14/14.
+- Browser matrix: 60 route/viewport combinations, zero observed automated axe
+  violations or layout/image/request failures after lazy-image follow-up.
+- Eight full method-section captures supplement four Home/About captures.
+- One scorecard's local output-file locator was omitted from its public copy;
+  scores, findings, candidate binding and review provenance were not changed.
+
+These are internal model reviews, not real faculty participation, human-reader
+validation, rights clearance, accessibility certification or release approval.
+They do not resolve the separate composite-review and photo-release holds.

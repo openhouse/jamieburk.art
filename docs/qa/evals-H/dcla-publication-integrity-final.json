@@ -1,0 +1,487 @@
+{
+  "judgeId": "dcla-publication-holdout-data-integrity-2026-10-18-final-b",
+  "runner": "/root/kb_dcla_integrity",
+  "model": null,
+  "modelDisclosure": "Exact runtime model not exposed; not guessed.",
+  "reviewedAt": "2026-10-18T20:31:27Z",
+  "firstFrozenReviewStartedAt": "2026-10-18T20:27:46Z",
+  "finalCandidateReviewStartedAt": "2026-10-18T20:30:12Z",
+  "sourceCommit": "aef15c36de3d25749a53f585141c38661dfdfe64",
+  "comparisonCommit": "2a82ffd0579b111aaa5077267780f8c48554809a",
+  "priorFrozenCandidateNotAccepted": "74b50046d0b1326d587510dc74fda70fa1de0988",
+  "scope": "Independent 32-criterion data-integrity review of the DCLA publication intake, its canonical integration, changed evaluator and preserved controls. Unchanged archive criteria are evaluated for local integrity and bounded carry-forward, not fresh external-source truth.",
+  "accepted": true,
+  "verdict": "pass",
+  "weightedScore": 5,
+  "criterionScores": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "criteria": [
+    {
+      "criterionId": "KB-EVAL-INTAKE",
+      "score": 5,
+      "evidence": [
+        "One intake retains four distinct source records, all six observations, one held claim and one open inquiry; fixed inventories and reciprocal ownership reject deletion and relinking."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-ATOMICITY",
+      "score": 5,
+      "evidence": [
+        "All six October observations have nonempty source anchors and limitations. Caption and history observations identify one-frame-per-second bins and expressly disclaim exact caption timestamps and frame-complete playback."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-SCOPE",
+      "score": 5,
+      "evidence": [
+        "Article, reel metadata, visual inspection and screenshot panel retain separate evidentiary functions. Source support and doesNotEstablish fields remain populated; provenance and date-alignment probes now reject."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-MATURATION",
+      "score": 5,
+      "evidence": [
+        "The sole confirmed-with-boundary claim says the article credits Jamie for photo-animation. Evidence is directly attached to the article; anti-claims, reviewer attribution, review date and unresolved component-credit inquiry remain."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-PROJECTION",
+      "score": 5,
+      "evidence": [
+        "The new claim is held with no surfaces and no page occurrence. The public registry contains neither the held claim nor its four sources; the registry is unchanged from the comparison commit."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-COVERAGE",
+      "score": 5,
+      "evidence": [
+        "Existing public claim coverage and page composition are unchanged. The new evidence deepens the canonical record without adding unreviewed site claims."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-SAFETY",
+      "score": 5,
+      "evidence": [
+        "Protected research sources remain metadata-only with private preservation and opaque custody IDs. No raw media, signed URL, private locator or contact address is added; reuse and collective-credit limits remain explicit."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-RECOMPOSITION",
+      "score": 5,
+      "evidence": [
+        "The held claim, six source-anchored observations and partially-recovered inquiry preserve later editorial reuse without erasing unresolved credit or permission questions."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-AGENCY",
+      "score": 5,
+      "evidence": [
+        "Article-credit attribution identifies Jamie, photo-animation and NYC Artist Coalition without assigning all production roles or institutional outcomes. Existing source-linked agency relations remain unchanged and pass canonical checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-PRESS-ARCHIVE",
+      "score": 5,
+      "evidence": [
+        "Press inventory files are unchanged; fresh deterministic reconciliation and lock checks pass. This is preservation assurance for the historical archive, not a new reading of its article bodies."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-SOCIAL-ARCHIVE",
+      "score": 5,
+      "evidence": [
+        "Existing account relationships and attributable engagement records are unchanged and freshly pass their bounded source/role checks; the new panel is not converted into endorsement."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-CALLNYC-FULL-POPULATION",
+      "score": 5,
+      "evidence": [
+        "The CallNYC 110-slot population and its unresolved records remain unchanged; fresh deterministic population checks pass without any new external account access."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-WOWLIST-FULL-POPULATION",
+      "score": 5,
+      "evidence": [
+        "The WOW List 38-object population and posted-route controls remain unchanged and pass fresh deterministic checks; no new archive completeness claim is made."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-RETRIEVABLE-POPULATION",
+      "score": 5,
+      "evidence": [
+        "The NYCAC retrievable union, owner-archive gap and source-role controls remain unchanged and pass fresh deterministic checks; the DCLA reel is a separate intake, not a revision of the old census."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-URBANHERM-FULL-POPULATION",
+      "score": 5,
+      "evidence": [
+        "The Urbanhermit capture-date population and owner-archive limits remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-KCTH-FULL-POPULATION",
+      "score": 5,
+      "evidence": [
+        "The KC Town Hall historical population, relationship categories and service-data privacy controls remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-KCTH-FIELD-PRACTICE",
+      "score": 5,
+      "evidence": [
+        "KC Town Hall field-practice claim and shared-surface review locks pass; the DCLA addition does not change its held individual-role or completion boundaries."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "score": 5,
+      "evidence": [
+        "The NYCAC Facebook event census and unresolved owner-export gap remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      "score": 5,
+      "evidence": [
+        "The personal/WOW List Facebook event dispositions and zero-card historical boundary remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-WOWLIST-FACEBOOK-POSTS",
+      "score": 5,
+      "evidence": [
+        "The WOW List Facebook post population, routes and shared-source distinctions remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-NYCAC-FACEBOOK-POSTS",
+      "score": 5,
+      "evidence": [
+        "The NYCAC Facebook post population and projection/privacy locks remain unchanged and pass fresh deterministic checks."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-HUMAN-CORROBORATION",
+      "score": 5,
+      "evidence": [
+        "The article credit is treated as a published attribution, expressly not a performance testimonial. Existing missing first-hand collaborator corroboration remains visible."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-DENOMINATOR",
+      "score": 5,
+      "evidence": [
+        "Thirty sampled second bins are bounded sampling, six displayed accounts are panel observations, and neither represents full-session or lifetime-history coverage. Existing population-denominator controls remain unchanged."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-COLLECTIVE-REVIEW",
+      "score": 5,
+      "evidence": [
+        "Panel display does not establish institutional approval; the record keeps formal collaborator review and silence separate from consent or endorsement."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-RECENT-OPERATIONS",
+      "score": 5,
+      "evidence": [
+        "A published animation output does not establish a commission or paid work. Existing recent-operations research gaps remain open."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-OUTCOMES",
+      "score": 5,
+      "evidence": [
+        "Publication and credit are output evidence. The record does not turn views, response captions or collaboration context into policy adoption, impact or sole causation."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-POSITIONING",
+      "score": 5,
+      "evidence": [
+        "The source addition does not alter positioning claims or invent hiring proof. Existing role-to-proof control remains intact."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-HIRING-USABILITY",
+      "score": 5,
+      "evidence": [
+        "No hiring-reader sessions or human usability results are created; the existing zero-session baseline remains explicit."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-JOB-FUNNEL",
+      "score": 5,
+      "evidence": [
+        "No employer, contact, correspondence or funnel data is added, and no portfolio-to-employment causal claim is made."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-EXTERNAL-VALIDITY",
+      "score": 5,
+      "evidence": [
+        "This result, mutation tests and deterministic checks are internal model/technical evidence only; no human approval, real-reader result or external validation is claimed."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-VISUAL-EVIDENCE",
+      "score": 5,
+      "evidence": [
+        "The derivative has recorded identity and sampling limits while website media use remains held. Photo permissions, component authorship, consent and reuse rights remain distinct."
+      ]
+    },
+    {
+      "criterionId": "KB-EVAL-BLIND-VOICE",
+      "score": 5,
+      "evidence": [
+        "The source note communicates observed follow-through and questions without inventing speaker identities, motives, dialogue or emotions. Captions remain visual observations rather than certified quotations."
+      ]
+    }
+  ],
+  "blockers": [],
+  "sourceBindings": [
+    {
+      "path": "apps/www/src/data/knowledge-bank/dcla-animation-publication-2026-10.ts",
+      "sha256": "12a200a698f7e87e704313bcc9a226b80e7a3bb542664c858254daf944b3f450"
+    },
+    {
+      "path": "scripts/knowledge-wiki/dcla-animation-publication-eval.mjs",
+      "sha256": "42829bdb8395c447e8ba052ce1b7049a46b8cd10599eac458d326167270c1906"
+    },
+    {
+      "path": "scripts/knowledge-wiki/dcla-animation-publication-eval.test.mjs",
+      "sha256": "2662308b73a5dd21e7fa84630d5fcc29f1026882f517532deab1897bd02cce44"
+    },
+    {
+      "path": "docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md",
+      "sha256": "3415a6fe7b036224152be21d5f531dd46972b0272dc086114927374ba595d580"
+    },
+    {
+      "path": "apps/www/src/data/knowledge-bank/records.ts",
+      "sha256": "3cd2f922fc72c452b1324aa268565cf509ffd4fee88e0eebe0e74486f228ee99"
+    },
+    {
+      "path": "evals/knowledge-bank/evals.json",
+      "sha256": "727e11691ef4288420f197b748987c52d1ec179f7e9208bc50cf656a636c5039"
+    }
+  ],
+  "initialFindings": [
+    {
+      "finding": "Observation/source populations could be silently deleted with their reciprocal links.",
+      "status": "fixed",
+      "verification": "Final independent deletion probes reject; inventories cover four sources, six observations, one intake, one claim and one inquiry."
+    },
+    {
+      "finding": "Project reassignment and article-credit rebinding to screenshot evidence passed.",
+      "status": "fixed",
+      "verification": "Final independent ownership/project probes reject."
+    },
+    {
+      "finding": "Claim governance metadata and source scope boundaries could be emptied.",
+      "status": "fixed",
+      "verification": "Final independent metadata/scope probes reject."
+    },
+    {
+      "finding": "A private inspection source could be relabeled public/live with a new URL and no custody identifier.",
+      "status": "fixed",
+      "verification": "Final independent custody probe rejects."
+    },
+    {
+      "finding": "A malformed review date and matching article inspection date passed lexical chronology at 74b50046d0b1326d587510dc74fda70fa1de0988.",
+      "status": "fixed",
+      "verification": "The exact original 2099-99-99 mutation now fails real-date validation and claim/source date alignment at aef15c36de3d25749a53f585141c38661dfdfe64."
+    },
+    {
+      "finding": "Missing observation anchors were reported before this review by the parent.",
+      "status": "fixed-and-independently-checked",
+      "verification": "All six observations now carry source anchors; all twelve deletion/whitespace anchor regressions pass."
+    }
+  ],
+  "exactOriginalBypassProbeResults": [
+    {
+      "name": "delete every observation and empty reciprocal intake list",
+      "passed": false,
+      "checks": 70,
+      "errors": [
+        "Retain the complete inspected observations population; no silent deletion or substitution."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "delete caption observation with reciprocal intake link",
+      "passed": false,
+      "checks": 105,
+      "errors": [
+        "Retain the complete inspected observations population; no silent deletion or substitution."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "detach all records from a project",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "The intake must retain its project and public-safe scope boundaries.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "Observation project, intake, and source ownership must match the inspected record.",
+        "The inquiry must retain its project and limitations.",
+        "The credit claim needs its original project, boundaries, anti-claims, and reviewer attribution."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "turn private research source into public live publication",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "Protected inspection and screenshot sources must retain their metadata-only private custody."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "change review date to invalid future date",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "Claim review dates must match this inspection encounter.",
+        "Review and publication dates must be real ISO calendar dates.",
+        "Source access dates must match this inspection encounter.",
+        "Source access dates must match this inspection encounter.",
+        "Source access dates must match this inspection encounter.",
+        "Source access dates must match this inspection encounter."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "omit both private research sources and their observations",
+      "passed": false,
+      "checks": 83,
+      "errors": [
+        "Retain the complete inspected sources population; no silent deletion or substitution.",
+        "Retain the complete inspected observations population; no silent deletion or substitution."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "credit observation rebound to screenshot source",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "Observation project, intake, and source ownership must match the inspected record."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "remove claim boundaries antiClaims and reviewedBy",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "The credit claim needs its original project, boundaries, anti-claims, and reviewer attribution."
+      ],
+      "websiteMediaReady": false
+    },
+    {
+      "name": "remove all source scope boundaries",
+      "passed": false,
+      "checks": 112,
+      "errors": [
+        "Every source needs explicit support and scope limits.",
+        "Every source needs explicit support and scope limits.",
+        "Every source needs explicit support and scope limits.",
+        "Every source needs explicit support and scope limits."
+      ],
+      "websiteMediaReady": false
+    }
+  ],
+  "freshChecks": {
+    "focusedDclaTests": {
+      "command": "node --test --test-reporter=dot scripts/knowledge-wiki/dcla-listening-session-eval.test.mjs scripts/knowledge-wiki/dcla-animation-publication-eval.test.mjs",
+      "exitCode": 0,
+      "passed": 113,
+      "failed": 0
+    },
+    "historicalDclaEvaluator": {
+      "passed": true,
+      "checks": 41,
+      "fullTranscriptReviewed": false,
+      "publicationReady": false
+    },
+    "octoberDclaEvaluator": {
+      "passed": true,
+      "checks": 112,
+      "websiteMediaReady": false
+    },
+    "knowledgeBankDeterministic": {
+      "criterionCount": 32,
+      "allScores": 5,
+      "weightedScore": 5,
+      "canonicalErrors": [],
+      "reviewLocksPass": true
+    },
+    "diffCheck": {
+      "comparisonCommit": "2a82ffd0579b111aaa5077267780f8c48554809a",
+      "exitCode": 0
+    },
+    "sourceWorkingTreeClean": true,
+    "pendingWorkingTreeChanges": "Only four unrelated QA capture files were modified when inspected; they are outside this source verdict.",
+    "preservedFiles": "Historical August module/note, public registry and knowledge-evals implementation are unchanged from the comparison commit.",
+    "relatedClaimsHashRebinding": {
+      "previous": "8077daece776613fc08850cc70c4c4be47c1f5d032b93ce62a5ddebc72ed7066",
+      "current": "ea7cf1cb41ca9bb36aa667463f4cc67ba48af399449760524929fe3473c95338",
+      "verification": "Using the evaluator's exact projection, removing only CLM-DCLA-ANIMATION-PUBLISHED-CREDIT reproduces the previous hash; including it reproduces the new hash. No criterion, threshold or old related-claim wording was weakened."
+    }
+  },
+  "independence": {
+    "priorJudgeVerdictsOrScorecardsRead": false,
+    "sourceEditsMade": false,
+    "networkUsed": false,
+    "privateSourcesOpened": false,
+    "note": "Implementation and parent messages supplied repair status, but final verification was performed independently. The KB evaluator reads its existing ledger internally; prior ledger verdicts and judge IDs were not displayed or used for this result."
+  },
+  "limitations": [
+    "The public article body, reel derivative and supplied screenshots were not freshly opened by this reviewer. This review checks the supplied source record, locators, internal evidence relationships and boundaries, not independent current external-source authenticity.",
+    "Unchanged archives were not reread or reaccessed. Their criteria use unchanged local artifacts, deterministic reconciliations and review-lock integrity, with no claim of fresh account access or completeness beyond their existing capture boundaries.",
+    "No human audio review, certified transcript, speaker identity certification, full-session reading or frame-complete playback is established.",
+    "This model review is uncalibrated internal review, not human approval, collaborator consent, institutional endorsement, media-rights clearance, hiring validation, publication authorization, merge authorization or deployment authorization.",
+    "The result binds to the identified source commit and hashes. Pending final ledger bookkeeping or QA capture updates do not supply or invalidate human authority; later changes to reviewed source bytes require a new binding and appropriate review."
+  ]
+}

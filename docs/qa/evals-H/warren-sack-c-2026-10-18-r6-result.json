@@ -1,0 +1,106 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the frozen Warren Sack rubric; not Warren Sack's participation, endorsement, or approval.",
+  "reviewerId": "warren-sack-c-2026-10-18-r6",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "3d69745351e63fc8b16ce9109a48f1e14119173a4b3dffc89c009caea2d3c55b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible method and path within two clicks",
+      "route": "/about",
+      "finding": "The homepage desktop navigation visibly links to About. About states the complete recursive sequence in plain language: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. The three named systems loops link directly to their case studies, giving the path / -> /about -> project. The 375px and 1280px method screenshots show legible, unclipped text. The mobile homepage shows a Menu button; its expanded interaction was not independently exercised.",
+      "screenshots": [
+        "candidate-home-viewport.png",
+        "candidate-home-desktop.png",
+        "professor-lenses-about-mobile.png",
+        "professor-lenses-about-desktop.png",
+        "practical-sequence-375.png",
+        "practical-sequence-1280.png"
+      ]
+    },
+    {
+      "requirement": "First systems-sequence trace",
+      "route": "/work/harry-j-epstein",
+      "observation": "Customer language, product judgment, company voice, and recurring customer or team questions expose operating friction.",
+      "model": "Product information, content, marketing, ordering, and follow-up are treated as one customer and team system.",
+      "interface": "The maintained storefront joins discovery, editorial content, and commerce. The case study describes incremental implementation rather than an isolated redesign.",
+      "social_use_and_learning": "The operating specimen moves from a customer or team question to a scoped requirement, incremental release, inspection of the customer path, and review of operational or analytical signals with stakeholders.",
+      "documentation_and_handoff": "Reusable content patterns, ownership, and next actions preserve work for staff and later maintainers.",
+      "evidence_boundary": "The five-step maintenance-to-handoff specimen is expressly a reconstruction, not an original company workflow. The storefront capture is dated July 2026 while Jamie's listed role is 2009-2015; I do not treat that capture as independent proof that every current storefront feature was Jamie's work.",
+      "screenshots": [
+        "harry-j-epstein-375.png",
+        "harry-j-epstein-1280.png"
+      ]
+    },
+    {
+      "requirement": "Second systems-sequence trace",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Lived experience in cultural spaces, listening meetings, priority ballots, policy questions, public sources, and city/state actors form the input.",
+      "model": "The campaign-memory architecture distinguishes public evidence, protected context, unresolved questions, decisions, and accountable next actions. Policy lineage is separately recoverable.",
+      "interface": "Campaign sites, call scripts, event pages, practical sessions, town halls, and hearings turn the shared record into ways to participate.",
+      "social_use_and_learning": "The packet supplies public reporting, event records, testimony, campaign implementation history, and photographed working/public gatherings. The case describes reviewable decisions and questions carried through repeated collective use.",
+      "documentation_and_handoff": "Running minutes, source maps, question logs, action trackers, and 30+ pages of campaign memory allow collaborators to recover context and continue across strategy lanes.",
+      "evidence_boundary": "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026 identifies the quantity and role as approved first-party claims. Protected internal specimens were not examined. CLM-NYCAC-PARTICIPATION-SYSTEM and CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION provide bounded public records for participation and implementation. The Shoestring agreement remains Jamie's recollection; images and repository history do not independently establish the agreement or policy causation.",
+      "screenshots": [
+        "fair-rent-nyc-375.png",
+        "fair-rent-nyc-1280.png"
+      ]
+    },
+    {
+      "requirement": "Third systems-sequence trace",
+      "route": "/work/196-sunday-dinner",
+      "observation": "Hospitality, trust, resident-artist needs, shared space, and recurring relationships create practical coordination requirements.",
+      "model": "Invitations, responses, hosting, minimal documentation, follow-up, and residency access handoffs become a repeatable participation system.",
+      "interface": "Two concrete reconstructions expose the operating interface: proposal review -> orientation -> configuration -> independent access -> continued support, and invite -> receive -> host -> document -> continue.",
+      "social_use_and_learning": "The case connects these workflows to recurring gatherings and resident artists. Its orientation step makes needs and expectations discussable, and continued support permits changes in direction while preserving artist agency. Public 100th/200th event milestones and governed aggregate controls support historical continuity without becoming an attendance census.",
+      "documentation_and_handoff": "The operating-sheet schema, minimal continuity record, follow-up, and residency handoff show how another occasion or resident can proceed while participant details remain private.",
+      "evidence_boundary": "The specimens are explicitly reconstructions, not published participant records or independently observed outcomes. CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025 permits workflow-schema projection; CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION preserves aggregate and data-quality limits. Repeated social use is shown; formal moderated user research is not claimed.",
+      "screenshots": [
+        "sunday-dinner-375.png",
+        "sunday-dinner-1280.png"
+      ]
+    },
+    {
+      "requirement": "Additional social-structure and information-architecture continuity",
+      "routes": [
+        "/work/wowlist",
+        "/work/callnyc",
+        "/work/technical-operations",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "WOW List supplies an additional complete trace: Sunday Dinner calendar needs and organizer vocabulary -> followable keyword communities -> collaboratively editable natural-language events and distribution -> organizer adoption and support interactions -> tutorials and public support documentation. Richard Caceres and wider contributors retain credit. CallNYC translates constituent-service categories into recognizable issue pathways, preserves implementation and documentation, and explicitly remains archived and unofficial. Technical Operations connects concrete operating questions to project evidence and names its remaining proof limits. The lab provides a specific correction loop, changing CallNYC's date from 2014-2015 to 2016 across public surfaces, while its proposed team pilot remains prospective."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof and anti-overclaim audit",
+      "routes": [
+        "/about",
+        "/work/wowlist",
+        "/work/callnyc",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "Open House is bounded public historical lineage supported by the Good Times source record, with collective governance retained. No protected UCSC evaluation text, grades, faculty testimonial, or current Max/Jitter proficiency claim appears in the reviewed public text. About explicitly rejects structural-equivalence inference and separates historical implementation from current technical proficiency. The lab labels its architecture and proposed pilot as developing research/method, not production SaaS, client adoption, peer-reviewed research, or automated trust. Its Maven certificate is bounded professional development. WOW List distinguishes the 2017 production snapshot from its limited 2026 return threshold; CallNYC preserves historical and unofficial status."
+    }
+  ],
+  "gaps": [],
+  "safety_findings": [
+    "No blocking privacy, collective-credit, coursework, or authority overclaim was observed in the supplied rendered public text and screenshots. This is a finding about the supplied evidence, not an audit of unseen files.",
+    "Private coalition records, participant-level histories, raw correspondence, educational evaluations, credentials, and private source locators were not exposed in the reviewed public content. Jamie's phone number was not observed in the supplied website text.",
+    "Public social responses, recovered interactions, and historical scale are explicitly distinguished from attendance, unique reach, endorsement, and causal policy impact.",
+    "The current public-safe project surfaces include historical work. This score does not assert that the historical products are currently operating or that a formal user study occurred.",
+    "The other two scorecards and aggregate median were not observed or inferred. This result assesses only the requirements available to one independent reviewer."
+  ],
+  "recommendation": "Pass this individual PR-016 review at 4. The candidate makes the recurring systems sequence specific and inspectable across at least three project surfaces, with readable mobile/desktop method evidence and explicit historical, collective, privacy, and research boundaries. Retain those boundaries and calculate the three-reviewer aggregate separately. This score is not a human study, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T20:36:05Z",
+    "reviewStartedAt": "2026-10-18T20:34:36Z",
+    "reviewDurationSeconds": 89,
+    "packet": "warren-sack-c-2026-10-18-r6.md",
+    "packetReadCompletely": true,
+    "screenshotsInspected": 12,
+    "filesEdited": false
+  }
+}

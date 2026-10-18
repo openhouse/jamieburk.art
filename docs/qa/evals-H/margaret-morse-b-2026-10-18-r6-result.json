@@ -1,0 +1,129 @@
+{
+  "evaluator": "Fictionalized independent model Margaret Morse lens; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-b-2026-10-18-r6",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "3d69745351e63fc8b16ce9109a48f1e14119173a4b3dffc89c009caea2d3c55b",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "A visible threshold connects artistic, civic, technical, and social practice while retaining professional role clarity.",
+      "routes": [
+        "/",
+        "/about"
+      ],
+      "observed": "The homepage leads with Technical Project Manager - Product Operations & Implementation and usable systems. About's Systems people can inhabit then connects the publicly sourced ten-day Open House experiment, communal decisions, and many-perspective documentation to WOW List, Sunday Dinner/196, coalition work, and the developing Knowledge Wiki Graph practice. The artistic lineage occupies a bounded section inside a professional account rather than replacing the role with an artist biography.",
+      "screenshots": [
+        "candidate-home-viewport.png",
+        "candidate-home-desktop.png",
+        "professor-lenses-about-mobile.png",
+        "professor-lenses-about-desktop.png"
+      ],
+      "sourceBinding": "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY and SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28 support the bounded Open House wording."
+    },
+    {
+      "requirement": "The lineage is legible within two clicks.",
+      "routes": [
+        "/ -> /about",
+        "/ -> /about -> /work/196-sunday-dinner",
+        "/ -> /about -> /work/wowlist",
+        "/ -> /about -> /work/fair-rent-nyc"
+      ],
+      "observed": "The supplied desktop homepage screenshot visibly includes About in navigation. The mobile homepage visibly includes Menu, and the rendered route text includes About as a navigation destination; Menu then About is two activations. About directly links the named continuities. The mobile About screenshot shows the full connecting paragraph and its project links. This is route and screenshot evidence, not an independently exercised navigation test."
+    },
+    {
+      "requirement": "Project continuity 1: hospitality and artistic agency shape an operating system.",
+      "routes": [
+        "/about",
+        "/work/196-sunday-dinner"
+      ],
+      "observed": "Sunday Dinner/196 connects hospitality, trust, artist support, shared space, and returning participants to invitations, hosting, onboarding, access handoffs, and follow-up. The two explicitly reconstructed handoff specimens give concrete action sequences. Residency orientation makes needs and expectations discussable, configures conditions around the artist's actual practice, provides independent access, and remains available for changes while preserving artistic agency. Gathering operations connect food, space, welcome, introductions, minimal documentation, and follow-up. This demonstrates inhabitable structure beyond routine administration.",
+      "screenshots": [
+        "sunday-dinner-375.png",
+        "sunday-dinner-1280.png"
+      ],
+      "sourceBinding": "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025 limits the operating-sheet projection to schema; CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES preserves Julia Fredenburg's co-organizer credit; aggregate records explicitly do not establish unique people or precise attendance."
+    },
+    {
+      "requirement": "Project continuity 2: collective civic participation connects rooms, public interfaces, and continuing memory.",
+      "routes": [
+        "/",
+        "/about",
+        "/work/fair-rent-nyc"
+      ],
+      "observed": "The homepage's screen-and-room section and the coalition case's shared public surface, working alignment, and public room sequence connect a website to a facilitated gathering and civic participation. Listening meetings, priority ballots, public action routes, practical safety sessions, minutes, source maps, question logs, and action trackers show people influencing the work, recovering context, and continuing it. Shoestring Press and Market Hotel are specific places, not generic atmosphere. The exact Shoestring agreement is carefully attributed to Jamie's recollection.",
+      "screenshots": [
+        "fair-rent-nyc-375.png",
+        "fair-rent-nyc-1280.png"
+      ],
+      "sourceBinding": "CLM-NYCAC-PARTICIPATION-SYSTEM, CLM-NYCAC-CABARET-SAFETY-ORGANIZING, CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026, and CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017 provide distinct role, operating, public-evidence, and recollection boundaries."
+    },
+    {
+      "requirement": "Project continuity 3: community language and social use shape a technical product.",
+      "routes": [
+        "/about",
+        "/work/wowlist"
+      ],
+      "observed": "WOW List's historical product rationale starts with the language organizers use, makes event posts collaboratively editable natural-language text, and turns keywords into followable calendars and distribution workflows. The Sunday Dinner origin, public support explanations, independent organizer tutorial, external local-calendar link, and the 200th dinner's WOW List route make the social-to-technical continuity inspectable. Richard Caceres is named as co-founder and co-builder. Current activity is accurately bounded to a public return threshold and tester invitation; historical calendar operation is not presented as restored service.",
+      "sourceBinding": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT, CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026, CLM-FACEBOOK-WOWLIST-IN-PRACTICE, and CLM-WOWLIST-PUBLIC-THRESHOLD-2026."
+    },
+    {
+      "requirement": "The recurring method explains why people can inhabit, influence, remember, and continue these systems.",
+      "routes": [
+        "/about",
+        "/work/harry-j-epstein",
+        "/lab/source-backed-team-memory"
+      ],
+      "observed": "About makes the observe/model/prototype/use/document sequence explicit, and its three loops identify relationships, working model, interface and use, and learning and continuity. Epstein adds attention to customer language and the company's distinctive voice, with a labeled reconstruction of listening, framing, incremental implementation, verification, and continuation. The current lab connects approved source material, human correction, disagreement, access boundaries, and a teammate-tested handoff to a proposed small engagement. It is explicitly early research with no completed client-pilot claim.",
+      "screenshots": [
+        "practical-sequence-375.png",
+        "practical-sequence-1280.png",
+        "harry-j-epstein-375.png",
+        "harry-j-epstein-1280.png"
+      ],
+      "sourceBinding": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026 and the exploring/proposed RFC source records preserve current research status."
+    },
+    {
+      "requirement": "Collective-credit and privacy audit.",
+      "observed": "Open House governance belongs to participants; WOW List names Richard Caceres and wider organizers; Sunday Dinner identifies Julia Fredenburg for the 200th event and credits its community; coalition text repeatedly distinguishes Jamie's implementation, organizing, and testimony from collective strategy and policy outcomes. Private participant rows, contacts, attendance histories, access details, proposals, and correspondence are expressly withheld. Reconstructed workflows are labeled as reconstructions. The case's photos have stated portfolio-use or human-review boundaries, and no supplied text uses images as evidence of consent, endorsement, or policy causation."
+    },
+    {
+      "requirement": "Protected-source exclusion check and rendered evidence.",
+      "observed": "I read all 5,398 lines of the sole packet and inspected all 12 listed screenshots through view_image. The packet contains a bounded public-source note and claim/source records, not the raw Open House article. No UCSC evaluation text, grades, student identifiers, private correspondence, or faculty testimonial is reproduced. The narrative does not romanticize participant vulnerability. The supplied screenshots show readable text and clear project labels at mobile and desktop sizes."
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "scope_limit_nonblocking",
+      "detail": "This individual review does not supply or assess the other two scorecards or the three-reviewer median. The aggregate requirement must be calculated separately."
+    },
+    {
+      "kind": "scope_limit_nonblocking",
+      "detail": "I assessed public-source bindings and stated photo/privacy decisions as supplied in the frozen packet. I did not reopen external sources, inspect protected records, test live navigation, or independently certify accessibility or publication rights."
+    }
+  ],
+  "safety_findings": [
+    {
+      "severity": "none_observed",
+      "detail": "No blocking PR-015 safety issue appears in the packet or inspected screenshots: no protected educational-record projection, unapproved faculty testimonial, raw third-party article reproduction, private participant record, sole-credit claim for collective outcomes, or production-SaaS claim."
+    },
+    {
+      "severity": "boundary",
+      "detail": "A passing fictionalized model-lens score is not a human study, faculty endorsement, accessibility certification, rights clearance, or deployment approval."
+    }
+  ],
+  "recommendation": "Pass this individual PR-015 review at 4/4. Preserve the concise Open House threshold, concrete participation and handoff traces, collective credits, and historical/current-status boundaries. Calculate the independent three-reviewer aggregate separately; this result authorizes no publication or deployment.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18 20:34:09 UTC",
+    "reviewStartedAt": "2026-10-18 20:32:07 UTC",
+    "filesEdited": false,
+    "packetReadCompletely": true,
+    "packetLineCount": 5398,
+    "screenshotsInspected": 12,
+    "candidateFilesModified": false,
+    "publicProjectionNote": "The local result-file locator was omitted from this public copy; the review, scores, evidence and candidate binding are unchanged."
+  }
+}

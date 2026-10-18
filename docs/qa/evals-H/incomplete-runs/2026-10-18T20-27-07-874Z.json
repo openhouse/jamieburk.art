@@ -1,0 +1,9 @@
+{
+  "status": "incomplete-not-current-evidence",
+  "publicSurfaceFingerprint": "e142c112191f2aa83f315975bab38498d459753939734250a63fd3b59c62ecf8",
+  "completedRows": 0,
+  "expectedRows": 60,
+  "rows": [],
+  "error": "Fresh QA server exited: ⨯ Failed to start server\nError: listen EPERM: operation not permitted 127.0.0.1:3219\n    at <unknown> (Error: listen EPERM: operation not permitted 127.0.0.1:3219) {\n  code: 'EPERM',\n  errno: -1,\n  syscall: 'listen',\n  address: '127.0.0.1',\n  port: 3219\n}\n",
+  "boundary": "This interrupted run does not replace candidate-bound evidence or establish a pass."
+}
