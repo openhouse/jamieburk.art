@@ -11,6 +11,9 @@ canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
   - type: related_to
+    target: opportunity.nyc-oti.cec-programs-project-manager.797003
+    href: ../opportunities/oti-cec-programs-project-manager-797003.md
+  - type: related_to
     target: opportunity.circle-o.operations-manager.2026
     href: ../opportunities/circle-o-operations-manager-2026.md
     context: Officially open part-time arts-operations contract opportunity verified September 27, with private application preparation and human-only submission gates.
@@ -114,6 +117,7 @@ remain private, and later outcomes require separate approval.
 
 ## Current priority contexts
 
+- [CEC Programs Project Manager — 797003](../opportunities/oti-cec-programs-project-manager-797003.md) — official posting and blank form checked October 18; deadline November 3; qualification review remains open.
 - [Circle O - Operations Manager](../opportunities/circle-o-operations-manager-2026.md)
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
