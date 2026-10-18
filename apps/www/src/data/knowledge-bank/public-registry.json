@@ -22,6 +22,27 @@
       ]
     },
     {
+      "id": "SRC-DCLA-INSTAGRAM-REEL-2026-10",
+      "title": "651 ARTS listening-session photo animation on Instagram",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-07",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, listening-session photo animation; Instagram metadata reports October 7, 2026; inspected October 18, 2026.",
+      "publicNote": "A downloaded 30-second edition was inspected through sampled frames and container metadata. The caption points to Lin Tyrpien's article. The post date is platform-reported; the earlier article observation remains a separate source.",
+      "doesNotEstablish": [
+        "identity with the article's embedded media bytes",
+        "earliest publication date of the animation",
+        "verified spoken transcript or music credit",
+        "policy adoption or institutional endorsement",
+        "permission to embed or rehost media"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1277,7 +1298,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution.",
+          "text": "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution. The 30-second Instagram edition pairs event photographs with text about cultural space and accountability.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1295,12 +1316,24 @@
           ],
           "confidence": "moderate",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-DCLA-INSTAGRAM-REEL-2026-10",
+          "relationship": "direct-support",
+          "supports": [
+            "direct published reel destination",
+            "30-second Instagram edition",
+            "visible text about cultural space and accountability"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
-        "October 3 is the publication-observation date, not an independently established publication date.",
-        "Linking the article does not authorize embedding or copying the animation or its underlying media.",
-        "The current public page could not be reopened during the October 18 review; the dated observation remains the evidence."
+        "October 3 is the article publication-observation date, not an independently established publication date.",
+        "October 7 is the Instagram metadata's post date, not the first publication date of the animation or proof of identical media editions.",
+        "Linking the article or reel does not authorize embedding or copying the animation or its underlying media.",
+        "The article could not be reopened during the October 18 review; its dated observation remains the evidence. The reel was downloaded separately that day."
       ]
     },
     {
@@ -3301,6 +3334,7 @@
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
         "SRC-RECENT-DCLA-ARTICLE",
+        "SRC-DCLA-INSTAGRAM-REEL-2026-10",
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
         "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
         "SRC-NYCAC-NPR-CABARET-2017-09-20",
@@ -3338,7 +3372,8 @@
           "claimId": "CLM-RECENT-DCLA-ANIMATION-2026-10",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-RECENT-DCLA-ARTICLE"
+            "SRC-RECENT-DCLA-ARTICLE",
+            "SRC-DCLA-INSTAGRAM-REEL-2026-10"
           ]
         },
         {

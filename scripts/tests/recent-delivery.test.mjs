@@ -148,8 +148,142 @@ test("a text-only claim may retain a nonrendering protected source relationship"
 });
 
 function canonicalCandidate() {
-  return structuredClone({ contracts: recentDeliveryContracts, claims: knowledgeBank.claims, sources: knowledgeBank.sources, pages: knowledgeBank.pages });
+  return structuredClone({ contracts: recentDeliveryContracts, claims: knowledgeBank.claims, sources: knowledgeBank.sources, pages: knowledgeBank.pages, agencyRelations: knowledgeBank.agencyRelations, entities: knowledgeBank.entities });
 }
+
+function platformCandidate() {
+  const c = candidate();
+  c.contracts[0].eventDate = null;
+  c.contracts[0].observedStates = ["published"];
+  c.contracts[0].publicStates = ["published"];
+  c.contracts[0].platformCollaboration = {
+    sourceId: "SRC-SYNTHETIC-HANDOFF", relationId: "REL-SYNTHETIC-POST-COLLABORATORS",
+    actorIds: ["ENT-SYNTHETIC-ARTIST", "ENT-SYNTHETIC-INSTITUTION"], objectId: "ENT-SYNTHETIC-POST"
+  };
+  c.sources[0].visibility = "public";
+  c.sources[0].supportsGenerally = ["platform-listed collaborators"];
+  c.claims[0].evidence[0].supports = ["platform-listed collaborators"];
+  c.claims[0].projections[0] = {
+    key: "archive-note", text: "The post lists two accounts as collaborators.",
+    status: "hold", citationRequired: true, surfaces: []
+  };
+  c.pages = [];
+  c.entities = [
+    { id: "ENT-SYNTHETIC-ARTIST", publicSafe: true },
+    { id: "ENT-SYNTHETIC-INSTITUTION", publicSafe: true },
+    { id: "ENT-SYNTHETIC-POST", publicSafe: true }
+  ];
+  c.agencyRelations = [{
+    id: "REL-SYNTHETIC-POST-COLLABORATORS", actorIds: ["ENT-SYNTHETIC-ARTIST", "ENT-SYNTHETIC-INSTITUTION"],
+    action: "listed-as-post-collaborator", objectId: "ENT-SYNTHETIC-POST", creditScope: "shared",
+    claimIds: ["CLM-SYNTHETIC-HANDOFF"], sourceIds: ["SRC-SYNTHETIC-HANDOFF"],
+    sourceSupportKeys: ["platform-listed collaborators"]
+  }];
+  return c;
+}
+
+test("platform-listed collaboration can remain held graph context without a public projection", () => {
+  const result = validate(platformCandidate());
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
+// Each mutation removes a specific provenance or attribution boundary. The real
+// validator must reject it; platform metadata cannot supply stronger authority.
+const platformMutations = [
+  ["missing relation cannot establish platform collaboration", (c) => { c.agencyRelations = []; }],
+  ["ambiguous duplicate relation cannot establish platform collaboration", (c) => { c.agencyRelations.push(structuredClone(c.agencyRelations[0])); }],
+  ["co-creation cannot substitute for a platform collaborator listing", (c) => { c.agencyRelations[0].action = "co-created"; }],
+  ["platform collaboration cannot silently acquire individual credit", (c) => { c.agencyRelations[0].creditScope = "individual"; }],
+  ["platform relation cannot bind an unrelated claim", (c) => { c.agencyRelations[0].claimIds = ["CLM-UNRELATED"]; }],
+  ["platform relation cannot bind an unrelated source", (c) => { c.agencyRelations[0].sourceIds = ["SRC-UNRELATED"]; }],
+  ["platform contract cannot select an unbound source", (c) => { c.contracts[0].platformCollaboration.sourceId = "SRC-UNRELATED"; }],
+  ["platform relation requires known actors", (c) => { c.agencyRelations[0].actorIds.push("ENT-UNKNOWN"); }],
+  ["a known but unreviewed actor cannot replace a listed collaborator", (c) => { c.agencyRelations[0].actorIds[1] = "ENT-SYNTHETIC-POST"; }],
+  ["platform relation cannot duplicate an actor", (c) => { c.agencyRelations[0].actorIds.push("ENT-SYNTHETIC-ARTIST"); }],
+  ["platform relation cannot omit its actor roster", (c) => { c.agencyRelations[0].actorIds = []; }],
+  ["platform relation requires a known post object", (c) => { c.agencyRelations[0].objectId = "ENT-UNKNOWN"; }],
+  ["a known but different object cannot replace the reviewed post", (c) => { c.agencyRelations[0].objectId = "ENT-SYNTHETIC-ARTIST"; }],
+  ["expected platform roster cannot omit its actor binding", (c) => { delete c.contracts[0].platformCollaboration.actorIds; }],
+  ["expected platform roster cannot contain duplicate actors", (c) => { c.contracts[0].platformCollaboration.actorIds.push("ENT-SYNTHETIC-ARTIST"); }],
+  ["expected platform roster cannot be malformed", (c) => { c.contracts[0].platformCollaboration.actorIds = "ENT-SYNTHETIC-ARTIST"; }],
+  ["expected platform roster cannot be empty", (c) => { c.contracts[0].platformCollaboration.actorIds = []; }],
+  ["expected platform post binding cannot be empty", (c) => { c.contracts[0].platformCollaboration.objectId = ""; }],
+  ["expected platform post binding cannot be absent", (c) => { delete c.contracts[0].platformCollaboration.objectId; }],
+  ["unrelated support cannot replace the observed listing", (c) => { c.agencyRelations[0].sourceSupportKeys = ["authorship"]; }],
+  ["the source must support the platform listing", (c) => { c.sources[0].supportsGenerally = ["authorship"]; }],
+  ["claim evidence must support the platform listing", (c) => { c.claims[0].evidence[0].supports = ["authorship"]; }]
+];
+
+for (const [name, mutate] of platformMutations) {
+  test(name, () => {
+    const c = platformCandidate();
+    mutate(c);
+    const result = validate(c);
+    assert.equal(result.pass, false, name);
+    assert.ok(result.errors.length > 0);
+  });
+}
+
+test("the same reviewed platform roster can appear in a different order", () => {
+  const c = platformCandidate();
+  c.agencyRelations[0].actorIds.reverse();
+  const result = validate(c);
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
+function projectPlatformText(c, text) {
+  c.claims[0].projections[0].status = "active";
+  c.claims[0].projections[0].surfaces = ["technical-operations"];
+  c.claims[0].projections[0].text = text;
+}
+
+for (const text of [
+  "The listed institutions endorsed the campaign.",
+  "The listing proves institutional endorsement.",
+  "The cultural agency commissioned Jamie's animation.",
+  "The six accounts co-created the animation.",
+  "The platform listing establishes sole authorship of the film.",
+  "Endorsement is not established, but the cultural agency commissioned the film."
+]) {
+  test(`platform listing cannot justify stronger projected authority: ${text}`, () => {
+    const c = platformCandidate();
+    projectPlatformText(c, text);
+    assert.equal(validate(c).pass, false);
+  });
+}
+
+test("explicit limits on platform collaboration remain legitimate neighboring prose", () => {
+  const c = platformCandidate();
+  projectPlatformText(c, "The post lists two accounts as collaborators. This does not establish endorsement, commissioning or sole authorship.");
+  const result = validate(c);
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
+for (const text of [
+  "The arts commission is listed as a collaborator on the post.",
+  "A collaborator listing is not an endorsement.",
+  "No endorsement is established by the collaborator listing."
+]) {
+  test(`platform attribution gate preserves a legitimate neighboring statement: ${text}`, () => {
+    const c = platformCandidate();
+    projectPlatformText(c, text);
+    const result = validate(c);
+    assert.equal(result.pass, true, result.errors.join("\n"));
+  });
+}
+
+test("a platform listing does not clear held media for public display", () => {
+  const c = platformCandidate();
+  c.sources[0].assetUrl = "https://example.test/uncleared-video.mp4";
+  assert.equal(validate(c).pass, false);
+});
+
+test("a platform source without any rights record cannot expose an asset URL", () => {
+  const c = platformCandidate();
+  delete c.sources[0].media;
+  c.sources[0].assetUrl = "https://example.test/unreviewed-video.mp4";
+  assert.equal(validate(c).pass, false);
+});
 
 test("Red Hook delivery observation does not invent an exact delivery date", () => {
   const contract = recentDeliveryContracts.find((item) => item.claimId === "CLM-RECENT-RED-HOOK-2026-10");

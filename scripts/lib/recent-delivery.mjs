@@ -34,17 +34,30 @@ function affirmativeClauses(text) {
   ).map((clause) => clause.replace(/\b(?:not|never)\s+(?:yet\s+)?(?:accepted|installed|paid|published|posted)\b/gi, ""));
 }
 
-export function validateRecentDelivery({ contracts, claims, sources, pages = [] } = {}) {
+function platformAttributionOverclaim(text) {
+  // A targeted wording alarm for metadata-only collaboration, not a substitute
+  // for editorial review. Split neighboring assertions before applying negation.
+  return String(text ?? "").split(/[.;!?]|\b(?:and|but|however|although|though|while)\b/i).some((clause) => {
+    const strongerAuthority = /\b(?:endors(?:e[ds]?|ement|ing)|commission(?:ed|ing)|co[- ]created|sole authorship)\b/i.test(clause);
+    const explicitLimit = /\b(?:does not|do not|cannot|doesn't|can't)\s+(?:establish|prove|imply|confer|demonstrate)\b|\b(?:not established|not confirmed|unconfirmed|no evidence|remains? unknown)\b|\bnot\s+(?:an?\s+)?(?:institutional\s+)?(?:endorsement|commissioning|sole authorship)\b|\bno\s+(?:endorsement|commissioning|sole authorship)\s+(?:is|was)\s+established\b/i.test(clause);
+    return strongerAuthority && !explicitLimit;
+  });
+}
+
+export function validateRecentDelivery({ contracts, claims, sources, pages = [], agencyRelations = [], entities = [] } = {}) {
   const errors = [];
   const check = (condition, message) => { if (!condition) errors.push(message); };
   check(Array.isArray(contracts) && contracts.length > 0, "At least one recent-delivery contract is required");
   check(Array.isArray(claims), "Canonical claims are required");
   check(Array.isArray(sources), "Canonical sources are required");
   check(Array.isArray(pages), "Canonical pages must be an array");
+  check(Array.isArray(agencyRelations), "Canonical agency relations must be an array");
+  check(Array.isArray(entities), "Canonical entities must be an array");
   if (errors.length) return { pass: false, errors };
 
   const claimById = new Map(claims.map((claim) => [claim.id, claim]));
   const sourceById = new Map(sources.map((source) => [source.id, source]));
+  const entityById = new Map(entities.map((entity) => [entity.id, entity]));
   const seen = new Set();
   for (const contract of contracts) {
     if (!contract || typeof contract !== "object") {
@@ -82,6 +95,35 @@ export function validateRecentDelivery({ contracts, claims, sources, pages = [] 
     if (!claim) continue;
     const evidence = Array.isArray(claim.evidence) ? claim.evidence : [];
     const projections = Array.isArray(claim.projections) ? claim.projections : [];
+    if (contract.platformCollaboration !== undefined) {
+      const binding = contract.platformCollaboration;
+      const validBinding = binding && typeof binding === "object" && !Array.isArray(binding) &&
+        typeof binding.sourceId === "string" && binding.sourceId.length > 0 &&
+        typeof binding.relationId === "string" && binding.relationId.length > 0 &&
+        stringList(binding.actorIds) && typeof binding.objectId === "string" && binding.objectId.length > 0;
+      check(Boolean(validBinding), `${id}: platform collaboration needs source, relation, distinct actor and post bindings`);
+      if (validBinding) {
+        const relations = agencyRelations.filter((relation) => relation.id === binding.relationId);
+        check(relations.length === 1, `${id}: platform collaboration must resolve to one relation`);
+        check(sourceIds.includes(binding.sourceId), `${id}: platform source is outside contract bindings`);
+        const supportKey = "platform-listed collaborators";
+        check(sourceById.get(binding.sourceId)?.supportsGenerally?.includes(supportKey), `${id}: source does not support the platform collaborator listing`);
+        check(evidence.some((item) => item.sourceId === binding.sourceId && item.supports?.includes(supportKey)), `${id}: claim evidence does not support the platform collaborator listing`);
+        const relation = relations[0];
+        if (relation) {
+          check(relation.action === "listed-as-post-collaborator", `${id}: platform listing cannot become a creative or institutional action`);
+          check(relation.creditScope === "shared", `${id}: platform listing must retain shared credit scope`);
+          check(relation.claimIds?.length === 1 && relation.claimIds[0] === id, `${id}: platform relation has an unrelated claim binding`);
+          check(relation.sourceIds?.length === 1 && relation.sourceIds[0] === binding.sourceId, `${id}: platform relation has an unrelated source binding`);
+          check(relation.sourceSupportKeys?.length === 1 && relation.sourceSupportKeys[0] === supportKey, `${id}: platform relation must cite the observed collaborator listing`);
+          check(stringList(relation.actorIds) && relation.actorIds.every((actorId) => entityById.has(actorId)), `${id}: platform relation needs distinct known actors`);
+          check(stringList(relation.actorIds) && relation.actorIds.length === binding.actorIds.length &&
+            relation.actorIds.every((actorId) => binding.actorIds.includes(actorId)), `${id}: platform relation must preserve the exact reviewed actor roster`);
+          check(entityById.has(relation.objectId), `${id}: platform relation needs a known post object`);
+          check(relation.objectId === binding.objectId, `${id}: platform relation must preserve the exact reviewed post`);
+        }
+      }
+    }
     check(evidence.length > 0 && evidence.every((item) => sourceIds.includes(item.sourceId)), `${id}: claim evidence is outside contract bindings`);
     check(sourceIds.every((sourceId) => evidence.some((item) => item.sourceId === sourceId)), `${id}: a contract source is absent from canonical evidence`);
     for (const sourceId of sourceIds) {
@@ -91,10 +133,10 @@ export function validateRecentDelivery({ contracts, claims, sources, pages = [] 
       if (source.visibility !== "public") {
         check(!source.canonicalUrl && !source.archiveUrl && !source.assetUrl, `${id}: protected source exposes a URL`);
       }
-      if (source.assetUrl && source.media) {
-        check(source.media.rightsStatus === "cleared" &&
-          ["cleared", "not-applicable"].includes(source.media.consentStatus) &&
-          source.media.publicDisplayStatus === "cleared", `${id}: held media exposes an asset`);
+      if (source.assetUrl) {
+        check(source.media?.rightsStatus === "cleared" &&
+          ["cleared", "not-applicable"].includes(source.media?.consentStatus) &&
+          source.media?.publicDisplayStatus === "cleared", `${id}: held or unreviewed media exposes an asset`);
       }
     }
 
@@ -109,6 +151,9 @@ export function validateRecentDelivery({ contracts, claims, sources, pages = [] 
       if (projection.citationRequired) check(evidence.some((item) => item.renderCitation === true), `${id}: required citation has no renderable evidence`);
       const clauses = affirmativeClauses(projection.text);
       check(!clauses.some((clause) => /\b(?:single-handedly|sole (?:creator|organizer|author|producer|founder)|alone (?:created|organized|produced|delivered))\b/i.test(clause)), `${id}: contribution inflated to sole credit`);
+      if (contract.platformCollaboration !== undefined) {
+        check(!platformAttributionOverclaim(projection.text), `${id}: platform collaboration does not establish endorsement, commissioning or creative authorship`);
+      }
       for (const [state, pattern] of affirmativeOutcomes) {
         if (clauses.some((clause) => pattern.test(clause))) {
           check(projected.includes(state), `${id}: projection text asserts unsupported ${state}`);

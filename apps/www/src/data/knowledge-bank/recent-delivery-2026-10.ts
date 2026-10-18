@@ -37,6 +37,29 @@ const sources: KnowledgeBank["sources"] = [
     publicCitation: "Bounded review of seven delivered audio editions and a fifty-label print proof; evidence as of October 7, 2026.",
     supportsGenerally: ["seven edited recordings delivered", "fifty QR destinations checked", "thirteen proof pages inspected"],
     doesNotEstablish: ["client acceptance", "printing or installation", "payment", "exact audio edition published", "permission to reproduce recordings, participant information or correspondence"]
+  },
+  {
+    id: "SRC-DCLA-INSTAGRAM-REEL-2026-10",
+    title: "651 ARTS listening-session photo animation on Instagram",
+    organization: "NYC Artist Coalition", kind: "institutional-social-post",
+    visibility: "public", preservationStatus: "live", accessedAt: reviewedAt,
+    publishedAt: "2026-10-07",
+    canonicalUrl: "https://www.instagram.com/reel/DeNAv1HhOxC/", preferredPublicUrl: "canonical",
+    publicCitation: "NYC Artist Coalition, listening-session photo animation; Instagram metadata reports October 7, 2026; inspected October 18, 2026.",
+    publicNote: "A downloaded 30-second edition was inspected through sampled frames and container metadata. The caption points to Lin Tyrpien's article. The post date is platform-reported; the earlier article observation remains a separate source.",
+    supportsGenerally: ["direct published reel destination", "30-second Instagram edition", "visible text about cultural space and accountability"],
+    doesNotEstablish: ["identity with the article's embedded media bytes", "earliest publication date of the animation", "verified spoken transcript or music credit", "policy adoption or institutional endorsement", "permission to embed or rehost media"],
+    media: { mediaKind: "other", rightsStatus: "permission-needed", consentStatus: "review-needed", publicDisplayStatus: "metadata-only" }
+  },
+  {
+    id: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10",
+    title: "Instagram collaborator display for the listening-session reel",
+    kind: "institutional-social-post", visibility: "public", preservationStatus: "live",
+    accessedAt: reviewedAt, canonicalUrl: "https://www.instagram.com/reel/DeNAv1HhOxC/", preferredPublicUrl: "canonical",
+    publicCitation: "Collaborator display for the NYC Artist Coalition reel, observed in a Jamie-supplied screenshot reviewed October 18, 2026; screenshot capture date unknown.",
+    publicNote: "The screenshot lists six accounts. The roster was not independently extracted by the video downloader and is not a current membership or institutional-endorsement claim.",
+    supportsGenerally: ["platform-listed collaborators"],
+    doesNotEstablish: ["equal creative authorship", "a DCLA commission", "policy endorsement", "event-production responsibility", "current collaborator roster", "permission to reproduce screenshots or underlying media"]
   }
 ];
 
@@ -58,12 +81,14 @@ const claims: KnowledgeBank["claims"] = [
     internalClaim: "The October 3 article observation records a published animation credited to Jamie for NYC Artist Coalition; publication is no longer merely planned.",
     status: "confirmed-with-boundary",
     projections: [{ key: "case-study", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"],
-      text: "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution." }],
+      text: "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution. The 30-second Instagram edition pairs event photographs with text about cultural space and accountability." }],
     evidence: [{ sourceId: "SRC-RECENT-DCLA-ARTICLE", relationship: "direct-support", confidence: "moderate", renderCitation: true,
       supports: ["published animation credit", "Lin's article authorship"] },
       { sourceId: "SRC-DCLA-REPAIR-REVIEW-2026-08-29", relationship: "private-support", confidence: "moderate", renderCitation: false,
-        supports: ["event date and venue in upstream records"] }],
-    boundaries: ["October 3 is the publication-observation date, not an independently established publication date.", "Linking the article does not authorize embedding or copying the animation or its underlying media.", "The current public page could not be reopened during the October 18 review; the dated observation remains the evidence."],
+        supports: ["event date and venue in upstream records"] },
+      { sourceId: "SRC-DCLA-INSTAGRAM-REEL-2026-10", relationship: "direct-support", confidence: "high", renderCitation: true,
+        supports: ["direct published reel destination", "30-second Instagram edition", "visible text about cultural space and accountability"] }],
+    boundaries: ["October 3 is the article publication-observation date, not an independently established publication date.", "October 7 is the Instagram metadata's post date, not the first publication date of the animation or proof of identical media editions.", "Linking the article or reel does not authorize embedding or copying the animation or its underlying media.", "The article could not be reopened during the October 18 review; its dated observation remains the evidence. The reel was downloaded separately that day."],
     antiClaims: ["Jamie authored Lin's article.", "Publication proves campaign reach or policy change."],
     researchInquiryIds: [], reviewedAt, reviewedBy
   },
@@ -78,6 +103,18 @@ const claims: KnowledgeBank["claims"] = [
     boundaries: ["Jamie explicitly approved a limited text-only summary naming Rusty and the project on October 18; recordings, participant names and private messages remain excluded.", "Delivery and proof checks do not establish client acceptance, payment, physical printing or installation.", "Public track titles do not establish which delivered audio edition was published."],
     antiClaims: ["Rusty approved the final proof.", "Jamie installed the exhibition.", "The seven exact delivered audio editions were published."],
     researchInquiryIds: [], reviewedAt, reviewedBy
+  },
+  {
+    id: "CLM-DCLA-REEL-COLLABORATORS-2026", project: "fair-rent-nyc",
+    internalClaim: "A supplied screenshot records six accounts listed as collaborators on this specific Instagram post; it does not allocate creative labor or institutional authority.",
+    status: "confirmed-with-boundary",
+    projections: [{ key: "archive-note", status: "hold", citationRequired: true, surfaces: [],
+      text: "The supplied Instagram collaborator display lists 651 ARTS, NYC Department of Cultural Affairs, Brooklyn Arts Council, Lin Tyrpien, Jamie Burkart and NYC Artist Coalition on the listening-session reel." }],
+    evidence: [{ sourceId: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10", relationship: "direct-support", confidence: "moderate", renderCitation: true,
+      supports: ["platform-listed collaborators"] }],
+    boundaries: ["Platform listing is not equal creative authorship, commissioning, endorsement or event-production authority.", "Screenshot capture date is unknown; October 18 is the review date.", "Names and handles come from the collaborator display, not face recognition.", "This roster is retained in the graph, not projected as portfolio endorsement."],
+    antiClaims: ["DCLA commissioned Jamie's film.", "All listed accounts endorse commercial rent stabilization.", "The six collaborators co-created every element of the film."],
+    researchInquiryIds: [], reviewedAt, reviewedBy
   }
 ];
 
@@ -85,12 +122,18 @@ export const recentDeliveryContracts = [
   { claimId: "CLM-RECENT-WONDERVILLE-2026-10", eventDate: "2026-10-05", evidenceAsOf: "2026-10-07", recordedAt: reviewedAt,
     observedStates: ["delivered", "occurred"], publicStates: ["delivered", "occurred"], creditScope: "shared", publicationScope: "text-only",
     allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-RECENT-WONDERVILLE-REVIEW"] },
-  { claimId: "CLM-RECENT-DCLA-ANIMATION-2026-10", eventDate: null, evidenceAsOf: "2026-10-03", recordedAt: reviewedAt,
+  { claimId: "CLM-RECENT-DCLA-ANIMATION-2026-10", eventDate: null, evidenceAsOf: reviewedAt, recordedAt: reviewedAt,
     observedStates: ["published"], publicStates: ["published"], creditScope: "jamie-contribution", publicationScope: "text-only",
-    allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-RECENT-DCLA-ARTICLE", "SRC-DCLA-REPAIR-REVIEW-2026-08-29"] },
+    allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-RECENT-DCLA-ARTICLE", "SRC-DCLA-REPAIR-REVIEW-2026-08-29", "SRC-DCLA-INSTAGRAM-REEL-2026-10"] },
   { claimId: "CLM-RECENT-RED-HOOK-2026-10", eventDate: null, evidenceAsOf: "2026-10-07", recordedAt: reviewedAt,
     observedStates: ["delivered", "proof-checked"], publicStates: ["delivered", "proof-checked"], creditScope: "jamie-contribution", publicationScope: "text-only",
-    allowedSurfaces: ["/work/technical-operations"], sourceIds: ["SRC-RECENT-RED-HOOK-REVIEW"] }
+    allowedSurfaces: ["/work/technical-operations"], sourceIds: ["SRC-RECENT-RED-HOOK-REVIEW"] },
+  { claimId: "CLM-DCLA-REEL-COLLABORATORS-2026", eventDate: null, evidenceAsOf: reviewedAt, recordedAt: reviewedAt,
+    observedStates: ["published"], publicStates: ["published"], creditScope: "shared", publicationScope: "text-only",
+    allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
+    platformCollaboration: { sourceId: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10", relationId: "REL-DCLA-REEL-LISTED-COLLABORATORS",
+      actorIds: ["ENT-651-ARTS", "ENT-NYC-DCLA", "ENT-BROOKLYN-ARTS-COUNCIL", "ENT-LIN-TYRPIEN", "ENT-JAMIE-BURKART", "ENT-NYC-ARTIST-COALITION"],
+      objectId: "ENT-DCLA-INSTAGRAM-REEL-2026" } }
 ];
 
 const intakeItems: KnowledgeBank["intakeItems"] = [{
@@ -98,8 +141,15 @@ const intakeItems: KnowledgeBank["intakeItems"] = [{
   submittedAt: reviewedAt, submittedBy: "Jamie Burkart", projectIds: ["fair-rent-nyc", "red-hook-portrait-project"],
   reason: "Replace planning-only accounts with supported delivered, occurred and published states while preserving separate rights and credit.",
   visibility: "public-safe", disposition: "integrated",
-  sourceIds: sources.map((source) => source.id), observationIds: ["OBS-RECENT-WONDERVILLE", "OBS-RECENT-DCLA", "OBS-RECENT-RED-HOOK"],
+  sourceIds: sources.slice(0, 3).map((source) => source.id), observationIds: ["OBS-RECENT-WONDERVILLE", "OBS-RECENT-DCLA", "OBS-RECENT-RED-HOOK"],
   researchInquiryIds: [], boundaries: ["Three limited text summaries only. Protected evidence and third-party testimony stay outside the public repository."]
+}, {
+  id: "INTAKE-DCLA-REEL-RETURN-2026-10-18", kind: "public-url", title: "Published DCLA animation: direct reel and collaborator display",
+  submittedAt: reviewedAt, submittedBy: "Jamie Burkart", projectIds: ["fair-rent-nyc"],
+  sourceUrl: "https://www.instagram.com/reel/DeNAv1HhOxC/", reason: "Add a direct published artifact destination and bounded platform relationships to the existing animation record.",
+  visibility: "public-safe", disposition: "integrated", sourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10", "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
+  observationIds: ["OBS-DCLA-REEL-EDITION", "OBS-DCLA-REEL-LISTED-COLLABORATORS"], researchInquiryIds: [],
+  boundaries: ["Outbound link and text only; no media or screenshots copied to the site.", "Engagement counters are excluded from portfolio claims.", "The user authorized this bounded update after review; publication on Instagram does not itself confer reuse rights."]
 }];
 const observations: KnowledgeBank["observations"] = [
   { id: "OBS-RECENT-WONDERVILLE", intakeId: "INTAKE-RECENT-DELIVERY-2026-10", sourceId: sources[0].id, project: "fair-rent-nyc", kind: "source-fact",
@@ -110,13 +160,27 @@ const observations: KnowledgeBank["observations"] = [
     claimIds: [claims[1].id], comparisonSourceIds: [], researchInquiryIds: [], limitations: ["No exact publication timestamp or media-byte comparison is established."] },
   { id: "OBS-RECENT-RED-HOOK", intakeId: "INTAKE-RECENT-DELIVERY-2026-10", sourceId: sources[2].id, project: "red-hook-portrait-project", kind: "source-fact",
     text: "October 7 delivery metadata and proof checks support separate audio-return and print-preparation states.", status: "corroborated", publicSafe: true,
-    claimIds: [claims[2].id], comparisonSourceIds: [], researchInquiryIds: [], limitations: ["No client acceptance, physical installation, payment or exact public audio edition is established."] }
+    claimIds: [claims[2].id], comparisonSourceIds: [], researchInquiryIds: [], limitations: ["No client acceptance, physical installation, payment or exact public audio edition is established."] },
+  { id: "OBS-DCLA-REEL-EDITION", intakeId: "INTAKE-DCLA-REEL-RETURN-2026-10-18", sourceId: "SRC-DCLA-INSTAGRAM-REEL-2026-10", project: "fair-rent-nyc", kind: "visual-observation",
+    text: "The downloaded reel is 30 seconds, 1080 by 1920 pixels. Sampled frames across the sequence pair event photographs with requests concerning cultural space and accountability, followed by text acknowledging accountability and naming subjects for further conversation. Metadata reports October 7, 2026 at 18:36:55 UTC for this post.",
+    locator: "Downloaded edition; sampled frames at two-second intervals and every second from 20 through 29 seconds; caption and container metadata.",
+    status: "verified", publicSafe: true, claimIds: ["CLM-RECENT-DCLA-ANIMATION-2026-10"], comparisonSourceIds: ["SRC-RECENT-DCLA-ARTICLE"], researchInquiryIds: [],
+    limitations: ["Visual sampling is not a full auditory review or certification of spoken quotations.", "The short caption does not supply complete photo, voice or music credits.", "No byte identity with the article's embedded version is established."] },
+  { id: "OBS-DCLA-REEL-LISTED-COLLABORATORS", intakeId: "INTAKE-DCLA-REEL-RETURN-2026-10-18", sourceId: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10", project: "fair-rent-nyc", kind: "visual-observation",
+    text: "The supplied Collaborators sheet lists 651arts, nyculture, bkartscouncil, lin.tyrpien, jamieburkart and nycartc. Four other supplied screenshots show the reel and on-screen text; their counters are not used as outcome evidence.",
+    locator: "User-supplied fifth screenshot, Collaborators sheet; other four screenshots provide visual context.",
+    status: "extracted", publicSafe: true, claimIds: ["CLM-DCLA-REEL-COLLABORATORS-2026"], comparisonSourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10"], researchInquiryIds: [],
+    limitations: ["Capture date unknown; roster not independently extracted by yt-dlp.", "Platform collaboration does not establish authorship allocation, commissioning, policy agreement or current account status."] }
 ];
 
 const entities: KnowledgeBank["entities"] = [
   { id: "ENT-WONDERVILLE-MEETING-2026-10", name: "October 2026 Wonderville coalition meeting", kind: "event", aliases: [], publicSafe: true },
   { id: "ENT-LISTENING-SESSION-ANIMATION-2026", name: "651 ARTS listening-session photo animation", kind: "project", aliases: [], publicSafe: true },
-  { id: "ENT-RED-HOOK-PRODUCTION-HANDOFF-2026", name: "Red Hook portrait-project audio and print preparation", kind: "project", aliases: [], publicSafe: true }
+  { id: "ENT-RED-HOOK-PRODUCTION-HANDOFF-2026", name: "Red Hook portrait-project audio and print preparation", kind: "project", aliases: [], publicSafe: true },
+  { id: "ENT-DCLA-INSTAGRAM-REEL-2026", name: "Published Instagram edition of the listening-session animation", kind: "project", aliases: ["DeNAv1HhOxC"], publicSafe: true },
+  { id: "ENT-651-ARTS", name: "651 ARTS", kind: "organization", aliases: ["651arts"], publicSafe: true },
+  { id: "ENT-BROOKLYN-ARTS-COUNCIL", name: "Brooklyn Arts Council", kind: "organization", aliases: ["bkartscouncil"], publicSafe: true },
+  { id: "ENT-LIN-TYRPIEN", name: "Lin Tyrpien", kind: "person", aliases: ["lin.tyrpien"], publicSafe: true }
 ];
 const agencyRelations: KnowledgeBank["agencyRelations"] = [
   { id: "REL-RECENT-WONDERVILLE-HANDOFF", project: "fair-rent-nyc", actorIds: ["ENT-JAMIE-BURKART", "ENT-NYC-ARTIST-COALITION"], action: "organized", objectId: entities[0].id,
@@ -127,7 +191,14 @@ const agencyRelations: KnowledgeBank["agencyRelations"] = [
     creditScope: "individual", status: "confirmed-with-boundary", claimIds: [claims[1].id], sourceIds: [sources[1].id], sourceSupportKeys: ["published animation credit"], boundaries: claims[1].boundaries, reviewedAt, reviewedBy },
   { id: "REL-RECENT-RED-HOOK-HANDOFF", project: "red-hook-portrait-project", actorIds: ["ENT-JAMIE-BURKART"], action: "delivered", objectId: entities[2].id,
     purpose: "Keep current audio editions clear and match exhibition labels to the intended destinations.", result: "Seven edited recordings were delivered and a fifty-label proof was checked for Rusty Zimmerman's Red Hook portrait project.",
-    creditScope: "individual", status: "confirmed-with-boundary", claimIds: [claims[2].id], sourceIds: [sources[2].id], sourceSupportKeys: ["seven edited recordings delivered", "fifty QR destinations checked"], boundaries: claims[2].boundaries, reviewedAt, reviewedBy }
+    creditScope: "individual", status: "confirmed-with-boundary", claimIds: [claims[2].id], sourceIds: [sources[2].id], sourceSupportKeys: ["seven edited recordings delivered", "fifty QR destinations checked"], boundaries: claims[2].boundaries, reviewedAt, reviewedBy },
+  { id: "REL-DCLA-REEL-LISTED-COLLABORATORS", project: "fair-rent-nyc",
+    actorIds: ["ENT-651-ARTS", "ENT-NYC-DCLA", "ENT-BROOKLYN-ARTS-COUNCIL", "ENT-LIN-TYRPIEN", "ENT-JAMIE-BURKART", "ENT-NYC-ARTIST-COALITION"],
+    action: "listed-as-post-collaborator", objectId: "ENT-DCLA-INSTAGRAM-REEL-2026",
+    purpose: "Record the platform's displayed publication relationship without assigning creative labor or institutional approval.",
+    result: "Six accounts are listed on the supplied collaborator display for this reel edition of the listening-session animation.",
+    creditScope: "shared", status: "confirmed-with-boundary", claimIds: ["CLM-DCLA-REEL-COLLABORATORS-2026"], sourceIds: ["SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
+    sourceSupportKeys: ["platform-listed collaborators"], boundaries: claims[3].boundaries, reviewedAt, reviewedBy }
 ];
 
 export const recentDeliveryOctober2026 = { intakeItems, observations, sources, claims, entities, agencyRelations, researchInquiries: [] };

@@ -627,6 +627,7 @@ const knowledgeBankInput = {
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
       "SRC-RECENT-DCLA-ARTICLE",
+      "SRC-DCLA-INSTAGRAM-REEL-2026-10",
       "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
       "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "SRC-NYCAC-NPR-CABARET-2017-09-20",
@@ -655,7 +656,7 @@ const knowledgeBankInput = {
     ],
     occurrences: [
       { id: "recent-wonderville", claimId: "CLM-RECENT-WONDERVILLE-2026-10", projection: "case-study" },
-      { id: "recent-animation", claimId: "CLM-RECENT-DCLA-ANIMATION-2026-10", projection: "case-study", sourceIds: ["SRC-RECENT-DCLA-ARTICLE"] },
+      { id: "recent-animation", claimId: "CLM-RECENT-DCLA-ANIMATION-2026-10", projection: "case-study", sourceIds: ["SRC-RECENT-DCLA-ARTICLE", "SRC-DCLA-INSTAGRAM-REEL-2026-10"] },
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
