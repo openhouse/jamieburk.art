@@ -1,0 +1,106 @@
+{
+  "evaluator": "Fictionalized independent Warren Sack model lens; not Warren Sack's participation, judgment, endorsement, or approval",
+  "reviewerId": "warren-sack-b-2026-10-18-r4",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "A visible surface within two clicks names the recursive method and links to project evidence",
+      "routes": ["/", "/about"],
+      "finding": "The homepage desktop navigation visibly includes About, which the rendered link record resolves to /about. The mobile homepage exposes Menu and the rendered navigation includes About. The method is therefore one navigation click from the desktop homepage, or Menu then About on mobile. The /about text explicitly states observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its project headings link directly to the corresponding case studies.",
+      "screenshots": ["candidate-home-viewport.png", "candidate-home-desktop.png", "professor-lenses-about-mobile.png", "professor-lenses-about-desktop.png", "practical-sequence-375.png", "practical-sequence-1280.png"],
+      "visual_observation": "The method sentence is legible in the supplied narrow and wide captures. The About lineage appears with ordinary prose, project links, and citation markers. The mobile menu interaction itself was not exercised; its destination is evidenced by the rendered link record."
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "project": "Harry J. Epstein Company",
+      "routes": ["/about", "/work/harry-j-epstein"],
+      "observe_relationships": "Customer language, product judgment, public voice, and recurring team questions supply the starting relationships and friction.",
+      "model_system": "The About comparison treats product, content, marketing, ordering, and follow-up as one customer-and-team system. The case study connects those elements to requirements and reusable content patterns.",
+      "prototype_interface": "The storefront and incremental changes to product information, commerce, marketing, and content provide the interface through which the model is implemented.",
+      "social_use_and_learning": "Customer and team use, inspection of the public customer path, stakeholder discussion, and carefully bounded analytical signals feed subsequent incremental changes.",
+      "document_handoff": "The five-stage maintenance-to-handoff specimen ends with reusable patterns, ownership, and next actions for staff and later maintainers.",
+      "inspectable_proof": "The project page supplies the full Listen, Frame, Implement, Verify, Continue reconstruction, identifies it as a reconstruction rather than an original internal document, and links the public storefront. This is enough to reconstruct the operating loop without requiring private dashboards.",
+      "screenshots": ["harry-j-epstein-375.png", "harry-j-epstein-1280.png"]
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "project": "NYC Artist Coalition and FairRentNYC",
+      "routes": ["/about", "/work/fair-rent-nyc"],
+      "observe_relationships": "Lived experience, listening meetings, priority ballots, policy questions, and city/state participants establish the social and informational problem.",
+      "model_system": "Testimony, source lineage, open questions, decisions, accountable actors, and next actions are separated into a recoverable civic record.",
+      "prototype_interface": "Campaign websites, issue explainers, contact paths, public data, public event pages, practical sessions, and town halls are complementary interfaces to that record.",
+      "social_use_and_learning": "The page traces listening and priority-setting into shared production and public participation, then into continued review and follow-through. The alignment/translation/implementation/sustain sequence and the relationship between a working session and a shared campaign surface make the feedback structure understandable.",
+      "document_handoff": "Running minutes, source maps, policy-question logs, decision records, and action trackers preserve context for collaborators across meetings and strategy lanes.",
+      "inspectable_proof": "The case study offers a public campaign interface, retained-history source notes, public testimony and reporting citations, a rendered four-stage operating sequence, and source-bounded descriptions of the documentation structure. Private records remain withheld and the page does not pretend their full contents are publicly inspectable.",
+      "screenshots": ["fair-rent-nyc-375.png", "fair-rent-nyc-1280.png"]
+    },
+    {
+      "requirement": "Three-project systems-sequence trace",
+      "project": "Sunday Dinner and 196",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "observe_relationships": "Hospitality, returning participants, artist needs, shared space, and trust define the relationships that the operating system must support.",
+      "model_system": "Invitations, responses, hosting, onboarding, access handoffs, minimal documentation, and follow-up form one participation system.",
+      "prototype_interface": "The recurring invitation, hosted gathering, video-call orientation, configured residency space, and independent-access handoff are concrete interfaces used by people.",
+      "social_use_and_learning": "The residency reconstruction begins with inquiry into the artist's needs and ends with continued availability for changes. The gathering reconstruction runs from invitation through response and hosting to follow-up and the next gathering. Those repeated interactions make the method recursive without claiming a formal user-research study.",
+      "document_handoff": "Two five-stage reconstructions show how an artist can work independently and how a recurring gathering can continue while preserving only the continuity information needed.",
+      "inspectable_proof": "The complete reconstruction steps are visible in the project page text. Their derivation from a governed acceptance workflow and protected operating-sheet schema is stated, and participant-level values remain absent. The public milestone sources and aggregate-control note separately support continuity without converting response records into unique people or precise attendance.",
+      "screenshots": ["sunday-dinner-375.png", "sunday-dinner-1280.png"]
+    },
+    {
+      "requirement": "Social structure and information architecture connect to use and learning rather than remaining a tool list",
+      "routes": ["/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory"],
+      "finding": "WOW List connects organizers' existing language and Sunday Dinner calendars to collaboratively editable natural-language posts, followable keyword communities, distribution workflows, public support, and organizer adoption. CallNYC connects administrative records to recognizable resident issues and next steps, while stating its archived and unofficial status. The lab adds an actual portfolio correction trace: CallNYC's earlier date changed to 2016 and propagated across public surfaces. These supporting examples make relationships, representations, correction, and continuity concrete; they do not rely on the historical technology list for credibility."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof audit and anti-overclaim findings",
+      "routes": ["/about", "/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory"],
+      "finding": "The public lineage uses the source-bounded Open House account and preserves communal governance. Protected UCSC narrative evaluations and the held Social Information Spaces prototype do not appear as public endorsements or current technical credentials. The About page explicitly says the cross-project pattern does not establish structural equivalence, the Knowledge Wiki Graph is evolving research rather than a finished platform or peer-reviewed research, and historical implementation does not establish present technical proficiency. The lab distinguishes proposed pilot acceptance conditions from completed client work. No current Max/Jitter proficiency or disciplinary invention is claimed."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "scope_limit",
+      "blocking": false,
+      "finding": "The evidence establishes a reconstructable method on current public portfolio surfaces, including explicitly historical projects. It does not establish that every described historical system is currently deployed or that protected internal artifacts have been independently inspected by this reviewer. Those stronger propositions are not needed for this individual rubric result."
+    },
+    {
+      "severity": "scope_limit",
+      "blocking": false,
+      "finding": "This review inspected the complete supplied packet and all twelve screenshot images. It did not open external source destinations, inspect private records, conduct user research, test live interactions, certify accessibility, or assess deployment authorization."
+    },
+    {
+      "severity": "aggregate_pending",
+      "blocking": false,
+      "finding": "This is one independent scorecard. The three-reviewer median and minimum-score conditions cannot be determined from this isolated review."
+    }
+  ],
+  "safety_findings": [
+    {
+      "status": "no_violation_observed",
+      "finding": "No raw private correspondence, transcripts, protected educational records, private source locators, credentials, or participant-level operating records were observed in the reviewed public text or screenshots. Jamie's phone number was not observed in the website HTML text supplied."
+    },
+    {
+      "status": "boundary_preserved",
+      "finding": "WOW List preserves Richard Caceres and wider organizer credit. Coalition participation and policy outcomes remain collective. The Shoestring agreement is attributed to Jamie's recollection and distinguished from retained implementation evidence. Sunday Dinner milestone titles and platform response figures are explicitly limited rather than treated as audited attendance or causal impact."
+    },
+    {
+      "status": "boundary_preserved",
+      "finding": "The lab describes an early method, separates semantic meaning, evidentiary support, and source custody, and keeps human correction and release authority visible. The course certificate is bounded as professional development and does not stand in for instructor endorsement or production-system proof."
+    },
+    {
+      "status": "boundary_preserved",
+      "finding": "The public-safe HJE and participation specimens are clearly labeled reconstructions. Their clarity supports assessment of method without falsely presenting them as original company or participant records."
+    }
+  ],
+  "recommendation": "Accept this individual PR-016 holdout scorecard at 4. The method is plainly named, visibly rendered, and reconstructable through three linked projects with concrete interfaces, social use, continuity mechanisms, and explicit evidence boundaries. Calculate the three-reviewer aggregate separately. This result is model analysis, not human approval, an endorsement, an accessibility certification, or authorization to deploy.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:52:48Z",
+    "filesEdited": false
+  }
+}

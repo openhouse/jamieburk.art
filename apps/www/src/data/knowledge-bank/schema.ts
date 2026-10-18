@@ -69,6 +69,10 @@ export const intakeItemSchema = z.object({
   visibility: z.enum(["public-safe", "protected"]),
   disposition: intakeDispositionSchema,
   duplicateOfIntakeId: stableIdSchema.optional(),
+  duplicateNormalization: z.object({
+    inputRecordSha256: z.string().regex(/^[a-f0-9]{64}$/),
+    storedRecordSha256: z.string().regex(/^[a-f0-9]{64}$/)
+  }).strict().optional(),
   sourceIds: z.array(stableIdSchema).default([]),
   observationIds: z.array(stableIdSchema).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
@@ -86,6 +90,13 @@ export const intakeItemSchema = z.object({
       code: "custom",
       path: ["duplicateOfIntakeId"],
       message: "Only duplicate intake items may identify a retained intake"
+    });
+  }
+  if (item.disposition !== "duplicate" && item.duplicateNormalization) {
+    context.addIssue({
+      code: "custom",
+      path: ["duplicateNormalization"],
+      message: "Only duplicate intake items may retain normalization provenance"
     });
   }
 });

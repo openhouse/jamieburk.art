@@ -1,0 +1,88 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the frozen Warren Sack rubric; not Warren Sack's participation, endorsement, or approval",
+  "reviewerId": "warren-sack-c-2026-10-18-r4",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible method and two-click path",
+      "routes": ["/", "/about"],
+      "finding": "The homepage has a direct About destination. The desktop homepage screenshot visibly exposes that link. On /about, the practical sequence explicitly names observing relationships, modeling a system, prototyping an interface, testing with people, and documenting continuation. Its linked project headings lead to supporting case studies in a second navigation. The method and all three principal loops are legible in the supplied narrow and wide rendered crops.",
+      "screenshots": ["candidate-home-viewport.png", "candidate-home-desktop.png", "professor-lenses-about-mobile.png", "professor-lenses-about-desktop.png", "practical-sequence-375.png", "practical-sequence-1280.png"]
+    },
+    {
+      "requirement": "Systems-sequence trace 1",
+      "routes": ["/about", "/work/harry-j-epstein", "/work/technical-operations"],
+      "project": "Harry J. Epstein Company",
+      "observe": "Customer language, product judgment, public voice, and recurring customer or team friction supply the starting relationships.",
+      "model": "Product information, content, marketing, ordering, and follow-up are treated as one customer and operating system; Jamie translates questions into bounded requirements.",
+      "interface": "Incremental changes enter the storefront, product communication, and commerce pathways.",
+      "social_use_and_learning": "The case describes inspecting the customer path and reviewing operational or analytical signals with stakeholders; the About loop connects customer and team use to subsequent releases and reusable patterns.",
+      "documentation_and_handoff": "The five-step maintenance-to-handoff specimen ends in reusable patterns, ownership, and next actions for staff and maintainers. It is explicitly a reconstruction, not an original company document.",
+      "judgment": "This is a reconstructable operating loop with concrete inputs, actions, verification, and continuation. The 2026 storefront capture is evidence of the public surface, not proof that every current feature was Jamie's 2009-2015 work.",
+      "screenshots": ["harry-j-epstein-375.png", "harry-j-epstein-1280.png"]
+    },
+    {
+      "requirement": "Systems-sequence trace 2",
+      "routes": ["/about", "/work/fair-rent-nyc", "/work/technical-operations"],
+      "project": "NYC Artist Coalition / FairRentNYC",
+      "observe": "Listening meetings, priority ballots, lived experience, public sources, policy questions, and city/state actors establish the relationships being worked through.",
+      "model": "The documentation architecture distinguishes public support, protected context, unresolved questions, decisions, accountable actors, and next actions.",
+      "interface": "Jamie implemented and maintained campaign websites and action pathways; the case also treats working sessions, town halls, and hearings as participation interfaces.",
+      "social_use_and_learning": "The public event and testimony records establish collective use. Running minutes, question logs, and source maps support subsequent review and revision rather than freezing the first account as final. The page connects this to actual recurring coalition work.",
+      "documentation_and_handoff": "Thirty-plus pages of approved first-party campaign-memory claims, action trackers, source lineage, and recoverable decision context make continuation explicit.",
+      "judgment": "Public campaign surfaces, bounded organizing records, and the named documentation architecture together make the sequence inspectable without requiring publication of private minutes or strategy. Jamie's implementation role remains distinct from collective positions and policy outcomes.",
+      "screenshots": ["fair-rent-nyc-375.png", "fair-rent-nyc-1280.png"]
+    },
+    {
+      "requirement": "Systems-sequence trace 3",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "project": "Sunday Dinner / 196 Artists Residency",
+      "observe": "Hosting relationships, returning participants, artist needs, shared space, and trust form the starting conditions.",
+      "model": "Invitations, responses, hosting, access handoffs, documentation, and follow-up are organized as a repeatable participation system.",
+      "interface": "The residency specimen connects proposal review and a video conversation to configuring working conditions and transferring practical knowledge. The gathering specimen connects invitation, response, hosting, documentation, and continuation.",
+      "social_use_and_learning": "The case grounds these workflows in recurring gatherings and residency use; orientation makes needs discussable, continued support permits changes in direction, and follow-up carries learning into the next gathering.",
+      "documentation_and_handoff": "Two explicitly redacted reconstructions expose the coordination logic and independent-access handoff while withholding participant-level values.",
+      "judgment": "The reader can reconstruct how social relationships become a usable operating form and how that form supports further participation. Aggregate continuity and public milestone records support use without being misrepresented as a precise attendance or outcome evaluation.",
+      "screenshots": ["sunday-dinner-375.png", "sunday-dinner-1280.png"]
+    },
+    {
+      "requirement": "Additional evidence of social structure becoming information architecture",
+      "routes": ["/work/wowlist", "/work/callnyc"],
+      "finding": "WOW List connects Sunday Dinner calendars and organizer vocabulary to collaboratively editable natural-language posts, followable keyword communities, distribution workflows, public support materials, and independently produced organizer guidance. Shared Richard Caceres and Jamie credit is explicit. CallNYC connects administrative categories to recognizable resident issues, an implemented issue-page interface, public documentation, and iteration. Neither example needs a tool list to explain the design decision. WOW List's historical service is distinguished from its limited 2026 return; CallNYC is explicitly archived and unofficial. Council-account interactions are not substituted for formal resident research."
+    },
+    {
+      "requirement": "Recursive correction and current research boundary",
+      "routes": ["/about", "/lab/source-backed-team-memory"],
+      "finding": "The lab describes separate semantic, evidence, and custody responsibilities, then supplies a concrete correction trace: public chronology changed CallNYC's date from 2014-2015 to 2016 across the case, index, and resume while preserving the reason. The proposed teammate handoff test is clearly proposed rather than represented as completed client validation. This makes feedback into the public record visible without treating an evolving method as automated trust or production SaaS."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof audit",
+      "routes": ["/about", "/lab/source-backed-team-memory"],
+      "finding": "Open House appears as a dated, publicly sourced lineage with collective governance. The supplied source note keeps protected UCSC evaluations and the historical social-information-spaces prototype held. No rendered route uses those records to claim structural-equivalence invention, peer-reviewed research, production deployment, sole authorship, or current Max/Jitter proficiency. The Maven certificate is separately framed as professional development. /about expressly says the comparative pattern does not establish structural equivalence or present technical proficiency."
+    }
+  ],
+  "gaps": [
+    "No material gap prevents reconstruction of the three principal sequences at the public-safe portfolio level. Their use and learning evidence is a mixture of approved first-party accounts, public records, and clearly labeled reconstructions; this judgment does not convert it into independent outcome measurement.",
+    "The three examples are current public portfolio presentations of work spanning different periods, not three claims of newly deployed services. Their visible historical dates and current-status boundaries are necessary to this score.",
+    "Only supplied rendered text, source records, and all twelve listed screenshots were reviewed. Live destination behavior, original protected records, and formal usability or accessibility testing were not examined.",
+    "The three-reviewer median and minimum are outside this individual judgment and must be calculated separately."
+  ],
+  "safety_findings": [
+    "No private source body, raw transcript, private correspondence, stakeholder list, credential, or phone number was observed in the supplied rendered route text or screenshots.",
+    "Reconstructed operating specimens disclose their status and preserve participant, access, customer, analytics, and internal-operation boundaries.",
+    "Coalition accomplishments remain collective; source limitations distinguish participation, testimony, implementation, recollection, and platform response labels from enactment, sole causation, attendance, or endorsement.",
+    "Historical WOW List scale, CallNYC archive status, early Knowledge Wiki Graph research, and the proposed pilot are explicitly bounded. No prohibited coursework-derived claim was observed.",
+    "This fictionalized model-lens judgment is neither a human study nor accessibility certification, faculty endorsement, content approval, or deployment authorization."
+  ],
+  "recommendation": "Pass this individual PR-016 review at score 4. Preserve the linked three-loop comparison, detailed bounded specimens, source limitations, collective credit, and separation between historical implementations and current research. Calculate aggregate reviewer criteria independently and retain the separate human release decision.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:54:06Z",
+    "filesEdited": false
+  }
+}

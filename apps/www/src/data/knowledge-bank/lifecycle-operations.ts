@@ -43,6 +43,21 @@ export function intakeRecordFingerprint(item: IntakeItem) {
   return digest(item);
 }
 
+function normalizedRecordFingerprint(item: IntakeItem, inputRecordSha256: string) {
+  const record = { ...item };
+  delete record.duplicateNormalization;
+  // Bind the original-input digest as well as every stored field. These hashes
+  // detect stale/tampered replay metadata; they are not an approval signature.
+  return digest({ ...record, duplicateNormalization: { inputRecordSha256 } });
+}
+
+function validateNormalizationProvenance(item: IntakeItem) {
+  const provenance = item.duplicateNormalization;
+  if (provenance && normalizedRecordFingerprint(item, provenance.inputRecordSha256) !== provenance.storedRecordSha256) {
+    throw new Error(`Invalid intake normalization provenance: ${item.id}`);
+  }
+}
+
 export type AppendIntakeResult = {
   knowledgeBank: KnowledgeBank;
   intake: IntakeItem;
@@ -54,10 +69,15 @@ export function appendIntakeItem(
   candidate: IntakeItem
 ): AppendIntakeResult {
   const intake = intakeItemSchema.parse(candidate);
+  validateNormalizationProvenance(intake);
   const sameId = knowledgeBank.intakeItems.find((item) => item.id === intake.id);
 
   if (sameId) {
-    if (intakeRecordFingerprint(sameId) === intakeRecordFingerprint(intake)) {
+    validateNormalizationProvenance(intakeItemSchema.parse(sameId));
+    if (
+      intakeRecordFingerprint(sameId) === intakeRecordFingerprint(intake) ||
+      sameId.duplicateNormalization?.inputRecordSha256 === intakeRecordFingerprint(intake)
+    ) {
       return { knowledgeBank, intake: sameId, status: "already-present" };
     }
     throw new Error(`Intake ID collision with different content: ${intake.id}`);
@@ -66,13 +86,23 @@ export function appendIntakeItem(
   const sameArtifact = knowledgeBank.intakeItems.find(
     (item) => intakeFingerprint(item) === intakeFingerprint(intake)
   );
-  const appended = sameArtifact
-    ? intakeItemSchema.parse({
-        ...intake,
-        disposition: "duplicate",
-        duplicateOfIntakeId: sameArtifact.id
-      })
-    : intake;
+  let appended = intake;
+  if (sameArtifact) {
+    const normalized = intakeItemSchema.parse({
+      ...intake,
+      disposition: "duplicate",
+      duplicateOfIntakeId: sameArtifact.id,
+      duplicateNormalization: undefined
+    });
+    const inputRecordSha256 = intakeRecordFingerprint(intake);
+    appended = intakeItemSchema.parse({
+      ...normalized,
+      duplicateNormalization: {
+        inputRecordSha256,
+        storedRecordSha256: normalizedRecordFingerprint(normalized, inputRecordSha256)
+      }
+    });
+  }
 
   return {
     knowledgeBank: {

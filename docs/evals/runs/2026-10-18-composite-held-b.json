@@ -1,0 +1,134 @@
+{
+  "runVersion": 3,
+  "judgeId": "composite-independent-b-2026-10-18",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "41ca29153aa3d86a552467b8d1c09e7aac57e31623795f6c5aa72e60c59c7e95",
+  "candidateFingerprint": "8f7e8ace9cf6023e53daefee24a578bd4509909d97194d8940fe1ccedd025077",
+  "verdict": "held",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The frozen rubric and docs/integration/feature-evals-composite.json contain fourteen distinct A-N decisions with matching heads.",
+        "A read-only Git object check found all fourteen exact frozen commit objects available, with no mismatched registered heads.",
+        "The register identifies feature/knowledge-h as the integration branch and develop as the pull-request base, and states that the frozen branches are reference-only."
+      ],
+      "rationale": "The family inventory is complete and exact. The supplied deterministic report discloses movement of the mutable feature/evals-K reference without substituting it for the frozen object."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Every decision in docs/integration/feature-evals-composite.json supplies a disposition, specific strength, rationale, destination paths, and verification IDs.",
+        "A read-only destination check found no missing files, and the register's canonical semantic digest matches the frozen value.",
+        "The register and accompanying Markdown deliberately retain the selected public composition while adapting lifecycle and governance contracts into the existing architecture."
+      ],
+      "rationale": "The decisions are inspectable and explain both integration and non-projection. They do not imply that all alternative branch architectures should be imported."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/index.ts exports the public projection and schema; public.ts parses public-registry.json and rejects inactive or unauthorized projections.",
+        "The public registry contains only sources, claims, and pages: 61 sources and 43 claims, compared with 332 sources and 122 claims in the canonical bank.",
+        "None of the three forbidden parallel lifecycle roots exists; the inspected application and work-data imports use public projection or public-safe proof layers."
+      ],
+      "rationale": "The canonical model and selected public registry remain distinct. The implementation inspected does not introduce a competing lifecycle root or a public knowledge-bank mirror."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All four scripts/tests/lifecycle-operations.test.mjs tests passed under Node 26.5.0.",
+        "lifecycle-operations.ts compares full stable-record fingerprints before replay, rejects changed content under an existing ID, and preserves new-ID duplicates with duplicateOfIntakeId.",
+        "The live in-memory lifecycle query returned held claims, unresolved inquiries, duplicate intake records, five corrections, active and held projection counts, and zero orphan sources."
+      ],
+      "rationale": "The implementation and focused tests demonstrate append-safe intake and useful lifecycle queries without requiring public projection of mature held knowledge."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "validateKnowledgeBank with public-file checks returned zero errors under Node 26.5.0; the bank contains 332 sources, 122 claims, 36 agency relations, and five corrections.",
+        "Inspected records distinguish individual expedition-origin credit, shared exhibition contribution, collective Open House governance, and institutional Council enactment, each with explicit source and causal limits.",
+        "The NYC Artist Coalition population projection states July 2026 capture scope, the 3,123-record retrievable union, its record-type partition, and the 2,001-record unrecovered remainder; it does not turn reposts into endorsement or impact.",
+        "Five additional in-memory probes rejected missing source boundaries, broken evidence references, public surfaces on held projections, URLs on nonpublic sources, and protected-locator leakage. Validation returned to zero errors after restoration.",
+        "The supplied deterministic-composite.json reports current derived Wiki and employment outputs; that currentness was not independently regenerated during this review."
+      ],
+      "rationale": "Canonical references and sampled claim, source, agency, population, and correction semantics are coherent and bounded. This criterion finding does not clear the separately disclosed photo custody and occurrence failures."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The complete rendered-pages.md packet and all four supplied screenshots were inspected. The homepage makes the target role, operating promise, selected projects, resume, and contact path legible.",
+        "The lead project pages identify Jamie's actions and usable results while retaining commercial contribution, coalition credit, and CallNYC's independent archived status.",
+        "The About page connects Open House, WOW List, Sunday Dinner, coalition work, and the developing knowledge practice through participation, hospitality, documentation, and continuity; its public source note withholds protected faculty records and testimonials.",
+        "The About page and linked HJE, coalition, and Sunday Dinner examples make relationships, models, interfaces, use, learning, and handoffs reconstructable. HJE's ended 2009-2015 engagement is not presented as current employment.",
+        "The lab labels the proposed pilot and synthetic example, distinguishes the evolving method from a finished product, and supplies a concrete CallNYC correction trace."
+      ],
+      "rationale": "The portfolio remains a purposeful selection with an intelligible professional path and visible artistic, civic, technical, and social continuity. The named lenses are analytical criteria, not evidence of those people's participation or endorsement. The screenshots and supplied browser observations support this composition finding, not full accessibility certification or media-release approval."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json retains all five specified human-evidence controls as open.",
+        "Each inspected human control has an honest baseline, required evidence, stopping conditions, anti-gaming rules, next action, and public-projection boundary.",
+        "The controls explicitly reject synthetic collaborator testimony, silence as approval, simulated human usability, raw job-funnel publication, and internal evaluation success as hiring impact.",
+        "The control file's canonical semantic digest matches the frozen rubric, and the public technical-operations page names remaining evidence gaps."
+      ],
+      "rationale": "The controls govern missing evidence without pretending it has been supplied. Their next actions are specific, and passing these controls does not close the underlying human-validation gaps."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 48 manifest evidence files matched their declared byte lengths and SHA-256 values. Independently recomputed semantic digests for the composite rubric, complete base suite, integration register, and blind-spot controls match the frozen bindings.",
+        "scripts/lib/composite-integration-eval.mjs separately pins the rubric and branch-head digests, requires every blocking criterion to pass, and disallows optimizer self-grading and passing unobserved evidence.",
+        "The inspected composite and knowledge mutation tests cover branch omission, fabricated heads, missing destinations, semantic weakening after checksum refresh, decorative records, source leakage, agency inflation, and synthesized human evidence.",
+        "The pre-launch audit explicitly separates technical evidence, independent semantic review, human permission, exact-candidate approval, and production indexing."
+      ],
+      "rationale": "The inspected candidate governance resists the specified forms of score gaming, and high aggregate strength cannot conceal a blocker. This is an assessment of the implementation; it does not erase the contamination of this particular reviewer process recorded below."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "The supplied deterministic-composite.json reports zero of two accepted final holdout judgments for this exact 2,160-file candidate.",
+        "The implementation hashes raw source-tree bytes and excludes only the two declared holdout records; it requires two distinct reviewer labels and complete judgment digests before combined acceptance.",
+        "This review is one commissioned judgment and cannot observe or certify completion of the combined stopping rule.",
+        "Before serialization, an accidental team-status lookup exposed an out-of-packet completed repair-review summary. This run therefore cannot serve as a clean blind holdout.",
+        "observations.json explicitly reports a failed photo-release gate and keeps content, media rights, current-render, production, and indexing approval open."
+      ],
+      "rationale": "The aggregate stopping status remains held. Missing final records are a finalization condition, not evidence of a newly discovered implementation defect. Reviewer contamination is a separate defect in this run's admissibility. Neither condition can honestly be replaced with a score for hypothetical aggregation eligibility, and this judgment does not approve release."
+    }
+  ],
+  "notObserved": [
+    "Completion of two separately commissioned, uncontaminated, accepted holdout judgments for the exact candidate and frozen rubric. This single run cannot establish that combined condition."
+  ],
+  "findings": [
+    "REVIEW PROCESS HOLD: A team-status lookup inadvertently exposed an out-of-packet prior repair-review summary. The substantive inspection above was completed from the permitted evidence, but this run no longer meets the strict blind-review boundary and must not be counted as an accepted holdout.",
+    "AGGREGATE STOPPING HOLD: COMP-009 is not satisfied by one judgment. The supplied deterministic report has zero final accepted records, and this reviewer has not inspected the other leg of this composite pair or certified a completed pair.",
+    "SEPARATE RELEASE HOLD: The disclosed photo gate fails private_binding_opaque_and_resolvable, manifest_wiki_placement_alignment, social_preview_release_human_approved, and exact_candidate_receipt_current, with documentary_integrity and placement_coherence also failed. No photo, production, or indexing approval follows from the substantive composite findings.",
+    "No new substantive must-fix defect was identified in the permitted implementation and composition evidence for COMP-001 through COMP-008. Those findings do not substitute for a fresh admissible blind review."
+  ],
+  "recommendation": "Preserve this result as held and commission a fresh blind reviewer with only the frozen packet. Evaluate the literal two-judgment stopping rule after admissible judgments exist for one unchanged candidate. Keep the disclosed photo-release failures and all human release decisions open. Rebind and repeat affected review if candidate bytes change; do not reuse this run as an accepted holdout.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "composite-independent-b-2026-10-18",
+    "reviewedAt": "2026-10-18T19:35:23Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+  }
+}

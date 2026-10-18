@@ -1,0 +1,86 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the frozen Margaret Morse inhabited-systems rubric; not Margaret Morse's participation, judgment, endorsement, or approval",
+  "reviewerId": "margaret-morse-c-2026-10-18-r3",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible artistic, civic, technical, and social continuity within two clicks",
+      "routes": ["/", "/about"],
+      "observation": "The homepage contains an About link with destination /about. The desktop homepage screenshot visibly exposes that navigation link, so the through-line is one click away. The mobile homepage visibly provides a Menu control and the rendered text includes its About destination, supporting the two-action mobile route without claiming that menu interaction was tested. On /about, Systems people can inhabit connects the cited ten-day Open House gallery experiment to WOWList, Sunday Dinner and 196, coalition work, and Knowledge Wiki Graphs, then explicitly names the artistic, civic, technical, and social dimensions. The mobile About screenshot visibly contains the complete connecting paragraph and project links; the desktop About screenshot shows the professional introduction and the beginning of the cited through-line.",
+      "screenshotsInspected": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ]
+    },
+    {
+      "requirement": "The lineage supports the target professional role",
+      "routes": ["/", "/about", "/work", "/work/technical-operations"],
+      "observation": "Both homepage screenshots foreground Technical Project Manager - Product Operations & Implementation, usable systems, implementation, and documentation. The About introduction retains that role before the lineage appears. Open House occupies one bounded, cited paragraph rather than taking over the page as an artist biography. The work index and technical-operations page give direct routes to operating evidence, so the artistic and social continuity explains the professional practice rather than obscuring it."
+    },
+    {
+      "requirement": "Project-continuity trace 1: hospitality, agency, place, and continuity",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "observation": "The About loop treats invitations, hosting, onboarding, access handoffs, documentation, and follow-up as one participation system. The case study makes that concrete through two explicitly labeled workflow reconstructions. The residency sequence starts with the artist's proposal, makes needs and expectations discussable, configures the working conditions, enables independent access, and remains available while preserving the artist's agency. The gathering sequence connects invitation and response to food, space, welcome, introductions, minimal documentation, and another gathering. These are specific mechanisms by which hospitality shapes operations, rather than a generic claim to care.",
+      "sourceBoundary": "The packet's CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025 limits the public projection to the workflow schema. The case study withholds identities, proposals, addresses, access instructions, participant rows, and correspondence. The public milestone records separately preserve Jamie's organizer credit and Julia Fredenburg's co-organizer credit."
+    },
+    {
+      "requirement": "Project-continuity trace 2: participation changes the technical form",
+      "routes": ["/about", "/work/wowlist"],
+      "observation": "WOWList begins with the language organizers already used for scenes, interests, places, and venues. Collaboratively editable natural-language posts become followable keyword communities, event publishing, calendars, and email distribution. The case connects that product choice to calendars made at Sunday Dinner, public support workflows, an independent organizer tutorial, and an external local-calendar example. People can contribute through their own vocabulary and maintain their own scenes; participation is part of the interface model. The public 200th Sunday Dinner event's route into WOW List supplies a particularly concrete continuity between a gathering and a technical system.",
+      "sourceBoundary": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT and CLM-FACEBOOK-WOWLIST-IN-PRACTICE carry the relevant source relationships. Richard Caceres and wider organizer and participant labor remain credited. Historical 2017 activity is separated from the limited 2026 return threshold, which is expressly not a restored calendar or completed relaunch."
+    },
+    {
+      "requirement": "Project-continuity trace 3: civic participation, embodied place, and recoverable memory",
+      "routes": ["/", "/about", "/work/fair-rent-nyc"],
+      "observation": "The homepage's screen-and-room section pairs a coalition working session with the public campaign surface. The case study develops the relationship through listening meetings, priority ballots, practical safety sessions, town halls, hearings, campaign sites, source maps, running minutes, and action trackers. The shared website is presented as one interface alongside the facilitated working session and the public room. That makes participation and documentation mutually useful: collaborators can influence questions, recover context, review decisions, and carry work forward.",
+      "sourceBoundary": "CLM-NYCAC-PARTICIPATION-SYSTEM supports helped-establish-and-produce language while preserving collective event labor. CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017 distinguishes Jamie's recollection of a meeting agreement from separately supported web implementation. Campaign outcomes remain collective, and platform response counts are not presented as attendance or impact."
+    },
+    {
+      "requirement": "A current research continuation retains human correction and authority",
+      "routes": ["/about", "/lab/source-backed-team-memory"],
+      "observation": "Knowledge Wiki Graphs extends the same concern into a current method: a teammate should be able to find an answer, trace its source, correct it, recognize protected material, and continue the work. The synthetic known/open/protected example and the documented CallNYC date correction make memory and revision inspectable. The proposed pilot gives a team a continue, revise, or stop decision. The text preserves the difference between this evolving research practice, historical implementation evidence, and a completed client deployment.",
+      "sourceBoundary": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026 and the two RFC source records preserve exploring/proposed status, human review, and the absence of production or client-adoption claims."
+    },
+    {
+      "requirement": "Explain how people inhabit, influence, remember, and continue the systems",
+      "routes": ["/about", "/work/196-sunday-dinner", "/work/wowlist", "/work/fair-rent-nyc", "/lab/source-backed-team-memory"],
+      "observation": "A reader can explain the difference in concrete terms: resident artists can alter direction and work independently; organizers contribute and distribute events using community language; coalition participants shape shared questions and retain decision context; future teammates can inspect and correct a record. The operating structure is shaped around those acts of agency and continuity. This goes beyond scheduling or orderly administration, without requiring a romantic account of vulnerability."
+    }
+  ],
+  "gaps": [],
+  "safety_findings": [
+    {
+      "status": "pass_within_reviewed_packet",
+      "area": "Collective credit",
+      "finding": "Open House is initiated by Jamie and communally governed by its participants. WOWList names Richard Caceres and wider contributors; Sunday Dinner names Julia Fredenburg where supported and credits its community; coalition implementation is distinguished from collective campaign positions and policy outcomes. No inspected continuation requires a sole-author or sole-causation inference."
+    },
+    {
+      "status": "pass_within_reviewed_packet",
+      "area": "Participant privacy and protected-source exclusion",
+      "finding": "The packet contains bounded public summaries, source notes, and workflow reconstructions, not raw participant rows, private correspondence, educational evaluation text, grades, student identifiers, access details, legal-review documents, or private archive locators. No raw Open House article is reproduced. The approved-photo statements and metadata boundaries are explicit; this review accepts those packet records and does not claim to have independently audited withheld consent materials."
+    },
+    {
+      "status": "pass_within_reviewed_packet",
+      "area": "Testimonial and authority boundaries",
+      "finding": "The source note explicitly withholds the Margaret Morse recommendation lead and protected UCSC evaluations from public projection. No faculty praise or testimonial appears in the rendered pages. The separately governed Maven completion certificate is described as professional development, not instructor endorsement. No actual named-person participation is inferred by this review."
+    },
+    {
+      "status": "pass_within_reviewed_packet",
+      "area": "Additional hard boundaries",
+      "finding": "No Jamie phone number was observed in the rendered page text or screenshots. The lab is repeatedly bounded as early research and an operating method rather than finished SaaS or automated trust. Historical and current WOWList states remain distinct. This review neither assesses nor grants production deployment or indexing authorization."
+    }
+  ],
+  "recommendation": "Accept this exact candidate at the individual PR-015 review level. The supplied rendered evidence and source-bounded continuities meet every individually assessable requirement at score 4. Three-reviewer aggregation remains a separate operation; no other reviewer outcome is asserted. This is a fictionalized model-lens review, not a human study, accessibility certification, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:42:15Z",
+    "filesEdited": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the Margaret Morse inhabited-systems rubric; not Margaret Morse's participation, endorsement, or approval",
+  "reviewerId": "margaret-morse-b-2026-10-18-r3",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible connection within two clicks that supports the professional role",
+      "routes": [
+        "/",
+        "/about"
+      ],
+      "observation": "The homepage identifies Technical Project Manager - Product Operations & Implementation, gives practical requirements/workflows/handoff language, and links directly to About. The desktop homepage screenshot visibly contains that About link. The mobile homepage shows the Menu control; the rendered navigation includes About. The About screenshots show Systems people can inhabit following the role introduction, and the mobile capture shows the explicit artistic, civic, technical, and social connection. This supplies a one-link desktop route and a menu-plus-About mobile route in the supplied navigation evidence.",
+      "screenshotsInspected": [
+        "candidate-home-viewport.png",
+        "candidate-home-desktop.png",
+        "professor-lenses-about-mobile.png",
+        "professor-lenses-about-desktop.png"
+      ]
+    },
+    {
+      "requirement": "Source-bounded artistic lineage",
+      "route": "/about",
+      "observation": "One concise Open House statement names Jamie's initiation while assigning communal decision-making and many-perspective documentation to participants. Its citation and source note connect this bounded account to Laura Mattingly's contemporary reporting. CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY permits exactly this projection and preserves collective governance. The introduction and project links make this a working-method lineage rather than an extended artist biography."
+    },
+    {
+      "requirement": "Project-continuity trace 1: hospitality, place, participant agency, and continuity",
+      "routes": [
+        "/about",
+        "/work/196-sunday-dinner"
+      ],
+      "observation": "The About loop joins hospitality, trust, artist support, shared space, invitations, onboarding, and follow-up. The linked case supplies two explicit reconstructions: residency proposal review, orientation, space configuration, independent access, and continued support; and gathering invitation, response, hosting, minimal documentation, and follow-up. These show why the systems exist: artists can arrive and work independently, and recurring gatherings can continue. The artist retains agency over changes in direction. The public milestone credits Julia Fredenburg alongside Jamie."
+    },
+    {
+      "requirement": "Project-continuity trace 2: community language becoming a participatory interface",
+      "routes": [
+        "/about",
+        "/work/wowlist"
+      ],
+      "observation": "The continuity moves from calendars made with Sunday Dinner to collaboratively editable natural-language event posts, followable keyword communities, profiles, digests, and organizer distribution. The case points to public support threads, an independently published tutorial, an external local-calendar route, and the 200th Sunday Dinner event's WOW List link. Richard Caceres receives co-founder and co-builder credit, and wider organizers and participants are credited. Historical use and the dated 2017 scale are separated from the current landing/About/tester threshold."
+    },
+    {
+      "requirement": "Project-continuity trace 3: embodied civic participation becoming recoverable shared work",
+      "routes": [
+        "/",
+        "/about",
+        "/work/fair-rent-nyc"
+      ],
+      "observation": "The homepage's screen-and-room passage connects a working session to a public campaign surface. The About loop and case connect listening meetings, priority ballots, safety sessions, town halls, testimony, and campaign interfaces to running minutes, source maps, open questions, and action trackers. The Shoestring meeting agreement is expressly Jamie's recollection, while retained implementation history supports the web contribution separately. The account explains how collaborators can influence priorities, recover context, and carry next steps forward without assigning policy outcomes to Jamie alone."
+    },
+    {
+      "requirement": "Present practice extends the lineage without inflated production claims",
+      "routes": [
+        "/about",
+        "/lab/source-backed-team-memory"
+      ],
+      "observation": "Knowledge Wiki Graphs applies attention and care to source custody, corrections, disagreement, audience needs, and human review. The CallNYC date-correction example makes remembering and revising concrete. The proposed pilot asks a teammate to find, trace, correct, and protect the record, then choose to continue, revise, or stop. Both routes explicitly frame this as evolving research and an operating method, with no completed client pilot or production SaaS claimed."
+    },
+    {
+      "requirement": "People can inhabit, influence, remember, and continue the systems",
+      "observation": "The examples provide distinct mechanisms for each verb: arrival and independent access; editable community language and priority ballots; minimal continuity records and source maps; repeatable hosting, distributed publishing, and documented handoffs. The occupational value follows from those mechanisms rather than substituting administrative vocabulary for the social and artistic practice."
+    }
+  ],
+  "gaps": [
+    "No material gap in the individually assessable PR-015 requirements was observed in the supplied packet.",
+    "The other two independent scorecards and the three-reviewer aggregate are outside this review and remain unassessed.",
+    "The screenshots and rendered destinations establish visible layout and navigation evidence; actual menu activation, external-link availability, human reader comprehension, and accessibility conformance were not tested."
+  ],
+  "safety_findings": [
+    "No raw Open House article, protected UCSC evaluation text, grades, student identifiers, private correspondence, or faculty testimonial was reproduced in the supplied packet. The public source note explicitly withholds the unapproved recommendation lead.",
+    "Collective credit is preserved through Open House participant governance, Richard Caceres and WOW List contributors, Julia Fredenburg and the Sunday Dinner community, and coalition collaborators. Organizing, implementation, testimony, and legislative outcomes remain distinct.",
+    "Sunday Dinner and residency specimens are labeled reconstructions and omit participant-level values, access instructions, identities, and private correspondence. Aggregate gathering evidence is not converted into unique attendance, consent, or endorsement.",
+    "The reviewed image captions and source notes provide portfolio-use and courtesy-credit boundaries. The packet does not expose protected archive locators or private image metadata. This review does not independently certify underlying permissions beyond the supplied public-safe record.",
+    "No romanticized vulnerability, personal phone number in the supplied website text, credentials, raw coalition records, or automatic-trust claim was observed. Research and current-versus-historical product boundaries remain explicit."
+  ],
+  "recommendation": "Accept this individual PR-015 scorecard at 4. The candidate makes artistic and social practice materially explanatory of the professional operating method through specific, inspectable continuities and preserves the relevant privacy and credit boundaries. Calculate the independent three-reviewer aggregate separately. This model judgment is not a human study, accessibility certification, named-person endorsement, or deployment approval.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:42:01Z",
+    "filesEdited": false
+  }
+}

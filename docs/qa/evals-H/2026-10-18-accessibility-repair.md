@@ -49,7 +49,7 @@ successful summary. These strengthen the evidence contract.
 
 ## Scope
 
-Final recapture completed at `2026-10-18T19:17:47.142Z`, bound to public-surface
+The first complete recapture finished at `2026-10-18T19:17:47.142Z`, bound to public-surface
 fingerprint `4bd72b92a7741ab059b35010432c9d05dfc6a2d11c2fefa24d5c00411ddaaa42`
 (157 runtime/build inputs). All 60 rows passed: zero axe violations, overflow,
 broken or unloaded images after scrolling, unlabeled images, gating request
@@ -60,6 +60,16 @@ homepage-to-About navigation, keyboard/menu behavior, and reflow checks passed.
 The final four screenshot hashes match the exact captures inspected by the
 model. All 29 focused capture, contrast, evidence, and freshness tests passed,
 including the subsequent screenshot-publication regression.
+
+After an independent review found a separate intake replay defect, the schema
+and lifecycle implementation changed. That invalidated the earlier surface
+binding even though the visible page copy did not change. A new build and full
+60-row capture completed at `2026-10-18T19:40:46.076Z`, bound to
+`08661b154e28f7eb7cd0f30c21c5761d7ea7464d9147a8b293d6579847246b16`.
+All matrix, visual, and interaction checks passed again with zero gating
+violations. The four refreshed screenshots were visually inspected, and all
+29 focused tests passed again. Earlier evidence remains recoverable in Git;
+it was not relabeled as an observation of the changed source.
 
 The canonical reports are generated only by a fresh build and browser run.
 Their current status must be read from the final report and validation output,

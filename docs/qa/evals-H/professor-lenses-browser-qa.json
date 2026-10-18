@@ -1,8 +1,8 @@
 {
   "reportVersion": 6,
-  "checkedAt": "2026-10-18T19:17:47.142Z",
+  "checkedAt": "2026-10-18T19:40:46.076Z",
   "baseUrl": "http://127.0.0.1:3219",
-  "publicSurfaceFingerprint": "4bd72b92a7741ab059b35010432c9d05dfc6a2d11c2fefa24d5c00411ddaaa42",
+  "publicSurfaceFingerprint": "08661b154e28f7eb7cd0f30c21c5761d7ea7464d9147a8b293d6579847246b16",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 157,
   "captureMethod": "Fresh Playwright Chromium viewport captures after rebuilding the current production app; paired with all 60 route-width observations. No prior screenshot or observation was rebound.",
@@ -22,7 +22,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "49ab5253dfc39864e01ebbdc269b26a1bf8576bd06dbf82934ef503588f5537e",
+          "sha256": "cf2ca3791ef4056d4fd7b41f95a80923f4a30c51d7ed6ca27d69146f44b25a2d",
           "file": "candidate-home-desktop.png"
         },
         {
@@ -35,7 +35,7 @@
           "pixelWidth": 375,
           "pixelHeight": 812,
           "httpStatus": 200,
-          "sha256": "88564c58e55ff57baf9116ce15883a756eabe3968ec091044e9dde0b3334353d",
+          "sha256": "3e5161ae49d9a46ec8e33284dfd44ddea09b86aa170fa9e67596433850b6f32e",
           "file": "candidate-home-viewport.png"
         }
       ]
@@ -55,7 +55,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "5668cf43ce1ea4777b17a5e5a28315d2677bfbe108594cb7224f839fd5c488d7",
+          "sha256": "74724ed4278bab16ea13080ce969dc115054c5f0c8863c159b1623d10a246ac1",
           "file": "professor-lenses-about-desktop.png"
         },
         {
@@ -68,7 +68,7 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "a18b3155cb42b4a16bee9884c98d9717ef5ee24f702771896b5a87a58c3ba754",
+          "sha256": "9894e3b2be528a492dafdd72ad7ea67031c7996c364f771ff2bc2bcdebe9ce0d",
           "file": "professor-lenses-about-mobile.png"
         }
       ]

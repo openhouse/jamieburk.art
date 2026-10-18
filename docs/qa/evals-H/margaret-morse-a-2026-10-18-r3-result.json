@@ -1,0 +1,67 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the packet's Prof. Margaret Morse rubric; not Margaret Morse's participation, view, endorsement, or approval",
+  "reviewerId": "margaret-morse-a-2026-10-18-r3",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "requirement": "Visible threshold within two clicks, supporting the professional role",
+      "routes": ["/", "/about"],
+      "finding": "The homepage's About link leads directly to /about. Its desktop screenshot visibly includes that navigation link. The About page places 'Systems people can inhabit' immediately after its technical-project-management introduction, joins the public Open House experiment to WOWList, Sunday Dinner / 196, coalition work, and Knowledge Wiki Graphs, and explicitly names artistic, civic, technical, and social practice. This is one navigation click on desktop; the supplied mobile rendered text includes the same About destination in the menu. The professional introduction and role priorities remain prominent rather than being replaced by an artist biography.",
+      "screenshotsInspected": [
+        "docs/qa/evals-H/candidate-home-viewport.png",
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png"
+      ],
+      "renderedObservation": "The mobile About image shows the lineage heading, bounded Open House sentence, citation, linked continuities, and inhabited-systems question legibly. The desktop About image shows professional framing followed by the lineage threshold. Both homepage images retain the target role, usable-systems proposition, work and resume actions, and a situated photograph with a credit."
+    },
+    {
+      "requirement": "First project-continuity trace: experimentation, hospitality, and participant agency",
+      "routes": ["/about", "/work/196-sunday-dinner"],
+      "finding": "The About lineage begins with Open House's communal decision-making and many-perspective documentation. The Sunday Dinner / 196 case makes that concern operational through two explicitly reconstructed workflows: proposal review, orientation, configuring a place around the artist's practice, independent access, and continued availability; and invitation, response, hosting, minimal continuity documentation, and follow-up. A resident may change direction, and gathering records serve continuity without exposing participants. These concrete mechanisms show how people inhabit and influence a system.",
+      "sourceBasis": "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY; CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025; CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION; public milestone sources credited to Jamie and, for the 200th gathering, Julia Fredenburg and Jamie."
+    },
+    {
+      "requirement": "Second project-continuity trace: community language shapes technical participation",
+      "routes": ["/about", "/work/wowlist"],
+      "finding": "WOWList connects Sunday Dinner calendars to collaboratively editable natural-language event posts, followable keyword communities, local calendars, and organizer distribution. The case explains why the interface followed the language of scenes and venues. Public support records, a separately authored tutorial, an external local-calendar link, and the 200th Sunday Dinner event's WOW List route make this more specific than a claim of community-minded administration. Historical operating evidence and the limited 2026 return are distinguished.",
+      "sourceBasis": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT; CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026; CLM-FACEBOOK-WOWLIST-IN-PRACTICE; CLM-WOWLIST-PUBLIC-THRESHOLD-2026. Richard Caceres and wider organizer and participant labor retain credit."
+    },
+    {
+      "requirement": "Third project-continuity trace: the public room and the public interface",
+      "routes": ["/", "/about", "/work/fair-rent-nyc"],
+      "finding": "The homepage's screen-and-room passage and the coalition case's 'The website was one part of the room' connect facilitation, shared notes, campaign interfaces, public gatherings, and follow-through. Listening meetings and priority ballots lead to practical sessions and action pathways; source maps, running minutes, question logs, and action trackers preserve the ability to remember and continue. The case attributes the exact Shoestring meeting agreement to Jamie's recollection and separately supports implementation, avoiding an invented meeting consensus or individual claim to collective outcomes.",
+      "sourceBasis": "CLM-NYCAC-PARTICIPATION-SYSTEM; CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION; CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017; bounded public reporting and public source records."
+    },
+    {
+      "requirement": "Explain the distinctive operating practice",
+      "routes": ["/about", "/work/196-sunday-dinner", "/work/wowlist", "/work/fair-rent-nyc", "/lab/source-backed-team-memory"],
+      "finding": "The visible recurring concern is whether people can enter, shape, understand, remember, correct, and continue shared work. Artist agency, organizer vocabulary, collective deliberation, protected participant context, and explicit correction and handoff paths give that concern concrete form. The lab extends it into a proposed human-reviewed method and does not claim that its pilot has occurred."
+    },
+    {
+      "requirement": "Collective-credit, privacy, and protected-source exclusion audit",
+      "finding": "The packet preserves Open House's collective governance, Richard Caceres's co-builder credit, Julia Fredenburg's co-organizer credit, and coalition and community credits. The Sunday Dinner workflows withhold participant-level values and access details. The coalition case separates implementation from collective policy outcomes. The raw Open House article is not reproduced; the packet supplies a bounded summary, claim record, and public citation. No protected educational-record text, grades, student identifiers, private correspondence, or unapproved faculty testimonial appears in the supplied candidate material. No phone number is present in the supplied rendered HTML text."
+    }
+  ],
+  "gaps": [
+    "The packet permits review of rendered text, its claim and source records, and four screenshots; external destinations, actual menu interaction, and underlying protected-source authorization were not independently tested. The desktop two-click criterion is supported by the visible direct About link and supplied rendered /about page.",
+    "The score addresses the individually assessable PR-015 requirements. The required three-reviewer aggregate is outside this single review and has not been inferred.",
+    "Historical WOWList use and the proposed Knowledge Wiki Graph pilot are not evidence of three currently deployed products. The assessment concerns the documented continuities of the current operating practice, with those temporal limits preserved."
+  ],
+  "safety_findings": [
+    "No violation of the assigned publication boundaries was observed in the supplied packet or four screenshots.",
+    "Public source summaries, approved first-party claims, and workflow reconstructions are identified as such; this review does not convert them into independently observed private records or additional consent.",
+    "The result is fictionalized model analysis only. It is not named-person participation, a human study, accessibility certification, or deployment approval."
+  ],
+  "recommendation": "Pass this individual PR-015 review at 4. Preserve the concise About lineage and its linked concrete continuities, collective credit, reconstruction labels, and source limits. Calculate the three-reviewer aggregate separately without treating this result as release authorization.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:42:05Z",
+    "filesEdited": false
+  }
+}

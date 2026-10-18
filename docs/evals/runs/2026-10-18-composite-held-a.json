@@ -1,0 +1,136 @@
+{
+  "runVersion": 3,
+  "judgeId": "composite-independent-a-2026-10-18",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "41ca29153aa3d86a552467b8d1c09e7aac57e31623795f6c5aa72e60c59c7e95",
+  "candidateFingerprint": "8f7e8ace9cf6023e53daefee24a578bd4509909d97194d8940fe1ccedd025077",
+  "verdict": "held",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The frozen rubric and docs/integration/feature-evals-composite.json contain fourteen distinct A-N branch decisions with matching frozen heads, feature/knowledge-h as the integration branch, and develop as the pull-request base.",
+        "deterministic-composite.json reports all fourteen frozen commit objects available and separately discloses movement of the mutable feature/evals-K remote-tracking reference.",
+        "scripts/lib/composite-integration-eval.mjs verifies the exact family against a separately pinned branch-head digest and resolves each frozen head as a commit object. The register declares frozen branches reference-only."
+      ],
+      "rationale": "The inventory preserves immutable source identities and reports reference movement without substituting the moved head. The supplied deterministic receipt and inspected inventory agree."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All fourteen entries in docs/integration/feature-evals-composite.json state a decision, specific rationale, destination paths, and verification criteria.",
+        "The K decision adapts append and query behavior into lifecycle-operations.ts; the N decision adapts frozen governance and held-claim queries; the register explicitly declines expanding public copy merely to demonstrate integration.",
+        "An independent canonical-JSON digest calculation matched the register's reviewed digest 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d. The supplied deterministic receipt reports no missing destination."
+      ],
+      "rationale": "The adoption decisions are inspectable and tied to concrete files and checks. Their rationale is substantive rather than decorative, and composition has an explicit non-projection decision."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "schema.ts defines one intake, observation, source, claim, agency, inquiry, correction, and projection model; records.ts composes those records into knowledgeBankSchema.",
+        "public.ts imports public-registry.json, omits internalExcerpt and locator from public evidence, requires public source visibility, and rejects inactive or unauthorized surface projections. index.ts exports the public interface and schema.",
+        "The inspected public registry contains only sources, claims, and pages: 61 public sources, 43 claims, and 10 page plans, with no protectedLocatorId, locator, or internalExcerpt keys. Public work data resolves governed wording through getClaimProjection.",
+        "deterministic-composite.json reports eleven canonical files present and zero forbidden parallel lifecycle roots."
+      ],
+      "rationale": "The inspected architecture retains one canonical model and a selective redacted application projection. The presence of many canonical source modules does not create a competing lifecycle schema."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 2,
+      "pass": false,
+      "evidence": [
+        "A focused in-memory probe used knowledgeBankSchema-valid fixtures and the frozen appendIntakeItem implementation. Replaying an existing original returned already-present; changed content under the same ID was rejected; a new-ID repeat was preserved with a duplicate link.",
+        "After that duplicate was preserved, replaying the identical original incoming new-ID record threw an Intake ID collision with different content error. Replaying the normalized returned record succeeded instead.",
+        "lifecycle-operations.ts:59 compares the entire stored and incoming records before duplicate handling; lines 69-73 add disposition=duplicate and duplicateOfIntakeId only when first appending the duplicate. The retry therefore differs solely because the function added metadata during its first call.",
+        "scripts/tests/lifecycle-operations.test.mjs tests replay of an already stored original and first-time duplicate preservation separately, but does not exercise identical retry after duplicate preservation. queryKnowledgeLifecycle exposes duplicate IDs, held claims, inquiries, corrections, projection counts, and orphan sources."
+      ],
+      "rationale": "The two required intake behaviors do not compose: preserving a repeated artifact makes an identical retry of its original incoming record fail. This is an implementation defect in replay idempotence, not an absent final holdout record. Duplicate preservation and query behavior are useful, but the blocking replay requirement is not fully satisfied."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "deterministic-composite.json reports validation of 332 sources, 122 claims, 36 agency relations, and five corrections, with current derived Wiki and employment outputs.",
+        "records.ts preserves CallNYC's 2016 chronology correction, the narrower first CouncilStat hackathon wording, a held photograph with rights and consent inquiries, and a not-recovered finding that explicitly does not prove nonexistence.",
+        "agency-graph.ts separately assigns Jamie's initiation of Open House, participants' collective governance, shared coalition membership and advocacy, individual implementation, and institutional actions. Boundaries reject sole policy causation and ownership of collective work.",
+        "The public registry and rendered FairRentNYC page retain the July 2026 retrievable population of 3,123, the 2,001-record recovery gap, source-post versus coalition-action dates, and the distinction between external reposts and incoming engagement. CallNYC's 19-member interaction count remains a recovered lower bound.",
+        "The inspected redacted registry contains no non-public source visibility or protected locator fields. The disclosed photo release-gate failure remains a separate unresolved release constraint and is not cleared by this score."
+      ],
+      "rationale": "The canonical validation receipt is supported by inspected source roles, corrections, agency distinctions, and population limits. This criterion's pass concerns the inspected knowledge contracts; it does not certify underlying private sources, photo rights, or completion of the full photo release gate."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The rendered homepage leads with Technical Project Manager - Product Operations & Implementation, the promise of making work usable, selected proof, and clear work and resume destinations. The four supplied screenshots show readable mobile and desktop layouts without visible overlap in the captured regions.",
+        "The Technical Operations page links specific decisions to actions, inspectable artifacts, and usable results. HJE describes contribution to growth, CallNYC remains archived and unofficial, and coalition work explicitly preserves shared accomplishments.",
+        "The About page's Systems people can inhabit section connects Open House, WOWList, Sunday Dinner and 196, coalition work, and the Knowledge Wiki method. Hospitality, participation, documentation, place, and artistic practice remain visible within one navigation step of the homepage.",
+        "HJE's listen-frame-implement-verify-continue specimen, the coalition's source and decision records, and Sunday Dinner's invitation-to-follow-up and residency handoff specimens make observation, modeling, implementation, use, learning, and continuation reconstructable.",
+        "The lab distinguishes a proposed pilot and early research practice from delivered client adoption or production SaaS, labels its synthetic example, and shows a concrete CallNYC correction trace. Protected coursework remains held and is not presented as current technical proficiency.",
+        "observations.json reports 60 browser rows with zero axe violations, overflow elements, failed requests, invalid heading or landmark rows, and broken or unloaded images after scrolling. These supplied observations are supporting evidence, not a full accessibility certification."
+      ],
+      "rationale": "The public site remains a composed portfolio with specific actor-action-result narratives and an intelligible practice lineage. The named lenses are analytical criteria in this model review, not participation or endorsement by those people."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "blind-spot-controls-2026-07.json keeps human corroboration, collective review, unfamiliar hiring-reader usability, job-funnel evidence, and external validity explicitly open.",
+        "Each control specifies evidence requirements, anti-gaming rules, a next action, and a public projection boundary. The human controls forbid synthetic testimony, simulated usability, silence-as-approval, and treating model evaluation as hiring impact.",
+        "The control documentation defines a passing control as governed absence, and the inspected semantic digest matches 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "observations.json openly reports the failed photo release gate and separate human content, media-rights, current-render, production, and indexing approval states."
+      ],
+      "rationale": "The gaps remain actionable without being falsely closed by controls or model scores. Nothing in this judgment supplies the missing human evidence or publication permission."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Independent byte checks matched all 48 manifest evidence entries. Independent canonical-JSON calculations matched the frozen composite rubric, complete base suite, integration register, and blind-spot-control digests.",
+        "composite-integration-eval.mjs compares the semantic rubric to both the mutable suite checksum and the separately pinned FROZEN_COMPOSITE_RUBRIC_SHA256 constant. It also binds the source-branch namespace, base suite, decisions, and human controls.",
+        "composite-integration.test.mjs contains rejection tests for branch omission, fabricated heads, decorative decisions, checksum-refreshed semantic weakening, optimizer self-grading, synthesized human evidence, candidate dependency changes, duplicated reviewer labels, and blocker compensation.",
+        "Inspected knowledge-evals tests reject private source URLs, participant email disclosure, raw post-body leakage, and checksum-refreshed reversals of human and population boundaries.",
+        "The evaluator requires every composite result to pass and every accepted holdout criterion to score four, with no notObserved entries. The independent replay counterexample in COMP-004 is retained despite the supplied deterministic score."
+      ],
+      "rationale": "The frozen contract, separately pinned semantics, separation of roles, and fail-on-any-blocker rule are inspectable. The lifecycle defect demonstrates a coverage gap, not permission to weaken the rubric or offset the failure with other scores. I inspected the mutation-test implementations; I did not run a whole-repository preflight or claim that every test was independently rerun."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "The packet identifies candidate 8f7e8ace9cf6023e53daefee24a578bd4509909d97194d8940fe1ccedd025077, source/report commit 1cf4667313d9cce23612365722782d05d6ac7560, and 2,160 source-tree files with only the two declared final holdout records excluded.",
+        "The inspected fingerprint implementation binds paths, byte lengths, and raw contents, and the receipt implementation binds complete judgments, reviewer labels, provider, time, and candidate identity while explicitly disclaiming process-identity authentication.",
+        "deterministic-composite.json reports zero of two final exact-candidate holdout judgments present. This independently commissioned response is one judgment and cannot establish the existence, result, receipt digest, or separate commissioning of another.",
+        "COMP-004 fails in this judgment, so the all-criteria-at-four stopping requirement is not satisfied. Human production and indexing approvals remain open, and the full photo release gate remains failed."
+      ],
+      "rationale": "The exact-candidate stopping rule is not currently satisfied. Missing final receipts are an orchestration state, not by themselves an implementation defect; however, they cannot be scored as observed, and the independently reproduced lifecycle defect is a substantive acceptance blocker."
+    }
+  ],
+  "notObserved": [
+    "COMP-009: two completed accepted holdout judgments and their complete public receipt digests for this exact candidate were not supplied or observed. This review does not infer another review's existence or outcome."
+  ],
+  "findings": [
+    "Blocking COMP-004: appendIntakeItem is not idempotent when the original incoming record is retried after the function has preserved it as a linked duplicate. Normalize or otherwise reconcile only function-derived duplicate metadata before comparing a retry, while preserving rejection of actual changed-content collisions; add a regression case covering the two calls together.",
+    "COMP-009 remains held: the combined two-judgment stopping state is not observed, and this candidate has a substantive failed criterion. Do not convert receipt absence into an implementation defect or into a passing observation.",
+    "Separate release hold: observations.json reports failed private_binding_opaque_and_resolvable, manifest_wiki_placement_alignment, social_preview_release_human_approved, and exact_candidate_receipt_current hard gates, plus documentary_integrity and placement_coherence failures. This review supplies no photo, current-render, production, or indexing approval."
+  ],
+  "recommendation": "Hold this candidate. Repair the duplicate-preservation retry behavior, verify ordinary replay and real collision rejection still work, then freeze the changed candidate and obtain fresh complete independent judgments. Preserve the disclosed photo release hold and separate human approval states. This is a model evaluation of the supplied evidence, not submission, deployment, release approval, or full accessibility certification.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "composite-independent-a-2026-10-18",
+    "reviewedAt": "2026-10-18T19:33:56Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+  }
+}

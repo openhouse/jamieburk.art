@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
   "boundary": "Six separately commissioned fictionalized model reviews. No real named person participated; no human approval, rights verification, or deployment authorization is established.",
   "receiptProjection": "Only temporary screenshot locators were replaced with their equivalent checked-in public screenshot paths. Scores, evidence, gaps, findings, recommendations and provenance are unchanged. Original returned review hashes are retained below; original process-local files remain outside Git.",
   "round1": {
@@ -10,7 +10,8 @@
       "margaret-morse-held-2026-10-18-b.json"
     ],
     "score": 3,
-    "candidateChanged": false
+    "candidateChanged": false,
+    "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089"
   },
   "round2": {
     "inputs": "Current production-build rendered text with destinations for twelve routes, four current screenshots, the public-safe source note, selected canonical public claims and linked source records, assigned frozen rubric.",
@@ -53,7 +54,108 @@
         "originalReviewSha256": "2987e3ab804ec8515de208df9a007ac8f59c43ff98e296577b1897f4de9fb1c2"
       }
     ],
-    "score": 4
+    "score": 4,
+    "candidateSha256": "b4355eed81c5baf5d3a492fdfd6b6d9ad8771e0a8f4832a110500439cff7a089"
   },
-  "limitations": "The packet hashes bind the supplied review inputs. Public reviewer labels do not authenticate process identity. Separate commissioning is retained in task orchestration; unrelated human and photo-verification holds remain open."
+  "limitations": "The packet hashes bind the supplied review inputs. Public reviewer labels do not authenticate process identity. Separate commissioning is retained in task orchestration; unrelated human and photo-verification holds remain open.",
+  "round3": {
+    "status": "held-visual-evidence-gap",
+    "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+    "inputs": "Fresh rendered current build, four refreshed homepage/About screenshots, selected public claims and sources, assigned frozen rubric. No prior review supplied.",
+    "reviewers": [
+      {
+        "reviewerId": "margaret-morse-a-2026-10-18-r3",
+        "receipt": "margaret-morse-a-2026-10-18-r3-result.json",
+        "packetSha256": "1cec0f85718db25d327bb59b7c73a9cef3dfaa3299dd0c606edcef56b8223602",
+        "originalReviewSha256": "4b1eee67e4dbd711af89464c1b1908d1ada62a0d69d12321e265b2e410022d76",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "margaret-morse-b-2026-10-18-r3",
+        "receipt": "margaret-morse-b-2026-10-18-r3-result.json",
+        "packetSha256": "28e4ea2d5929ebaa715ec5751350a064653fb6966c8c55167911b28c0371792f",
+        "originalReviewSha256": "4176d5234aa8daecb9f2fa8321ff6e9282f92edf88dbddff2799fddc25770d0e",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "margaret-morse-c-2026-10-18-r3",
+        "receipt": "margaret-morse-c-2026-10-18-r3-result.json",
+        "packetSha256": "a3abd2166faf5f82f9d9d5aff76c9b1596a4c50d1c5796a0b1af98fae805d443",
+        "originalReviewSha256": "7f595f1126184bcd46752b8a2c08fd664ba27aa0d0e0c53637a6f186ec9df681",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "warren-sack-a-2026-10-18-r3",
+        "receipt": "warren-sack-a-2026-10-18-r3-result.json",
+        "packetSha256": "321c026f67b5f0b1b1613c981b3f0257920694dede674a2e11df31f105fdf4be",
+        "originalReviewSha256": "6c6c576e54a1869c7af20672114b5777f2de1b0a97bb7376ef3f39a2b8fa9e2d",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "warren-sack-b-2026-10-18-r3",
+        "receipt": "warren-sack-b-2026-10-18-r3-result.json",
+        "packetSha256": "3ac7ad9a59f3b7621bf9e1c8a3885297838e7a106a12628ae17eee1be711dd03",
+        "originalReviewSha256": "e84d7d0d41b00ea6eb0541f227ee3b8dbf7e54f870987419ad66447a452a673a",
+        "score": 3,
+        "pass": false
+      },
+      {
+        "reviewerId": "warren-sack-c-2026-10-18-r3",
+        "receipt": "warren-sack-c-2026-10-18-r3-result.json",
+        "packetSha256": "ca59544745905cf1da8866b94dd3bd1a5f3028543b9c7f3c1f259e3dc77750fc",
+        "originalReviewSha256": "8a3d34327b6458750a8085f3630cfda49514a7c86c81c6a298fe485881503e59",
+        "score": 4,
+        "pass": true
+      }
+    ],
+    "hold": "One reviewer could not visually observe the later recursive-method and systems-loop sections in the four supplied screenshots. Its score of 3 and pass:false are preserved; positive judgments do not erase the evidence gap.",
+    "receiptProjection": "Temporary screenshot or output-result locators, if present, are replaced only by equivalent public repo-relative artifact paths; all substantive judgments are unchanged."
+  },
+  "round4": {
+    "status": "accepted-for-PR-016",
+    "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+    "inputs": "Fresh rendered current build, twelve current screenshots including the practical method and three project loops at mobile and desktop widths, selected public claims and sources, assigned frozen rubric. No prior review or implementation discussion supplied.",
+    "privateSourceBodiesIncluded": false,
+    "visualManifest": "professor-method-manifest.json",
+    "visualManifestSha256": "424ab7951d0b1983baa2a9019d42bdadb0b312fbe0584eb30896f6cb81e51199",
+    "reviewers": [
+      {
+        "reviewerId": "warren-sack-a-2026-10-18-r4",
+        "receipt": "warren-sack-a-2026-10-18-r4-result.json",
+        "packetSha256": "6876735ffbc9033f3c9c06a86431a9a2916e6e380a04c23ef9c0aebc37b4eaeb",
+        "originalReviewSha256": "a52a6e0c887f82cdf8d9a7ffc96200b2e1100722bccaa6cd5dd629916c413aae",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "warren-sack-b-2026-10-18-r4",
+        "receipt": "warren-sack-b-2026-10-18-r4-result.json",
+        "packetSha256": "f67f064f9cc573dffbe3d64187e2b2376f0563ca18d872098c49886b1a6f017c",
+        "originalReviewSha256": "2476600a020dfdb6b2d670c222b9e42dedb2fc73c386f382778a6d38a4a5f9ae",
+        "score": 4,
+        "pass": true
+      },
+      {
+        "reviewerId": "warren-sack-c-2026-10-18-r4",
+        "receipt": "warren-sack-c-2026-10-18-r4-result.json",
+        "packetSha256": "66de640bc05d773c95e30e134bdc9b5e4d32ec10c671aac807fd767cd9225e9f",
+        "originalReviewSha256": "6939b1cf52e71bcc4308a7cf3c5ee128160c186ce1f132c5f83844495ac15471",
+        "score": 4,
+        "pass": true
+      }
+    ],
+    "boundary": "Resolves the specific missing visual evidence for this rubric. The earlier held judgment remains intact. Does not establish composite review acceptance, human approval or release authority."
+  },
+  "activeReviewers": [
+    "margaret-morse-a-2026-10-18-r3",
+    "margaret-morse-b-2026-10-18-r3",
+    "margaret-morse-c-2026-10-18-r3",
+    "warren-sack-a-2026-10-18-r4",
+    "warren-sack-b-2026-10-18-r4",
+    "warren-sack-c-2026-10-18-r4"
+  ]
 }

@@ -44,3 +44,47 @@ After capture, run `npm run test:accessibility-evidence` and
 `node --test scripts/tests/visual-evidence-freshness.test.mjs` against the final
 candidate. The capture helper's regression tests are also included by
 `npm run wiki:test`.
+
+## Capture the About method sections
+
+The four viewport screenshots show the top of Home and About. They do not show
+the full recursive method paragraph or the three systems examples farther down
+About. Supply those sections separately when a review needs to assess them.
+
+After the full browser capture passes for the current source, run:
+
+```sh
+node scripts/knowledge-wiki/capture-professor-method-evidence.mjs
+node scripts/knowledge-wiki/capture-professor-method-evidence.mjs --check
+node --test scripts/knowledge-wiki/capture-professor-method-evidence.test.mjs
+```
+
+Use the same provisioned `PLAYWRIGHT_MODULE` and `CHROMIUM_EXECUTABLE_PATH` as
+the full capture. This runner reuses the existing production build; it does not
+rebuild or repeat the 60 route checks. It starts and stops its own loopback-only
+server on port 3221. Set `PROFESSOR_METHOD_QA_PORT` to use another free port.
+A port conflict stops the capture.
+
+The runner captures four complete sections at 375 and 1280 CSS pixels:
+
+- The practical recursive sequence paragraph.
+- The Harry J. Epstein Company systems example.
+- The NYC Artist Coalition and FairRentNYC systems example.
+- The Sunday Dinner and 196 systems example.
+
+It verifies that the served About HTML matches the build, waits for fonts, and
+checks each section for clipped text, horizontal overflow, and header overlap.
+It does not hide the header or change site styles. A taller viewport keeps each
+full section visible without changing its width or text layout.
+
+The runner buffers all eight images before saving a complete set in a new dated
+`professor-method-*` directory. It then replaces `professor-method-manifest.json`.
+An interrupted capture cannot replace the previous manifest or its images.
+The manifest records the source hash, build HTML hash, capture times, selectors,
+viewports, text, and each screenshot's hash. It contains no local machine paths.
+
+Open all eight images before saying they have been visually reviewed. The
+current-manifest test runs as part of `npm run wiki:test`, so later source
+changes, missing images, changed image bytes, or incomplete coverage fail the
+check. These observations support a fresh review; they do not approve the
+content, photography rights, deployment, or production indexing.

@@ -56,6 +56,48 @@ and employment reports. Several failures were cascades from the same cause.
 - The composite suite's stale base lock was compared to the original bytes and
   relocked to already-landed stronger requirements. No threshold was relaxed.
   Final composite review must follow source and derived-report commits.
+- A final independent review then found a real intake replay defect: a new-ID
+  duplicate was normalized before storage, so replaying its identical incoming
+  record raised a collision. Optional normalization digests now preserve exact
+  incoming identity and bind every stored field without retaining another source
+  body. Original and normalized replay pass after persistence; changed content,
+  changed boundaries, corrupted provenance, and missing historical provenance
+  remain fail-closed. The deterministic composite exercise now tests this case.
+- The changed lifecycle source triggered fresh browser and composition review.
+  One later reviewer held a missing visual observation: the four screenshots
+  stopped before the method paragraph and project comparisons. That dissent
+  remains intact. A separate reusable capture now supplies all four sections
+  at both desktop and mobile widths, checks served HTML against the build,
+  rejects clipped or unobserved results, and publishes only a complete set.
+  The current manifest and image hashes are checked by the regular Wiki tests.
+  Three fresh isolated reviews accepted the expanded packet at 4/4. Together
+  with the three current-candidate Morse reviews, those six judgments are the
+  active composition receipts. Earlier rounds and the dissent remain intact.
+  Repeat review used the additional real captures, not a rewritten score.
+
+## Independent review and stopping-rule hold
+
+The first final composite round is retained in
+[`../evals/runs/2026-10-18-composite-held-a.json`](../evals/runs/2026-10-18-composite-held-a.json)
+and
+[`../evals/runs/2026-10-18-composite-held-b.json`](../evals/runs/2026-10-18-composite-held-b.json).
+The first judgment found the replay defect. The second disclosed accidental
+exposure to an out-of-packet review summary and cannot count as a blind holdout.
+Neither judgment has been converted into acceptance or rebound to repaired bytes.
+
+A separate read-only audit confirmed a circular requirement in COMP-009. Its
+literal criterion requires a completed pair of accepted judgments, while the
+evaluator requires each isolated input judgment to score that same completed-pair
+criterion 4/4 with nothing unobserved. One isolated reviewer cannot observe that
+pair. Older receipts describing themselves as one side of the rule do not create
+an exception to the frozen contract. This is separate from the substantive
+replay defect and the contaminated review.
+
+The rubric, its semantic pin, two-review requirement, and not-observed rule are
+not weakened in this repair. Correcting the reviewer-versus-aggregator contract
+requires a separately reviewed governance proposal and Jamie's decision. Until
+then the composite acceptance checks remain held. Fresh public composition
+reviews do not substitute for that unresolved composite stopping decision.
 
 The detailed browser account is in
 [`evals-H/2026-10-18-accessibility-repair.md`](evals-H/2026-10-18-accessibility-repair.md).
@@ -84,7 +126,8 @@ is a reviewable PR update, not a staging release.
 2. Finish candidate-bound content and browser review. Preserve rejected runs.
 3. Commit source changes, excluding generated Wiki and employment outputs.
 4. Regenerate Wiki and employment reports, then commit only those outputs.
-5. Freeze the complete candidate; commission the two final composite holdouts.
+5. Freeze the complete candidate. Final composite holdouts remain blocked until
+   the circular reviewer/aggregator contract has an approved resolution.
 6. Validate all command groups independently to expose downstream failures,
    then run the actual C staging preflight against the final clean commit.
 7. Report local tests, independent model review, hosted CI, human holds, PR

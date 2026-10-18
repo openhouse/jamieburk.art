@@ -291,15 +291,31 @@ export function evaluateCompositeIntegration({
   if (sample) {
     try {
       const replay = appendIntakeItem(knowledgeBank, sample);
-      const duplicate = appendIntakeItem(knowledgeBank, {
+      const incomingDuplicate = {
         ...structuredClone(sample),
         id: "INTAKE-COMPOSITE-EVAL-DUPLICATE",
         submittedAt: "2026-07-16"
-      });
+      };
+      const duplicate = appendIntakeItem(knowledgeBank, incomingDuplicate);
+      const originalInputReplay = appendIntakeItem(duplicate.knowledgeBank, incomingDuplicate);
+      const normalizedReplay = appendIntakeItem(duplicate.knowledgeBank, duplicate.intake);
+      let changedMetadataRejected = false;
+      try {
+        appendIntakeItem(duplicate.knowledgeBank, {
+          ...incomingDuplicate,
+          boundaries: [...incomingDuplicate.boundaries, "A new public-use restriction"]
+        });
+      } catch (error) {
+        changedMetadataRejected = /Intake ID collision with different content/.test(String(error));
+      }
       const report = queryKnowledgeLifecycle(knowledgeBank);
       lifecycleOperationsPass = replay.status === "already-present" &&
         duplicate.status === "duplicate-preserved" &&
         duplicate.intake.duplicateOfIntakeId === sample.id &&
+        originalInputReplay.status === "already-present" &&
+        normalizedReplay.status === "already-present" &&
+        originalInputReplay.knowledgeBank.intakeItems.length === knowledgeBank.intakeItems.length + 1 &&
+        changedMetadataRejected &&
         report.matureHeldClaimIds.length > 0 &&
         report.unresolvedInquiryIds.length > 0 &&
         report.correctionIds.length > 0 &&
@@ -312,7 +328,7 @@ export function evaluateCompositeIntegration({
   results.push(criterion(
     "COMP-004",
     lifecycleOperationsPass,
-    "Canonical intake replay, duplicate preservation, held-claim, inquiry, correction, and orphan queries were exercised.",
+    "Canonical intake replay, original and normalized duplicate replay, changed-metadata rejection, held-claim, inquiry, correction, and orphan queries were exercised.",
     lifecycleFindings
   ));
 

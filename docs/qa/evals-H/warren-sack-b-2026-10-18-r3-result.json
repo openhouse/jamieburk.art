@@ -1,0 +1,84 @@
+{
+  "evaluator": "Fictionalized independent model lens informed by the frozen Warren Sack rubric; not Warren Sack's participation, opinion, endorsement, or approval",
+  "reviewerId": "warren-sack-b-2026-10-18-r3",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "9b38ba345bc778ff268e827792a75801d52e9d8bb2539dd0af9e61e529d6cbb0",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    {
+      "requirement": "Plainly named method and path from the homepage",
+      "routes": ["/", "/about"],
+      "finding": "The homepage links directly to About. The rendered About text explicitly states: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. It then links three systems loops to their case studies. The method is one navigation click from the homepage; case evidence is a second click away.",
+      "visualEvidence": "candidate-home-desktop.png visibly shows the About navigation item. professor-lenses-about-desktop.png shows the About page and the beginning of Systems people can inhabit. professor-lenses-about-mobile.png shows the through-line and links to WOWList, Sunday Dinner and 196, NYC Artist Coalition work, and Knowledge Wiki Graphs. Neither About screenshot reaches the explicit method paragraph or the three systems loops."
+    },
+    {
+      "requirement": "Systems-sequence trace 1",
+      "route": "/work/harry-j-epstein",
+      "observation": "Recurring customer and team questions reveal friction in product information, publishing, commerce, and follow-up.",
+      "model": "Jamie frames a scoped requirement and treats product knowledge, content, marketing, ordering, and customer follow-up as connected parts of one operating system.",
+      "interface": "Incremental changes are released to reusable content patterns, product information, marketing, and the e-commerce storefront.",
+      "socialUseAndLearning": "The case describes customer and team use, inspection of the public customer path, and review of operational or analytical signals with stakeholders.",
+      "documentationAndHandoff": "The five-step maintenance-to-handoff specimen ends in reusable patterns, ownership, and next actions for staff and later maintainers.",
+      "evidenceBoundary": "The specimen is explicitly a public-safe reconstruction, not an original company document. The operational work is dated 2009-2015; the July 2026 storefront capture is not proof of present employment or authorship of every current feature."
+    },
+    {
+      "requirement": "Systems-sequence trace 2",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Listening meetings, priority ballots, lived experience, public sources, and city and state actors supply relationships and questions.",
+      "model": "The campaign-memory structure separates public evidence, protected context, unresolved questions, decisions, accountable actors, and next actions.",
+      "interface": "Campaign sites, call scripts, public event pages, practical sessions, town halls, hearings, and action pathways make that model usable.",
+      "socialUseAndLearning": "The described recurring participation system and public reporting establish collective use; the public-systems section connects working alignment, a shared campaign interface, and a public room. Jamie's account of the Shoestring Press agreement remains explicitly a recollection.",
+      "documentationAndHandoff": "Running minutes, source maps, policy question logs, action trackers, and 30+ pages of campaign memory preserve context and next steps for collaborators.",
+      "evidenceBoundary": "Public implementation history and source notes support the web contribution and collective context. Detailed campaign-memory contents remain protected; the quantity and role are identified in the claim layer as approved first-party claims."
+    },
+    {
+      "requirement": "Systems-sequence trace 3",
+      "route": "/work/196-sunday-dinner",
+      "observation": "The project attends to artists' actual needs, hospitality, shared space, returning participants, and trust.",
+      "model": "Invitations, responses, preparation, access, minimal continuity records, and follow-up form a participation system.",
+      "interface": "Two public-safe workflow reconstructions make the system concrete: residency proposal review, orientation, configuration, access handoff, and continued support; and gathering invitation, response, hosting, documentation, and follow-up.",
+      "socialUseAndLearning": "Recurring gatherings, residency practice, public milestone events, and a protected operating schema support use over time. Video-call orientation and remaining available show how the workflow responds to participants without prescribing artistic outcomes.",
+      "documentationAndHandoff": "The residency specimen explicitly enables independent work and access; the gathering specimen preserves enough continuity for follow-through and the next gathering.",
+      "evidenceBoundary": "The reconstructions expose structure only. Public milestone titles are not an attendance audit, and the aggregate evidence is not evidence of participant consent or artistic impact."
+    },
+    {
+      "requirement": "Social structure, information architecture, and further continuity",
+      "routes": ["/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory", "/work/technical-operations"],
+      "finding": "WOWList provides a particularly legible relationship-to-interface example: organizers' vocabulary becomes collaboratively editable event text, followable keyword communities, publishing, calendars, and weekly email. Public support threads, an independent tutorial, and an external calendar link supply bounded evidence of use and continuation. CallNYC maps administrative records to resident-recognizable issue pathways with a public implementation and documented iteration, but its social interactions are not treated as formal resident research. The lab's correction of CallNYC's date from 2014-2015 to 2016, propagated across the case study, index, and resume, is a concrete recursive correction trace. The technical-operations page connects decisions, artifacts, and usable results while explicitly naming remaining evidence gaps."
+    },
+    {
+      "requirement": "Coursework-versus-current-proof audit",
+      "routes": ["/about", "/work/wowlist", "/work/callnyc", "/lab/source-backed-team-memory"],
+      "finding": "Open House is dated contextual lineage with collective governance and a public source. The packet's source note says the historical Social Information Spaces record remains held. The observed public text does not claim invention of structural equivalence, peer-reviewed research, current Max/Jitter proficiency, or sole authorship from protected UCSC records. About expressly rejects structural-equivalence inference and present-proficiency inference from historical implementation. WOWList distinguishes historical production from its limited 2026 return threshold; CallNYC remains archived and unofficial. The lab separates a proposed pilot, early method, synthetic example, and professional-development certificate from completed client deployment or production SaaS."
+    },
+    {
+      "requirement": "Inspection of all four packet screenshots",
+      "screenshots": ["candidate-home-viewport.png", "candidate-home-desktop.png", "professor-lenses-about-mobile.png", "professor-lenses-about-desktop.png"],
+      "finding": "All four supplied screenshots were visually inspected. They establish the homepage's role framing, desktop navigation, and the About through-line's rendered presence. Their viewport crops do not visually expose the complete recursive method or the three project comparisons."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "blocking-for-score-4",
+      "requirement": "Two-click path and rendered screenshot of the assessed method surface",
+      "finding": "The explicit recursive method and three systems-loop comparisons are available in rendered text, but neither supplied About screenshot reaches them. The desktop image stops after the Open House introduction, and the mobile image stops after the lineage paragraph. Consequently the required visual evidence for those assessed sections is incomplete; their layout and visual availability cannot be assumed from the screenshots.",
+      "remediation": "Provide current desktop and mobile captures that include the explicit recursive method and three systems-loop comparisons, then repeat this isolated review of the same candidate or its newly bound replacement."
+    }
+  ],
+  "safety_findings": [
+    "No hard-boundary violation was observed in the supplied rendered text or screenshots. This does not establish the contents of files or external destinations outside the packet.",
+    "Collective credit is preserved for NYC Artist Coalition, WOWList and Richard Caceres, Sunday Dinner and its co-organizers, and the Harry J. Epstein Company team. Public interaction and event-response counts are bounded rather than converted into endorsement, attendance, or policy causation.",
+    "Protected records are described through bounded claims and explicitly labeled reconstructions; raw private correspondence, participant rows, access details, and private source locators were not exposed in the reviewed public material.",
+    "No phone number was observed in the supplied website text or screenshots.",
+    "This is a fictionalized model review only. It is not a human study, accessibility certification, faculty endorsement, or deployment approval. No other reviewer's score or aggregate outcome is inferred."
+  ],
+  "recommendation": "Hold the PR-016 pass at 3/4 for incomplete visual evidence. The content supports a strong, reconstructable systems method across at least three current portfolio case pages, with historical work and present research appropriately distinguished. Supply screenshots of the actual method and comparison sections before awarding the exceptional, fully inspectable score required by this rubric.",
+  "provenance": {
+    "provider": "independent-codex-review",
+    "reviewMode": "isolated rendered-public-site packet with screenshots and public claim records",
+    "reviewedAt": "2026-10-18T19:44:54Z",
+    "filesEdited": false
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "reportVersion": 1,
+  "route": "/about",
+  "capturedAt": "2026-10-18T19:50:20.684Z",
+  "publicSurfaceFingerprint": "08661b154e28f7eb7cd0f30c21c5761d7ea7464d9147a8b293d6579847246b16",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 157,
+  "buildAboutHtmlSha256": "82bbcd87647d8d0448cffe5e18f46287c27c368ffc8e092c4f0f2f1f6abfd5a8",
+  "responsiveMatrixSha256": "70780e923b44d18fbc57d4f43c3cb19eebb2f1c54117a78f8d021d2fd9c56a27",
+  "captureMethod": "Fresh Chromium element screenshots at unmodified 375px and 1280px page layouts. The capture uses a current complete browser matrix, checks served HTML against the production build, and records full section bounds without changing site styles.",
+  "boundary": "Observed pixels and geometry are review evidence, not human review, factual approval, rights clearance, or release authority.",
+  "rows": [
+    {
+      "targetId": "practical-sequence",
+      "selector": "main p:has-text(\"The practical sequence is recursive:\")",
+      "viewport": {
+        "width": 375,
+        "height": 1200
+      },
+      "text": "The practical sequence is recursive: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Requirements, interfaces, and handoffs matter because people have to inhabit them.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 343,
+        "height": 224
+      },
+      "textSha256": "a89330274d9f2aa367ef19c03f3cc7311ac5a3876932af15e073b31ee103135c",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/practical-sequence-375.png",
+      "sha256": "7db2b48600d997a7598b9aa1560ffd830483b205a589d7f641df8d3eef8964bf",
+      "byteLength": 24636,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:16.228Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 0,
+      "pageErrors": []
+    },
+    {
+      "targetId": "harry-j-epstein",
+      "selector": "main article:has(h3 a[href=\"/work/harry-j-epstein\"])",
+      "viewport": {
+        "width": 375,
+        "height": 1200
+      },
+      "text": "Harry J. Epstein Company\n\nRelationships: customer language, product judgment, public voice, and internal operating habits.\n\nModel: product, content, marketing, ordering, and follow-up treated as one customer and team system rather than separate tasks.\n\nInterface and use: a maintained storefront joining product discovery, content, marketing, ordering, and customer follow-up, released and refined through real customer and team use.\n\nLearning and continuity: recurring operational questions and carefully scoped analytics guided incremental releases, reusable content patterns, and clearer workflows for the team.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 343,
+        "height": 589
+      },
+      "textSha256": "56cc360c11ade8edbd280f4f5247af23185b3885a430ad869f1bebfc12c48a77",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/harry-j-epstein-375.png",
+      "sha256": "dc2a8080bb899c1714206154aa63e0d9947fb7fd1f8aea8b28b9419f843aecb6",
+      "byteLength": 58038,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:17.197Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 0,
+      "pageErrors": []
+    },
+    {
+      "targetId": "fair-rent-nyc",
+      "selector": "main article:has(h3 a[href=\"/work/fair-rent-nyc\"])",
+      "viewport": {
+        "width": 375,
+        "height": 1200
+      },
+      "text": "NYC Artist Coalition and FairRentNYC\n\nRelationships: lived experience in cultural spaces, recurring meetings, public sources, open questions, and city and state actors.\n\nModel: testimony, policy lineage, unresolved questions, decisions, and accountable actors held in one recoverable civic record.\n\nInterface and use: campaign sites, town halls, hearings, practical sessions, and public action pathways built and used with many collaborators.\n\nLearning and continuity: running minutes, source maps, question logs, and action trackers let collaborators recover context, review decisions, and carry the work forward.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 343,
+        "height": 589
+      },
+      "textSha256": "e526630b8e76f89ca8cc11015f0fd78e381879c19d6ba6e1bf77e9c89e2a2813",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/fair-rent-nyc-375.png",
+      "sha256": "0d1f757709b9854cf992ea4328f3f29431f0c748fb6708c847e72ed7b2c54a96",
+      "byteLength": 57490,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:17.664Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 0,
+      "pageErrors": []
+    },
+    {
+      "targetId": "sunday-dinner",
+      "selector": "main article:has(h3 a[href=\"/work/196-sunday-dinner\"])",
+      "viewport": {
+        "width": 375,
+        "height": 1200
+      },
+      "text": "Sunday Dinner and 196\n\nRelationships: hospitality, trust, artist support, shared space, recurring participants, and the rhythms of returning.\n\nModel: invitations, hosting, onboarding, access handoffs, documentation, and follow-up treated as one participation system.\n\nInterface and use: recurring gatherings and artist-residency workflows used with participants and resident artists over time.\n\nLearning and continuity: repeatable invitation, response, attendance, follow-up, and residency handoff patterns helped the practice continue while private participant records remained private.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 343,
+        "height": 532
+      },
+      "textSha256": "4ae2bf2fb00bab13b05dafc3bea4e6720f2595fdcdb6f08e11997166a9ef84d9",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/sunday-dinner-375.png",
+      "sha256": "070fac7c092da8ac6044d1ac084645b1a7b37e8d905477c64637608a380d46c4",
+      "byteLength": 55387,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:18.114Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 0,
+      "pageErrors": []
+    },
+    {
+      "targetId": "practical-sequence",
+      "selector": "main p:has-text(\"The practical sequence is recursive:\")",
+      "viewport": {
+        "width": 1280,
+        "height": 1200
+      },
+      "text": "The practical sequence is recursive: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Requirements, interfaces, and handoffs matter because people have to inhabit them.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 896,
+        "height": 96
+      },
+      "textSha256": "a89330274d9f2aa367ef19c03f3cc7311ac5a3876932af15e073b31ee103135c",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/practical-sequence-1280.png",
+      "sha256": "ca5700214eaed41ea35dcbeb1d4461d98b86969aa452a1663f1ea98b87cfb902",
+      "byteLength": 21889,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:19.262Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 2,
+      "pageErrors": []
+    },
+    {
+      "targetId": "harry-j-epstein",
+      "selector": "main article:has(h3 a[href=\"/work/harry-j-epstein\"])",
+      "viewport": {
+        "width": 1280,
+        "height": 1200
+      },
+      "text": "Harry J. Epstein Company\n\nRelationships: customer language, product judgment, public voice, and internal operating habits.\n\nModel: product, content, marketing, ordering, and follow-up treated as one customer and team system rather than separate tasks.\n\nInterface and use: a maintained storefront joining product discovery, content, marketing, ordering, and customer follow-up, released and refined through real customer and team use.\n\nLearning and continuity: recurring operational questions and carefully scoped analytics guided incremental releases, reusable content patterns, and clearer workflows for the team.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 896,
+        "height": 309
+      },
+      "textSha256": "56cc360c11ade8edbd280f4f5247af23185b3885a430ad869f1bebfc12c48a77",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/harry-j-epstein-1280.png",
+      "sha256": "3cd1d7cd0351824a05830b0042caea71c3adb9ee176282c605d6d360fd237e85",
+      "byteLength": 58394,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:19.717Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 2,
+      "pageErrors": []
+    },
+    {
+      "targetId": "fair-rent-nyc",
+      "selector": "main article:has(h3 a[href=\"/work/fair-rent-nyc\"])",
+      "viewport": {
+        "width": 1280,
+        "height": 1200
+      },
+      "text": "NYC Artist Coalition and FairRentNYC\n\nRelationships: lived experience in cultural spaces, recurring meetings, public sources, open questions, and city and state actors.\n\nModel: testimony, policy lineage, unresolved questions, decisions, and accountable actors held in one recoverable civic record.\n\nInterface and use: campaign sites, town halls, hearings, practical sessions, and public action pathways built and used with many collaborators.\n\nLearning and continuity: running minutes, source maps, question logs, and action trackers let collaborators recover context, review decisions, and carry the work forward.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 896,
+        "height": 337
+      },
+      "textSha256": "e526630b8e76f89ca8cc11015f0fd78e381879c19d6ba6e1bf77e9c89e2a2813",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/fair-rent-nyc-1280.png",
+      "sha256": "486e1c2a54b2a7f3ddfd7a4e2259f38599495642e907da67a71216dd74c02b16",
+      "byteLength": 60053,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:20.185Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 2,
+      "pageErrors": []
+    },
+    {
+      "targetId": "sunday-dinner",
+      "selector": "main article:has(h3 a[href=\"/work/196-sunday-dinner\"])",
+      "viewport": {
+        "width": 1280,
+        "height": 1200
+      },
+      "text": "Sunday Dinner and 196\n\nRelationships: hospitality, trust, artist support, shared space, recurring participants, and the rhythms of returning.\n\nModel: invitations, hosting, onboarding, access handoffs, documentation, and follow-up treated as one participation system.\n\nInterface and use: recurring gatherings and artist-residency workflows used with participants and resident artists over time.\n\nLearning and continuity: repeatable invitation, response, attendance, follow-up, and residency handoff patterns helped the practice continue while private participant records remained private.",
+      "visible": true,
+      "completeTextInsideBounds": true,
+      "clippingAncestorCount": 0,
+      "horizontalOverflow": false,
+      "headerOverlap": false,
+      "image": {
+        "width": 896,
+        "height": 308
+      },
+      "textSha256": "4ae2bf2fb00bab13b05dafc3bea4e6720f2595fdcdb6f08e11997166a9ef84d9",
+      "screenshot": "professor-method-2026-10-18T19-50-14-118Z/sunday-dinner-1280.png",
+      "sha256": "2b5d22dddac52ace284d2f3e288970e6a5ea9c6e8749b9488ffcc1266f34664c",
+      "byteLength": 54797,
+      "httpStatus": 200,
+      "documentMatchesBuild": true,
+      "capturedAt": "2026-10-18T19:50:20.650Z",
+      "failedRequests": [],
+      "canceledPrefetchCount": 2,
+      "pageErrors": []
+    }
+  ]
+}
