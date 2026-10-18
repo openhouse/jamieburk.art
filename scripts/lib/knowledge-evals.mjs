@@ -62,10 +62,10 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
   caseStudyMdxSha256: "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
-  // Re-reviewed 2026-08-21 after the public hiring projection was shortened
-  // while the canonical lifecycle, no-receipt/no-expenditure boundary,
-  // collective-credit limits, and field-practice evidence remained intact.
-  sharedPublicSurfacesSha256: "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
+  // Re-reviewed 2026-10-13: editorial backlog moved off reader surfaces;
+  // KC Town Hall wording, evidence, holds, and credit/service-unit limits hold.
+  // Receipt: docs/evals/runs/2026-10-13-kcth-shared-surface-review.json
+  sharedPublicSurfacesSha256: "ae84b2039030ecab5f050fedb634a5520242a7952e4d471402e7d20967d89f62",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-08-21 after governed public-safe records gained new linked
@@ -84,6 +84,10 @@ const URBANHERM_SOCIAL_REVIEW_LOCKS = Object.freeze({
   governedModuleSha256: "8e97d84adf69cec38fad3a37108ccbcfa0b4e0b8d0630b8f63bff1e32b7f7a94",
   publicReportSha256: "c1dcc58a79ff1c51a3c2e9bcd2803f711d4234a61e22bff5f9e8d54babea16f6"
 });
+// Re-reviewed 2026-10-18: bounded DCLA collaboration and creator-assessment
+// projections add two occurrences and one source-order entry; historical
+// Facebook corpus projections and participation limits are unchanged.
+// Receipt: docs/evals/2026-10-18-dcla-adoption-outcome.md
 const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "64af7b2f1804b3b319de2f5eef60bfb01371ce5209c8497473f800a334c66555",
   manifestContentSha256: "d0b72b654e76e9149439d1f218c05e248134abbca4a8c3088696e2536fdd52f2",
@@ -91,9 +95,9 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   canonicalKnowledgeSha256: "29ff741260694cc37b8e5534632fd852551085ceeb706692e1b988a5963be586",
   reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
   articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
-  governanceBindingsSha256: "ab1e3d00c61159adc19e54a5241dea2b932c23f341f4ad8a70950d3ffcfb7114",
+  governanceBindingsSha256: "77de137a177a9be6ec3abe0263cad84e9d3edab93ff0a8bf2c58a2b57d1cfea9",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727",
+  caseStudyMdxSha256: "3ba60ae3cc08f14bfb9979b8dc312b7004c76874daa3bc5b78f95f84698b289c",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
@@ -127,7 +131,7 @@ const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
   publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727"
+  caseStudyMdxSha256: "3ba60ae3cc08f14bfb9979b8dc312b7004c76874daa3bc5b78f95f84698b289c"
 });
 const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",

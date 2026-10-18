@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `97885e6455f68e3cecd30808faa1379d3d960c3b`
+**Generation time:** 2026-10-18T19:05:43-04:00
+**Source fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
 
-Compared with the graph artifact on `origin/develop`.
+Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28f57e9022c11a81`.
 
-- Nodes added: 59
+- Nodes added: 91
 - Nodes removed: 0
-- Edges added: 241
+- Edges added: 366
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -28,18 +28,38 @@ Compared with the graph artifact on `origin/develop`.
 - `method.betanyc-opportunity-loop`
 - `method.civic-match-opportunity-loop`
 - `method.private-application-status-loop`
+- `opportunity.circle-o.operations-manager.2026`
+- `opportunity.nyc-oti.cec-programs-project-manager.797003`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
 - `opportunity.nyc-oti.speed-senior-product-manager.789610`
 - `opportunity.nyc-peu.chief-strategy-officer.787960`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
+- `organization.circle-o`
+- `organization.nyc-cec.digital-equity-team`
+- `organization.nyc-civic-engagement-commission`
+- `organization.nyc-office-of-mass-engagement`
 - `organization.nyc-public-engagement-unit`
+- `person.abby-walczak`
+- `person.alexis-spencer`
 - `person.courtney-kishbaugh`
+- `person.emma-dillon`
+- `person.haydon-john`
+- `person.hillary-carelli-donnell`
 - `person.josh-gee`
 - `person.kathrin-aste`
+- `person.kayla-hamilton`
+- `person.oscar-romero`
+- `person.sarah-sayeed`
 - `person.thomas-edlinger`
+- `person.wendy-trull`
 - `portfolio.work.kc-spaces-fund`
+- `project.nyc-cec.community-board-assistance`
+- `project.nyc-cec.cultural-partnerships`
+- `project.nyc-cec.peoples-money`
+- `project.nyc-cec.trie-neighborhood-initiative`
+- `project.nyc-cec.voter-language-assistance`
 - `projection.photo.colophon.east-river`
 - `projection.photo.home.screen-room-shoestring`
 - `projection.photo.knowledge-wiki.collective-map`
@@ -51,12 +71,17 @@ Compared with the graph artifact on `origin/develop`.
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `research.nycac.dcla-listening-session.2026-08-29`
+- `research.recent-delivery.2026-10-18`
 - `source.application.nyc-oti.confirmations.2026-08-31`
 - `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`
 - `source.application.nyc-oti.status-dashboard.2026-08-31`
 - `source.betanyc.civic-tech-newsletter`
+- `source.circle-o.about-and-team.2026`
+- `source.circle-o.open-positions.2026`
+- `source.circle-o.operations-manager-application.2026`
 - `source.civic-match.candidate-network`
+- `source.jobs.oti.cec-programs-project-manager.797003`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`
 - `source.jobs.oti.product-manager.784450`
@@ -66,9 +91,16 @@ Compared with the graph artifact on `origin/develop`.
 - `source.jobs.uibk.studio3.postdoc.arch-15927`
 - `source.nyc-jobs.oti-product-search.2026-08-20`
 - `source.nyc-open-data.jobs.pda4-rgn4`
+- `source.nyc.cec.about-governance.2026-10-18`
+- `source.nyc.cec.cultural-partnerships.2026`
+- `source.nyc.cec.digital-equity.2026-10-18`
+- `source.nyc.cec.peoples-money-cycle5.2026-10-15`
+- `source.nyc.cec.programs.2026-10-18`
+- `source.nyc.cec.staff.2026-10-18`
 - `source.nyc.peu.about`
 - `source.nyc.peu.chief-strategy-officer-interest-form.787960`
 - `source.nyc.speed-report.2026-05-13`
+- `source.nycac.dcla-animation-instagram.2026-10`
 - `source.nys-dos.thick-arts-llc.formation.2012-07-06`
 - `source.project-websites.live-audit.2026-08-14`
 - `source.uibk.postdoc-profile.2026`

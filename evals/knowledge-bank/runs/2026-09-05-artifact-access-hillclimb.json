@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "feature": "artifact-specific-existing-source-reading",
+  "run_date": "2026-09-05",
+  "evaluator_kind": "deterministic-behavioral-tests",
+  "corpus": "synthetic-only",
+  "hill_climb": [
+    {
+      "failure": "No artifact-bound existing-reading gate",
+      "change": "Observed digest, exact grant and evidenced restriction targets",
+      "red": "missing implementation",
+      "green_cases": 7
+    },
+    {
+      "failure": "Malformed inventories crashed and missing-file errors exposed locators",
+      "expanded_cases": 10,
+      "baseline_passed": 8,
+      "baseline_failed": 2,
+      "change": "Reason-coded fail-closed inventory and sanitized input error",
+      "final_passed": 10,
+      "final_failed": 0
+    }
+  ],
+  "verification": [
+    {
+      "command": "npm run test:audio-runtime",
+      "exit_code": 0,
+      "tests": 46,
+      "passed": 46
+    },
+    {
+      "command": "node scripts/check-rfcs.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run public-safety",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 1,
+      "reason": "Existing professor-lens final-scorecard gate; 0/6 matching final scorecards. No downstream full-suite completion claimed."
+    }
+  ],
+  "fingerprint_method": "SHA-256 of JSON.stringify(inputs); inputs sorted by repository-relative path and bound by exact byte hashes. This receipt is excluded and is not a commit hash.",
+  "inputs": [
+    {
+      "path": "docs/knowledge-bank/artifact-specific-reading.md",
+      "sha256": "92bd3158c643cb5266e4eb5114b36a58660781eecfb3acd1147a91ac3ca66296"
+    },
+    {
+      "path": "evals/knowledge-bank/artifact-access-evals.json",
+      "sha256": "3e068c892f8f8f311453fc69a139e104ff9d391193c435abd2027b5136ae9ed3"
+    },
+    {
+      "path": "rfcs/0013-governed-audio-to-knowledge-workflow.md",
+      "sha256": "a8f03dc47c885c164bc35cc663edc5880bf49d0b88b62be85558a264f000add1"
+    },
+    {
+      "path": "scripts/audio-workflow/artifact-access.mjs",
+      "sha256": "9a7b02c83bf2e9e0d2eae36555691750ec2788e03978c29abced3e28696318f8"
+    },
+    {
+      "path": "scripts/audio-workflow/artifact-access.test.mjs",
+      "sha256": "078a6ac1aff0ab46a2f9962a4358051be089804d703a6dc4992ce76761834003"
+    },
+    {
+      "path": "scripts/audio-workflow/cli.mjs",
+      "sha256": "5091ae4b96119b792a09eae9b55290193a0bbf51ec8aae1427f1a2bd23833725"
+    }
+  ],
+  "candidate_fingerprint": "cab04aa5b897ab103611ac3026f432727734041ec657e4417c3d0e32c88738f1",
+  "human_review_completed": false,
+  "publication_of_private_sources_authorized": false,
+  "external_transfer_authorized": false,
+  "release_authorized": false
+}

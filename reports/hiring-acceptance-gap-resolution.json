@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "candidateSha": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "portfolioSnapshotHash": "31fd94f42c5620e143d2c86c730f7145edd2bee2b1d8f1bd2b6452fba2c5e66a",
-  "publicReportHash": "fd57053f0c71fc1b3e0ae3ec92fac8b390f287572ad1d6356b0ee96c68d379a2",
-  "wikiSourceFingerprint": "27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4",
+  "candidateSha": "3d3be8d41598d44008adab8d5627e96b2b6080bb",
+  "portfolioSnapshotHash": "00091ca01d7b3e7013d6fd266383b941508da9f871e3d49904134438278ef896",
+  "publicReportHash": "9b31d2cc1a820c13c886a0fdc99f0b7eab32f34ac829bbcf681c322116b442ed",
+  "wikiSourceFingerprint": "8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",
@@ -42,6 +42,21 @@
       "currentStatus": "visible-qualified",
       "gapType": "wording",
       "smallestResponsibleChange": "Demonstrate one measured automation loop tied to delivery or QA.",
+      "requiresOriginalSourceReview": false,
+      "requiresHumanApproval": true
+    },
+    {
+      "findingId": "finding.requirement.aclu.business-analysis",
+      "opportunityId": "opportunity.aclu.senior-project-manager.8620968002",
+      "requirementId": "requirement.aclu.business-analysis",
+      "classification": "role-context-or-evidence-unknown",
+      "wikiRecords": [
+        "capability.technical-operations",
+        "project.callnyc"
+      ],
+      "currentStatus": "visible-qualified",
+      "gapType": "wording",
+      "smallestResponsibleChange": "Show one before-and-after workflow and the stakeholder evidence behind it.",
       "requiresOriginalSourceReview": false,
       "requiresHumanApproval": true
     },

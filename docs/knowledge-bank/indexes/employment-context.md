@@ -5,11 +5,18 @@ kind: index
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-09-01
-review_by: 2026-09-14
+last_reviewed: 2026-09-27
+review_by: 2026-10-05
 canonical_path: docs/knowledge-bank/indexes/employment-context.md
 summary: Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.
 relations:
+  - type: related_to
+    target: opportunity.nyc-oti.cec-programs-project-manager.797003
+    href: ../opportunities/oti-cec-programs-project-manager-797003.md
+  - type: related_to
+    target: opportunity.circle-o.operations-manager.2026
+    href: ../opportunities/circle-o-operations-manager-2026.md
+    context: Officially open part-time arts-operations contract opportunity verified September 27, with private application preparation and human-only submission gates.
   - type: related_to
     target: opportunity.codepath.engineering-project-manager.5160542007
     href: ../opportunities/codepath-engineering-project-manager.md
@@ -110,6 +117,8 @@ remain private, and later outcomes require separate approval.
 
 ## Current priority contexts
 
+- [CEC Programs Project Manager — 797003](../opportunities/oti-cec-programs-project-manager-797003.md) — official posting and blank form checked October 18; deadline November 3; qualification review remains open.
+- [Circle O - Operations Manager](../opportunities/circle-o-operations-manager-2026.md)
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md)
 - [ACLU - Senior Project Manager, Learning and Project Solutions](../opportunities/aclu-senior-project-manager.md)
 - [Benepass - Product Operations Manager](../opportunities/benepass-product-operations.md)
@@ -120,6 +129,10 @@ remain private, and later outcomes require separate approval.
 - [NYC OTI - PIT Crew Senior Product Designer](../opportunities/oti-pit-senior-product-designer-782373.md)
 - [NYC Public Engagement Unit - Chief Strategy Officer](../opportunities/peu-chief-strategy-officer-787960.md)
 - [NYC Public Engagement Unit - organization context](../organizations/nyc-public-engagement-unit.md)
+
+The Circle O role was checked against its official opening and live form on
+September 27, 2026, with a September 30 deadline. The public record remains
+`not-applied`; private drafting and human review do not establish submission.
 
 The first three official application surfaces were rechecked as open on August
 20, 2026. The five OTI roles are the `ceil(11 × 0.38)` leading group from the
@@ -138,11 +151,11 @@ signals, but exact direct-supervision and formal qualification evidence remain
 human-review gates before application drafting.
 
 [BetaNYC's weekly civic-technology newsletter](../sources/betanyc-civic-tech-newsletter-2026-08-20.md)
-is now a recurring opportunity source alongside NYC Jobs Open Data and Civic
-Match. Its August 20 issue review admitted the Campaign Finance Board Associate
-Director of Policy Implementation role and Polimorphic's first Product Manager
-role to provisional intake; official-posting, qualification, named-reader, and
-Jamie application review remain required.
+is a recurring opportunity source alongside NYC Jobs Open Data and Civic Match.
+The September 24 issue yielded seven leads: two reconciled to the City dataset,
+five still require official-posting verification, two were not promoted, and
+none entered provisional strong-match intake. Newsletter inclusion remains a
+discovery signal, not employer verification or application authority.
 
 The downloadable public résumé follows a separately governed deterministic
 lifecycle queue. The last frozen selector targeted Job 782366. These two new

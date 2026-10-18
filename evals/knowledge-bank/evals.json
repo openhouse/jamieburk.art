@@ -292,7 +292,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "388046b6a79c394825771a72178bf13b3c15aafdfd497b03dfa5a809e500342c",
+      "approvedContentSha256": "ef5cdd2e9b9d1de010d5510eb5ebdbb253ccfbdbd345d3dc1eb12075fff95381",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -1074,10 +1074,14 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 39,
+      "expectedRelationCount": 38,
+      "approvedGraphSha256": "4a7ebb6442c87f82ac35248d730364eaf2799350d21c232d4012ac7c896723f2",
       "relationIds": [
+        "REL-RECENT-WONDERVILLE-HANDOFF",
+        "REL-RECENT-DCLA-ANIMATION",
+        "REL-RECENT-RED-HOOK-HANDOFF",
+        "REL-DCLA-REEL-LISTED-COLLABORATORS",
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
         "REL-OPEN-HOUSE-INITIATED",

@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "method": "oti-evidence-first-v1",
+  "packets": [
+    {
+      "id": "nyc-oti-cec-797003",
+      "title": "NYC OTI / Civic Engagement Commission — Programs Project Manager 797003",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+          "sha256": "25e103c944e22a693188ac8d3b9af606451d68682ad4b2f9d196c3cfb9c13069"
+        }
+      ],
+      "source_hash": "08d2aedc1c830695249281f594544f2cd81db4208a43a2048aee59484f884f56",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.aclu.product-manager-discovery.8482872002",
+      "title": "ACLU - Product Manager II, Discovery",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
+          "sha256": "9b3653308a389058c82521445ab7e842d9a949e01afa10487b0517069a00b33c"
+        }
+      ],
+      "source_hash": "d3799cae46207a90e4b8fc31b56dd4a06ded9fd9825c37093519964a6e2995fc",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.aclu.senior-project-manager.8620968002",
+      "title": "ACLU - Senior Project Manager, Learning and Project Solutions",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+          "sha256": "12d585ba2b602bc073a1a2cf2912c5fe3f42b20b77b1dcc3c7fd9461f15be9f3"
+        }
+      ],
+      "source_hash": "bab1fd5ddeb60aabba18a9b9b59751b610ba2b209e6bf00968cfc95b4a72ba7a",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.asana.ai-implementation.8027437",
+      "title": "Asana - AI Implementation Manager, Service Management",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
+          "sha256": "2dd21d57f9b3ab05f79480feddbc437db02aba9a5d8f3c761b9842f1721d9359"
+        }
+      ],
+      "source_hash": "27fd9eec94ea7617449edbc59476dcd307ec1b5ee33543e9fcd52ff6aae5a34d",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.benepass.product-operations.7f963a7a",
+      "title": "Benepass - Product Operations Manager",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+          "sha256": "179c64de712a2c97e1bdeb5b84baa79651267731303bc3e930113e88056137f1"
+        }
+      ],
+      "source_hash": "0034deff11dff5926a03cad37a5def293986f32ed58c8d818a6ffe2fe803336e",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.circle-o.operations-manager.2026",
+      "title": "Circle O - Operations Manager",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+          "sha256": "4213cd41805beae949e950b7f28173f4ebef7315fc33c33ad0dab8bbae6d7351"
+        }
+      ],
+      "source_hash": "02e99f5f5db8023c0e1536c1464c74996b22776923c9ee9f27e27d5090c733d1",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": "retain-history",
+      "next_action": "retain-history",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.codepath.claude-corps.5182020007",
+      "title": "CodePath - Senior Program Manager, Claude Corps",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
+          "sha256": "c2054d4b8b502717597fa1336ac4eb7eb2ce47b1ebfec0a9f3052f0c09cc901c"
+        }
+      ],
+      "source_hash": "19f2c4bd92fb5540083bf294fe1bb5c29c3748c8ebd59cb7961fc89775bb4342",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.codepath.engineering-project-manager.5160542007",
+      "title": "CodePath - Engineering Project Manager",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+          "sha256": "f7cfee8f0d6e249ed6cc457b8c976bab254300111184b5b8625a08fa88259417"
+        }
+      ],
+      "source_hash": "ba6e0da96e03a27a91c8ddfff650b8175352ad10dab7227bc8fef4c34d698757",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
+      "title": "NYC OTI - PIT Crew Senior Product Designer 782373",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
+          "sha256": "13c0cd7462261d1d16de4b63a85c5de3e09f2fcdcfa80e09f4881a3339933125"
+        }
+      ],
+      "source_hash": "a6b9b2d280e7c4210217e1241ecbf560594de35d2e911b595b0f0d8d967f9f69",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.product-manager.784450",
+      "title": "NYC OTI - Product Manager 784450",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
+          "sha256": "762ac36f1597be190c4a7fd9c7966f4c02f456c44cad999c2dce448af0cc2ec4"
+        }
+      ],
+      "source_hash": "b13b0a48dc2959e8416b3fd9f1dda9f430753b69869103c4cb32eb747e5b1679",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": "maintain-existing-candidacy",
+      "next_action": "maintain-existing-candidacy",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.senior-product-manager.782366",
+      "title": "NYC OTI - PIT Crew Senior Product Manager 782366",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+          "sha256": "92bda5eb89d5441ed38df118d750d5ee45879def1dcd183e6c75574b655df8bd"
+        }
+      ],
+      "source_hash": "db3ffa26dccb5f302e156952059d4674378ed98ef57892eefbd6556c2cf65b63",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": "maintain-existing-candidacy",
+      "next_action": "maintain-existing-candidacy",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-operations-manager.789810",
+      "title": "NYC OTI - SPEED Operations Manager 789810",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
+          "sha256": "bab05cec04d3a44ad7faf44d741af2a7a4b555d91bf19e0e0b14e9b1b7cea04c"
+        }
+      ],
+      "source_hash": "49bcbbbdc9da2e5f67da7bb9bd277e9e4306cd845295fae85d62f1bbe0a252a1",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": "maintain-existing-candidacy",
+      "next_action": "maintain-existing-candidacy",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.speed-senior-product-manager.789610",
+      "title": "NYC OTI - SPEED Senior Product Manager 789610",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
+          "sha256": "adc460a54e56e4bef60ec3fcbb100a9904fb0913487118ff9f2f5683905dc988"
+        }
+      ],
+      "source_hash": "acf0764c0682b42fdb27790c6981a01e87c1bbb69f4545d417a55a7fb775d056",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-oti.technical-operations-manager.782369",
+      "title": "NYC OTI - Technical Operations Manager 782369",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
+          "sha256": "42a9a529fee43b15c56142971d5447a93c02c9744b3844654bf7ef59ba83e19d"
+        }
+      ],
+      "source_hash": "a919d4937f678be812be9afdac338f17eae37147cc2f645e16452e195422788f",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.nyc-peu.chief-strategy-officer.787960",
+      "title": "NYC PEU - Chief Strategy Officer 787960",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
+          "sha256": "371951adbf1ef3258cac089f9b6426938617d54db6fdd30d6446592fdd6fdb58"
+        }
+      ],
+      "source_hash": "40a94b285a744a62d625fe8ca3b4f1d821a28ccb47be7e2eedc1167e0b79113a",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.permitflow.product-operations.8a6e6066",
+      "title": "PermitFlow - Product Operations Manager",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
+          "sha256": "74a05de1ecbbf3afadc9e7a2acb3d5ed8eacc77beb76d6bcec9ec8fbd7b5d997"
+        }
+      ],
+      "source_hash": "b181c3f3d7bb148cc21ba8a26bd00a31760edb43744101b353e678866befff8e",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.protected.source-backed-memory-consulting.2026",
+      "title": "Protected source-backed team-memory consulting lead",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
+          "sha256": "74a2472b34c3a6752cd1d55416fd9e35735aa58c09b9183345f57bf97eb913f4"
+        }
+      ],
+      "source_hash": "e0386e4093b2c38d4ae0bb6c78ae0a6f73c87dbb0e37913c5e0cf1f545466f9b",
+      "required_stages": [
+        "classify-opportunity"
+      ],
+      "suspended": "classify-opportunity",
+      "next_action": "classify-opportunity",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "opportunity.uibk.studio3.postdoc.arch-15927",
+      "title": "University of Innsbruck ./studio3 - University Assistant (Postdoc), ARCH-15927",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
+          "sha256": "781a6cfa043755b12869fa4b923cdebc856248ae7490f7200fd022023b052b98"
+        }
+      ],
+      "source_hash": "82b5bdcb0ef12ddc41fcdf8c6b249163fc34061974382f6bd3a2e7e1f0f2d0af",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": "resolve-eligibility",
+      "next_action": "resolve-eligibility",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    }
+  ]
+}

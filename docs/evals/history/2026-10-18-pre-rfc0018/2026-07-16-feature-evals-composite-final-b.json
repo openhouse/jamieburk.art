@@ -1,0 +1,100 @@
+{
+  "runVersion": 3,
+  "judgeId": "cec-public-reader-b-2026-10-18",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
+  "candidateFingerprint": "f25e4b6e186299b8814837f1e95d896db741218c8b8349d3c790cae1d2ef358b",
+  "verdict": "rejected",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 14 frozen branch decisions match the declared heads; a fresh check resolves all 14 exact commit objects. The integration register specifies feature/knowledge-h, develop, and reference-only source branches. Missing mutable remote-tracking refs are reported without substituting frozen identities."
+      ]
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The 14 decisions contain substantive rationale, existing destinations, and criterion references. The register digest matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d and explicitly retains selective public composition."
+      ]
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 11 canonical files exist and none of the three prohibited parallel lifecycle roots exists. The public registry contains only claims, pages, and sources; the public entry point exports the redacted projection and schema. A source import search found no application, component, content, or library imports of the canonical records, historical knowledge, agency graph, or lifecycle operations."
+      ]
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All four lifecycle tests pass: identical replay is idempotent, a new ID for an existing artifact becomes a linked duplicate, changed content under an existing ID is rejected, and lifecycle queries expose held claims, inquiries, corrections, projection counts, and orphan status."
+      ]
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh canonical validation passes for 331 sources, 119 claims, 34 agency relations, and five corrections; derived Wiki and employment outputs are current. Citation checking confirms a current redacted registry and consistent page plans. Reviewed agency and case-study text distinguishes individual implementation, shared work, coalition outcomes, and institutional authority; population and recovery limitations remain explicit."
+      ]
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The homepage presents a defined role, selected projects, and application paths; it does not expose a knowledge-bank mirror. Technical Operations connects decisions to projects, artifacts, results, and limitations. About connects artistic, civic, technical, relational, and social practice. HJE, CallNYC, residency, and coalition examples make observation, modeling, implementation, use, learning, revision, and handoff reconstructable while labeling reconstructions and preserving collective credit."
+      ]
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All five required human-evidence controls remain open under the frozen blind-spot digest. Their evidence requirements, anti-gaming rules, next actions, and public-projection boundaries distinguish governed absence from actual collaborator corroboration, human usability evidence, job outcomes, and external validation."
+      ]
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The computed semantic rubric digest matches both the suite and separately pinned digest. The base suite, integration register, and blind-spot digests match. Bounded in-memory probes reject branch omission, fabricated heads, decorative decisions, refreshed-checksum semantic weakening, optimizer self-grading, synthesized human evidence, and blocker compensation. A synthetic private-source URL is rejected by canonical validation."
+      ]
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 0,
+      "pass": false,
+      "evidence": [
+        "The complete-source-tree fingerprint independently matches the commissioned candidate across 2197 files, excluding only the declared two holdout records. Receipt digest and distinct-label enforcement are implemented, and human production approval remains open. Two completed accepting judgments with every criterion at 4 and no unobserved evidence were not observed. The evaluator was supplied an empty holdout list to preserve review independence; its zero supplied judgments is not a claim that the repository contains no records."
+      ]
+    }
+  ],
+  "notObserved": [
+    "COMP-009: Two completed accepting independent judgments for this exact candidate and rubric, including their complete payload digests and all-4 scores.",
+    "COMP-009: A complete deterministic release run, including build and rendered or live-route verification, was not rerun in this bounded read-only review."
+  ],
+  "findings": [
+    "Blocking: COMP-009 cannot be marked passed from this review. Its stopping condition requires already completed accepting judgments, while this judgment must not infer the other review or inspect previous composite holdout records.",
+    "Nonblocking: All 14 mutable remote-tracking source refs are absent in the review checkout; all 14 frozen commit objects are available and match the required inventory.",
+    "The fresh checks support COMP-001 through COMP-008. They do not establish human approval, deployment, indexing, or real-world hiring effectiveness."
+  ],
+  "recommendation": "Preserve this judgment as a documented hold. Do not report complete composite acceptance until the frozen stopping requirement is demonstrably satisfied through an authorized process that preserves reviewer independence and does not convert unobserved evidence into a pass.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "cec-public-reader-b-2026-10-18",
+    "reviewedAt": "2026-10-18T12:05:50Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "d0146c97b90faf7b55f47fb535b29ad4b35878bf6fe1665440b85bb6c970a5e3"
+  }
+}

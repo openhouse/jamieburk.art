@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "photography-constellation-binding-review-2026-10-18",
+  "reviewedAt": "2026-10-18T18:52:54Z",
+  "reviewerId": "release-reader-a",
+  "reviewKind": "fresh bounded semantic review of an additive public-safe method section",
+  "decision": "The timestamp-led retrieval addition preserves privacy, uncertainty, source custody and human approval. Refresh only the reviewed constellation content binding.",
+  "authority": "Bounded technical binding refresh authorized after this source review. No source edit, other lock, criterion, publication permission or governance decision is authorized by this receipt.",
+  "source": {
+    "path": "docs/knowledge-bank/notebooks/photography/event-transcript-photo-constellations.md",
+    "changeCommit": "78663f089350d64d163f6ff3b592fe74d5a07505",
+    "comparisonEdition": "78663f089^",
+    "changedSection": "Timestamp-led retrieval, lines 105-123",
+    "oldSha256": "a725bd55300c7b591ef36bcf9424469bde217ca019c4a11996969e09a04e46ff",
+    "currentSha256": "5f98f035309a27e415556681598c902cef74e572555a64bf8e2e526ad935eea9",
+    "comparison": "Removing only this new section in memory exactly reconstructed the prior expected source hash. No existing text, projection state or relationship changed.",
+    "metadataLimit": "The source's existing July 28 review date and August 28 review-by date are not advanced here. This dated receipt covers the added section and its compatibility with the preserved boundaries; it is not a fresh verification of every historical source claim."
+  },
+  "binding": {
+    "path": "evals/knowledge-wiki/photography-notebook.json",
+    "field": "contentBindings.constellation",
+    "oldSha256": "a725bd55300c7b591ef36bcf9424469bde217ca019c4a11996969e09a04e46ff",
+    "newSha256": "5f98f035309a27e415556681598c902cef74e572555a64bf8e2e526ad935eea9",
+    "otherBindings": "Notebook, field, proposal and oral-history hashes matched before the refresh and remain unchanged.",
+    "baseline": "The only failing notebook criterion was photography_notebook_content_bound. The other 31 criteria passed. The targeted notebook test command reproduced 32 passing tests and one failing baseline test."
+  },
+  "sourceReview": [
+    {
+      "subject": "Timestamp provenance and uncertainty",
+      "evidence": "The section requires capture time rather than import, file-creation or message-send time, explicit offsets for both capture and window, a hold for unknown offsets, declared clock uncertainty and instant comparison across midnight or daylight-saving changes.",
+      "limit": "A supplied offset does not verify a camera clock or time-zone setting. Overlap is only a retrieval candidate, with uncertain overlap explicitly labeled."
+    },
+    {
+      "subject": "Runtime consistency",
+      "evidence": "The pure evaluateTemporalPhotoCandidate implementation returns candidate, uncertain-candidate, outside-window or hold. Invalid calendars, missing offsets, wrong timestamp basis, invalid windows and invalid uncertainty fail closed. Source input is not mutated.",
+      "implementationPath": "scripts/photo-knowledge/temporal-retrieval.mjs",
+      "implementationSha256": "0bea007e0e14f04489cc0518749fdb7c7d8f79ea7bec3d1b98d6d9b19a035eb5",
+      "limit": "The helper does not open or change Apple Photos and does not independently establish metadata provenance."
+    },
+    {
+      "subject": "Privacy and human authority",
+      "evidence": "The method retains hold with no public surfaces. The new section denies identity, event-membership, caption and publication authority, while the existing text preserves human review, consent, rights, credit, destination, source non-mutation and selective projection.",
+      "limit": "A timestamp match is not an identified event or person. An outside-window result is not proof that relevant photographs do not exist. No private library, image, transcript or source locator was accessed for this review."
+    },
+    {
+      "subject": "Regression coverage",
+      "evidence": "Fresh temporal and constellation tests passed 30 of 30 before any refresh, including midnight, equivalent instants, clock uncertainty, explicit DST offsets, incorrect date sources, source immutability and denial of identity/caption/publication promotion.",
+      "testPath": "scripts/tests/photo-temporal-retrieval.test.mjs",
+      "testSha256": "1f4af4669e4781e8d8b6f7635b050dc76a8a3811ebfe47e8ca96ed7171bfe2e8",
+      "limit": "Synthetic tests establish runtime behavior, not real-library completeness, clock accuracy, consent or publication readiness."
+    }
+  ],
+  "diagnosticHypothesis": {
+    "method": "Changed only the constellation digest in an in-memory manifest, without writing files.",
+    "result": "All 32 notebook criteria passed with no failures.",
+    "interpretation": "This isolated the stale binding; it was diagnostic evidence, not an accepted on-disk repair or permission to bypass review."
+  },
+  "invariants": [
+    "Only contentBindings.constellation is changed in the existing manifest.",
+    "All 32 notebook criteria, ten human gates and other source bindings remain unchanged.",
+    "The source note, runtime, tests, other locks and historical receipts are unchanged.",
+    "No private paths, source identifiers, image payloads or private workspace topology appear in this receipt.",
+    "This repair is independent of any pending composite-governance decision and does not resolve or authorize that decision."
+  ],
+  "verification": {
+    "status": "local checks passed",
+    "completedAt": "2026-10-18T18:53:40Z",
+    "runtime": "Node.js 26.5.0",
+    "manifestSha256": "227e233c890e9489647c0ac7e3bc0738ed0a41e858975ed2c39d493ac89f7af5",
+    "commands": [
+      {
+        "command": "npm run photos:check",
+        "exitCode": 0,
+        "checks": 17,
+        "criteria": 6
+      },
+      {
+        "command": "npm run photos:test",
+        "exitCode": 0,
+        "tests": 59,
+        "passed": 59,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "command": "node --test scripts/knowledge-wiki/photography-notebook-eval.test.mjs scripts/tests/transcript-photo-constellations.test.mjs",
+        "exitCode": 0,
+        "tests": 38,
+        "passed": 38,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "command": "evaluatePhotographyNotebook() against the on-disk manifest",
+        "exitCode": 0,
+        "passed": true,
+        "failures": [],
+        "blockingCriteria": 32,
+        "humanGates": 10
+      }
+    ],
+    "scopeVerification": "Reversing only the constellation hash substitution reproduces the manifest's HEAD bytes exactly. The source note remains byte-identical to HEAD. Criteria, human gates, source content, runtime and tests were not edited.",
+    "hygiene": "git diff --check passed for the two authorized files. The receipt JSON and all recorded hashes were validated, and its privacy scan found no local source paths or protected source identifiers.",
+    "releaseState": "No commit, publication, source-library access, deployment or composite-governance decision was performed."
+  }
+}

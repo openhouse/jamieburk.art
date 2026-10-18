@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-29
+last_reviewed: 2026-10-18
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -73,6 +73,14 @@ or newly listed branch reopens review rather than silently inheriting an earlier
 conclusion.
 Generated indexes, coverage tables, reports, and reader packets are materialized
 views; governed authored records remain canonical.
+
+The [October 18 public-branch reconciliation](../../branch-reconciliation-2026-10-18.md)
+records selected implementation readings separately from the full branch-ref
+inventory. The graph comparison now names an immutable baseline and fails if
+that edition is unavailable; fetching a moving branch cannot silently rewrite
+the comparison. The opportunity intake regression also checks that a verified
+official deadline reaches both downstream projections. These are bounded
+implementation checks, not proof of complete source coverage or human approval.
 
 A Knowledge Wiki page can be editorially healthy in either of two states: it
 contains a source-bounded close reading, or it records a review-complete

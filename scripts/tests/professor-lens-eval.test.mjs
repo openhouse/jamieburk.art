@@ -6,6 +6,7 @@ import test from "node:test";
 
 import {
   evaluateProfessorLenses,
+  fingerprintProfessorCandidate,
   professorCandidateRelativePaths
 } from "../lib/professor-lens-eval.mjs";
 
@@ -208,4 +209,48 @@ test("guard binds visual-system and photo changes to a new candidate", () => {
   assert.equal(result.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, false);
   assert.equal(result.criteria.find((item) => item.id === "unanimous-holdouts")?.pass, false);
+});
+
+// Synthetic current-candidate scorecards test panel composition, not actual
+// editorial acceptance. They are never saved as review evidence.
+function panelFixture() {
+  const files = Object.fromEntries(professorCandidateRelativePaths.map((p) => [
+    p, readFileSync(path.join(repoRoot, p))
+  ]));
+  const candidateSha256 = fingerprintProfessorCandidate(files);
+  return ["PR-015", "PR-016"].flatMap((evalId) =>
+    ["reader-a", "reader-b", "reader-c"].map((reviewerId) => ({
+      phase: "holdout", evalId, reviewerId, score: 4, pass: true, candidateSha256
+    }))
+  );
+}
+
+function panelPass(finalScorecards) {
+  return evaluateProfessorLenses({ finalScorecards }).criteria
+    .find((item) => item.id === "unanimous-holdouts").pass;
+}
+
+test("panel accepts three distinct current readers for each lens", () => {
+  assert.equal(panelPass(panelFixture()), true);
+});
+
+test("panel rejects counting the same reader three times for one lens", () => {
+  const cards = panelFixture();
+  cards[1].reviewerId = cards[0].reviewerId;
+  assert.equal(panelPass(cards), false);
+});
+
+test("panel rejects six passing cards for only one lens", () => {
+  const cards = panelFixture().map((card, i) => ({
+    ...card, evalId: "PR-015", reviewerId: `reader-${i}`
+  }));
+  assert.equal(panelPass(cards), false);
+});
+
+test("panel rejects missing or blank reviewer identity", () => {
+  for (const reviewerId of [undefined, "", "   "]) {
+    const cards = panelFixture();
+    cards[0].reviewerId = reviewerId;
+    assert.equal(panelPass(cards), false);
+  }
 });

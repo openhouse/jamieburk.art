@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "reviewerId": "adoption-lens-c",
+  "phase": "holdout",
+  "candidateSha256": "fa19ef5b0ce322b459b9eb17a8e23dbd5536f5afa5004b111ce4ae14dd9e8a7c",
+  "candidateFileCount": 157,
+  "reviewedAt": "2026-10-18",
+  "score": 4,
+  "pass": true,
+  "status": "PASS",
+  "verdictScope": "Individual editorial assessment only; the three-reader median and minimum are not assessed.",
+  "fictionalLensDisclosure": "This is a fictional analytical lens, not participation, endorsement, approval, or a statement by the named person.",
+  "inspection": {
+    "routes": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory"
+    ],
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 375,
+        "height": 900
+      }
+    ],
+    "renderedTextRead": true,
+    "screenshotsViewedWithViewImage": true,
+    "allRoutesReturned200": true,
+    "horizontalOverflowObserved": false,
+    "path": {
+      "desktop": "Home About navigation link -> /about -> WOWList body link -> /work/wowlist; two page-link clicks.",
+      "mobile": "Home Menu disclosure -> About -> WOWList body link. About is reached in two UI interactions; the project link adds one. This is two page navigations."
+    },
+    "fingerprintMethod": "Imported only professorCandidateRelativePaths and fingerprintProfessorCandidate; passed a path-to-Buffer map. Did not read helper implementation or run aggregate.",
+    "hashBefore": "fa19ef5b0ce322b459b9eb17a8e23dbd5536f5afa5004b111ce4ae14dd9e8a7c",
+    "hashAfter": "fa19ef5b0ce322b459b9eb17a8e23dbd5536f5afa5004b111ce4ae14dd9e8a7c"
+  },
+  "hardConstraintAudit": {
+    "privateSourceProjection": "No raw transcript, private correspondence, stakeholder list, protected educational text, credentials, or private participant record was observed on the reviewed surfaces. The source note and checked canonical boundaries explicitly withhold those originals.",
+    "claimStrength": "Checked project wording against relevant canonical claims, including the dated WOWList production/adoption record, Sunday Dinner/196 workflow boundaries, coalition participation and campaign memory, Open House, and held coursework.",
+    "collectiveCredit": "WOWList credits Jamie and Richard Caceres plus organizers and participants. Sunday Dinner names Julia Fredenburg as co-organizer of the 2016 milestone. Coalition outcomes remain collective. Open House governance remains communal.",
+    "phone": "All nine HTML responses had zero tel links and zero conventional US phone-number matches.",
+    "protectedLocators": "All nine HTML responses had zero local filesystem path patterns.",
+    "labStatus": "The lab explicitly labels research, method, proposed engagement, synthetic example, and unproven client adoption. It does not present automated trust or finished SaaS.",
+    "release": "All nine local responses carried noindex, nofollow. No deployment or indexing changes were performed or authorized."
+  },
+  "protectedSourceExclusion": {
+    "sourceNote": "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+    "rawOpenHouseArticleRead": false,
+    "rawOpenHouseArticleObservedInReviewedSurfaces": false,
+    "protectedOriginalsOpened": false,
+    "facultyTestimonialsObserved": false,
+    "heldCourseworkRecord": "CLM-SOCIAL-INFO-SPACES-PROTOTYPE remains hold with no active surface. The canonical record explicitly excludes invention, peer-reviewed research, production deployment, sole group authorship, and present tool proficiency.",
+    "approvedMavenCertificate": "The source note distinguishes the approved Maven completion artifact from protected UCSC records; the lab labels professional development and disclaims instructor affiliation."
+  },
+  "limits": [
+    "Only the assigned current rendered routes, the allowed rubric fields, the public source note, and relevant source-bound canonical records were reviewed.",
+    "This is a bounded editorial review, not a fresh forensic authentication of original sources, participant consent, or every record in the repository.",
+    "Well-supported dated past and present work both count under the owner's clarification. Historical scale and use are not treated as current service availability.",
+    "No three-reader aggregate, deployment decision, real professor endorsement, or human approval is supplied.",
+    "No external source destinations were opened; their public citations and canonical source boundaries were inspected locally."
+  ],
+  "nonBlockingObservations": [
+    "The mobile Menu disclosure remains open after client navigation to About and overlays part of the page until closed. Directly rendered mobile About is readable, the lineage is still reachable within the two-interaction navigation path, and the body project link works. This is navigation friction, not a missing lineage or method.",
+    "Some first-pass full-page screenshots showed below-fold lazy imagery before it painted. Additional image-ready captures and project screenshots confirmed the relevant imagery; these capture artifacts were not graded as missing content."
+  ],
+  "gaps": [],
+  "independenceDisclosure": {
+    "freshIndependentReview": true,
+    "readHistory": false,
+    "readDiffs": false,
+    "readPriorScorecards": false,
+    "readOtherReviewerAssessments": false,
+    "readImplementationDiscussion": false,
+    "readHelperImplementation": false,
+    "ranAggregate": false,
+    "memoryUsed": false,
+    "communication": "Parent supplied the assignment, the candidate hash, and the fingerprint function parameter shape. No prior score or desired verdict was supplied. The reviewer reported a mobile-menu observation; parent requested that the observation be preserved and that capture labels use basenames. No scoring direction was supplied.",
+    "writes": "Only review scripts, browser screenshots, and these scorecards in a temporary review-artifact directory outside public Git; no repository writes."
+  },
+  "evalId": "PR-015",
+  "caseId": "PR-015",
+  "lens": "margaret-morse",
+  "lensName": "Prof. Margaret Morse lens: inhabited systems",
+  "rationale": "The portfolio preserves an explicit, source-bounded connection among artistic, civic, technical, and social practice while keeping Jamie's technical-project and implementation role prominent. Three distinct project continuities show people influencing, inhabiting, remembering, and continuing systems. The proof is unusually concrete in the residency/gathering handoffs, WOWList's organizer-language model and historical use, and the coalition's room-to-public-system practice.",
+  "individuallyAssessableRequirements": [
+    {
+      "requirement": "A visible threshold within two clicks connects artistic, civic, technical, and social practice while supporting the target role.",
+      "met": true,
+      "evidence": "/about opens with the technical project manager and implementation lead role, then Systems people can inhabit names all four dimensions and links to project evidence. Desktop one click; mobile Menu then About."
+    },
+    {
+      "requirement": "At least three public-safe project continuities demonstrate experimentation, participation, attention, documentation, care, place, or hospitality.",
+      "met": true,
+      "evidence": "The threeProjectTrace below reconstructs WOWList, Sunday Dinner/196, and NYCAC/FairRentNYC from the project pages and checked canonical boundaries."
+    },
+    {
+      "requirement": "Readers can explain how these systems differ from conventional administration.",
+      "met": true,
+      "evidence": "Community vocabulary defines the platform's model; artist needs shape space and access; collective questions shape campaign pathways and recoverable records. Participants can influence and carry on the work."
+    },
+    {
+      "requirement": "Collective credit, privacy, protected educational records, and testimonial boundaries are preserved.",
+      "met": true,
+      "evidence": "Public project credits, source-note boundaries, the active Open House claim, held coursework claim, and reviewed rendered text provide the bounded audit recorded above."
+    }
+  ],
+  "evidence": [
+    {
+      "surface": "/about",
+      "finding": "Systems people can inhabit links a ten-day, collectively governed gallery experiment to the recurring question of relationships, participation, memory, and continuation.",
+      "screenshot": "about-1280.png"
+    },
+    {
+      "surface": "/about",
+      "finding": "The same prose and project links remain readable in a single mobile column.",
+      "screenshot": "about-375.png"
+    },
+    {
+      "surface": "/work/196-sunday-dinner",
+      "finding": "Two explicitly redacted reconstructions show how hospitality and artist agency become usable workflows.",
+      "screenshot": "work-196-sunday-dinner-1280.png"
+    },
+    {
+      "surface": "/work/fair-rent-nyc",
+      "finding": "The website was one part of the room pairs public campaign surfaces, a working circle, and a collective public gathering.",
+      "screenshot": "work-fair-rent-nyc-loaded-1280.png"
+    },
+    {
+      "surface": "/work/wowlist",
+      "finding": "The current public threshold photograph and dated historical product narrative keep digital interface and gathering connected.",
+      "screenshot": "work-wowlist-1280.png"
+    },
+    {
+      "surface": "/about source notes",
+      "finding": "The Open House source is dated June 28, 2006, and expressly denies sole authorship, renewed participant publicity, complete attendance, and long-term outcomes."
+    }
+  ],
+  "threeProjectTrace": [
+    {
+      "project": "WOWList",
+      "route": "/work/wowlist",
+      "dates": "2010s historical platform; public provenance 2014, tutorial 2015, support 2016, production snapshot July 2017; returning threshold August 2026.",
+      "continuity": "A calendar emerging from Sunday Dinner keeps organizer language, local scenes, and shared interests central. Natural-language contributions and followable keyword communities make participation possible across calendars, websites, and email; public support and an independently published tutorial let organizers learn and continue using the system.",
+      "inhabitedSystem": "People supply the language and contributions that organize the interface, rather than merely receiving a centrally edited list.",
+      "evidence": "Product decision; What became usable; Product practice in one view; source notes 3-7 and the 2016 Sunday Dinner event route.",
+      "canonicalRecords": [
+        "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+        "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+        "CLM-WOWLIST-SENIOR-PRODUCT-PRACTICE-2026"
+      ],
+      "creditAndLimit": "Jamie and Richard co-built it, with organizers and participants credited. Historical adoption is distinct from the small 2026 tester threshold."
+    },
+    {
+      "project": "196 Artists Residency / Sunday Dinner",
+      "route": "/work/196-sunday-dinner",
+      "dates": "2010s-present; public milestones 2014 and 2016; governed residency workflow 2023 and operating-sheet record 2025.",
+      "continuity": "The redacted residency handoff starts with inquiry, learns an artist's needs, configures the space, enables independent access, and remains available for changes. The gathering workflow joins invitation, response, food, space, welcome, minimal records, and follow-up.",
+      "inhabitedSystem": "Hospitality, agency, space, and care become practical conditions for people to arrive, work independently, return, and continue relationships.",
+      "evidence": "Two public-safe handoff specimens; dated public milestones; concrete photo with January 6, 2013 caption.",
+      "canonicalRecords": [
+        "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023",
+        "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025"
+      ],
+      "creditAndLimit": "The public 2016 milestone names Julia Fredenburg and Jamie. Reconstructions withhold participant values and access details; one workflow does not prove every residency's form or artistic outcomes."
+    },
+    {
+      "project": "NYC Artist Coalition / FairRentNYC",
+      "route": "/work/fair-rent-nyc",
+      "dates": "2017-present; photographed working session July 24, 2017; collective town hall October 11, 2017; Wonderville preparation and delivery October 5, 2026.",
+      "continuity": "Listening meetings and priority ballots become shared campaign questions, event pathways, practical sessions, public websites, running minutes, source maps, and next steps. The Wonderville example extends this into room layout, equipment, timing, venue responses, and shared delivery.",
+      "inhabitedSystem": "People deliberate in physical spaces, act through public interfaces, and recover the decisions and questions needed to continue work across meetings.",
+      "evidence": "Documented organizing and testimony; What I did; The website was one part of the room; Recent work.",
+      "canonicalRecords": [
+        "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026"
+      ],
+      "creditAndLimit": "Jamie helps establish, implements, and stewards; campaign positions and policy outcomes remain collective. Facebook responses are explicitly not attendance or mandate."
+    }
+  ],
+  "renderedTarget": "Current local production build of the assigned candidate.",
+  "captureCustody": "Screenshot files are retained outside public Git; evidence labels are basenames only."
+}

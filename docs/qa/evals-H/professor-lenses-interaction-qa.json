@@ -1,63 +1,95 @@
 {
-  "reportVersion": 4,
-  "checkedAt": "2026-08-24T23:40:11.460Z",
-  "baseUrl": "http://127.0.0.1:3212",
-  "publicSurfaceFingerprint": "f049d54fa744f60005f3d9cc48a9f47bf2d63b42ccc6a27b742b3be42e663d69",
+  "reportVersion": 8,
+  "checkedAt": "2026-10-18T22:30:07.126Z",
+  "baseUrl": "http://127.0.0.1:42093",
+  "publicSurfaceFingerprint": "a05d6a91c3c6cad4c28ade585298dadf9985433f416ce3bd405a69c7d031c54e",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 153,
-  "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 155,
+  "fingerprintUnchangedDuringObservation": true,
+  "method": "Fresh Playwright Chrome keyboard, navigation and reflow observations; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
         "text": "Skip to content",
         "href": "#main",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "JBJamie Burkart",
         "href": "/",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Work",
         "href": "/work",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Technical Operations",
         "href": "/work/technical-operations",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "About",
         "href": "/about",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Resume",
         "href": "/resume",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Contact",
         "href": "/contact",
+        "id": null,
         "focusVisible": true,
-        "id": null
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
       }
     ],
+    "firstFocus": {
+      "tag": "a",
+      "text": "Skip to content",
+      "href": "#main",
+      "id": null,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "withinViewport": false
+    },
     "skipLinkIsFirst": true,
     "skipActivation": {
       "hash": "#main",
@@ -66,25 +98,72 @@
     "passed": true
   },
   "mobileNavigation": {
-    "menuFocusBeforeOpen": {
-      "tag": "summary",
-      "text": "MenuClose menu",
-      "href": null,
-      "focusVisible": true,
-      "id": null
-    },
+    "mobileInitialTabSequence": [
+      {
+        "tag": "a",
+        "text": "Skip to content",
+        "href": "#main",
+        "id": null,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
+      },
+      {
+        "tag": "a",
+        "text": "JBJamie Burkart",
+        "href": "/",
+        "id": null,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
+      },
+      {
+        "tag": "summary",
+        "text": "MenuClose menu",
+        "href": null,
+        "id": null,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "withinViewport": true
+      }
+    ],
     "menuOpen": true,
     "firstMobileMenuLink": {
       "tag": "a",
       "text": "Work",
       "href": "/work",
+      "id": null,
       "focusVisible": true,
-      "id": null
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "withinViewport": true
+    },
+    "menuClosedAfterToggle": true,
+    "mobileAboutFocus": {
+      "tag": "a",
+      "text": "About",
+      "href": "/about",
+      "id": null,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "withinViewport": true
+    },
+    "destination": {
+      "path": "/about",
+      "h1": "About"
     },
     "passed": true
   },
+  "desktopNavigation": {
+    "startRoute": "/",
+    "destinationRoute": "/about",
+    "passed": true
+  },
   "reflow": {
-    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is the more stringent WCAG reflow proxy for 400% zoom.",
     "rows": [
       {
         "route": "/",
@@ -92,9 +171,8 @@
         "httpStatus": 200,
         "clientWidth": 640,
         "scrollWidth": 640,
-        "overflowElements": 0,
-        "mainPresent": true,
         "h1Count": 1,
+        "mainPresent": true,
         "passed": true
       },
       {
@@ -103,9 +181,8 @@
         "httpStatus": 200,
         "clientWidth": 640,
         "scrollWidth": 640,
-        "overflowElements": 0,
-        "mainPresent": true,
         "h1Count": 1,
+        "mainPresent": true,
         "passed": true
       },
       {
@@ -114,9 +191,8 @@
         "httpStatus": 200,
         "clientWidth": 320,
         "scrollWidth": 320,
-        "overflowElements": 0,
-        "mainPresent": true,
         "h1Count": 1,
+        "mainPresent": true,
         "passed": true
       },
       {
@@ -125,101 +201,38 @@
         "httpStatus": 200,
         "clientWidth": 320,
         "scrollWidth": 320,
-        "overflowElements": 0,
-        "mainPresent": true,
         "h1Count": 1,
+        "mainPresent": true,
         "passed": true
       }
     ],
     "passed": true
   },
-  "semanticReadingOrder": {
-    "scope": "/about landmarks and first 20 headings",
-    "landmarks": [
-      {
-        "tag": "header",
-        "ariaLabel": null
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Primary navigation"
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Mobile navigation"
-      },
-      {
-        "tag": "main",
-        "ariaLabel": null
-      },
-      {
-        "tag": "footer",
-        "ariaLabel": null
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Footer navigation"
-      }
-    ],
-    "headings": [
-      {
-        "level": 1,
-        "text": "About"
-      },
-      {
-        "level": 2,
-        "text": "Systems people can inhabit"
-      },
-      {
-        "level": 3,
-        "text": "Harry J. Epstein Company"
-      },
-      {
-        "level": 3,
-        "text": "NYC Artist Coalition and FairRentNYC"
-      },
-      {
-        "level": 3,
-        "text": "Sunday Dinner and 196"
-      },
-      {
-        "level": 3,
-        "text": "WOWList"
-      },
-      {
-        "level": 3,
-        "text": "Knowledge Wiki Graphs"
-      },
-      {
-        "level": 3,
-        "text": "Limits of this comparison"
-      },
-      {
-        "level": 2,
-        "text": "Sources and notes"
-      },
-      {
-        "level": 2,
-        "text": "Looking for technical project management, product operations, implementation, or knowledge-systems support?"
-      }
-    ],
-    "passed": true
-  },
+  "reelLink": [
+    {
+      "width": 375,
+      "text": "Watch the 30-second listening-session animation on Instagram",
+      "href": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "visible": true,
+      "mediaElements": 0,
+      "screenshot": "fair-rent-reel-375.png",
+      "screenshotSha256": "047a9df79314e7bc7dadd5ce2cb515744755275a48d2b686e1e98a0b6c1f0a39"
+    },
+    {
+      "width": 1280,
+      "text": "Watch the 30-second listening-session animation on Instagram",
+      "href": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "visible": true,
+      "mediaElements": 0,
+      "screenshot": "fair-rent-reel-1280.png",
+      "screenshotSha256": "d044014f9937c7de2c19d80558b23df54cb39d0a5749b07833ca0e5594f03681"
+    }
+  ],
   "residualHumanGates": [
     "Human screen-reader review",
     "Human browser zoom review",
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true,
-  "refresh": {
-    "candidateChange": "The knowledge graph and internal governance changed without changing the public portfolio; shared navigation, homepage, and About interactions were re-exercised on the exact candidate.",
-    "currentChecks": [
-      "Keyboard order and visible focus were freshly exercised on the exact homepage.",
-      "The mobile menu opened from its summary control and transferred focus to its first link.",
-      "Home and About passed fresh 640-pixel and 320-pixel reflow checks.",
-      "About retained one main landmark, one h1, and a coherent heading sequence."
-    ],
-    "humanBoundary": "No human screen-reader or browser-zoom completion claim is made."
-  }
+  "passed": true
 }

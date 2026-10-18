@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T19:49:24-04:00",
-  "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "sourceFingerprint": "27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4",
+  "generatedAt": "2026-10-18T19:05:43-04:00",
+  "sourceCommit": "97885e6455f68e3cecd30808faa1379d3d960c3b",
+  "sourceFingerprint": "8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3388,8 +3388,8 @@
       "sensitivity": "low",
       "summary": "Task-oriented entry point for live opportunity research, historical role benchmarks, public-only hiring evaluation, and private-boundary rules.",
       "aliases": [],
-      "lastReviewed": "2026-09-01",
-      "reviewBy": "2026-09-14"
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2026-10-05"
     },
     {
       "id": "index.knowledge-wiki.family-closure",
@@ -3869,7 +3869,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-10-18",
       "reviewBy": "2027-01-18"
     },
     {
@@ -3977,6 +3977,19 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "opportunity.circle-o.operations-manager.2026",
+      "path": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "title": "Circle O - Operations Manager",
+      "kind": "opportunity",
+      "status": "archived",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Applications closed September 30, 2026; the official form confirmed closure October 13. Historical role research remains available.",
+      "aliases": [],
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
       "id": "opportunity.codepath.claude-corps.5182020007",
       "path": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "title": "CodePath - Senior Program Manager, Claude Corps",
@@ -4001,6 +4014,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-16"
+    },
+    {
+      "id": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "path": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "title": "NYC OTI / Civic Engagement Commission — Programs Project Manager 797003",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Open civic-program operations role supporting participatory budgeting, TRIE and voter language access; eligibility and location require confirmation.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-10-25"
     },
     {
       "id": "opportunity.nyc-oti.pit-senior-product-designer.782373",
@@ -4133,6 +4159,19 @@
       "reviewBy": "2026-08-27"
     },
     {
+      "id": "organization.circle-o",
+      "path": "docs/knowledge-bank/organizations/circle-o.md",
+      "title": "Circle O",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Public organization context for Circle O's dance, learning, performance, consulting and access-centered practice.",
+      "aliases": [],
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2027-03-27"
+    },
+    {
       "id": "organization.nyc-artist-coalition",
       "path": "docs/knowledge-bank/organizations/nyc-artist-coalition.md",
       "title": "NYC Artist Coalition organization map",
@@ -4149,6 +4188,45 @@
       "reviewBy": "2026-10-19"
     },
     {
+      "id": "organization.nyc-cec.digital-equity-team",
+      "path": "docs/knowledge-bank/organizations/nyc-cec-digital-equity-team.md",
+      "title": "CEC Digital Equity Team",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Publicly documented team supporting accessible digital participation and cross-program technical capacity at CEC.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "organization.nyc-civic-engagement-commission",
+      "path": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "title": "NYC Civic Engagement Commission",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Citywide civic-participation body with participatory-budgeting, language-assistance, community-partnership and community-board functions.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "organization.nyc-office-of-mass-engagement",
+      "path": "docs/knowledge-bank/organizations/nyc-office-of-mass-engagement.md",
+      "title": "NYC Office of Mass Engagement",
+      "kind": "organization",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Mayoral office with a specifically bounded liaison and activity-review relationship to the Civic Engagement Commission.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "organization.nyc-public-engagement-unit",
       "path": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
       "title": "NYC Public Engagement Unit",
@@ -4162,6 +4240,21 @@
       "reviewBy": "2026-10-01"
     },
     {
+      "id": "person.abby-walczak",
+      "path": "docs/knowledge-bank/people/abby-walczak.md",
+      "title": "Abby Walczak",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Operations Lead, separate from hiring authority or personal relationships.",
+      "aliases": [
+        "Abigail Walczak"
+      ],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "person.aileen-palmer",
       "path": "docs/knowledge-bank/people/aileen-palmer.md",
       "title": "Aileen Palmer",
@@ -4173,6 +4266,21 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-09-13"
+    },
+    {
+      "id": "person.alexis-spencer",
+      "path": "docs/knowledge-bank/people/alexis-spencer.md",
+      "title": "Alexis Spencer",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Manager of Participatory Budgeting Projects, separate from hiring authority or personal relationships.",
+      "aliases": [
+        "Lexi Spencer"
+      ],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "person.charizma-williams",
@@ -4240,6 +4348,45 @@
       "reviewBy": "2027-01-26"
     },
     {
+      "id": "person.emma-dillon",
+      "path": "docs/knowledge-bank/people/emma-dillon.md",
+      "title": "Emma Dillon",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Budget Director, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "person.haydon-john",
+      "path": "docs/knowledge-bank/people/haydon-john.md",
+      "title": "Haydon John",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Special Projects Manager, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "person.hillary-carelli-donnell",
+      "path": "docs/knowledge-bank/people/hillary-carelli-donnell.md",
+      "title": "Hillary Carelli-Donnell",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Director of Participatory Budgeting, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "person.jaclyn-chen",
       "path": "docs/knowledge-bank/people/jaclyn-chen.md",
       "title": "Jaclyn Chen",
@@ -4294,6 +4441,19 @@
       "reviewBy": "2026-11-15"
     },
     {
+      "id": "person.kayla-hamilton",
+      "path": "docs/knowledge-bank/people/kayla-hamilton.md",
+      "title": "Kayla Hamilton",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official-role record for Circle O's Founder and Artistic Director, without inferring a Jamie-specific relationship or endorsement.",
+      "aliases": [],
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2027-03-27"
+    },
+    {
       "id": "person.lisa-gelobter",
       "path": "docs/knowledge-bank/people/lisa-gelobter.md",
       "title": "Lisa Gelobter",
@@ -4320,6 +4480,19 @@
       "reviewBy": "2026-09-13"
     },
     {
+      "id": "person.oscar-romero",
+      "path": "docs/knowledge-bank/people/oscar-romero.md",
+      "title": "Oscar Romero",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Chief Information Officer, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "person.paul-mossine",
       "path": "docs/knowledge-bank/people/paul-mossine.md",
       "title": "Paul Mossine",
@@ -4331,6 +4504,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2027-02-20"
+    },
+    {
+      "id": "person.sarah-sayeed",
+      "path": "docs/knowledge-bank/people/sarah-sayeed.md",
+      "title": "Dr. Sarah Sayeed",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Chair and Executive Director, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "person.thomas-edlinger",
@@ -4357,6 +4543,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-11-03"
+    },
+    {
+      "id": "person.wendy-trull",
+      "path": "docs/knowledge-bank/people/wendy-trull.md",
+      "title": "Wendy Trull",
+      "kind": "person",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official public-role context for CEC's Chief Programs Officer, separate from hiring authority or personal relationships.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "person.zack-parker",
@@ -4462,8 +4661,8 @@
       "sensitivity": "moderate",
       "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
       "aliases": [],
-      "lastReviewed": "2026-08-12",
-      "reviewBy": "2026-09-19"
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "project.harry-j-epstein",
@@ -4559,6 +4758,71 @@
       "aliases": [],
       "lastReviewed": "2026-07-19",
       "reviewBy": "2026-10-19"
+    },
+    {
+      "id": "project.nyc-cec.community-board-assistance",
+      "path": "docs/knowledge-bank/projects/nyc-cec-community-board-assistance.md",
+      "title": "CEC community-board assistance and training",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "CEC's public training function provides a documented bridge to NYC Open Data and BetaNYC without implying personal attendance.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "project.nyc-cec.cultural-partnerships",
+      "path": "docs/knowledge-bank/projects/nyc-cec-cultural-partnerships.md",
+      "title": "CEC cultural-institution partnerships",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Publicly documented arts partnerships link cultural programming and The People's Money without implying personal contacts.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "project.nyc-cec.peoples-money",
+      "path": "docs/knowledge-bank/projects/nyc-cec-peoples-money.md",
+      "title": "The People's Money",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "CEC's resident-led participatory budgeting program, with fifth-cycle idea generation distinct from fourth-cycle implementation.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "project.nyc-cec.trie-neighborhood-initiative",
+      "path": "docs/knowledge-bank/projects/nyc-cec-trie-neighborhood-initiative.md",
+      "title": "TRIE Neighborhood Initiative",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "CEC coalition and capacity-building work connecting community organizations, neighborhood needs and participatory democracy.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "project.nyc-cec.voter-language-assistance",
+      "path": "docs/knowledge-bank/projects/nyc-cec-voter-language-assistance.md",
+      "title": "CEC Voter Language Assistance",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "CEC language-assistance program supporting limited-English-proficient voters at poll sites.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "project.office-of-nightlife-town-halls",
@@ -5061,6 +5325,19 @@
       "reviewBy": "2026-10-03"
     },
     {
+      "id": "research.recent-delivery.2026-10-18",
+      "path": "docs/knowledge-bank/research-runs/recent-delivery-2026-10-18.md",
+      "title": "Recent delivery — bounded portfolio update",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Three text-only examples connect recent work to delivered materials, a gathering that occurred and an observed publication.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "source.aclu.charizma-williams",
       "path": "docs/knowledge-bank/sources/aclu-charizma-williams.md",
       "title": "ACLU official biography - Charizma Williams",
@@ -5148,8 +5425,8 @@
       "sensitivity": "low",
       "summary": "Recurring editorial discovery source for civic-technology jobs, events, public-service developments, community tools, and employer leads.",
       "aliases": [],
-      "lastReviewed": "2026-08-21",
-      "reviewBy": "2026-08-29"
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-10-18"
     },
     {
       "id": "source.callnyc.source-repository",
@@ -5176,6 +5453,45 @@
       "aliases": [],
       "lastReviewed": "2026-08-11",
       "reviewBy": "2026-11-11"
+    },
+    {
+      "id": "source.circle-o.about-and-team.2026",
+      "path": "docs/knowledge-bank/sources/circle-o-about-and-team-2026.md",
+      "title": "Circle O About and Team",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official organization sources for Circle O's mission, four program pillars, Founder and Artistic Director Kayla Hamilton, and current public team context.",
+      "aliases": [],
+      "lastReviewed": "2026-09-27",
+      "reviewBy": "2027-03-27"
+    },
+    {
+      "id": "source.circle-o.open-positions.2026",
+      "path": "docs/knowledge-bank/sources/circle-o-open-positions-2026.md",
+      "title": "Circle O Open Positions - Operations Manager",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Historical official posting for Circle O's Operations Manager role; the URL returned 404 on October 13, 2026.",
+      "aliases": [],
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
+    },
+    {
+      "id": "source.circle-o.operations-manager-application.2026",
+      "path": "docs/knowledge-bank/sources/circle-o-operations-manager-application-2026.md",
+      "title": "Circle O Operations Manager Application Form",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official Jotform confirmed September 30 closure when checked October 13, 2026; historical fields remain dated September 27.",
+      "aliases": [],
+      "lastReviewed": "2026-10-13",
+      "reviewBy": "2026-11-13"
     },
     {
       "id": "source.civic-match.candidate-network",
@@ -5410,6 +5726,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-16"
+    },
+    {
+      "id": "source.jobs.oti.cec-programs-project-manager.797003",
+      "path": "docs/knowledge-bank/sources/jobs-oti-cec-programs-project-manager-797003.md",
+      "title": "NYC Jobs — CEC Programs Project Manager 797003",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Official City posting and blank SmartRecruiters application verified; location conflict remains unresolved.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-10-25"
     },
     {
       "id": "source.jobs.oti.executive-director-product-management.789563",
@@ -5763,6 +6092,84 @@
       "reviewBy": "2026-08-27"
     },
     {
+      "id": "source.nyc.cec.about-governance.2026-10-18",
+      "path": "docs/knowledge-bank/sources/nyc-cec-about-and-governance-2026-10-18.md",
+      "title": "NYC Civic Engagement Commission - mandate and governance",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official agency and mayoral sources distinguish CEC's mandate and liaison relationship from school councils and OTI employment labels.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "source.nyc.cec.cultural-partnerships.2026",
+      "path": "docs/knowledge-bank/sources/nyc-cec-cultural-partnerships-2026.md",
+      "title": "CEC cultural-institution partnerships, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official CEC sources document a civic-participation partnership with arts organizations rather than a Jamie-specific contact network.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "source.nyc.cec.digital-equity.2026-10-18",
+      "path": "docs/knowledge-bank/sources/nyc-cec-digital-equity-2026-10-18.md",
+      "title": "CEC Digital Equity Team - dated public evidence",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official reporting and biographies connect CEC digital participation to service design, accessibility and the Decidim platform.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "path": "docs/knowledge-bank/sources/nyc-cec-peoples-money-cycle5-2026-10-15.md",
+      "title": "The People's Money - fifth-cycle launch, October 15, 2026",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official dated announcement separates current fifth-cycle idea generation from fourth-cycle implementation.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "source.nyc.cec.programs.2026-10-18",
+      "path": "docs/knowledge-bank/sources/nyc-cec-programs-2026-10-18.md",
+      "title": "NYC Civic Engagement Commission - operating programs",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Official program pages document TRIE, community-board assistance and voter-language services with dated links to civic-technology partners.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
+      "id": "source.nyc.cec.staff.2026-10-18",
+      "path": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "title": "NYC Civic Engagement Commission - public staff context",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Eight official biographies establish bounded public-role context for the CEC opportunity without identifying a hiring manager.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
+    },
+    {
       "id": "source.nyc.diya-vij-appointment.2026",
       "path": "docs/knowledge-bank/sources/dcla-diya-vij-appointment-2026.md",
       "title": "Appointment of Diya Vij as Commissioner of Cultural Affairs",
@@ -5839,6 +6246,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-11-20"
+    },
+    {
+      "id": "source.nycac.dcla-animation-instagram.2026-10",
+      "path": "docs/knowledge-bank/sources/dcla-animation-instagram-2026-10.md",
+      "title": "Published listening-session animation on Instagram",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "A direct published reel, its visual sequence, and six platform-listed collaborators, with separate edition and rights boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2027-04-18"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -14116,6 +14536,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/circle-o-operations-manager-2026.md",
+      "context": "Officially open part-time arts-operations contract opportunity verified September 27, with private application preparation and human-only submission gates."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-claude-corps.md",
@@ -14127,6 +14555,14 @@
       "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
       "context": null
     },
     {
@@ -16534,6 +16970,108 @@
       "context": null
     },
     {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "evidence:context",
+      "to": "source.circle-o.about-and-team.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "organization mission",
+        "program pillars and public leadership"
+      ]
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "evidence:direct-support",
+      "to": "source.circle-o.open-positions.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "identity",
+        "mission context",
+        "responsibilities",
+        "terms",
+        "candidate profile",
+        "deadline and timeline"
+      ]
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "evidence:direct-support",
+      "to": "source.circle-o.operations-manager-application.2026",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "official closure observed October 13",
+        "original deadline",
+        "historical requested materials and questions"
+      ]
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "related_to",
+      "to": "organization.circle-o",
+      "source": "frontmatter",
+      "href": "../organizations/circle-o.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "related_to",
+      "to": "person.kayla-hamilton",
+      "source": "frontmatter",
+      "href": "../people/kayla-hamilton.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "related_to",
+      "to": "project.sunday-dinner-196",
+      "source": "frontmatter",
+      "href": "../projects/sunday-dinner-196-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "related_to",
+      "to": "project.wowlist",
+      "source": "frontmatter",
+      "href": "../projects/wowlist-orientation.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "uses_source",
+      "to": "source.circle-o.about-and-team.2026",
+      "source": "frontmatter",
+      "href": "../sources/circle-o-about-and-team-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "uses_source",
+      "to": "source.circle-o.open-positions.2026",
+      "source": "frontmatter",
+      "href": "../sources/circle-o-open-positions-2026.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "type": "uses_source",
+      "to": "source.circle-o.operations-manager-application.2026",
+      "source": "frontmatter",
+      "href": "../sources/circle-o-operations-manager-application-2026.md",
+      "context": null
+    },
+    {
       "from": "opportunity.codepath.claude-corps.5182020007",
       "type": "evidence:direct-support",
       "to": "source.jobs.codepath.claude-corps.5182020007",
@@ -16633,6 +17171,70 @@
       "to": "source.jobs.codepath.engineering-project-manager.5160542007",
       "source": "frontmatter",
       "href": "../sources/jobs-codepath-engineering-project-manager-5160542007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.oti.cec-programs-project-manager.797003",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "role identity",
+        "observed application availability",
+        "salary",
+        "deadline",
+        "requirements",
+        "reporting role",
+        "location conflict"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "related_to",
+      "to": "person.wendy-trull",
+      "source": "frontmatter",
+      "href": "../people/wendy-trull.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "uses_source",
+      "to": "source.jobs.oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../sources/jobs-oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
       "context": null
     },
     {
@@ -17408,6 +18010,30 @@
       "context": null
     },
     {
+      "from": "organization.circle-o",
+      "type": "related_to",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/circle-o-operations-manager-2026.md",
+      "context": null
+    },
+    {
+      "from": "organization.circle-o",
+      "type": "related_to",
+      "to": "person.kayla-hamilton",
+      "source": "frontmatter",
+      "href": "../people/kayla-hamilton.md",
+      "context": null
+    },
+    {
+      "from": "organization.circle-o",
+      "type": "uses_source",
+      "to": "source.circle-o.about-and-team.2026",
+      "source": "frontmatter",
+      "href": "../sources/circle-o-about-and-team-2026.md",
+      "context": null
+    },
+    {
       "from": "organization.nyc-artist-coalition",
       "type": "informed_by",
       "to": "research.nycac.shared-folder.2026-07-19",
@@ -17488,6 +18114,150 @@
       "context": null
     },
     {
+      "from": "organization.nyc-cec.digital-equity-team",
+      "type": "part_of",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-cec.digital-equity-team",
+      "type": "related_to",
+      "to": "person.oscar-romero",
+      "source": "frontmatter",
+      "href": "../people/oscar-romero.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-cec.digital-equity-team",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-cec.digital-equity-team",
+      "type": "uses_source",
+      "to": "source.nyc.cec.digital-equity.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-digital-equity-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "organization.nyc-cec.digital-equity-team",
+      "source": "frontmatter",
+      "href": "nyc-cec-digital-equity-team.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "organization.nyc-office-of-mass-engagement",
+      "source": "frontmatter",
+      "href": "nyc-office-of-mass-engagement.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "project.nyc-cec.community-board-assistance",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-community-board-assistance.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "project.nyc-cec.cultural-partnerships",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-cultural-partnerships.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "project.nyc-cec.trie-neighborhood-initiative",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-trie-neighborhood-initiative.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "related_to",
+      "to": "project.nyc-cec.voter-language-assistance",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-voter-language-assistance.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "uses_source",
+      "to": "source.nyc.cec.about-governance.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-about-and-governance-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "uses_source",
+      "to": "source.nyc.cec.programs.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-programs-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-civic-engagement-commission",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-office-of-mass-engagement",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-office-of-mass-engagement",
+      "type": "related_to",
+      "to": "organization.nyc-public-engagement-unit",
+      "source": "frontmatter",
+      "href": "nyc-public-engagement-unit.md",
+      "context": null
+    },
+    {
+      "from": "organization.nyc-office-of-mass-engagement",
+      "type": "uses_source",
+      "to": "source.nyc.cec.about-governance.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-about-and-governance-2026-10-18.md",
+      "context": null
+    },
+    {
       "from": "organization.nyc-public-engagement-unit",
       "type": "related_to",
       "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
@@ -17504,6 +18274,30 @@
       "context": null
     },
     {
+      "from": "person.abby-walczak",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.abby-walczak",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.abby-walczak",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
+    },
+    {
       "from": "person.aileen-palmer",
       "type": "related_to",
       "to": "opportunity.benepass.product-operations.7f963a7a",
@@ -17517,6 +18311,38 @@
       "to": "source.jobs.benepass.product-operations.7f963a7a",
       "source": "frontmatter",
       "href": "../sources/jobs-benepass-product-operations.md",
+      "context": null
+    },
+    {
+      "from": "person.alexis-spencer",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.alexis-spencer",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.alexis-spencer",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "person.alexis-spencer",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
       "context": null
     },
     {
@@ -17606,6 +18432,94 @@
       "source": "frontmatter",
       "href": "../sources/permissions/elana-gordon-east-river-portfolio-2026.md",
       "context": "Public-safe permission and credit summary; private correspondence remains outside Git."
+    },
+    {
+      "from": "person.emma-dillon",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.emma-dillon",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.emma-dillon",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "person.haydon-john",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.haydon-john",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.haydon-john",
+      "type": "related_to",
+      "to": "project.nyc-cec.trie-neighborhood-initiative",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-trie-neighborhood-initiative.md",
+      "context": null
+    },
+    {
+      "from": "person.haydon-john",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "person.hillary-carelli-donnell",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.hillary-carelli-donnell",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.hillary-carelli-donnell",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "person.hillary-carelli-donnell",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
     },
     {
       "from": "person.jaclyn-chen",
@@ -17760,6 +18674,30 @@
       "context": null
     },
     {
+      "from": "person.kayla-hamilton",
+      "type": "related_to",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/circle-o-operations-manager-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.kayla-hamilton",
+      "type": "related_to",
+      "to": "organization.circle-o",
+      "source": "frontmatter",
+      "href": "../organizations/circle-o.md",
+      "context": null
+    },
+    {
+      "from": "person.kayla-hamilton",
+      "type": "uses_source",
+      "to": "source.circle-o.about-and-team.2026",
+      "source": "frontmatter",
+      "href": "../sources/circle-o-about-and-team-2026.md",
+      "context": null
+    },
+    {
       "from": "person.lisa-gelobter",
       "type": "related_to",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
@@ -17816,11 +18754,67 @@
       "context": null
     },
     {
+      "from": "person.oscar-romero",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.oscar-romero",
+      "type": "related_to",
+      "to": "organization.nyc-cec.digital-equity-team",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-cec-digital-equity-team.md",
+      "context": null
+    },
+    {
+      "from": "person.oscar-romero",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.oscar-romero",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
+      "context": null
+    },
+    {
       "from": "person.paul-mossine",
       "type": "related_to",
       "to": "correction.photo.project-courtesy-credits.2026-08-20",
       "source": "frontmatter",
       "href": "../corrections/project-photo-courtesy-credits-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "person.sarah-sayeed",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.sarah-sayeed",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.sarah-sayeed",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
       "context": null
     },
     {
@@ -17869,6 +18863,38 @@
       "to": "source.ucsc.warren-sack-profile.2026",
       "source": "frontmatter",
       "href": "../sources/ucsc-warren-sack-profile-2026.md",
+      "context": null
+    },
+    {
+      "from": "person.wendy-trull",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "person.wendy-trull",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "person.wendy-trull",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "person.wendy-trull",
+      "type": "uses_source",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-staff-2026-10-18.md",
       "context": null
     },
     {
@@ -18430,6 +19456,182 @@
       "source": "frontmatter",
       "href": "../sources/nycac-protected-shared-folder-census-2026.md",
       "context": "Protected source custody with public-safe aggregate coverage only."
+    },
+    {
+      "from": "project.nyc-cec.community-board-assistance",
+      "type": "organized_by",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.community-board-assistance",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.community-board-assistance",
+      "type": "uses_source",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "source": "frontmatter",
+      "href": "../sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.community-board-assistance",
+      "type": "uses_source",
+      "to": "source.nyc.cec.programs.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-programs-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.cultural-partnerships",
+      "type": "organized_by",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.cultural-partnerships",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.cultural-partnerships",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.cultural-partnerships",
+      "type": "uses_source",
+      "to": "source.nyc.cec.cultural-partnerships.2026",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-cultural-partnerships-2026.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "organized_by",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "related_to",
+      "to": "person.alexis-spencer",
+      "source": "frontmatter",
+      "href": "../people/alexis-spencer.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "related_to",
+      "to": "person.hillary-carelli-donnell",
+      "source": "frontmatter",
+      "href": "../people/hillary-carelli-donnell.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "related_to",
+      "to": "project.nyc-cec.trie-neighborhood-initiative",
+      "source": "frontmatter",
+      "href": "nyc-cec-trie-neighborhood-initiative.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.peoples-money",
+      "type": "uses_source",
+      "to": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-peoples-money-cycle5-2026-10-15.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "type": "organized_by",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "type": "related_to",
+      "to": "person.haydon-john",
+      "source": "frontmatter",
+      "href": "../people/haydon-john.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "type": "related_to",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "type": "uses_source",
+      "to": "source.nyc.cec.programs.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-programs-2026-10-18.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.voter-language-assistance",
+      "type": "organized_by",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.voter-language-assistance",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "project.nyc-cec.voter-language-assistance",
+      "type": "uses_source",
+      "to": "source.nyc.cec.programs.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/nyc-cec-programs-2026-10-18.md",
+      "context": null
     },
     {
       "from": "project.office-of-nightlife-town-halls",
@@ -19760,6 +20962,14 @@
       "context": null
     },
     {
+      "from": "research.recent-delivery.2026-10-18",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
       "from": "source.aclu.charizma-williams",
       "type": "related_to",
       "to": "opportunity.aclu.senior-project-manager.8620968002",
@@ -19933,6 +21143,46 @@
       "to": "method.recomposable-civic-cultural-systems",
       "source": "frontmatter",
       "href": "../methods/recomposable-civic-cultural-systems.md",
+      "context": null
+    },
+    {
+      "from": "source.circle-o.about-and-team.2026",
+      "type": "related_to",
+      "to": "organization.circle-o",
+      "source": "frontmatter",
+      "href": "../organizations/circle-o.md",
+      "context": null
+    },
+    {
+      "from": "source.circle-o.about-and-team.2026",
+      "type": "related_to",
+      "to": "person.kayla-hamilton",
+      "source": "frontmatter",
+      "href": "../people/kayla-hamilton.md",
+      "context": null
+    },
+    {
+      "from": "source.circle-o.open-positions.2026",
+      "type": "related_to",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/circle-o-operations-manager-2026.md",
+      "context": null
+    },
+    {
+      "from": "source.circle-o.open-positions.2026",
+      "type": "related_to",
+      "to": "organization.circle-o",
+      "source": "frontmatter",
+      "href": "../organizations/circle-o.md",
+      "context": null
+    },
+    {
+      "from": "source.circle-o.operations-manager-application.2026",
+      "type": "related_to",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "source": "frontmatter",
+      "href": "../opportunities/circle-o-operations-manager-2026.md",
       "context": null
     },
     {
@@ -20173,6 +21423,14 @@
       "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "source": "frontmatter",
       "href": "../opportunities/codepath-engineering-project-manager.md",
+      "context": null
+    },
+    {
+      "from": "source.jobs.oti.cec-programs-project-manager.797003",
+      "type": "supports",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
       "context": null
     },
     {
@@ -20536,6 +21794,166 @@
       "context": null
     },
     {
+      "from": "source.nyc.cec.about-governance.2026-10-18",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.about-governance.2026-10-18",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.cultural-partnerships.2026",
+      "type": "documents",
+      "to": "project.nyc-cec.cultural-partnerships",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-cultural-partnerships.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.cultural-partnerships.2026",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.digital-equity.2026-10-18",
+      "type": "related_to",
+      "to": "organization.nyc-cec.digital-equity-team",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-cec-digital-equity-team.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.digital-equity.2026-10-18",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "type": "documents",
+      "to": "project.nyc-cec.peoples-money",
+      "source": "frontmatter",
+      "href": "../projects/nyc-cec-peoples-money.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.programs.2026-10-18",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.programs.2026-10-18",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.abby-walczak",
+      "source": "frontmatter",
+      "href": "../people/abby-walczak.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.alexis-spencer",
+      "source": "frontmatter",
+      "href": "../people/alexis-spencer.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.emma-dillon",
+      "source": "frontmatter",
+      "href": "../people/emma-dillon.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.haydon-john",
+      "source": "frontmatter",
+      "href": "../people/haydon-john.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.hillary-carelli-donnell",
+      "source": "frontmatter",
+      "href": "../people/hillary-carelli-donnell.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.oscar-romero",
+      "source": "frontmatter",
+      "href": "../people/oscar-romero.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.sarah-sayeed",
+      "source": "frontmatter",
+      "href": "../people/sarah-sayeed.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "mentions",
+      "to": "person.wendy-trull",
+      "source": "frontmatter",
+      "href": "../people/wendy-trull.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "related_to",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "source": "frontmatter",
+      "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
+      "context": null
+    },
+    {
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "type": "related_to",
+      "to": "organization.nyc-civic-engagement-commission",
+      "source": "frontmatter",
+      "href": "../organizations/nyc-civic-engagement-commission.md",
+      "context": null
+    },
+    {
       "from": "source.nyc.diya-vij-appointment.2026",
       "type": "related_to",
       "to": "person.diya-vij",
@@ -20605,6 +22023,30 @@
       "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
       "source": "frontmatter",
       "href": "../opportunities/oti-speed-senior-product-manager-789610.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "source": "frontmatter",
+      "href": "dcla-listening-session-2026-08-26.md",
       "context": null
     },
     {
@@ -22737,7 +24179,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 110,
+      "line": 116,
       "kind": "link"
     },
     {
@@ -22746,7 +24188,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 116,
+      "line": 122,
       "kind": "link"
     },
     {
@@ -22755,7 +24197,16 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 125,
+      "line": 131,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 14,
       "kind": "link"
     },
     {
@@ -22764,7 +24215,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 138,
+      "line": 144,
       "kind": "link"
     },
     {
@@ -22773,16 +24224,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 139,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
-      "to": "opportunity.codepath.engineering-project-manager.5160542007",
-      "fragment": null,
-      "line": 14,
+      "line": 145,
       "kind": "link"
     },
     {
@@ -22791,7 +24233,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 140,
+      "line": 146,
       "kind": "link"
     },
     {
@@ -22800,7 +24242,16 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 141,
+      "line": 147,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "fragment": null,
+      "line": 15,
       "kind": "link"
     },
     {
@@ -22809,23 +24260,14 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 145,
+      "line": 151,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
-      "to": "opportunity.aclu.senior-project-manager.8620968002",
-      "fragment": null,
-      "line": 15,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
       "fragment": null,
       "line": 16,
       "kind": "link"
@@ -22833,8 +24275,8 @@
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
-      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
       "fragment": null,
       "line": 17,
       "kind": "link"
@@ -22845,7 +24287,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 171,
+      "line": 177,
       "kind": "link"
     },
     {
@@ -22854,7 +24296,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 172,
+      "line": 178,
       "kind": "link"
     },
     {
@@ -22863,7 +24305,16 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 173,
+      "line": 179,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 18,
       "kind": "link"
     },
     {
@@ -22872,7 +24323,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 174,
+      "line": 180,
       "kind": "link"
     },
     {
@@ -22881,7 +24332,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 175,
+      "line": 181,
       "kind": "link"
     },
     {
@@ -22890,7 +24341,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 176,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -22899,7 +24350,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 177,
+      "line": 183,
       "kind": "link"
     },
     {
@@ -22908,7 +24359,16 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 178,
+      "line": 184,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
+      "to": "opportunity.nyc-oti.senior-product-manager.782366",
+      "fragment": null,
+      "line": 19,
       "kind": "link"
     },
     {
@@ -22917,7 +24377,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
       "to": "opportunity.nyc-oti.speed-operations-manager.789810",
       "fragment": null,
-      "line": 18,
+      "line": 20,
       "kind": "link"
     },
     {
@@ -22926,7 +24386,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 19,
+      "line": 21,
       "kind": "link"
     },
     {
@@ -22935,7 +24395,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
       "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
       "fragment": null,
-      "line": 20,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -22944,7 +24404,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
       "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
       "fragment": null,
-      "line": 21,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -22953,7 +24413,7 @@
       "toPath": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
       "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
       "fragment": null,
-      "line": 22,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -22962,7 +24422,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
       "to": "organization.nyc-public-engagement-unit",
       "fragment": null,
-      "line": 23,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -22971,7 +24431,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
       "to": "research.nyc-oti-product-management-ranking.2026-08-20",
       "fragment": null,
-      "line": 27,
+      "line": 33,
       "kind": "link"
     },
     {
@@ -22980,7 +24440,7 @@
       "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "to": "source.betanyc.civic-tech-newsletter",
       "fragment": null,
-      "line": 41,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -22989,7 +24449,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
       "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
       "fragment": null,
-      "line": 63,
+      "line": 69,
       "kind": "link"
     },
     {
@@ -22998,7 +24458,7 @@
       "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
       "to": "method.civic-match-opportunity-loop",
       "fragment": null,
-      "line": 72,
+      "line": 78,
       "kind": "link"
     },
     {
@@ -23007,7 +24467,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 83,
+      "line": 89,
       "kind": "link"
     },
     {
@@ -23016,7 +24476,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
       "to": "application.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 84,
+      "line": 90,
       "kind": "link"
     },
     {
@@ -23025,7 +24485,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
       "to": "application.nyc-oti.speed-operations-manager.789810",
       "fragment": null,
-      "line": 85,
+      "line": 91,
       "kind": "link"
     },
     {
@@ -24753,7 +26213,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 153,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -24762,7 +26222,16 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
       "to": "index.anonymized-team-knowledge-opportunity-case-study",
       "fragment": null,
-      "line": 178,
+      "line": 186,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/branch-reconciliation-2026-10-18.md",
+      "to": null,
+      "fragment": null,
+      "line": 47,
       "kind": "link"
     },
     {
@@ -24928,6 +26397,24 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "toPath": "docs/knowledge-bank/people/kayla-hamilton.md",
+      "to": "person.kayla-hamilton",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "from": "opportunity.circle-o.operations-manager.2026",
+      "toPath": "docs/knowledge-bank/organizations/circle-o.md",
+      "to": "organization.circle-o",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "from": "opportunity.codepath.claude-corps.5182020007",
       "toPath": "docs/knowledge-bank/sources/jobs-codepath-claude-corps-5182020007.md",
@@ -24970,6 +26457,60 @@
       "to": "source.codepath.leadership.2026",
       "fragment": null,
       "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "to": "organization.nyc-civic-engagement-commission",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-community-board-assistance.md",
+      "to": "project.nyc-cec.community-board-assistance",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-cultural-partnerships.md",
+      "to": "project.nyc-cec.cultural-partnerships",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-peoples-money.md",
+      "to": "project.nyc-cec.peoples-money",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "from": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-cec-programs-project-manager-797003.md",
+      "to": "source.jobs.oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 4,
       "kind": "link"
     },
     {
@@ -25243,6 +26784,168 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-cec-digital-equity-team.md",
+      "from": "organization.nyc-cec.digital-equity-team",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-digital-equity-2026-10-18.md",
+      "to": "source.nyc.cec.digital-equity.2026-10-18",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/organizations/nyc-office-of-mass-engagement.md",
+      "to": "organization.nyc-office-of-mass-engagement",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-programs-2026-10-18.md",
+      "to": "source.nyc.cec.programs.2026-10-18",
+      "fragment": null,
+      "line": 16,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-peoples-money.md",
+      "to": "project.nyc-cec.peoples-money",
+      "fragment": null,
+      "line": 18,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-trie-neighborhood-initiative.md",
+      "to": "project.nyc-cec.trie-neighborhood-initiative",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-community-board-assistance.md",
+      "to": "project.nyc-cec.community-board-assistance",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-voter-language-assistance.md",
+      "to": "project.nyc-cec.voter-language-assistance",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/projects/nyc-cec-cultural-partnerships.md",
+      "to": "project.nyc-cec.cultural-partnerships",
+      "fragment": null,
+      "line": 22,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/organizations/nyc-cec-digital-equity-team.md",
+      "to": "organization.nyc-cec.digital-equity-team",
+      "fragment": null,
+      "line": 23,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-about-and-governance-2026-10-18.md",
+      "to": "source.nyc.cec.about-governance.2026-10-18",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-civic-engagement-commission.md",
+      "from": "organization.nyc-civic-engagement-commission",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "to": "source.nyc.cec.staff.2026-10-18",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/organizations/nyc-office-of-mass-engagement.md",
+      "from": "organization.nyc-office-of-mass-engagement",
+      "toPath": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
+      "to": "organization.nyc-public-engagement-unit",
+      "fragment": null,
+      "line": 6,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/abby-walczak.md",
+      "from": "person.abby-walczak",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/alexis-spencer.md",
+      "from": "person.alexis-spencer",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/emma-dillon.md",
+      "from": "person.emma-dillon",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/haydon-john.md",
+      "from": "person.haydon-john",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/hillary-carelli-donnell.md",
+      "from": "person.hillary-carelli-donnell",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/people/jamie-burkart.md",
       "from": "person.jamie-burkart",
       "toPath": "docs/knowledge-bank/indexes/jamie-public-record-source-edition.md",
@@ -25393,6 +27096,33 @@
       "to": "method.collective-credit-protected-absence",
       "fragment": null,
       "line": 84,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/oscar-romero.md",
+      "from": "person.oscar-romero",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/sarah-sayeed.md",
+      "from": "person.sarah-sayeed",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/people/wendy-trull.md",
+      "from": "person.wendy-trull",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 8,
       "kind": "link"
     },
     {
@@ -25573,6 +27303,15 @@
       "to": "research.nycac.frontline-advocacy.2026-08-12",
       "fragment": null,
       "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-runs/recent-delivery-2026-10-18.md",
+      "to": "research.recent-delivery.2026-10-18",
+      "fragment": null,
+      "line": 39,
       "kind": "link"
     },
     {
@@ -25771,6 +27510,42 @@
       "to": null,
       "fragment": null,
       "line": 137,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-cec-community-board-assistance.md",
+      "from": "project.nyc-cec.community-board-assistance",
+      "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
+      "to": "source.betanyc.civic-tech-newsletter",
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-cec-cultural-partnerships.md",
+      "from": "project.nyc-cec.cultural-partnerships",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-cultural-partnerships-2026.md",
+      "to": "source.nyc.cec.cultural-partnerships.2026",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-cec-peoples-money.md",
+      "from": "project.nyc-cec.peoples-money",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-peoples-money-cycle5-2026-10-15.md",
+      "to": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "fragment": null,
+      "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-cec-trie-neighborhood-initiative.md",
+      "from": "project.nyc-cec.trie-neighborhood-initiative",
+      "toPath": "docs/knowledge-bank/people/haydon-john.md",
+      "to": "person.haydon-john",
+      "fragment": null,
+      "line": 6,
       "kind": "link"
     },
     {
@@ -26274,7 +28049,7 @@
       "toPath": "docs/knowledge-bank/methods/betanyc-opportunity-loop.md",
       "to": "method.betanyc-opportunity-loop",
       "fragment": null,
-      "line": 23,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -26283,7 +28058,7 @@
       "toPath": "docs/knowledge-bank/research-runs/betanyc-opportunity-review-2026-08-20.md",
       "to": "research.betanyc-opportunity-review.2026-08-20",
       "fragment": null,
-      "line": 24,
+      "line": 30,
       "kind": "link"
     },
     {
@@ -26314,6 +28089,15 @@
       "kind": "link"
     },
     {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/sources/dcla-animation-instagram-2026-10.md",
+      "to": "source.nycac.dcla-animation-instagram.2026-10",
+      "fragment": null,
+      "line": 6,
+      "kind": "link"
+    },
+    {
       "fromPath": "docs/knowledge-bank/sources/jamie-public-record-initial-manifest.md",
       "from": "source.jamie-public-record-initial-manifest",
       "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.lock.json",
@@ -26336,6 +28120,96 @@
       "from": "source.jamie-public-record-initial-manifest",
       "toPath": "docs/knowledge-bank/data/external-source-editions/jamie-burkart-public-record.manifest.json",
       "to": null,
+      "fragment": null,
+      "line": 9,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-about-and-governance-2026-10-18.md",
+      "from": "source.nyc.cec.about-governance.2026-10-18",
+      "toPath": "docs/knowledge-bank/sources/jobs-oti-cec-programs-project-manager-797003.md",
+      "to": "source.jobs.oti.cec-programs-project-manager.797003",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/hillary-carelli-donnell.md",
+      "to": "person.hillary-carelli-donnell",
+      "fragment": null,
+      "line": 10,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/oscar-romero.md",
+      "to": "person.oscar-romero",
+      "fragment": null,
+      "line": 11,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/emma-dillon.md",
+      "to": "person.emma-dillon",
+      "fragment": null,
+      "line": 12,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/abby-walczak.md",
+      "to": "person.abby-walczak",
+      "fragment": null,
+      "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/alexis-spencer.md",
+      "to": "person.alexis-spencer",
+      "fragment": null,
+      "line": 14,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/haydon-john.md",
+      "to": "person.haydon-john",
+      "fragment": null,
+      "line": 15,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/sources/nyc-cec-peoples-money-cycle5-2026-10-15.md",
+      "to": "source.nyc.cec.peoples-money-cycle5.2026-10-15",
+      "fragment": null,
+      "line": 17,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/sarah-sayeed.md",
+      "to": "person.sarah-sayeed",
+      "fragment": null,
+      "line": 8,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/nyc-cec-staff-2026-10-18.md",
+      "from": "source.nyc.cec.staff.2026-10-18",
+      "toPath": "docs/knowledge-bank/people/wendy-trull.md",
+      "to": "person.wendy-trull",
       "fragment": null,
       "line": 9,
       "kind": "link"

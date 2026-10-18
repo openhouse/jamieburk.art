@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Wiki fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -43,6 +43,13 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.benepass.runbooks-and-learning` | critical | visible-proven | none | Prepare one inspectable sample. |
 | `requirement.benepass.quantified-prioritization` | critical | visible-weak | source | Use only supported HJE figures and explain the decision they informed. |
 
+## Circle O - Operations Manager
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.circle-o-operations-manager-2026.arts-operations` | critical | visible-qualified | none | Lead with specific recurring arts-operating examples and preserve collective credit. |
+| `requirement.circle-o-operations-manager-2026.access-practice` | critical | experience-gap | role-context | State genuine willingness to learn; do not claim lived Disabled experience or access-provider booking expertise. |
+
 ## CodePath - Senior Program Manager, Claude Corps
 
 | Requirement | Importance | Status | Gap | Next action |
@@ -62,6 +69,13 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.technical-test-fluency` | critical | source-needed | source | Verify current hands-on evidence and prepare a bounded technical demonstration if supportable. |
 | `requirement.codepath.proportionate-process` | critical | visible-proven | none | Explain one instance of intentionally removing or declining process. |
 | `requirement.codepath.ai-automation` | important | visible-qualified | wording | Demonstrate one measured automation loop tied to delivery or QA. |
+
+## NYC OTI / Civic Engagement Commission — Programs Project Manager 797003
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-cec-797003.community-operations` | critical | visible-weak | role-context | Map dated operating examples and collective credit to the employer's criteria. |
+| `requirement.oti-cec-797003.tools-and-training` | critical | visible-weak | source | Verify exact tools and training examples; do not infer Airtable proficiency from generic systems work. |
 
 ## NYC OTI - PIT Crew Senior Product Designer 782373
 

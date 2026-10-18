@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to WOWList orientation
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `97885e6455f68e3cecd30808faa1379d3d960c3b`
+**Generation time:** 2026-10-18T19:05:43-04:00
+**Source fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
 
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `part_of` (frontmatter)
 - [WOW List - Senior Product Manager role-fit brief](../../applications/wowlist-senior-product-manager-oti-782366.md) - `prose_link` (markdown)
@@ -19,6 +19,7 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [WOW List Relational Curation](../../methods/wowlist-relational-curation.md) - `related_to` (frontmatter)
+- [Circle O - Operations Manager](../../opportunities/circle-o-operations-manager-2026.md) - `related_to` (frontmatter)
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Live project-website audit and restored-surface close reading](../../sources/project-website-live-audit-2026-08-14.md) - `related_to` (frontmatter)
 - [Governed WOW List knowledge repository](../../sources/wowlist-knowledge-repository-2026.md) - `related_to` (frontmatter)

@@ -92,7 +92,8 @@ const workMetaSchema = z.object({
   evidence: z.array(z.string()),
   knownOpenProtected: z.object({
     known: z.string(),
-    open: z.string(),
+    open: z.string().optional(),
+    editorialOpen: z.string().optional(),
     protected: z.string()
   })
 });
@@ -191,7 +192,7 @@ const workItemsInput = [
     knownOpenProtected: {
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
-      open:
+      editorialOpen:
         "Internal workflow diagrams and detailed revenue breakdowns require separate review before publication.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
@@ -307,7 +308,7 @@ const workItemsInput = [
     knownOpenProtected: {
       known:
         "Contemporary reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition; retained Git histories document his direct campaign-site implementation and maintenance alongside public-safe coalition memory, source maps, policy-communications materials, and follow-up systems.",
-      open:
+      editorialOpen:
         "Additional collaborators, meeting materials, internal artifacts, and screenshots require specific approval.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
@@ -407,7 +408,7 @@ const workItemsInput = [
     knownOpenProtected: {
       known:
         "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
-      open:
+      editorialOpen:
         "Additional screenshots and archive links require separate review before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
@@ -494,7 +495,7 @@ const workItemsInput = [
     knownOpenProtected: {
       known:
         "Jamie built and maintained the campaign's public web stack, customized its theme, and implemented its principal action routes for a collaborator-led mutual-aid effort.",
-      open:
+      editorialOpen:
         "Additional implementation artifacts and collaborator role details require separate review before publication.",
       protected:
         "Applicant, grantee, donor, subscriber, payment, credential, private correspondence, and sensitive operational records remain offline."
@@ -629,7 +630,7 @@ const workItemsInput = [
     knownOpenProtected: {
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
-      open:
+      editorialOpen:
         "Additional named participants, photographs, and artifacts require consent and approval.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
