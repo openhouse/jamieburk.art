@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Knowledge Wiki Graph / Source-Backed Team Memory
 
-**Source commit:** `78663f089350d64d163f6ff3b592fe74d5a07505`
-**Generation time:** 2026-10-18T13:25:22-04:00
+**Source commit:** `5867b1647fb6eb39387d3697e6d054c2b2fa0730`
+**Generation time:** 2026-10-18T14:57:09-04:00
 **Source fingerprint:** `49ed4b20d129fc37d1033a146ea9d21561b94440aa45a231d7015b6277884d0f`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
