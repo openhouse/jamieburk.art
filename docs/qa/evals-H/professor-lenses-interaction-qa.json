@@ -1,11 +1,12 @@
 {
-  "reportVersion": 6,
-  "checkedAt": "2026-10-13T17:25:53.770Z",
-  "baseUrl": "http://127.0.0.1:3224",
-  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
+  "reportVersion": 7,
+  "checkedAt": "2026-10-18T18:45:59.392Z",
+  "baseUrl": "http://127.0.0.1:42087",
+  "publicSurfaceFingerprint": "730aaa4b9155058d977e23b6578b5ab2d561e9a9d7412c6b5603e5374913a9b8",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 154,
-  "method": "Fresh Playwright Chromium keyboard interaction and DOM/viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
+  "publicSurfaceFileCount": 155,
+  "fingerprintUnchangedDuringObservation": true,
+  "method": "Fresh Node 26 Playwright headless Google Chrome keyboard interaction and DOM/viewport inspection on the locally served candidate. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
@@ -16,7 +17,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgb(209, 162, 63)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -26,7 +28,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgb(26, 35, 43)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -36,7 +39,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgba(26, 35, 43, 0.78)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -46,7 +50,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgba(26, 35, 43, 0.78)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -56,7 +61,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgba(26, 35, 43, 0.78)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -66,7 +72,8 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgba(26, 35, 43, 0.78)",
+        "withinViewport": true
       },
       {
         "tag": "a",
@@ -76,9 +83,21 @@
         "id": null,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)"
+        "outlineColor": "rgba(26, 35, 43, 0.78)",
+        "withinViewport": true
       }
     ],
+    "firstFocus": {
+      "tag": "a",
+      "text": "Skip to content",
+      "href": "#main",
+      "focusVisible": true,
+      "id": null,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(209, 162, 63)",
+      "withinViewport": true
+    },
     "skipLinkIsFirst": true,
     "skipActivation": {
       "hash": "#main",
@@ -87,6 +106,41 @@
     "passed": true
   },
   "mobileNavigation": {
+    "mobileInitialTabSequence": [
+      {
+        "tag": "a",
+        "text": "Skip to content",
+        "href": "#main",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)",
+        "withinViewport": true
+      },
+      {
+        "tag": "a",
+        "text": "JBJamie Burkart",
+        "href": "/",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(26, 35, 43)",
+        "withinViewport": true
+      },
+      {
+        "tag": "summary",
+        "text": "MenuClose menu",
+        "href": null,
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(26, 35, 43)",
+        "withinViewport": true
+      }
+    ],
     "menuFocusBeforeOpen": {
       "tag": "summary",
       "text": "MenuClose menu",
@@ -95,7 +149,8 @@
       "id": null,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "outlineColor": "rgb(209, 162, 63)"
+      "outlineColor": "rgb(26, 35, 43)",
+      "withinViewport": true
     },
     "menuOpen": true,
     "firstMobileMenuLink": {
@@ -106,12 +161,38 @@
       "id": null,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "outlineColor": "rgb(209, 162, 63)"
+      "outlineColor": "rgb(26, 35, 43)",
+      "withinViewport": true
+    },
+    "menuClosedAfterToggle": true,
+    "mobileAboutFocus": {
+      "tag": "a",
+      "text": "About",
+      "href": "/about",
+      "focusVisible": true,
+      "id": null,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(26, 35, 43)",
+      "withinViewport": true
+    },
+    "destination": {
+      "path": "/about",
+      "h1": "About",
+      "mainPresent": true
     },
     "passed": true
   },
+  "desktopNavigation": {
+    "startRoute": "/",
+    "destinationRoute": "/about",
+    "linkText": "About",
+    "destinationH1": "About",
+    "mainPresent": true,
+    "passed": true
+  },
   "reflow": {
-    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is the more stringent WCAG reflow proxy for 400% zoom.",
+    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is a narrower reflow proxy. Browser zoom and assistive technology were not human-tested.",
     "rows": [
       {
         "route": "/",
@@ -242,5 +323,19 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true
+  "passed": true,
+  "visualFocusInspection": {
+    "performed": true,
+    "observations": [
+      "The first keyboard focus visibly reveals Skip to content with an outline; activation moves focus to main.",
+      "The mobile menu exposes Work with a visible focus outline; menu close and reopen are keyboard-operable, and keyboard activation of About completes navigation."
+    ],
+    "supportingScreenshotsRetainedInPublicGit": false
+  },
+  "supersededReceipt": "historical-pre-candidate/professor-lenses-interaction-qa-2026-10-13-before-2026-10-18.json",
+  "provenance": {
+    "observer": "release-reader-b",
+    "observationDate": "2026-10-18",
+    "priorReceiptPreservedByteForByte": true
+  }
 }

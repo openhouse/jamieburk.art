@@ -65,3 +65,5 @@ jobs:
         run: git diff --check HEAD^...HEAD
       - name: Run portfolio checks
         run: npm run check
+      - name: Test exact staging-A release evidence
+        run: node --test scripts/tests/staging-release-contract.test.mjs

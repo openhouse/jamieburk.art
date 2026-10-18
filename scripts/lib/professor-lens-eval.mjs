@@ -43,15 +43,15 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-x.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-y.json",
-  "docs/qa/evals-H/margaret-morse-final-2026-08-29-z.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-x.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-y.json",
-  "docs/qa/evals-H/warren-sack-final-2026-08-29-z.json"
+  "docs/qa/evals-H/margaret-morse-final-2026-10-18-a.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-10-18-b.json",
+  "docs/qa/evals-H/margaret-morse-final-2026-10-18-c.json",
+  "docs/qa/evals-H/warren-sack-final-2026-10-18-a.json",
+  "docs/qa/evals-H/warren-sack-final-2026-10-18-b.json",
+  "docs/qa/evals-H/warren-sack-final-2026-10-18-c.json"
 ];
 
-const approvedCandidateSha256 = "7f952b3bdbe8870e27c2ce55f85bcfff28536ddd40df358c00502e811248a6bf";
+const approvedCandidateSha256 = "ea63cae85d422bac902f81b0236702d5065133749be643fe70ab46a94d7df788";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -104,6 +104,12 @@ export function evaluateProfessorLenses({
   const normalizedAboutText = aboutText.replace(/\s+/g, " ");
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const distinctReadersPerLens = ["PR-015", "PR-016"].every((evalId) => {
+    const cards = finalScorecards.filter((card) => card.evalId === evalId);
+    return cards.length === 3 && cards.every((card) =>
+      typeof card.reviewerId === "string" && card.reviewerId.trim().length > 0
+    ) && new Set(cards.map((card) => card.reviewerId.trim())).size === 3;
+  });
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
@@ -280,7 +286,7 @@ export function evaluateProfessorLenses({
     criterion(
       "unanimous-holdouts",
       "Three final holdouts per lens score the bound candidate at 4 with no failing judge.",
-      finalScorecards.length === 6 &&
+      finalScorecards.length === 6 && distinctReadersPerLens &&
         finalScorecards.every((scorecard) => scorecard.phase === "holdout" &&
           scorecard.score === 4 && scorecard.pass === true &&
           scorecard.candidateSha256 === candidateSha256),

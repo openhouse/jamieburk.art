@@ -1,0 +1,246 @@
+{
+  "reportVersion": 6,
+  "checkedAt": "2026-10-13T17:25:53.770Z",
+  "baseUrl": "http://127.0.0.1:3224",
+  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 154,
+  "method": "Fresh Playwright Chromium keyboard interaction and DOM/viewport inspection on the exact Node 26 production build. This is not a human screen-reader or assistive-technology session.",
+  "keyboard": {
+    "desktopTabSequence": [
+      {
+        "tag": "a",
+        "text": "Skip to content",
+        "href": "#main",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "JBJamie Burkart",
+        "href": "/",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "Work",
+        "href": "/work",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "Technical Operations",
+        "href": "/work/technical-operations",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "href": "/about",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "Resume",
+        "href": "/resume",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "/contact",
+        "focusVisible": true,
+        "id": null,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(209, 162, 63)"
+      }
+    ],
+    "skipLinkIsFirst": true,
+    "skipActivation": {
+      "hash": "#main",
+      "activeElementId": "main"
+    },
+    "passed": true
+  },
+  "mobileNavigation": {
+    "menuFocusBeforeOpen": {
+      "tag": "summary",
+      "text": "MenuClose menu",
+      "href": null,
+      "focusVisible": true,
+      "id": null,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(209, 162, 63)"
+    },
+    "menuOpen": true,
+    "firstMobileMenuLink": {
+      "tag": "a",
+      "text": "Work",
+      "href": "/work",
+      "focusVisible": true,
+      "id": null,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(209, 162, 63)"
+    },
+    "passed": true
+  },
+  "reflow": {
+    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is the more stringent WCAG reflow proxy for 400% zoom.",
+    "rows": [
+      {
+        "route": "/",
+        "width": 640,
+        "httpStatus": 200,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "overflowElements": 0,
+        "overflowDetails": [],
+        "h1Count": 1,
+        "mainPresent": true,
+        "passed": true
+      },
+      {
+        "route": "/about",
+        "width": 640,
+        "httpStatus": 200,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "overflowElements": 0,
+        "overflowDetails": [],
+        "h1Count": 1,
+        "mainPresent": true,
+        "passed": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "httpStatus": 200,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowElements": 0,
+        "overflowDetails": [],
+        "h1Count": 1,
+        "mainPresent": true,
+        "passed": true
+      },
+      {
+        "route": "/about",
+        "width": 320,
+        "httpStatus": 200,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowElements": 0,
+        "overflowDetails": [],
+        "h1Count": 1,
+        "mainPresent": true,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "semanticReadingOrder": {
+    "scope": "/about landmarks and first 20 headings",
+    "landmarks": [
+      {
+        "tag": "header",
+        "ariaLabel": null
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Primary navigation"
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Mobile navigation"
+      },
+      {
+        "tag": "main",
+        "ariaLabel": null
+      },
+      {
+        "tag": "footer",
+        "ariaLabel": null
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Footer navigation"
+      }
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "About"
+      },
+      {
+        "level": 2,
+        "text": "Systems people can inhabit"
+      },
+      {
+        "level": 3,
+        "text": "Harry J. Epstein Company"
+      },
+      {
+        "level": 3,
+        "text": "NYC Artist Coalition and FairRentNYC"
+      },
+      {
+        "level": 3,
+        "text": "Sunday Dinner and 196"
+      },
+      {
+        "level": 3,
+        "text": "WOWList"
+      },
+      {
+        "level": 3,
+        "text": "Knowledge Wiki Graphs"
+      },
+      {
+        "level": 3,
+        "text": "Limits of this comparison"
+      },
+      {
+        "level": 2,
+        "text": "Sources and notes"
+      },
+      {
+        "level": 2,
+        "text": "Looking for technical project management, product operations, implementation, or knowledge-systems support?"
+      }
+    ],
+    "passed": true
+  },
+  "residualHumanGates": [
+    "Human screen-reader review",
+    "Human browser zoom review",
+    "Jamie visual and content approval",
+    "Production deployment and indexing approval"
+  ],
+  "passed": true
+}

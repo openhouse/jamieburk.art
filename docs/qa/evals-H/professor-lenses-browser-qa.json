@@ -1,11 +1,12 @@
 {
-  "reportVersion": 8,
-  "checkedAt": "2026-10-13T17:25:53.770Z",
-  "baseUrl": "http://127.0.0.1:3224",
-  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
+  "reportVersion": 9,
+  "checkedAt": "2026-10-18T18:45:59.392Z",
+  "baseUrl": "http://127.0.0.1:42087",
+  "publicSurfaceFingerprint": "730aaa4b9155058d977e23b6578b5ab2d561e9a9d7412c6b5603e5374913a9b8",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 154,
-  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix. These exact captures were visually inspected while the unchanged-candidate matrix continued.",
+  "publicSurfaceFileCount": 155,
+  "fingerprintUnchangedDuringObservation": true,
+  "captureMethod": "Fresh Node 26 Playwright headless Google Chrome viewport captures of the locally served candidate. Four new captures were visually inspected. The full responsive accessibility matrix is governed separately.",
   "routes": [
     {
       "path": "/",
@@ -15,6 +16,7 @@
         {
           "route": "/",
           "name": "desktop",
+          "file": "2026-10-18-browser-home-desktop.png",
           "requestedViewport": {
             "width": 1280,
             "height": 900
@@ -23,13 +25,13 @@
           "pixelHeight": 900,
           "httpStatus": 200,
           "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
-          "file": "candidate-home-desktop.png",
-          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "capturedAt": "2026-10-18T18:45:48.058Z",
           "pageErrors": []
         },
         {
           "route": "/",
           "name": "mobile",
+          "file": "2026-10-18-browser-home-mobile.png",
           "requestedViewport": {
             "width": 375,
             "height": 812
@@ -38,8 +40,7 @@
           "pixelHeight": 812,
           "httpStatus": 200,
           "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
-          "file": "candidate-home-viewport.png",
-          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "capturedAt": "2026-10-18T18:45:48.895Z",
           "pageErrors": []
         }
       ]
@@ -52,6 +53,7 @@
         {
           "route": "/about",
           "name": "desktop-through-line",
+          "file": "2026-10-18-browser-about-desktop.png",
           "requestedViewport": {
             "width": 1280,
             "height": 900
@@ -59,14 +61,14 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "06711757e56bf06e021ecb43c1bdf036f7d07a052b2b1081518a274b1e7bffa5",
-          "file": "professor-lenses-about-desktop.png",
-          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "sha256": "3ec6c9bff28b2d4f8e93f6cdb85d0159203daf1dac8947b02a5885b73a791e27",
+          "capturedAt": "2026-10-18T18:45:49.792Z",
           "pageErrors": []
         },
         {
           "route": "/about",
           "name": "mobile-through-line",
+          "file": "2026-10-18-browser-about-mobile.png",
           "requestedViewport": {
             "width": 375,
             "height": 1200
@@ -74,25 +76,33 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "03ecf72d7f01f852a719c8a778935fbbff6690bf074c25528ccdeac7e07af048",
-          "file": "professor-lenses-about-mobile.png",
-          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "sha256": "a566de810fe6026481e985e80b4cbda05b0901d65c2305ada57d5e80fa206c12",
+          "capturedAt": "2026-10-18T18:45:50.707Z",
           "pageErrors": []
         }
       ]
     }
   ],
   "passed": true,
-  "verification": "Fresh home viewport and About through-line captures, complete responsive route matrix, and separate keyboard/mobile/reflow observations are bound to this public candidate. Human visual and accessibility approval remains separate.",
+  "verification": "Fresh homepage viewport and About through-line captures are bound to the unchanged public candidate. Keyboard, mobile navigation, and reflow observations are recorded separately in professor-lenses-interaction-qa.json. The 60-row responsive matrix remains a separate gate.",
   "browserDiagnostics": [],
-  "screenshotCapturedAt": "2026-10-13T17:19:12.174Z",
+  "screenshotCapturedAt": "2026-10-18T18:45:48.058Z",
   "visualInspection": {
     "performed": true,
+    "checkedAt": "2026-10-18T18:46:50.584Z",
     "observations": [
-      "Desktop and mobile homepage captures show the role, name, value statement, actions, photo caption, and credit without clipping or overlap.",
-      "Desktop and mobile About captures frame Systems people can inhabit and the stated recursive method beneath the sticky navigation.",
-      "A later duplicate capture produced during smooth scrolling was rejected; retained images are the inspected earlier captures of the identical public-surface fingerprint."
+      "The desktop homepage shows role, name, value statement, two actions, caption, and credit without clipping or overlap; the following section begins within the 900-pixel viewport.",
+      "The mobile homepage shows the role, two-line name, value statement, body copy, both actions, caption, and credit within the 812-pixel viewport without horizontal clipping.",
+      "The desktop About capture shows the through-line, linked continuities, recursive method, and the start of the first project loop beneath the sticky navigation.",
+      "The mobile About capture shows the complete lineage and method beneath the sticky navigation, followed by the three-systems-loops introduction."
     ],
     "boundary": "Agent visual inspection is not human accessibility review, endorsement, or publication approval."
+  },
+  "supersededReceipt": "historical-pre-candidate/professor-lenses-browser-qa-2026-10-13-before-2026-10-18.json",
+  "provenance": {
+    "observer": "release-reader-b",
+    "observationDate": "2026-10-18",
+    "priorReceiptPreservedByteForByte": true,
+    "oldScreenshotFilesPreserved": true
   }
 }

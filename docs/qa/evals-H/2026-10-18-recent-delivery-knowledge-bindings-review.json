@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "id": "recent-delivery-knowledge-bindings-semantic-review-2026-10-18",
+  "reviewedAt": "2026-10-18T18:46:29Z",
+  "reviewerId": "release-reader-a",
+  "reviewKind": "fresh bounded AI-assisted semantic review and deterministic binding refresh",
+  "decision": "Supported additive intake and projections; no semantic regression found within the reviewed public-safe canonical scope.",
+  "authorization": "Bounded rebinding authorized after independent semantic review. This receipt does not grant publication, merge, deployment, rights or client acceptance.",
+  "scope": {
+    "sourceChangeCommit": "3d3be8d41",
+    "comparisonEdition": "3d3be8d41^",
+    "inspected": [
+      "apps/www/src/data/knowledge-bank/recent-delivery-2026-10.ts",
+      "apps/www/src/data/knowledge-bank/records.ts",
+      "apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "apps/www/src/data/knowledge-bank/schema.ts",
+      "apps/www/src/data/knowledge-bank/dcla-listening-session-2026-08.ts",
+      "apps/www/src/content/work/fair-rent-nyc.mdx",
+      "apps/www/src/app/work/technical-operations/page.tsx",
+      "apps/www/src/data/knowledge-bank/public-registry.json"
+    ],
+    "method": "Compared changed public-safe canonical records, projections and agency relations with the predecessor edition; reconstructed each old expected fingerprint by reverting only the corresponding additive material in memory. Reviewed current source boundaries, evidence closure, date/state distinctions, public-registry redaction and credit. No candidate rollback or private-record access was used.",
+    "sourceHashesSha256": {
+      "apps/www/src/data/knowledge-bank/recent-delivery-2026-10.ts": "dadfeeaceba857a3d6139290f9e2a249b69642968299078b685faffc7237cb9c",
+      "apps/www/src/data/knowledge-bank/records.ts": "34e4eaf189825da450618a6a02e08cbb1af911a12cf8c9eb4d5da3028272b45f",
+      "apps/www/src/data/knowledge-bank/agency-graph.ts": "f14389ecb2c0dabfa7c4a86cc8b0a6e73731a2b4aaa6f07c2156be936b691a85",
+      "apps/www/src/data/knowledge-bank/schema.ts": "befca2386a4238e937a9039fdfb92f76446d975a181e822fae0911ea818472a5",
+      "apps/www/src/content/work/fair-rent-nyc.mdx": "5db9d849fc92246dcab6d9bb79ac9559e9627f913dad9a285cc18da050e3d7ea",
+      "apps/www/src/app/work/technical-operations/page.tsx": "c7ac502d5eef945b1bcd639abc8507a32d28e01ca20ebcbda9080dd81a72670d"
+    }
+  },
+  "baseline": {
+    "evaluator": "evaluateKnowledgeBank",
+    "accepted": false,
+    "weightedScore": 1,
+    "belowMinimum": [
+      "KB-EVAL-INTAKE",
+      "KB-EVAL-ATOMICITY",
+      "KB-EVAL-SCOPE",
+      "KB-EVAL-MATURATION",
+      "KB-EVAL-PROJECTION",
+      "KB-EVAL-COVERAGE",
+      "KB-EVAL-SAFETY",
+      "KB-EVAL-RECOMPOSITION",
+      "KB-EVAL-AGENCY",
+      "KB-EVAL-KCTH-FIELD-PRACTICE",
+      "KB-EVAL-NYCAC-FACEBOOK-EVENTS",
+      "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    ],
+    "errors": [],
+    "historicalHoldoutCompleteReportedByEvaluator": true,
+    "diagnosis": "The twelve failures share stale whole-surface or graph bindings. Existing corpus-specific semantics remained satisfied. Agency counts omitted three additive entities and relations; the configured relation roster also needed the three additions so every new relation receives semantic checks."
+  },
+  "semanticReview": [
+    {
+      "project": "Wonderville meeting",
+      "basis": "Canonical October 4 production handoff and October 7 post-event summary, reviewed October 18; October 5 meeting date remains explicit.",
+      "finding": "The new projection distinguishes a delivered two-page guide from the meeting that occurred. Venue questions and proposed setup are not recast as proof that every planned cue ran.",
+      "creditAndPrivacy": "Organizing and day-of delivery remain shared. No attendance total, policy adoption, sole authorship, correspondence, participant identities or original production document is projected."
+    },
+    {
+      "project": "Arts listening-session animation",
+      "basis": "Canonical dated October 3 publication observation for Lin Tyrpien's article and the existing bounded event-date/venue record.",
+      "finding": "A later publication observation legitimately advances the earlier planning state without rewriting the historical August record. Jamie's animation contribution stays separate from Lin's article authorship; August 26 event and October 3 observation dates are explicit.",
+      "creditAndPrivacy": "No exact publication timestamp, current page availability, exact published media edition, reuse right, audience reach or policy outcome is inferred. The current article page was unavailable during the October 18 source review."
+    },
+    {
+      "project": "Red Hook portrait-project handoff",
+      "basis": "Canonical October 7 delivery/proof summary and the recorded October 18 approval for a limited text-only summary naming Rusty and the project.",
+      "finding": "Seven delivered recordings, current-versus-earlier edition handling, fifty checked QR destinations and thirteen inspected proof pages are bounded delivery and preparation states.",
+      "creditAndPrivacy": "Recordings, participant names and private messages stay excluded. Delivery is not client acceptance, payment, printing, installation or proof of which exact audio edition became public. The reviewer did not access private files to corroborate the approval."
+    }
+  ],
+  "bindingRefreshes": [
+    {
+      "file": "scripts/lib/knowledge-evals.mjs",
+      "field": "KCTH_FIELD_PRACTICE_REVIEW_LOCKS.sharedPublicSurfacesSha256",
+      "oldSha256": "49d5bdc1e2895aecdee9c2bfb5f54ec8275b69a734b0f4b814c8d702e12ff18f",
+      "newSha256": "ae84b2039030ecab5f050fedb634a5520242a7952e4d471402e7d20967d89f62",
+      "cause": "The shared technical-operations surface gained only the bounded Red Hook section and Claim import; KC Town Hall material and the work-data file were unchanged."
+    },
+    {
+      "file": "scripts/lib/knowledge-evals.mjs",
+      "field": "NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.governanceBindingsSha256",
+      "oldSha256": "ab1e3d00c61159adc19e54a5241dea2b932c23f341f4ad8a70950d3ffcfb7114",
+      "newSha256": "ada44c38f6277be304a2a8ef54560b04453c7930796e0b7d4f8721f03e244c7b",
+      "cause": "The whole Fair Rent page source order gained the public animation-article source. Existing event proof coverage and event-filtered occurrences were unchanged."
+    },
+    {
+      "file": "scripts/lib/knowledge-evals.mjs",
+      "fields": [
+        "NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS.caseStudyMdxSha256",
+        "NYCAC_FACEBOOK_POST_REVIEW_LOCKS.caseStudyMdxSha256"
+      ],
+      "oldSha256": "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727",
+      "newSha256": "5db9d849fc92246dcab6d9bb79ac9559e9627f913dad9a285cc18da050e3d7ea",
+      "cause": "The shared Fair Rent MDX gained the two canonical recent-delivery Claim sections. Existing event/post corpus content and interpretation were unchanged."
+    },
+    {
+      "file": "evals/knowledge-bank/evals.json",
+      "field": "pilot.archiveProduction.approvedContentSha256",
+      "oldSha256": "388046b6a79c394825771a72178bf13b3c15aafdfd497b03dfa5a809e500342c",
+      "newSha256": "faa14d71544ff8ac685adec6fad74f090b0fe7c8f4917d9c7e82c899235ae631",
+      "cause": "This aggregate includes the entire Fair Rent page metadata and MDX. Only the recent-delivery page metadata and two Claim sections changed; archive-specific arrays, lab surface, proof coverage and project note were unchanged."
+    },
+    {
+      "file": "evals/knowledge-bank/evals.json",
+      "field": "pilot.agencyGraph.approvedGraphSha256",
+      "oldSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "newSha256": "de25c53b7d24088804286447e749f1f77cce424028a40061f2c31171f9287402",
+      "cause": "Three bounded recent-delivery relations were added; the original thirty-four relations were unchanged. All thirty-seven current relations were reviewed for actor/object, claim/source support, purpose/result, credit and privacy closure."
+    }
+  ],
+  "agencyRosterRefresh": {
+    "expectedEntityCount": {
+      "old": 32,
+      "new": 35
+    },
+    "expectedRelationCount": {
+      "old": 34,
+      "new": 37
+    },
+    "addedRelationIds": [
+      "REL-RECENT-WONDERVILLE-HANDOFF",
+      "REL-RECENT-DCLA-ANIMATION",
+      "REL-RECENT-RED-HOOK-HANDOFF"
+    ],
+    "rationale": "Counts and the graph hash alone would not add the new relations to roster-scoped semantic checks. All three are explicitly included; enactment relations and open inquiries remain unchanged."
+  },
+  "invariants": [
+    "All criterion definitions, weights, minimum scores and acceptance thresholds remain unchanged.",
+    "No canonical source, claim, projection, agency content, professor rubric or professor receipt is altered by this binding refresh.",
+    "Existing holdout records remain historical and unmodified. Their presence is not claimed as fresh independent review of this edition.",
+    "This new receipt records one bounded independent semantic review, not multiple judges or human consent.",
+    "Past and present well-supported projects may count with their dates explicit; no professor-rubric change is made here."
+  ],
+  "limits": [
+    "Review is grounded in the public-safe canonical summaries and recorded approval boundary, not fresh inspection of underlying private records.",
+    "No protected paths, identifiers, raw records, participant information or private workspace topology are included in this receipt.",
+    "The unavailable article page and media-edition/reuse limits remain unresolved rather than converted into a new factual or rights claim.",
+    "A deterministic pass after rebinding will establish the configured local checks only, not production release approval or a new full independent holdout panel."
+  ],
+  "verification": {
+    "status": "local checks passed",
+    "completedAt": "2026-10-18T18:48:44Z",
+    "runtime": "Node.js 26.5.0",
+    "evaluatedInputHashesSha256": {
+      "scripts/lib/knowledge-evals.mjs": "99d4206db8a7aa8c7fb01fd9eabb2a6c1ea4fd6a1781aebdb7f758573556b268",
+      "evals/knowledge-bank/evals.json": "e798d4d09e2bd1f3f16f45ac5d35e8e6d25a2631815c1904613d42e6d927c88f"
+    },
+    "criteriaAndTargetsSha256": "7faf6bb7c10736cfaf8d1e40ccd9c89bc3187e909ad2f81873b5c6d94298e845",
+    "commands": [
+      {
+        "command": "npm run check:knowledge-evals",
+        "exitCode": 0,
+        "result": {
+          "recentDeliverySummaries": 3,
+          "listeningSessionChecks": 41,
+          "listeningSessionFullTranscriptReviewed": false,
+          "listeningSessionPublicationReady": false,
+          "applicationStatusChecks": 11,
+          "knowledgeBankAccepted": true,
+          "knowledgeBankWeightedScore": 5,
+          "knowledgeBankCriteria": 32,
+          "professionalRecords": 12,
+          "professionalRecordCanonicalReferences": 7,
+          "professionalRecordGovernedGaps": 4
+        }
+      },
+      {
+        "command": "npm run test:knowledge-evals",
+        "exitCode": 0,
+        "tests": 288,
+        "passed": 288,
+        "failed": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "durationMs": 70719.865875
+      },
+      {
+        "command": "evaluateKnowledgeBank() fresh post-refresh call",
+        "exitCode": 0,
+        "accepted": true,
+        "weightedScore": 5,
+        "criteria": 32,
+        "belowMinimum": [],
+        "errors": [],
+        "archiveBindingMatches": true,
+        "fieldPracticeReviewLocksMatch": true,
+        "facebookEventReviewLocksMatch": true,
+        "facebookPostReviewLocksMatch": true
+      }
+    ],
+    "additionalChecks": [
+      "git diff --check passed for all three authorized files.",
+      "Compared the evaluator against HEAD after reversing only the four authorized hash substitutions; no other evaluator changes were present.",
+      "Compared suite JSON against HEAD after reversing only archive hash, agency hash/counts and the three added roster entries; criteria, thresholds, existing agency requirements and historical holdout data were unchanged.",
+      "All six reviewed canonical and surface file hashes remained exact.",
+      "Receipt JSON parses and its public-safety scan found no local source paths or protected source identifiers."
+    ],
+    "holdoutInterpretation": "The evaluator still reports its existing two historical consecutive holdouts. No new full holdout run is claimed by this refresh; this receipt is the fresh bounded semantic review only.",
+    "releaseState": "Local verification only. No commit, publication, merge or deployment performed."
+  }
+}

@@ -65,7 +65,7 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   // Re-reviewed 2026-10-13: editorial backlog moved off reader surfaces;
   // KC Town Hall wording, evidence, holds, and credit/service-unit limits hold.
   // Receipt: docs/evals/runs/2026-10-13-kcth-shared-surface-review.json
-  sharedPublicSurfacesSha256: "49d5bdc1e2895aecdee9c2bfb5f54ec8275b69a734b0f4b814c8d702e12ff18f",
+  sharedPublicSurfacesSha256: "ae84b2039030ecab5f050fedb634a5520242a7952e4d471402e7d20967d89f62",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-08-21 after governed public-safe records gained new linked
@@ -91,9 +91,9 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   canonicalKnowledgeSha256: "29ff741260694cc37b8e5534632fd852551085ceeb706692e1b988a5963be586",
   reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
   articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
-  governanceBindingsSha256: "ab1e3d00c61159adc19e54a5241dea2b932c23f341f4ad8a70950d3ffcfb7114",
+  governanceBindingsSha256: "ada44c38f6277be304a2a8ef54560b04453c7930796e0b7d4f8721f03e244c7b",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727",
+  caseStudyMdxSha256: "5db9d849fc92246dcab6d9bb79ac9559e9627f913dad9a285cc18da050e3d7ea",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
@@ -127,7 +127,7 @@ const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
   publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727"
+  caseStudyMdxSha256: "5db9d849fc92246dcab6d9bb79ac9559e9627f913dad9a285cc18da050e3d7ea"
 });
 const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",
