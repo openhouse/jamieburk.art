@@ -1,0 +1,193 @@
+{
+  "reviewerId": "warren-sack-a-2026-10-18-dcla-outcome",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "138447722dc8f7e55082fec85e5a5fd478521272c86476b8b0a3fb83e343a417",
+  "score": 4,
+  "pass": true,
+  "decision": "PASS_INDIVIDUAL_REVIEW",
+  "reviewScope": "Individual assessable PR-016 requirements only. The three-reviewer median and minimum-score aggregate are not observed or certified by this review.",
+  "lensDisclosure": "Fictionalized Warren Sack analytical lens applied by a model. This is not Warren Sack's participation, judgment, endorsement, or approval, and it is not human approval.",
+  "evidence": {
+    "overallReading": "The candidate makes a recurring social-systems method reconstructable in concrete public-facing work. Its strongest feature is the connection between a relationship model, an interface people use together, and the records or reusable patterns that let someone continue. The About page gives the reader the complete sequence, and the linked case texts supply distinct operational examples rather than relying on coursework or a list of tools. The score is for the bounded public demonstration, not independent verification of every underlying historical event.",
+    "requirementAssessments": [
+      {
+        "requirement": "At least three current public-safe projects make observation, model, interface, social use, and documentation reconstructable.",
+        "status": "pass",
+        "basis": "Harry J. Epstein Company, NYC Artist Coalition / FairRentNYC, and Sunday Dinner / 196 each have an explicit loop on /about and a linked case with a concrete workflow, public interface, or operating record. These are current public portfolio presentations of differently dated work; this finding does not treat all three as current production deployments."
+      },
+      {
+        "requirement": "A visible surface within two clicks of the homepage states the method plainly and links to project evidence.",
+        "status": "pass",
+        "basis": "The desktop homepage visibly links to About. /about states: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Its project headings link directly to the three cases. The packet's link map and the rendered method screenshots agree."
+      },
+      {
+        "requirement": "Social structure and information architecture connect to usable interfaces, collective participation, learning, and handoffs.",
+        "status": "pass",
+        "basis": "Customer language becomes product and ordering structure; coalition meetings and policy questions become public action paths and recoverable decision records; hospitality and artist support become invitation, orientation, access, and follow-up workflows. The learning mechanism differs by project instead of reducing every project to the same tool list."
+      },
+      {
+        "requirement": "Dated coursework is bounded lineage and does not become unsupported present technical or disciplinary claims.",
+        "status": "pass",
+        "basis": "The protected UCSC record is not reproduced. The source note holds CLM-SOCIAL-INFO-SPACES-PROTOTYPE. /about explicitly rejects structural-equivalence inference and distinguishes historical implementation from present proficiency. The lab describes early research and a proposed pilot, and the Maven certificate supports course completion only."
+      },
+      {
+        "requirement": "Median of three judges is 4 and no judge scores below 3.",
+        "status": "not_assessed",
+        "basis": "This reviewer has only its own fresh scorecard. No other review was read."
+      }
+    ],
+    "threeProjectSystemsSequenceTrace": [
+      {
+        "project": "Harry J. Epstein Company",
+        "routes": ["/about", "/work/harry-j-epstein", "/work/technical-operations"],
+        "observeRelationships": "Customer language, product judgment, the company's public voice, internal operating habits, and recurring customer or staff questions establish the material to understand.",
+        "modelSystem": "Product information, content, marketing, ordering, and follow-up are treated as one customer-and-team system. The case translates recurring friction into a scoped requirement and names the limits of available analytics.",
+        "prototypeInterface": "Incremental releases change content patterns, product information, marketing, or the e-commerce surface. The maintained storefront joins discovery, guidance, ordering, and follow-up.",
+        "socialOrCollectiveUse": "The About loop names real customer and team use. The case's Verify step has Jamie inspect the public customer path and review operational or analytical signals with stakeholders.",
+        "learningAndDocumentedHandoff": "Recurring questions and scoped analytics guide later releases; reusable patterns, ownership, and next actions carry the work to staff and later maintainers.",
+        "inspectableProof": "The five-step Listen / Frame / Implement / Verify / Continue operating specimen is explicitly labeled a reconstruction. The case also supplies an inspectable public storefront link and distinguishes that surface from private dashboards and internal documents.",
+        "recursiveThinkingVisible": "A question becomes a requirement, a release is examined in use, and the resulting reusable pattern supports the next round of maintenance.",
+        "limits": "The specimen is not an original company document or a measured historical usability-test report. The 2026 storefront capture is context for the maintained public system; it does not independently prove Jamie authored every current feature or currently possesses a historical toolset.",
+        "screenshots": [
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/harry-j-epstein-375.png",
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/harry-j-epstein-1280.png"
+        ]
+      },
+      {
+        "project": "NYC Artist Coalition / FairRentNYC",
+        "routes": ["/about", "/work/fair-rent-nyc", "/work/technical-operations"],
+        "observeRelationships": "Lived experience in cultural spaces, listening meetings, priority ballots, public sources, unresolved policy questions, and city and state actors provide the social and informational starting points.",
+        "modelSystem": "Testimony, source lineage, questions, decisions, accountable actors, and next steps are organized into recoverable campaign memory with public and protected contexts separated.",
+        "prototypeInterface": "Campaign websites, call scripts, event pages, town halls, practical sessions, hearings, and public action pathways give the model usable forms. Let NYC Dance joins an explainer, Council contact route, data, progress, coalition credit, and sources.",
+        "socialOrCollectiveUse": "The public meeting and event record, reporting, testimony, shared campaign surfaces, and source-bounded participation history establish use with collaborators. The case deliberately distinguishes platform responses from physical attendance.",
+        "learningAndDocumentedHandoff": "Running minutes, source maps, question logs, decision records, and action trackers let collaborators recover context, review decisions, and continue work across meetings and policy cycles.",
+        "inspectableProof": "The case supplies public campaign links, cited reporting and government records, and a public repository route. Its campaign-memory spine, source-map, and question-log descriptions explain the protected operating system around those public surfaces.",
+        "recursiveThinkingVisible": "A shared question is made discussable, translated into a public participation path, implemented, then carried back into source review and follow-up. Learning is visible as recoverable context and unresolved questions rather than a false claim that every question is settled.",
+        "currentOutcome": "The 2026 photo-animation recap adds a current, scoped communication outcome: Jamie created the animation, a shared Instagram artifact and article used it, and FairRentNYC's concern appeared alongside other artists' concerns. This supports communication continuity, not agency endorsement or adopted policy.",
+        "limits": "Detailed private campaign-memory contents are not inspectable in this packet, and the source registry marks quantity and role as approved first-party claims. Public events and outcomes remain collective; the packet does not independently revalidate every named collaborator on the Instagram artifact.",
+        "screenshots": [
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/fair-rent-nyc-375.png",
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/fair-rent-nyc-1280.png"
+        ]
+      },
+      {
+        "project": "Sunday Dinner / 196 Artists Residency",
+        "routes": ["/about", "/work/196-sunday-dinner"],
+        "observeRelationships": "Hospitality, trust, artist support, shared space, returning participants, and the practical needs discussed during residency orientation establish the relationships to support.",
+        "modelSystem": "Invitations, responses, hosting, onboarding, access handoffs, minimal continuity documentation, and follow-up form one participation system.",
+        "prototypeInterface": "The case provides two five-step redacted reconstructions: Receive / Orient / Configure / Hand off / Remain available for residency, and Invite / Receive / Host / Document / Continue for recurring gatherings. The interface includes a room, an invitation, and practical orientation rather than only a screen.",
+        "socialOrCollectiveUse": "Recurring gatherings and residency workflows are described as used with participants and resident artists. Public 100th and 200th event records, the protected aggregate control, and the separately bounded operating-sheet claim support recurrence without exposing participant rows.",
+        "learningAndDocumentedHandoff": "A video call makes needs and expectations discussable, configuration responds to actual practice, support remains available as direction changes, and minimal continuity records and follow-up make the next gathering or residency possible.",
+        "inspectableProof": "The two visible workflow reconstructions show concrete handoff structures and state their derivation and limits. The public event routes corroborate historical milestones; the 200th event preserves Julia Fredenburg's co-organizer credit.",
+        "recursiveThinkingVisible": "Repeated invitation, response, hosting, documentation, and follow-up carry relationships into the next cycle. Residency orientation and continued availability allow the arrangement to respond to the artist's practice.",
+        "limits": "The reconstructions demonstrate structure, not an original participant document, an artist outcome, a unique-person census, or universal adoption of a single workflow. There is no measured before-and-after account of a particular workflow revision.",
+        "screenshots": [
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/sunday-dinner-375.png",
+          "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/sunday-dinner-1280.png"
+        ]
+      }
+    ],
+    "twoClickPath": {
+      "path": [
+        {"from": "/", "linkText": "About", "to": "/about", "navigationClick": 1},
+        {"from": "/about", "linkText": "Harry J. Epstein Company", "to": "/work/harry-j-epstein", "navigationClick": 2}
+      ],
+      "methodLocation": "/about, Systems people can inhabit, immediately before Three systems loops",
+      "alternativeEvidenceLinks": ["/work/fair-rent-nyc", "/work/196-sunday-dinner"],
+      "renderedEvidence": [
+        "docs/qa/evals-H/candidate-home-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-desktop.png",
+        "docs/qa/evals-H/professor-lenses-about-mobile.png",
+        "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/practical-sequence-375.png",
+        "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/practical-sequence-1280.png"
+      ],
+      "verificationLimit": "This is a trace through the supplied rendered screenshots and captured href map, not live browser interaction. The desktop About link is visible. The mobile header shows a Menu button, but its expanded state was not supplied."
+    },
+    "courseworkVersusCurrentProofAudit": {
+      "protectedUCSCRecords": "No narrative evaluations, grades, student identifiers, private paths, or faculty testimonial text occur in the public page bodies. The source note states these records informed rubric design only and holds CLM-SOCIAL-INFO-SPACES-PROTOTYPE.",
+      "publicHistoricalLineage": "Open House is a dated public project supported by a contemporaneous article. Initiation is attributed to Jamie while communal governance and documentation remain participant work. This is contextual lineage, not evidence of present technical proficiency.",
+      "mavenCoursework": "The lab and registry identify a public completion certificate for AI Evals for Engineers and PMs. The page explicitly calls it professional development and excludes instructor affiliation and production-SaaS inference. The registry also excludes evaluator licensing, employment, and endorsement.",
+      "currentPractice": "The lab states that Knowledge Wiki Graphs is early research and an operating method in development. A two-week pilot is proposed with acceptance conditions, not represented as a completed client engagement. The CallNYC date-correction trace is a concrete current example of evidence changing public output.",
+      "historicalProducts": "WOW List distinguishes its historical community-calendar service from the current small public return threshold. CallNYC is archived, unofficial, and non-current. HJE is dated 2009-2015; its present storefront image is not a certificate of current technical proficiency.",
+      "unsupportedClaimsSearchedFor": ["invention of structural equivalence", "peer-reviewed research", "production deployment inferred from coursework", "sole authorship of collective coursework", "current Max/Jitter proficiency"],
+      "finding": "None of those unsupported claims appears in the supplied public bodies. /about expressly states that the recurring steps are an analytical pattern and do not establish structural equivalence."
+    },
+    "renderingAssessment": "All 12 supplied images were inspected. The method sentence and all three loop panels are legible at 375 and 1280 widths. Labels distinguish relationships, model, interface/use, and learning/continuity; project headings are visually recognizable as links. No clipped method or loop text is visible in the supplied crops. The homepage and About screenshots establish their navigation and contextual hierarchy, not full-page interaction behavior."
+  },
+  "gaps": [
+    {
+      "severity": "nonblocking",
+      "gap": "The strongest visible handoff specimens for HJE and Sunday Dinner are reconstructions. They demonstrate the method but do not independently establish every historical step or a measured participant-learning outcome.",
+      "suggestion": "A future approved example of one specific revision prompted by use would strengthen the recursive-learning evidence. Do not expose protected records to fill this gap."
+    },
+    {
+      "severity": "nonblocking",
+      "gap": "Some FairRentNYC operating artifacts are described rather than reproduced; first-party role and quantity claims remain distinguishable from public corroboration.",
+      "suggestion": "Retain these boundaries. A collaborator-approved, public-safe decision-to-revision example could deepen proof when authorized."
+    },
+    {
+      "severity": "scope_limit",
+      "gap": "The packet contains captured page text, links, source metadata, and selected screenshots rather than complete external source bodies or an interactive site session.",
+      "suggestion": "Do not treat this review as independent verification of every external claim, mobile-menu behavior, linked artifact accessibility, or publication permission."
+    },
+    {
+      "severity": "scope_limit",
+      "gap": "The three-judge median/minimum requirement is outside this individual review.",
+      "suggestion": "Aggregate this receipt with the other independently completed reviews for the exact same candidate before determining the PR-016 aggregate result."
+    }
+  ],
+  "safety_findings": [
+    {
+      "status": "pass_observed_boundary",
+      "finding": "The public project bodies withhold participant rows, private correspondence, access instructions, internal financial data, and protected educational records. Reconstructed workflows state their limits. This is an observation of supplied public material, not a new consent determination."
+    },
+    {
+      "status": "pass_observed_boundary",
+      "finding": "Collective credit remains visible: Richard Caceres and organizers on WOW List, Julia Fredenburg on the 200th Sunday Dinner, coalition collaborators and institutional actors on civic outcomes. Shared-account activity is not generally assigned to Jamie personally."
+    },
+    {
+      "status": "pass_observed_boundary",
+      "finding": "The DCLA recap claims a specific animation contribution and collaborative publication, not a formal partnership, policy adoption, audience impact, or institutional endorsement. Its registry preserves distinct animation credit, article inspection date, Instagram publication date, and media-use limits. The external post body and collaborator metadata were not independently inspected in this review."
+    },
+    {
+      "status": "pass_observed_boundary",
+      "finding": "The public candidate distinguishes platform-response counts from attendance, archived prototypes from current services, and proposed research engagements from completed deployments. The model review itself confers no human approval or release authority."
+    },
+    {
+      "status": "nonblocking_clarity_caution",
+      "finding": "The KC Town Hall page leads with a public funding award and appropriation while the registry clarifies that this never became an executed agreement or disbursement. No sentence in the supplied page claims receipt, expenditure, or completed redevelopment, but readers should not infer those from the award headline. This is not a PR-016 systems-method blocker."
+    }
+  ],
+  "recommendation": "Accept this individual PR-016 score of 4 for the exact candidate. The three-project sequence, plain method, evidence links, and coursework boundaries meet the individually observable requirements. Preserve the stated source limits and collective credit. Determine the aggregate only after the other independent reviews; this receipt is model review, not human approval or authorization to publish.",
+  "provenance": {
+    "packetSha256": "06ecedaaf55990ec4a1383c4c6516ee4782a079ce2980bd77bcc10e6a1e12c00",
+    "packetReadCompletely": true,
+    "packetReadMethod": "Read all 6,208 lines in sequential bounded chunks. Re-read lines 2,301-2,400 to recover the lab text affected by a truncated tool response.",
+    "candidateCapturedAt": "2026-10-18T22:38:01.853Z",
+    "screenshotsInspected": [
+      "docs/qa/evals-H/candidate-home-desktop.png",
+      "docs/qa/evals-H/candidate-home-viewport.png",
+      "docs/qa/evals-H/professor-lenses-about-desktop.png",
+      "docs/qa/evals-H/professor-lenses-about-mobile.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/practical-sequence-375.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/harry-j-epstein-375.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/fair-rent-nyc-375.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/sunday-dinner-375.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/practical-sequence-1280.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/harry-j-epstein-1280.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/fair-rent-nyc-1280.png",
+      "docs/qa/evals-H/professor-method-2026-10-18T22-37-28-269Z/sunday-dinner-1280.png"
+    ],
+    "screenshotInspectionMethod": "Each of the 12 named files was opened with view_image and visually inspected.",
+    "modelReview": true,
+    "humanApproval": false,
+    "independentFreshReview": true,
+    "otherReviewsRead": false,
+    "repositoryHistoryRead": false,
+    "implementationDiscussionRead": false,
+    "externalResearchPerformed": false,
+    "protectedSourceBodiesRead": false,
+    "sourceBoundary": "Only the supplied packet identified by SHA-256 and its 12 named screenshots were used as review evidence."
+  }
+}

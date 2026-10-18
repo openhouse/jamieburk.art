@@ -39,7 +39,9 @@ test("held publication evidence has no public citation occurrence or registry pr
   const registry = JSON.parse(readFileSync(new URL("../../apps/www/src/data/knowledge-bank/public-registry.json", import.meta.url)));
   assert.equal(knowledgeBank.pages.some(page => page.occurrences.some(item => item.claimId === claimId)), false);
   assert.equal(registry.claims.some(item => item.id === claimId), false);
-  const sourceIds = new Set(dclaAnimationPublication.sources.map(item => item.id));
+  // Public article/reel sources can be shared by a separately reviewed active
+  // outcome claim. The held credit and protected evidence must stay unexposed.
+  const sourceIds = new Set(dclaAnimationPublication.sources.filter(item => item.visibility !== "public").map(item => item.id));
   assert.equal(registry.sources.some(item => sourceIds.has(item.id)), false);
 });
 

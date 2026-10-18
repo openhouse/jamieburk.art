@@ -1,10 +1,10 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-10-18T20:30:03.926Z",
+  "checkedAt": "2026-10-18T22:36:54.809Z",
   "baseUrl": "http://127.0.0.1:3219",
-  "publicSurfaceFingerprint": "e142c112191f2aa83f315975bab38498d459753939734250a63fd3b59c62ecf8",
+  "publicSurfaceFingerprint": "455798454b6988c2b8a48de27c4b8eb70d15859fddb4dfbfc4bf3eca43944fe9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 158,
+  "publicSurfaceFileCount": 159,
   "routes": [
     "/",
     "/work",
@@ -57,16 +57,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "http://127.0.0.1:3219/work?_rsc=tXyZJ52UQVBCVsD3",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -91,7 +82,7 @@
       "clientWidth": 360,
       "scrollWidth": 360,
       "lazyImagesObserved": 7,
-      "unloadedImagesBeforeScroll": 4,
+      "unloadedImagesBeforeScroll": 5,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -265,7 +256,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=UbBg2r3egD71vdiS",
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=UbBg2r3egD71vdiS",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -274,7 +265,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=UbBg2r3egD71vdiS",
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=UbBg2r3egD71vdiS",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -301,6 +292,15 @@
           }
         },
         {
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=bkL0b33bCmi5XITf",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
           "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=bkL0b33bCmi5XITf",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -310,7 +310,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=bkL0b33bCmi5XITf",
+          "url": "http://127.0.0.1:3219/work?_rsc=UbBg2r3egD71vdiS",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -449,6 +449,15 @@
           }
         },
         {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=Dy6sk4H5x1Cco-9U",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
           "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -467,25 +476,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=Dy6sk4H5x1Cco-9U",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
           "url": "http://127.0.0.1:3219/work?tag=Civic%20Technology&_rsc=5AGoy2f1p068YQjD",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=5AGoy2f1p068YQjD",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -512,7 +503,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=5AGoy2f1p068YQjD",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -539,7 +530,80 @@
       "lazyImagesObserved": 1,
       "unloadedImagesBeforeScroll": 2,
       "failedRequests": [],
-      "canceledPrefetchRequests": []
+      "canceledPrefetchRequests": [
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Technical%20Operations&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Campaign%20Infrastructure&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Technical%20Operations&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Campaign%20Infrastructure&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        }
+      ]
     },
     {
       "viewport": 360,
@@ -556,7 +620,7 @@
       "clientWidth": 360,
       "scrollWidth": 360,
       "lazyImagesObserved": 0,
-      "unloadedImagesBeforeScroll": 1,
+      "unloadedImagesBeforeScroll": 0,
       "failedRequests": [],
       "canceledPrefetchRequests": []
     },
@@ -575,7 +639,7 @@
       "clientWidth": 360,
       "scrollWidth": 360,
       "lazyImagesObserved": 0,
-      "unloadedImagesBeforeScroll": 1,
+      "unloadedImagesBeforeScroll": 0,
       "failedRequests": [],
       "canceledPrefetchRequests": []
     },
@@ -598,7 +662,7 @@
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=WeJHchyJ-WKH7lj1",
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=WeJHchyJ-WKH7lj1",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -607,7 +671,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=WeJHchyJ-WKH7lj1",
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=WeJHchyJ-WKH7lj1",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -643,6 +707,15 @@
           }
         },
         {
+          "url": "http://127.0.0.1:3219/work?tag=Public-Facing%20Tools&_rsc=yLUdkRGz0mrmRhK7",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
           "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=yLUdkRGz0mrmRhK7",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -653,15 +726,6 @@
         },
         {
           "url": "http://127.0.0.1:3219/work?tag=Knowledge%20Systems&_rsc=yLUdkRGz0mrmRhK7",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?tag=Public-Facing%20Tools&_rsc=yLUdkRGz0mrmRhK7",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -733,7 +797,7 @@
       "clientWidth": 375,
       "scrollWidth": 375,
       "lazyImagesObserved": 7,
-      "unloadedImagesBeforeScroll": 4,
+      "unloadedImagesBeforeScroll": 5,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -925,6 +989,42 @@
           }
         },
         {
+          "url": "http://127.0.0.1:3219/work?tag=Technical%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Product%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=bkL0b33bCmi5XITf",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=bkL0b33bCmi5XITf",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
           "url": "http://127.0.0.1:3219/work?_rsc=UbBg2r3egD71vdiS",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -990,15 +1090,6 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=6WZ71Ia1u4tZi5ax",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
           "url": "http://127.0.0.1:3219/work?_rsc=Xc3IMLghCBRdWIHV",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -1037,7 +1128,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1046,7 +1137,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=Dy6sk4H5x1Cco-9U",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1064,15 +1155,6 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Civic%20Technology&_rsc=5AGoy2f1p068YQjD",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
           "url": "http://127.0.0.1:3219/work?tag=Open%20Data&_rsc=5AGoy2f1p068YQjD",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -1082,7 +1164,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=5AGoy2f1p068YQjD",
+          "url": "http://127.0.0.1:3219/work?tag=Civic%20Technology&_rsc=5AGoy2f1p068YQjD",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1100,7 +1182,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=5AGoy2f1p068YQjD",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1125,9 +1207,82 @@
       "clientWidth": 375,
       "scrollWidth": 375,
       "lazyImagesObserved": 1,
-      "unloadedImagesBeforeScroll": 0,
+      "unloadedImagesBeforeScroll": 1,
       "failedRequests": [],
-      "canceledPrefetchRequests": []
+      "canceledPrefetchRequests": [
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Technical%20Operations&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Campaign%20Infrastructure&_rsc=HnqECM4JznjjE8ct",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Technical%20Operations&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Web%20Systems&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Campaign%20Infrastructure&_rsc=pGCloRdGX2Li5z5r",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        }
+      ]
     },
     {
       "viewport": 375,
@@ -1195,15 +1350,6 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=WeJHchyJ-WKH7lj1",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
           "url": "http://127.0.0.1:3219/work?tag=Knowledge%20Systems&_rsc=WeJHchyJ-WKH7lj1",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -1222,7 +1368,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=yLUdkRGz0mrmRhK7",
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=WeJHchyJ-WKH7lj1",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1231,7 +1377,7 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=yLUdkRGz0mrmRhK7",
+          "url": "http://127.0.0.1:3219/work?tag=Knowledge%20Systems&_rsc=yLUdkRGz0mrmRhK7",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1249,7 +1395,16 @@
           }
         },
         {
-          "url": "http://127.0.0.1:3219/work?tag=Knowledge%20Systems&_rsc=yLUdkRGz0mrmRhK7",
+          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=yLUdkRGz0mrmRhK7",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?tag=Documentation&_rsc=yLUdkRGz0mrmRhK7",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1283,7 +1438,7 @@
       "clientWidth": 768,
       "scrollWidth": 768,
       "lazyImagesObserved": 8,
-      "unloadedImagesBeforeScroll": 8,
+      "unloadedImagesBeforeScroll": 9,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -1321,7 +1476,7 @@
       "clientWidth": 768,
       "scrollWidth": 768,
       "lazyImagesObserved": 7,
-      "unloadedImagesBeforeScroll": 4,
+      "unloadedImagesBeforeScroll": 5,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -1355,15 +1510,6 @@
       "canceledPrefetchRequests": [
         {
           "url": "http://127.0.0.1:3219/work?_rsc=53I66VXXDGa6SV-S",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?_rsc=VjlMSS4YXHuA8m8C",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1430,7 +1576,7 @@
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
-          "url": "http://127.0.0.1:3219/work?_rsc=Sdev7PUlRw12F58X",
+          "url": "http://127.0.0.1:3219/work?_rsc=yMFZbW3py_RmPDJX",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1460,15 +1606,6 @@
       "canceledPrefetchRequests": [
         {
           "url": "http://127.0.0.1:3219/work?_rsc=h2vb-LAkAGynSY5z",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?_rsc=mTa8tpfUvA8h8GpF",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -1656,15 +1793,6 @@
             "rsc": "1",
             "next-router-prefetch": "1"
           }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?_rsc=5AGoy2f1p068YQjD",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
         }
       ]
     },
@@ -1683,7 +1811,7 @@
       "clientWidth": 768,
       "scrollWidth": 768,
       "lazyImagesObserved": 1,
-      "unloadedImagesBeforeScroll": 0,
+      "unloadedImagesBeforeScroll": 1,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -1770,15 +1898,6 @@
             "rsc": "1",
             "next-router-prefetch": "1"
           }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?_rsc=IT39HS1u7GVuDrcQ",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
         }
       ]
     },
@@ -1835,7 +1954,7 @@
       "clientWidth": 1280,
       "scrollWidth": 1280,
       "lazyImagesObserved": 8,
-      "unloadedImagesBeforeScroll": 7,
+      "unloadedImagesBeforeScroll": 9,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -1873,7 +1992,7 @@
       "clientWidth": 1280,
       "scrollWidth": 1280,
       "lazyImagesObserved": 7,
-      "unloadedImagesBeforeScroll": 6,
+      "unloadedImagesBeforeScroll": 4,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -1989,6 +2108,15 @@
             "rsc": "1",
             "next-router-prefetch": "1"
           }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?_rsc=yMFZbW3py_RmPDJX",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
         }
       ]
     },
@@ -2012,6 +2140,15 @@
       "canceledPrefetchRequests": [
         {
           "url": "http://127.0.0.1:3219/work?_rsc=h2vb-LAkAGynSY5z",
+          "failure": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "headers": {
+            "rsc": "1",
+            "next-router-prefetch": "1"
+          }
+        },
+        {
+          "url": "http://127.0.0.1:3219/work?_rsc=mTa8tpfUvA8h8GpF",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -2150,7 +2287,7 @@
       "clientWidth": 1280,
       "scrollWidth": 1280,
       "lazyImagesObserved": 4,
-      "unloadedImagesBeforeScroll": 4,
+      "unloadedImagesBeforeScroll": 5,
       "failedRequests": [],
       "canceledPrefetchRequests": [
         {
@@ -2240,15 +2377,6 @@
         },
         {
           "url": "http://127.0.0.1:3219/work?_rsc=pGCloRdGX2Li5z5r",
-          "failure": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "headers": {
-            "rsc": "1",
-            "next-router-prefetch": "1"
-          }
-        },
-        {
-          "url": "http://127.0.0.1:3219/work?tag=Implementation&_rsc=pGCloRdGX2Li5z5r",
           "failure": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "headers": {
@@ -2385,7 +2513,7 @@
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 112,
-    "unloadedImagesBeforeScroll": 112,
+    "unloadedImagesBeforeScroll": 117,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -2447,7 +2575,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-10-18T20:30:03.926Z",
+    "checkedAt": "2026-10-18T22:36:54.809Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,
@@ -2462,8 +2590,8 @@
       "height": 900
     },
     "renderedScreenshot": {
-      "sha256": "6918b93951d27296c8e3098f07987e3406b5f1a0da30c0156db7cd111de44e87",
-      "byteLength": 657729,
+      "sha256": "d986226328830a5cee0a729483c61cf89abb089371486c91390c45a53fce5502",
+      "byteLength": 659115,
       "width": 1280,
       "fullPage": true,
       "retainedInPublicGit": false,
@@ -2473,5 +2601,5 @@
   },
   "browserDiagnostics": [],
   "requestObservationPolicy": "Observe requests until row measurement completes, then detach before page-close. Only same-origin fetches with observed rsc=1 and next-router-prefetch=1 headers, an _rsc query, and net::ERR_ABORTED are retained separately as canceledPrefetchRequests. Every other failed request remains gating.",
-  "canceledPrefetchRequestCount": 129
+  "canceledPrefetchRequestCount": 143
 }

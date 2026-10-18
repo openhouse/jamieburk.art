@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "candidateSha256": "138447722dc8f7e55082fec85e5a5fd478521272c86476b8b0a3fb83e343a417",
+  "boundary": "Six separately commissioned fresh model reviews using fictionalized analytical lenses. No named person participated; no human approval, rights verification, or release authorization.",
+  "inputs": "Complete frozen rendered public text and link inventories for twelve routes, a public-safe source note, the redacted public claim/source registry, the assigned frozen rubric, and twelve current screenshots. No implementation discussion, prior reviews, protected source bodies, or raw third-party article.",
+  "reviewers": [
+    {
+      "reviewerId": "margaret-morse-a-2026-10-18-dcla-outcome",
+      "lensId": "PR-015",
+      "receipt": "margaret-morse-a-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "9ab5dc3535f451ffeb0a4ef891454c280ceda8891db9b1ff61f71e7e6ddb0a0d",
+      "packetSha256": "77f23cbcc7b5797a1c6e8ab8ee2f2b485f9d2fa803120a874a09cf6014551112",
+      "score": 4,
+      "pass": true
+    },
+    {
+      "reviewerId": "margaret-morse-b-2026-10-18-dcla-outcome",
+      "lensId": "PR-015",
+      "receipt": "margaret-morse-b-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "9f55439536f8263b62c7fb2ad9c83e79982d29169fd9ab00984e8034d083e92a",
+      "packetSha256": "77f23cbcc7b5797a1c6e8ab8ee2f2b485f9d2fa803120a874a09cf6014551112",
+      "score": 4,
+      "pass": true
+    },
+    {
+      "reviewerId": "margaret-morse-c-2026-10-18-dcla-outcome",
+      "lensId": "PR-015",
+      "receipt": "margaret-morse-c-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "846620e568f5bce4c6a0fca020bfea60a9b4c7b9c8bdfe32038355159a8070e5",
+      "packetSha256": "77f23cbcc7b5797a1c6e8ab8ee2f2b485f9d2fa803120a874a09cf6014551112",
+      "score": 4,
+      "pass": true
+    },
+    {
+      "reviewerId": "warren-sack-a-2026-10-18-dcla-outcome",
+      "lensId": "PR-016",
+      "receipt": "warren-sack-a-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "985a723d47bcbd6f3797fb94bdbc352273437ccc2847fbc785468105716a594b",
+      "packetSha256": "06ecedaaf55990ec4a1383c4c6516ee4782a079ce2980bd77bcc10e6a1e12c00",
+      "score": 4,
+      "pass": true
+    },
+    {
+      "reviewerId": "warren-sack-b-2026-10-18-dcla-outcome",
+      "lensId": "PR-016",
+      "receipt": "warren-sack-b-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "ea5a0640de52c3cfe377380a57cb2c0f4451b9b01d63f0f6a918bbf7d4ee952f",
+      "packetSha256": "06ecedaaf55990ec4a1383c4c6516ee4782a079ce2980bd77bcc10e6a1e12c00",
+      "score": 4,
+      "pass": true
+    },
+    {
+      "reviewerId": "warren-sack-c-2026-10-18-dcla-outcome",
+      "lensId": "PR-016",
+      "receipt": "warren-sack-c-2026-10-18-dcla-outcome-result.json",
+      "receiptSha256": "252510e41b3948532501edb18bf9353d2f01db371493ceb5106c0cc356b2dc77",
+      "packetSha256": "06ecedaaf55990ec4a1383c4c6516ee4782a079ce2980bd77bcc10e6a1e12c00",
+      "score": 4,
+      "pass": true
+    }
+  ],
+  "aggregation": {
+    "PR015": {
+      "count": 3,
+      "median": 4,
+      "minimum": 4
+    },
+    "PR016": {
+      "count": 3,
+      "median": 4,
+      "minimum": 4
+    },
+    "passed": true
+  },
+  "receiptProjection": "Raw reviewer receipts retained without rewriting scores, findings, gaps, or recommendations. Repo-relative public screenshot paths were requested before completion; no private packet locator is published.",
+  "limits": [
+    "Reviewers did not independently inspect protected source bodies, original permissions, or all external publication content.",
+    "The twelve screenshots cover home and About methods; dedicated DCLA paragraph layout was tested separately, not by these holdouts.",
+    "Automated browser interaction evidence is separate from model reading and does not establish human usability or accessibility approval.",
+    "One reviewer noted an older source-note count description; the nonblocking observation remains in its receipt.",
+    "Composite and photo gates remain independent and held."
+  ]
+}

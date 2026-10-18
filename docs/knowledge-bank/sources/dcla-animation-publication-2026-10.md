@@ -1,13 +1,13 @@
 ---
 id: research.nycac.dcla-animation-publication.2026-10-18
-title: DCLA animation publication and attribution
+title: "DCLA animation: collaborative publication and campaign communication"
 kind: research-run
 status: governed-open
 visibility: public-safe
 sensitivity: low
 last_reviewed: 2026-10-18
 canonical_path: docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md
-summary: A published animation and an explicit article credit establish later follow-through, without expanding authorship or website reuse permission.
+summary: Jamie's recap became a shared public communication carrying the campaign message; maker-assessed success remains distinct from institutional policy endorsement.
 human_review: governed-open
 relations:
   - type: related_to
@@ -22,9 +22,20 @@ relations:
 
 # DCLA animation: a published outcome
 
-The planned animation now has a public outcome. Lin Tyrpien's article credits Jamie Burkart for NYC Artist Coalition's photo animation of the Brooklyn listening session. The coalition's Instagram reel is publicly available. These are useful evidence of follow-through, not evidence of a commission or policy success.
+Jamie created a recap that others used publicly. The animation appears in Lin Tyrpien's article with an explicit Jamie Burkart credit for NYC Artist Coalition. Its Instagram collaborator panel places Jamie and the coalition alongside NYC Department of Cultural Affairs, Brooklyn Arts Council, 651 ARTS, and Tyrpien. The shared recap includes a cultural-space rent-stabilization request among other artists' concerns.
 
-The bounded attribution is recorded in the canonical graph. It remains held from visitor-facing pages while authorship details and website placement are reviewed. No video, screenshot, audio, or embedded player is added to the website by this intake.
+This is a communications-adoption outcome, not only evidence that a video was completed. Jamie's October 18 clarification identifies adoption, public collaborative visibility, and carrying FairRentNYC's commercial rent stabilization message as his measures of success. That assessment is attributed to Jamie, not presented as an institutional verdict or measured policy effect.
+
+The canonical graph now separates the original bounded credit from a later collaborative-publication claim. A short, cited text projection is selected for the FairRentNYC case study. No video, screenshot, audio, or embedded player is added. Media-use questions remain open; text selection does not clear the separate staging gates.
+
+## What the outcome does and does not establish
+
+- **Creation:** the article credits Jamie's photo animation for NYC Artist Coalition.
+- **Public adoption:** article inclusion and the six-account collaborator panel establish use of this communication and visible collaboration around it.
+- **Campaign carriage:** the visible rent-stabilization request is corroborated by Jamie's account of the recap's purpose. Other artists' concerns remain distinct, not a claimed consensus.
+- **Personal assessment:** Jamie considers these results a success. The record does not substitute platform reaction counts or fictionalized reviews for that account.
+
+The distinction is adoption of the communication versus endorsement or adoption of legislation. The former belongs in the portfolio; the latter is not established. This publication alone does not establish a permanent partnership, audience growth, a paid commission, or how invitations and approvals were handled.
 
 ## Public sources and separate dates
 
@@ -50,7 +61,7 @@ These observations describe on-screen captions. They do not certify the spoken w
 
 ## Attribution and reuse boundaries
 
-The supplied collaborator-panel screenshot lists 651 ARTS, NYC Department of Cultural Affairs, Brooklyn Arts Council, Lin Tyrpien, Jamie Burkart, and NYC Artist Coalition accounts. That is platform collaboration context, not proof of attendance, an institutional endorsement, or permission to reuse all components.
+The supplied collaborator-panel screenshot lists 651 ARTS, NYC Department of Cultural Affairs, Brooklyn Arts Council, Lin Tyrpien, Jamie Burkart, and NYC Artist Coalition accounts. The later outcome clarification includes a second view of the same six-account panel. This supports public collaborative publication, not merely a tag or mention. It does not prove attendance, institutional endorsement of campaign policy, or permission to reuse all components.
 
 The public article credit is not a professional performance testimonial. View and reaction counts are not treated as evidence of impact. No private correspondence, raw article body, signed media URL, or downloaded media is committed here.
 
@@ -59,11 +70,12 @@ The downloaded copy is a platform derivative, not the editing master or original
 ## Remaining questions
 
 - Which photography, audio-editing, caption, and music roles should the final component credits name?
+- What did Jamie do between creating the recap and its collaborative publication: invitations, revisions, permissions, or other coordination?
+- Which editorial choices preserved the different artists' concerns, and what subsequent conversations or invitations can be evidenced?
 - What permissions cover website embedding or a separately hosted copy, beyond the existing Instagram publication?
-- Would a short text link or a selected portfolio example help readers understand Jamie's contribution without adding clutter?
 
-Website placement remains held: **TODO: Jamie approval required.** The August snapshot, its transcript limits, and unrelated photo and release holds remain unchanged.
+Website media placement remains held: **TODO: Jamie approval required.** The selected text-only projection adds no media. The August snapshot, its transcript limits, and unrelated photo and release holds remain unchanged.
 
 ## Checks
 
-The separate October module is integrated through `records.ts`. The DCLA check and test commands exercise both the historical intake and this later publication outcome. They check chronology, source support, held placement, duplication, and unsafe attribution changes. Passing these checks does not authorize publication or deployment.
+The separate October publication and outcome modules are integrated through `records.ts`. The DCLA check and test commands preserve the historical intake, its held credit projection, and the later text-only outcome. They check chronology, source support, attributed success, publication scope, duplication, and unsafe attribution changes. Checks against understatement complement checks against overclaiming. Passing these checks does not substitute for release gates or authorize media reuse.

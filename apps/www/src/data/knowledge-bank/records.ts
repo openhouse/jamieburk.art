@@ -32,6 +32,7 @@ import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07
 import { teamMemoryResponseAugust2026 } from "./team-memory-response-2026-08.ts";
 import { dclaListeningSession } from "./dcla-listening-session-2026-08.ts";
 import { dclaAnimationPublication } from "./dcla-animation-publication-2026-10.ts";
+import { dclaAnimationOutcome } from "./dcla-animation-outcome-2026-10.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
@@ -71,6 +72,7 @@ const knowledgeBankInput = {
     ...teamMemoryResponseAugust2026.intakeItems,
     ...dclaListeningSession.intakeItems,
     ...dclaAnimationPublication.intakeItems,
+    ...dclaAnimationOutcome.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
@@ -128,6 +130,7 @@ const knowledgeBankInput = {
     ...teamMemoryResponseAugust2026.observations,
     ...dclaListeningSession.observations,
     ...dclaAnimationPublication.observations,
+    ...dclaAnimationOutcome.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
@@ -289,6 +292,7 @@ const knowledgeBankInput = {
     ...teamMemoryResponseAugust2026.sources,
     ...dclaListeningSession.sources,
     ...dclaAnimationPublication.sources,
+    ...dclaAnimationOutcome.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
@@ -317,10 +321,11 @@ const knowledgeBankInput = {
     ...nycacPressArchive.sources,
     ...projectWebsiteKnowledgeAugust2026.sources
   ],
-  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities, ...redHookKnowledge.entities],
+  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities, ...redHookKnowledge.entities, ...dclaAnimationOutcome.entities],
   agencyRelations: [
     ...redHookKnowledge.agencyRelations,
     ...agencyGraph.agencyRelations,
+    ...dclaAnimationOutcome.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations
   ],
   claims: [
@@ -444,6 +449,7 @@ const knowledgeBankInput = {
     ...teamMemoryResponseAugust2026.claims,
     ...dclaListeningSession.claims,
     ...dclaAnimationPublication.claims,
+    ...dclaAnimationOutcome.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
@@ -521,6 +527,7 @@ const knowledgeBankInput = {
     ...teamMemoryResponseAugust2026.researchInquiries,
     ...dclaListeningSession.researchInquiries,
     ...dclaAnimationPublication.researchInquiries,
+    ...dclaAnimationOutcome.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
@@ -666,7 +673,9 @@ const knowledgeBankInput = {
       "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
       "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
       "SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026",
-      "SRC-NYCAC-SHOESTRING-PHOTO-2017"
+      "SRC-NYCAC-SHOESTRING-PHOTO-2017",
+      "SRC-DCLA-CREATIVE-NEW-YORK-2026-10-03",
+      "SRC-DCLA-INSTAGRAM-DENAV1HHOXC"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
@@ -682,7 +691,8 @@ const knowledgeBankInput = {
       { id: "coalition-facebook-public-operating-record", claimId: "CLM-NYCAC-FACEBOOK-PUBLIC-OPERATING-RECORD", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-POST-CENSUS-2026", "SRC-NYCAC-FACEBOOK-POST-REPORT-2026"] },
       { id: "shared-campaign-infrastructure", claimId: "CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017", projection: "case-study", sourceIds: ["SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026", "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-SHOESTRING-PHOTO-2017"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
-      { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
+      { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" },
+      { id: "dcla-collaborative-recap", claimId: "CLM-DCLA-ANIMATION-COLLABORATIVE-PUBLICATION", projection: "case-study" }
     ]
   }, {
     id: "kc-town-hall",

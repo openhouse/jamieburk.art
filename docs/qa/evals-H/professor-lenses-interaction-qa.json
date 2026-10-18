@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-18T20:30:03.926Z",
+  "checkedAt": "2026-10-18T22:36:54.809Z",
   "baseUrl": "http://127.0.0.1:3219",
-  "publicSurfaceFingerprint": "e142c112191f2aa83f315975bab38498d459753939734250a63fd3b59c62ecf8",
+  "publicSurfaceFingerprint": "455798454b6988c2b8a48de27c4b8eb70d15859fddb4dfbfc4bf3eca43944fe9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 158,
+  "publicSurfaceFileCount": 159,
   "reportVersion": 4,
   "method": "Fresh Playwright keyboard interaction plus DOM and viewport inspection on a freshly rebuilt production app. This is not a human screen-reader or assistive-technology session.",
   "keyboard": {

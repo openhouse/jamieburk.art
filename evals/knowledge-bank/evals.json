@@ -154,7 +154,7 @@
       "transcriptAuditPath": "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json",
       "approvedTranscriptAuditSha256": "364a0f7380d9d011a00c5bb0c0ceb9775186e14981379358198c082a9c7d2fee",
       "approvedContentSha256": "810e0b33f01626bca191b83f9d67baf7bd82832eba803d5dff1bc831ad5cbc2a",
-      "approvedRelatedClaimsSha256": "ea7cf1cb41ca9bb36aa667463f4cc67ba48af399449760524929fe3473c95338",
+      "approvedRelatedClaimsSha256": "45c0f032d2ce2bbf6bab93928cece512d5dac0296c774f7391518a642479df64",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-FINKELPEARL-HEARING-CONTEXT",
@@ -292,7 +292,7 @@
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "388046b6a79c394825771a72178bf13b3c15aafdfd497b03dfa5a809e500342c",
+      "approvedContentSha256": "d1d9862fe23d8ad51e89a433a94f7f6433f0d92c7d16ccf95082cba88d39f129",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",
@@ -1074,9 +1074,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 33,
-      "expectedRelationCount": 36,
-      "approvedGraphSha256": "e56a8e80e7bd025ebcad176eba3ea7b27110ada40aaf2f9f46e9b302bb7a6a1b",
+      "expectedEntityCount": 34,
+      "expectedRelationCount": 37,
+      "approvedGraphSha256": "455330f487be15ba4def5e51f33cea20278d6876158ef3380baaf26536ab470b",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",

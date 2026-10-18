@@ -386,6 +386,51 @@
       ]
     },
     {
+      "id": "SRC-DCLA-CREATIVE-NEW-YORK-2026-10-03",
+      "title": "I Imagine a Brooklyn Where",
+      "organization": "Creative New York",
+      "author": "Lin Tyrpien",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-03",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://www.creativenewyork.co/p/i-imagine-a-brooklyn-where",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Lin Tyrpien, I Imagine a Brooklyn Where, Creative New York, October 3, 2026; inspected October 18, 2026.",
+      "publicNote": "The inspected article includes the animation and credits Jamie Burkart for NYC Artist Coalition. Its header date does not establish when the animation was added.",
+      "doesNotEstablish": [
+        "first animation publication on the article date",
+        "photography or audio-editing authorship",
+        "caption-selection authorship",
+        "paid commission",
+        "agency endorsement",
+        "website media-use permission"
+      ]
+    },
+    {
+      "id": "SRC-DCLA-INSTAGRAM-DENAV1HHOXC",
+      "title": "NYC Artist Coalition Brooklyn listening-session photo animation",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-07",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Brooklyn listening-session photo animation, Instagram reel DeNAv1HhOxC, October 7, 2026.",
+      "publicNote": "The upload date comes from retrieved public post metadata. A downloaded derivative supports inspection, not a new right to publish the media.",
+      "doesNotEstablish": [
+        "first publication on any platform",
+        "all creative roles",
+        "institutional endorsement",
+        "session-wide consensus",
+        "adopted policy",
+        "permission to republish video or audio"
+      ]
+    },
+    {
       "id": "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "title": "WOW List X full-population and engagement manifest",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -1961,6 +2006,49 @@
       ]
     },
     {
+      "id": "CLM-DCLA-ANIMATION-COLLABORATIVE-PUBLICATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I created a photo-animation recap of a Brooklyn cultural listening session in 2026. It appeared as an Instagram collaboration with NYC Artist Coalition, NYC’s Department of Cultural Affairs, Brooklyn Arts Council, 651 ARTS, and writer Lin Tyrpien. Tyrpien’s article also features the animation. The shared recap carried FairRentNYC’s call for commercial rent stabilization alongside other artists’ concerns.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-DCLA-CREATIVE-NEW-YORK-2026-10-03",
+          "relationship": "direct-support",
+          "supports": [
+            "published photo-animation credit to Jamie Burkart for NYC Artist Coalition",
+            "animation included in the article when inspected"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-DCLA-INSTAGRAM-DENAV1HHOXC",
+          "relationship": "corroborating",
+          "supports": [
+            "October 7 Instagram publication",
+            "30-second published animation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Adoption of the communication is a real outcome; it is not institutional endorsement or adoption of campaign policy.",
+        "Collaboration is scoped to this public artifact, not a formal or continuing partnership.",
+        "Jamie is credited for the animation, not sole authorship of the event, participants' words, or every media component.",
+        "No audience-growth, policy-impact, or participant-consensus claim is made. No media embedding or rehosting is selected."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-JAMIE-SECURED-CCED-AWARD",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -3288,7 +3376,9 @@
         "SRC-NYCAC-FACEBOOK-POST-CENSUS-2026",
         "SRC-NYCAC-FACEBOOK-POST-REPORT-2026",
         "SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026",
-        "SRC-NYCAC-SHOESTRING-PHOTO-2017"
+        "SRC-NYCAC-SHOESTRING-PHOTO-2017",
+        "SRC-DCLA-CREATIVE-NEW-YORK-2026-10-03",
+        "SRC-DCLA-INSTAGRAM-DENAV1HHOXC"
       ],
       "occurrences": [
         {
@@ -3413,6 +3503,11 @@
         {
           "id": "crs-provenance-redline",
           "claimId": "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+          "projection": "case-study"
+        },
+        {
+          "id": "dcla-collaborative-recap",
+          "claimId": "CLM-DCLA-ANIMATION-COLLABORATIVE-PUBLICATION",
           "projection": "case-study"
         }
       ]
