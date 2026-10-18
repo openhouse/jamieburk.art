@@ -1,8 +1,8 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026
 
-**Source commit:** `93bac7fd5e7dfecdf04ed8881417c97c25078086`
-**Generation time:** 2026-10-18T10:00:05-04:00
+**Source commit:** `9a71c837d4b4d25fec131bb1a645abe11378a7a4`
+**Generation time:** 2026-10-18T16:20:43-04:00
 **Source fingerprint:** `9619a33c8f16afb01cb420bd3c2fedd2afdd7326419d6cc3d1ad339a875dbb6c`
 
 - [NYCAC and Fair Rent NYC frontline advocacy, July-August 2026](../../claims/nycac-frontline-advocacy-2026-08.md) - `evidence:private-support` (evidence)
