@@ -437,6 +437,8 @@ if (result.errors.length) {
   failed += result.errors.length;
 }
 
+console.log(`Accessibility scope: automated candidate checks ${accessibilityEvidence.passed ? "PASS" : "HOLD"}; ${accessibilityEvidence.manualReviewFindings.length} retained axe incomplete finding(s); ${accessibilityEvidence.conformanceClaim}.`);
+
 if (failed) process.exit(1);
 
 console.log(

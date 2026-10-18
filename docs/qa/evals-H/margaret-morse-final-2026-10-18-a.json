@@ -1,452 +1,138 @@
 {
-  "schemaVersion": 1,
   "phase": "holdout",
-  "reviewerId": "release-reader-a",
-  "reviewerType": "independent blind editorial reader",
-  "candidateRepository": "[review checkout]",
-  "candidateUrl": "http://127.0.0.1:42087",
-  "candidateSha256": "ea63cae85d422bac902f81b0236702d5065133749be643fe70ab46a94d7df788",
-  "candidateFingerprintMethod": "Imported professorCandidateRelativePaths and fingerprintProfessorCandidate from scripts/lib/professor-lens-eval.mjs; hashed the bytes of all 157 listed paths. Did not invoke evaluateProfessorLenses. Fingerprint unchanged on final check.",
-  "timestamp": "2026-10-18T18:36:00.000Z",
-  "rubricPath": ".agents/evals/portfolio-production-readiness.json",
-  "rubricSha256": "154bd46ac67645e9ec5b997571b7f50f96fe5cb0e29ce80ae34b33cb5336ef77",
-  "designSha256": "d44f09ff25859c3793676d18114935d4a85b242b7f8a10addda713e0c66e5ec2",
-  "scoreScale": {
-    "minimum": 0,
-    "maximum": 4
-  },
-  "passScope": "Individual reader judgment only. This is one judge for each separate lens, not three judges. It does not establish the three-judge median, full release readiness, or human approval.",
-  "aggregateGateSatisfied": null,
+  "reviewerId": "dcla-frozen-lens-a",
+  "candidateSha256": "a079f551ff217b7da94238aca5630d056d71508a5f10a8ab3d112755c9d78de2",
+  "candidateFileCount": 157,
+  "aggregateRequirement": "not_assessed",
+  "role": "Fictional analytical lens; not real faculty participation, endorsement, or approval.",
+  "projectEligibility": "Well-supported dated past and present projects both count, following the user's interpretation.",
   "independence": {
+    "freshReviewer": true,
+    "readOnlyCandidate": true,
     "priorScorecardsRead": false,
-    "historicalEvalReportsRead": false,
-    "changeHistoryRead": false,
-    "optimizerDiscussionRead": false,
-    "otherReviewerJudgmentsRead": false,
-    "candidateEdited": false,
-    "note": "The fingerprint helper source necessarily exposed its static comparison metadata while identifying the exported fingerprint function; no historical scorecard was opened and no stored verdict or comparison hash informed this judgment."
+    "otherReviewerResultsRead": false,
+    "historyOrDiffsRead": false,
+    "helperImplementationRead": false,
+    "aggregateEvaluatorRun": false,
+    "memoryRead": false,
+    "verification": "Imported only professorCandidateRelativePaths and fingerprintProfessorCandidate from the named helper; the fingerprint matched before and after source review.",
+    "limitation": "The first rubric extraction included generic suite thresholds and optimization rules alongside PR-015/PR-016, score scale, and hard constraints. No candidate optimization discussion, patch intent, prior score, or other reviewer result was read."
   },
-  "method": {
-    "browser": "Fresh headless Google Chrome with Node Playwright",
-    "viewports": [
-      1280,
-      375
-    ],
-    "networkIdleBeforeReading": true,
-    "imagesDecodedAfterFullScroll": true,
-    "reducedMotion": true,
-    "stableCaptures": "*-stable.png and observations-stable.json are the authoritative captures. Earlier captures were superseded because smooth scrolling put fixed navigation at an intermediate position in full-page images.",
-    "checks": {
-      "observations": 20,
-      "http200": 20,
-      "overflowCount": 0,
-      "brokenImageCount": 0,
-      "uncaughtPageErrorCount": 0
-    },
-    "interactionEvidence": "retained-review-a/path-and-boundary-check.json",
-    "interactionLimit": "An initial Menu selector expected a button and timed out. Retrying the actual visible native summary label succeeded; this was a test selector error, not a demonstrated navigation failure."
-  },
-  "twoClickPath": {
-    "desktop": {
-      "actions": [
-        "About"
-      ],
-      "destination": "/about",
-      "clicks": 1
-    },
-    "mobile": {
-      "actions": [
-        "Menu",
-        "About"
-      ],
-      "destination": "/about",
-      "clicks": 2
-    },
-    "heading": "Systems people can inhabit",
-    "verifiedByActualClicks": true,
-    "sourceNoteExpandedScreenshot": {
-      "path": "retained-review-a/about-source-notes-expanded.png",
-      "sha256": "b602909c69c5abe228f5ec6e9841b1822f7fcfa57bd7b6f6dcbe3aec3ecb3284"
-    }
-  },
-  "captures": [
-    {
-      "route": "/",
-      "url": "http://127.0.0.1:42087/",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:23.857Z",
-      "screenshotPath": "retained-review-a/home-1280-stable.png",
-      "screenshotSha256": "da75cce1f6ff316e9c369a874db183b7e689c571fea7c9b5a72bc62cb1c9d78e",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/about",
-      "url": "http://127.0.0.1:42087/about",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:25.336Z",
-      "screenshotPath": "retained-review-a/about-1280-stable.png",
-      "screenshotSha256": "14d6d9b452e4ca8461916a73fe5abf93518e022de552cb83cc832e585a4a1813",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work",
-      "url": "http://127.0.0.1:42087/work",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:27.073Z",
-      "screenshotPath": "retained-review-a/work-1280-stable.png",
-      "screenshotSha256": "83ac0467f74f70450f6ac4616869a7fb266c245f12f37ed5780d537e22e6c384",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/wowlist",
-      "url": "http://127.0.0.1:42087/work/wowlist",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:28.597Z",
-      "screenshotPath": "retained-review-a/work--wowlist-1280-stable.png",
-      "screenshotSha256": "86ee90945fd554d76a950e41f2d9b2af7b764615d53023cd33fcebcc187e1e93",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/196-sunday-dinner",
-      "url": "http://127.0.0.1:42087/work/196-sunday-dinner",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:30.190Z",
-      "screenshotPath": "retained-review-a/work--196-sunday-dinner-1280-stable.png",
-      "screenshotSha256": "fb414f7953af5187b666a8f19b70ea53814d1781285828521a9d3772969bd4aa",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/fair-rent-nyc",
-      "url": "http://127.0.0.1:42087/work/fair-rent-nyc",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:32.360Z",
-      "screenshotPath": "retained-review-a/work--fair-rent-nyc-1280-stable.png",
-      "screenshotSha256": "291a1c1f401549479b49005e2528afba56545d3ff7ea4dde2a2c00581346f693",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/technical-operations",
-      "url": "http://127.0.0.1:42087/work/technical-operations",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:33.756Z",
-      "screenshotPath": "retained-review-a/work--technical-operations-1280-stable.png",
-      "screenshotSha256": "d469102e01987f0d423264d18336db3531a924c22ab335e6cf8b0bd0dca4ee4e",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/callnyc",
-      "url": "http://127.0.0.1:42087/work/callnyc",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:35.344Z",
-      "screenshotPath": "retained-review-a/work--callnyc-1280-stable.png",
-      "screenshotSha256": "e164283a153cb780ffc9e817f8a5d88de50ac8dee4fff53e9be8f4e607ffc8f9",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/lab/source-backed-team-memory",
-      "url": "http://127.0.0.1:42087/lab/source-backed-team-memory",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:37.317Z",
-      "screenshotPath": "retained-review-a/lab--source-backed-team-memory-1280-stable.png",
-      "screenshotSha256": "455206d409814f3536d28b9a1b3b4c3fa576ee034c677313a7d342f8c11230e2",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/harry-j-epstein",
-      "url": "http://127.0.0.1:42087/work/harry-j-epstein",
-      "width": 1280,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:39.050Z",
-      "screenshotPath": "retained-review-a/work--harry-j-epstein-1280-stable.png",
-      "screenshotSha256": "71d13b972b16fd2fdd5dd9c58784a2d77760b13f40cb64a64c983f0ebdd8f7c0",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/",
-      "url": "http://127.0.0.1:42087/",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:41.685Z",
-      "screenshotPath": "retained-review-a/home-375-stable.png",
-      "screenshotSha256": "f97c003d3ffb288464e2e51b0d4dd964125c24daa839ce2f84dc9b5232ecb704",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/about",
-      "url": "http://127.0.0.1:42087/about",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:43.334Z",
-      "screenshotPath": "retained-review-a/about-375-stable.png",
-      "screenshotSha256": "68effa7c2055e71845de180efe7bb3d5dc06c5655b8a4072b603c261209a7c32",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work",
-      "url": "http://127.0.0.1:42087/work",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:45.360Z",
-      "screenshotPath": "retained-review-a/work-375-stable.png",
-      "screenshotSha256": "9e71d018001b97dd609875f4be8ad7d6ed9426d66d2f1b7ff21190ee22b58631",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/wowlist",
-      "url": "http://127.0.0.1:42087/work/wowlist",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:47.080Z",
-      "screenshotPath": "retained-review-a/work--wowlist-375-stable.png",
-      "screenshotSha256": "a3f80a9eb6950d55ac7a1d110b3177685b3e3ec5ee04d02d83e33cf0cb4d76ce",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/196-sunday-dinner",
-      "url": "http://127.0.0.1:42087/work/196-sunday-dinner",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:48.853Z",
-      "screenshotPath": "retained-review-a/work--196-sunday-dinner-375-stable.png",
-      "screenshotSha256": "6cb415ab5b024b3a1c64d8033ed56b696a10cb0b978a8a4ef4e66d53aee4107c",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/fair-rent-nyc",
-      "url": "http://127.0.0.1:42087/work/fair-rent-nyc",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:51.121Z",
-      "screenshotPath": "retained-review-a/work--fair-rent-nyc-375-stable.png",
-      "screenshotSha256": "7f8671cc2ee950c74c175549a834d9bba1a48345d33804ba7269a639c66e7750",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/technical-operations",
-      "url": "http://127.0.0.1:42087/work/technical-operations",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:52.716Z",
-      "screenshotPath": "retained-review-a/work--technical-operations-375-stable.png",
-      "screenshotSha256": "e445a470bfb84e555f5f8203c6f179d92a0a507b999aab4910ac0dc19e8b179f",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/callnyc",
-      "url": "http://127.0.0.1:42087/work/callnyc",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:54.405Z",
-      "screenshotPath": "retained-review-a/work--callnyc-375-stable.png",
-      "screenshotSha256": "383f74de95a0c5267e3b737eca61a5975e010c695560dac08b9e8e3dbe7a60ee",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/lab/source-backed-team-memory",
-      "url": "http://127.0.0.1:42087/lab/source-backed-team-memory",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:56.638Z",
-      "screenshotPath": "retained-review-a/lab--source-backed-team-memory-375-stable.png",
-      "screenshotSha256": "dc3d4cef13154e5a858ae10cb545748a4af0df586ed0b6319f8b2bf8cb22ea14",
-      "overflow": false,
-      "consoleErrors": []
-    },
-    {
-      "route": "/work/harry-j-epstein",
-      "url": "http://127.0.0.1:42087/work/harry-j-epstein",
-      "width": 375,
-      "status": 200,
-      "timestamp": "2026-10-18T18:32:58.402Z",
-      "screenshotPath": "retained-review-a/work--harry-j-epstein-375-stable.png",
-      "screenshotSha256": "85e967eb34e1929736dd9abc5716fe829ad4b796b0a0b6d3145efd1ff7c11668",
-      "overflow": false,
-      "consoleErrors": []
-    }
+  "limits": [
+    "This is an individual editorial assessment. The three-judge median and no-score-below-three aggregate requirement are not assessed here.",
+    "The review covers the requested nine routes at 1280px and 375px. It is not the separate full accessibility or release QA.",
+    "Source judgments use the frozen public-safe canonical records. Protected originals were not opened, and external public destinations were not independently reopened.",
+    "This assessment grants no publication, production deployment, indexing, rights, consent, or release approval."
   ],
-  "sharedLimits": [
-    "The named professors are fictional analytical lenses. No participation, endorsement, judgment, consent, or approval by either real person is claimed.",
-    "Only local rendered candidate routes and the specified public-safe repository materials were reviewed; external destination content and protected raw sources were not retrieved.",
-    "This is an editorial lens review, not a complete PR-005 public-safety audit, PR-010 accessibility audit, or PR-012 production authorization.",
-    "The photo registry records staging/public-Git approval and leaves production/indexing open. This review grants no publication permission.",
-    "Historical projects in the current portfolio remain historical; a current public page or screenshot does not convert them into current service delivery.",
-    "Canonical protected-source summaries establish the allowed projection boundaries. They do not substitute for fresh human consent, independent proof of every historical event, or permission to inspect the raw source."
+  "gaps": [
+    "At 375px the Menu disclosure remains open after selecting a route and overlays the upper page until closed. This is a navigation-friction finding, not a missing lineage or evidence trace; the two page transitions were separately verified."
   ],
   "evalId": "PR-015",
-  "lens": "Margaret Morse — inhabited systems (fictional analytical lens)",
+  "lens": "Fictional Margaret Morse lens: inhabited systems",
   "score": 4,
   "pass": true,
-  "readerSummary": "Jamie is clearly a technical project manager and implementation lead whose systems practice grows from hosting, collaborative cultural production, and civic participation. The portfolio preserves people, rooms, language, and the ability to continue together as design constraints. It does not reduce the person to organizational utility or drift into an artist biography.",
-  "routesReviewed": [
-    "/",
-    "/about",
-    "/work",
-    "/work/wowlist",
-    "/work/196-sunday-dinner",
-    "/work/fair-rent-nyc"
-  ],
-  "criteria": [
+  "passScope": "Individually assessable editorial and boundary requirements only.",
+  "rationale": "The portfolio keeps its literal technical project management role visible while explaining why the operating work depends on participation, place, care, and memory. The About through-line connects Open House to contemporary and historical project evidence; the linked projects show concrete invitations, room practices, participant-shaped interfaces, and handoffs. The dated photographs work as evidence of inhabited settings, and their captions and permissions do not turn participants into testimonials. Three substantial continuities are reconstructable without exposing raw participant records.",
+  "evidence": [
     {
-      "id": "PR-015.1",
-      "score": 4,
-      "pass": true,
-      "evidence": [
-        "The homepage names the Technical Project Manager / Product Operations & Implementation role, then pairs a facilitation photograph with a campaign interface under 'The system lives between the screen and the room.'",
-        "About's 'Systems people can inhabit' joins Open House, WOWList, Sunday Dinner and 196, NYC Artist Coalition, and Knowledge Wiki Graphs, explicitly naming artistic, civic, technical, and social practice.",
-        "The actual desktop path is Home → About; mobile is Menu → About. The current About render begins with role and implementation responsibilities before the lineage."
-      ]
+      "kind": "navigation",
+      "artifact": "navigation.json",
+      "finding": "Home to About to WOWList is two page transitions. Desktop uses two links; mobile first opens Menu. The lineage itself is on About, reachable in two mobile control activations."
     },
     {
-      "id": "PR-015.2",
-      "score": 4,
-      "pass": true,
-      "evidence": [
-        "WOWList connects organizers' own words, followable communities, local distribution, public support, and Sunday Dinner calendars; it shares co-founder credit and states that the modern return has not restored the calendar yet.",
-        "Sunday Dinner / 196 combines a bounded shared-table photograph with two labeled reconstructions: proposal-to-independent-access and invitation-to-follow-up. Care and autonomy shape the operating steps.",
-        "FairRentNYC presents a shared campaign surface, a facilitated working session, and a collective public room as related interfaces, with sources and recollection distinguished."
-      ]
+      "kind": "rendered-threshold",
+      "artifacts": [
+        "desktop-home-top.png",
+        "mobile-home-top.png",
+        "desktop-about-throughline.png",
+        "mobile-about-lineage-readable.png"
+      ],
+      "finding": "The home viewport states the professional role. About names artistic, civic, technical, and social practice, explains systems people can inhabit, and links concrete work."
     },
     {
-      "id": "PR-015.3",
-      "score": 4,
-      "pass": true,
-      "evidence": [
-        "The public question is whether people can 'recognize their relationships, participate, remember what happened, and continue the work.'",
-        "The residency specimen keeps the artist's direction open and makes independent access a usable result. The gathering specimen preserves welcome and minimal continuity documentation.",
-        "WOWList gives distributed organizers their own vocabulary and calendars; the coalition page connects a maintained web surface to shared decisions and follow-up. These are concrete ways to inhabit and influence a system."
-      ]
+      "kind": "rendered-projects",
+      "artifacts": [
+        "desktop-work-wowlist.png",
+        "mobile-work-wowlist.png",
+        "desktop-work-196-sunday-dinner.png",
+        "mobile-work-196-sunday-dinner.png",
+        "desktop-work-fair-rent-nyc.png",
+        "mobile-work-fair-rent-nyc.png"
+      ],
+      "finding": "Project pages connect social settings and public interfaces to specific operating practices, with dated status, credits, and limits."
     },
     {
-      "id": "PR-015.4",
-      "score": 4,
-      "pass": true,
-      "evidence": [
-        "About's Open House projection matches CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY and attributes communal decision-making and documentation to participants.",
-        "The expanded About source note gives article author, title, date, summary, and limits; it does not reproduce the raw article or participant details.",
-        "The public-safe professor source note withholds private evaluations and the testimonial lead. No professor name, educational email, Max/Jitter reference, narrative-evaluation phrase, student ID phrase, or private absolute path matched the rendered body-text scans on ten reviewed routes.",
-        "WOWList names Richard Caceres and community contributors. FairRentNYC credits coalition collaborators and rejects solo policy causality. Sunday Dinner explicitly names Julia as a co-organizer of the 2016 milestone and keeps row-level records private."
-      ]
+      "kind": "collective-credit-and-permission",
+      "files": [
+        "apps/www/src/data/knowledge-bank/agency-graph.ts",
+        "apps/www/src/data/photography.ts",
+        "apps/www/src/data/proofs.ts"
+      ],
+      "finding": "Open House initiation is distinct from collective governance; WOWList names Richard Caceres and community contributors; coalition outcomes remain collective. Sunday Dinner's exact image occurrence records human rights and represented-person review. Photo records distinguish staging permission from open production/indexing states."
     },
     {
-      "id": "PR-015.5",
-      "score": null,
-      "pass": null,
-      "status": "not_assessed_by_single_reader",
-      "evidence": [
-        "A median across three independent judges cannot be established by this scorecard. This reader's score is 4."
-      ]
+      "kind": "protected-source-exclusion",
+      "files": [
+        "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+        "apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+        "apps/www/src/app/about/page.tsx"
+      ],
+      "finding": "The inspected public surfaces summarize the public Open House record without reproducing the article. The protected educational claim remains held with no public surfaces. No private faculty testimonial, grades, raw correspondence, or participant-level values were found in the inspected public presentation."
     }
   ],
   "threeProjectTrace": [
     {
       "project": "WOWList",
       "route": "/work/wowlist",
-      "continuity": [
-        "Community language becomes followable keyword communities.",
-        "Sunday Dinner calendars supply a public social origin; organizer tutorials and support material demonstrate use and learning.",
-        "A present landing-page screenshot restores a recognizable social atmosphere while copy carefully marks the calendar as not yet restored."
+      "dates": [
+        "2014 origin record",
+        "2015 independent tutorial",
+        "2016 support record",
+        "July 2017 production snapshot",
+        "2026 limited public return"
       ],
-      "inspectableEvidence": [
-        "Rendered current-threshold screenshot and caption",
-        "Source-linked natural-language product decision",
-        "Source-linked Sunday Dinner event route and support/adoption narrative"
+      "trace": "Calendars made with Sunday Dinner become a lightweight, collaboratively editable publishing system using organizers' own language. Followable keyword communities, profiles, weekly email, and local calendars let distributed organizers shape and continue their scenes.",
+      "evidenceIds": [
+        "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
+        "CLM-WOWLIST-NATURAL-LANGUAGE-PRODUCT-DECISION-2026",
+        "CLM-WOWLIST-PRODUCTION-SCALE-2017"
       ],
-      "boundaries": [
-        "Jamie and Richard co-built the service.",
-        "Historical 35-city scale is dated; current return scope is limited.",
-        "Private member and organizer records remain withheld."
-      ]
+      "boundary": "Shared builder and organizer credit is explicit. Historical scale is not current use or measured community impact; the 2026 landing page is not represented as the full calendar returning."
     },
     {
-      "project": "Sunday Dinner / 196",
+      "project": "Sunday Dinner and 196",
       "route": "/work/196-sunday-dinner",
-      "continuity": [
-        "Hospitality, shared space, and artist support are expressed as operational responsibilities.",
-        "The residency workflow moves from proposal and discussion to configuration, independent access, and continued availability.",
-        "Recurring invitations, responses, hosting, minimal documentation, and follow-up make social participation repeatable."
+      "dates": [
+        "January 6, 2013 photograph",
+        "2014 and 2016 public milestones",
+        "2023 residency workflow",
+        "2025 operating-sheet schema"
       ],
-      "inspectableEvidence": [
-        "Shared-table / hand-drawn-map photograph with courtesy credit",
-        "Two redacted workflow reconstructions",
-        "Public source notes for numbered gathering milestones"
+      "trace": "Hospitality becomes repeatable through invitation, response, hosting, minimal documentation, and follow-up. Residency onboarding begins with the artist's inquiry, makes needs discussable, configures space, and hands off practical independence while leaving room for changed direction.",
+      "evidenceIds": [
+        "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023",
+        "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025",
+        "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION"
       ],
-      "boundaries": [
-        "Reconstructions are labeled; they are not private letters or source rows.",
-        "The 300+ scale is not a unique-person census.",
-        "No identity, access detail, proposal, private correspondence, or artistic-outcome claim is exposed."
-      ]
+      "boundary": "The two specimens are explicitly redacted reconstructions. They describe workflow rather than artist outcomes, universal practice, participant consent, or an attendance database. Aggregate scale is not a claim about unique people."
     },
     {
-      "project": "NYC Artist Coalition / FairRentNYC",
+      "project": "NYC Artist Coalition and FairRentNYC",
       "route": "/work/fair-rent-nyc",
-      "continuity": [
-        "The work begins with lived experience of cultural spaces and shared civic questions.",
-        "Campaign interface, facilitated working session, and town-hall room connect digital and embodied participation.",
-        "Running minutes, source maps, question logs, and action trackers support review and continuity."
+      "dates": [
+        "2017 organizing and working-session records",
+        "2017-2019 meeting-governance records",
+        "2026 campaign-memory work",
+        "October 5, 2026 Wonderville meeting"
       ],
-      "inspectableEvidence": [
-        "Three-part 'The website was one part of the room' sequence",
-        "Captioned coalition photographs",
-        "Public campaign screenshots and source-linked implementation narrative"
+      "trace": "Listening in cultural spaces becomes priority-setting, public event and campaign interfaces, practical sessions, town halls, hearings, and continuing action records. The Shoestring photograph and screen-to-room sequence make the social setting visible. The Wonderville guide demonstrates that attention to room layout and equipment remains part of current delivery.",
+      "evidenceIds": [
+        "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026",
+        "CLM-RECENT-WONDERVILLE-2026-10"
       ],
-      "boundaries": [
-        "Jamie recollection is labeled and distinguished from retained implementation evidence.",
-        "Photographs do not prove exact remarks, attendance, endorsement, or policy causality.",
-        "Campaign outcomes and public production remain collective."
-      ]
+      "boundary": "Jamie helped establish and produce a collective system. A delivered plan does not prove every cue occurred; event responses do not establish attendance; advocacy does not establish sole policy causation."
     }
   ],
-  "sourcePrivacyCreditAudit": {
-    "sourceNote": "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
-    "canonicalRecords": [
-      "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
-      "CLM-SOCIAL-INFO-SPACES-PROTOTYPE",
-      "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023",
-      "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025"
-    ],
-    "photoRegistry": "apps/www/src/data/photography.ts",
-    "protectedExclusion": "Raw Open House article, raw UCSC evaluations, private correspondence, participant values, and unapproved faculty testimonial were not used or reproduced in this review. The held coursework record is absent from the public registry.",
-    "observedViolation": false
-  },
-  "findings": [
-    {
-      "severity": "minor",
-      "blocking": false,
-      "route": "/about",
-      "finding": "The mobile About page is long because it carries several system comparisons. The through-line remains near the beginning and reachable in two actions; this does not obstruct the lens criterion."
-    }
-  ],
-  "limits": [
-    "Photographic and workflow evidence make the form of care inspectable; they do not independently prove participants' feelings or long-term outcomes.",
-    "No romanticized account of participant vulnerability was observed. This finding covers reviewed surfaces only."
-  ],
-  "requiredRemediation": [],
-  "projectionNote": "Public-safe projection of the complete judgment; only local custody paths were replaced with non-resolvable evidence labels. Original review and captures retained separately. Scores, findings and limits unchanged."
+  "reading": "The systems differ from conventional administration because participants' language, needs, physical settings, and ability to return shape the operating form. Documentation preserves a way to continue together."
 }

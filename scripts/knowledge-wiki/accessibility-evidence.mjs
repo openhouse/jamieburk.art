@@ -25,6 +25,34 @@ export const canonicalAccessibilityRoutes = Object.freeze([
 export const canonicalAccessibilityViewports = Object.freeze([360, 375, 768, 1280]);
 export const publicSurfaceFingerprintPolicy = "v2-runtime-build-inputs";
 
+// Axe can classify a measured 1:1 contrast failure as incomplete. Preserve the
+// complete node/check data and block measured failures; a photo/pseudo-element
+// that axe cannot measure remains an explicit human-review need, not a pass.
+function incompleteCoveragePresent(finding) {
+  return typeof finding.id === "string" && Array.isArray(finding.nodes) &&
+    finding.nodes.length > 0 && finding.nodeCount === finding.nodes.length &&
+    finding.nodes.every(node => Array.isArray(node.target) && node.target.length > 0 &&
+      Array.isArray(node.checks) && node.checks.length > 0 &&
+      node.checks.every(check => typeof check.id === "string" && check.data &&
+        typeof check.data === "object" && (check.id !== "color-contrast" ||
+          typeof check.data.messageKey === "string" &&
+          Number.parseFloat(check.data.expectedContrastRatio) > 0 &&
+          (["bgImage", "pseudoContent"].includes(check.data.messageKey) ||
+            Number.isFinite(check.data.contrastRatio) && check.data.contrastRatio > 0))));
+}
+
+function hasMeasuredContrastFailure(finding) {
+  return finding.nodes.some(node => node.checks.some(check => {
+    if (check.id !== "color-contrast") return false;
+    const { messageKey, contrastRatio, expectedContrastRatio } = check.data;
+    if (messageKey === "equalRatio") return true;
+    if (["bgImage", "pseudoContent"].includes(messageKey)) return false;
+    const minimum = Number.parseFloat(expectedContrastRatio);
+    return Number.isFinite(contrastRatio) && contrastRatio > 0 &&
+      Number.isFinite(minimum) && contrastRatio < minimum;
+  }));
+}
+
 function stablePackageProjection(packageJson) {
   const scripts = packageJson.scripts ?? {};
   return {
@@ -100,6 +128,9 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
       row.httpStatus >= 200 &&
       row.httpStatus < 400 &&
       row.violations.length === 0 &&
+      Array.isArray(row.incompleteChecks) &&
+      row.incompleteChecks.every((finding) =>
+        incompleteCoveragePresent(finding) && !hasMeasuredContrastFailure(finding)) &&
       row.overflowElements === 0 &&
       row.brokenImagesAfterScroll === 0 &&
       row.unlabeledImages === 0 &&
@@ -165,6 +196,13 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     report.navigationReview?.renderedScreenshot?.byteLength > 0 &&
     report.navigationReview?.pass === true;
 
+  const manualReviewFindings = report.rows.flatMap(row =>
+    (row.incompleteChecks ?? []).map(finding => ({
+      route: row.path, viewport: row.viewport, finding,
+      status: incompleteCoveragePresent(finding) && hasMeasuredContrastFailure(finding)
+        ? "measured-failure" : "needs-human-review"
+    })));
+
   return {
     passed:
       report.reportVersion === 1 &&
@@ -188,6 +226,10 @@ export function validateResponsiveAccessibilityEvidence(repoRoot, reportOverride
     requestClassificationPasses,
     summaryPasses,
     focusedVisualReviewPasses,
-    navigationReviewPasses
+    navigationReviewPasses,
+    manualReviewFindings,
+    manualReviewComplete: report.rows.every(row => Array.isArray(row.incompleteChecks)) &&
+      manualReviewFindings.length === 0,
+    conformanceClaim: "not-established; automated evidence does not close human accessibility review"
   };
 }

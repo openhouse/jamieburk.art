@@ -1,0 +1,134 @@
+{
+  "runVersion": 4,
+  "reviewScope": "substantive-COMP-001-through-COMP-008",
+  "judgeId": "composite-substantive-reader-b",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "6ad0d6a0cbbbe972e65754e6cec7ab501227c91aaa13be8dd30bba65cb07d0f7",
+  "candidateFingerprint": "ef07f61e4dda99c70def844fc95780306736ce8f16d63283770f45edb7eb5f0c",
+  "verdict": "accepted",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        ".agents/evals/feature-evals-composite.json:required_branch_heads",
+        "docs/integration/feature-evals-composite.json:policy and decisions",
+        "scripts/lib/composite-integration-eval.mjs:COMP-001"
+      ],
+      "rationale": "Independently recomputed the candidate and rubric digests and resolved all fourteen declared A-N hashes as Git commit objects. The register contains each frozen branch once, retains feature/knowledge-h and develop as the integration and base branches, and explicitly keeps source branches reference-only. The read-only pre-review check reports no missing frozen objects or mutable-reference discrepancy."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/integration/feature-evals-composite.json:decisions and websiteDecision",
+        "docs/integration/feature-evals-composite.md",
+        "scripts/tests/composite-integration.test.mjs:integration destination and decorative explanation mutations"
+      ],
+      "rationale": "All fourteen decisions state an allowed disposition, a concrete strength, an integration rationale, existing destination files, and verification IDs. The register distinguishes retained H contracts from adapted append/query and governance behavior, rejects wholesale parallel architectures, and deliberately retains the selected website composition. Its independently recomputed canonical digest matches the frozen binding; the relevant missing-destination and decorative-record mutations passed."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/schema.ts",
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "apps/www/src/data/knowledge-bank/index.ts",
+        "apps/www/src/data/knowledge-bank/public.ts",
+        "scripts/generate-public-citations.mjs",
+        "apps/www/src/data/proofs.ts",
+        "apps/www/src/components/citations/Claim.tsx"
+      ],
+      "rationale": "The H-derived schema and assembled records remain the canonical knowledge model, with lifecycle operations consuming that model. None of the three forbidden parallel roots exists. The public citation import chain uses the generated redacted registry and schema, not canonical records; the generator omits protected locators, internal excerpts, and evidence locators, and selects active projections and renderable evidence. Public projection lookup rejects inactive or unauthorized surface use. The proof layer remains a public-safe authored projection with evidence-coverage validation."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts",
+        "scripts/tests/lifecycle-operations.test.mjs",
+        "docs/knowledge-bank/intake-and-maturation.md"
+      ],
+      "rationale": "Read the append and query implementation and independently ran all four lifecycle tests successfully under Node 26.5.0. Identical stable records return already-present without changing the bank; a new ID for the same artifact is retained and linked as a duplicate; changed content under an existing ID throws. Queries expose open intake and inquiries, mature held claims, corrections, projection counts, uncited/unobserved claims, and orphan sources. The current bank contains held knowledge and open inquiries and reports no orphan source."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/records.ts",
+        "apps/www/src/data/knowledge-bank/agency-graph.ts",
+        "apps/www/src/data/knowledge-bank/public-registry.json",
+        "scripts/lib/citation-validation.mjs",
+        "scripts/tests/knowledge-evals.test.mjs",
+        "scripts/tests/citations.test.mjs",
+        "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "apps/www/src/content/work/kc-town-hall.mdx"
+      ],
+      "rationale": "The independent read-only validation passed for 334 sources, 122 claims, 37 agency relations, and five corrections, with current derived Wiki and employment outputs. Inspected records distinguish direct, corroborating, contextual, boundary, and private evidence roles and retain does-not-establish statements. Open House separates initiation from collective governance; the CCED award separates Jamie's proposal/presentation work, shared development, institutional authority, and non-disbursement. The coalition X claim identifies the July capture, 3,123-record retrievable union, 5,124 profile counter, and 2,001-record recovery gap without converting circulation into authorship or impact. Twenty independently executed targeted correction, privacy, and population mutation tests passed."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/components/Hero.tsx",
+        "apps/www/src/app/about/page.tsx",
+        "apps/www/src/app/work/technical-operations/page.tsx",
+        "apps/www/src/app/resume/page.tsx",
+        "apps/www/src/content/work/harry-j-epstein.mdx",
+        "apps/www/src/content/work/callnyc.mdx",
+        "apps/www/src/content/work/wowlist.mdx",
+        "apps/www/src/content/work/196-sunday-dinner.mdx",
+        "apps/www/src/content/work/fair-rent-nyc.mdx",
+        "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+        "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+        "docs/qa/evals-H/2026-10-18-browser-home-mobile.png",
+        "docs/qa/evals-H/2026-10-18-browser-about-desktop.png"
+      ],
+      "rationale": "The site is a selected portfolio with a clear role, a short route through lead evidence, named project decisions, and usable results; it does not mirror the bank, and mature held claims remain unprojected. Jamie's actions are explicit while co-building, coalition achievement, and institutional decisions keep their respective credit. Open House, WOWList, hospitality/residency operations, civic work, and the current knowledge method preserve artistic, relational, civic, technical, and social continuity. The HJE listen/frame/implement/verify/continue specimen, coalition source and decision records, WOWList's organizer-driven product choice, and residency orientation/handoff make the recurring systems method reconstructable. Past examples are allowed to demonstrate that method; the lab's synthetic example and proposed sprint are not treated as delivered client validation. I visually inspected the saved mobile homepage and desktop About captures, alongside their source and current browser record."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
+        "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+        "docs/qa/pre-launch-eval-audit-2026-07-28.md",
+        "apps/www/src/app/work/technical-operations/page.tsx:evidenceBoundaries",
+        "apps/www/src/app/lab/source-backed-team-memory/page.tsx:proposed acceptance conditions"
+      ],
+      "rationale": "All five required human-evidence controls remain explicitly open: collaborator corroboration, collective review, hiring usability, job-funnel learning, and external validity. Each names the missing evidence, anti-gaming rules, next action, and public projection boundary. Their independently recomputed digest matches the frozen binding. The controls define passing as governed absence, prohibit fabricated testimony and simulated human validation, and preserve dissent and private raw records. Public pages identify evidence limits and proposed acceptance conditions; internal checks and this judgment do not close those human gates."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        ".agents/evals/feature-evals-composite.json",
+        ".agents/evals/portfolio-production-readiness.json",
+        "scripts/lib/composite-integration-eval.mjs:FROZEN_COMPOSITE_RUBRIC_SHA256 and frozenGovernance",
+        "scripts/tests/composite-integration.test.mjs",
+        "scripts/tests/knowledge-evals.test.mjs"
+      ],
+      "rationale": "Independently recomputed the semantic rubric, complete base suite, integration register, and blind-spot digests; all match the frozen values. The separate code pin and frozen branch digest prevent a mutable checksum refresh from authorizing semantic weakening or fabricated heads. The contract forbids optimizer self-grading and not-observed passes and requires every blocking criterion. Independently executed composite mutations passed for omitted branches, fabricated heads, decorative decisions, checksum-only weakening, stale derived outputs, self-grading, synthesized human evidence, malformed judgments, and blocker compensation. Targeted knowledge mutations additionally rejected private URL and raw-body leakage. Synthetic regression judgments remain in-memory test inputs, not human evidence or actual independent reviews."
+    }
+  ],
+  "notObserved": [],
+  "findings": [],
+  "recommendation": "Accept COMP-001 through COMP-008 for this exact frozen candidate. Coverage comprises relevant canonical, public-composition, privacy, governance, and mutation source inspection; existing technical/browser records; two saved viewport images inspected directly; and 76 independently executed read-only tests under Node 26.5.0. This is not a fresh live-browser session or a certification of CI, staging, production, a future review pair, or COMP-009. The release operator must separately verify the complete independent pair and required verification executions. Human corroboration, collective review, hiring usability, job-funnel learning, external validity, production, indexing, and any additional media approval retain their separate gates.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "composite-substantive-reader-b",
+    "reviewedAt": "2026-10-18T19:16:59Z",
+    "judgmentSha256": "73b3e5b31c3742f6aba507246a19d937b18605a1888aa0107cab204829f8604e",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+  }
+}

@@ -1,89 +1,82 @@
 {
-  "reportVersion": 7,
-  "checkedAt": "2026-10-18T18:45:59.392Z",
-  "baseUrl": "http://127.0.0.1:42087",
-  "publicSurfaceFingerprint": "730aaa4b9155058d977e23b6578b5ab2d561e9a9d7412c6b5603e5374913a9b8",
+  "reportVersion": 8,
+  "checkedAt": "2026-10-18T20:39:46.760Z",
+  "baseUrl": "http://127.0.0.1:42090",
+  "publicSurfaceFingerprint": "755a23985cd9c3d2e72f29cb08c9f551b5ada93a9d1d5292377a00457d40b493",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "fingerprintUnchangedDuringObservation": true,
-  "method": "Fresh Node 26 Playwright headless Google Chrome keyboard interaction and DOM/viewport inspection on the locally served candidate. This is not a human screen-reader or assistive-technology session.",
+  "method": "Fresh Playwright Chrome keyboard, navigation and reflow observations; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
       {
         "tag": "a",
         "text": "Skip to content",
         "href": "#main",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "JBJamie Burkart",
         "href": "/",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(26, 35, 43)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Work",
         "href": "/work",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgba(26, 35, 43, 0.78)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Technical Operations",
         "href": "/work/technical-operations",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgba(26, 35, 43, 0.78)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "About",
         "href": "/about",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgba(26, 35, 43, 0.78)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Resume",
         "href": "/resume",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgba(26, 35, 43, 0.78)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "Contact",
         "href": "/contact",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgba(26, 35, 43, 0.78)",
         "withinViewport": true
       }
     ],
@@ -91,11 +84,10 @@
       "tag": "a",
       "text": "Skip to content",
       "href": "#main",
-      "focusVisible": true,
       "id": null,
+      "focusVisible": true,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "outlineColor": "rgb(209, 162, 63)",
       "withinViewport": true
     },
     "skipLinkIsFirst": true,
@@ -111,57 +103,42 @@
         "tag": "a",
         "text": "Skip to content",
         "href": "#main",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(209, 162, 63)",
         "withinViewport": true
       },
       {
         "tag": "a",
         "text": "JBJamie Burkart",
         "href": "/",
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(26, 35, 43)",
         "withinViewport": true
       },
       {
         "tag": "summary",
         "text": "MenuClose menu",
         "href": null,
-        "focusVisible": true,
         "id": null,
+        "focusVisible": true,
         "outlineStyle": "solid",
         "outlineWidth": "3px",
-        "outlineColor": "rgb(26, 35, 43)",
         "withinViewport": true
       }
     ],
-    "menuFocusBeforeOpen": {
-      "tag": "summary",
-      "text": "MenuClose menu",
-      "href": null,
-      "focusVisible": true,
-      "id": null,
-      "outlineStyle": "solid",
-      "outlineWidth": "3px",
-      "outlineColor": "rgb(26, 35, 43)",
-      "withinViewport": true
-    },
     "menuOpen": true,
     "firstMobileMenuLink": {
       "tag": "a",
       "text": "Work",
       "href": "/work",
-      "focusVisible": true,
       "id": null,
+      "focusVisible": true,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "outlineColor": "rgb(26, 35, 43)",
       "withinViewport": true
     },
     "menuClosedAfterToggle": true,
@@ -169,30 +146,24 @@
       "tag": "a",
       "text": "About",
       "href": "/about",
-      "focusVisible": true,
       "id": null,
+      "focusVisible": true,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "outlineColor": "rgb(26, 35, 43)",
       "withinViewport": true
     },
     "destination": {
       "path": "/about",
-      "h1": "About",
-      "mainPresent": true
+      "h1": "About"
     },
     "passed": true
   },
   "desktopNavigation": {
     "startRoute": "/",
     "destinationRoute": "/about",
-    "linkText": "About",
-    "destinationH1": "About",
-    "mainPresent": true,
     "passed": true
   },
   "reflow": {
-    "interpretation": "640 CSS pixels approximates a 1280-pixel viewport at 200% zoom; 320 CSS pixels is a narrower reflow proxy. Browser zoom and assistive technology were not human-tested.",
     "rows": [
       {
         "route": "/",
@@ -200,8 +171,6 @@
         "httpStatus": 200,
         "clientWidth": 640,
         "scrollWidth": 640,
-        "overflowElements": 0,
-        "overflowDetails": [],
         "h1Count": 1,
         "mainPresent": true,
         "passed": true
@@ -212,8 +181,6 @@
         "httpStatus": 200,
         "clientWidth": 640,
         "scrollWidth": 640,
-        "overflowElements": 0,
-        "overflowDetails": [],
         "h1Count": 1,
         "mainPresent": true,
         "passed": true
@@ -224,8 +191,6 @@
         "httpStatus": 200,
         "clientWidth": 320,
         "scrollWidth": 320,
-        "overflowElements": 0,
-        "overflowDetails": [],
         "h1Count": 1,
         "mainPresent": true,
         "passed": true
@@ -236,8 +201,6 @@
         "httpStatus": 200,
         "clientWidth": 320,
         "scrollWidth": 320,
-        "overflowElements": 0,
-        "overflowDetails": [],
         "h1Count": 1,
         "mainPresent": true,
         "passed": true
@@ -245,97 +208,31 @@
     ],
     "passed": true
   },
-  "semanticReadingOrder": {
-    "scope": "/about landmarks and first 20 headings",
-    "landmarks": [
-      {
-        "tag": "header",
-        "ariaLabel": null
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Primary navigation"
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Mobile navigation"
-      },
-      {
-        "tag": "main",
-        "ariaLabel": null
-      },
-      {
-        "tag": "footer",
-        "ariaLabel": null
-      },
-      {
-        "tag": "nav",
-        "ariaLabel": "Footer navigation"
-      }
-    ],
-    "headings": [
-      {
-        "level": 1,
-        "text": "About"
-      },
-      {
-        "level": 2,
-        "text": "Systems people can inhabit"
-      },
-      {
-        "level": 3,
-        "text": "Harry J. Epstein Company"
-      },
-      {
-        "level": 3,
-        "text": "NYC Artist Coalition and FairRentNYC"
-      },
-      {
-        "level": 3,
-        "text": "Sunday Dinner and 196"
-      },
-      {
-        "level": 3,
-        "text": "WOWList"
-      },
-      {
-        "level": 3,
-        "text": "Knowledge Wiki Graphs"
-      },
-      {
-        "level": 3,
-        "text": "Limits of this comparison"
-      },
-      {
-        "level": 2,
-        "text": "Sources and notes"
-      },
-      {
-        "level": 2,
-        "text": "Looking for technical project management, product operations, implementation, or knowledge-systems support?"
-      }
-    ],
-    "passed": true
-  },
+  "reelLink": [
+    {
+      "width": 375,
+      "text": "Watch the 30-second listening-session animation on Instagram",
+      "href": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "visible": true,
+      "mediaElements": 0,
+      "screenshot": "fair-rent-reel-375.png",
+      "screenshotSha256": "4bb3a5ad3a0ecc5b72b4d1e0627e8a45f1bfc82860670c4d0001e0ecb72f2bc1"
+    },
+    {
+      "width": 1280,
+      "text": "Watch the 30-second listening-session animation on Instagram",
+      "href": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "visible": true,
+      "mediaElements": 0,
+      "screenshot": "fair-rent-reel-1280.png",
+      "screenshotSha256": "2b03adcdda0fa4c8351201d66be4600e9dd46e1a108babffcfef2754b66a8014"
+    }
+  ],
   "residualHumanGates": [
     "Human screen-reader review",
     "Human browser zoom review",
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true,
-  "visualFocusInspection": {
-    "performed": true,
-    "observations": [
-      "The first keyboard focus visibly reveals Skip to content with an outline; activation moves focus to main.",
-      "The mobile menu exposes Work with a visible focus outline; menu close and reopen are keyboard-operable, and keyboard activation of About completes navigation."
-    ],
-    "supportingScreenshotsRetainedInPublicGit": false
-  },
-  "supersededReceipt": "historical-pre-candidate/professor-lenses-interaction-qa-2026-10-13-before-2026-10-18.json",
-  "provenance": {
-    "observer": "release-reader-b",
-    "observationDate": "2026-10-18",
-    "priorReceiptPreservedByteForByte": true
-  }
+  "passed": true
 }

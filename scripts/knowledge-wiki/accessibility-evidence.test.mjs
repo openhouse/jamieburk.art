@@ -135,6 +135,56 @@ test("an axe violation fails closed", () => {
   assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).passed, false);
 });
 
+test("measured axe incomplete contrast failures fail closed, including equal text/background colors", () => {
+  const report = structuredClone(current.report);
+  for (const row of report.rows) row.incompleteChecks = [];
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).rowsPass, true);
+  report.rows[0].incompleteChecks.push({ id: "color-contrast", impact: "serious", nodeCount: 1,
+    nodes: [{ target: ["a[download]"], checks: [{ id: "color-contrast", data: {
+      messageKey: "equalRatio", contrastRatio: 1, expectedContrastRatio: "4.5:1"
+    }}] }] });
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).rowsPass, false);
+  report.rows[0].incompleteChecks[0].impact = "critical";
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).rowsPass, false);
+});
+
+test("unmeasurable photo backgrounds stay visible as manual-review needs, not measured failures or passes", () => {
+  const report = structuredClone(current.report);
+  for (const row of report.rows) row.incompleteChecks = [];
+  report.rows[0].incompleteChecks = [{ id: "color-contrast", impact: "serious", nodeCount: 1,
+    nodes: [{ target: [".hero"], checks: [{ id: "color-contrast", data: {
+      messageKey: "bgImage", contrastRatio: 0, expectedContrastRatio: "4.5:1"
+    }}] }] }];
+  const result = validateResponsiveAccessibilityEvidence(defaultRepoRoot, report);
+  assert.equal(result.rowsPass, true);
+  assert.equal(result.manualReviewFindings.length, 1);
+  assert.equal(result.manualReviewComplete, false);
+});
+
+test("missing axe incomplete coverage is not evidence of no unresolved findings", () => {
+  const report = structuredClone(current.report);
+  for (const row of report.rows) row.incompleteChecks = [];
+  delete report.rows[0].incompleteChecks;
+  const result = validateResponsiveAccessibilityEvidence(defaultRepoRoot, report);
+  assert.equal(result.rowsPass, false);
+  assert.equal(result.manualReviewComplete, false);
+});
+
+test("contrast classifications cannot lose their measurement fields and keep passing coverage", () => {
+  const report = structuredClone(current.report);
+  for (const row of report.rows) row.incompleteChecks = [];
+  const check = { id: "color-contrast", data: {} };
+  report.rows[0].incompleteChecks = [{ id: "color-contrast", impact: "serious", nodeCount: 1,
+    nodes: [{ target: ["a[download]"], checks: [check] }] }];
+  for (const data of [{}, {messageKey:"equalRatio"}, {messageKey:"bgImage"},
+    {messageKey:"unknown",expectedContrastRatio:"4.5:1"}]) {
+    check.data = data;
+    assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).rowsPass, false);
+  }
+  check.data = {messageKey:"contrastRatio",contrastRatio:4.32,expectedContrastRatio:"4.5:1"};
+  assert.equal(validateResponsiveAccessibilityEvidence(defaultRepoRoot, report).rowsPass, false);
+});
+
 test("an unverified lazy-image follow-up fails closed", () => {
   const report = structuredClone(current.report);
   report.summary.lazyImageFollowUpPerformed = false;
