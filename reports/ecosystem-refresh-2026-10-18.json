@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-10-18",
+  "baseCommit": "3178c51fb4c94561935e667bbc095dffd5bca63c",
+  "authoredSourceCommit": "6b89a00a248d4fce31710005b2d1d0a5cb467be5",
+  "scope": "Public-safe bounded ecosystem freshness, deterministic graph baseline, footer correction, and regenerated graph/report artifacts. No private source inventory is included.",
+  "sourceSha256": {
+    "scripts/knowledge-wiki/ecosystem-operations-profile-eval.mjs": "48818a5454c68155e4d7280e1b2eb4538ffeffa533f1a4c71fd6561935fb5baf",
+    "scripts/knowledge-wiki/ecosystem-operations-profile-eval.test.mjs": "b7a60062d1c1bccba0f24e1ad77f5529ae77a77ea2a8352b808a20f9d11db2c4",
+    "evals/knowledge-wiki/evals.json": "ae4cfec1f0f68ea2b17110d4bba02e64c5d541ded8bb619e6831967b2c62c2f2",
+    "scripts/knowledge-wiki/lib.mjs": "5dde3798b640e47d6b7446af024f6e0958de043cf19e8017641aba827f392570",
+    "scripts/knowledge-wiki/graph-delta-determinism.test.mjs": "db1781bc65f57b376ebeb0b22e98f0f184f848f09a6e7861cdfbce440731416e",
+    "apps/www/src/components/SiteFooter.tsx": "5d7537bc6f1dfa1a69d484d2cc891c989308a73c5bfd8b1b877965682350e256",
+    "evals/public-language/public-surface-terminology.json": "8183b005ad348becc8c00e097921f1bb102cea88d4b0be46a08fa6fa3f77f5aa",
+    "scripts/tests/public-language.test.mjs": "6d94b89187d784309a089cf4aa8377801c4993ed532e3927b88f7c8ace089758"
+  },
+  "hillClimb": {
+    "semanticQualityScore": null,
+    "boundedIterations": [
+      "Freshness: initial regressions exposed false offline currentness and omitted new remote heads. Implemented all-head observation and explicit coverage gaps.",
+      "Independent review exposed impossible-calendar-date acceptance; reproduced red and fixed canonical ISO round-trip validation.",
+      "Footer: two regressions failed on prior wording; removed internal label and unsupported future promise, retaining negative controls.",
+      "Graph baseline: 0/2 red became 2/2 green with the exact immutable comparison snapshot and missing-history hold.",
+      "Aggregate evaluation caught the renamed criterion not being wired into the manifest; 0/1 red became 1/1 green with an exact criterion-set regression."
+    ],
+    "focusedFinal": {
+      "passed": 58,
+      "failed": 0,
+      "suites": [
+        "ecosystem profile 29",
+        "immutable baseline 2",
+        "locale determinism 1",
+        "public language 26"
+      ]
+    },
+    "independentReview": "Separate non-author agents reviewed the corrected evaluator, baseline adapter and aggregate wiring; no remaining actionable findings in those bounded changes. Not human approval or calibrated quality measurement."
+  },
+  "localVerification": {
+    "graphHealth": {
+      "status": "pass",
+      "records": 504,
+      "semanticEvidenceEdges": 1831,
+      "proseLinks": 576,
+      "typeAwareOrphans": 0,
+      "generatedOutputsCurrent": true
+    },
+    "employmentReports": {
+      "status": "pass",
+      "outputs": 8,
+      "boundary": "Deterministic public-evidence diagnostic refresh, not new official posting research or hiring approval."
+    },
+    "wikiTests": {
+      "passed": 374,
+      "failed": 1,
+      "remainingFailure": "candidate-bound responsive accessibility evidence passes",
+      "baselineFailureReproduced": true
+    },
+    "wikiEval": {
+      "status": "held",
+      "failures": [
+        "bounded_public_projection_change",
+        "candidate_bound_accessibility_evidence"
+      ],
+      "baselineFailuresReproduced": true
+    },
+    "wikiHillclimb": {
+      "status": "held",
+      "reached": "graph/report generation and current-output checks passed; stopped at inherited accessibility receipt failure in wiki:test"
+    },
+    "fullCheck": {
+      "status": "held",
+      "firstStop": "professor-lens candidate fingerprint and 0/6 matching passing holdout scorecards",
+      "baselineFailureReproduced": true
+    },
+    "knowledgeBankScorecard": {
+      "status": "held",
+      "weightedScore": 1.6,
+      "maximum": 5,
+      "belowMinimumCriteria": 9,
+      "baselineFailureReproduced": true
+    },
+    "build": {
+      "status": "pass",
+      "renderedLanguagePages": 16,
+      "boundary": "Local build, not deployment; first restricted-network font fetch failed, subsequent build with network access succeeded."
+    },
+    "lint": "pass",
+    "typecheck": "pass",
+    "citations": "pass",
+    "routes": "pass",
+    "sourcePublicLanguage": {
+      "status": "pass",
+      "files": 81,
+      "findings": 0
+    },
+    "publicSafety": {
+      "status": "pass",
+      "existingCarefulClaimWarnings": 11
+    },
+    "rfcs": {
+      "status": "pass",
+      "numberedProposals": 16
+    },
+    "diffCheck": "pass",
+    "dependencyInstall": {
+      "status": "completed",
+      "inheritedAuditFindings": {
+        "moderate": 3,
+        "high": 8
+      },
+      "auditFixApplied": false
+    }
+  },
+  "remoteProfileObservation": {
+    "observedAt": "2026-10-18T13:34:29.799Z",
+    "status": "review-required",
+    "unreviewedHeads": 43,
+    "missingHeads": 0,
+    "changedHeads": 3,
+    "boundary": "The retained historical profile does not become a current exhaustive review. Counts exclude all private branch locators."
+  },
+  "authority": {
+    "humanApproval": false,
+    "merge": false,
+    "deployment": false,
+    "publicationApproval": false,
+    "contact": false
+  },
+  "hostedCi": "Not established by these local checks; exact-head readback belongs in the pull-request update."
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T19:49:24-04:00",
-  "sourceCommit": "29745b537e57bab69f5ddc6207c3ab6e8fbd8e38",
-  "sourceFingerprint": "27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4",
+  "generatedAt": "2026-10-18T09:43:57-04:00",
+  "sourceCommit": "6b89a00a248d4fce31710005b2d1d0a5cb467be5",
+  "sourceFingerprint": "36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
@@ -52,7 +52,7 @@
       "uses_method": 40,
       "uses_source": 408
     },
-    "proseLinks": 575,
+    "proseLinks": 576,
     "rootReachable": 274,
     "orphanCount": 0,
     "deadEndCount": 0,

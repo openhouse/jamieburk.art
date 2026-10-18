@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Decision records
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `6b89a00a248d4fce31710005b2d1d0a5cb467be5`
+**Generation time:** 2026-10-18T09:43:57-04:00
+**Source fingerprint:** `36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac`
 
 - [Knowledge Wiki](../../README.md) - `prose_link` (markdown)
 - [Knowledge Wiki](../../README.md) - `related_to` (frontmatter)
