@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "current-practice-scope-review-20261018",
+  "reviewedAt": "2026-10-18",
+  "reviewKind": "independent-agent-public-boundary-audit",
+  "baselineCommit": "407a8b656f1ad03860f971f84c3eee2a4bea8142",
+  "finding": "No blocking public-boundary findings within the bound implementation scope.",
+  "scope": {
+    "comparison": "Complete staged and unstaged implementation, configuration and test diff against the baseline commit, bound by the file hashes below.",
+    "focus": [
+      "Whether two separate anonymous cases on Technical Operations change KC Town Hall wording or expose held claims.",
+      "Exact canonical-to-public paragraph equality, first-person source disclosure and publication boundaries.",
+      "Source-closed agency and preservation of individual and shared credit."
+    ],
+    "approvalPremise": "The task states that Jamie approved the two anonymous paragraphs as text only. This audit accepts that premise and does not independently establish authorization or corroborate the underlying events.",
+    "excludedConcurrentArtifacts": [
+      "docs/qa/evals-H/professor-lenses-browser-qa.json",
+      "docs/qa/evals-H/professor-lenses-interaction-qa.json",
+      "docs/qa/evals-H/responsive-route-matrix.json",
+      "docs/qa/evals-H/current-practice-cases-20261018/",
+      "docs/qa/evals-H/current-practice-navigation-20261018/",
+      "docs/qa/evals-H/history/20261018-pre-current-practice/"
+    ],
+    "exclusionReason": "Browser-QA artifacts appeared concurrently after the initial ten-file implementation scope was captured. Their local details and results are outside this semantic boundary audit."
+  },
+  "sharedSurfaceBinding": {
+    "algorithm": "SHA-256 of the UTF-8 contents of the following files, in order, joined with one newline.",
+    "inputs": [
+      "apps/www/src/data/work.ts",
+      "apps/www/src/app/work/technical-operations/page.tsx"
+    ],
+    "baselineSha256": "d8a3696a7a5d5b82e38d264aa5a800daa889b2f54122342a19b1088745fb5be7",
+    "currentSha256": "d2325d6102fcd1b38416010fcaa2676bae8ad45793da288726962f6c05d451d7",
+    "baselineIndependentlyRecomputed": true,
+    "currentIndependentlyRecomputed": true,
+    "matchesCurrentEvaluatorLock": true,
+    "inputScopeLimit": "This hash does not include About or the text expanded by Claim components. The new canonical case module, public registry and citation resolution were reviewed separately.",
+    "workDataFileSha256": "1b2aec09f1de43c45c0c6a75dfb40366318f9b914317a8bf2f268ef018b51416"
+  },
+  "sixOtherKcLocks": {
+    "allIndependentlyRecomputed": true,
+    "allMatchBaselineAndCurrentLocks": true,
+    "corpusSha256": "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
+    "canonicalRecordsSha256": "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
+    "governedKnowledgeSha256": "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
+    "proofProjectionSha256": "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
+    "caseStudyMdxSha256": "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
+    "publicReviewReportSha256": "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696",
+    "priorReportUse": "The prior KC field-practice review document was hashed only; its judgments were not consulted."
+  },
+  "findings": {
+    "kcTownHallWordingUnchanged": true,
+    "existingPublicRegistrySourcesUnchanged": true,
+    "existingPublicRegistryClaimsUnchanged": true,
+    "onlyChangedExistingCitationPage": "technical-operations",
+    "kcFieldPracticeHeldClaimCount": 4,
+    "kcFieldPracticeHeldClaimsRetainUseWithCareStatus": true,
+    "kcFieldPracticeHeldProjectionsRetainHoldStatus": true,
+    "kcFieldPracticeHeldProjectionsHaveZeroSurfaces": true,
+    "kcFieldPracticeHeldClaimsAbsentFromPublicRegistry": true,
+    "noHeldClaimPromotion": true,
+    "newPublicAdditionsContainNoCollaboratorNames": true,
+    "newPublicAdditionsContainNoUnderlyingQuotations": true,
+    "newPublicAdditionsContainNoMedia": true,
+    "newPublicAdditionsContainNoSourceUrls": true,
+    "newPublicAdditionsContainNoProtectedLocatorsOrPrivatePaths": true,
+    "sourceMetadataNamesTheApprovedAccountAsPublicSource": true,
+    "sourceMetadataDisclaimsIndependentVerification": true,
+    "publicBoundariesStateLimitsWithoutAssertingPrivateHistoricalEvents": true,
+    "publishedScope": "The approved anonymous text only; no identities, quotations, media or underlying records."
+  },
+  "paragraphBindings": [
+    {
+      "claimId": "CLM-WRITTEN-PARTICIPATION-2026",
+      "project": "written-participation",
+      "textSha256": "659c7996ad7360dd6f41e163dbf0639739473a85b8fe421d820f436d1b560217",
+      "publicTextEqualsCanonicalText": true,
+      "onlySurface": "/work/technical-operations",
+      "sourceCount": 1,
+      "sourceAuthor": "Jamie Burkart",
+      "sourceId": "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026",
+      "sourceTypeDisclosure": "Approved first-person account; not independent verification."
+    },
+    {
+      "claimId": "CLM-EDITORIAL-ANIMATION-2026",
+      "project": "editorial-animation",
+      "textSha256": "6dbd92a002ae1372666148e8fac39fee4c22c416b398cd13b556804ba5d17ca6",
+      "publicTextEqualsCanonicalText": true,
+      "onlySurface": "/work/technical-operations",
+      "sourceCount": 1,
+      "sourceAuthor": "Jamie Burkart",
+      "sourceId": "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026",
+      "sourceTypeDisclosure": "Approved first-person account; not independent verification."
+    }
+  ],
+  "agencyReview": {
+    "existingEntitiesAndRelationsUnchanged": true,
+    "addedAnonymousEntities": 7,
+    "addedRelations": 4,
+    "entityCount": 41,
+    "relationCount": 40,
+    "graphSha256": "dde0f3421683a4a6088ffb1ae1554538449e3914c38e3f60ae401739baee190c",
+    "graphHashAndCountsMatchConfiguration": true,
+    "allFourNewRelationsSourceClosed": true,
+    "allFourNewRelationsSupportKeysClosed": true,
+    "allReferencedActorsAndObjectsPresentAndPublicSafe": true,
+    "eachNewProjectRetainsIndividualAndSharedCredit": true,
+    "animationRemainsOneProjectAcrossTwoPublicationSurfaces": true,
+    "claimLimitsPreserved": [
+      "No sole authorship of participant contributions, the article or collective work.",
+      "No inference of a paid commission, institutional client relationship, agency endorsement or audience reach.",
+      "No verified binary match between delivered and published media.",
+      "No inference that every proposed safeguard or a completed return to members is established."
+    ]
+  },
+  "candidateFiles": {
+    "edition": "Reviewed implementation before the subsequent comment-only amendment to scripts/lib/knowledge-evals.mjs.",
+    "hashAlgorithm": "SHA-256 of file bytes.",
+    "fileHashes": {
+      "apps/www/src/app/work/technical-operations/page.tsx": "c30fad9dc3387316f42dc7b70e89a082b7d03aebce5bf5ae825c87bc065f8d9e",
+      "apps/www/src/data/knowledge-bank/agency-graph.ts": "f86f71e058af19f6af889920015563636a189175ba15debbaea26a8ca4965a2f",
+      "apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts": "a8d2c0a49fd61dcbd91e8f4c52a6e5f68d47c302a3f53724b6c1f22119f5a681",
+      "apps/www/src/data/knowledge-bank/public-registry.json": "59730b66165485a89b58597ffc01328764ce0e83e9a8666df54c391980a48b41",
+      "apps/www/src/data/knowledge-bank/records.ts": "268b1a8180cb4d6794c80d62484c802731775e4a5504d7cb2623a845fdfe3b80",
+      "evals/knowledge-bank/evals.json": "dbe731c0e67a198dd084e30527d1bc4adfc6ef03952d5ae1aa3626f66b35f200",
+      "package.json": "ebc5b8578e20929b621e0ea5f234dbe39fa0218f45afd397b0e7b867a4abe970",
+      "scripts/tests/citations.test.mjs": "c077742ff5de98e1468e972261a665ecdd590a793827b94a0f2f6087535f6161",
+      "scripts/tests/current-practice-cases.test.mjs": "654115f4bd995ad7ed167b2d011310450d79dc6222ce43eb3971be8f095cf516"
+    },
+    "preCommentEvaluatorBinding": {
+      "path": "scripts/lib/knowledge-evals.mjs",
+      "sha256": "ae74971fd5215d8af0b044253a9103fa65ef3c91502df28d5b944252c8c39fbe",
+      "edition": "Pre-comment amendment. This is not the hash of the later file whose comment cites this report."
+    }
+  },
+  "verification": {
+    "independentReadOnlyHashRecomputation": "passed",
+    "baselinePublicRegistryObjectComparison": "passed",
+    "baselineAgencyObjectComparison": "passed",
+    "canonicalAndPublicCitationResolution": "passed",
+    "publicCitationRegistryCheckCommand": "node scripts/generate-public-citations.mjs --check",
+    "publicCitationRegistryCheckResult": "Public citation registry is current and redacted.",
+    "referenceBacklinkCounts": [3, 1, 1],
+    "reviewedTenFileEditionRecheckedBeforePersistence": true
+  },
+  "limits": [
+    "This report is an agent boundary review, not human approval or independent factual corroboration.",
+    "No private repository, memory, old judgments or scorecards were consulted.",
+    "No PR015 or PR016 scoring was performed.",
+    "This report is not release, publication, merge or deployment authorization.",
+    "The prior review document was read as bytes for hashing only.",
+    "The audit performed no mutations. Subsequent authorized persistence adds this report and amends only the evaluator comment to cite it.",
+    "The report does not bind its own bytes or the post-comment evaluator file hash."
+  ]
+}

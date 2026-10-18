@@ -1,10 +1,10 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-10-18T18:36:43.249Z",
-  "baseUrl": "http://127.0.0.1:3239",
-  "publicSurfaceFingerprint": "ff9fbfc9d0b928416ba5c1216f8ad6db9d9b782b8a0a6102ef2d016a55f234da",
+  "checkedAt": "2026-10-18T20:01:15.340Z",
+  "baseUrl": "http://127.0.0.1:3248",
+  "publicSurfaceFingerprint": "01338643e960cda4e95a642c087666591b29cfc5b06cefa7ab7dabb586eceaf9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 158,
+  "publicSurfaceFileCount": 159,
   "method": "Fresh Playwright keyboard interaction, visible-focus checks, DOM reading order and CSS viewport reflow observations on the Node 26 production build; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
@@ -83,8 +83,8 @@
     },
     "passed": true,
     "postNavigation": {
-      "baseUrl": "http://127.0.0.1:3239",
-      "checkedAt": "2026-10-18T18:47:03.826Z",
+      "baseUrl": "http://127.0.0.1:3248",
+      "checkedAt": "2026-10-18T20:01:29.658Z",
       "passed": true,
       "results": [
         {
@@ -99,7 +99,7 @@
             "heading": "About",
             "headingUnobscured": true,
             "menuOpen": false,
-            "screenshot": "case-navigation-2026-10-18/different-route-about.png",
+            "screenshot": "current-practice-navigation-20261018/different-route-about.png",
             "sha256": "32f569ff5c3482f89090f40530d6d713598fa684895a7980f22390b824287c16"
           },
           "caseNavigation": {
@@ -107,8 +107,8 @@
             "heading": "From audio editions to printed labels",
             "headingUnobscured": true,
             "menuOpen": false,
-            "screenshot": "case-navigation-2026-10-18/different-route.png",
-            "sha256": "f13900e85f0cf42fa8779186d7d778fe5749a403947704f87f6599dd7e45b727"
+            "screenshot": "current-practice-navigation-20261018/different-route.png",
+            "sha256": "62b5de99a4e6e8ae6b8f167331a5d98022533511d36d8e06d5dfe394350b6344"
           }
         },
         {
@@ -123,7 +123,7 @@
             "heading": "About",
             "headingUnobscured": true,
             "menuOpen": false,
-            "screenshot": "case-navigation-2026-10-18/same-route-about.png",
+            "screenshot": "current-practice-navigation-20261018/same-route-about.png",
             "sha256": "32f569ff5c3482f89090f40530d6d713598fa684895a7980f22390b824287c16"
           },
           "caseNavigation": {
@@ -131,12 +131,12 @@
             "heading": "From audio editions to printed labels",
             "headingUnobscured": true,
             "menuOpen": false,
-            "screenshot": "case-navigation-2026-10-18/same-route.png",
-            "sha256": "8e669cb28e559d0531f931cf45ed3181d5cc31834aeba21536c7b4eca85a6578"
+            "screenshot": "current-practice-navigation-20261018/same-route.png",
+            "sha256": "660ab1acddeb2bd7442b0b1811677fd0f7329c98fab903d7d2d92a2f28ee6b21"
           }
         }
       ],
-      "method": "Keyboard Enter opens the native menu and activates About; a separate keyboard activation follows the case link. Separate screenshots identify the intermediate About destination and final case destination. Browser observations, not human usability validation."
+      "method": "Keyboard Enter opens the native menu and activates About; a separate activation follows the case link. Separate checksum-bound screenshots identify intermediate and final destinations. Browser observations, not human usability validation."
     }
   },
   "reflow": {

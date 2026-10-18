@@ -1,0 +1,232 @@
+{
+  "evaluator": "Independent simulated advisory reviewer using a fictionalized analytical lens; no real named professor participated",
+  "reviewerId": "current-practice-reader-3",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "0f3625259217d3ce8e0b357f0822fe01bb0eeffc16ee36760ee9e8d0c076b451",
+  "score": 3,
+  "pass": true,
+  "passScope": "Individual content assessment at the frozen minimum score of 3. The three-reviewer median and full release decision are not evaluated.",
+  "rationale": "The method is plainly stated and reconstructable across three recent projects at the level supported by their approved accounts. Feedback, working representations, interfaces, collaborative use, and delivery or retained records are connected. The evidence is strong but not exceptional: later learning and continuation are thin, and some stage descriptions remain analytical reconstructions rather than separately inspectable artifacts.",
+  "criterionFindings": [
+    {
+      "criterion": "Three current project sequences",
+      "finding": "Met with limits. Audio-and-print production, written participation, and editorial animation supply three recent project-level sequences. The finding concerns reconstructability, not independently verified outcomes or completed post-use feedback cycles."
+    },
+    {
+      "criterion": "Plain method within two clicks",
+      "finding": "Met. About states observation, modeling, prototyping, testing with people, and documentation in one passage and links to project evidence."
+    },
+    {
+      "criterion": "Social structure connected to interfaces, learning, and handoffs",
+      "finding": "Met. Recent examples show artist clarification, participant writing, and editorial scoping shaping usable forms. Historical WOWList support and coalition participation add stronger continuation context."
+    },
+    {
+      "criterion": "Coursework distinguished from present proof",
+      "finding": "Met within the inspected material. Protected coursework remains held, archived projects retain dates, and the lab distinguishes proposed engagements and synthetic controls from participant pilots or production deployment."
+    },
+    {
+      "criterion": "Three-reviewer score threshold",
+      "finding": "Not evaluated. This individual score does not establish the required median of 4."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The recursive sequence is stated plainly and linked to concrete projects. The page explicitly distinguishes an analytical pattern from structural equivalence and current proficiency."
+    },
+    {
+      "path": "rendered/1280-work--technical-operations.txt",
+      "finding": "Three October 2026 accounts describe clarification and revision leading to physical labels, participation instruments producing written records, and an editorial brief leading to revised cuts and publication."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts",
+      "finding": "The account supports seven recorded sittings, edition separation, three clarification questions, a revised proof, fifty label-to-audio links, and retrospective physical-use confirmation. Visitor use and final acceptance remain outside its support."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts",
+      "finding": "Written participation and editorial animation are separate bounded accounts. Neither preparation nor publication is promoted into proof of every safeguard, exact file identity, audience impact, or sole authorship."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "The historical sequence joins gathering-derived needs, a keyword-community model, natural-language entry, organizer use, support, and independent continuation routes. The 2026 return remains a limited threshold."
+    },
+    {
+      "path": "rendered/1280-work--callnyc.txt",
+      "finding": "Administrative categories become resident issue pathways and public guidance. The implementation is dated and explicitly archived; public interactions do not establish present service use."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "The lab separates meaning, evidence, and custody, shows a concrete date correction, and labels its reader-return prototype synthetic and its client sprint proposed."
+    },
+    {
+      "path": "rendered/1280-work--kc-town-hall.txt",
+      "finding": "The service model and before-and-after collection evidence support historical delivery. The About comparison expressly leaves the finer resident-feedback-to-redesign history unresolved."
+    },
+    {
+      "path": "navigation/current-practice-cases.json",
+      "finding": "Bound browser observations record home → Work → Technical Operations, matching rendered paragraph hashes and visible citation targets after explicit disclosure at both widths. These observations do not corroborate the underlying project accounts."
+    }
+  ],
+  "systemsSequences": [
+    {
+      "project": "Audio-and-print production",
+      "evidencePath": "rendered/1280-work--technical-operations.txt",
+      "status": "Recent approved first-person account",
+      "observation": "The label proof contained unresolved identities and destinations, and current audio editions needed separation from earlier versions.",
+      "model": "A relationship between current recordings, portrait identities, label destinations, and repeatable cutting measurements is reconstructable from the account.",
+      "interface": "Revised proofs and standardized printed labels link the physical portraits to audio.",
+      "socialUse": "The artist answered clarification questions; Jamie reports that the printed labels were attached beneath portraits.",
+      "learning": "The artist's replies were incorporated into the revised proof.",
+      "documentationAndContinuation": "Versioned files, preserved label-to-audio links, and delivery of the printed edition provide a bounded production handoff.",
+      "limits": "The relationship model is my reconstruction. Installer identity, complete installation count, visitor use, link performance, and final client acceptance are not established."
+    },
+    {
+      "project": "Written participation",
+      "evidencePath": "rendered/1280-work--technical-operations.txt",
+      "status": "Recent approved first-person account",
+      "observation": "Board legibility and difficulty taking notes live informed the proposed activity.",
+      "model": "A shared written activity about places to protect translates conversational participation into recoverable places, concerns, and suggestions.",
+      "interface": "Activity sheets and a shared board.",
+      "socialUse": "The account reports handwritten participant responses on both instruments.",
+      "learning": "Feedback informed the proposed design; the written responses created material available for later review.",
+      "documentationAndContinuation": "The retained written record supplies documentation for continuation, although its later return or use is not demonstrated.",
+      "limits": "Exact form edition, every proposed safeguard, a complete tally, and a completed return to members remain gaps. Booking, sheets, and board count as one project."
+    },
+    {
+      "project": "Editorial animation",
+      "evidencePath": "rendered/1280-work--technical-operations.txt",
+      "status": "Recent approved first-person account",
+      "observation": "The editor needed an animation focused on the particular arts gathering covered by her article.",
+      "model": "A narrower article-specific brief was separated from the broader coalition story.",
+      "interface": "Revised square and vertical animation cuts.",
+      "socialUse": "The account describes editorial collaboration, delivery for review, article placement, and a linked collaboration post.",
+      "learning": "Editorial direction changed the scope and led to revised cuts. This is collaborative revision, not demonstrated audience-feedback learning.",
+      "documentationAndContinuation": "Delivery for review and credited publication provide a project-level handoff and distribution trace. A separate reusable handoff document is not shown.",
+      "limits": "The delivered exports are not verified as the exact published binaries. Full playback, audience response, paid commission, and institutional endorsement remain unestablished. The two surfaces count as one project."
+    }
+  ],
+  "gaps": [
+    "Current sequence evidence rests on approved first-person accounts; the supplied browser checks verify their rendering, not their underlying events.",
+    "Written participation supplies a record for later review but does not establish a completed return to members.",
+    "Editorial animation has the thinnest documentation stage: delivery and publication are described, but a separate continuation record and post-publication learning are not shown.",
+    "The exhibition account establishes reported physical use without visitor testing or final acceptance.",
+    "WOWList, CallNYC, HJE, and KC Town Hall provide historical method evidence. Their historical use cannot substitute for three current projects.",
+    "The synthetic reader-return prototype and proposed client sprint cannot be counted as completed social-use pilots."
+  ],
+  "notObserved": [
+    "The other two independent scorecards and the required panel median.",
+    "An independently observed current-project session, participant return, client acceptance, or audience-use test.",
+    "The exact published animation files, full playback, or independently measured publication outcomes.",
+    "A completed Knowledge Wiki client pilot or participant validation of its synthetic prototype.",
+    "A demonstrated KC Town Hall resident-feedback-to-redesign chain or a particular WOWList support comment causing a particular release.",
+    "Explicit keyboard-navigation traces in the inspected navigation JSON files.",
+    "The full accessibility matrix, including 360- and 768-pixel checks, screen-reader behavior, measured contrast, target sizes, and reduced-motion testing.",
+    "Live preview interactions by this reviewer, hosted staging validation, or human release approval."
+  ],
+  "safety_findings": [
+    "The inspected coursework record is held and bounded; public routes do not claim disciplinary invention, peer-reviewed research, current Max/Jitter proficiency, or production deployment from it.",
+    "The lab identifies AI assistance and synthetic examples and keeps automated controls distinct from human comprehension and client adoption.",
+    "Agency records preserve the artist's leadership, participants' contributions, the writer's authorship, and coalition credit.",
+    "Historical public interactions, publication, physical installation, and browser checks are not treated as interchangeable evidence.",
+    "No material overclaim was observed in the inspected wording. The weaker continuation evidence limits the score rather than authorizing an inferred outcome."
+  ],
+  "recommendation": "Accept this as a strong individual account of a recurring systems method, while retaining every stated gap. A higher score would require clearer public-safe continuation and learning evidence, especially for the editorial handoff and participant return; additional private-source disclosure is unnecessary.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T20:07:10.804Z",
+    "scope": "Independent read-only review confined to this packet. No parent folders, Git history, memory, prior scorecards, private sources, optimizer discussion, external network, or live preview were consulted. No files were edited and no agents were spawned.",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "verification": {
+      "path": "VERIFY.mjs",
+      "before": "verified true",
+      "after": "verified true",
+      "sourcePathsVerified": 163,
+      "renderedViewsVerified": 30
+    },
+    "sourcePathsInspected": [
+      "PROFESSOR-REVIEW.md",
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/proofs.ts",
+      "source/apps/www/src/data/knowledge-bank/records.ts",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+      "source/apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts",
+      "source/apps/www/src/data/knowledge-bank/google-drive-production-2026-07.ts",
+      "source/apps/www/src/data/knowledge-bank/archive-production-2026-07.ts",
+      "source/apps/www/src/data/knowledge-bank/wowlist-product-fit-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/knowledge-reading-prototype-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/public-registry.json",
+      "navigation/case-navigation.json",
+      "navigation/mobile-navigation.json",
+      "navigation/current-practice-cases.json"
+    ],
+    "sourceInspectionExtent": "Complete packet instructions, design guidance, frozen PR-015 and PR-016 entries and global controls, photography manifest, recent-account modules, synthetic-prototype record, source note, and navigation JSON; selected relevant claims, source boundaries, agency relations, and registry entries in larger data files.",
+    "renderedRoutesInspected": [
+      "rendered/1280-home.txt",
+      "rendered/1280-about.txt",
+      "rendered/1280-work.txt",
+      "rendered/1280-work--technical-operations.txt",
+      "rendered/1280-work--wowlist.txt",
+      "rendered/1280-work--196-sunday-dinner.txt",
+      "rendered/1280-work--fair-rent-nyc.txt",
+      "rendered/1280-work--callnyc.txt",
+      "rendered/1280-lab--source-backed-team-memory.txt",
+      "rendered/1280-work--harry-j-epstein.txt",
+      "rendered/1280-work--kc-town-hall.txt"
+    ],
+    "renderedHtmlInspected": [
+      "rendered/1280-home.html",
+      "rendered/1280-about.html",
+      "rendered/1280-work.html",
+      "rendered/1280-work--technical-operations.html"
+    ],
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/375-about.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--technical-operations.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png",
+      "rendered/1280-work--kc-town-hall-viewport.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "navigation/1280-case-section.png",
+      "navigation/375-case-section.png",
+      "navigation/1280-written-participation-section.png",
+      "navigation/375-written-participation-section.png",
+      "navigation/1280-written-participation-viewport.png",
+      "navigation/375-written-participation-viewport.png",
+      "navigation/1280-editorial-animation-section.png",
+      "navigation/375-editorial-animation-section.png",
+      "navigation/1280-editorial-animation-viewport.png",
+      "navigation/375-editorial-animation-viewport.png",
+      "navigation/different-route-about.png",
+      "navigation/different-route.png"
+    ],
+    "screenshotInspectionMethod": "Images opened through view_image; text alone was not treated as visual inspection. Lists identify evidence used for this lens.",
+    "twoClickPathObserved": "Checksum-bound evidence records home → About → audio-and-print section and home → Work → Technical Operations at desktop and mobile widths. Saved HTML confirms the method and project links. I inspected the associated screenshots and did not independently replay the interactions.",
+    "nohumanapproval": true
+  }
+}

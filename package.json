@@ -21,7 +21,7 @@
     "test:application-guides": "node --test scripts/application-guides/application-guide.test.mjs",
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "check:citations": "node scripts/check-citations.mjs",
-    "test:citations": "node --test scripts/tests/citations.test.mjs",
+    "test:citations": "node --test scripts/tests/citations.test.mjs scripts/tests/current-practice-cases.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "check:rfcs": "node scripts/check-rfcs.mjs",
     "evals:public-engagement-pathway": "node scripts/rfcs/public-engagement-pathway-eval.mjs",

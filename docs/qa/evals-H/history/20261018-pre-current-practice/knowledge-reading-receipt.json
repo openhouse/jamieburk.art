@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "scope": "synthetic RFC prototype; content-bound, not a release receipt",
+  "bindings": {
+    "rfcs/0017-situated-knowledge-reading-and-reader-returns.md": "127e592628f538d89d1627dd884468e961a0108fcabae92a39ef794956006b30",
+    "rfcs/README.md": "caba55d73e89b16fc3d7e7127445cb40e348bb5057520f18c40b7da06e8bd8e0",
+    "package.json": "f38cc58ebb9716f3b17e946a95328bb43ccb22e8497779fa02a3bd503db2eb82",
+    "scripts/check-rfcs.mjs": "0bfe12715b5edd7c122f4c230c6945160986b2ac16e6f7c58d8a4b3523886940",
+    "evals/knowledge-reading/README.md": "05b5108a035b6a65032c83cf76f43f6a8e52902162ae6bf57e4055dbe93ce88f",
+    "evals/knowledge-reading/cases.json": "254132860563909f3094af44299ecff24e35a7b63b29fb601ed2cc467b491dae",
+    "scripts/rfcs/knowledge-reading.mjs": "963621c42074c7ceddbeaaa69e4f2b6c6b9a7ff3476e3e7caf5a2098980829ce",
+    "scripts/rfcs/knowledge-reading-cases.mjs": "14449922e3d1e4c665d5b5edd6fb0c12c9c7236e1170a38138543f9c3c541224",
+    "scripts/rfcs/knowledge-reading.test.mjs": "8c020d64a91e2b4257eb2e7648303e91dfa655eb5a8fb409871a2d0983e8b310",
+    "scripts/rfcs/knowledge-reading-eval.mjs": "4f5ec8cfc447bd89372156136e03ad41a788029d3c6225dbe10df21dc25576fb"
+  },
+  "evaluation": {
+    "label_provenance": "provisional-engineering-fixtures-not-human-labels",
+    "safe_acceptance": {
+      "accepted": 7,
+      "total": 7
+    },
+    "unsafe_rejection": {
+      "held": 27,
+      "total": 27
+    },
+    "allow_all_baseline": {
+      "correct": 7,
+      "total": 34,
+      "scope": "explicit empty-policy baseline, not the prior production system"
+    },
+    "results": [
+      {
+        "id": "authored-return-retains-earlier-disagreement",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "scaffold-remains-scaffold",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "reference-fragment-creates-no-task",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "explicit-target-correction-resolves-only-that-dispute",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "feedback-influences-a-version",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "feedback-can-be-declined-with-reason",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "open-feedback-does-not-pretend-to-change-version",
+        "expected": "review-candidate",
+        "actual": "review-candidate",
+        "passed": true
+      },
+      {
+        "id": "missing-packet-fields",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "moving-branch-is-not-an-edition",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "duplicate-reference-id",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "same-number-does-not-identify-a-proposal",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "unregistered-evidence-is-held",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "authored-interpretation-needs-a-source",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "missing-adjacent-turn-context",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "automatic-markers-cannot-be-human-reviewed",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "unknown-reading-kind-cannot-be-promoted",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "no-last-write-wins-resolution",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "later-send-cannot-resolve-earlier-reply-target",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "competing-reading-cannot-silently-disappear",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "sent-does-not-establish-booking",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "other-scope-evidence-does-not-close-this-action",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "reference-is-not-an-obligation",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "unknown-disposition-is-held",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "incorporated-feedback-needs-a-version-and-response",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "feedback-cannot-disappear-with-a-vague-status",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "draft-is-not-a-published-result",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "passing-checks-do-not-establish-adoption",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "real-private-input-is-outside-prototype",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "malformed-references-fail-closed",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "unknown-schema-is-held",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "entire-earlier-dispute-cannot-be-omitted",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "earlier-alternative-cannot-be-replaced",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "real-repository-cannot-be-mislabeled-synthetic",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      },
+      {
+        "id": "source-path-cannot-escape-packet",
+        "expected": "hold",
+        "actual": "hold",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "human_semantic_accuracy": null,
+    "participant_pilot_completed": false,
+    "production_adoption": false
+  },
+  "tests": {
+    "total": 39,
+    "passed": 39,
+    "failed": 0
+  },
+  "hill_climb": [
+    {
+      "step": "empty prototype, original test specification",
+      "tests": 34,
+      "passed": 8,
+      "failed": 26
+    },
+    {
+      "step": "initial guards and reader projection",
+      "tests": 34,
+      "passed": 34,
+      "failed": 0
+    },
+    {
+      "step": "adversarial omission and source-identity refinement, before fix",
+      "tests": 39,
+      "passed": 34,
+      "failed": 5
+    },
+    {
+      "step": "independent prior-inventory comparison and synthetic-reference guards",
+      "tests": 39,
+      "passed": 39,
+      "failed": 0
+    }
+  ],
+  "history_note": "Observed local test-first runs on 2026-09-12; historical counts are observations, not rerun by this command. Current evaluation and complete file bindings are regenerated."
+}

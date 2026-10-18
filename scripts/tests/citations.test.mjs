@@ -169,8 +169,9 @@ test("the About page renders ordered endnotes for its lineage and documented par
 test("audio and print case resolves the approved three paragraphs in their approved order", () => {
   const page = knowledgeBank.pages.find((item) => item.id === "technical-operations");
   assert.ok(page, "The approved technical-operations citation page must exist");
-  assert.deepEqual(page.occurrences.map((item) => item.id), ["audio-editions", "print-production", "shared-credit"]);
-  const text = page.occurrences.map((item) =>
+  const audioOccurrences = page.occurrences.filter((item) => item.claimId.startsWith("CLM-AUDIO-PRINT-"));
+  assert.deepEqual(audioOccurrences.map((item) => item.id), ["audio-editions", "print-production", "shared-credit"]);
+  const text = audioOccurrences.map((item) =>
     resolveCitationOccurrence(page.id, item.id).projection.text
   ).join("\n\n");
   // Independently bound to the exact three paragraphs Jamie approved, not
@@ -187,7 +188,7 @@ test("audio and print approval cannot widen to another surface or a photo captio
 });
 
 test("audio and print citations disclose a first-person account without source links or independent-audit claims", () => {
-  const notes = resolveCitationReferences("technical-operations");
+  const notes = resolveCitationReferences("technical-operations").filter(({ source }) => source.id === "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026");
   assert.equal(notes.length, 1, "All three paragraphs cite one approved first-person summary");
   const { source, backlinks } = notes[0];
   assert.equal(backlinks.length, 3);
@@ -226,4 +227,28 @@ test("Jamie's first-person case does not count as independent collaborator corro
   const corroboration = result.contentApprovals.blindSpotControls;
   assert.equal(corroboration.actualCollaboratorNoteCount, 0);
   assert.equal(corroboration.checks.humanCorroborationControlComplete, true);
+});
+
+test("current practice cases resolve as distinct cited paragraphs only at their approved destination", () => {
+  for (const [occurrence, claimId] of [
+    ["written-participation", "CLM-WRITTEN-PARTICIPATION-2026"],
+    ["editorial-animation", "CLM-EDITORIAL-ANIMATION-2026"]
+  ]) {
+    const resolved = resolveCitationOccurrence("technical-operations", occurrence);
+    const canonical = knowledgeBank.claims.find(({ id }) => id === claimId);
+    assert.equal(resolved.claim.id, claimId);
+    assert.equal(resolved.projection.text, canonical.projections.find(({ key }) => key === "case-study").text);
+    assert.equal(resolved.sources.length, 1);
+    assert.equal(resolved.sources[0].source.author, "Jamie Burkart");
+    assert.equal(resolved.sources[0].source.canonicalUrl, undefined);
+    assert.throws(() => getClaimProjection(claimId, "case-study", "/about"), /not approved/);
+    assert.throws(() => getClaimProjection(claimId, "photo-caption", "/work/technical-operations"), /Missing photo-caption/);
+  }
+  const references = resolveCitationReferences("technical-operations");
+  assert.deepEqual(references.map(({ source }) => source.id), [
+    "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+    "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026",
+    "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026"
+  ]);
+  assert.deepEqual(references.map(({ backlinks }) => backlinks.length), [3, 1, 1]);
 });

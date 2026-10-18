@@ -24,7 +24,7 @@ const suite = JSON.parse(
   readFileSync(path.join(repoRoot, ".agents/evals/portfolio-production-readiness.json"), "utf8")
 );
 
-test("exact reviewed candidate remains held when the Sack holdout median is three", () => {
+test("exact reviewed candidate remains held when the Sack median and minimum are below threshold", () => {
   const result = evaluateProfessorLenses({ suite, aboutText, sourceNoteText });
   assert.equal(result.criteria.find((item) => item.id === "candidate-fingerprint")?.pass, true);
   assert.equal(result.pass, false);
@@ -34,8 +34,8 @@ test("exact reviewed candidate remains held when the Sack holdout median is thre
     ["unanimous-holdouts"]);
   const holdouts = result.criteria.find((item) => item.id === "unanimous-holdouts");
   assert.match(holdouts.evidence, /6\/6 final scorecards match candidate/);
-  assert.match(holdouts.evidence, /PR-015: scores 4, 4, 4; median 4; minimum 4/);
-  assert.match(holdouts.evidence, /PR-016: scores 3, 3, 3; median 3; minimum 3/);
+  assert.match(holdouts.evidence, /PR-015: scores 3, 4, 4; median 4; minimum 3/);
+  assert.match(holdouts.evidence, /PR-016: scores 2, 2, 3; median 2; minimum 2/);
 });
 
 test("guard keeps the raw Open House article out of the public review packet", () => {

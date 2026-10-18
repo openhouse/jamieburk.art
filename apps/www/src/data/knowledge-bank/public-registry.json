@@ -19,6 +19,46 @@
       ]
     },
     {
+      "id": "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026",
+      "title": "Approved first-person account: Making room for written participation",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-18",
+      "accessedAt": "2026-10-18",
+      "publicCitation": "Jamie Burkart, approved anonymous first-person account, Making room for written participation, October 18, 2026.",
+      "publicNote": "This approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.",
+      "doesNotEstablish": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Publication scope is the approved text only, not identities, quotations, media or underlying records.",
+        "Preparation does not establish on-time delivery, host approval or use of every proposed cue.",
+        "Written responses do not verify every proposed safeguard, exact print-master identity or a complete participant tally.",
+        "Exact form edition and a completed return to members are not established.",
+        "Shared participation does not establish Jamie's sole authorship, a vote, consensus or policy adoption."
+      ]
+    },
+    {
+      "id": "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026",
+      "title": "Approved first-person account: Editing for a specific audience",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-18",
+      "accessedAt": "2026-10-18",
+      "publicCitation": "Jamie Burkart, approved anonymous first-person account, Editing for a specific audience, October 18, 2026.",
+      "publicNote": "This approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.",
+      "doesNotEstablish": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Publication scope is the approved text only, not identities, quotations, media or underlying records.",
+        "The connected project records do not establish a verified binary match between delivered exports, the article embed and the collaboration post.",
+        "Full playback, paid commission, an institutional client relationship, agency endorsement and audience impact are not established.",
+        "Two publication surfaces remain one project, not independent projects or a reach metric.",
+        "Shared work does not establish Jamie's sole authorship of the article, gathering or coalition contribution."
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1450,6 +1490,78 @@
         "Physical use was retrospectively confirmed by Jamie; it does not establish who attached the labels or that all fifty were installed.",
         "No claim of visitor use, live link performance or final client acceptance.",
         "Publication scope is this text only, not names, photographs or underlying records."
+      ]
+    },
+    {
+      "id": "CLM-WRITTEN-PARTICIPATION-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For an artist-coalition gathering, I brought the venue host and a co-organizer into one booking thread and prepared the venue's production sheet. I also worked on a written activity about places participants wanted to protect. Feedback about board legibility and the difficulty of taking notes live informed the proposed design. The gathering used activity sheets and a shared board, with handwritten responses on both. These materials gave the conversation a written record of places, concerns and suggestions for later review.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's venue coordination and production preparation",
+            "Shared written participation and its bounded record"
+          ],
+          "publicNote": "Approved first-person account; not independent verification.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Publication scope is the approved text only, not identities, quotations, media or underlying records.",
+        "Preparation does not establish on-time delivery, host approval or use of every proposed cue.",
+        "Written responses do not verify every proposed safeguard, exact print-master identity or a complete participant tally.",
+        "Exact form edition and a completed return to members are not established.",
+        "Shared participation does not establish Jamie's sole authorship, a vote, consensus or policy adoption."
+      ]
+    },
+    {
+      "id": "CLM-EDITORIAL-ANIMATION-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I worked with an editor to focus a coalition animation on the arts gathering her article covered. We separated that brief from the broader coalition story, and I delivered revised square and vertical cuts for review. The project reached two public surfaces: the article included an animation credited to me for the coalition, and an Instagram collaboration post linked readers to the article. The work connected editorial direction, media production and publication while keeping the writer's authorship and the coalition's contribution visible.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's editorial scoping and revised media delivery",
+            "Writer authorship and coalition contribution across two publication surfaces"
+          ],
+          "publicNote": "Approved first-person account; not independent verification.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Publication scope is the approved text only, not identities, quotations, media or underlying records.",
+        "The connected project records do not establish a verified binary match between delivered exports, the article embed and the collaboration post.",
+        "Full playback, paid commission, an institutional client relationship, agency endorsement and audience impact are not established.",
+        "Two publication surfaces remain one project, not independent projects or a reach metric.",
+        "Shared work does not establish Jamie's sole authorship of the article, gathering or coalition contribution."
       ]
     },
     {
@@ -3420,7 +3532,9 @@
       "id": "technical-operations",
       "surface": "/work/technical-operations",
       "sourceOrder": [
-        "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+        "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+        "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026",
+        "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026"
       ],
       "occurrences": [
         {
@@ -3445,6 +3559,22 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+          ]
+        },
+        {
+          "id": "written-participation",
+          "claimId": "CLM-WRITTEN-PARTICIPATION-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-WRITTEN-PARTICIPATION-APPROVED-ACCOUNT-2026"
+          ]
+        },
+        {
+          "id": "editorial-animation",
+          "claimId": "CLM-EDITORIAL-ANIMATION-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-EDITORIAL-ANIMATION-APPROVED-ACCOUNT-2026"
           ]
         }
       ]

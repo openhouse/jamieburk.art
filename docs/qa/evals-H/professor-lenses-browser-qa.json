@@ -1,10 +1,10 @@
 {
   "reportVersion": 7,
-  "checkedAt": "2026-10-18T18:36:43.249Z",
-  "baseUrl": "http://127.0.0.1:3239",
-  "publicSurfaceFingerprint": "ff9fbfc9d0b928416ba5c1216f8ad6db9d9b782b8a0a6102ef2d016a55f234da",
+  "checkedAt": "2026-10-18T20:01:15.340Z",
+  "baseUrl": "http://127.0.0.1:3248",
+  "publicSurfaceFingerprint": "01338643e960cda4e95a642c087666591b29cfc5b06cefa7ab7dabb586eceaf9",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 158,
+  "publicSurfaceFileCount": 159,
   "captureMethod": "Fresh Playwright Chromium viewport captures after explicit scroll restoration and two animation frames, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {

@@ -1,0 +1,257 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no named real professor participated",
+  "reviewerId": "current-practice-reader-1",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "0f3625259217d3ce8e0b357f0822fe01bb0eeffc16ee36760ee9e8d0c076b451",
+  "score": 3,
+  "pass": true,
+  "passScope": "Individual substantive content judgment only. The required three-reader aggregate remains unassessed.",
+  "scoreReason": "The portfolio makes artistic, civic, technical and social practice visibly continuous while retaining professional clarity. Three distinct recent accounts support that continuity. Their limited corroboration and withheld artifacts keep this below exceptional inspectability.",
+  "criteriaAssessment": [
+    {
+      "criterion": "Connected practice visible within two clicks",
+      "result": "met",
+      "finding": "About names the connected practice and links directly to project evidence; the homepage also pairs coalition facilitation with its public campaign interface."
+    },
+    {
+      "criterion": "At least three supported project continuities",
+      "result": "met",
+      "finding": "Audio and print production, written participation, and editorial animation provide three recent continuities. WOWList, Sunday Dinner and coalition work provide additional historical context."
+    },
+    {
+      "criterion": "Systems people can inhabit, influence, remember and continue",
+      "result": "met",
+      "finding": "Physical labels, written participation instruments, organizer workflows, hosting routines and shared campaign memory make this distinction concrete."
+    },
+    {
+      "criterion": "Collective credit and protected-source boundaries",
+      "result": "met within inspected scope",
+      "finding": "The reviewed surfaces distinguish individual contribution from collective work and withhold participant records, educational records and private testimonials."
+    },
+    {
+      "criterion": "Three-reader median of 4 with no reader below 3",
+      "result": "not assessed",
+      "finding": "This is one independent reading, not a panel result."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "rendered/1280-home.txt",
+      "finding": "The literal professional role remains prominent. The screen-and-room section connects public tools to invitation, meetings, decisions and continuation."
+    },
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "Systems people can inhabit connects the bounded Open House history to present operating practice without replacing the technical-project-management positioning with an artist biography."
+    },
+    {
+      "path": "navigation/case-navigation.json",
+      "finding": "Bound browser observations record homepage-to-About-to-audio-and-print navigation at desktop and mobile widths, including source disclosure."
+    },
+    {
+      "path": "navigation/current-practice-cases.json",
+      "finding": "Bound observations record homepage-to-Work-to-Technical-Operations navigation and matching current paragraphs and citation targets for written participation and editorial animation."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "finding": "Relevant records separately assign Jamie's production and coordination work, the artist's leadership, the writer's authorship, participant contributions and coalition credit."
+    },
+    {
+      "path": "source/apps/www/src/data/photography.ts",
+      "finding": "The photographs have occurrence-specific captions, credits, publication dispositions and interpretation limits. The collective-map photograph does not establish agreement or ownership of group knowledge."
+    },
+    {
+      "path": "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "finding": "The source note identifies the public Open House basis and excludes raw educational records and unapproved testimonial use. The manifest lists no raw Open House article artifact."
+    },
+    {
+      "path": "VERIFY.mjs",
+      "finding": "Verification succeeded before and after review with the required candidate fingerprint, 163 source paths and 30 rendered views."
+    }
+  ],
+  "projectContinuityTrace": [
+    {
+      "project": "Audio editions and printed labels",
+      "status": "Recent practice described in an approved first-person account",
+      "path": "source/apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts",
+      "trace": "Recorded voices and portrait materials became versioned audio editions, clarified identities and destinations, revised proofs, and physical labels used beneath portraits. Attention to attribution and practical cutting connects documentation to an inhabited exhibition.",
+      "limit": "Physical use is retrospectively reported by Jamie. Visitor use, installation count and final client acceptance are unverified."
+    },
+    {
+      "project": "Written participation",
+      "status": "Recent practice described in an approved first-person account",
+      "path": "source/apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts",
+      "trace": "Venue coordination and attention to legibility informed a proposed written activity. Sheets and a shared board reportedly received handwritten contributions, preserving places, concerns and suggestions beyond the spoken conversation.",
+      "limit": "The exact instruments, implementation of every proposed safeguard and completed return to members remain unresolved."
+    },
+    {
+      "project": "Editorial animation",
+      "status": "Recent practice described in an approved first-person account",
+      "path": "source/apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts",
+      "trace": "An editor's audience and article focus shaped revised media cuts. Article placement and a linked collaboration post connect artistic production, technical delivery and collective public communication.",
+      "limit": "Two publication surfaces remain one project. Published-file identity and audience effects are not established."
+    },
+    {
+      "project": "WOWList",
+      "status": "Historical operating evidence; limited public return in progress",
+      "path": "rendered/1280-work--wowlist.txt",
+      "trace": "Sunday Dinner calendars and community vocabulary became editable event text, followed keyword communities, distribution workflows and organizer support. Richard Caceres and participating communities retain shared credit.",
+      "limit": "Historical scale and organizer use do not establish a currently restored calendar or present adoption."
+    },
+    {
+      "project": "Sunday Dinner and 196",
+      "status": "Historical gatherings and reconstructed operating specimens; residency planning distinguished from completion",
+      "path": "rendered/1280-work--196-sunday-dinner.txt",
+      "trace": "Invitation, welcome, food, spatial preparation, minimal documentation and continued availability explain how hospitality becomes repeatable participation infrastructure.",
+      "limit": "The residency specimen is not evidence of a completed residency or artistic outcome; aggregate gathering evidence is not an attendance census."
+    },
+    {
+      "project": "NYC Artist Coalition and FairRentNYC",
+      "status": "Historical participation evidence alongside continuing civic work",
+      "path": "rendered/1280-work--fair-rent-nyc.txt",
+      "trace": "Meetings, shared public surfaces, facilitation, source maps and follow-up connect cultural-space participation to durable operating memory.",
+      "limit": "Photographs do not prove exact remarks, endorsement or attendance. Campaign and policy outcomes remain collective."
+    }
+  ],
+  "gaps": [
+    "The three recent projects are supported here by approved first-person accounts, not independently inspected underlying artifacts or corroborating participant accounts.",
+    "Current participant experience, equitable access and actual reuse of the resulting records are not established.",
+    "The strongest photographic participation evidence is historical.",
+    "A completed member return for written participation and audience outcomes for the animation remain gaps."
+  ],
+  "notObserved": [
+    "Other independent readers or the required panel aggregate.",
+    "Live browser interaction during this review; navigation was assessed through bound browser records, rendered HTML and screenshots.",
+    "Keyboard focus or key-sequence results in the three supplied navigation JSON files.",
+    "The full accessibility matrix, including 360- and 768-pixel captures, screen-reader use, measured contrast and reduced-motion behavior.",
+    "Independent media-rights verification, participant consent interviews, staging deployment or production approval."
+  ],
+  "safety_findings": [
+    "No raw educational record, private correspondence, unapproved faculty testimonial or raw third-party article was observed in the reviewed surfaces or manifest-listed artifacts.",
+    "Recent accounts preserve anonymity and limit publication permission to their approved text.",
+    "Open House initiation remains distinct from collective governance; WOWList retains co-builder credit; coalition outcomes remain collective.",
+    "Photographic context is not treated as participant endorsement, exact speech or proof of consensus.",
+    "Recorded photo permissions are destination-specific. Several production and indexing dispositions remain open; this judgment does not change them."
+  ],
+  "recommendation": "Retain this as a strong individual PR-015 reading. Preserve the current attribution and evidence limits. Any stronger account of participant experience or present outcomes needs additional authorized evidence; this score grants no publication or release authority.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T20:07:50Z",
+    "scope": "Independent read-only review confined to the clean packet. No agents, questions, network requests, file edits, parent-folder inspection, Git-history inspection, memory lookup, prior scorecards or optimizer discussion. Claim modules were inspected selectively for relevant records; runtime implementation files were not treated as rendered evidence.",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourcePathsInspected": [
+      "PROFESSOR-REVIEW.md",
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/proofs.ts",
+      "source/apps/www/src/data/knowledge-bank/records.ts",
+      "source/apps/www/src/data/knowledge-bank/public-registry.json",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+      "source/apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/current-practice-cases-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/knowledge-reading-prototype-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/wowlist-social-practices-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/wowlist-product-fit-2026-08.ts",
+      "navigation/case-navigation.json",
+      "navigation/mobile-navigation.json",
+      "navigation/current-practice-cases.json"
+    ],
+    "renderedRoutesInspected": [
+      "rendered/1280-home.txt",
+      "rendered/375-home.txt",
+      "rendered/1280-about.txt",
+      "rendered/375-about.txt",
+      "rendered/1280-work.txt",
+      "rendered/375-work.txt",
+      "rendered/1280-work--technical-operations.txt",
+      "rendered/375-work--technical-operations.txt",
+      "rendered/1280-work--wowlist.txt",
+      "rendered/375-work--wowlist.txt",
+      "rendered/1280-work--196-sunday-dinner.txt",
+      "rendered/375-work--196-sunday-dinner.txt",
+      "rendered/1280-work--fair-rent-nyc.txt",
+      "rendered/375-work--fair-rent-nyc.txt",
+      "rendered/1280-work--callnyc.txt",
+      "rendered/375-work--callnyc.txt",
+      "rendered/1280-lab--source-backed-team-memory.txt",
+      "rendered/375-lab--source-backed-team-memory.txt",
+      "rendered/1280-work--harry-j-epstein.txt",
+      "rendered/375-work--harry-j-epstein.txt",
+      "rendered/1280-work--kc-town-hall.txt",
+      "rendered/375-work--kc-town-hall.txt"
+    ],
+    "renderedHtmlInspected": [
+      "rendered/1280-home.html",
+      "rendered/1280-about.html",
+      "rendered/1280-work.html",
+      "rendered/1280-lab--source-backed-team-memory.html"
+    ],
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png",
+      "rendered/1280-work--kc-town-hall-viewport.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-home.png",
+      "rendered/375-home.png",
+      "rendered/1280-about.png",
+      "rendered/375-about.png",
+      "rendered/1280-work.png",
+      "rendered/375-work.png",
+      "rendered/1280-work--technical-operations.png",
+      "rendered/375-work--technical-operations.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/375-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/375-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/375-work--fair-rent-nyc.png",
+      "rendered/1280-work--callnyc.png",
+      "rendered/375-work--callnyc.png",
+      "rendered/1280-lab--source-backed-team-memory.png",
+      "rendered/375-lab--source-backed-team-memory.png",
+      "rendered/1280-work--harry-j-epstein.png",
+      "rendered/375-work--harry-j-epstein.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "rendered/375-work--kc-town-hall.png",
+      "navigation/1280-case-section.png",
+      "navigation/375-case-section.png",
+      "navigation/1280-written-participation-section.png",
+      "navigation/375-written-participation-section.png",
+      "navigation/1280-written-participation-viewport.png",
+      "navigation/375-written-participation-viewport.png",
+      "navigation/1280-editorial-animation-section.png",
+      "navigation/375-editorial-animation-section.png",
+      "navigation/1280-editorial-animation-viewport.png",
+      "navigation/375-editorial-animation-viewport.png",
+      "navigation/different-route-about.png",
+      "navigation/different-route.png",
+      "navigation/same-route-about.png",
+      "navigation/same-route.png"
+    ],
+    "screenshotInspectionMethod": "All listed screenshots were visually inspected through view_image. Full-page captures supplied layout context; viewport and section captures supplied readable detail.",
+    "twoClickPathObserved": "Bound navigation records and screenshots support homepage to About to audio-and-print production, and homepage to Work to Technical Operations. Rendered HTML independently contains the corresponding links. No live navigation was performed.",
+    "nohumanapproval": true
+  }
+}

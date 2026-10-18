@@ -1,0 +1,87 @@
+{
+  "reportVersion": 7,
+  "checkedAt": "2026-10-18T18:36:43.249Z",
+  "baseUrl": "http://127.0.0.1:3239",
+  "publicSurfaceFingerprint": "ff9fbfc9d0b928416ba5c1216f8ad6db9d9b782b8a0a6102ef2d016a55f234da",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 158,
+  "captureMethod": "Fresh Playwright Chromium viewport captures after explicit scroll restoration and two animation frames, paired with the complete 60-row responsive accessibility matrix.",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "route": "/",
+          "name": "desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "httpStatus": 200,
+          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
+          "file": "candidate-home-desktop.png"
+        },
+        {
+          "route": "/",
+          "name": "mobile",
+          "requestedViewport": {
+            "width": 375,
+            "height": 812
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 812,
+          "httpStatus": 200,
+          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
+          "file": "candidate-home-viewport.png"
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About - Jamie Burkart",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "route": "/about",
+          "name": "desktop-through-line",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "httpStatus": 200,
+          "sha256": "a665e1790a876835b8b3021e988b69408ef954c765b979d35723432c79990b93",
+          "file": "professor-lenses-about-desktop.png",
+          "framedContent": {
+            "systemsPeopleCanInhabitHeadingPresent": true,
+            "currentPracticeDocumented": true
+          }
+        },
+        {
+          "route": "/about",
+          "name": "mobile-through-line",
+          "requestedViewport": {
+            "width": 375,
+            "height": 1200
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 1200,
+          "httpStatus": 200,
+          "sha256": "3b2cdd1e75da396c23c2c2616822c3d9f9107ec9c4967f26e6d7fa1ef5b8e938",
+          "file": "professor-lenses-about-mobile.png",
+          "framedContent": {
+            "systemsPeopleCanInhabitHeadingPresent": true,
+            "currentPracticeDocumented": true
+          }
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "verification": "Current homepage and About viewport captures are bound to their image checksums and the unchanged public source fingerprint. Full-page capture overlays were investigated using settled initial-load and restored-scroll observations, with no live header overlap."
+}

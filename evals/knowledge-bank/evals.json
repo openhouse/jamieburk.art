@@ -1079,10 +1079,14 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 34,
-      "expectedRelationCount": 36,
-      "approvedGraphSha256": "8937a34581e20f8cf7f4c5965ba5a8dd644796fccaac4b9be406dd5592d5ca64",
+      "expectedEntityCount": 41,
+      "expectedRelationCount": 40,
+      "approvedGraphSha256": "dde0f3421683a4a6088ffb1ae1554538449e3914c38e3f60ae401739baee190c",
       "relationIds": [
+        "REL-JAMIE-WRITTEN-PARTICIPATION",
+        "REL-WRITTEN-PARTICIPATION-SHARED",
+        "REL-JAMIE-EDITORIAL-ANIMATION",
+        "REL-EDITORIAL-ANIMATION-SHARED",
         "REL-JAMIE-AUDIO-PRINT-PRODUCTION",
         "REL-AUDIO-PRINT-SHARED-PRODUCTION",
         "REL-WATERWAYS-RAFT-ORIGIN",

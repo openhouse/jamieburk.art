@@ -43,18 +43,18 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/case-navfix-reader-1-20261018-PR-015.json",
-  "docs/qa/evals-H/case-navfix-reader-2-20261018-PR-015.json",
-  "docs/qa/evals-H/case-navfix-reader-3-20261018-PR-015.json",
-  "docs/qa/evals-H/case-navfix-reader-1-20261018-PR-016.json",
-  "docs/qa/evals-H/case-navfix-reader-2-20261018-PR-016.json",
-  "docs/qa/evals-H/case-navfix-reader-3-20261018-PR-016.json"
+  "docs/qa/evals-H/current-practice-reader-1-20261018-PR-015.json",
+  "docs/qa/evals-H/current-practice-reader-2-20261018-PR-015.json",
+  "docs/qa/evals-H/current-practice-reader-3-20261018-PR-015.json",
+  "docs/qa/evals-H/current-practice-reader-1-20261018-PR-016.json",
+  "docs/qa/evals-H/current-practice-reader-2-20261018-PR-016.json",
+  "docs/qa/evals-H/current-practice-reader-3-20261018-PR-016.json"
 ];
 
 // Three separately commissioned advisory readers assessed these exact bytes.
 // Exact review binding does not imply passing scores or human release approval.
 // Historical judgments remain preserved and are not rebound to this candidate.
-const reviewedCandidateSha256 = "1c7225a013eb63db8de12a9c44ae57490300b30004d7c0f2ddb1a15b397bf38f";
+const reviewedCandidateSha256 = "0f3625259217d3ce8e0b357f0822fe01bb0eeffc16ee36760ee9e8d0c076b451";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

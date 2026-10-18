@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-18T20:01:32.812Z",
+  "baseUrl": "http://127.0.0.1:3248",
+  "publicSurfaceFingerprint": "01338643e960cda4e95a642c087666591b29cfc5b06cefa7ab7dabb586eceaf9",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "captureEnvironment": "Local staging preview, Cloudinary disabled, same-origin media fallback. Not the hosted Cloudinary-enabled build.",
+  "method": "Rendered browser observations of navigation, headings, approved paragraph identity and citation targets. Source-note disclosure opened explicitly; this is not human usability acceptance, source corroboration or release approval.",
+  "rows": [
+    {
+      "width": 375,
+      "sectionId": "written-participation",
+      "heading": "Making room for written participation",
+      "twoClickPath": [
+        "/",
+        "/work",
+        "/work/technical-operations"
+      ],
+      "exactApprovedParagraph": true,
+      "expectedParagraphSha256": "659c7996ad7360dd6f41e163dbf0639739473a85b8fe421d820f436d1b560217",
+      "renderedParagraphSha256": "659c7996ad7360dd6f41e163dbf0639739473a85b8fe421d820f436d1b560217",
+      "screenshot": "375-written-participation-section.png",
+      "screenshotSha256": "444595236d09316f70bfdd7273072f70612847b1ef878c3fe0f460d82304eda7",
+      "viewport": "375-written-participation-viewport.png",
+      "viewportSha256": "0984eac2204be78e3d4dd6d24f36dec5d4e3b40e6dc21ae9119711ec32ff3ab5",
+      "citationTargets": [
+        {
+          "href": "#cite-technical-operations-2",
+          "id": "cite-ref-technical-operations-written-participation-src-written-participation-approved-account-2026",
+          "label": "Citation 2: Approved first-person account: Making room for written participation",
+          "targetPresent": true,
+          "observedHash": "#cite-technical-operations-2",
+          "targetVisibleAfterExplicitDisclosure": true,
+          "matchingTitle": true,
+          "sourceText": "[2] Jamie Burkart, approved anonymous first-person account, Making room for written participation, October 18, 2026.\n\nThis approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.\n\nBoundary: This source does not establish Approved anonymous first-person account, not independent verification., Publication scope is the approved text only, not identities, quotations, media or underlying records., Preparation does not establish on-time delivery, host approval or use of every proposed cue., Written responses do not verify every proposed safeguard, exact print-master identity or a complete participant tally., Exact form edition and a completed return to members are not established., Shared participation does not establish Jamie's sole authorship, a vote, consensus or policy adoption..\n\nReturn 1",
+          "backlinkPresent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 375,
+      "sectionId": "editorial-animation",
+      "heading": "Editing for a specific audience",
+      "twoClickPath": [
+        "/",
+        "/work",
+        "/work/technical-operations"
+      ],
+      "exactApprovedParagraph": true,
+      "expectedParagraphSha256": "6dbd92a002ae1372666148e8fac39fee4c22c416b398cd13b556804ba5d17ca6",
+      "renderedParagraphSha256": "6dbd92a002ae1372666148e8fac39fee4c22c416b398cd13b556804ba5d17ca6",
+      "screenshot": "375-editorial-animation-section.png",
+      "screenshotSha256": "a08f25c35c8474662d42cd8daf29ed767590e996a9557ab8900825ed63230fc5",
+      "viewport": "375-editorial-animation-viewport.png",
+      "viewportSha256": "399410595215b84c255d874322f9ea932def52ec0629af359f5325b58c636277",
+      "citationTargets": [
+        {
+          "href": "#cite-technical-operations-3",
+          "id": "cite-ref-technical-operations-editorial-animation-src-editorial-animation-approved-account-2026",
+          "label": "Citation 3: Approved first-person account: Editing for a specific audience",
+          "targetPresent": true,
+          "observedHash": "#cite-technical-operations-3",
+          "targetVisibleAfterExplicitDisclosure": true,
+          "matchingTitle": true,
+          "sourceText": "[3] Jamie Burkart, approved anonymous first-person account, Editing for a specific audience, October 18, 2026.\n\nThis approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.\n\nBoundary: This source does not establish Approved anonymous first-person account, not independent verification., Publication scope is the approved text only, not identities, quotations, media or underlying records., The connected project records do not establish a verified binary match between delivered exports, the article embed and the collaboration post., Full playback, paid commission, an institutional client relationship, agency endorsement and audience impact are not established., Two publication surfaces remain one project, not independent projects or a reach metric., Shared work does not establish Jamie's sole authorship of the article, gathering or coalition contribution..\n\nReturn 1",
+          "backlinkPresent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "sectionId": "written-participation",
+      "heading": "Making room for written participation",
+      "twoClickPath": [
+        "/",
+        "/work",
+        "/work/technical-operations"
+      ],
+      "exactApprovedParagraph": true,
+      "expectedParagraphSha256": "659c7996ad7360dd6f41e163dbf0639739473a85b8fe421d820f436d1b560217",
+      "renderedParagraphSha256": "659c7996ad7360dd6f41e163dbf0639739473a85b8fe421d820f436d1b560217",
+      "screenshot": "1280-written-participation-section.png",
+      "screenshotSha256": "ac4cdab57c8721d769a8513799e77266ca7f1922e696ad47adbc18de1f33e1d0",
+      "viewport": "1280-written-participation-viewport.png",
+      "viewportSha256": "a878da31e9277147e6c48d1d81f516debab5f39b61831840a03f26b924abfa65",
+      "citationTargets": [
+        {
+          "href": "#cite-technical-operations-2",
+          "id": "cite-ref-technical-operations-written-participation-src-written-participation-approved-account-2026",
+          "label": "Citation 2: Approved first-person account: Making room for written participation",
+          "targetPresent": true,
+          "observedHash": "#cite-technical-operations-2",
+          "targetVisibleAfterExplicitDisclosure": true,
+          "matchingTitle": true,
+          "sourceText": "[2] Jamie Burkart, approved anonymous first-person account, Making room for written participation, October 18, 2026.\n\nThis approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.\n\nBoundary: This source does not establish Approved anonymous first-person account, not independent verification., Publication scope is the approved text only, not identities, quotations, media or underlying records., Preparation does not establish on-time delivery, host approval or use of every proposed cue., Written responses do not verify every proposed safeguard, exact print-master identity or a complete participant tally., Exact form edition and a completed return to members are not established., Shared participation does not establish Jamie's sole authorship, a vote, consensus or policy adoption..\n\nReturn 1",
+          "backlinkPresent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "sectionId": "editorial-animation",
+      "heading": "Editing for a specific audience",
+      "twoClickPath": [
+        "/",
+        "/work",
+        "/work/technical-operations"
+      ],
+      "exactApprovedParagraph": true,
+      "expectedParagraphSha256": "6dbd92a002ae1372666148e8fac39fee4c22c416b398cd13b556804ba5d17ca6",
+      "renderedParagraphSha256": "6dbd92a002ae1372666148e8fac39fee4c22c416b398cd13b556804ba5d17ca6",
+      "screenshot": "1280-editorial-animation-section.png",
+      "screenshotSha256": "06c7134d677d31aef78fea85ac7235497adac519de07c92279095831b12c5623",
+      "viewport": "1280-editorial-animation-viewport.png",
+      "viewportSha256": "4a62843577ee725766e507b78884740f26bf95046a86d7c5885f78b7cecb5152",
+      "citationTargets": [
+        {
+          "href": "#cite-technical-operations-3",
+          "id": "cite-ref-technical-operations-editorial-animation-src-editorial-animation-approved-account-2026",
+          "label": "Citation 3: Approved first-person account: Editing for a specific audience",
+          "targetPresent": true,
+          "observedHash": "#cite-technical-operations-3",
+          "targetVisibleAfterExplicitDisclosure": true,
+          "matchingTitle": true,
+          "sourceText": "[3] Jamie Burkart, approved anonymous first-person account, Editing for a specific audience, October 18, 2026.\n\nThis approved first-person account is not independent verification. It is the public summary; underlying correspondence, documents, identities and media are not published here.\n\nBoundary: This source does not establish Approved anonymous first-person account, not independent verification., Publication scope is the approved text only, not identities, quotations, media or underlying records., The connected project records do not establish a verified binary match between delivered exports, the article embed and the collaboration post., Full playback, paid commission, an institutional client relationship, agency endorsement and audience impact are not established., Two publication surfaces remain one project, not independent projects or a reach metric., Shared work does not establish Jamie's sole authorship of the article, gathering or coalition contribution..\n\nReturn 1",
+          "backlinkPresent": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

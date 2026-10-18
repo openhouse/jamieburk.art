@@ -211,10 +211,40 @@ export default function TechnicalOperationsPage() {
             occurrenceId="shared-credit"
           />
         </div>
-        <div className="mt-6">
-          <References pageId="technical-operations" />
+      </section>
+      <section aria-labelledby="written-participation" className="jb-reading mt-14 border-t border-jb-ink/18 pt-8">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="written-participation">
+          Making room for written participation
+        </h2>
+        <div className="mt-5 leading-8 text-jb-ink/76">
+          <Claim
+            as="p"
+            claimId="CLM-WRITTEN-PARTICIPATION-2026"
+            projection="case-study"
+            surface="/work/technical-operations"
+            pageId="technical-operations"
+            occurrenceId="written-participation"
+          />
         </div>
       </section>
+      <section aria-labelledby="editorial-animation" className="jb-reading mt-14 border-t border-jb-ink/18 pt-8">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="editorial-animation">
+          Editing for a specific audience
+        </h2>
+        <div className="mt-5 leading-8 text-jb-ink/76">
+          <Claim
+            as="p"
+            claimId="CLM-EDITORIAL-ANIMATION-2026"
+            projection="case-study"
+            surface="/work/technical-operations"
+            pageId="technical-operations"
+            occurrenceId="editorial-animation"
+          />
+        </div>
+      </section>
+      <div className="jb-reading mt-8">
+        <References pageId="technical-operations" />
+      </div>
       <section aria-labelledby="capability-evidence" className="mt-14">
         <div className="jb-reading">
           <h2 className="text-3xl font-semibold text-jb-ink" id="capability-evidence">
