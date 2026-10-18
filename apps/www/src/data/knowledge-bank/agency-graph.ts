@@ -3,6 +3,8 @@ const reviewedBy = ["Jamie Burkart", "Codex public-source review"];
 
 export const agencyGraph = {
   entities: [
+    { id: "ENT-AUDIO-PRINT-PRODUCTION", name: "Portrait exhibition audio and print production", kind: "project", aliases: [], publicSafe: true },
+    { id: "ENT-PORTRAIT-EXHIBITION-ARTIST", name: "Portrait exhibition artist (unnamed)", kind: "person", aliases: [], publicSafe: true },
     { id: "ENT-JAMIE-BURKART", name: "Jamie Burkart", kind: "person", aliases: ["James Burkart"], publicSafe: true },
     { id: "ENT-JULIA-FREDENBERG", name: "Julia Fredenberg", kind: "person", aliases: [], publicSafe: true },
     { id: "ENT-NYC-ARTIST-COALITION", name: "NYC Artist Coalition", kind: "collective", aliases: ["NYC Arts Coalition"], publicSafe: true },
@@ -32,6 +34,40 @@ export const agencyGraph = {
     { id: "ENT-CURE-INITIATIVE", name: "Coordinating a United Resolution with Establishments", kind: "program", aliases: ["CURE"], publicSafe: true }
   ],
   agencyRelations: [
+    {
+      id: "REL-JAMIE-AUDIO-PRINT-PRODUCTION",
+      project: "audio-print-production",
+      actorIds: ["ENT-JAMIE-BURKART"],
+      action: "organized",
+      objectId: "ENT-AUDIO-PRINT-PRODUCTION",
+      purpose: "Connect current audio editions, client clarification and practical print preparation.",
+      result: "In his approved first-person account, Jamie describes organizing seven recorded sittings, revising the label proof, preserving fifty label-to-audio links, and printing and bringing the described edition on October 8.",
+      creditScope: "individual",
+      status: "confirmed-with-boundary",
+      claimIds: ["CLM-AUDIO-PRINT-EDITIONS-2026", "CLM-AUDIO-PRINT-PHYSICAL-USE-2026"],
+      sourceIds: ["SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"],
+      sourceSupportKeys: ["Jamie's audio-edition organization and clarification work", "Jamie's retrospective confirmation of printing, bringing and physical use"],
+      boundaries: ["This is Jamie's first-person account, not independent verification.", "The confirmation does not establish who attached the labels, a complete installed-label count, visitor use or final client acceptance."],
+      reviewedAt: "2026-10-18",
+      reviewedBy: ["Jamie Burkart, exact anonymous text approval"]
+    },
+    {
+      id: "REL-AUDIO-PRINT-SHARED-PRODUCTION",
+      project: "audio-print-production",
+      actorIds: ["ENT-JAMIE-BURKART", "ENT-PORTRAIT-EXHIBITION-ARTIST"],
+      action: "organized",
+      objectId: "ENT-AUDIO-PRINT-PRODUCTION",
+      purpose: "Bring the artist's materials and Jamie's production work into the exhibition preparation.",
+      result: "The artist led the portrait project and supplied identities, links and panel materials. Jamie contributed audio editing, delivery organization and print preparation, with tools assisting preparation and checking.",
+      creditScope: "shared",
+      status: "confirmed-with-boundary",
+      claimIds: ["CLM-AUDIO-PRINT-SHARED-CREDIT-2026"],
+      sourceIds: ["SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"],
+      sourceSupportKeys: ["Artist leadership and Jamie's bounded production contribution"],
+      boundaries: ["Shared production does not imply Jamie's sole authorship or leadership of the portrait project.", "Approval covers anonymous text, not the artist's identity, photographs or underlying records."],
+      reviewedAt: "2026-10-18",
+      reviewedBy: ["Jamie Burkart, exact anonymous text approval"]
+    },
     {
       id: "REL-WATERWAYS-RAFT-ORIGIN",
       project: "waterways-raft",

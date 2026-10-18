@@ -1,0 +1,152 @@
+{
+  "reviewType": "Independent public source-and-boundary scope review",
+  "reviewDate": "2026-10-18",
+  "recommendation": "accepted",
+  "scopeChecks": {
+    "agencyGraphSupportAndCredit": "accepted",
+    "sharedPublicSurfacesPreserveKcTownHallBoundaries": "accepted"
+  },
+  "authorizationBoundary": "These recommendations cover only the two named scope checks. They are not a grade, professor-lens evaluation, human approval, factual audit, publication permission, or release approval.",
+  "method": {
+    "runtime": "Node v26.5.0",
+    "access": "Read-only inspection of the specified public repository.",
+    "reviewed": [
+      "AGENTS.md",
+      "Anonymous audio/print source module and its canonical integration",
+      "All current agency relations, including the two audio/print relations",
+      "Complete About and Technical Operations page source, rendered claim dependencies, proof-row wording, citation references, and shared CTA components",
+      "KC Town Hall field-practice sources, observations, claims, inquiries, proof wording, and boundaries",
+      "The narrower resident-service claim and its public source records"
+    ],
+    "notPerformed": [
+      "Private-repository or underlying private-source inspection",
+      "Previous review-document inspection",
+      "Fresh retrieval or authentication of historical external sources",
+      "Browser rendering, full application testing, or release verification"
+    ]
+  },
+  "digests": {
+    "agencyGraphSha256": "8937a34581e20f8cf7f4c5965ba5a8dd644796fccaac4b9be406dd5592d5ca64",
+    "agencyGraphPayload": "SHA-256 of JSON.stringify over the canonical agencyRelations array, preserving order and selecting id, actorIds, action, objectId, purpose, result, creditScope, status, claimIds, sourceIds, sourceSupportKeys, and boundaries, exactly as constructed in scripts/lib/knowledge-evals.mjs.",
+    "sharedPublicSurfacesSha256": "d8a3696a7a5d5b82e38d264aa5a800daa889b2f54122342a19b1088745fb5be7",
+    "sharedPublicSurfacesPayload": "UTF-8 contents of apps/www/src/data/work.ts, followed by one newline, followed by UTF-8 contents of apps/www/src/app/work/technical-operations/page.tsx.",
+    "aboutAndTechnicalOperationsSourceSha256": "0700303df14cd2dd72918b72e49b0573290605fe8aad1185e812d6cb2957ccd7",
+    "aboutAndTechnicalOperationsPayload": "UTF-8 About page contents, followed by one newline, followed by UTF-8 Technical Operations page contents.",
+    "audioTwoRelationsSha256": "862f3edb3a9c735a2ba81c7d3dd3cd569acb52b1c6755d37cae3098e369192df",
+    "audioTwoRelationsPayload": "The two audio/print relations, in canonical order, using the same selected fields as the full agency-graph digest.",
+    "audioModulePayloadSha256": "303db65beda0309ff01b7df82c00752bc0b87106a4ada8ea7f40a2e6b87e820b",
+    "audioCanonicalPayloadSha256": "303db65beda0309ff01b7df82c00752bc0b87106a4ada8ea7f40a2e6b87e820b",
+    "audioPayloadDefinition": "JSON.stringify of intakeItems, observations, sources, claims, researchInquiries, and pages in module order; canonical payload substitutes the matching parsed canonical records.",
+    "fieldPracticeCorpusSha256": "20969ea8c506b025cfc6cd0dadb6b4eab4ce7eb93935885c421be5ca33b5563a",
+    "fieldPracticeCanonicalRecordsSha256": "aec8ae4d0ca23edeee8043565f2a292e5679959c04685c697c7f2c8428f4868c",
+    "fieldPracticeProofProjectionSha256": "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
+    "fileSha256": {
+      "apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts": "c1018f905ab1456d3b8230295d1467ace66e10aaee64343b257b8344f0a787d1",
+      "apps/www/src/data/knowledge-bank/agency-graph.ts": "679fab348bd5bee5a946c632046e0bea42f095df2298e728294e2fefda277997",
+      "apps/www/src/data/knowledge-bank/records.ts": "1bdf3f732e257d0a07f6b50686cdbdcae76755cc43aeb5c8674294e0e4687799",
+      "apps/www/src/data/knowledge-bank/kctownhall-field-practice.ts": "aa3a8827db619e900bb0634e75f868ba0dbe8f11b8612ef3a2fd08c8cf469eca",
+      "apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts": "ceafc5a7a22844fcb2a034921bb28a9a18461985228b402479aa5bc84698ea54",
+      "apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts": "8e97d84adf69cec38fad3a37108ccbcfa0b4e0b8d0630b8f63bff1e32b7f7a94",
+      "apps/www/src/app/about/page.tsx": "c44addfba879c630d9fcde0c3e8d62e3398e1402acb8887c9795822f8ec76ea9",
+      "apps/www/src/app/work/technical-operations/page.tsx": "4d60666a1aeb269ba8791c1797af1f0b9c0a21e2beda241d0a83067342eceb03",
+      "apps/www/src/data/proofs.ts": "a1854b5fd1e7e42426f56f6d2e39700c4343b304d32433af46372ef28a3ecfda",
+      "apps/www/src/data/work.ts": "1b2aec09f1de43c45c0c6a75dfb40366318f9b914317a8bf2f268ef018b51416",
+      "apps/www/src/content/work/kc-town-hall.mdx": "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
+      "apps/www/src/data/knowledge-bank/public-registry.json": "85bab1a0ae8729e8f46aca772d6f17082085304a922d26eeaa75e0fdf99a715f"
+    }
+  },
+  "observedEvidence": {
+    "agencyGraph": {
+      "entityCount": 34,
+      "relationCount": 36,
+      "referenceAndSupportClosureFailures": [],
+      "checks": [
+        "Every relation actor and object resolves to a public-safe canonical entity.",
+        "Every referenced claim and source resolves.",
+        "Every relation source appears in evidence for at least one referenced claim.",
+        "Every relation support key appears in a referenced source's supportsGenerally list, and every referenced source contributes at least one relation support key.",
+        "Every relation has a purpose and result."
+      ],
+      "creditAssessment": [
+        "REL-JAMIE-AUDIO-PRINT-PRODUCTION assigns individual credit to Jamie for bounded production work. Its result explicitly attributes the account to Jamie and does not assign him installation or portrait-project leadership.",
+        "REL-AUDIO-PRINT-SHARED-PRODUCTION assigns shared credit to Jamie and an unnamed artist. It expressly gives the artist project leadership and provision of identities, links, and panel materials.",
+        "The three enacted relations assign institutional credit to New York City Council. Advocacy, testimony, implementation, collective governance, and institutional enactment remain distinct.",
+        "KC Town Hall relations separately identify Jamie's shared proposal-and-presentation contribution, Board recommendation, Council acceptance and appropriation, project withdrawal, and institutional recovery of unused funds.",
+        "KC Town Hall's stewardship-transition relation expressly remains an authorized first-party account without assertions about recipient identity, legal mechanics, acceptance, or municipal approval."
+      ]
+    },
+    "audioPrint": {
+      "canonicalCounts": {
+        "intakeItems": 1,
+        "observations": 3,
+        "sources": 1,
+        "claims": 3,
+        "researchInquiries": 1,
+        "pages": 1
+      },
+      "canonicalModulePayloadsMatch": true,
+      "publicProjectionMatchesCanonicalText": true,
+      "claimEvidenceSupportClosureFailures": [],
+      "citationReferenceCount": 1,
+      "citationBacklinkCount": 3,
+      "assessment": [
+        "The source and citation note identify an approved anonymous first-person account, not independent verification.",
+        "The account distinguishes seven recorded sittings, fifty preserved label-to-audio links, and retrospective confirmation of printing, bringing, and physical use.",
+        "Fifty links are not presented in the source boundaries as fifty independently verified installations.",
+        "Installer identity, complete installed-label count, visitor use, live link performance, and final client acceptance remain unestablished.",
+        "Publication scope is anonymous text. The records do not expand that scope to identities, photographs, or underlying materials.",
+        "The public citation renderer exposes the source note and doesNotEstablish boundaries through the three claim citations."
+      ]
+    },
+    "kcTownHallBoundaries": {
+      "heldClaims": [
+        "CLM-KCTH-PHASE-ONE-FIELD-DELIVERY",
+        "CLM-KCTH-NEIGHBORHOOD-SURVEY-PRACTICE",
+        "CLM-KCTH-TIRED-OF-TIRES-INDIVIDUAL-ROLE",
+        "CLM-KCTH-CLEVELAND-UNIFY-TO-BEAUTIFY-CONTRIBUTION"
+      ],
+      "allFourStatusUseWithCare": true,
+      "allFourProjectionsHeldWithEmptySurfaces": true,
+      "allFourAbsentFromPublicRegistry": true,
+      "claimEvidenceSupportClosureFailures": [],
+      "assessment": [
+        "The proposal's project-manager attribution, team scope, and reported progress remain distinct from general-contractor title, daily field coordination, and final Phase One completion.",
+        "Project-level survey evidence does not establish Jamie's individual survey-handbill or data-system authorship, representative participation, or an audited community mandate.",
+        "Broad individual program design, complete coordination, monthly operations, logging, and Indian Mound expansion remain held.",
+        "Cleveland Avenue co-founder and component-design claims, printing quantities, and causal attribution for public capital allocations remain held.",
+        "About's resident-service passage uses a narrower active canonical claim supported by the archived service model, a named first-hand participant account, and a project operating update.",
+        "About explicitly excludes sole program ownership and component authorship; it describes one completed collection and disclaims audited program totals and a demonstrated resident-feedback-to-redesign chain.",
+        "Technical Operations renders the bounded funding-award and transition proof. Its wording does not promote general-contractor, Phase One completion, survey authorship, Indian Mound expansion, or Cleveland Avenue claims."
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "informational",
+      "subject": "The established shared-surface hash excludes About",
+      "detail": "The evaluator construction hashes work.ts and Technical Operations only. It does not bind About, the audio source module, canonical claim text, proof dependencies, or citation rendering. This report supplies separate bindings for those reviewed materials.",
+      "effectOnScopeRecommendation": "No hold required for this manual scope review; do not describe the sharedPublicSurfacesSha256 alone as binding every reviewed surface."
+    },
+    {
+      "severity": "limitation",
+      "subject": "First-person account is not collaborator corroboration",
+      "detail": "Public status, exact-text approval, moderate confidence, and confirmed-with-boundary status do not independently corroborate the audio/print account. Acceptance concerns faithful attribution, support closure, and bounded public wording."
+    },
+    {
+      "severity": "informational",
+      "subject": "Broad held KC Town Hall roles coexist with narrower matured participation evidence",
+      "detail": "The later resident-service records support limited pickup participation. They do not release the older composite individual-role claim or establish component authorship, every shift, complete coordination, expansion, or audited outcomes."
+    }
+  ],
+  "stability": {
+    "changedBytesObserved": false,
+    "verification": "The twelve initially hashed scope files were hashed again and matched. The full agency digest, exact shared-surface digest, and audio module payload digest were independently recomputed and matched their first calculation.",
+    "qualification": "This establishes agreement between the captured snapshots, not continuous filesystem monitoring."
+  },
+  "remainingHolds": [
+    "All four listed KC Town Hall field-practice claims remain held.",
+    "Independent corroboration of the audio/print physical-use account remains unavailable in this review.",
+    "Audio/print installer identity, complete installed-label count, visitor use, live-link performance, and final client acceptance remain unverified."
+  ],
+  "conclusion": "Accept the current agency graph for source-reference closure and bounded individual, shared, collective, and institutional credit. Accept the reviewed About and Technical Operations surfaces as preserving the held KC Town Hall roles and anti-overclaims. Retain every stated evidence and authorization boundary."
+}

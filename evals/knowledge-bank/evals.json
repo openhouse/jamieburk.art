@@ -1079,10 +1079,12 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 34,
+      "expectedRelationCount": 36,
+      "approvedGraphSha256": "8937a34581e20f8cf7f4c5965ba5a8dd644796fccaac4b9be406dd5592d5ca64",
       "relationIds": [
+        "REL-JAMIE-AUDIO-PRINT-PRODUCTION",
+        "REL-AUDIO-PRINT-SHARED-PRODUCTION",
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
         "REL-OPEN-HOUSE-INITIATED",

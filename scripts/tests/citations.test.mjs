@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -161,4 +162,68 @@ test("the About page renders ordered endnotes for its lineage and documented par
   for (const occurrence of ["wowlist-product-model", "wowlist-organizer-support", "coalition-participation-path", "resident-service-path"]) {
     assert.ok(aboutPage.includes(`occurrenceId="${occurrence}"`), occurrence);
   }
+});
+
+// Approval is scoped to this wording and destination. These exercise the same
+// projection and source resolution used by Claim and References on the page.
+test("audio and print case resolves the approved three paragraphs in their approved order", () => {
+  const page = knowledgeBank.pages.find((item) => item.id === "technical-operations");
+  assert.ok(page, "The approved technical-operations citation page must exist");
+  assert.deepEqual(page.occurrences.map((item) => item.id), ["audio-editions", "print-production", "shared-credit"]);
+  const text = page.occurrences.map((item) =>
+    resolveCitationOccurrence(page.id, item.id).projection.text
+  ).join("\n\n");
+  // Independently bound to the exact three paragraphs Jamie approved, not
+  // calculated from canonical records by the test or an implementation helper.
+  // Normalization: paragraphs joined by two LFs, with no final LF.
+  assert.equal(createHash("sha256").update(text).digest("hex"), "ca8d03976eb32fc58f7cb3e451c47f716d17a5880b79265bc266a10d70b488da");
+});
+
+test("audio and print approval cannot widen to another surface or a photo caption", () => {
+  const claimId = "CLM-AUDIO-PRINT-PHYSICAL-USE-2026";
+  assert.ok(publicCitationRegistry.claims.some((item) => item.id === claimId), "The approved text claim must be published through the registry");
+  assert.throws(() => getClaimProjection(claimId, "case-study", "/about"), /not approved/);
+  assert.throws(() => getClaimProjection(claimId, "photo-caption", "/work/technical-operations"), /Missing photo-caption/);
+});
+
+test("audio and print citations disclose a first-person account without source links or independent-audit claims", () => {
+  const notes = resolveCitationReferences("technical-operations");
+  assert.equal(notes.length, 1, "All three paragraphs cite one approved first-person summary");
+  const { source, backlinks } = notes[0];
+  assert.equal(backlinks.length, 3);
+  assert.equal(source.author, "Jamie Burkart");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.equal(source.archiveUrl, undefined);
+  assert.equal(source.assetUrl, undefined);
+  assert.match(source.publicNote, /first-person account/i);
+  assert.match(source.publicNote, /retrospectively confirmed by Jamie/i);
+  assert.ok(source.doesNotEstablish.includes("an independent physical-use audit"));
+  assert.ok(source.doesNotEstablish.includes("permission to publish names or photographs"));
+  assert.doesNotMatch(JSON.stringify(notes), /protectedLocatorId|file:\/\/|\/Users\/|\.photoslibrary|\.pdf|\.jpg|\.png/i);
+});
+
+test("audio and print agency separates Jamie's production contribution from the artist's project leadership", () => {
+  const relations = knowledgeBank.agencyRelations.filter((item) => item.project === "audio-print-production");
+  assert.equal(relations.length, 2, "Both contribution and shared project credit must be represented");
+  const contribution = relations.find((item) => item.creditScope === "individual");
+  const shared = relations.find((item) => item.creditScope === "shared");
+  assert.deepEqual(contribution?.actorIds, ["ENT-JAMIE-BURKART"]);
+  assert.deepEqual(shared?.actorIds, ["ENT-JAMIE-BURKART", "ENT-PORTRAIT-EXHIBITION-ARTIST"]);
+  assert.match(shared.result, /artist led/i);
+  assert.ok(contribution.boundaries.some((item) => /not.*who attached/i.test(item)));
+  assert.ok(shared.boundaries.some((item) => /not.*sole authorship/i.test(item)));
+  for (const relation of relations) {
+    assert.ok(relation.sourceSupportKeys.length > 0);
+    for (const key of relation.sourceSupportKeys) {
+      assert.ok(relation.sourceIds.some((id) => knowledgeBank.sources.find((source) => source.id === id)?.supportsGenerally.includes(key)));
+    }
+  }
+});
+
+test("Jamie's first-person case does not count as independent collaborator corroboration", async () => {
+  const { evaluateKnowledgeBank, loadKnowledgeEvalSuite } = await import("../lib/knowledge-evals.mjs");
+  const result = evaluateKnowledgeBank(loadKnowledgeEvalSuite());
+  const corroboration = result.contentApprovals.blindSpotControls;
+  assert.equal(corroboration.actualCollaboratorNoteCount, 0);
+  assert.equal(corroboration.checks.humanCorroborationControlComplete, true);
 });

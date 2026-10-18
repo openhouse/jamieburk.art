@@ -1,0 +1,217 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no real named person participated",
+  "reviewerId": "case-navfix-reader-3",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "1c7225a013eb63db8de12a9c44ae57490300b30004d7c0f2ddb1a15b397bf38f",
+  "score": 3,
+  "pass": false,
+  "passScope": "Individual advisory judgment. The method is strong and legible, but the frozen requirement for three current projects with reconstructable social-use sequences is not established.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "About plainly states the recurring sequence: observe relationships, model a system, prototype an interface, test with people, and document continuation. Linked comparisons make the relationship between social structure and information architecture understandable."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "The historical sequence connects gathering calendars, natural-language event entry, keyword communities, distribution, support exchanges, and independent organizer continuation. The product model is labeled reconstructed. Historical support evidence does not establish current calendar availability or a particular feedback-to-release chain."
+    },
+    {
+      "path": "rendered/1280-about.html",
+      "finding": "The coalition comparison supplies a dated organizing sequence from public invitation through discussion, collaborative naming and letter-making, and a subsequent meeting invitation. Source notes preserve platform-signal and shared-authorship limits."
+    },
+    {
+      "path": "rendered/1280-work--kc-town-hall.txt",
+      "finding": "Tired of Tires connects eligibility, intake, recurring collection, volunteers, recycling, and public reporting. The flyer and matched field photographs supply stronger evidence of a service interface and one completed collection than a descriptive process card alone. Resident-feedback-driven redesign remains explicitly unresolved."
+    },
+    {
+      "path": "rendered/1280-work--technical-operations.html",
+      "finding": "The October production account supplies a current clarification-and-revision loop: unresolved label information prompted three questions, replies informed revision, and the resulting edition was reportedly printed, brought, and physically used. This is useful first-person evidence, with no independent audit of installation completeness, visitor use, or final acceptance."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "The lab distinguishes graph responsibilities and demonstrates a concrete chronology correction propagated across portfolio surfaces. Its reader-return prototype is synthetic, its client sprint is proposed, and human usefulness remains open. These distinctions are trustworthy, but neither synthetic checks nor proposed acceptance conditions establish actual team use."
+    },
+    {
+      "path": "rendered/1280-work--callnyc.txt",
+      "finding": "CallNYC supplies an original historical interface, issue-based information architecture, public documentation, reporting, and bounded public-account interactions. Its archived, independent, unofficial status is explicit. Official-account interactions do not establish resident task success or current service use."
+    },
+    {
+      "path": "rendered/1280-work--harry-j-epstein.txt",
+      "finding": "The maintenance-to-handoff specimen makes the proposed operating pattern inspectable, but it is a reconstruction of the 2009–2015 engagement. The 2026 storefront capture does not independently prove Jamie's present maintenance role or a specific historical release-and-learning sequence."
+    }
+  ],
+  "systemsSequenceTrace": [
+    {
+      "project": "WOWList",
+      "observation": "Shared calendars and organizer needs across scenes, interests, and places.",
+      "model": "Editable event text → keyword communities → followed lists → distribution.",
+      "interface": "Natural-language contributions, profiles, calendars, and weekly email.",
+      "socialUse": "Historical support exchanges, independent tutorial metadata, and an external local-calendar route.",
+      "learning": "Joining and publishing became explainable through support; no specific support-comment-to-release causality is established.",
+      "continuation": "Organizer-facing materials and local calendar routes.",
+      "status": "Substantial historical sequence; contemporary return is only a threshold and tester invitation."
+    },
+    {
+      "project": "NYC Artist Coalition",
+      "observation": "Cultural-space organizers needed a shared way to gather and act.",
+      "model": "Invitation → discussion → shared naming and letter-making → subsequent general meeting.",
+      "interface": "Event discussion, naming poll, collaborative letter, and meeting invitations.",
+      "socialUse": "Public participation records and the displayed naming result.",
+      "learning": "A shared identity carried into the next invitation; this is organizing continuity, not a measured software redesign.",
+      "continuation": "Subsequent meetings, campaign interfaces, and bounded campaign-memory summaries.",
+      "status": "Historical participation sequence; ongoing memory work lacks an inspectable complete contemporary use-and-learning trace."
+    },
+    {
+      "project": "KC Town Hall / Tired of Tires",
+      "observation": "Households needed an understandable tire-removal pathway.",
+      "model": "Eligibility → request → scheduled collection → recycling → reporting.",
+      "interface": "Archived service page and governed outreach flyer.",
+      "socialUse": "Public accounts of Jamie's pickup participation and matched photographs of one completed collection.",
+      "learning": "Recurring service and reporting are documented; a resident-feedback-to-redesign chain remains unresolved.",
+      "continuation": "Recurring cadence, volunteer participation, recycling handoff, and reporting.",
+      "status": "Historical service-delivery evidence, not a current operation established by this packet."
+    },
+    {
+      "project": "Audio editions to printed labels",
+      "observation": "Current and earlier audio editions needed separation; label identities and destinations required clarification.",
+      "model": "Versioned audio editions linked to a standardized printable label layout.",
+      "interface": "Revised label proof and physical labels.",
+      "socialUse": "Jamie retrospectively reports physical use beneath portraits.",
+      "learning": "Artist replies informed a revised proof.",
+      "continuation": "Uniform cutting measurements and preserved label-to-audio links supported delivery.",
+      "status": "Recent first-person sequence; underlying artifacts and independent acceptance evidence withheld."
+    },
+    {
+      "project": "Knowledge Wiki Graphs",
+      "observation": "Decision context, disagreement, evidence, and access conditions can be lost or conflated.",
+      "model": "Separate semantic, evidence, and custody responsibilities.",
+      "interface": "Portfolio projection, correction trace, and synthetic reader-return prototype.",
+      "socialUse": "Actual teammate or client use of the prototype is not established.",
+      "learning": "The portfolio chronology correction is concrete; synthetic checks do not establish human usefulness.",
+      "continuation": "Citations, correction paths, pinned editions, and proposed handoff acceptance conditions.",
+      "status": "Current research and synthetic implementation; participant pilot and client deployment remain unobserved."
+    }
+  ],
+  "scoreRationale": "The portfolio earns 3 for a clear method, substantial historical operating evidence, and disciplined limits. I read 'current projects' as requiring contemporary practice evidence: a current case-study page or recent archival review does not make historical social use current. Three complete contemporary sequences are not demonstrated.",
+  "gaps": [
+    "The three principal About comparisons rely on historical WOWList, 2017 coalition formation, and historical KC Town Hall service evidence. They do not establish three current socially used systems.",
+    "The current WOWList surface does not establish restored calendar use; the current Wiki prototype is synthetic; ongoing coalition memory is described through withheld-record summaries.",
+    "The recent audio-and-print example adds one contemporary first-person sequence, but does not close the three-project requirement.",
+    "Social-use evidence is uneven: public interaction, completed service, support documentation, and human comprehension are distinct observations.",
+    "mobile-navigation.json identifies /about destinations while its paired screenshots show the Technical Operations production section. The receipt and images need reconciliation."
+  ],
+  "notObserved": [
+    "Three current projects each demonstrating the complete observation, model, interface, social-use, learning, and continuation sequence.",
+    "A participant pilot, client adoption, or measured human usefulness for the reader-return prototype.",
+    "Independent physical-use verification, installed-label count, live-link performance, visitor use, or final client acceptance for the production account.",
+    "Resident task success or feedback-driven interface changes for CallNYC.",
+    "Original HJE release records connecting a particular observed problem, implementation, verification, and handoff.",
+    "The other independent scorecards or the required three-reader median.",
+    "Live browser navigation, human usability validation, or explicit keyboard-navigation observations.",
+    "The full accessibility matrix, including 360px and 768px captures and assistive-technology testing.",
+    "External source retrieval, protected educational originals, or private project records."
+  ],
+  "safety_findings": [
+    "The inspected routes do not promote protected coursework into disciplinary invention, peer-reviewed research, present Max/Jitter proficiency, or production deployment. The required source note keeps that coursework held and bounded.",
+    "The lab identifies AI assistance, synthetic examples, proposed engagements, and unresolved human usefulness. Automated checks are not presented as human agreement or publication authority.",
+    "WOWList implementation credit remains shared with Richard Caceres; coalition formation and policy outcomes remain collective; KC Town Hall participation does not become sole program or component authorship.",
+    "CallNYC is clearly archived, independent, and unofficial. Recovered official-account interactions remain separate from endorsement.",
+    "The recent production account preserves artist leadership and limits publication to anonymous text.",
+    "Photography authorization records are placement-specific and do not establish broader reuse rights or exact-candidate production approval.",
+    "No named real professor participated or supplied endorsement through this review."
+  ],
+  "recommendation": "Keep PR-016 on hold. Preserve the strong method explanation and historical traces, while seeking bounded public-safe evidence for three contemporary use-and-continuation sequences. Synthetic controls, recent archive captures, and reconstructed specimens should retain their present labels.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T18:42:41.470Z",
+    "scope": "Read-only review confined to this packet. No parent folders, Git history, memory lookup, prior judgments, private originals, external network access, edits, or agents were used.",
+    "sourceCommit": "f3e404bd89c4d3dbfb3495a068fa43f4e31946a0",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "verificationCommand": "node VERIFY.mjs",
+    "verificationResults": {
+      "before": "verified=true; exit 0",
+      "after": "verified=true; exit 0",
+      "sourcePaths": 162,
+      "views": 30
+    },
+    "sourcePathsInspected": [
+      "PROFESSOR-REVIEW.md",
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/proofs.ts",
+      "source/apps/www/src/data/knowledge-bank/public-registry.json",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "source/apps/www/src/data/knowledge-bank/records.ts",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts",
+      "source/apps/www/src/data/knowledge-bank/audio-print-production-2026-10.ts",
+      "source/apps/www/src/data/knowledge-bank/knowledge-reading-prototype-2026-10.ts",
+      "navigation/case-navigation.json",
+      "navigation/mobile-navigation.json"
+    ],
+    "sourceInspectionLimits": "PR-015, PR-016, scale, thresholds, and hard constraints read completely. Photography and the two October claim modules read completely. Registry, agency, proofs, records, and historical-knowledge inspection used relevant records or excerpts. Linked prototype code, external articles, private originals, and other repositories were not inspected.",
+    "renderedRoutesInspected": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory",
+      "/work/harry-j-epstein",
+      "/work/kc-town-hall"
+    ],
+    "renderedReadingMethod": "Read desktop text captures for all listed routes. Parsed captured HTML for route links and source disclosures, including About, Sunday Dinner, and the recent production account.",
+    "screenshotsInspected": [
+      {
+        "directory": "rendered",
+        "filenamePattern": "{width}-{stem}{suffix}.png",
+        "widths": [
+          1280,
+          375
+        ],
+        "stems": [
+          "home",
+          "about",
+          "work",
+          "work--technical-operations",
+          "work--wowlist",
+          "work--196-sunday-dinner",
+          "work--fair-rent-nyc",
+          "work--callnyc",
+          "lab--source-backed-team-memory",
+          "work--harry-j-epstein",
+          "work--kc-town-hall"
+        ],
+        "suffixes": [
+          "",
+          "-viewport"
+        ],
+        "count": 44,
+        "method": "Each image inspected through view_image."
+      },
+      {
+        "files": [
+          "navigation/1280-case-section.png",
+          "navigation/375-case-section.png",
+          "navigation/different-route.png",
+          "navigation/same-route.png"
+        ],
+        "method": "Each image inspected through view_image."
+      }
+    ],
+    "twoClickPathObserved": "The method is on About, linked from the homepage. Bound case-navigation evidence records homepage → About → recent production section at both widths; captured About links also lead to project evidence. No live replay or literal mobile activation count was collected.",
+    "nohumanapproval": true
+  },
+  "publicProjection": {
+    "redactions": [
+      "Absolute local Node executable path replaced by command name. Scores, pass fields, observations, gaps, recommendations and review timestamp are unchanged."
+    ],
+    "rawReviewRetained": true
+  }
+}

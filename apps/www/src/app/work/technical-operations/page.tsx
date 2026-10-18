@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { Route } from "next";
+import { Claim } from "@/components/citations/Claim";
+import { References } from "@/components/citations/References";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import { technicalOperationsProofRows } from "@/data/proofs";
@@ -176,6 +178,41 @@ export default function TechnicalOperationsPage() {
               </dl>
             </article>
           ))}
+        </div>
+      </section>
+      <section aria-labelledby="audio-print-production" className="jb-reading mt-14 border-t border-jb-ink/18 pt-8">
+        <p className="jb-section-label">Recent production work · October 2026</p>
+        <h2 className="mt-3 text-3xl font-semibold text-jb-ink" id="audio-print-production">
+          From audio editions to printed labels
+        </h2>
+        <div className="mt-5 space-y-5 leading-8 text-jb-ink/76">
+          <Claim
+            as="p"
+            claimId="CLM-AUDIO-PRINT-EDITIONS-2026"
+            projection="case-study"
+            surface="/work/technical-operations"
+            pageId="technical-operations"
+            occurrenceId="audio-editions"
+          />
+          <Claim
+            as="p"
+            claimId="CLM-AUDIO-PRINT-PHYSICAL-USE-2026"
+            projection="case-study"
+            surface="/work/technical-operations"
+            pageId="technical-operations"
+            occurrenceId="print-production"
+          />
+          <Claim
+            as="p"
+            claimId="CLM-AUDIO-PRINT-SHARED-CREDIT-2026"
+            projection="case-study"
+            surface="/work/technical-operations"
+            pageId="technical-operations"
+            occurrenceId="shared-credit"
+          />
+        </div>
+        <div className="mt-6">
+          <References pageId="technical-operations" />
         </div>
       </section>
       <section aria-labelledby="capability-evidence" className="mt-14">

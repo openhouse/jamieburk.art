@@ -62,10 +62,10 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   governedKnowledgeSha256: "8b787e778be1c9a2a36f93303793bde6bfec1bca2136caa9b58b0fc03ae9d55c",
   proofProjectionSha256: "89e737e2b4620a430933669aabbafcd0924534a2ac55acce8a82a102131aeef3",
   caseStudyMdxSha256: "07dea29f0d9880936d6c643c39fcee58eaaec4164cb0e091f5cfa933aded8cfa",
-  // Independently re-reviewed 2026-10-13 after the working-session CTA and
-  // truthful artifact-label corrections. KC Town Hall claims and all six
-  // other locks are unchanged; both source-and-boundary receipts are retained.
-  sharedPublicSurfacesSha256: "b94e4a80222a6f66898f2a75842f79f4a36732751f0bc7a98d968f48a28ecfd3",
+  // Independent scope review: case-source-boundary-review-2026-10-18.json.
+  // The anonymous case preserves held KC Town Hall claims and all six other
+  // locks. This hash binds work.ts plus Technical Operations, not About.
+  sharedPublicSurfacesSha256: "d8a3696a7a5d5b82e38d264aa5a800daa889b2f54122342a19b1088745fb5be7",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-08-21 after governed public-safe records gained new linked

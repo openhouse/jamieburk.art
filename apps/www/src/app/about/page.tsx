@@ -102,6 +102,17 @@ export default function AboutPage() {
               document enough for others to continue. Requirements, interfaces,
               and handoffs matter because people have to inhabit them.
             </p>
+            <p>
+              For a recent production example, see{" "}
+              <Link
+                className="font-semibold text-jb-blue hover:text-jb-green"
+                href="/work/technical-operations#audio-print-production"
+              >
+                From audio editions to printed labels
+              </Link>
+              : an anonymous first-person account of clarification, revision
+              and physical production, with shared credit and explicit limits.
+            </p>
           </div>
           <div className="mt-8 border-y border-jb-ink/12 py-4">
             <p className="jb-section-label">Three documented participation systems</p>

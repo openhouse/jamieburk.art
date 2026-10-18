@@ -1,4 +1,5 @@
 import { agencyGraph } from "./agency-graph.ts";
+import { audioPrintProductionOctober2026 } from "./audio-print-production-2026-10.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
@@ -41,6 +42,7 @@ import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...audioPrintProductionOctober2026.intakeItems,
     {
       id: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
       kind: "photo-lead",
@@ -98,6 +100,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems
   ],
   observations: [
+    ...audioPrintProductionOctober2026.observations,
     {
       id: "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
       intakeId: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
@@ -154,6 +157,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations
   ],
   sources: [
+    ...audioPrintProductionOctober2026.sources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -319,6 +323,7 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilFunding.agencyRelations
   ],
   claims: [
+    ...audioPrintProductionOctober2026.claims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -504,6 +509,7 @@ const knowledgeBankInput = {
       publicSummary: "A protected participant photograph preserves the visible Digital District breakout wording; public display remains on hold pending rights, consent, and editorial review.",
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
+    ...audioPrintProductionOctober2026.researchInquiries,
     ...archiveProductionJuly2026.researchInquiries,
     ...callNycSocialPopulationJuly2026.researchInquiries,
     ...googleDriveProductionJuly2026.researchInquiries,
@@ -548,7 +554,7 @@ const knowledgeBankInput = {
     { id: "COR-NYCAC-CABARET-HEARING-DATE-2026", claimId: "CLM-NYCAC-CABARET-TESTIMONY-2017", previousText: "June 19, 2017", replacementText: "September 14, 2017", reason: "The official transcript title page identifies the Committee on Consumer Affairs hearing date as September 14, 2017.", decidedAt: "2026-07-14", affectedSurfaces: ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"], status: "active" },
     { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "knowledge-bank"], status: "active" }
   ],
-  pages: [{
+  pages: [...audioPrintProductionOctober2026.pages, {
     id: "about",
     surface: "/about",
     sourceOrder: [

@@ -1,6 +1,24 @@
 {
   "sources": [
     {
+      "id": "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+      "title": "Approved first-person account of audio and print production",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-10-18",
+      "accessedAt": "2026-10-18",
+      "publicCitation": "Jamie Burkart, approved anonymous first-person account, October 18, 2026.",
+      "publicNote": "This first-person account is the approved public summary, not an independently audited record. Printing, bringing and physical use of the described labels were retrospectively confirmed by Jamie. No underlying correspondence, documents or photographs are published here.",
+      "doesNotEstablish": [
+        "an independent physical-use audit",
+        "who attached the labels or that all fifty were installed",
+        "visitor use, live link performance or final client acceptance",
+        "permission to publish names or photographs"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1335,6 +1353,105 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-AUDIO-PRINT-EDITIONS-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For a portrait exhibition, I organized current audio editions for seven recorded sittings, keeping current files distinct from earlier versions. When the label proof contained unresolved identities and destinations, I asked three specific questions and incorporated the artist’s replies into a revised proof.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's audio-edition organization and clarification work"
+          ],
+          "publicNote": "Approved first-person account; not independent verification.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Physical use was retrospectively confirmed by Jamie; it does not establish who attached the labels or that all fifty were installed.",
+        "No claim of visitor use, live link performance or final client acceptance.",
+        "Publication scope is this text only, not names, photographs or underlying records."
+      ]
+    },
+    {
+      "id": "CLM-AUDIO-PRINT-PHYSICAL-USE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I then standardized the label layout so each sheet could be cut using the same measurements, preserving fifty label-to-audio links. On October 8, I printed and brought that version to the installation. Those labels were attached beneath the portraits. The work connected client clarification, versioned files and practical production support.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's retrospective confirmation of printing, bringing and physical use"
+          ],
+          "publicNote": "Approved first-person account; not independent verification.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Physical use was retrospectively confirmed by Jamie; it does not establish who attached the labels or that all fifty were installed.",
+        "No claim of visitor use, live link performance or final client acceptance.",
+        "Publication scope is this text only, not names, photographs or underlying records."
+      ]
+    },
+    {
+      "id": "CLM-AUDIO-PRINT-SHARED-CREDIT-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The artist led the portrait project and supplied its identities, links and panel materials. My contribution was audio editing, delivery organization and print preparation, with tools assisting preparation and checking.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Artist leadership and Jamie's bounded production contribution"
+          ],
+          "publicNote": "Approved first-person account; not independent verification.",
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Approved anonymous first-person account, not independent verification.",
+        "Physical use was retrospectively confirmed by Jamie; it does not establish who attached the labels or that all fifty were installed.",
+        "No claim of visitor use, live link performance or final client acceptance.",
+        "Publication scope is this text only, not names, photographs or underlying records."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -3299,6 +3416,39 @@
     }
   ],
   "pages": [
+    {
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
+      "sourceOrder": [
+        "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "audio-editions",
+          "claimId": "CLM-AUDIO-PRINT-EDITIONS-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+          ]
+        },
+        {
+          "id": "print-production",
+          "claimId": "CLM-AUDIO-PRINT-PHYSICAL-USE-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+          ]
+        },
+        {
+          "id": "shared-credit",
+          "claimId": "CLM-AUDIO-PRINT-SHARED-CREDIT-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-AUDIO-PRINT-APPROVED-ACCOUNT-2026"
+          ]
+        }
+      ]
+    },
     {
       "id": "about",
       "surface": "/about",

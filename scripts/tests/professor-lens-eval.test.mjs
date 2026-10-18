@@ -266,6 +266,7 @@ test("holdout aggregation follows the frozen median-four and minimum-three rule"
     { scores: [3, 4, 4], expected: true },
     { scores: [4, 3, 4], expected: true },
     { scores: [3, 3, 4], expected: false },
+    { scores: [3, 3, 3], expected: false },
     { scores: [2, 4, 4], expected: false },
     { scores: [4, 4, 5], expected: false },
     { scores: [3.5, 4, 4], expected: false }

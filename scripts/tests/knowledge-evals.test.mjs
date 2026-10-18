@@ -563,6 +563,28 @@ test("photo feedback requires an explicit hold and protected locator", () => {
   }
 });
 
+test("audio-print contribution and shared leadership are both in the reviewed agency inventory", () => {
+  for (const id of ["REL-JAMIE-AUDIO-PRINT-PRODUCTION", "REL-AUDIO-PRINT-SHARED-PRODUCTION"]) {
+    assert.ok(suite.pilot.agencyGraph.relationIds.includes(id), id);
+  }
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 5);
+});
+
+test("audio-print shared credit cannot silently become sole leadership", () => {
+  const relation = knowledgeBank.agencyRelations.find((item) => item.id === "REL-AUDIO-PRINT-SHARED-PRODUCTION");
+  const original = { actorIds: relation.actorIds, creditScope: relation.creditScope };
+  try {
+    relation.actorIds = ["ENT-JAMIE-BURKART"];
+    relation.creditScope = "individual";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    Object.assign(relation, original);
+  }
+});
+
 test("agency graph distinguishes contribution from institutional enactment", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 5);

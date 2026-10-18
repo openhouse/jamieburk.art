@@ -1,10 +1,10 @@
 {
   "reportVersion": 7,
-  "checkedAt": "2026-10-18T16:31:23.859Z",
-  "baseUrl": "http://127.0.0.1:3228",
-  "publicSurfaceFingerprint": "16f090d636de8564dac2904b97354cf2d90401b7d665bf5970196cea1ccab601",
+  "checkedAt": "2026-10-18T18:36:43.249Z",
+  "baseUrl": "http://127.0.0.1:3239",
+  "publicSurfaceFingerprint": "ff9fbfc9d0b928416ba5c1216f8ad6db9d9b782b8a0a6102ef2d016a55f234da",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 157,
+  "publicSurfaceFileCount": 158,
   "captureMethod": "Fresh Playwright Chromium viewport captures after explicit scroll restoration and two animation frames, paired with the complete 60-row responsive accessibility matrix.",
   "routes": [
     {
@@ -55,7 +55,7 @@
           "pixelWidth": 1280,
           "pixelHeight": 900,
           "httpStatus": 200,
-          "sha256": "9bec18c47fd0ea77b5db6f55168acac6d3250df05b448f36ec5673910cf38719",
+          "sha256": "a665e1790a876835b8b3021e988b69408ef954c765b979d35723432c79990b93",
           "file": "professor-lenses-about-desktop.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,
@@ -72,7 +72,7 @@
           "pixelWidth": 375,
           "pixelHeight": 1200,
           "httpStatus": 200,
-          "sha256": "8c5f3711db4c41afdd3f23ac2df0ace69529a05d1befbb77fcd597c86a0d5223",
+          "sha256": "3b2cdd1e75da396c23c2c2616822c3d9f9107ec9c4967f26e6d7fa1ef5b8e938",
           "file": "professor-lenses-about-mobile.png",
           "framedContent": {
             "systemsPeopleCanInhabitHeadingPresent": true,

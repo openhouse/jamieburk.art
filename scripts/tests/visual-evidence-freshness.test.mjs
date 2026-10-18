@@ -85,3 +85,22 @@ test("superseded screenshots are clearly separated from current evidence", () =>
     );
   }
 });
+
+test("mobile keyboard navigation closes the menu for both a new and the current route", () => {
+  const observed = interactionManifest.mobileNavigation.postNavigation;
+  assert.equal(observed?.passed, true);
+  assert.deepEqual(observed.results.map((row) => row.id), ["different-route", "same-route"]);
+  for (const row of observed.results) {
+    assert.equal(row.passed, true, row.id);
+    assert.equal(row.menuOpenAfterNavigation, false, row.id);
+    assert.equal(row.aboutNavigation?.path, "/about", row.id);
+    assert.equal(row.aboutNavigation?.headingUnobscured, true, row.id);
+    assert.equal(row.aboutNavigation?.menuOpen, false, row.id);
+    assert.equal(row.caseNavigation?.path, "/work/technical-operations#audio-print-production", row.id);
+    assert.equal(row.caseNavigation?.headingUnobscured, true, row.id);
+    assert.equal(row.caseNavigation?.menuOpen, false, row.id);
+    for (const state of [row.aboutNavigation, row.caseNavigation]) {
+      assert.equal(sha256(path.join(evidenceDir, state.screenshot)), state.sha256, state.path);
+    }
+  }
+});

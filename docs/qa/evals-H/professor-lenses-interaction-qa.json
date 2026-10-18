@@ -1,10 +1,10 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-10-18T16:31:23.859Z",
-  "baseUrl": "http://127.0.0.1:3228",
-  "publicSurfaceFingerprint": "16f090d636de8564dac2904b97354cf2d90401b7d665bf5970196cea1ccab601",
+  "checkedAt": "2026-10-18T18:36:43.249Z",
+  "baseUrl": "http://127.0.0.1:3239",
+  "publicSurfaceFingerprint": "ff9fbfc9d0b928416ba5c1216f8ad6db9d9b782b8a0a6102ef2d016a55f234da",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 157,
+  "publicSurfaceFileCount": 158,
   "method": "Fresh Playwright keyboard interaction, visible-focus checks, DOM reading order and CSS viewport reflow observations on the Node 26 production build; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [
@@ -81,7 +81,63 @@
       "focusVisible": true,
       "id": null
     },
-    "passed": true
+    "passed": true,
+    "postNavigation": {
+      "baseUrl": "http://127.0.0.1:3239",
+      "checkedAt": "2026-10-18T18:47:03.826Z",
+      "passed": true,
+      "results": [
+        {
+          "id": "different-route",
+          "start": "/",
+          "destination": "/about",
+          "viewport": "375x812",
+          "passed": true,
+          "menuOpenAfterNavigation": false,
+          "aboutNavigation": {
+            "path": "/about",
+            "heading": "About",
+            "headingUnobscured": true,
+            "menuOpen": false,
+            "screenshot": "case-navigation-2026-10-18/different-route-about.png",
+            "sha256": "32f569ff5c3482f89090f40530d6d713598fa684895a7980f22390b824287c16"
+          },
+          "caseNavigation": {
+            "path": "/work/technical-operations#audio-print-production",
+            "heading": "From audio editions to printed labels",
+            "headingUnobscured": true,
+            "menuOpen": false,
+            "screenshot": "case-navigation-2026-10-18/different-route.png",
+            "sha256": "f13900e85f0cf42fa8779186d7d778fe5749a403947704f87f6599dd7e45b727"
+          }
+        },
+        {
+          "id": "same-route",
+          "start": "/about",
+          "destination": "/about",
+          "viewport": "375x812",
+          "passed": true,
+          "menuOpenAfterNavigation": false,
+          "aboutNavigation": {
+            "path": "/about",
+            "heading": "About",
+            "headingUnobscured": true,
+            "menuOpen": false,
+            "screenshot": "case-navigation-2026-10-18/same-route-about.png",
+            "sha256": "32f569ff5c3482f89090f40530d6d713598fa684895a7980f22390b824287c16"
+          },
+          "caseNavigation": {
+            "path": "/work/technical-operations#audio-print-production",
+            "heading": "From audio editions to printed labels",
+            "headingUnobscured": true,
+            "menuOpen": false,
+            "screenshot": "case-navigation-2026-10-18/same-route.png",
+            "sha256": "8e669cb28e559d0531f931cf45ed3181d5cc31834aeba21536c7b4eca85a6578"
+          }
+        }
+      ],
+      "method": "Keyboard Enter opens the native menu and activates About; a separate keyboard activation follows the case link. Separate screenshots identify the intermediate About destination and final case destination. Browser observations, not human usability validation."
+    }
   },
   "reflow": {
     "interpretation": "CSS viewport proxies at 640 and 320 pixels; actual browser zoom remains a human gate.",
@@ -215,5 +271,6 @@
     "Jamie visual and content approval",
     "Production deployment and indexing approval"
   ],
-  "passed": true
+  "passed": true,
+  "captureEnvironment": "Local staging preview using same-origin media fallback; the Cloudinary-enabled hosted staging variant was not captured in this run."
 }

@@ -46,12 +46,12 @@ export function SiteHeader() {
             <ul>
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <a
                     className="flex min-h-11 items-center border-b border-jb-ink/10 px-3 text-sm font-semibold text-jb-ink hover:bg-jb-warm hover:text-jb-blue"
                     href={item.href}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
