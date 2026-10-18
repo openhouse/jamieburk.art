@@ -181,7 +181,7 @@
       "id": "cross-repository-knowledge-operations",
       "criteria": [
         "ecosystem_profile_materialized",
-        "branch_review_exact_and_current",
+        "branch_review_exact",
         "branch_review_scope_complete",
         "three_graph_responsibilities_explicit",
         "generated_views_noncanonical",

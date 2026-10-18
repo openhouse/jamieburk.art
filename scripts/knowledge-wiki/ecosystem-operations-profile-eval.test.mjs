@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { mkdtempSync, writeFileSync, rmSync, readFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
@@ -20,6 +20,12 @@ test("the cross-repository ecosystem profile passes", () => {
   const evaluation = evaluateEcosystemOperationsProfile({ profile });
   assert.deepEqual(evaluation.failures, []);
   assert.deepEqual(evaluation.counts, { branches: 7, blockingCriteria: 18 });
+});
+
+test("the aggregate Wiki suite declares the same historical criteria as the evaluator", () => {
+  const suite = JSON.parse(readFileSync(new URL("../../evals/knowledge-wiki/evals.json", import.meta.url), "utf8"));
+  const declared = suite.lenses.find((lens) => lens.id === "cross-repository-knowledge-operations").criteria;
+  assert.deepEqual([...declared].sort(), Object.keys(evaluateEcosystemOperationsProfile({ profile }).checks).sort());
 });
 
 test("a moved source branch invalidates its prior close reading", () => {
