@@ -114,6 +114,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0014](./0014-governed-audio-to-knowledge-workflow.md) | Governed Audio-to-Knowledge Workflow | `implementing` | Jamie Burkart |
 | [0015](./0015-human-scale-weekly-review-and-real-world-commitment-closure.md) | Human-Scale Weekly Review and Real-World Commitment Closure | `proposed` | Jamie Burkart |
 | [0017](./0017-situated-knowledge-reading-and-reader-returns.md) | Situated Knowledge Reading, Reconciliation, and Reader Returns | `proposed` | Jamie Burkart |
+| [0018](./0018-staging-b-review-profile.md) | Staging B review profile with explicit content holds | `proposed` | unassigned |
 
 ## Validation
 
