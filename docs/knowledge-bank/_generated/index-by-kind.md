@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `5867b1647fb6eb39387d3697e6d054c2b2fa0730`
-**Generation time:** 2026-10-18T14:57:09-04:00
-**Source fingerprint:** `49ed4b20d129fc37d1033a146ea9d21561b94440aa45a231d7015b6277884d0f`
+**Source commit:** `6cd5984a01fe9b266a9a05deff0dc487b2ded344`
+**Generation time:** 2026-10-18T15:57:34-04:00
+**Source fingerprint:** `10ff39e3e571c9a93eb89da5fec3b2a0ff876992105a6f00a27f5400c19075f0`
 
 ## application
 
@@ -539,6 +539,7 @@
 - [PEU Chief Strategy Officer Interest Form 787960](../sources/peu-chief-strategy-officer-interest-form-787960.md) - `source.nyc.peu.chief-strategy-officer-interest-form.787960`
 - [NYC Mayor's Office - PIT Crew launch announcement](../sources/nyc-pit-crew-launch-2026.md) - `source.nyc.pit-crew-launch.2026-07-13`
 - [NYC SPEED report and release, May 2026](../sources/nyc-speed-report-2026.md) - `source.nyc.speed-report.2026-05-13`
+- [Published listening-session animation on Instagram](../sources/dcla-animation-instagram-2026-10.md) - `source.nycac.dcla-animation-instagram.2026-10`
 - [NYC Artist Coalition DCLA formation source return, 2026](../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `source.nycac.dcla-formation-source-return.2026-07`
 - [Governed NYCAC frontline advocacy source comparison, July 13-August 12, 2026](../sources/archives/nycac-frontline-advocacy-2026-08.md) - `source.nycac.frontline-advocacy.2026-08`
 - [NYC nightlife forum corrected working transcript, 2026](../sources/nycac-nightlife-forum-transcript-2026.md) - `source.nycac.nightlife-forum-transcript.2026`

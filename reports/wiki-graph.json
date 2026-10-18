@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T14:57:09-04:00",
-  "sourceCommit": "5867b1647fb6eb39387d3697e6d054c2b2fa0730",
-  "sourceFingerprint": "49ed4b20d129fc37d1033a146ea9d21561b94440aa45a231d7015b6277884d0f",
+  "generatedAt": "2026-10-18T15:57:34-04:00",
+  "sourceCommit": "6cd5984a01fe9b266a9a05deff0dc487b2ded344",
+  "sourceFingerprint": "10ff39e3e571c9a93eb89da5fec3b2a0ff876992105a6f00a27f5400c19075f0",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -6246,6 +6246,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-11-20"
+    },
+    {
+      "id": "source.nycac.dcla-animation-instagram.2026-10",
+      "path": "docs/knowledge-bank/sources/dcla-animation-instagram-2026-10.md",
+      "title": "Published listening-session animation on Instagram",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "A direct published reel, its visual sequence, and six platform-listed collaborators, with separate edition and rights boundaries.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2027-04-18"
     },
     {
       "id": "source.nycac.dcla-formation-source-return.2026-07",
@@ -22013,6 +22026,30 @@
       "context": null
     },
     {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": null
+    },
+    {
+      "from": "source.nycac.dcla-animation-instagram.2026-10",
+      "type": "related_to",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "source": "frontmatter",
+      "href": "dcla-listening-session-2026-08-26.md",
+      "context": null
+    },
+    {
       "from": "source.nycac.dcla-formation-source-return.2026-07",
       "type": "documents",
       "to": "event.nyc.dcla.diy-spaces-listening.2017-01-27",
@@ -28049,6 +28086,15 @@
       "to": "project.nyc-artist-coalition",
       "fragment": null,
       "line": 4,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "from": "research.nycac.dcla-listening-session.2026-08-29",
+      "toPath": "docs/knowledge-bank/sources/dcla-animation-instagram-2026-10.md",
+      "to": "source.nycac.dcla-animation-instagram.2026-10",
+      "fragment": null,
+      "line": 6,
       "kind": "link"
     },
     {

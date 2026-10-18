@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Anonymized Team-Knowledge Opportunity Case Study
 
-**Source commit:** `5867b1647fb6eb39387d3697e6d054c2b2fa0730`
-**Generation time:** 2026-10-18T14:57:09-04:00
-**Source fingerprint:** `49ed4b20d129fc37d1033a146ea9d21561b94440aa45a231d7015b6277884d0f`
+**Source commit:** `6cd5984a01fe9b266a9a05deff0dc487b2ded344`
+**Generation time:** 2026-10-18T15:57:34-04:00
+**Source fingerprint:** `10ff39e3e571c9a93eb89da5fec3b2a0ff876992105a6f00a27f5400c19075f0`
 
 - [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `prose_link` (markdown)
 - [Knowledge Wiki Graph / Source-Backed Team Memory](../../methods/source-backed-team-memory.md) - `related_to` (frontmatter)

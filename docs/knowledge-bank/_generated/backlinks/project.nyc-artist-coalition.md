@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `5867b1647fb6eb39387d3697e6d054c2b2fa0730`
-**Generation time:** 2026-10-18T14:57:09-04:00
-**Source fingerprint:** `49ed4b20d129fc37d1033a146ea9d21561b94440aa45a231d7015b6277884d0f`
+**Source commit:** `6cd5984a01fe9b266a9a05deff0dc487b2ded344`
+**Generation time:** 2026-10-18T15:57:34-04:00
+**Source fingerprint:** `10ff39e3e571c9a93eb89da5fec3b2a0ff876992105a6f00a27f5400c19075f0`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -209,6 +209,7 @@
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition shared-folder archival production](../../research-runs/nycac-shared-folder-2026-07-19.md) - `documents` (frontmatter)
 - [NYC Council field-kit photograph oral history, July 2026](../../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `related_to` (frontmatter)
+- [Published listening-session animation on Instagram](../../sources/dcla-animation-instagram-2026-10.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition DCLA formation source return, 2026](../../sources/archives/nycac-dcla-formation-source-return-2026-07.md) - `documents` (frontmatter)
 - [Commercial Rent Stabilization collaboration running minutes, 2026](../../sources/nycac-running-minutes-2026.md) - `documents` (frontmatter)
 - [Protected NYC Artist Coalition shared-folder census](../../sources/nycac-protected-shared-folder-census-2026.md) - `documents` (frontmatter)
