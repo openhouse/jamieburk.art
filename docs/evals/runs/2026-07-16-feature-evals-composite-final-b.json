@@ -1,167 +1,100 @@
 {
   "runVersion": 3,
-  "judgeId": "visitor-copy-composite-b-2026-10-13",
+  "judgeId": "cec-public-reader-b-2026-10-18",
   "grader": "independent_llm_judge",
-  "phase": "holdout",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "cf1f06d66d3f40355de8319f9b8678c5ed2a4e06b2a5f52b78de1c774c6a4b11",
-  "verdict": "accepted",
+  "candidateFingerprint": "f25e4b6e186299b8814837f1e95d896db741218c8b8349d3c790cae1d2ef358b",
+  "verdict": "rejected",
   "scores": [
     {
       "criterionId": "COMP-001",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Read .agents/evals/feature-evals-composite.json and docs/integration/feature-evals-composite.json: fourteen distinct A-N branches, exact pinned heads, writable feature/knowledge-h and develop pull-request base.",
-        "Fresh deterministic verification resolved all 14 frozen commit objects and found no missing objects or namespace mismatches."
-      ],
-      "rationale": "The frozen inventory is complete and the integration policy keeps source branches as reference implementations. Mutable branch names cannot silently replace the pinned objects."
+        "All 14 frozen branch decisions match the declared heads; a fresh check resolves all 14 exact commit objects. The integration register specifies feature/knowledge-h, develop, and reference-only source branches. Missing mutable remote-tracking refs are reported without substituting frozen identities."
+      ]
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All fourteen register entries have substantive strength/rationale text, existing destinations and criterion references.",
-        "The register digest independently matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
-        "Read the explicit website non-projection decision and sampled the append-safe lifecycle, agency and public-composition destinations."
-      ],
-      "rationale": "The integration decisions are inspectable contracts with concrete destinations and tests. The register does not justify publishing extra facts merely because another branch contains them."
+        "The 14 decisions contain substantive rationale, existing destinations, and criterion references. The register digest matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d and explicitly retains selective public composition."
+      ]
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All eleven canonical files exist and no forbidden parallel lifecycle root exists.",
-        "Read schema.ts, records.ts aggregation, lifecycle-operations.ts, public.ts and index.ts; the application citation components use the redacted public interface.",
-        "public-registry.json contains sources, claims and pages; public sources require public visibility and the generator strips opaque locators, media internals, evidence locators and excerpts.",
-        "Fresh canonical and public-registry validation passed."
-      ],
-      "rationale": "One knowledge architecture controls intake, claims, agency, projections and citations. The much smaller redacted registry supplies the public app, rather than exposing the canonical research layer."
+        "All 11 canonical files exist and none of the three prohibited parallel lifecycle roots exists. The public registry contains only claims, pages, and sources; the public entry point exports the redacted projection and schema. A source import search found no application, component, content, or library imports of the canonical records, historical knowledge, agency graph, or lifecycle operations."
+      ]
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Four lifecycle tests passed again after freeze: identical-record replay, retained linked duplicate under a new ID, changed-content stable-ID rejection, and lifecycle queries.",
-        "Direct query found 61 mature held claims, 71 unresolved inquiries, five corrections and zero orphan sources, alongside explicit projection counts.",
-        "Implementation compares full-record hashes for stable IDs and artifact identity separately, then appends without mutating the input bank."
-      ],
-      "rationale": "The intake contract preserves information without silently overwriting identity. Held knowledge, open work, corrections and orphan state remain inspectable."
+        "All four lifecycle tests pass: identical replay is idempotent, a new ID for an existing artifact becomes a linked duplicate, changed content under an existing ID is rejected, and lifecycle queries expose held claims, inquiries, corrections, projection counts, and orphan status."
+      ]
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh validation covered 331 sources, 119 claims, 34 agency relations and five corrections with zero errors; derived Wiki and employment outputs were current.",
-        "All sources retain does-not-establish boundaries. Agency samples separate individual implementation, shared founding, collective governance and institutional enactment.",
-        "The live coalition page bounds the July 2026 X retrievable union as 3,123 records, names the 2,001-record profile gap, and distinguishes authored records from reposts; Facebook responses are not attendance.",
-        "Private-source visibility and protected-locator injection probes both failed validation; restored validation returned zero errors.",
-        "Eleven citation tests and the public-safety check passed after freeze. The safety check retained eleven careful-claim guardrail warnings rather than hiding them."
-      ],
-      "rationale": "Source roles, correction history, collective credit and population denominators remain meaningful constraints. Technical validation does not grant permission to publish protected evidence or turn activity into impact."
+        "Fresh canonical validation passes for 331 sources, 119 claims, 34 agency relations, and five corrections; derived Wiki and employment outputs are current. Citation checking confirms a current redacted registry and consistent page plans. Reviewed agency and case-study text distinguishes individual implementation, shared work, coalition outcomes, and institutional authority; population and recovery limitations remain explicit."
+      ]
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independently inspected the live home, About, work index, Technical Operations, HJE, FairRentNYC, CallNYC, WOWList, Sunday Dinner/196 and Knowledge Wiki Graph pages, plus their public sources.",
-        "Home identifies Technical Project Manager - Product Operations & Implementation. HJE names Jamie's maintenance and incremental implementation; FairRentNYC names implementation and shared coalition continuity; CallNYC names an independent archived prototype.",
-        "The home-to-About path is one click, with project evidence at the next click. Sunday Dinner hosting/artist independence, WOWList community language and coalition rooms/action paths preserve artistic, social, civic and technical continuity.",
-        "HJE's listen/frame/implement/verify/continue specimen, coalition meetings/model/interfaces/memory, and Sunday Dinner onboarding/hosting/follow-up reconstruct three complete operating sequences.",
-        "Four home/About screenshots were visually inspected and their hashes, dimensions and unchanged runtime-source binding independently verified."
-      ],
-      "rationale": "The composition selects useful evidence for a hiring reader while preserving people, place, shared authorship and continuing use. The cases make usable results visible and label reconstructed specimens, historical work and research limits. Prior professor scores were not used as a predetermined composite score."
+        "The homepage presents a defined role, selected projects, and application paths; it does not expose a knowledge-bank mirror. Technical Operations connects decisions to projects, artifacts, results, and limitations. About connects artistic, civic, technical, relational, and social practice. HJE, CallNYC, residency, and coalition examples make observation, modeling, implementation, use, learning, revision, and handoff reconstructable while labeling reconstructions and preserving collective credit."
+      ]
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Read all eleven blind-spot controls and their human-readable explanation.",
-        "The five required human-evidence controls remain open: corroboration, collective review, hiring usability, job funnel and external validity.",
-        "Every control states required evidence, anti-gaming rules, next action and public-projection boundary; the independently matching digest is 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
-        "A synthetic human-closure mutation was rejected."
-      ],
-      "rationale": "The pass means the absences are governed. It does not claim collaborator testimony, unfamiliar-human sessions, hiring impact, consent or external evaluator calibration."
+        "All five required human-evidence controls remain open under the frozen blind-spot digest. Their evidence requirements, anti-gaming rules, next actions, and public-projection boundaries distinguish governed absence from actual collaborator corroboration, human usability evidence, job outcomes, and external validation."
+      ]
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The semantic rubric independently matches both its declared digest and the separately pinned 00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d constant.",
-        "The base portfolio suite, register, blind-spot controls and branch namespace passed reviewed-digest checks on the frozen candidate.",
-        "Seven read-only in-memory probes rejected omitted branches, checksum-only weakening, fabricated matching heads, decorative decisions, optimizer self-grading, synthesized human closure and blocker compensation.",
-        "Separate privacy mutation probes rejected a private public-registry source and an opaque protected locator.",
-        "Fifteen accessibility-evidence tests passed after freeze, including source/build changes, stale evidence, route/viewport substitution and real failures misclassified as prefetch."
-      ],
-      "rationale": "The contract resists the tested ways of improving a score by weakening meaning or substituting evidence. All blocking criteria must pass; generated-output currentness is part of that contract."
+        "The computed semantic rubric digest matches both the suite and separately pinned digest. The base suite, integration register, and blind-spot digests match. Bounded in-memory probes reject branch omission, fabricated heads, decorative decisions, refreshed-checksum semantic weakening, optimizer self-grading, synthesized human evidence, and blocker compensation. A synthetic private-source URL is rejected by canonical validation."
+      ]
     },
     {
       "criterionId": "COMP-009",
-      "score": 4,
-      "pass": true,
+      "score": 0,
+      "pass": false,
       "evidence": [
-        "Independent whole-tree fingerprint at 2026-10-13T17:46:14.796Z matched cf1f06d66d3f40355de8319f9b8678c5ed2a4e06b2a5f52b78de1c774c6a4b11 across 2149 files.",
-        "Only the two declared current composite receipt paths are excluded by the identity helper.",
-        "The completed 60-row browser matrix independently validated with matching runtime-source fingerprint; all fifteen accessibility tests and fifteen citation/lifecycle tests passed.",
-        "Standalone merit acceptance of COMP-001 through COMP-008 was reached before receiving any peer judgment.",
-        "After both standalone merit decisions were recorded, inspected the newly commissioned visitor-composite-reviewer-a receipt. Its distinct label, run version, provider, exact candidate, frozen rubric, all nine scores of 4, empty notObserved and complete judgment digest were independently verified.",
-        "The new peer judgment digest matched 54433508642c16aeed98be21245f598933a9beb27578a6daee9fbbc422773216. Candidate recomputation at 2026-10-13T17:51:35.301Z still matched all 2149 files."
-      ],
-      "rationale": "Both reviewers independently fixed their merit judgments before peer exchange. The new accepted peer record and this finalized reciprocal record bind complete judgments to one exact source tree while leaving human approval open. Pair validation is performed as the final receipt check."
+        "The complete-source-tree fingerprint independently matches the commissioned candidate across 2197 files, excluding only the declared two holdout records. Receipt digest and distinct-label enforcement are implemented, and human production approval remains open. Two completed accepting judgments with every criterion at 4 and no unobserved evidence were not observed. The evaluator was supplied an empty holdout list to preserve review independence; its zero supplied judgments is not a claim that the repository contains no records."
+      ]
     }
   ],
-  "notObserved": [],
+  "notObserved": [
+    "COMP-009: Two completed accepting independent judgments for this exact candidate and rubric, including their complete payload digests and all-4 scores.",
+    "COMP-009: A complete deterministic release run, including build and rendered or live-route verification, was not rerun in this bounded read-only review."
+  ],
   "findings": [
-    {
-      "severity": "information",
-      "scope": "independence",
-      "finding": "Read-only reviewer separately commissioned from the optimizer. No prior composite holdout or other composite reviewer conclusion was read before the standalone merit decision. Deterministic evaluation used an empty holdouts argument."
-    },
-    {
-      "severity": "information",
-      "scope": "browser-evidence",
-      "finding": "The exact-source matrix checked at 2026-10-13T17:42:09.518Z covers 15 routes at 360, 375, 768 and 1280 pixels. It reports zero Axe violations, overflow, broken images, unlabeled images, non-success responses or unclassified failed requests; lazy-image follow-up completed."
-    },
-    {
-      "severity": "information",
-      "scope": "prefetch-classification",
-      "finding": "Five raw background RSC fetch aborts remain recorded. Each has GET/fetch/non-navigation/ERR_ABORTED evidence, same-origin RSC query, affirmative prefetch headers and an independently verified matching 200 HTML destination. Their causes remain unproven; genuine asset/navigation/transport failures remain blocking."
-    },
-    {
-      "severity": "information",
-      "scope": "rights-and-privacy",
-      "finding": "Reviewed photo metadata records public Git and staging use decisions with caption/credit boundaries, while production and indexing remain open. Participant records, protected coursework and private testimonials were not projected. This reviewer grants no rights or consent."
-    },
-    {
-      "severity": "information",
-      "scope": "claim-boundaries",
-      "finding": "HJE revenue remains contribution language; civic results stay collective. CallNYC stays archived and unofficial. WOWList's historic calendar is distinct from its limited 2026 return. The Knowledge Wiki Graph pilot remains proposed and its method early research."
-    },
-    {
-      "severity": "non-blocking",
-      "scope": "visual-composition",
-      "finding": "The supplied 375x812 home image fills the viewport with the hero and does not demonstrate DESIGN.md's preference for a hint of the next section. The role, primary actions and photo credit remain readable; no composite criterion depends on that editorial preference."
-    },
-    {
-      "severity": "open-human-gate",
-      "scope": "release",
-      "finding": "Exact production-commit approval, deployment/domain/TLS/smoke/rollback verification and explicit indexing approval remain open. Internal checks are not external hiring validation."
-    }
+    "Blocking: COMP-009 cannot be marked passed from this review. Its stopping condition requires already completed accepting judgments, while this judgment must not infer the other review or inspect previous composite holdout records.",
+    "Nonblocking: All 14 mutable remote-tracking source refs are absent in the review checkout; all 14 frozen commit objects are available and match the required inventory.",
+    "The fresh checks support COMP-001 through COMP-008. They do not establish human approval, deployment, indexing, or real-world hiring effectiveness."
   ],
-  "recommendation": "Accept this exact candidate's composite integration. Preserve staging noindex and the separate human production-commit, deployment, indexing, rights, collaborator-review and external-evidence gates. These review receipts confer no release authority.",
+  "recommendation": "Preserve this judgment as a documented hold. Do not report complete composite acceptance until the frozen stopping requirement is demonstrably satisfied through an authorized process that preserves reviewer independence and does not convert unobserved evidence into a pass.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "visitor-copy-composite-reviewer-b",
-    "reviewedAt": "2026-10-13T17:51:35.301Z",
-    "judgmentSha256": "8a9c55e0c05b79354af53821810ffa5d3a1ed53deb54de7c6bfdd28edb6093d2",
-    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+    "reviewerLabel": "cec-public-reader-b-2026-10-18",
+    "reviewedAt": "2026-10-18T12:05:50Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "d0146c97b90faf7b55f47fb535b29ad4b35878bf6fe1665440b85bb6c970a5e3"
   }
 }
