@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `aef15c36de3d25749a53f585141c38661dfdfe64`
-**Generation time:** 2026-10-18T16:29:34-04:00
-**Source fingerprint:** `4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26`
+**Source commit:** `d0929c8cfdd7753b7a5d462e4d02e748b7826608`
+**Generation time:** 2026-10-18T18:46:58-04:00
+**Source fingerprint:** `b1d956fd925ae2794f254248d63488596a1aa7cc93a3134aaf10d22ccf1452e5`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -203,7 +203,7 @@
 - [NYC PEU - Chief Strategy Officer 787960](../../opportunities/peu-chief-strategy-officer-787960.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)
-- [DCLA animation publication and attribution](../../sources/dcla-animation-publication-2026-10.md) - `related_to` (frontmatter)
+- [DCLA animation: collaborative publication and campaign communication](../../sources/dcla-animation-publication-2026-10.md) - `related_to` (frontmatter)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `prose_link` (markdown)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition shared-folder archival production](../../research-runs/nycac-shared-folder-2026-07-19.md) - `documents` (frontmatter)

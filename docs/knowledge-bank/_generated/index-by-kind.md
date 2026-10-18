@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `aef15c36de3d25749a53f585141c38661dfdfe64`
-**Generation time:** 2026-10-18T16:29:34-04:00
-**Source fingerprint:** `4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26`
+**Source commit:** `d0929c8cfdd7753b7a5d462e4d02e748b7826608`
+**Generation time:** 2026-10-18T18:46:58-04:00
+**Source fingerprint:** `b1d956fd925ae2794f254248d63488596a1aa7cc93a3134aaf10d22ccf1452e5`
 
 ## application
 
@@ -440,7 +440,7 @@
 - [Knowledge Wiki branch-family closure review](../research-runs/knowledge-wiki-family-closure-2026-07-19.md) - `research.knowledge-wiki-family-closure.2026-07-19`
 - [NYC Jobs citywide opportunity monitor, August 20, 2026](../research-runs/nyc-jobs-citywide-monitor-2026-08-20.md) - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - [NYC OTI product-management search ranking, August 20, 2026](../research-runs/nyc-oti-product-management-ranking-2026-08-20.md) - `research.nyc-oti-product-management-ranking.2026-08-20`
-- [DCLA animation publication and attribution](../sources/dcla-animation-publication-2026-10.md) - `research.nycac.dcla-animation-publication.2026-10-18`
+- [DCLA animation: collaborative publication and campaign communication](../sources/dcla-animation-publication-2026-10.md) - `research.nycac.dcla-animation-publication.2026-10-18`
 - [DCLA listening-session portraits and follow-through intake](../sources/dcla-listening-session-2026-08-26.md) - `research.nycac.dcla-listening-session.2026-08-29`
 - [NYCAC frontline advocacy source return, July 13-August 12, 2026](../research-runs/nycac-frontline-advocacy-2026-08-12.md) - `research.nycac.frontline-advocacy.2026-08-12`
 - [NYC Artist Coalition shared-folder archival production](../research-runs/nycac-shared-folder-2026-07-19.md) - `research.nycac.shared-folder.2026-07-19`
