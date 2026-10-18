@@ -1,0 +1,129 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no real named person participated",
+  "reviewerId": "photo-release-reader-3",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 4,
+  "pass": true,
+  "passScope": "Individual content assessment only; the three-reviewer threshold and human release decisions are not assessed here.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The About page names artistic, civic, technical, and social practice together, connects Open House to subsequent projects, and explains participation, memory, and continuation in plain language. Its opening and closing preserve the target technical-project-management role."
+    },
+    {
+      "path": "rendered/1280-work--196-sunday-dinner.txt",
+      "finding": "Continuity 1: recurring hospitality becomes invitations, response handling, hosting, minimal documentation, and follow-up. The residency specimen treats the artist's proposal as inquiry, makes expectations discussable, and preserves independent access and artistic agency. Both specimens are expressly reconstructed; the About page additionally distinguishes residency planning from completed residency evidence."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "Continuity 2: Sunday Dinner calendars become collaboratively editable event text, keyword communities, followed lists, and distribution. Support records and independent organizer materials connect the technical model to people maintaining their own scenes. Richard Caceres and participating communities retain shared credit. Historical operation and the limited 2026 return threshold are explicitly separated."
+    },
+    {
+      "path": "rendered/1280-work--fair-rent-nyc.txt",
+      "finding": "Continuity 3: collective cultural-space organizing joins the meeting room, practical safety work, shared campaign websites, source maps, and follow-up. The rendered public-surface / working-session / public-room sequence makes the relationship between embodied participation and web implementation concrete. The Shoestring alignment claim remains identified as Jamie's recollection; repository histories separately support implementation."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "A further continuity connects collective handwritten mapping to source-backed operating memory. The page says knowledge already exists in people and relationships and does not claim ownership of that knowledge. The current prototype is labeled synthetic and AI-assisted, with human usefulness still open."
+    },
+    {
+      "path": "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "finding": "The dinner photograph gives the hospitality argument a specific shared table, map, gestures, and atmosphere. Its caption reports context without identifying participants or attributing their remarks."
+    },
+    {
+      "path": "rendered/1280-work--fair-rent-nyc.png",
+      "finding": "The full-page composition pairs a campaign surface with the Shoestring gathering and the collective Market Hotel room. The photographs reinforce collective work instead of presenting Jamie as the sole author of the movement."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "finding": "Open House initiation is allocated to Jamie, governance and documentation to participants, coalition founding and advocacy remain shared, and website implementation is separated from policy causation. Sunday Dinner hosting also has a shared relationship record."
+    },
+    {
+      "path": "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "finding": "The packet supplies a bounded public-source synopsis of Open House and expressly withholds the faculty testimonial and raw educational records. It does not reproduce the underlying article."
+    }
+  ],
+  "gaps": [
+    "The About page is long on mobile; the through-line appears after several introductory paragraphs. It remains reachable in one navigation step, but requires scrolling.",
+    "Several historical operating artifacts are public summaries or reconstructions. They explain the practice well but do not establish every participant outcome or every historical handoff."
+  ],
+  "notObserved": [
+    "No direct participant interviews, independent consent verification, or underlying private rights records were inspected.",
+    "No full accessibility matrix was performed: keyboard behavior, screen-reader task completion, measured contrast, reduced motion, and 360/768-pixel rendering remain outside this content reading.",
+    "External primary-source destinations were not opened; source assessment used the packet's records and rendered citation notes.",
+    "No panel aggregate, staging deployment, production approval, or indexing decision was observed."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, grade, student identifier, or educational-record quotation was found in the inspected rendered material. The historical coursework projection remains held in the inspected knowledge record.",
+    "The photography catalog records occurrence-specific publication status and boundaries. Most inspected field photographs still have production and indexing states marked open; this review does not change those states.",
+    "The Sunday Dinner photograph has an explicit catalog statement of human rights and represented-person review for its portfolio occurrence. I inspected that statement, not the underlying permission evidence.",
+    "Campaign photographs do not establish attendance, endorsement, individual remarks, or policy causation. The rendered text and catalog preserve these limits.",
+    "Guest lists, participant rows, resident service addresses, private correspondence, and raw coalition records are withheld in the inspected public composition."
+  ],
+  "recommendation": "Retain the inhabited-systems through-line and the concrete photographs. This candidate meets this individual lens strongly. Preserve the historical, reconstructed, and collective-credit labels, and keep media release decisions separate from this content assessment.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:36:40Z",
+    "scope": "Independent read-only review of the specified packet and restored local preview. No sibling packets, prior scores, private repositories, or implementation discussion were inspected.",
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourcePathsInspected": [
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json — complete PR-015/PR-016 entries, scale, thresholds, and hard constraints",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts — relevant Open House, coalition, and Sunday Dinner relationships",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts — relevant Open House and held coursework records",
+      "source/apps/www/src/data/knowledge-bank/records.ts — relevant claim and source-routing search results",
+      "source/apps/www/src/data/knowledge-bank/public-registry.json — selected relevant claims and evidence relationships",
+      "source/apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts — selected scale, source, continuity, and boundary records",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts — intake, observations, and source-boundary entries"
+    ],
+    "renderedRoutesInspected": [
+      "/ — bound rendered text and live preview",
+      "/about — bound rendered text and live preview",
+      "/work — bound rendered text",
+      "/work/technical-operations — bound rendered text",
+      "/work/wowlist — bound rendered text and live preview, including expanded source notes",
+      "/work/196-sunday-dinner — bound rendered text",
+      "/work/fair-rent-nyc — bound rendered text",
+      "/work/callnyc — bound rendered text",
+      "/lab/source-backed-team-memory — bound rendered text",
+      "/work/harry-j-epstein — bound rendered text",
+      "/work/kc-town-hall — bound rendered text"
+    ],
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/375-about-viewport.png",
+      "rendered/375-about.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png"
+    ],
+    "twoClickPathObserved": "Directly clicked About from the live homepage, then WOWList from About, and observed the resulting project page. The initial connection refusal was resolved before these observations.",
+    "nohumanapproval": true
+  }
+}

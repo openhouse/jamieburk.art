@@ -1,0 +1,133 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no real named person participated",
+  "reviewerId": "photo-release-reader-3",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 3,
+  "pass": true,
+  "passScope": "Individual content assessment at the strong/application-ready level. This is not an assertion that the panel's required median of 4 is met. Current public portfolio projects include explicitly historical evidence; I did not interpret them as three currently deployed services.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The recursive method is stated plainly within one click of the homepage: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Linked examples make this more than a tool list."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "Sequence 1: Sunday Dinner calendars reveal shared scenes and organizer needs; editable event text and keyword communities model those relationships; the historical calendar supplies the interface; support exchanges and independent organizer routes document use; explanations, a tutorial, and local calendars carry learning and continuation. The evidence supports onboarding and use, but does not demonstrate that a particular support comment caused a product revision."
+    },
+    {
+      "path": "rendered/1280-about.txt — NYC Artist Coalition participation system",
+      "finding": "Sequence 2: cultural-space organizers are invited into the January 2017 meeting; an invitation-to-discussion-to-naming-and-letter-making path models participation; the event discussion and poll provide an interface for collective input; the next general-meeting invitation carries the chosen coalition identity forward. This is a concrete social process with visible continuation, while letter delivery, attendance, and detailed authorship remain unasserted."
+    },
+    {
+      "path": "rendered/1280-about.txt — KC Town Hall participation system",
+      "finding": "Sequence 3: a resident need is framed as eligibility, intake, scheduled collection, recycling, and public reporting; the service page and flyer make the model usable; matched photographs document one completed collection; the schedule, volunteer route, recycling handoff, and reporting support continuation. Learning is less well evidenced than delivery: the page expressly says the resident-feedback-to-redesign history remains unresolved."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts",
+      "finding": "Supporting records distinguish corroborated service participation from participant memory about route design and feedback. A proposal observation reports survey responses shaping proposed uses, but does not attribute every requirement or a specific causal chain to Jamie. This strengthens a project-level listening-to-requirements interpretation without closing the finer learning gap."
+    },
+    {
+      "path": "rendered/1280-work--callnyc.txt",
+      "finding": "CallNYC shows data observation, issue-based information architecture, a delivered interface, public engagement, implementation, and documentation. Its 2016 chronology and archived, independent status are explicit. Council-account interaction is not presented as resident task success, current service availability, or official adoption."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "The lab supplies a concrete correction trace from an incorrect CallNYC date to a corrected public record, demonstrating evidence-driven revision across surfaces. Its reader-return prototype is explicitly synthetic and AI-assisted, and the proposed teammate handoff test remains a future acceptance condition rather than an observed client outcome."
+    },
+    {
+      "path": "rendered/1280-work--technical-operations.txt",
+      "finding": "The role-fit surface links questions, decisions, evidence types, and usable outcomes. It labels HJE's workflow as reconstruction and the coalition record as public summary with originals withheld, preserving distinctions between a model of work and recovered operating records."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts — CLM-SOCIAL-INFO-SPACES-PROTOTYPE",
+      "finding": "Historical coursework remains a held projection. Its boundaries reject current tool-proficiency, production-deployment, disciplinary-invention, peer-reviewed-research, and sole-authorship claims."
+    }
+  ],
+  "gaps": [
+    "The third participation example shows delivery and repeatability more clearly than recursive learning. Its own text leaves the feedback-to-redesign history unresolved.",
+    "WOWList supports historical organizer use and explanatory support, but the packet does not recover a dated decision showing how observed use changed a specific product feature.",
+    "CallNYC's public engagement does not establish resident usability testing or successful constituent-service outcomes.",
+    "The current Knowledge Wiki prototype has synthetic checks and a concrete portfolio correction, but no completed participant pilot or independently observed teammate handoff.",
+    "These limits prevent an exceptional score of 4 in this individual reading. The three project sequences remain reconstructable at the level of documented participation, explanation, and continuation."
+  ],
+  "notObserved": [
+    "No formal or informal live user sessions were observed for WOWList, CallNYC, KC Town Hall, or the Knowledge Wiki prototype.",
+    "No recovered KC Town Hall resident-feedback-to-redesign decision trace was inspected.",
+    "No client deployment, adoption metric, current restored WOWList calendar, or completed Knowledge Wiki participant pilot was observed.",
+    "External primary-source destinations and private records were not opened.",
+    "A complete accessibility matrix, independent media-rights audit, panel aggregate, staging deployment, and human production approval were not performed or observed."
+  ],
+  "safety_findings": [
+    "The rendered candidate consistently distinguishes historical operation, current return work, reconstruction, proposed engagements, and synthetic prototypes.",
+    "Individual implementation is separated from collective governance, participant contributions, institutional decisions, and policy outcomes.",
+    "The inspected rendered text does not project protected educational-record language, faculty endorsement, current Max/Jitter proficiency, or invention of structural equivalence.",
+    "The photo catalog records bounded authorization and release states; neither photographs nor this reading establish agreement, endorsement, permission for broader reuse, or approval to deploy.",
+    "The lab explicitly denies automated trust and states that tests do not determine human understanding or agreement."
+  ],
+  "recommendation": "Keep the explicit method and its evidence-type labels. To strengthen the reading toward 4, add one narrowly sourced example showing what people encountered, what was learned, what changed, and how a later person continued it. Preserve the existing unresolved findings until that evidence exists; a reconstructed workflow or synthetic test should not fill the gap.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:36:40Z",
+    "scope": "Independent read-only review of the specified packet and restored local preview. No prior scores, sibling packets, private repositories, or implementation discussion were inspected.",
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourcePathsInspected": [
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json — complete PR-015/PR-016 entries, scale, thresholds, and hard constraints",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts — relevant relationships",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts — relevant Open House and held coursework records",
+      "source/apps/www/src/data/knowledge-bank/records.ts — relevant claim and source-routing search results",
+      "source/apps/www/src/data/knowledge-bank/public-registry.json — relevant WOWList, Call Script, KC Town Hall, Open House, and Knowledge Wiki claims",
+      "source/apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts — selected scale, source, continuity, and boundary records",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts — intake, observations, and source-boundary entries"
+    ],
+    "renderedRoutesInspected": [
+      "/ — bound rendered text and live preview",
+      "/about — bound rendered text and live preview",
+      "/work — bound rendered text",
+      "/work/technical-operations — bound rendered text",
+      "/work/wowlist — bound rendered text and live preview, including expanded source notes",
+      "/work/196-sunday-dinner — bound rendered text",
+      "/work/fair-rent-nyc — bound rendered text",
+      "/work/callnyc — bound rendered text",
+      "/lab/source-backed-team-memory — bound rendered text",
+      "/work/harry-j-epstein — bound rendered text",
+      "/work/kc-town-hall — bound rendered text"
+    ],
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/375-about-viewport.png",
+      "rendered/375-about.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png"
+    ],
+    "twoClickPathObserved": "Directly observed live homepage → About → WOWList through clicks, then expanded WOWList's source notes. Initial preview unavailability was resolved before this observation.",
+    "nohumanapproval": true
+  }
+}

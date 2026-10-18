@@ -1,8 +1,8 @@
 {
   "reportVersion": 1,
-  "checkedAt": "2026-10-18T13:42:09.029Z",
-  "baseUrl": "http://127.0.0.1:3218",
-  "publicSurfaceFingerprint": "93db784e753d99f1bba4077c5b8de3fc6a259d4cdde61805b8d3dd07998fc56d",
+  "checkedAt": "2026-10-18T16:31:02.052Z",
+  "baseUrl": "http://127.0.0.1:3228",
+  "publicSurfaceFingerprint": "16f090d636de8564dac2904b97354cf2d90401b7d665bf5970196cea1ccab601",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 157,
   "routes": [
@@ -320,7 +320,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -328,7 +328,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -422,14 +422,6 @@
           "rsc": "1",
           "routerPrefetch": "1",
           "segmentPrefetch": "/_tree"
-        },
-        {
-          "url": "/work?tag=Community%20Systems&_rsc=ebxhI9ek-oKkZVJy",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
         }
       ]
     },
@@ -729,23 +721,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
-          "url": "/work?tag=Technical%20Operations&_rsc=5CB68i4pnAekjehf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -761,7 +737,23 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Technical%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -769,7 +761,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -807,6 +799,14 @@
           "rsc": "1",
           "routerPrefetch": "1",
           "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Knowledge%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
         },
         {
           "url": "/work?tag=Civic%20Technology&_rsc=tXyZJ52UQVBCVsD3",
@@ -898,7 +898,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -906,7 +906,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -922,14 +922,6 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
-        },
-        {
           "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -938,7 +930,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "url": "/work?tag=Documentation&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -947,6 +939,14 @@
         },
         {
           "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1379,7 +1379,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
+          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1387,7 +1387,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
+          "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1411,7 +1411,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Technical%20Operations&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1427,15 +1427,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
-        },
-        {
-          "url": "/work?tag=Technical%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1540,14 +1532,6 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -1557,6 +1541,14 @@
         },
         {
           "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1580,7 +1572,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
+          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1588,7 +1580,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1604,7 +1596,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1612,7 +1604,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Knowledge%20Systems&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -1682,6 +1674,14 @@
           "rsc": "1",
           "routerPrefetch": "1",
           "segmentPrefetch": null
+        },
+        {
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
         },
         {
           "url": "/work?tag=Campaign%20Infrastructure&_rsc=ebxhI9ek-oKkZVJy",
@@ -2210,14 +2210,6 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Community%20Systems&_rsc=5CB68i4pnAekjehf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Web%20Systems&_rsc=5CB68i4pnAekjehf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2226,7 +2218,15 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Community%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Community%20Systems&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2234,7 +2234,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Web%20Systems&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Community%20Systems&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2258,22 +2258,6 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
-          "url": "/work?tag=Product%20Operations&_rsc=5CB68i4pnAekjehf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Implementation&_rsc=5CB68i4pnAekjehf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2290,6 +2274,22 @@
           "segmentPrefetch": "/_tree"
         },
         {
+          "url": "/work?tag=Documentation&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Product%20Operations&_rsc=5CB68i4pnAekjehf",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
           "url": "/work?tag=Documentation&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2298,7 +2298,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2314,7 +2314,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=tXyZJ52UQVBCVsD3",
+          "url": "/work?tag=Product%20Operations&_rsc=tXyZJ52UQVBCVsD3",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2360,14 +2360,6 @@
           "rsc": "1",
           "routerPrefetch": "1",
           "segmentPrefetch": "/_tree"
-        },
-        {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=tXyZJ52UQVBCVsD3",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
         }
       ]
     },
@@ -2395,7 +2387,7 @@
       "failedRequests": [],
       "cancelledSpeculativePrefetches": [
         {
-          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2403,7 +2395,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Documentation&_rsc=2w9-JQzBEdMnhII4",
+          "url": "/work?tag=Implementation&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2435,6 +2427,14 @@
           "segmentPrefetch": null
         },
         {
+          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
+        },
+        {
           "url": "/work?tag=Product%20Operations&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2444,14 +2444,6 @@
         },
         {
           "url": "/work?tag=Implementation&_rsc=ebxhI9ek-oKkZVJy",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
-        },
-        {
-          "url": "/work?tag=Technical%20Operations&_rsc=ebxhI9ek-oKkZVJy",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2515,12 +2507,28 @@
           "segmentPrefetch": null
         },
         {
+          "url": "/work?tag=Open%20Data&_rsc=2w9-JQzBEdMnhII4",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
           "url": "/work?tag=Web%20Systems&_rsc=2w9-JQzBEdMnhII4",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
           "routerPrefetch": "1",
           "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Web%20Systems&_rsc=ebxhI9ek-oKkZVJy",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": null
         },
         {
           "url": "/work?tag=Open%20Data&_rsc=ebxhI9ek-oKkZVJy",
@@ -2810,14 +2818,6 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Implementation&_rsc=UbBg2r3egD71vdiS",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Product%20Operations&_rsc=UbBg2r3egD71vdiS",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2827,6 +2827,14 @@
         },
         {
           "url": "/work?tag=Technical%20Operations&_rsc=UbBg2r3egD71vdiS",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "fetch",
+          "rsc": "1",
+          "routerPrefetch": "1",
+          "segmentPrefetch": "/_tree"
+        },
+        {
+          "url": "/work?tag=Implementation&_rsc=UbBg2r3egD71vdiS",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2858,14 +2866,6 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=bkL0b33bCmi5XITf",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": null
-        },
-        {
           "url": "/work?tag=Documentation&_rsc=bkL0b33bCmi5XITf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -2874,7 +2874,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Product%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "url": "/work?tag=Implementation&_rsc=bkL0b33bCmi5XITf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2882,7 +2882,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Technical%20Operations&_rsc=bkL0b33bCmi5XITf",
+          "url": "/work?tag=Product%20Operations&_rsc=bkL0b33bCmi5XITf",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2921,7 +2921,7 @@
       "failedRequests": [],
       "cancelledSpeculativePrefetches": [
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=Xc3IMLghCBRdWIHV",
+          "url": "/work?tag=Source-Backed%20Memory&_rsc=Xc3IMLghCBRdWIHV",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -2929,7 +2929,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Source-Backed%20Memory&_rsc=Xc3IMLghCBRdWIHV",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=Xc3IMLghCBRdWIHV",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3069,7 +3069,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "/work?tag=Web%20Systems&_rsc=Dy6sk4H5x1Cco-9U",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3077,7 +3077,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Web%20Systems&_rsc=Dy6sk4H5x1Cco-9U",
+          "url": "/work?tag=Open%20Data&_rsc=Dy6sk4H5x1Cco-9U",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3101,7 +3101,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=5AGoy2f1p068YQjD",
+          "url": "/work?tag=Implementation&_rsc=5AGoy2f1p068YQjD",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3109,7 +3109,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Implementation&_rsc=5AGoy2f1p068YQjD",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=5AGoy2f1p068YQjD",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3185,7 +3185,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Implementation&_rsc=HnqECM4JznjjE8ct",
+          "url": "/work?tag=Web%20Systems&_rsc=HnqECM4JznjjE8ct",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3193,7 +3193,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Web%20Systems&_rsc=HnqECM4JznjjE8ct",
+          "url": "/work?tag=Implementation&_rsc=HnqECM4JznjjE8ct",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3217,7 +3217,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=pGCloRdGX2Li5z5r",
+          "url": "/work?tag=Campaign%20Infrastructure&_rsc=pGCloRdGX2Li5z5r",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3225,7 +3225,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Campaign%20Infrastructure&_rsc=pGCloRdGX2Li5z5r",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=pGCloRdGX2Li5z5r",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3300,14 +3300,6 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?_rsc=dY7Tmye21jlM3HRQ",
-          "error": "net::ERR_ABORTED",
-          "resourceType": "fetch",
-          "rsc": "1",
-          "routerPrefetch": "1",
-          "segmentPrefetch": "/_tree"
-        },
-        {
           "url": "/work?tag=Product%20Operations&_rsc=gLUWpq67GF27aoat",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
@@ -3324,7 +3316,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Community%20Systems&_rsc=gLUWpq67GF27aoat",
+          "url": "/work?tag=Web%20Systems&_rsc=gLUWpq67GF27aoat",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3332,7 +3324,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Web%20Systems&_rsc=gLUWpq67GF27aoat",
+          "url": "/work?tag=Community%20Systems&_rsc=gLUWpq67GF27aoat",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3383,7 +3375,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Community%20Systems&_rsc=O7t3y6AZ6I1SWhzv",
+          "url": "/work?tag=Documentation&_rsc=O7t3y6AZ6I1SWhzv",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3391,7 +3383,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Documentation&_rsc=O7t3y6AZ6I1SWhzv",
+          "url": "/work?tag=Community%20Systems&_rsc=O7t3y6AZ6I1SWhzv",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3407,7 +3399,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Implementation&_rsc=IT39HS1u7GVuDrcQ",
+          "url": "/work?tag=Knowledge%20Systems&_rsc=IT39HS1u7GVuDrcQ",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3415,7 +3407,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Knowledge%20Systems&_rsc=IT39HS1u7GVuDrcQ",
+          "url": "/work?tag=Implementation&_rsc=IT39HS1u7GVuDrcQ",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3470,7 +3462,7 @@
       "failedRequests": [],
       "cancelledSpeculativePrefetches": [
         {
-          "url": "/work?tag=Knowledge%20Systems&_rsc=WeJHchyJ-WKH7lj1",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=WeJHchyJ-WKH7lj1",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3478,7 +3470,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=WeJHchyJ-WKH7lj1",
+          "url": "/work?tag=Knowledge%20Systems&_rsc=WeJHchyJ-WKH7lj1",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3510,7 +3502,7 @@
           "segmentPrefetch": "/_tree"
         },
         {
-          "url": "/work?tag=Knowledge%20Systems&_rsc=yLUdkRGz0mrmRhK7",
+          "url": "/work?tag=Public-Facing%20Tools&_rsc=yLUdkRGz0mrmRhK7",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3526,7 +3518,7 @@
           "segmentPrefetch": null
         },
         {
-          "url": "/work?tag=Public-Facing%20Tools&_rsc=yLUdkRGz0mrmRhK7",
+          "url": "/work?tag=Knowledge%20Systems&_rsc=yLUdkRGz0mrmRhK7",
           "error": "net::ERR_ABORTED",
           "resourceType": "fetch",
           "rsc": "1",
@@ -3560,11 +3552,11 @@
     "brokenImagesAfterScroll": 0,
     "unlabeledImages": 0,
     "failedRequests": 0,
-    "cancelledSpeculativePrefetches": 292,
+    "cancelledSpeculativePrefetches": 291,
     "nonSuccessResponses": 0,
     "invalidHeadingOrLandmarkRows": 0,
     "lazyImagesObserved": 112,
-    "unloadedImagesBeforeScroll": 78,
+    "unloadedImagesBeforeScroll": 80,
     "lazyImageFollowUpPerformed": true,
     "allImagesLoadedAfterScroll": true
   },
@@ -3626,7 +3618,7 @@
     "passed": true
   },
   "navigationReview": {
-    "checkedAt": "2026-10-18T13:42:09.029Z",
+    "checkedAt": "2026-10-18T16:31:02.052Z",
     "startRoute": "/",
     "destinationRoute": "/about",
     "startHttpStatus": 200,

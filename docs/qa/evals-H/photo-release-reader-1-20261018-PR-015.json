@@ -1,0 +1,147 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no real named person participated",
+  "reviewerId": "photo-release-reader-1",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 4,
+  "pass": true,
+  "passScope": "Individual content assessment only. The three-reader median, full accessibility matrix, publication permission, and release approval are not assessed by this result.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The page names Jamie's technical project management role before introducing 'Systems people can inhabit.' It explicitly connects artistic, civic, technical, and social practice, with linked project examples. This is a visible explanation of the professional method rather than a separate artist biography."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "The Sunday Dinner calendar origin, editable natural-language events, followable keyword communities, organizer support, independent tutorial, and local calendar routes make participation and continued use concrete. The page names Richard Caceres as co-founder and co-builder, credits communities, and distinguishes historical operation from the limited 2026 return."
+    },
+    {
+      "path": "rendered/1280-work--196-sunday-dinner.txt",
+      "finding": "Hospitality becomes operating practice through invitations, response handling, food and space preparation, welcome, minimal documentation, follow-up, artist orientation, and independent access. The two workflow specimens are explicitly reconstructions. The gathering photograph restores the shared table, bodies, and hand-drawn map without identifying participants."
+    },
+    {
+      "path": "rendered/1280-work--fair-rent-nyc.txt",
+      "finding": "The case study connects a facilitated room, campaign interface, public gathering, source records, and follow-through. Shoestring recollection is identified as recollection, implementation has a separate repository-history basis, and policy outcomes remain collective."
+    },
+    {
+      "path": "rendered/1280-home.txt",
+      "finding": "'The system lives between the screen and the room' connects invitations and meetings to public action paths and handoffs. The paired coalition photograph and public campaign surface visibly support this proposition."
+    },
+    {
+      "path": "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "finding": "The Open House lineage is a bounded public-source summary. The note expressly withholds private faculty evaluations and unverified testimonial projection. No raw article or protected educational record was encountered in the inspected packet materials."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "finding": "Open House initiation is assigned to Jamie while governance and documentation are assigned to participants collectively. Coalition web implementation is distinguished from ownership of positions, participation, and outcomes."
+    }
+  ],
+  "projectContinuityTrace": [
+    {
+      "project": "WOWList",
+      "continuity": "Recurring social calendars and community language became editable event workflows, followable lists, distribution, and organizer learning materials.",
+      "evidenceStatus": "Historical operation and support evidence; reconstructed product model; current return limited to landing, About, and tester invitation."
+    },
+    {
+      "project": "196 / Sunday Dinner",
+      "continuity": "Hospitality and artistic support became repeatable invitation, hosting, orientation, documentation, and independent-access structures.",
+      "evidenceStatus": "Historical milestone and aggregate evidence; 2013 photograph; reconstructed operating schema and later residency planning, not proof of a completed residency outcome."
+    },
+    {
+      "project": "NYC Artist Coalition / FairRentNYC",
+      "continuity": "Shared cultural-space concerns became meetings, collective discussion, public interfaces, source maps, campaign memory, and continued participation.",
+      "evidenceStatus": "Historical public organizing records and photography combined with continuing campaign-system work; individual implementation remains separate from collective outcomes."
+    },
+    {
+      "project": "Knowledge Wiki Graphs",
+      "continuity": "Collective working maps and documentation care become a method for preserving evidence, disagreement, correction, custody, and handoffs.",
+      "evidenceStatus": "Historical collective-map photograph; current research method; synthetic prototype and proposed engagement, not demonstrated client adoption."
+    }
+  ],
+  "gaps": [
+    "Some operational evidence is necessarily summary-only or reconstructed. Those materials explain the form of the work without independently demonstrating every participant's experience.",
+    "The About page is long, particularly on mobile, although its section structure and project links remain clear in the inspected captures."
+  ],
+  "notObserved": [
+    "The full 360, 375, 768, and 1280 accessibility matrix, keyboard traversal, contrast measurements, and reduced-motion behavior were not tested.",
+    "External source destinations were not independently opened; assessment used the packet's source records and rendered evidence.",
+    "Underlying protected records and independent rights documentation were not inspected.",
+    "Other reviewers' judgments, panel aggregation, actual professor participation, staging deployment, and production approval were not observed."
+  ],
+  "safety_findings": [
+    "No participant-level guest records, private correspondence, raw educational records, or unapproved faculty testimonial appeared in the inspected rendered content.",
+    "Photographs retain descriptive captions and courtesy or photographer credits. The photography catalog limits interpretation and records distinct release states; most inspected project-photo occurrences still have production and indexing marked open.",
+    "The collective-map image is not presented as proof of agreement or ownership of the group's knowledge.",
+    "This review does not independently establish consent, rights, or permission to publish."
+  ],
+  "recommendation": "Retain the current lineage and its explicit evidence boundaries. Any shortening should preserve the three concrete continuities, collective credit, reconstruction labels, and the distinction between historical work and present availability.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:35:55Z",
+    "scope": "Independent read-only review of the assigned packet, bound rendered text and screenshots, and restored local preview. No sibling packets, earlier scores, private repositories, or implementation discussion were consulted.",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "sourcePathsInspected": [
+      "manifest.json",
+      "PROFESSOR-REVIEW.md",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/wowlist-social-practices-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts:65-155",
+      "source/apps/www/src/data/knowledge-bank/records.ts:550-630",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts:260-268",
+      "source/apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts:462-535"
+    ],
+    "renderedRoutesInspected": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory",
+      "/work/harry-j-epstein",
+      "/work/kc-town-hall"
+    ],
+    "renderedInspectionMethod": "Complete bound desktop text for all listed routes except KC Town Hall, whose complete live accessibility tree was read; desktop and mobile viewport screenshots for every listed route. Additional full-page screenshots listed below.",
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png",
+      "rendered/1280-work--kc-town-hall-viewport.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-lab--source-backed-team-memory.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "Live preview screenshot at /work/kc-town-hall#resident-service-sequence-title"
+    ],
+    "twoClickPathObserved": "After the preview was restored, clicked About from the homepage navigation, then clicked the KC Town Hall participation-system link on About. The second click landed directly at the rendered service-sequence heading and flyer. About also visibly linked WOWList, Sunday Dinner, coalition work, and Knowledge Wiki Graphs.",
+    "nohumanapproval": true
+  }
+}

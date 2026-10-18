@@ -1,0 +1,219 @@
+{
+  "reportVersion": 5,
+  "checkedAt": "2026-10-18T13:40:29.336Z",
+  "baseUrl": "http://127.0.0.1:3218",
+  "publicSurfaceFingerprint": "93db784e753d99f1bba4077c5b8de3fc6a259d4cdde61805b8d3dd07998fc56d",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 157,
+  "method": "Fresh Playwright keyboard interaction, visible-focus checks, DOM reading order and CSS viewport reflow observations on the Node 26 production build; not a human screen-reader or assistive-technology session.",
+  "keyboard": {
+    "desktopTabSequence": [
+      {
+        "tag": "a",
+        "text": "Skip to content",
+        "href": "#main",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "JBJamie Burkart",
+        "href": "/",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "Work",
+        "href": "/work",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "Technical Operations",
+        "href": "/work/technical-operations",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "href": "/about",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "Resume",
+        "href": "/resume",
+        "focusVisible": true,
+        "id": null
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "href": "/contact",
+        "focusVisible": true,
+        "id": null
+      }
+    ],
+    "skipLinkIsFirst": true,
+    "skipActivation": {
+      "hash": "#main",
+      "activeElementId": "main"
+    },
+    "passed": true
+  },
+  "mobileNavigation": {
+    "menuFocusBeforeOpen": {
+      "tag": "summary",
+      "text": "MenuClose menu",
+      "href": null,
+      "focusVisible": true,
+      "id": null
+    },
+    "menuOpen": true,
+    "firstMobileMenuLink": {
+      "tag": "a",
+      "text": "Work",
+      "href": "/work",
+      "focusVisible": true,
+      "id": null
+    },
+    "passed": true
+  },
+  "reflow": {
+    "interpretation": "CSS viewport proxies at 640 and 320 pixels; actual browser zoom remains a human gate.",
+    "rows": [
+      {
+        "route": "/",
+        "width": 640,
+        "httpStatus": 200,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "overflowElements": 0,
+        "mainPresent": true,
+        "h1Count": 1,
+        "passed": true
+      },
+      {
+        "route": "/about",
+        "width": 640,
+        "httpStatus": 200,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "overflowElements": 0,
+        "mainPresent": true,
+        "h1Count": 1,
+        "passed": true
+      },
+      {
+        "route": "/",
+        "width": 320,
+        "httpStatus": 200,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowElements": 0,
+        "mainPresent": true,
+        "h1Count": 1,
+        "passed": true
+      },
+      {
+        "route": "/about",
+        "width": 320,
+        "httpStatus": 200,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowElements": 0,
+        "mainPresent": true,
+        "h1Count": 1,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "semanticReadingOrder": {
+    "scope": "/about landmarks and first 20 headings",
+    "landmarks": [
+      {
+        "tag": "header",
+        "ariaLabel": null
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Primary navigation"
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Mobile navigation"
+      },
+      {
+        "tag": "main",
+        "ariaLabel": null
+      },
+      {
+        "tag": "footer",
+        "ariaLabel": null
+      },
+      {
+        "tag": "nav",
+        "ariaLabel": "Footer navigation"
+      }
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "About"
+      },
+      {
+        "level": 2,
+        "text": "Systems people can inhabit"
+      },
+      {
+        "level": 3,
+        "text": "WOWList: from shared calendars to organizer support"
+      },
+      {
+        "level": 3,
+        "text": "NYC Artist Coalition: an invitation becomes a shared process"
+      },
+      {
+        "level": 3,
+        "text": "KC Town Hall: a resident request becomes a completed service"
+      },
+      {
+        "level": 3,
+        "text": "Harry J. Epstein Company"
+      },
+      {
+        "level": 3,
+        "text": "Sunday Dinner and 196"
+      },
+      {
+        "level": 3,
+        "text": "Knowledge Wiki Graphs"
+      },
+      {
+        "level": 3,
+        "text": "Limits of this comparison"
+      },
+      {
+        "level": 2,
+        "text": "Sources and notes"
+      },
+      {
+        "level": 2,
+        "text": "Looking for technical project management, product operations, implementation, or knowledge-systems support?"
+      }
+    ],
+    "passed": true
+  },
+  "residualHumanGates": [
+    "Human screen-reader review",
+    "Human browser zoom review",
+    "Jamie visual and content approval",
+    "Production deployment and indexing approval"
+  ],
+  "passed": true
+}

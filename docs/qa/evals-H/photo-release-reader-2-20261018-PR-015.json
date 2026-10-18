@@ -1,0 +1,123 @@
+{
+  "evaluator": "Independent simulated advisory reviewer using a fictionalized Margaret Morse analytical lens; no real named person participated",
+  "reviewerId": "photo-release-reader-2",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 4,
+  "pass": true,
+  "passScope": "Individual content reading only. The three-reviewer median and all release gates remain outside this scorecard.",
+  "evidence": [
+    {
+      "path": "rendered/1280-home.txt",
+      "finding": "The homepage names the technical project management role immediately, then connects an actual facilitated gathering with a campaign interface under 'The system lives between the screen and the room.' Photographs provide place, bodies, working materials, and collective context without displacing the professional purpose."
+    },
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "About explicitly connects artistic, civic, technical, and social practice through people recognizing relationships, participating, remembering, and continuing. Open House occupies a bounded paragraph, rather than becoming an artist biography or faculty testimonial."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "Continuity 1: Sunday Dinner calendars became a shared product model using editable natural-language event text, keyword communities, followed lists, and email distribution. Public support records and an independent organizer tutorial connect technical structure with participation and continuation. Richard Caceres and participating communities retain shared credit."
+    },
+    {
+      "path": "rendered/1280-work--196-sunday-dinner.txt",
+      "finding": "Continuity 2: hospitality becomes invitations, orientation, food and space preparation, minimal documentation, and follow-up. The two clearly marked reconstructions make care operationally legible. The residency specimen preserves artistic agency and does not claim a completed residency or public artistic outcome."
+    },
+    {
+      "path": "rendered/1280-work--fair-rent-nyc.txt",
+      "finding": "Continuity 3: listening, collective naming, meetings, and public participation become campaign websites, source maps, shared memory, and subsequent invitations. The juxtaposition of campaign interface, Shoestring working circle, and Market Hotel gathering makes the connection between room and public system inspectable."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "Continuity 4: the collective handwritten map leads into an explicit distinction among meaning, evidence, custody, and reviewed outputs. The photograph is interpreted as shared contribution rather than proof of agreement or ownership. The lab remains labeled early research, with synthetic examples and proposed engagements separated from completed client work."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/agency-graph.ts",
+      "finding": "The source model separates Jamie initiating Open House from participants governing and documenting it, and separates campaign implementation from collective positions and policy outcomes."
+    },
+    {
+      "path": "source/apps/www/src/data/photography.ts",
+      "finding": "Reviewed images have specific captions, useful alternatives, courtesy or creator credits, allowed placements, and interpretation limits. The Sunday Dinner occurrence records represented-person review; the coalition photographs do not establish remarks, endorsement, attendance totals, or sole causation."
+    },
+    {
+      "path": "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "finding": "The supplied source note identifies the public Open House basis, withholds faculty praise and protected educational records, and distinguishes evaluative questions from endorsement. The packet inventory contains the bounded note rather than a reproduced article."
+    }
+  ],
+  "gaps": [
+    "The About page requires substantial vertical reading on mobile before reaching all three detailed continuities. This is a reading-burden concern, not a broken route or obscured professional identity.",
+    "The inspected evidence does not establish a uniform participant experience or fully allocate every collaborator's labor. The candidate generally acknowledges those limits."
+  ],
+  "notObserved": [
+    "No new participant or collaborator testimony was collected.",
+    "No independent examination of original rights agreements or protected educational records was performed; those records were intentionally outside scope.",
+    "The full accessibility matrix at 360, 375, 768, and 1280 pixels, keyboard navigation, measured contrast, and reduced-motion behavior were not tested.",
+    "No three-reader aggregate, staging deployment, production approval, or indexing approval was established."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, private correspondence, or protected educational-record text was observed in the reviewed rendered content.",
+    "Collective credits remain visible for WOWList, Sunday Dinner, NYC Artist Coalition, and KC Town Hall.",
+    "The photography registry distinguishes authorized occurrences from broader reuse and leaves production or indexing open for several photographs. This review grants no media permission."
+  ],
+  "recommendation": "Accept this individual PR-015 content reading. Preserve the explicit evidence distinctions and collective credits. If making a small editorial refinement, shorten the mobile approach to the About-page continuities without removing their boundaries.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:36:13Z",
+    "scope": "Independent read-only review of the supplied packet, its verified rendered captures, supporting public-safe source records, and the restored local preview. No sibling packet, prior scorecard, private repository, or implementation discussion was inspected.",
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourcePathsInspected": [
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/records.ts (relevant records and page bindings)",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts (relevant agency relationships)",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts (Open House and held coursework records)",
+      "source/apps/www/src/data/knowledge-bank/wowlist-social-practices-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/google-drive-production-2026-07.ts (residency and gathering claims)",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts"
+    ],
+    "renderedRoutesInspected": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory",
+      "/work/harry-j-epstein",
+      "/work/kc-town-hall"
+    ],
+    "renderedObservationMethod": "Read the packet's captured rendered text for every listed route and inspected the relevant current desktop/mobile images. Additionally inspected live accessibility content on Home, About, WOWList, and KC Town Hall.",
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-home.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/375-about.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory.png"
+    ],
+    "twoClickPathObserved": "After the initial preview connection failure was resolved, clicked About from the live homepage, then WOWList from the About through-line. Both destinations rendered successfully. Also followed About's KC Town Hall link to its resident-service anchor.",
+    "nohumanapproval": true
+  }
+}

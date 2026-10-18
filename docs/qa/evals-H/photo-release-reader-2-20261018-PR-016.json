@@ -1,0 +1,129 @@
+{
+  "evaluator": "Independent simulated advisory reviewer using a fictionalized Warren Sack analytical lens; no real named person participated",
+  "reviewerId": "photo-release-reader-2",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 3,
+  "pass": true,
+  "passScope": "Meets the individual minimum of 3 as a strong content reading. This does not establish the required panel median of 4 or a complete PR-016 aggregate pass.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The method is stated plainly within one click of the homepage: observe relationships, model a system, prototype an interface, test it with people, and document continuation. Links lead to concrete projects, and the page explicitly denies structural equivalence among them."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "Sequence 1 is reconstructable: shared scenes and Sunday Dinner calendars expose a coordination need; editable text and keywords model communities; event publishing, followed lists, and email provide interfaces; public support and an independent tutorial show social use and learning; organizer calendar routes and support materials support continuation. The product model is explicitly reconstructed. Its historical operation is distinct from the limited 2026 return threshold."
+    },
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "Sequence 2 is reconstructable through NYC Artist Coalition: cultural-space relationships and a public invitation lead into a meeting discussion; a naming poll and shared letter provide participatory interfaces; participants influence the coalition identity; the subsequent March meeting invitation carries that identity forward. The 57% label is bounded as a platform result, not attendance, a legal founding vote, or policy impact."
+    },
+    {
+      "path": "rendered/1280-work--kc-town-hall.txt",
+      "finding": "Sequence 3 is reconstructable at the service level: households, volunteers, neighborhood association, and City recycling are connected through eligibility, request intake, recurring scheduling, collection, handoff, and public reporting. The cropped flyer and matched photographs make a service promise and one completed collection inspectable. Jamie's participation is distinguished from sole design or operating authorship."
+    },
+    {
+      "path": "rendered/1280-work--callnyc.txt",
+      "finding": "CallNYC supplies additional information-architecture evidence: administrative records become recognizable issue pathways, district context, and next steps. The original screenshot and public implementation support an actual historical interface. Public account interactions show circulation, but do not by themselves establish resident task success or a feedback-driven redesign."
+    },
+    {
+      "path": "rendered/1280-work--harry-j-epstein.txt",
+      "finding": "The Listen–Frame–Implement–Verify–Continue specimen makes the claimed maintenance pattern comprehensible, while explicitly identifying itself as a reconstruction. It is useful explanatory evidence, but not a recovered record of one observed question, release, validation, and handoff."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "The lab distinguishes a synthetic working prototype, proposed pilot acceptance conditions, and a concrete historical correction from 2014–2015 to 2016 for CallNYC. The correction appears in the canonical records and provides a specific learning-to-public-output trace. Human usefulness, client adoption, and a completed participant pilot remain open."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts",
+      "finding": "The source record supports service structure and Jamie's direct participation while retaining unresolved component authorship and the detailed resident-research-to-requirements chain. The public page's limitation is therefore substantive and appropriately preserved."
+    }
+  ],
+  "gaps": [
+    "The learning step is uneven across the three principal sequences. WOWList establishes onboarding and support learning; NYC Artist Coalition establishes participatory naming and a subsequent invitation; KC Town Hall establishes service delivery and repeatability. The packet does not show a comparably concrete change in the service model following resident learning.",
+    "The strongest operational examples are historical. They support a recurring method, but do not establish three currently operating deployments. I interpreted 'current public-safe projects' as projects represented in the current candidate, not as three live services.",
+    "CallNYC's interface and public circulation are stronger evidence than its demonstrated resident-use-to-iteration chain. The HJE reconstruction and synthetic lab example do not independently close that gap.",
+    "These limits prevent an exceptional score of 4. They do not make the disclosed, bounded method unusable or unsafe."
+  ],
+  "notObserved": [
+    "A specific supported feedback-to-revision chain for the KC Town Hall service was not observed.",
+    "No actual participant test of the Knowledge Wiki Graph prototype or completed client pilot was observed.",
+    "No direct observation of historical WOWList use, CallNYC resident task completion, or HJE release validation was possible in this review.",
+    "The full accessibility matrix, keyboard behavior, measured contrast, reduced motion, and lazy-image completion were not independently tested.",
+    "Other reviewers' scores, panel median, hosted deployment state, exact-candidate human approval, and media rights originals were not inspected."
+  ],
+  "safety_findings": [
+    "The site consistently separates historical work, reconstructed models, proposed engagements, synthetic examples, and current research.",
+    "Protected coursework remains held in the source model; the reviewed public pages do not claim invention of structural equivalence, peer-reviewed research, current Max/Jitter proficiency, or production deployment from those records.",
+    "The shared handwritten map is not presented as proof of agreement, individual authorship, or ownership of collective knowledge.",
+    "KC Town Hall's flyer excludes obsolete contact details, while the before-and-after pair is bounded to one collection rather than an audited program total.",
+    "The individual pass does not grant publication, media, staging, production, or indexing authority."
+  ],
+  "recommendation": "Retain this as a strong individual reading at 3. A bounded improvement would add one public-safe, source-supported example showing what changed after social use and how that change was handed forward. Preserve the existing gap if no such evidence is available; do not substitute a reconstruction or proposed test for an observed learning event.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:36:13Z",
+    "scope": "Independent read-only review limited to the supplied frozen packet and local preview. Scores were formed without prior judgments or implementation intent.",
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourcePathsInspected": [
+      "manifest.json",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/records.ts (CallNYC claims, correction, and About citation bindings)",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts (relevant individual and collective relationships)",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts (held coursework record and boundaries)",
+      "source/apps/www/src/data/knowledge-bank/wowlist-social-practices-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/google-drive-production-2026-07.ts (residency and gathering claims)"
+    ],
+    "renderedRoutesInspected": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory",
+      "/work/harry-j-epstein",
+      "/work/kc-town-hall"
+    ],
+    "renderedObservationMethod": "Read verified captured rendered text for all listed routes. Inspected current packet desktop/mobile screenshots and live Home, About, WOWList, and KC Town Hall accessibility content. Live screenshots were inspected for WOWList and the KC Town Hall service anchor.",
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-home.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/375-about.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "rendered/375-work--kc-town-hall.png",
+      "rendered/1280-work--harry-j-epstein.png",
+      "rendered/375-work--harry-j-epstein-viewport.png",
+      "Live WOWList viewport, inspected through browser screenshot",
+      "Live KC Town Hall resident-service anchor viewport, inspected through browser screenshot"
+    ],
+    "twoClickPathObserved": "Observed live Home → About → WOWList. About contained the plain-language recursive method and project links. Separately followed About → KC Town Hall service anchor and confirmed the intended flyer-and-collection evidence section rendered.",
+    "nohumanapproval": true
+  }
+}

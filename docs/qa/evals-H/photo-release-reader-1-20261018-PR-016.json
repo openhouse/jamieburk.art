@@ -1,0 +1,169 @@
+{
+  "evaluator": "Independent simulated advisory reviewer; no real named person participated",
+  "reviewerId": "photo-release-reader-1",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398",
+  "score": 3,
+  "pass": true,
+  "passScope": "Individual content assessment at the frozen minimum score of 3. This does not establish the required three-reader median of 4 or a panel pass.",
+  "evidence": [
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "A single visible passage states the method plainly: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. Three linked examples immediately reconstruct relationships, models, interface/use, and learning/continuity."
+    },
+    {
+      "path": "rendered/1280-work--wowlist.txt",
+      "finding": "The project supplies a specific product model and historical social-use evidence: shared calendars, natural-language event entry, keyword communities, followed lists, weekly email, support exchanges, an independent tutorial, and local organizer routes. It explicitly says the reconstruction does not identify a support comment as the cause of a release."
+    },
+    {
+      "path": "rendered/1280-about.txt",
+      "finding": "The coalition sequence connects a public invitation to participatory naming and letter-making, then to the next general meeting. The displayed poll result is bounded as a platform observation rather than attendance or a legal founding vote."
+    },
+    {
+      "path": "rendered/1280-work--kc-town-hall.png",
+      "finding": "The flyer and matched before-and-after photographs visibly connect a resident-facing service promise to one delivered collection. The accompanying live text supplies eligibility, intake, recurring scheduling, volunteer participation, City recycling, and reporting."
+    },
+    {
+      "path": "rendered/1280-lab--source-backed-team-memory.txt",
+      "finding": "The current lab distinguishes a synthetic reader-return prototype, proposed pilot acceptance conditions, and an actual portfolio correction. The CallNYC date correction demonstrates evidence changing public output and propagating across surfaces, while human usefulness and client adoption remain open."
+    },
+    {
+      "path": "rendered/1280-work--callnyc.txt",
+      "finding": "CallNYC provides a clear observation-to-information-model-to-interface path, historical public interactions, and public implementation/documentation. It is explicitly archived and unofficial. The page does not provide a concrete resident-feedback-to-revision trace."
+    },
+    {
+      "path": "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts:265",
+      "finding": "The Social Information Spaces prototype remains held, with no active public surface. Its boundaries prohibit invention, production-deployment, sole-authorship, and current-tool-proficiency claims."
+    }
+  ],
+  "systemsSequenceTrace": [
+    {
+      "project": "WOWList",
+      "observation": "Shared Sunday Dinner calendars and organizers' informal scene, place, and interest relationships.",
+      "model": "Editable event text connects to keyword communities, followed lists, and distribution.",
+      "interface": "Natural-language publishing rather than a complex event form.",
+      "socialUse": "Historical publishing/support exchanges, independent organizer tutorial, and local calendar routes.",
+      "learning": "Support and tutorial materials make joining and publishing explainable; no specific feedback-caused release is established.",
+      "continuation": "Followed lists, weekly email, organizer onboarding, and shared maintenance.",
+      "evidenceStatus": "Historical product/use evidence with an explicitly reconstructed model; contemporary return remains limited."
+    },
+    {
+      "project": "NYC Artist Coalition",
+      "observation": "Cultural-space organizers needed a common entry into the January 2017 DCLA meeting.",
+      "model": "Invitation → discussion → participatory naming and shared letter work → next meeting.",
+      "interface": "Public event discussion, naming poll, shared-letter invitation, and later meeting promotion.",
+      "socialUse": "Documented participatory naming and collaborative invitation sequence.",
+      "learning": "The emerging coalition identity is carried into the subsequent invitation; individual authorship and complete deliberation remain unresolved.",
+      "continuation": "March 6 general-meeting promotion and subsequent campaign/coordination systems.",
+      "evidenceStatus": "Dated public records and bounded first-person continuity; not proof of attendance, letter delivery, or policy causation."
+    },
+    {
+      "project": "KC Town Hall / Tired of Tires",
+      "observation": "Household tire-disposal needs connected residents, volunteers, a neighborhood association, and City recycling.",
+      "model": "Eligibility → intake → scheduled collection → recycling handoff → reporting.",
+      "interface": "Archived service page, form/phone pathway, and public outreach flyer.",
+      "socialUse": "Public pickup-participation records and one matched photographic collection sequence.",
+      "learning": "Reporting and recurring operating structure are documented; a specific resident-feedback-to-redesign chain remains unresolved.",
+      "continuation": "Recurring schedule, volunteer pathway, recycling handoff, and public reporting.",
+      "evidenceStatus": "Historical delivered-service evidence, with Jamie's participation distinguished from component authorship and collective ownership."
+    },
+    {
+      "project": "Knowledge Wiki Graphs",
+      "observation": "Decision context, disagreements, corrections, and custody can become disconnected.",
+      "model": "Separate semantic, evidence, and source-custody responsibilities.",
+      "interface": "Portfolio citations, known/open/protected states, synthetic reader-return prototype, and proposed handoff materials.",
+      "socialUse": "Current portfolio and iterative review are described; a participant pilot or client deployment is explicitly not claimed.",
+      "learning": "The CallNYC date correction is a concrete evidence-to-output correction; synthetic checks do not establish human usefulness.",
+      "continuation": "Correction paths, stable identities, source editions, evaluation receipts, and human gates.",
+      "evidenceStatus": "Current research and synthetic demonstration, plus a documented editorial correction; proposed pilot remains future work."
+    }
+  ],
+  "gaps": [
+    "The sequence is reconstructable across three projects, but inspectable learning is uneven. WOWList shows onboarding/support, the coalition shows participatory continuation, and Tired of Tires shows delivery/reporting. None supplies a fully observed, specific feedback-to-redesign cycle across all stages.",
+    "CallNYC's general claim of iteration is less inspectable than its source-data, interface, and publication evidence.",
+    "The strongest three-project traces are historical evidence presented in the current portfolio. They should not be described as three current production deployments.",
+    "The current lab has a concrete correction trace but no observed participant pilot, client adoption, or demonstrated human-use outcome. These explicit limitations support trustworthiness while keeping the overall reading below exceptional."
+  ],
+  "notObserved": [
+    "Direct use of historical WOWList publishing, CallNYC resident workflows, or the Tired of Tires intake/service system was not tested.",
+    "A specific support or resident-feedback item causing a documented redesign was not observed.",
+    "Underlying private operating records, original coursework, and external source destinations were not opened.",
+    "The complete accessibility matrix and all live route interactions were not collected; bound rendered captures supplied most route observations.",
+    "No other reviewer scores or panel aggregate were inspected."
+  ],
+  "safety_findings": [
+    "Reconstructions, historical operation, synthetic examples, and proposed engagements are explicitly differentiated.",
+    "Richard Caceres, organizers, coalition collaborators, neighborhood partners, and project teams retain shared credit.",
+    "The inspected public pages do not use protected coursework to claim invention, peer-reviewed research, current Max/Jitter proficiency, production deployment, or sole authorship.",
+    "The photography catalog's occurrence-specific permissions and open production states remain separate from this content assessment."
+  ],
+  "recommendation": "Keep the current bounded method explanation. To strengthen the evidence toward a 4, add one already-authorized, source-backed trace showing a concrete observation, the resulting change, subsequent use, and a continuation artifact. Do not substitute a reconstruction or proposed pilot for observed learning.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T16:35:55Z",
+    "scope": "Same independent packet and rendered inspection described in the PR-015 scorecard; PR-016 judgment made separately against its frozen criteria. No earlier judgments or implementation intent were consulted.",
+    "candidateFingerprintVerifiedBeforeAndAfter": true,
+    "sourceCommit": "f89591d00c419ed7be320e816ce07759068b248b",
+    "sourcePathsInspected": [
+      "manifest.json",
+      "PROFESSOR-REVIEW.md",
+      "source/AGENTS.md",
+      "source/DESIGN.md",
+      "source/.agents/evals/portfolio-production-readiness.json",
+      "source/docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+      "source/apps/www/src/data/photography.ts",
+      "source/apps/www/src/data/knowledge-bank/wowlist-social-practices-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/kctownhall-resident-service-2026-08.ts",
+      "source/apps/www/src/data/knowledge-bank/agency-graph.ts:65-155",
+      "source/apps/www/src/data/knowledge-bank/records.ts:550-630",
+      "source/apps/www/src/data/knowledge-bank/historical-knowledge.ts:260-268",
+      "source/apps/www/src/data/knowledge-bank/participation-continuity-2026-07.ts:462-535"
+    ],
+    "renderedRoutesInspected": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory",
+      "/work/harry-j-epstein",
+      "/work/kc-town-hall"
+    ],
+    "screenshotsInspected": [
+      "rendered/1280-home-viewport.png",
+      "rendered/375-home-viewport.png",
+      "rendered/1280-about-viewport.png",
+      "rendered/375-about-viewport.png",
+      "rendered/1280-work-viewport.png",
+      "rendered/375-work-viewport.png",
+      "rendered/1280-work--technical-operations-viewport.png",
+      "rendered/375-work--technical-operations-viewport.png",
+      "rendered/1280-work--wowlist-viewport.png",
+      "rendered/375-work--wowlist-viewport.png",
+      "rendered/1280-work--196-sunday-dinner-viewport.png",
+      "rendered/375-work--196-sunday-dinner-viewport.png",
+      "rendered/1280-work--fair-rent-nyc-viewport.png",
+      "rendered/375-work--fair-rent-nyc-viewport.png",
+      "rendered/1280-work--callnyc-viewport.png",
+      "rendered/375-work--callnyc-viewport.png",
+      "rendered/1280-lab--source-backed-team-memory-viewport.png",
+      "rendered/375-lab--source-backed-team-memory-viewport.png",
+      "rendered/1280-work--harry-j-epstein-viewport.png",
+      "rendered/375-work--harry-j-epstein-viewport.png",
+      "rendered/1280-work--kc-town-hall-viewport.png",
+      "rendered/375-work--kc-town-hall-viewport.png",
+      "rendered/1280-about.png",
+      "rendered/1280-work--wowlist.png",
+      "rendered/1280-work--196-sunday-dinner.png",
+      "rendered/1280-work--fair-rent-nyc.png",
+      "rendered/1280-lab--source-backed-team-memory.png",
+      "rendered/1280-work--kc-town-hall.png",
+      "Live preview screenshot at /work/kc-town-hall#resident-service-sequence-title"
+    ],
+    "twoClickPathObserved": "Live homepage → About → KC Town Hall service-sequence anchor. The plain-language method was read on About after the first click; the service artifact was visible after the second.",
+    "nohumanapproval": true
+  }
+}

@@ -43,17 +43,18 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-1-PR-015.json",
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-2-PR-015.json",
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-3-PR-015.json",
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-1-PR-016.json",
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-2-PR-016.json",
-  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-3-PR-016.json"
+  "docs/qa/evals-H/photo-release-reader-1-20261018-PR-015.json",
+  "docs/qa/evals-H/photo-release-reader-2-20261018-PR-015.json",
+  "docs/qa/evals-H/photo-release-reader-3-20261018-PR-015.json",
+  "docs/qa/evals-H/photo-release-reader-1-20261018-PR-016.json",
+  "docs/qa/evals-H/photo-release-reader-2-20261018-PR-016.json",
+  "docs/qa/evals-H/photo-release-reader-3-20261018-PR-016.json"
 ];
 
 // Three separately commissioned advisory readers assessed these exact bytes.
-// Historical held judgments remain preserved and are not rebound to this repair.
-const approvedCandidateSha256 = "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606";
+// Exact review binding does not imply passing scores or human release approval.
+// Historical judgments remain preserved and are not rebound to this candidate.
+const reviewedCandidateSha256 = "030ca6b4e02c5c94d3d0e008292d65cf383444a98ea4e585e9074d2757f2c398";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },
@@ -106,6 +107,12 @@ export function evaluateProfessorLenses({
   const normalizedAboutText = aboutText.replace(/\s+/g, " ");
   const totalWeight = suite.evals.reduce((sum, entry) => sum + entry.weight, 0);
   const candidateSha256 = fingerprintProfessorCandidate(candidateFiles);
+  const holdoutScoreEvidence = ["PR-015", "PR-016"].map((lensId) => {
+    const scores = finalScorecards.filter((scorecard) => scorecard.lensId === lensId)
+      .map((scorecard) => scorecard.score).sort((left, right) => left - right);
+    const median = scores.length === 3 ? scores[1] : "unavailable";
+    return `${lensId}: scores ${scores.join(", ") || "none"}; median ${median}; minimum ${scores[0] ?? "unavailable"}`;
+  }).join(". ");
   const relationshipRows = aboutText.match(/Relationships:<\/strong>/g)?.length ?? 0;
   const interfaceRows = aboutText.match(/Interface and use:<\/strong>/g)?.length ?? 0;
   const learningRows = aboutText.match(/Learning and continuity:/g)?.length ?? 0;
@@ -276,7 +283,7 @@ export function evaluateProfessorLenses({
     criterion(
       "candidate-fingerprint",
       "The holdout result remains bound to the exact evaluated rubric and public candidate files.",
-      candidateSha256 === approvedCandidateSha256,
+      candidateSha256 === reviewedCandidateSha256,
       `Candidate SHA-256: ${candidateSha256}`
     ),
     criterion(
@@ -298,7 +305,7 @@ export function evaluateProfessorLenses({
           (scorecard.score !== 4 || scorecard.pass === true) &&
           scorecard.candidateSha256 === candidateSha256),
       `${finalScorecards.filter((scorecard) => scorecard.phase === "holdout" &&
-        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards match candidate ${candidateSha256}; each lens independently requires median 4 and minimum 3.`
+        scorecard.candidateSha256 === candidateSha256).length}/6 final scorecards match candidate ${candidateSha256}; each lens independently requires median 4 and minimum 3. ${holdoutScoreEvidence}.`
     )
   ];
 
