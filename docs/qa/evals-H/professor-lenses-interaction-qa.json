@@ -1,8 +1,8 @@
 {
   "reportVersion": 8,
-  "checkedAt": "2026-10-18T20:39:46.760Z",
-  "baseUrl": "http://127.0.0.1:42090",
-  "publicSurfaceFingerprint": "755a23985cd9c3d2e72f29cb08c9f551b5ada93a9d1d5292377a00457d40b493",
+  "checkedAt": "2026-10-18T22:30:07.126Z",
+  "baseUrl": "http://127.0.0.1:42093",
+  "publicSurfaceFingerprint": "a05d6a91c3c6cad4c28ade585298dadf9985433f416ce3bd405a69c7d031c54e",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "fingerprintUnchangedDuringObservation": true,
@@ -88,7 +88,7 @@
       "focusVisible": true,
       "outlineStyle": "solid",
       "outlineWidth": "3px",
-      "withinViewport": true
+      "withinViewport": false
     },
     "skipLinkIsFirst": true,
     "skipActivation": {
@@ -216,7 +216,7 @@
       "visible": true,
       "mediaElements": 0,
       "screenshot": "fair-rent-reel-375.png",
-      "screenshotSha256": "4bb3a5ad3a0ecc5b72b4d1e0627e8a45f1bfc82860670c4d0001e0ecb72f2bc1"
+      "screenshotSha256": "047a9df79314e7bc7dadd5ce2cb515744755275a48d2b686e1e98a0b6c1f0a39"
     },
     {
       "width": 1280,
@@ -225,7 +225,7 @@
       "visible": true,
       "mediaElements": 0,
       "screenshot": "fair-rent-reel-1280.png",
-      "screenshotSha256": "2b03adcdda0fa4c8351201d66be4600e9dd46e1a108babffcfef2754b66a8014"
+      "screenshotSha256": "d044014f9937c7de2c19d80558b23df54cb39d0a5749b07833ca0e5594f03681"
     }
   ],
   "residualHumanGates": [

@@ -95,6 +95,35 @@ export function validateRecentDelivery({ contracts, claims, sources, pages = [],
     if (!claim) continue;
     const evidence = Array.isArray(claim.evidence) ? claim.evidence : [];
     const projections = Array.isArray(claim.projections) ? claim.projections : [];
+    if (contract.campaignMessageOutcome !== undefined) {
+      const binding = contract.campaignMessageOutcome;
+      const validBinding = binding && typeof binding === "object" && !Array.isArray(binding) &&
+        [binding.artifactSourceId, binding.assessmentSourceId, binding.creatorId].every((value) =>
+          typeof value === "string" && value.length > 0);
+      check(Boolean(validBinding), `${id}: campaign-message outcome needs artifact, assessment and creator bindings`);
+      if (validBinding) {
+        const artifact = sourceById.get(binding.artifactSourceId);
+        const assessment = sourceById.get(binding.assessmentSourceId);
+        const creator = entityById.get(binding.creatorId);
+        check(binding.artifactSourceId !== binding.assessmentSourceId, `${id}: artifact and creator assessment must remain distinct sources`);
+        check(artifact?.visibility === "public" && typeof artifact.canonicalUrl === "string" && artifact.canonicalUrl.length > 0,
+          `${id}: campaign-message outcome needs a public artifact destination`);
+        check(creator?.kind === "person" && typeof creator.name === "string" && creator.name.length > 0 && assessment?.author === creator.name,
+          `${id}: creator assessment must remain attributed to its known person author`);
+        for (const [sourceId, supportKey] of [
+          [binding.artifactSourceId, "visible campaign message"],
+          [binding.assessmentSourceId, "creator assessment of campaign-message circulation"]
+        ]) {
+          check(sourceIds.includes(sourceId), `${id}: campaign outcome source is outside contract bindings`);
+          check(sourceById.get(sourceId)?.supportsGenerally?.includes(supportKey), `${id}: campaign outcome source lacks ${supportKey}`);
+          check(evidence.some((item) => item.sourceId === sourceId && item.supports?.includes(supportKey)),
+            `${id}: campaign outcome evidence lacks ${supportKey}`);
+        }
+        // A creator's interpretation does not promote publication automatically.
+        check(observed.includes("published") && projected.includes("published"),
+          `${id}: campaign-message circulation requires explicitly observed and projected publication`);
+      }
+    }
     if (contract.platformCollaboration !== undefined) {
       const binding = contract.platformCollaboration;
       const validBinding = binding && typeof binding === "object" && !Array.isArray(binding) &&
@@ -151,8 +180,8 @@ export function validateRecentDelivery({ contracts, claims, sources, pages = [],
       if (projection.citationRequired) check(evidence.some((item) => item.renderCitation === true), `${id}: required citation has no renderable evidence`);
       const clauses = affirmativeClauses(projection.text);
       check(!clauses.some((clause) => /\b(?:single-handedly|sole (?:creator|organizer|author|producer|founder)|alone (?:created|organized|produced|delivered))\b/i.test(clause)), `${id}: contribution inflated to sole credit`);
-      if (contract.platformCollaboration !== undefined) {
-        check(!platformAttributionOverclaim(projection.text), `${id}: platform collaboration does not establish endorsement, commissioning or creative authorship`);
+      if (contract.platformCollaboration !== undefined || contract.campaignMessageOutcome !== undefined) {
+        check(!platformAttributionOverclaim(projection.text), `${id}: public collaboration or creator assessment does not establish endorsement, commissioning or creative authorship`);
       }
       for (const [state, pattern] of affirmativeOutcomes) {
         if (clauses.some((clause) => pattern.test(clause))) {

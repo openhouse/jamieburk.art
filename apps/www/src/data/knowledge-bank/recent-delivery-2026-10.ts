@@ -47,7 +47,7 @@ const sources: KnowledgeBank["sources"] = [
     canonicalUrl: "https://www.instagram.com/reel/DeNAv1HhOxC/", preferredPublicUrl: "canonical",
     publicCitation: "NYC Artist Coalition, listening-session photo animation; Instagram metadata reports October 7, 2026; inspected October 18, 2026.",
     publicNote: "A downloaded 30-second edition was inspected through sampled frames and container metadata. The caption points to Lin Tyrpien's article. The post date is platform-reported; the earlier article observation remains a separate source.",
-    supportsGenerally: ["direct published reel destination", "30-second Instagram edition", "visible text about cultural space and accountability"],
+    supportsGenerally: ["direct published reel destination", "30-second Instagram edition", "visible text about cultural space and accountability", "visible campaign message"],
     doesNotEstablish: ["identity with the article's embedded media bytes", "earliest publication date of the animation", "verified spoken transcript or music credit", "policy adoption or institutional endorsement", "permission to embed or rehost media"],
     media: { mediaKind: "other", rightsStatus: "permission-needed", consentStatus: "review-needed", publicDisplayStatus: "metadata-only" }
   },
@@ -60,6 +60,15 @@ const sources: KnowledgeBank["sources"] = [
     publicNote: "The screenshot lists six accounts. The roster was not independently extracted by the video downloader and is not a current membership or institutional-endorsement claim.",
     supportsGenerally: ["platform-listed collaborators"],
     doesNotEstablish: ["equal creative authorship", "a DCLA commission", "policy endorsement", "event-production responsibility", "current collaborator roster", "permission to reproduce screenshots or underlying media"]
+  },
+  {
+    id: "SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18",
+    title: "Jamie's assessment of the listening-session recap", author: "Jamie Burkart",
+    kind: "research-run", visibility: "protected", preservationStatus: "private",
+    protectedLocatorId: "EVID-DCLA-OUTCOME-20261018", accessedAt: reviewedAt,
+    publicCitation: "Jamie Burkart's assessment of the recap's purpose and outcome, October 18, 2026; bounded text summary authorized.",
+    supportsGenerally: ["creator assessment of campaign-message circulation"],
+    doesNotEstablish: ["institutional policy endorsement", "formal partnership or commission", "measured audience reach", "legislative results", "permission to reproduce correspondence or media"]
   }
 ];
 
@@ -81,7 +90,7 @@ const claims: KnowledgeBank["claims"] = [
     internalClaim: "The October 3 article observation records a published animation credited to Jamie for NYC Artist Coalition; publication is no longer merely planned.",
     status: "confirmed-with-boundary",
     projections: [{ key: "case-study", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"],
-      text: "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution. The 30-second Instagram edition pairs event photographs with text about cultural space and accountability." }],
+      text: "Jamie created a photo-animation recap of the city’s August 26, 2026 arts listening session at 651 ARTS for NYC Artist Coalition. By October 3, Lin Tyrpien’s article included the animation and credited Jamie. The 30-second Instagram edition pairs event photographs with participants’ requests about cultural space and accountability." }],
     evidence: [{ sourceId: "SRC-RECENT-DCLA-ARTICLE", relationship: "direct-support", confidence: "moderate", renderCitation: true,
       supports: ["published animation credit", "Lin's article authorship"] },
       { sourceId: "SRC-DCLA-REPAIR-REVIEW-2026-08-29", relationship: "private-support", confidence: "moderate", renderCitation: false,
@@ -108,12 +117,26 @@ const claims: KnowledgeBank["claims"] = [
     id: "CLM-DCLA-REEL-COLLABORATORS-2026", project: "fair-rent-nyc",
     internalClaim: "A supplied screenshot records six accounts listed as collaborators on this specific Instagram post; it does not allocate creative labor or institutional authority.",
     status: "confirmed-with-boundary",
-    projections: [{ key: "archive-note", status: "hold", citationRequired: true, surfaces: [],
-      text: "The supplied Instagram collaborator display lists 651 ARTS, NYC Department of Cultural Affairs, Brooklyn Arts Council, Lin Tyrpien, Jamie Burkart and NYC Artist Coalition on the listening-session reel." }],
+    projections: [{ key: "case-study", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"],
+      text: "The recap became a public Instagram collaboration. The post lists NYC Department of Cultural Affairs (DCLA), Brooklyn Arts Council, 651 ARTS, Lin Tyrpien, NYC Artist Coalition and Jamie as collaborators." }],
     evidence: [{ sourceId: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10", relationship: "direct-support", confidence: "moderate", renderCitation: true,
       supports: ["platform-listed collaborators"] }],
-    boundaries: ["Platform listing is not equal creative authorship, commissioning, endorsement or event-production authority.", "Screenshot capture date is unknown; October 18 is the review date.", "Names and handles come from the collaborator display, not face recognition.", "This roster is retained in the graph, not projected as portfolio endorsement."],
+    boundaries: ["Platform listing is not equal creative authorship, commissioning, endorsement or event-production authority.", "Screenshot capture date is unknown; October 18 is the review date.", "Names and handles come from the collaborator display, not face recognition.", "Jamie authorized this bounded text projection of the public collaboration; no blanket policy endorsement is asserted."],
     antiClaims: ["DCLA commissioned Jamie's film.", "All listed accounts endorse commercial rent stabilization.", "The six collaborators co-created every element of the film."],
+    researchInquiryIds: [], reviewedAt, reviewedBy
+  },
+  {
+    id: "CLM-DCLA-RECAP-STRATEGIC-OUTCOME-2026", project: "fair-rent-nyc",
+    internalClaim: "Jamie identifies adoption and shared public collaboration carrying the campaign message as the recap's success; this is his attributed assessment, supported by the visible message and separately documented collaborator roster.",
+    status: "confirmed-with-boundary",
+    projections: [{ key: "case-study", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"],
+      text: "For Jamie, the success was a shared recap that carried Fair Rent NYC’s call for commercial rent stabilization. It made the coalition and his contribution publicly visible alongside the participating institutions. Collaboration on the recap does not establish institutional endorsement of the campaign’s legislative agenda." }],
+    evidence: [
+      { sourceId: "SRC-DCLA-INSTAGRAM-REEL-2026-10", relationship: "direct-support", confidence: "high", renderCitation: true, supports: ["visible campaign message"] },
+      { sourceId: "SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18", relationship: "private-support", confidence: "high", renderCitation: false, supports: ["creator assessment of campaign-message circulation"] }
+    ],
+    boundaries: ["Success is Jamie's explicitly attributed assessment, not an independent impact evaluation.", "The visible rent-stabilization message and shared publication do not establish institutional endorsement, policy adoption, measured reach or a formal partnership.", "Text-only summary authorized; participant statements, photographs, audio and screenshots are not newly licensed for reuse."],
+    antiClaims: ["DCLA endorsed Fair Rent NYC's legislative agenda.", "The recap caused a policy change.", "View counters prove campaign impact."],
     researchInquiryIds: [], reviewedAt, reviewedBy
   }
 ];
@@ -133,7 +156,11 @@ export const recentDeliveryContracts = [
     allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
     platformCollaboration: { sourceId: "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10", relationId: "REL-DCLA-REEL-LISTED-COLLABORATORS",
       actorIds: ["ENT-651-ARTS", "ENT-NYC-DCLA", "ENT-BROOKLYN-ARTS-COUNCIL", "ENT-LIN-TYRPIEN", "ENT-JAMIE-BURKART", "ENT-NYC-ARTIST-COALITION"],
-      objectId: "ENT-DCLA-INSTAGRAM-REEL-2026" } }
+      objectId: "ENT-DCLA-INSTAGRAM-REEL-2026" } },
+  { claimId: "CLM-DCLA-RECAP-STRATEGIC-OUTCOME-2026", eventDate: null, evidenceAsOf: reviewedAt, recordedAt: reviewedAt,
+    observedStates: ["published"], publicStates: ["published"], creditScope: "jamie-contribution", publicationScope: "text-only",
+    allowedSurfaces: ["/work/fair-rent-nyc"], sourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10", "SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18"],
+    campaignMessageOutcome: { artifactSourceId: "SRC-DCLA-INSTAGRAM-REEL-2026-10", assessmentSourceId: "SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18", creatorId: "ENT-JAMIE-BURKART" } }
 ];
 
 const intakeItems: KnowledgeBank["intakeItems"] = [{
@@ -150,6 +177,14 @@ const intakeItems: KnowledgeBank["intakeItems"] = [{
   visibility: "public-safe", disposition: "integrated", sourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10", "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
   observationIds: ["OBS-DCLA-REEL-EDITION", "OBS-DCLA-REEL-LISTED-COLLABORATORS"], researchInquiryIds: [],
   boundaries: ["Outbound link and text only; no media or screenshots copied to the site.", "Engagement counters are excluded from portfolio claims.", "The user authorized this bounded update after review; publication on Instagram does not itself confer reuse rights."]
+}, {
+  id: "INTAKE-DCLA-OUTCOME-CORRECTION-2026-10-18", kind: "analysis-note", title: "Creator clarification: adoption and public collaboration",
+  submittedAt: reviewedAt, submittedBy: "Jamie Burkart", projectIds: ["fair-rent-nyc"],
+  reason: "Correct an output-only account by retaining observed public collaboration and Jamie's account of its campaign purpose.",
+  visibility: "public-safe", disposition: "integrated",
+  sourceIds: ["SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18", "SRC-DCLA-INSTAGRAM-REEL-2026-10", "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"],
+  observationIds: ["OBS-DCLA-RECAP-STRATEGIC-OUTCOME"], researchInquiryIds: [],
+  boundaries: ["Approved bounded text only; preserve first-person assessment separately from institutional positions and measured impact."]
 }];
 const observations: KnowledgeBank["observations"] = [
   { id: "OBS-RECENT-WONDERVILLE", intakeId: "INTAKE-RECENT-DELIVERY-2026-10", sourceId: sources[0].id, project: "fair-rent-nyc", kind: "source-fact",
@@ -170,7 +205,11 @@ const observations: KnowledgeBank["observations"] = [
     text: "The supplied Collaborators sheet lists 651arts, nyculture, bkartscouncil, lin.tyrpien, jamieburkart and nycartc. Four other supplied screenshots show the reel and on-screen text; their counters are not used as outcome evidence.",
     locator: "User-supplied fifth screenshot, Collaborators sheet; other four screenshots provide visual context.",
     status: "extracted", publicSafe: true, claimIds: ["CLM-DCLA-REEL-COLLABORATORS-2026"], comparisonSourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10"], researchInquiryIds: [],
-    limitations: ["Capture date unknown; roster not independently extracted by yt-dlp.", "Platform collaboration does not establish authorship allocation, commissioning, policy agreement or current account status."] }
+    limitations: ["Capture date unknown; roster not independently extracted by yt-dlp.", "Platform collaboration does not establish authorship allocation, commissioning, policy agreement or current account status."] },
+  { id: "OBS-DCLA-RECAP-STRATEGIC-OUTCOME", intakeId: "INTAKE-DCLA-OUTCOME-CORRECTION-2026-10-18", sourceId: "SRC-DCLA-CREATOR-ASSESSMENT-2026-10-18", project: "fair-rent-nyc", kind: "participant-memory",
+    text: "Jamie identifies adoption of the recap, public collaboration with the named organizations and journalist, and circulation of the commercial rent stabilization message as his criteria for success.",
+    status: "captured", publicSafe: true, claimIds: ["CLM-DCLA-RECAP-STRATEGIC-OUTCOME-2026"], comparisonSourceIds: ["SRC-DCLA-INSTAGRAM-REEL-2026-10", "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"], researchInquiryIds: [],
+    limitations: ["A creator's assessment is not independent evidence of collaborator motivations, institutional policy positions, quantified reach or legislative effect."] }
 ];
 
 const entities: KnowledgeBank["entities"] = [

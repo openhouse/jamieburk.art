@@ -1,12 +1,12 @@
 {
   "reportVersion": 10,
-  "checkedAt": "2026-10-18T20:39:46.760Z",
-  "baseUrl": "http://127.0.0.1:42090",
-  "publicSurfaceFingerprint": "755a23985cd9c3d2e72f29cb08c9f551b5ada93a9d1d5292377a00457d40b493",
+  "checkedAt": "2026-10-18T22:30:07.126Z",
+  "baseUrl": "http://127.0.0.1:42093",
+  "publicSurfaceFingerprint": "a05d6a91c3c6cad4c28ade585298dadf9985433f416ce3bd405a69c7d031c54e",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
   "publicSurfaceFileCount": 155,
   "fingerprintUnchangedDuringObservation": true,
-  "captureMethod": "Fresh Playwright Chrome viewport captures; coordinator visually inspected all four images after capture, plus the reel, skip-link and mobile-menu screenshots. No clipped copy, unreadable controls or overlapping navigation was observed. This is not human acceptance or a complete accessibility audit.",
+  "captureMethod": "Fresh Playwright Chrome viewport captures; visual-inspection judgment is recorded separately after viewing.",
   "routes": [
     {
       "path": "/",
@@ -25,7 +25,7 @@
           "pixelHeight": 900,
           "httpStatus": 200,
           "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
-          "capturedAt": "2026-10-18T20:38:09.137Z"
+          "capturedAt": "2026-10-18T22:29:50.557Z"
         },
         {
           "route": "/",
@@ -39,7 +39,7 @@
           "pixelHeight": 812,
           "httpStatus": 200,
           "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
-          "capturedAt": "2026-10-18T20:38:13.676Z"
+          "capturedAt": "2026-10-18T22:29:52.025Z"
         }
       ]
     },
@@ -60,7 +60,7 @@
           "pixelHeight": 900,
           "httpStatus": 200,
           "sha256": "55242904db1f37b68bc90dc1e0380d945cd5bff0ba31362e74b7b0d1702c4c66",
-          "capturedAt": "2026-10-18T20:38:18.327Z"
+          "capturedAt": "2026-10-18T22:29:52.858Z"
         },
         {
           "route": "/about",
@@ -74,7 +74,7 @@
           "pixelHeight": 1200,
           "httpStatus": 200,
           "sha256": "a3d9bf4b75d797fe4643ec92c84ad2f9c1afa62778d8cee669e2d4a7c2a66ddd",
-          "capturedAt": "2026-10-18T20:38:22.905Z"
+          "capturedAt": "2026-10-18T22:29:53.667Z"
         }
       ]
     }

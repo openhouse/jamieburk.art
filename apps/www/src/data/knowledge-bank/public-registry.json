@@ -43,6 +43,26 @@
       ]
     },
     {
+      "id": "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10",
+      "title": "Instagram collaborator display for the listening-session reel",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://www.instagram.com/reel/DeNAv1HhOxC/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Collaborator display for the NYC Artist Coalition reel, observed in a Jamie-supplied screenshot reviewed October 18, 2026; screenshot capture date unknown.",
+      "publicNote": "The screenshot lists six accounts. The roster was not independently extracted by the video downloader and is not a current membership or institutional-endorsement claim.",
+      "doesNotEstablish": [
+        "equal creative authorship",
+        "a DCLA commission",
+        "policy endorsement",
+        "event-production responsibility",
+        "current collaborator roster",
+        "permission to reproduce screenshots or underlying media"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1298,7 +1318,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution. The 30-second Instagram edition pairs event photographs with text about cultural space and accountability.",
+          "text": "Jamie created a photo-animation recap of the city’s August 26, 2026 arts listening session at 651 ARTS for NYC Artist Coalition. By October 3, Lin Tyrpien’s article included the animation and credited Jamie. The 30-second Instagram edition pairs event photographs with participants’ requests about cultural space and accountability.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1355,6 +1375,69 @@
         "Jamie explicitly approved a limited text-only summary naming Rusty and the project on October 18; recordings, participant names and private messages remain excluded.",
         "Delivery and proof checks do not establish client acceptance, payment, physical printing or installation.",
         "Public track titles do not establish which delivered audio edition was published."
+      ]
+    },
+    {
+      "id": "CLM-DCLA-REEL-COLLABORATORS-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The recap became a public Instagram collaboration. The post lists NYC Department of Cultural Affairs (DCLA), Brooklyn Arts Council, 651 ARTS, Lin Tyrpien, NYC Artist Coalition and Jamie as collaborators.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10",
+          "relationship": "direct-support",
+          "supports": [
+            "platform-listed collaborators"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Platform listing is not equal creative authorship, commissioning, endorsement or event-production authority.",
+        "Screenshot capture date is unknown; October 18 is the review date.",
+        "Names and handles come from the collaborator display, not face recognition.",
+        "Jamie authorized this bounded text projection of the public collaboration; no blanket policy endorsement is asserted."
+      ]
+    },
+    {
+      "id": "CLM-DCLA-RECAP-STRATEGIC-OUTCOME-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For Jamie, the success was a shared recap that carried Fair Rent NYC’s call for commercial rent stabilization. It made the coalition and his contribution publicly visible alongside the participating institutions. Collaboration on the recap does not establish institutional endorsement of the campaign’s legislative agenda.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-DCLA-INSTAGRAM-REEL-2026-10",
+          "relationship": "direct-support",
+          "supports": [
+            "visible campaign message"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Success is Jamie's explicitly attributed assessment, not an independent impact evaluation.",
+        "The visible rent-stabilization message and shared publication do not establish institutional endorsement, policy adoption, measured reach or a formal partnership.",
+        "Text-only summary authorized; participant statements, photographs, audio and screenshots are not newly licensed for reuse."
       ]
     },
     {
@@ -3335,6 +3418,7 @@
       "sourceOrder": [
         "SRC-RECENT-DCLA-ARTICLE",
         "SRC-DCLA-INSTAGRAM-REEL-2026-10",
+        "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10",
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
         "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
         "SRC-NYCAC-NPR-CABARET-2017-09-20",
@@ -3373,6 +3457,22 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-RECENT-DCLA-ARTICLE",
+            "SRC-DCLA-INSTAGRAM-REEL-2026-10"
+          ]
+        },
+        {
+          "id": "animation-collaboration",
+          "claimId": "CLM-DCLA-REEL-COLLABORATORS-2026",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-DCLA-REEL-COLLABORATOR-DISPLAY-2026-10"
+          ]
+        },
+        {
+          "id": "animation-outcome",
+          "claimId": "CLM-DCLA-RECAP-STRATEGIC-OUTCOME-2026",
+          "projection": "case-study",
+          "sourceIds": [
             "SRC-DCLA-INSTAGRAM-REEL-2026-10"
           ]
         },

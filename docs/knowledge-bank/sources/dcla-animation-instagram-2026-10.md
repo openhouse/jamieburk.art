@@ -95,9 +95,18 @@ remain unknown.
 
 ## Selective portfolio use
 
-The Fair Rent NYC case study retains Jamie's credited contribution and Lin's
-article authorship, adds a short description of the Instagram edition and links
-directly to it. The collaborator roster remains a held projection rather than a
-portfolio endorsement claim. Screenshot counters are excluded from claims about
-reach or impact. No screenshot, video, audio or third-party photo is rehosted or
-embedded; a public source link is not reuse permission.
+Jamie clarified on October 18 that success meant adoption of the recap, public
+collaboration, and carrying Fair Rent NYC's commercial rent stabilization message.
+He authorized a bounded text update to make that outcome visible. Three further
+screenshots show the same six-account collaborator display and two message frames;
+they do not establish a new capture date or a change in the roster.
+
+The case study now distinguishes Jamie's credited creation, the article's use,
+the shared Instagram publication and his assessment of its strategic value.
+The public text names the collaborators without converting collaboration into
+institutional endorsement. A separate creator-assessment source and observation
+preserve whose interpretation this is; the public reel supports the visible
+campaign message, not a claim about policy adoption or measured impact.
+
+Screenshot counters remain excluded. No screenshot, video, audio or third-party
+photo is rehosted or embedded; a public source link is not reuse permission.

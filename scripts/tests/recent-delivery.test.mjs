@@ -285,6 +285,91 @@ test("a platform source without any rights record cannot expose an asset URL", (
   assert.equal(validate(c).pass, false);
 });
 
+test("source-bound shared public collaboration may be described without erasing its participants", () => {
+  const c = platformCandidate();
+  projectPlatformText(c, "The artist and cultural institution appear together in a public collaboration on this post.");
+  const result = validate(c);
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
+function campaignOutcomeCandidate() {
+  const c = candidate();
+  c.contracts[0].eventDate = null;
+  c.contracts[0].observedStates = ["published"];
+  c.contracts[0].publicStates = ["published"];
+  c.contracts[0].sourceIds.push("SRC-SYNTHETIC-CREATOR-ASSESSMENT");
+  c.contracts[0].campaignMessageOutcome = {
+    artifactSourceId: "SRC-SYNTHETIC-HANDOFF",
+    assessmentSourceId: "SRC-SYNTHETIC-CREATOR-ASSESSMENT",
+    creatorId: "ENT-SYNTHETIC-CREATOR"
+  };
+  c.sources[0].visibility = "public";
+  c.sources[0].canonicalUrl = "https://example.test/campaign-recap";
+  c.sources[0].supportsGenerally = ["visible campaign message"];
+  c.sources.push({
+    id: "SRC-SYNTHETIC-CREATOR-ASSESSMENT", visibility: "protected", author: "Avery Example",
+    supportsGenerally: ["creator assessment of campaign-message circulation"]
+  });
+  c.claims[0].evidence[0].supports = ["visible campaign message"];
+  c.claims[0].evidence.push({
+    sourceId: "SRC-SYNTHETIC-CREATOR-ASSESSMENT", renderCitation: false,
+    supports: ["creator assessment of campaign-message circulation"]
+  });
+  c.claims[0].projections[0].text = "For Avery, the recap succeeded by carrying the campaign's message within a shared public communication.";
+  c.entities = [{ id: "ENT-SYNTHETIC-CREATOR", name: "Avery Example", kind: "person", publicSafe: true }];
+  return c;
+}
+
+test("an attributed campaign-message outcome can combine a public artifact with a protected creator assessment", () => {
+  const result = validate(campaignOutcomeCandidate());
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
+// These tests fail if the validator permits source substitution, removes creator
+// attribution, or promotes a creator's assessment into stronger observed states.
+const campaignOutcomeMutations = [
+  ["campaign outcome binding cannot be null", (c) => { c.contracts[0].campaignMessageOutcome = null; }],
+  ["campaign outcome binding cannot omit its creator", (c) => { delete c.contracts[0].campaignMessageOutcome.creatorId; }],
+  ["campaign outcome binding cannot omit the artifact", (c) => { delete c.contracts[0].campaignMessageOutcome.artifactSourceId; }],
+  ["campaign outcome binding cannot omit the assessment", (c) => { delete c.contracts[0].campaignMessageOutcome.assessmentSourceId; }],
+  ["campaign artifact must remain in the declared source set", (c) => { c.contracts[0].campaignMessageOutcome.artifactSourceId = "SRC-UNRELATED"; }],
+  ["creator assessment must remain in the declared source set", (c) => { c.contracts[0].campaignMessageOutcome.assessmentSourceId = "SRC-UNRELATED"; }],
+  ["a public artifact cannot stand in for the creator's separate assessment", (c) => { c.contracts[0].campaignMessageOutcome.assessmentSourceId = "SRC-SYNTHETIC-HANDOFF"; }],
+  ["a protected artifact cannot establish public campaign-message circulation", (c) => { c.sources[0].visibility = "protected"; delete c.sources[0].canonicalUrl; }],
+  ["a public artifact needs a public source destination", (c) => { delete c.sources[0].canonicalUrl; }],
+  ["artifact provenance must support the visible campaign message", (c) => { c.sources[0].supportsGenerally = ["published animation credit"]; }],
+  ["claim evidence must bind the visible campaign message", (c) => { c.claims[0].evidence[0].supports = ["published animation credit"]; }],
+  ["assessment provenance must support the creator's interpretation", (c) => { c.sources[1].supportsGenerally = ["animation duration"]; }],
+  ["claim evidence must bind the creator's interpretation", (c) => { c.claims[0].evidence[1].supports = ["animation duration"]; }],
+  ["creator assessment requires a known person", (c) => { c.entities = []; }],
+  ["an institution cannot replace the identified creator", (c) => { c.entities[0].kind = "organization"; }],
+  ["assessment authorship cannot silently change", (c) => { c.sources[1].author = "Different Author"; }],
+  ["an unattributed assessment cannot establish creator interpretation", (c) => { delete c.sources[1].author; }],
+  ["campaign-message outcome cannot infer observed publication", (c) => { c.contracts[0].observedStates = ["created"]; c.contracts[0].publicStates = ["created"]; }],
+  ["campaign-message outcome cannot silently project an omitted publication state", (c) => { c.contracts[0].observedStates.push("created"); c.contracts[0].publicStates = ["created"]; }],
+  ["creator interpretation cannot establish institutional endorsement", (c) => { c.claims[0].projections[0].text = "For Avery, the public institution endorsed the campaign."; }],
+  ["a neighboring limitation cannot hide an endorsement inferred from creator interpretation", (c) => { c.claims[0].projections[0].text = "Policy change is not established, but the cultural institution endorsed the campaign."; }],
+  ["creator interpretation cannot establish a commission", (c) => { c.claims[0].projections[0].text = "The institution commissioned the recap."; }],
+  ["creator interpretation cannot establish co-creation", (c) => { c.claims[0].projections[0].text = "The participating institutions co-created the animation."; }]
+];
+
+for (const [name, mutate] of campaignOutcomeMutations) {
+  test(name, () => {
+    const c = campaignOutcomeCandidate();
+    mutate(c);
+    const result = validate(c);
+    assert.equal(result.pass, false, name);
+    assert.ok(result.errors.length > 0, "a failed campaign-outcome gate must explain its boundary");
+  });
+}
+
+test("a creator's bounded success assessment need not erase an explicit endorsement limitation", () => {
+  const c = campaignOutcomeCandidate();
+  c.claims[0].projections[0].text += " This does not establish institutional endorsement or commissioning.";
+  const result = validate(c);
+  assert.equal(result.pass, true, result.errors.join("\n"));
+});
+
 test("Red Hook delivery observation does not invent an exact delivery date", () => {
   const contract = recentDeliveryContracts.find((item) => item.claimId === "CLM-RECENT-RED-HOOK-2026-10");
   assert.equal(contract.eventDate, null);
