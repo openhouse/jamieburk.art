@@ -100,10 +100,50 @@ const mutations = [
   ["inquiry deletion loses unresolved attribution and reuse", c => { c.knowledge.researchInquiries = []; }]
 ];
 
+mutations.push(
+  ["deleting every observation and reciprocal link hides the evidence population", c => { c.knowledge.observations = []; c.knowledge.intakeItems[0].observationIds = []; }],
+  ["deleting caption evidence and its reciprocal link hides one inspected record", c => { c.knowledge.observations = c.knowledge.observations.filter(item => item.id !== "OBS-DCLA-ANIMATION-CAPTION-SEQUENCE"); c.knowledge.intakeItems[0].observationIds = c.knowledge.intakeItems[0].observationIds.filter(id => id !== "OBS-DCLA-ANIMATION-CAPTION-SEQUENCE"); }],
+  ["an observation is reassigned to another project", c => { c.knowledge.observations[0].project = "callnyc"; }],
+  ["the credit claim is reassigned to another project", c => { c.knowledge.claims[0].project = "callnyc"; }],
+  ["the inquiry is reassigned to another project", c => { c.knowledge.researchInquiries[0].project = "callnyc"; }],
+  ["the intake is reassigned to another project", c => { c.knowledge.intakeItems[0].projectIds = ["callnyc"]; }],
+  ["private inspection custody becomes a live public source", c => { Object.assign(c.knowledge.sources[2], { visibility: "public", preservationStatus: "live", canonicalUrl: "https://example.test/inspection" }); }],
+  ["removing both protected inspection sources erases the reviewed evidence", c => {
+    const removed = new Set(["SRC-DCLA-ANIMATION-VISUAL-REVIEW-2026-10-18", "SRC-DCLA-COLLABORATOR-PANEL-2026-10-18"]);
+    c.knowledge.sources = c.knowledge.sources.filter(item => !removed.has(item.id));
+    c.knowledge.observations = c.knowledge.observations.filter(item => !removed.has(item.sourceId));
+    c.knowledge.intakeItems[0].sourceIds = c.knowledge.intakeItems[0].sourceIds.filter(id => !removed.has(id));
+    c.knowledge.intakeItems[0].observationIds = c.knowledge.observations.map(item => item.id);
+    c.knowledge.researchInquiries[0].sourceIds = c.knowledge.researchInquiries[0].sourceIds.filter(id => !removed.has(id));
+  }],
+  ["article-credit observation is rebound to collaborator screenshots", c => { c.knowledge.observations[0].sourceId = "SRC-DCLA-COLLABORATOR-PANEL-2026-10-18"; }],
+  ["the claim loses its boundaries", c => { c.knowledge.claims[0].boundaries = []; }],
+  ["the claim loses its anti-claims", c => { c.knowledge.claims[0].antiClaims = []; }],
+  ["the claim loses its reviewer attribution", c => { c.knowledge.claims[0].reviewedBy = []; }],
+  ["source scope limits are removed", c => { c.knowledge.sources.forEach(item => { item.doesNotEstablish = []; }); }],
+  ["an observation loses its interpretation limits", c => { c.knowledge.observations[0].limitations = []; }],
+  ["an observation is no longer public-safe", c => { c.knowledge.observations[0].publicSafe = false; }],
+  ["a research source loses its custody identifier", c => { delete c.knowledge.sources[2].protectedLocatorId; }],
+  ["the published article is relabeled as a personal research note", c => { c.knowledge.sources[0].kind = "research-run"; }]
+);
+
 for (const [name, mutate] of mutations) {
   test(`reject: ${name}`, () => {
     const changed = candidate();
     mutate(changed);
+    assert.equal(evaluateDclaPublication(changed).passed, false);
+  });
+}
+
+for (const { id } of dclaAnimationPublication.observations) {
+  test(`reject: removing the source anchor from ${id}`, () => {
+    const changed = candidate();
+    delete changed.knowledge.observations.find(item => item.id === id).locator;
+    assert.equal(evaluateDclaPublication(changed).passed, false);
+  });
+  test(`reject: a whitespace-only source anchor for ${id}`, () => {
+    const changed = candidate();
+    changed.knowledge.observations.find(item => item.id === id).locator = " \n\t ";
     assert.equal(evaluateDclaPublication(changed).passed, false);
   });
 }

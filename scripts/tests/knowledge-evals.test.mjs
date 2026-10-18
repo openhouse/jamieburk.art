@@ -165,8 +165,8 @@ test("knowledge-bank gate accepts two fresh DCLA-publication holdouts", () => {
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "dcla-publication-holdout-hiring-credit-2026-10-18-a",
-    "dcla-publication-holdout-data-integrity-2026-10-18-b"
+    "dcla-publication-holdout-hiring-credit-2026-10-18-final-a",
+    "dcla-publication-holdout-data-integrity-2026-10-18-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);

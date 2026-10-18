@@ -7,7 +7,22 @@ const articleId = "SRC-DCLA-CREATIVE-NEW-YORK-2026-10-03";
 const reelId = "SRC-DCLA-INSTAGRAM-DENAV1HHOXC";
 const claimId = "CLM-DCLA-ANIMATION-PUBLISHED-CREDIT";
 const inquiryId = "INQ-DCLA-ANIMATION-CREDITS-AND-WEBSITE-USE";
+const intakeId = "INTAKE-DCLA-ANIMATION-PUBLICATION-2026-10";
+const project = "nyc-artist-coalition";
+const inspectionId = "SRC-DCLA-ANIMATION-VISUAL-REVIEW-2026-10-18";
+const screenshotsId = "SRC-DCLA-COLLABORATOR-PANEL-2026-10-18";
 const creditSupport = "published photo-animation credit to Jamie Burkart for NYC Artist Coalition";
+const observationSources = {
+  "OBS-DCLA-ANIMATION-ARTICLE-CREDIT": articleId,
+  "OBS-DCLA-ANIMATION-ARTICLE-INCLUSION": articleId,
+  "OBS-DCLA-ANIMATION-REEL-PUBLICATION": reelId,
+  "OBS-DCLA-ANIMATION-CAPTION-SEQUENCE": inspectionId,
+  "OBS-DCLA-ANIMATION-HISTORY-BOUNDARY": inspectionId,
+  "OBS-DCLA-ANIMATION-COLLABORATORS": screenshotsId
+};
+
+const exactInventory = (values, expected) => values.length === expected.length && new Set(values).size === values.length && expected.every(value => values.includes(value));
+const nonemptyTextList = values => Array.isArray(values) && values.length > 0 && values.every(value => typeof value === "string" && value.trim().length > 0);
 
 // Source-backed metadata checks do not grant media use, certify speech, or judge people.
 export function evaluateDclaPublication({ review = dclaPublicationReview, knowledge: inputKnowledge = dclaAnimationPublication, graph = knowledgeBank } = {}) {
@@ -30,21 +45,35 @@ export function evaluateDclaPublication({ review = dclaPublicationReview, knowle
   const intakeById = new Map(knowledge.intakeItems.map(item => [item.id, item]));
   const inquiryIds = new Set(knowledge.researchInquiries.map(item => item.id));
   const claimIds = new Set(knowledge.claims.map(item => item.id));
+  const inventories = {
+    sources: [articleId, reelId, inspectionId, screenshotsId],
+    observations: Object.keys(observationSources),
+    intakeItems: [intakeId], claims: [claimId], researchInquiries: [inquiryId]
+  };
+  for (const [key, expected] of Object.entries(inventories)) check(exactInventory(knowledge[key].map(item => item.id), expected), `Retain the complete inspected ${key} population; no silent deletion or substitution.`);
   for (const key of Object.keys(schemas)) check(new Set(knowledge[key].map(item => item.id)).size === knowledge[key].length, `Duplicate stable IDs in ${key}.`);
   const urls = knowledge.sources.map(item => item.canonicalUrl).filter(Boolean);
   check(new Set(urls).size === urls.length, "One source record per canonical publication URL.");
   for (const item of knowledge.intakeItems) {
+    check(exactInventory(item.projectIds, [project]) && item.visibility === "public-safe" && nonemptyTextList(item.boundaries), "The intake must retain its project and public-safe scope boundaries.");
     check(item.sourceIds.every(id => sourceById.has(id)) && item.researchInquiryIds.every(id => inquiryIds.has(id)), "Intake links must resolve.");
     check(item.observationIds.every(id => observationById.get(id)?.intakeId === item.id), "Intake observations must link back to the same intake.");
   }
   for (const item of knowledge.observations) {
+    check(item.project === project && item.intakeId === intakeId && item.sourceId === observationSources[item.id], "Observation project, intake, and source ownership must match the inspected record.");
+    check(item.publicSafe === true && nonemptyTextList(item.limitations), "Each public-safe observation must retain its interpretation limits.");
+    check(typeof item.locator === "string" && item.locator.trim().length > 0, "Each observation needs a nonempty source anchor, not only a source ID.");
     check(sourceById.has(item.sourceId) && item.comparisonSourceIds.every(id => sourceById.has(id)), "Observation source links must resolve.");
     check([item.sourceId, ...item.comparisonSourceIds].every(id => intakeById.get(item.intakeId)?.sourceIds.includes(id)), "An observation's sources must be registered by its owning intake.");
     check(intakeById.get(item.intakeId)?.observationIds.includes(item.id), "Every observation must have a reciprocal intake link.");
     check(item.claimIds.every(id => claimIds.has(id)) && item.researchInquiryIds.every(id => inquiryIds.has(id)), "Observation claim and inquiry links must resolve.");
   }
-  for (const inquiry of knowledge.researchInquiries) check(inquiry.sourceIds.every(id => sourceById.has(id)), "Inquiry sources must resolve.");
+  for (const inquiry of knowledge.researchInquiries) {
+    check(inquiry.project === project && nonemptyTextList(inquiry.limitations), "The inquiry must retain its project and limitations.");
+    check(inquiry.sourceIds.every(id => sourceById.has(id)), "Inquiry sources must resolve.");
+  }
   for (const claim of knowledge.claims) {
+    check(claim.project === project && nonemptyTextList(claim.boundaries) && nonemptyTextList(claim.antiClaims) && nonemptyTextList(claim.reviewedBy), "The credit claim needs its original project, boundaries, anti-claims, and reviewer attribution.");
     check(claim.researchInquiryIds.every(id => inquiryIds.has(id)), "Claim inquiry links must resolve.");
     for (const evidence of claim.evidence) check(evidence.supports.every(key => sourceById.get(evidence.sourceId)?.supportsGenerally.includes(key)), "Claim support keys must exist on the supporting source.");
     check(claim.projections.length > 0 && claim.projections.every(item => item.status === "hold" && item.surfaces.length === 0), "Publication attribution remains an unplaced, held projection.");
@@ -72,6 +101,13 @@ export function evaluateDclaPublication({ review = dclaPublicationReview, knowle
   check(sourceById.get(articleId)?.canonicalUrl === "https://www.creativenewyork.co/p/i-imagine-a-brooklyn-where" && sourceById.get(reelId)?.canonicalUrl === "https://www.instagram.com/reel/DeNAv1HhOxC/", "Use the exact clean public publication URLs, not download or tracking URLs.");
   check(Boolean(sourceById.get(reelId)?.media), "The reel must retain explicit unresolved media-use metadata.");
   for (const source of knowledge.sources) {
+    check(nonemptyTextList(source.supportsGenerally) && nonemptyTextList(source.doesNotEstablish), "Every source needs explicit support and scope limits.");
+    const protectedId = { [inspectionId]: "RESEARCH-DCLA-ANIMATION-VISUAL-2026-10", [screenshotsId]: "RESEARCH-DCLA-REEL-SCREENSHOTS-2026-10" }[source.id];
+    if (protectedId) {
+      check(source.kind === "research-run" && source.visibility === "public-metadata-only" && source.preservationStatus === "private" && source.protectedLocatorId === protectedId && !source.canonicalUrl, "Protected inspection and screenshot sources must retain their metadata-only private custody.");
+    } else {
+      check(source.visibility === "public" && source.preservationStatus === "live" && source.kind === (source.id === articleId ? "published-article" : "institutional-social-post"), "Public publication sources must retain their observed source type and public status.");
+    }
     check(!source.assetUrl && !source.archiveUrl, "No media payload or unverified archive is selected for publication.");
     if (source.media) check(source.media.rightsStatus === "permission-needed" && source.media.consentStatus === "review-needed" && source.media.publicDisplayStatus === "hold", "Public video availability is not media reuse clearance.");
   }

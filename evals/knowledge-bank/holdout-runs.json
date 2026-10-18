@@ -843,6 +843,50 @@
       "blockers": [
         "Two fresh independent model holdouts must inspect the frozen publication addition, preserved August evidence limits, source-link and attribution regressions, all existing knowledge criteria, and held website projection. Historical accepted reviews are not current-candidate evidence."
       ]
+    },
+    {
+      "judgeId": "dcla-publication-holdout-hiring-credit-2026-10-18-a",
+      "completedAt": "2026-10-18T20:20:53Z",
+      "lens": "Independent model hiring-credit review of source commit 27fe365d6839a94a731cee04a43b0f2a62b47650; full result retained in docs/qa/evals-H/dcla-publication-hiring-first-rejected.json",
+      "weightedScore": 4.9,
+      "criterionScores": [
+        5,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "accepted": false,
+      "blockers": [
+        "Every one of the six new DCLA observations omits locator. Source IDs and limitations exist, and the credit claim's evidence edge has a caption locator, but the observations themselves do not identify the inspected article region, metadata fields, visual sample locations, or screenshot panel. The caption-sequence observation compresses multiple specific caption assertions without locating their sample bins."
+      ]
     }
   ]
 }
