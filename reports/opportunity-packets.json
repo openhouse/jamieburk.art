@@ -3,6 +3,35 @@
   "method": "oti-evidence-first-v1",
   "packets": [
     {
+      "id": "nyc-oti-cec-797003",
+      "title": "NYC OTI / Civic Engagement Commission — Programs Project Manager 797003",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+          "sha256": "25e103c944e22a693188ac8d3b9af606451d68682ad4b2f9d196c3cfb9c13069"
+        }
+      ],
+      "source_hash": "08d2aedc1c830695249281f594544f2cd81db4208a43a2048aee59484f884f56",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
       "id": "opportunity.aclu.product-manager-discovery.8482872002",
       "title": "ACLU - Product Manager II, Discovery",
       "method": "oti-evidence-first-v1",

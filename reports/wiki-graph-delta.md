@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `d6fcfb941ba0c373844929000cd81a1ddef3971b`
-**Generation time:** 2026-10-13T13:43:41-04:00
-**Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
+**Source commit:** `66233b0e3d7ab25f30f35f99bb73e6b15bc125e7`
+**Generation time:** 2026-10-18T07:58:47-04:00
+**Source fingerprint:** `138208b2bd012d56e2d48213025def62ec87519e15a59d83f3e8698536a2f40e`
 
 Compared with the graph artifact on `origin/develop`.
 
-- Nodes added: 65
+- Nodes added: 89
 - Nodes removed: 0
-- Edges added: 264
+- Edges added: 362
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -29,6 +29,7 @@ Compared with the graph artifact on `origin/develop`.
 - `method.civic-match-opportunity-loop`
 - `method.private-application-status-loop`
 - `opportunity.circle-o.operations-manager.2026`
+- `opportunity.nyc-oti.cec-programs-project-manager.797003`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
 - `opportunity.nyc-oti.speed-operations-manager.789810`
@@ -36,13 +37,29 @@ Compared with the graph artifact on `origin/develop`.
 - `opportunity.nyc-peu.chief-strategy-officer.787960`
 - `opportunity.uibk.studio3.postdoc.arch-15927`
 - `organization.circle-o`
+- `organization.nyc-cec.digital-equity-team`
+- `organization.nyc-civic-engagement-commission`
+- `organization.nyc-office-of-mass-engagement`
 - `organization.nyc-public-engagement-unit`
+- `person.abby-walczak`
+- `person.alexis-spencer`
 - `person.courtney-kishbaugh`
+- `person.emma-dillon`
+- `person.haydon-john`
+- `person.hillary-carelli-donnell`
 - `person.josh-gee`
 - `person.kathrin-aste`
 - `person.kayla-hamilton`
+- `person.oscar-romero`
+- `person.sarah-sayeed`
 - `person.thomas-edlinger`
+- `person.wendy-trull`
 - `portfolio.work.kc-spaces-fund`
+- `project.nyc-cec.community-board-assistance`
+- `project.nyc-cec.cultural-partnerships`
+- `project.nyc-cec.peoples-money`
+- `project.nyc-cec.trie-neighborhood-initiative`
+- `project.nyc-cec.voter-language-assistance`
 - `projection.photo.colophon.east-river`
 - `projection.photo.home.screen-room-shoestring`
 - `projection.photo.knowledge-wiki.collective-map`
@@ -63,6 +80,7 @@ Compared with the graph artifact on `origin/develop`.
 - `source.circle-o.open-positions.2026`
 - `source.circle-o.operations-manager-application.2026`
 - `source.civic-match.candidate-network`
+- `source.jobs.oti.cec-programs-project-manager.797003`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`
 - `source.jobs.oti.product-manager.784450`
@@ -72,6 +90,12 @@ Compared with the graph artifact on `origin/develop`.
 - `source.jobs.uibk.studio3.postdoc.arch-15927`
 - `source.nyc-jobs.oti-product-search.2026-08-20`
 - `source.nyc-open-data.jobs.pda4-rgn4`
+- `source.nyc.cec.about-governance.2026-10-18`
+- `source.nyc.cec.cultural-partnerships.2026`
+- `source.nyc.cec.digital-equity.2026-10-18`
+- `source.nyc.cec.peoples-money-cycle5.2026-10-15`
+- `source.nyc.cec.programs.2026-10-18`
+- `source.nyc.cec.staff.2026-10-18`
 - `source.nyc.peu.about`
 - `source.nyc.peu.chief-strategy-officer-interest-form.787960`
 - `source.nyc.speed-report.2026-05-13`

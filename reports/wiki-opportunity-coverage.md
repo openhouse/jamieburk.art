@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
+**Wiki fingerprint:** `138208b2bd012d56e2d48213025def62ec87519e15a59d83f3e8698536a2f40e`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -69,6 +69,13 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.technical-test-fluency` | critical | source-needed | source | Verify current hands-on evidence and prepare a bounded technical demonstration if supportable. |
 | `requirement.codepath.proportionate-process` | critical | visible-proven | none | Explain one instance of intentionally removing or declining process. |
 | `requirement.codepath.ai-automation` | important | visible-qualified | wording | Demonstrate one measured automation loop tied to delivery or QA. |
+
+## NYC OTI / Civic Engagement Commission — Programs Project Manager 797003
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.oti-cec-797003.community-operations` | critical | visible-weak | role-context | Map dated operating examples and collective credit to the employer's criteria. |
+| `requirement.oti-cec-797003.tools-and-training` | critical | visible-weak | source | Verify exact tools and training examples; do not infer Airtable proficiency from generic systems work. |
 
 ## NYC OTI - PIT Crew Senior Product Designer 782373
 

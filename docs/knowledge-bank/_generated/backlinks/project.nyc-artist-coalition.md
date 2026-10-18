@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to NYC Artist Coalition
 
-**Source commit:** `d6fcfb941ba0c373844929000cd81a1ddef3971b`
-**Generation time:** 2026-10-13T13:43:41-04:00
-**Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
+**Source commit:** `66233b0e3d7ab25f30f35f99bb73e6b15bc125e7`
+**Generation time:** 2026-10-18T07:58:47-04:00
+**Source fingerprint:** `138208b2bd012d56e2d48213025def62ec87519e15a59d83f3e8698536a2f40e`
 
 - [NYC Artist Coalition application brief](../../applications/nycac-civic-product-operations.md) - `part_of` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
@@ -201,6 +201,7 @@
 - [Projects as a Recomposable Civic-Cultural System](../../methods/recomposable-civic-cultural-systems.md) - `related_to` (frontmatter)
 - [Sunday Dinner, WOW List, and NYC Artist Coalition Synergy](../../methods/sunday-dinner-wowlist-nycac-synergy.md) - `related_to` (frontmatter)
 - [Circle O - Operations Manager](../../opportunities/circle-o-operations-manager-2026.md) - `related_to` (frontmatter)
+- [NYC OTI / Civic Engagement Commission — Programs Project Manager 797003](../../opportunities/oti-cec-programs-project-manager-797003.md) - `related_to` (frontmatter)
 - [NYC PEU - Chief Strategy Officer 787960](../../opportunities/peu-chief-strategy-officer-787960.md) - `related_to` (frontmatter)
 - [NYC Artist Coalition organization map](../../organizations/nyc-artist-coalition.md) - `related_to` (frontmatter)
 - [Let NYC Dance](../../projects/let-nyc-dance.md) - `related_to` (frontmatter)

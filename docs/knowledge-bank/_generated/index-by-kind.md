@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki index by kind
 
-**Source commit:** `d6fcfb941ba0c373844929000cd81a1ddef3971b`
-**Generation time:** 2026-10-13T13:43:41-04:00
-**Source fingerprint:** `55608d83fec2039cde2a45c29afb7e7e2ddfd06ee09864210a67c20409a0724f`
+**Source commit:** `66233b0e3d7ab25f30f35f99bb73e6b15bc125e7`
+**Generation time:** 2026-10-18T07:58:47-04:00
+**Source fingerprint:** `138208b2bd012d56e2d48213025def62ec87519e15a59d83f3e8698536a2f40e`
 
 ## application
 
@@ -343,6 +343,7 @@
 - [Circle O - Operations Manager](../opportunities/circle-o-operations-manager-2026.md) - `opportunity.circle-o.operations-manager.2026`
 - [CodePath - Senior Program Manager, Claude Corps](../opportunities/codepath-claude-corps.md) - `opportunity.codepath.claude-corps.5182020007`
 - [CodePath - Engineering Project Manager](../opportunities/codepath-engineering-project-manager.md) - `opportunity.codepath.engineering-project-manager.5160542007`
+- [NYC OTI / Civic Engagement Commission — Programs Project Manager 797003](../opportunities/oti-cec-programs-project-manager-797003.md) - `opportunity.nyc-oti.cec-programs-project-manager.797003`
 - [NYC OTI - PIT Crew Senior Product Designer 782373](../opportunities/oti-pit-senior-product-designer-782373.md) - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - [NYC OTI - Product Manager 784450](../opportunities/oti-product-manager-784450.md) - `opportunity.nyc-oti.product-manager.784450`
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../opportunities/oti-senior-product-manager-782366.md) - `opportunity.nyc-oti.senior-product-manager.782366`
@@ -358,16 +359,24 @@
 
 - [Circle O](../organizations/circle-o.md) - `organization.circle-o`
 - [NYC Artist Coalition organization map](../organizations/nyc-artist-coalition.md) - `organization.nyc-artist-coalition`
+- [CEC Digital Equity Team](../organizations/nyc-cec-digital-equity-team.md) - `organization.nyc-cec.digital-equity-team`
+- [NYC Civic Engagement Commission](../organizations/nyc-civic-engagement-commission.md) - `organization.nyc-civic-engagement-commission`
+- [NYC Office of Mass Engagement](../organizations/nyc-office-of-mass-engagement.md) - `organization.nyc-office-of-mass-engagement`
 - [NYC Public Engagement Unit](../organizations/nyc-public-engagement-unit.md) - `organization.nyc-public-engagement-unit`
 
 ## person
 
+- [Abby Walczak](../people/abby-walczak.md) - `person.abby-walczak`
 - [Aileen Palmer](../people/aileen-palmer.md) - `person.aileen-palmer`
+- [Alexis Spencer](../people/alexis-spencer.md) - `person.alexis-spencer`
 - [Charizma Williams](../people/charizma-williams.md) - `person.charizma-williams`
 - [Chris Coleman](../people/chris-coleman.md) - `person.chris-coleman`
 - [Courtney Kishbaugh](../people/courtney-kishbaugh.md) - `person.courtney-kishbaugh`
 - [Diya Vij](../people/diya-vij.md) - `person.diya-vij`
 - [Elana Gordon](../people/elana-gordon.md) - `person.elana-gordon`
+- [Emma Dillon](../people/emma-dillon.md) - `person.emma-dillon`
+- [Haydon John](../people/haydon-john.md) - `person.haydon-john`
+- [Hillary Carelli-Donnell](../people/hillary-carelli-donnell.md) - `person.hillary-carelli-donnell`
 - [Jaclyn Chen](../people/jaclyn-chen.md) - `person.jaclyn-chen`
 - [Jamie Burkart](../people/jamie-burkart.md) - `person.jamie-burkart`
 - [Josh Gee](../people/josh-gee.md) - `person.josh-gee`
@@ -375,9 +384,12 @@
 - [Kayla Hamilton](../people/kayla-hamilton.md) - `person.kayla-hamilton`
 - [Lisa Gelobter](../people/lisa-gelobter.md) - `person.lisa-gelobter`
 - [Luke Farrell](../people/luke-farrell.md) - `person.luke-farrell`
+- [Oscar Romero](../people/oscar-romero.md) - `person.oscar-romero`
 - [Paul Mossine](../people/paul-mossine.md) - `person.paul-mossine`
+- [Dr. Sarah Sayeed](../people/sarah-sayeed.md) - `person.sarah-sayeed`
 - [Thomas Edlinger](../people/thomas-edlinger.md) - `person.thomas-edlinger`
 - [Warren Sack](../people/warren-sack.md) - `person.warren-sack`
+- [Wendy Trull](../people/wendy-trull.md) - `person.wendy-trull`
 - [Zack Parker](../people/zack-parker.md) - `person.zack-parker`
 
 ## place
@@ -395,6 +407,11 @@
 - [Let NYC Dance](../projects/let-nyc-dance.md) - `project.let-nyc-dance`
 - [NTER CHNG](../projects/nter-chng.md) - `project.nter-chng`
 - [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`
+- [CEC community-board assistance and training](../projects/nyc-cec-community-board-assistance.md) - `project.nyc-cec.community-board-assistance`
+- [CEC cultural-institution partnerships](../projects/nyc-cec-cultural-partnerships.md) - `project.nyc-cec.cultural-partnerships`
+- [The People's Money](../projects/nyc-cec-peoples-money.md) - `project.nyc-cec.peoples-money`
+- [TRIE Neighborhood Initiative](../projects/nyc-cec-trie-neighborhood-initiative.md) - `project.nyc-cec.trie-neighborhood-initiative`
+- [CEC Voter Language Assistance](../projects/nyc-cec-voter-language-assistance.md) - `project.nyc-cec.voter-language-assistance`
 - [Office of Nightlife town halls](../projects/office-of-nightlife-town-halls.md) - `project.office-of-nightlife-town-halls`
 - [Save NYC Spaces](../projects/save-nyc-spaces.md) - `project.save-nyc-spaces`
 - [Sunday Dinner and 196 Artists Residency orientation](../projects/sunday-dinner-196-orientation.md) - `project.sunday-dinner-196`
@@ -481,6 +498,7 @@
 - [Official posting - Benepass Product Operations Manager](../sources/jobs-benepass-product-operations.md) - `source.jobs.benepass.product-operations.7f963a7a`
 - [CodePath - Senior Program Manager, Claude Corps 5182020007](../sources/jobs-codepath-claude-corps-5182020007.md) - `source.jobs.codepath.claude-corps.5182020007`
 - [Official posting - CodePath Engineering Project Manager 5160542007](../sources/jobs-codepath-engineering-project-manager-5160542007.md) - `source.jobs.codepath.engineering-project-manager.5160542007`
+- [NYC Jobs — CEC Programs Project Manager 797003](../sources/jobs-oti-cec-programs-project-manager-797003.md) - `source.jobs.oti.cec-programs-project-manager.797003`
 - [NYC Jobs - Executive Director, Product Management 789563](../sources/jobs-oti-executive-director-product-management-789563.md) - `source.jobs.oti.executive-director-product-management.789563`
 - [NYC Jobs - PIT Crew Senior Product Designer 782373](../sources/jobs-oti-pit-senior-product-designer-782373.md) - `source.jobs.oti.pit-senior-product-designer.782373`
 - [NYC Jobs - Product Manager 784450](../sources/jobs-oti-product-manager-784450.md) - `source.jobs.oti.product-manager.784450`
@@ -508,6 +526,12 @@
 - [NYC Council field-kit photograph oral history, July 2026](../sources/recollections/nyc-council-field-kit-oral-history-2026-07.md) - `source.nyc-council.field-kit-oral-history.2026-07`
 - [NYC Jobs OTI product-management search, August 20, 2026](../sources/nyc-jobs-oti-product-search-2026-08-20.md) - `source.nyc-jobs.oti-product-search.2026-08-20`
 - [NYC Open Data — NYC Jobs dataset pda4-rgn4](../sources/nyc-open-data-jobs-pda4-rgn4.md) - `source.nyc-open-data.jobs.pda4-rgn4`
+- [NYC Civic Engagement Commission - mandate and governance](../sources/nyc-cec-about-and-governance-2026-10-18.md) - `source.nyc.cec.about-governance.2026-10-18`
+- [CEC cultural-institution partnerships, 2026](../sources/nyc-cec-cultural-partnerships-2026.md) - `source.nyc.cec.cultural-partnerships.2026`
+- [CEC Digital Equity Team - dated public evidence](../sources/nyc-cec-digital-equity-2026-10-18.md) - `source.nyc.cec.digital-equity.2026-10-18`
+- [The People's Money - fifth-cycle launch, October 15, 2026](../sources/nyc-cec-peoples-money-cycle5-2026-10-15.md) - `source.nyc.cec.peoples-money-cycle5.2026-10-15`
+- [NYC Civic Engagement Commission - operating programs](../sources/nyc-cec-programs-2026-10-18.md) - `source.nyc.cec.programs.2026-10-18`
+- [NYC Civic Engagement Commission - public staff context](../sources/nyc-cec-staff-2026-10-18.md) - `source.nyc.cec.staff.2026-10-18`
 - [Appointment of Diya Vij as Commissioner of Cultural Affairs](../sources/dcla-diya-vij-appointment-2026.md) - `source.nyc.diya-vij-appointment.2026`
 - [NYC Mayor's Office - Lisa Gelobter appointment](../sources/nyc-lisa-gelobter-appointment-2026.md) - `source.nyc.lisa-gelobter-appointment.2026-02-10`
 - [NYC Public Engagement Unit - About PEU](../sources/nyc-peu-about.md) - `source.nyc.peu.about`
