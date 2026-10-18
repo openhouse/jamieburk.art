@@ -23,6 +23,11 @@ const observationSources = {
 
 const exactInventory = (values, expected) => values.length === expected.length && new Set(values).size === values.length && expected.every(value => values.includes(value));
 const nonemptyTextList = values => Array.isArray(values) && values.length > 0 && values.every(value => typeof value === "string" && value.trim().length > 0);
+const validIsoDate = value => {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
+};
 
 // Source-backed metadata checks do not grant media use, certify speech, or judge people.
 export function evaluateDclaPublication({ review = dclaPublicationReview, knowledge: inputKnowledge = dclaAnimationPublication, graph = knowledgeBank } = {}) {
@@ -73,6 +78,7 @@ export function evaluateDclaPublication({ review = dclaPublicationReview, knowle
     check(inquiry.sourceIds.every(id => sourceById.has(id)), "Inquiry sources must resolve.");
   }
   for (const claim of knowledge.claims) {
+    check(claim.reviewedAt === review.reviewedAt, "Claim review dates must match this inspection encounter.");
     check(claim.project === project && nonemptyTextList(claim.boundaries) && nonemptyTextList(claim.antiClaims) && nonemptyTextList(claim.reviewedBy), "The credit claim needs its original project, boundaries, anti-claims, and reviewer attribution.");
     check(claim.researchInquiryIds.every(id => inquiryIds.has(id)), "Claim inquiry links must resolve.");
     for (const evidence of claim.evidence) check(evidence.supports.every(key => sourceById.get(evidence.sourceId)?.supportsGenerally.includes(key)), "Claim support keys must exist on the supporting source.");
@@ -83,6 +89,7 @@ export function evaluateDclaPublication({ review = dclaPublicationReview, knowle
   check(claim?.evidence.some(item => item.sourceId === articleId && item.relationship === "direct-support" && item.supports.includes(creditSupport)), "The article, not account presence, must directly support the animation credit.");
   check(graph.pages.every(page => page.occurrences.every(item => !claimIds.has(item.claimId))), "Held claims must not acquire a public page occurrence.");
   check(knowledge.researchInquiries.some(item => item.id === inquiryId && item.resultStatus === "partially-recovered"), "Keep unresolved production credits and website media use visible.");
+  check([review.reviewedAt, review.eventDate, review.article?.publishedAt, review.article?.inspectedAt, review.reel?.publishedAt].every(validIsoDate), "Review and publication dates must be real ISO calendar dates.");
   check(review.eventDate === "2026-08-26" && review.article?.publishedAt === "2026-10-03" && review.reel?.publishedAt === "2026-10-07", "Keep event and separate publication dates distinct.");
   check(review.article?.embedFirstPublishedAt === null && review.article?.inspectedAt === review.reviewedAt && review.reviewedAt >= review.reel?.publishedAt, "An inspected article does not establish an embed's first-publication date.");
   check(sourceById.get(articleId)?.publishedAt === review.article?.publishedAt && sourceById.get(reelId)?.publishedAt === review.reel?.publishedAt, "Source dates must agree with their separate observed metadata.");
@@ -101,6 +108,7 @@ export function evaluateDclaPublication({ review = dclaPublicationReview, knowle
   check(sourceById.get(articleId)?.canonicalUrl === "https://www.creativenewyork.co/p/i-imagine-a-brooklyn-where" && sourceById.get(reelId)?.canonicalUrl === "https://www.instagram.com/reel/DeNAv1HhOxC/", "Use the exact clean public publication URLs, not download or tracking URLs.");
   check(Boolean(sourceById.get(reelId)?.media), "The reel must retain explicit unresolved media-use metadata.");
   for (const source of knowledge.sources) {
+    check(source.accessedAt === review.reviewedAt, "Source access dates must match this inspection encounter.");
     check(nonemptyTextList(source.supportsGenerally) && nonemptyTextList(source.doesNotEstablish), "Every source needs explicit support and scope limits.");
     const protectedId = { [inspectionId]: "RESEARCH-DCLA-ANIMATION-VISUAL-2026-10", [screenshotsId]: "RESEARCH-DCLA-REEL-SCREENSHOTS-2026-10" }[source.id];
     if (protectedId) {

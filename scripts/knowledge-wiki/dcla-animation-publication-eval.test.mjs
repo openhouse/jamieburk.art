@@ -53,6 +53,10 @@ test("canonical integration retains every publication record and its source link
 
 const mutations = [
   ["article header becomes the first embed date", c => { c.review.article.embedFirstPublishedAt = "2026-10-03"; }],
+  ["a malformed review date passes lexical chronology", c => { c.review.reviewedAt = "2099-99-99"; c.review.article.inspectedAt = "2099-99-99"; }],
+  ["a nonexistent calendar day passes lexical chronology", c => { c.review.reviewedAt = "2027-02-30"; c.review.article.inspectedAt = "2027-02-30"; }],
+  ["source access date disagrees with the inspection", c => { c.knowledge.sources[0].accessedAt = "2026-10-17"; }],
+  ["claim review date disagrees with the inspection", c => { c.knowledge.claims[0].reviewedAt = "2026-10-17"; }],
   ["prose invents October 3 first publication", c => { c.knowledge.observations[1].text = "The animation was first published on October 3, 2026."; }],
   ["missing visual samples become a complete review", c => { c.review.inspection.sampledSecondBins.pop(); }],
   ["repeated sample seconds hide a missing second", c => { c.review.inspection.sampledSecondBins[29] = 28; }],
