@@ -160,13 +160,13 @@ function refreshArchiveProductionApproval(targetSuite) {
   })).digest("hex");
 }
 
-test("knowledge-bank gate accepts two fresh blind-spot-control holdouts", () => {
+test("knowledge-bank gate accepts two fresh DCLA-publication holdouts", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "blind-spot-holdout-hiring-credit-2026-07-15-final-a",
-    "blind-spot-holdout-data-integrity-2026-07-15-final-b"
+    "dcla-publication-holdout-hiring-credit-2026-10-18-a",
+    "dcla-publication-holdout-data-integrity-2026-10-18-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);

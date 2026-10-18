@@ -832,6 +832,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-dcla-publication-2026-10-18",
+      "completedAt": "2026-10-18T20:18:33Z",
+      "lens": "Protocol reset for an additive publication claim and a reviewed related-claims roster rebind; not a scored review",
+      "weightedScore": null,
+      "criterionScores": [],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent model holdouts must inspect the frozen publication addition, preserved August evidence limits, source-link and attribution regressions, all existing knowledge criteria, and held website projection. Historical accepted reviews are not current-candidate evidence."
+      ]
     }
   ]
 }

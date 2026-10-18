@@ -31,6 +31,7 @@ import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaProductionJuly2026 } from "./social-media-production-2026-07.ts";
 import { teamMemoryResponseAugust2026 } from "./team-memory-response-2026-08.ts";
 import { dclaListeningSession } from "./dcla-listening-session-2026-08.ts";
+import { dclaAnimationPublication } from "./dcla-animation-publication-2026-10.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "./urbanhermit-social-population-2026-07.ts";
 import { wowListFacebookPostKnowledge } from "./wowlist-facebook-posts-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "./wowlist-social-population-2026-07.ts";
@@ -69,6 +70,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.intakeItems,
     ...teamMemoryResponseAugust2026.intakeItems,
     ...dclaListeningSession.intakeItems,
+    ...dclaAnimationPublication.intakeItems,
     ...urbanhermitSocialPopulationJuly2026.intakeItems,
     ...wowListFacebookPostKnowledge.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
@@ -125,6 +127,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.observations,
     ...teamMemoryResponseAugust2026.observations,
     ...dclaListeningSession.observations,
+    ...dclaAnimationPublication.observations,
     ...urbanhermitSocialPopulationJuly2026.observations,
     ...wowListFacebookPostKnowledge.observations,
     ...wowListSocialPopulationJuly2026.observations,
@@ -285,6 +288,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.sources,
     ...teamMemoryResponseAugust2026.sources,
     ...dclaListeningSession.sources,
+    ...dclaAnimationPublication.sources,
     ...urbanhermitSocialPopulationJuly2026.sources,
     ...wowListFacebookPostKnowledge.sources,
     ...wowListSocialPopulationJuly2026.sources,
@@ -439,6 +443,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.claims,
     ...teamMemoryResponseAugust2026.claims,
     ...dclaListeningSession.claims,
+    ...dclaAnimationPublication.claims,
     ...urbanhermitSocialPopulationJuly2026.claims,
     ...wowListFacebookPostKnowledge.claims,
     ...wowListSocialPopulationJuly2026.claims,
@@ -515,6 +520,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.researchInquiries,
     ...teamMemoryResponseAugust2026.researchInquiries,
     ...dclaListeningSession.researchInquiries,
+    ...dclaAnimationPublication.researchInquiries,
     ...urbanhermitSocialPopulationJuly2026.researchInquiries,
     ...wowListFacebookPostKnowledge.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,

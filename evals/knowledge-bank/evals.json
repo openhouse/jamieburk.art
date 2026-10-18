@@ -154,7 +154,7 @@
       "transcriptAuditPath": "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json",
       "approvedTranscriptAuditSha256": "364a0f7380d9d011a00c5bb0c0ceb9775186e14981379358198c082a9c7d2fee",
       "approvedContentSha256": "810e0b33f01626bca191b83f9d67baf7bd82832eba803d5dff1bc831ad5cbc2a",
-      "approvedRelatedClaimsSha256": "8077daece776613fc08850cc70c4c4be47c1f5d032b93ce62a5ddebc72ed7066",
+      "approvedRelatedClaimsSha256": "ea7cf1cb41ca9bb36aa667463f4cc67ba48af399449760524929fe3473c95338",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
         "OBS-NYCAC-FINKELPEARL-HEARING-CONTEXT",
