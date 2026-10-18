@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T07:58:47-04:00",
-  "sourceCommit": "66233b0e3d7ab25f30f35f99bb73e6b15bc125e7",
-  "sourceFingerprint": "138208b2bd012d56e2d48213025def62ec87519e15a59d83f3e8698536a2f40e",
+  "generatedAt": "2026-10-18T09:57:06-04:00",
+  "sourceCommit": "c38ee22e0b894a2bd7a4eaad5ffae64f85a201b5",
+  "sourceFingerprint": "df1e80c04cc7151cace9646404b762e9ce1660b99bfea852c9f751e512090b38",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3869,7 +3869,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-10-18",
       "reviewBy": "2027-01-18"
     },
     {
@@ -26155,7 +26155,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 153,
+      "line": 161,
       "kind": "link"
     },
     {
@@ -26164,7 +26164,16 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
       "to": "index.anonymized-team-knowledge-opportunity-case-study",
       "fragment": null,
-      "line": 178,
+      "line": 186,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/branch-reconciliation-2026-10-18.md",
+      "to": null,
+      "fragment": null,
+      "line": 47,
       "kind": "link"
     },
     {
