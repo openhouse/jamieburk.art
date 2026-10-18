@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-29
+last_reviewed: 2026-10-18
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -71,6 +71,13 @@ relevant evidence, held material, preserved conflict, or an adopted pattern.
 Branch presence is not agreement, and access is not completeness. A moved head
 or newly listed branch reopens review rather than silently inheriting an earlier
 conclusion.
+The August review profile remains a historical record. Its offline check proves
+that its recorded revisions and boundaries are internally consistent; it does
+not establish today's GitHub coverage. Remote review lists every branch head
+and records an observation time. New, missing, or changed heads reopen review.
+An unavailable or partial inventory is a coverage gap, not an empty result.
+See the [October review and verification boundary](../../../docs/reviews/2026-10-18-ecosystem-refresh.md)
+for the bounded change and its remaining review limits.
 Generated indexes, coverage tables, reports, and reader packets are materialized
 views; governed authored records remain canonical.
 

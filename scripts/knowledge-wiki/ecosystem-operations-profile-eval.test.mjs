@@ -1,5 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import os from "node:os";
+import path from "node:path";
 
 import {
   evaluateEcosystemOperationsProfile,
@@ -22,7 +26,7 @@ test("a moved source branch invalidates its prior close reading", () => {
   const mutated = cloneProfile();
   mutated.branches[0].observedRevision = "a".repeat(40);
   const evaluation = evaluateEcosystemOperationsProfile({ profile: mutated });
-  assert.equal(evaluation.checks.branch_review_exact_and_current, false);
+  assert.equal(evaluation.checks.branch_review_exact, false);
 });
 
 test("a remote revision mismatch invalidates the exact candidate", () => {
@@ -31,7 +35,7 @@ test("a remote revision mismatch invalidates the exact candidate", () => {
   );
   remoteRevisions[profile.branches[2].branch] = "b".repeat(40);
   const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteRevisions });
-  assert.equal(evaluation.checks.branch_review_exact_and_current, false);
+  assert.equal(evaluation.checks.branch_review_exact, false);
 });
 
 test("all three graph responsibilities remain explicit", () => {
@@ -199,4 +203,79 @@ test("revision movement remains an explicit invalidation trigger", () => {
   );
   const evaluation = evaluateEcosystemOperationsProfile({ profile: mutated });
   assert.equal(evaluation.checks.change_invalidation_triggers_complete, false);
+});
+
+function remoteSnapshot(overrides = {}) {
+  return {
+    revisions: Object.fromEntries(profile.branches.map((item) => [item.branch, item.reviewedRevision])),
+    observedAt: "2026-10-18T13:00:00.000Z",
+    complete: true,
+    ...overrides
+  };
+}
+
+test("offline consistency cannot be reported as current GitHub coverage", () => {
+  const evaluation = evaluateEcosystemOperationsProfile({ profile });
+  assert.equal(evaluation.freshness?.status, "not-checked");
+  assert.equal(evaluation.currentAtObservation, false);
+  assert.equal(Object.hasOwn(evaluation.checks, "branch_review_exact_and_current"), false);
+  assert.equal(evaluateEcosystemOperationsProfile({ profile, requireRemote: true }).passed, false);
+});
+
+test("a complete exact remote inventory establishes only its observation-time match", () => {
+  const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteInventory: remoteSnapshot() });
+  assert.equal(evaluation.currentAtObservation, true);
+  assert.equal(evaluation.freshness?.status, "observed-match");
+  assert.equal(evaluation.freshness?.observedAt, "2026-10-18T13:00:00.000Z");
+  assert.equal(evaluation.passed, true);
+});
+
+test("a newly discovered branch reopens review even when every old head matches", () => {
+  const remoteInventory = remoteSnapshot();
+  remoteInventory.revisions["work/new-source"] = "a".repeat(40);
+  const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteInventory });
+  assert.equal(evaluation.passed, false);
+  assert.equal(evaluation.currentAtObservation, false);
+  assert.deepEqual(evaluation.freshness?.unreviewedBranches, ["work/new-source"]);
+});
+
+test("deleted and moved branches remain distinct review gaps", () => {
+  const remoteInventory = remoteSnapshot();
+  delete remoteInventory.revisions[profile.branches[0].branch];
+  remoteInventory.revisions[profile.branches[1].branch] = "b".repeat(40);
+  const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteInventory });
+  assert.equal(evaluation.passed, false);
+  assert.deepEqual(evaluation.freshness?.missingBranches, [profile.branches[0].branch]);
+  assert.deepEqual(evaluation.freshness?.changedBranches, [profile.branches[1].branch]);
+});
+
+for (const [name, overrides] of [
+  ["partial", {complete: false}],
+  ["undated", {observedAt: undefined}],
+  ["impossible-calendar-date", {observedAt: "2026-02-30T13:00:00.000Z"}],
+  ["future-dated", {observedAt: "2099-01-01T00:00:00.000Z"}],
+  ["malformed", {revisions: {[profile.branches[0].branch]: "not-a-sha"}}]
+]) {
+  test(`${name} remote inventory cannot certify current coverage`, () => {
+    const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteInventory: remoteSnapshot(overrides) });
+    assert.equal(evaluation.passed, false);
+    assert.equal(evaluation.currentAtObservation, false);
+    assert.equal(evaluation.freshness?.status, "incomplete");
+  });
+}
+
+test("remote reader does not filter away branches absent from the review profile", () => {
+  const directory = mkdtempSync(path.join(os.tmpdir(), "ecosystem-remote-test-"));
+  try {
+    // A controlled Git transport responds to the requested ref scope. The
+    // real reader and CLI parse its output; no network or credentials are used.
+    writeFileSync(path.join(directory, "git"), `#!${process.execPath}\nconst refs = {"refs/heads/reviewed": "${"a".repeat(40)}", "refs/heads/newly-listed": "${"b".repeat(40)}"};\nconst filters = process.argv.slice(2).filter(arg => arg.startsWith("refs/heads/"));\nfor (const [ref, sha] of Object.entries(refs)) if (!filters.length || filters.includes(ref)) console.log(sha + "\\t" + ref);\n`, {mode: 0o755});
+    const reader = new URL("./ecosystem-operations-profile-eval.mjs", import.meta.url).href;
+    const output = execFileSync(process.execPath, ["--input-type=module", "-e", `import {readRemoteRevisions} from ${JSON.stringify(reader)}; console.log(JSON.stringify(readRemoteRevisions({sourceRepository:"example/synthetic",branches:[{branch:"reviewed"}]})));`], {
+      encoding: "utf8", env: {...process.env, PATH: `${directory}${path.delimiter}${process.env.PATH}`}
+    });
+    assert.deepEqual(JSON.parse(output), {reviewed: "a".repeat(40), "newly-listed": "b".repeat(40)});
+  } finally {
+    rmSync(directory, {recursive: true, force: true});
+  }
 });

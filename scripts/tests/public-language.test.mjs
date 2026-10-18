@@ -165,6 +165,39 @@ test("publication instructions are not allowed as visitor-facing project descrip
   ]);
 });
 
+test("source checks reject internal portfolio labels and future-product footer promises", () => {
+  const findings = evaluatePublicText({
+    config,
+    relativePath: "apps/www/src/components/FutureFooter.tsx",
+    text: "Public-safe portfolio, civic notebook, and future living archive."
+  });
+  assert.deepEqual(findings.map((finding) => finding.patternId), [
+    "publisher-only-portfolio-label",
+    "future-public-archive-promise"
+  ]);
+});
+
+test("rendered footer protections follow reader text and metadata onto any route", () => {
+  for (const [html, expected] of [
+    ["<footer><p>Public-safe <strong>portfolio</strong>, civic notebook.</p></footer>", ["publisher-only-portfolio-label"]],
+    ["<p>A future&nbsp;living <em>archive</em>.</p>", ["future-public-archive-promise"]],
+    ['<meta name="description" content="Public-safe portfolio, civic notebook, and future living archive">', ["publisher-only-portfolio-label", "future-public-archive-promise"]]
+  ]) {
+    const findings = evaluateRenderedMarkup({ config, html, relativePath: "future-route.html" });
+    assert.deepEqual(findings.map((finding) => finding.patternId), expected, html);
+  }
+});
+
+test("footer protections preserve historical archive descriptions and private-source limits", () => {
+  const html = "<p>Explore selected projects in this portfolio.</p><p>The historical archive documents collective work.</p><p>Private participant records remain private.</p>";
+  assert.deepEqual(evaluateRenderedMarkup({ config, html, relativePath: "work.html" }), []);
+  assert.deepEqual(evaluatePublicText({
+    config,
+    relativePath: "apps/www/src/data/proofs.ts",
+    text: 'sourceBasis: "Approved resume language and public-safe portfolio briefs."'
+  }), []);
+});
+
 test("rendered phrase checks survive inline markup, comments, entities, and line wrapping", () => {
   const findings = evaluateRenderedMarkup({
     config,

@@ -141,7 +141,10 @@ export function loadEcosystemOperationsProfile(repoRoot = defaultRepoRoot) {
 
 export function evaluateEcosystemOperationsProfile(options = {}) {
   const profile = options.profile ?? loadEcosystemOperationsProfile(options.repoRoot);
-  const remoteRevisions = options.remoteRevisions;
+  const remoteInventory = options.remoteInventory;
+  // Legacy revision maps can invalidate a review, but cannot prove complete,
+  // dated coverage. Offline checks establish historical consistency only.
+  const remoteRevisions = remoteInventory?.revisions ?? options.remoteRevisions;
   const branches = profile.branches ?? [];
   const branchNames = branches.map((item) => item.branch);
   const branchRevisionPattern = /^[0-9a-f]{40}$/;
@@ -155,7 +158,7 @@ export function evaluateEcosystemOperationsProfile(options = {}) {
     profile.reviewAuthority === "research-and-proposal-only" &&
     profile.publicationAuthority === "separate-human-review";
 
-  const exactAndCurrent =
+  const exactReviewedSnapshot =
     sameOrdered(branchNames, expectedBranches) &&
     branches.every(
       (item) =>
@@ -163,6 +166,35 @@ export function evaluateEcosystemOperationsProfile(options = {}) {
         item.observedRevision === item.reviewedRevision &&
         (!remoteRevisions || remoteRevisions[item.branch] === item.reviewedRevision)
     );
+
+  const remoteRequested = options.requireRemote === true ||
+    remoteInventory !== undefined || options.remoteRevisions !== undefined;
+  const observedTime = Date.parse(remoteInventory?.observedAt ?? "");
+  const remoteComplete = remoteInventory?.complete === true &&
+    typeof remoteInventory.observedAt === "string" &&
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(remoteInventory.observedAt) &&
+    Number.isFinite(observedTime) && observedTime <= Date.now() &&
+    new Date(observedTime).toISOString().replace(".000Z", "Z") ===
+      remoteInventory.observedAt.replace(".000Z", "Z") &&
+    remoteRevisions !== null && typeof remoteRevisions === "object" &&
+    !Array.isArray(remoteRevisions) && Object.keys(remoteRevisions).length > 0 &&
+    Object.values(remoteRevisions).every((sha) => branchRevisionPattern.test(sha));
+  const observedBranches = remoteRevisions && typeof remoteRevisions === "object"
+    ? Object.keys(remoteRevisions) : [];
+  const unreviewedBranches = observedBranches.filter((name) => !branchNames.includes(name)).sort();
+  const missingBranches = branchNames.filter((name) => !observedBranches.includes(name)).sort();
+  const changedBranches = branches.filter((item) => observedBranches.includes(item.branch) &&
+    remoteRevisions[item.branch] !== item.reviewedRevision).map((item) => item.branch).sort();
+  const currentAtObservation = remoteComplete && exactReviewedSnapshot &&
+    unreviewedBranches.length === 0 && missingBranches.length === 0 && changedBranches.length === 0;
+  const freshness = {
+    status: !remoteRequested ? "not-checked" : !remoteComplete ? "incomplete" :
+      currentAtObservation ? "observed-match" : "review-required",
+    observedAt: remoteInventory?.observedAt ?? null,
+    unreviewedBranches: remoteRequested ? unreviewedBranches : [],
+    missingBranches: remoteRequested ? missingBranches : [],
+    changedBranches: remoteRequested ? changedBranches : []
+  };
 
   const branchReviewScopeComplete =
     sameSet(profile.reviewScope, expectedGraphs) &&
@@ -348,7 +380,7 @@ export function evaluateEcosystemOperationsProfile(options = {}) {
 
   const checks = {
     ecosystem_profile_materialized: profileMaterialized,
-    branch_review_exact_and_current: exactAndCurrent,
+    branch_review_exact: exactReviewedSnapshot,
     branch_review_scope_complete: branchReviewScopeComplete,
     three_graph_responsibilities_explicit: graphResponsibilitiesExplicit,
     generated_views_noncanonical: generatedViewsNoncanonical,
@@ -371,8 +403,12 @@ export function evaluateEcosystemOperationsProfile(options = {}) {
     change_invalidation_triggers_complete: changeInvalidationTriggersComplete
   };
 
+  if (remoteRequested) checks.remote_inventory_matches_review = currentAtObservation;
+
   return {
     passed: Object.values(checks).every(Boolean),
+    currentAtObservation,
+    freshness,
     checks,
     failures: Object.entries(checks)
       .filter(([, passed]) => !passed)
@@ -382,9 +418,9 @@ export function evaluateEcosystemOperationsProfile(options = {}) {
 }
 
 export function readRemoteRevisions(profile) {
-  const refs = profile.branches.map((item) => `refs/heads/${item.branch}`);
   const remoteUrl = `https://github.com/${profile.sourceRepository}.git`;
-  const output = execFileSync("git", ["ls-remote", "--heads", remoteUrl, ...refs], {
+  // Query all heads: filtering to already-reviewed refs hides new branches.
+  const output = execFileSync("git", ["ls-remote", "--heads", remoteUrl], {
     encoding: "utf8"
   });
   return Object.fromEntries(
@@ -404,15 +440,28 @@ const isMain =
 
 if (isMain) {
   const profile = loadEcosystemOperationsProfile();
-  const remoteRevisions = process.argv.includes("--remote")
-    ? readRemoteRevisions(profile)
-    : undefined;
-  const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteRevisions });
+  const requireRemote = process.argv.includes("--remote");
+  let remoteInventory;
+  if (requireRemote) {
+    try {
+      const revisions = readRemoteRevisions(profile);
+      remoteInventory = { revisions, complete: true, observedAt: new Date().toISOString() };
+    } catch {
+      console.error("HOLD remote inventory unavailable; source coverage is unknown, not empty.");
+      process.exit(1);
+    }
+  }
+  const evaluation = evaluateEcosystemOperationsProfile({ profile, remoteInventory, requireRemote });
   for (const [id, passed] of Object.entries(evaluation.checks)) {
     console.log(`${passed ? "PASS" : "FAIL"} ${id}`);
   }
+  console.log(`Source freshness: ${evaluation.freshness.status}; observation: ${evaluation.freshness.observedAt ?? "not performed"}.`);
+  if (requireRemote) {
+    // Do not print private repository branch locators in public CI output.
+    console.log(`Review gaps: ${evaluation.freshness.unreviewedBranches.length} unreviewed, ${evaluation.freshness.missingBranches.length} missing, ${evaluation.freshness.changedBranches.length} changed branches.`);
+  }
   if (!evaluation.passed) process.exit(1);
   console.log(
-    `Ecosystem operations profile passed: ${evaluation.counts.blockingCriteria} blocking criteria across ${evaluation.counts.branches} exact branch revisions.`
+    `Ecosystem operations profile passed ${requireRemote ? "at the recorded remote observation" : "historical consistency checks only"}: ${evaluation.counts.blockingCriteria} blocking criteria across ${evaluation.counts.branches} reviewed revisions. No publication or release authority is granted.`
   );
 }

@@ -55,6 +55,14 @@
     {
       "id": "publisher-only-organizer-credit-instruction",
       "pattern": "\\bKeep\\s+public\\s+organizer\\s+credit\\s+with\\b"
+    },
+    {
+      "id": "publisher-only-portfolio-label",
+      "pattern": "\\bpublic[- ]safe\\s+portfolio\\s*,\\s*civic\\s+notebook\\b"
+    },
+    {
+      "id": "future-public-archive-promise",
+      "pattern": "\\bfuture\\s+living\\s+archive\\b"
     }
   ],
   "standaloneTermExemptPaths": [
