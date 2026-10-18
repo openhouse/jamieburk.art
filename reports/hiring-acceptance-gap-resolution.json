@@ -3,7 +3,7 @@
   "candidateSha": "d49dc2df02a511a115c94700a99a30e9e47b6a79",
   "portfolioSnapshotHash": "cb2f59263c0b99cb0ae87252688b0cf5cab37cdb1e034e4002e1acfadb4df892",
   "publicReportHash": "cdf4e3e15ab66b611c4709032abfcbe801afa44243ba837bcfd56b78eb5a6afa",
-  "wikiSourceFingerprint": "36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac",
+  "wikiSourceFingerprint": "4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26",
   "findings": [
     {
       "findingId": "finding.requirement.codepath.qa-and-bug-pipeline",

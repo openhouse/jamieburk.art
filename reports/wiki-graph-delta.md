@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `0a901d3c4fae2ba734414cd649110fbecd3b0661`
-**Generation time:** 2026-10-18T15:58:53-04:00
-**Source fingerprint:** `36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac`
+**Source commit:** `aef15c36de3d25749a53f585141c38661dfdfe64`
+**Generation time:** 2026-10-18T16:29:34-04:00
+**Source fingerprint:** `4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26`
 
 Compared with the graph artifact at immutable baseline `4b6bc3bff48f4fbefdda2f42aec327645f6a357c` (the original develop snapshot).
 
-- Nodes added: 397
+- Nodes added: 398
 - Nodes removed: 0
-- Edges added: 1396
+- Edges added: 1399
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -322,6 +322,7 @@ Compared with the graph artifact at immutable baseline `4b6bc3bff48f4fbefdda2f42
 - `research.betanyc-opportunity-review.2026-08-20`
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
+- `research.nycac.dcla-animation-publication.2026-10-18`
 - `research.nycac.dcla-listening-session.2026-08-29`
 - `research.nycac.frontline-advocacy.2026-08-12`
 - `research.photographic-source-return.2026-07-26`

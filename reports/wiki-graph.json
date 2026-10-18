@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T15:58:53-04:00",
-  "sourceCommit": "0a901d3c4fae2ba734414cd649110fbecd3b0661",
-  "sourceFingerprint": "36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac",
+  "generatedAt": "2026-10-18T16:29:34-04:00",
+  "sourceCommit": "aef15c36de3d25749a53f585141c38661dfdfe64",
+  "sourceFingerprint": "4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4994,6 +4994,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-20",
       "reviewBy": "2026-08-27"
+    },
+    {
+      "id": "research.nycac.dcla-animation-publication.2026-10-18",
+      "path": "docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md",
+      "title": "DCLA animation publication and attribution",
+      "kind": "research-run",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A published animation and an explicit article credit establish later follow-through, without expanding authorship or website reuse permission.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": null
     },
     {
       "id": "research.nycac.dcla-listening-session.2026-08-29",
@@ -18418,6 +18431,14 @@
     {
       "from": "project.nyc-artist-coalition",
       "type": "related_to",
+      "to": "research.nycac.dcla-animation-publication.2026-10-18",
+      "source": "frontmatter",
+      "href": "../sources/dcla-animation-publication-2026-10.md",
+      "context": "Later public animation and article attribution, with visitor-facing placement held."
+    },
+    {
+      "from": "project.nyc-artist-coalition",
+      "type": "related_to",
       "to": "research.nycac.dcla-listening-session.2026-08-29",
       "source": "frontmatter",
       "href": "../sources/dcla-listening-session-2026-08-26.md",
@@ -19550,6 +19571,22 @@
       "source": "frontmatter",
       "href": "../sources/nyc-speed-report-2026.md",
       "context": null
+    },
+    {
+      "from": "research.nycac.dcla-animation-publication.2026-10-18",
+      "type": "related_to",
+      "to": "project.nyc-artist-coalition",
+      "source": "frontmatter",
+      "href": "../projects/nyc-artist-coalition-2017.md",
+      "context": "Later evidence of a completed public communication artifact for the coalition."
+    },
+    {
+      "from": "research.nycac.dcla-animation-publication.2026-10-18",
+      "type": "related_to",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "source": "frontmatter",
+      "href": "./dcla-listening-session-2026-08-26.md",
+      "context": "Preserves the earlier planned-animation snapshot rather than rewriting what was known in August."
     },
     {
       "from": "research.nycac.dcla-listening-session.2026-08-29",
@@ -25713,10 +25750,19 @@
     {
       "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
       "from": "project.nyc-artist-coalition",
+      "toPath": "docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md",
+      "to": "research.nycac.dcla-animation-publication.2026-10-18",
+      "fragment": null,
+      "line": 230,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/nyc-artist-coalition-2017.md",
+      "from": "project.nyc-artist-coalition",
       "toPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
       "to": "research.nycac.dcla-listening-session.2026-08-29",
       "fragment": null,
-      "line": 230,
+      "line": 231,
       "kind": "link"
     },
     {
@@ -26302,6 +26348,15 @@
       "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
       "fragment": null,
       "line": 31,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/sources/dcla-animation-publication-2026-10.md",
+      "from": "research.nycac.dcla-animation-publication.2026-10-18",
+      "toPath": "docs/knowledge-bank/sources/dcla-listening-session-2026-08-26.md",
+      "to": "research.nycac.dcla-listening-session.2026-08-29",
+      "fragment": null,
+      "line": 13,
       "kind": "link"
     },
     {

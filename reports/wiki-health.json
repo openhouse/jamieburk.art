@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T15:58:53-04:00",
-  "sourceCommit": "0a901d3c4fae2ba734414cd649110fbecd3b0661",
-  "sourceFingerprint": "36efa69451c9f31505eed3ebc5b9867b3f1bd80949aaf3b96c33af1f5fea94ac",
+  "generatedAt": "2026-10-18T16:29:34-04:00",
+  "sourceCommit": "aef15c36de3d25749a53f585141c38661dfdfe64",
+  "sourceFingerprint": "4ca0e416349d04f97e96c5d61be9a31fd928e1648283482d8232ce9935fb7f26",
   "hardGates": {
     "passed": true,
     "errorCount": 0,
     "errors": []
   },
   "diagnostics": {
-    "records": 504,
+    "records": 505,
     "byKind": {
       "project": 15,
       "person": 16,
@@ -19,7 +19,7 @@
       "source": 116,
       "asset": 195,
       "claim": 3,
-      "research-run": 14,
+      "research-run": 15,
       "research-inquiry": 6,
       "decision": 9,
       "correction": 4,
@@ -32,7 +32,7 @@
       "opportunity": 16,
       "projection": 18
     },
-    "typedRelations": 1798,
+    "typedRelations": 1801,
     "evidenceRelations": 33,
     "relationTypeCounts": {
       "collaborated_with": 2,
@@ -45,15 +45,15 @@
       "part_of": 14,
       "participated_in": 3,
       "projected_to": 22,
-      "related_to": 1151,
+      "related_to": 1154,
       "resulted_in": 6,
       "supersedes": 1,
       "supports": 38,
       "uses_method": 40,
       "uses_source": 408
     },
-    "proseLinks": 576,
-    "rootReachable": 274,
+    "proseLinks": 578,
+    "rootReachable": 275,
     "orphanCount": 0,
     "deadEndCount": 0,
     "wantedPageCount": 6,
