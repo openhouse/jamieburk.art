@@ -3,13 +3,13 @@
 
 **Source commit:** `c38ee22e0b894a2bd7a4eaad5ffae64f85a201b5`
 **Generation time:** 2026-10-18T09:57:06-04:00
-**Source fingerprint:** `df1e80c04cc7151cace9646404b762e9ce1660b99bfea852c9f751e512090b38`
+**Source fingerprint:** `74009626db9b5d287fff1d232d45831514436ba66e18e6ba64acb0ca1a6e0b85`
 
 Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28f57e9022c11a81`.
 
-- Nodes added: 89
+- Nodes added: 90
 - Nodes removed: 0
-- Edges added: 362
+- Edges added: 363
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -71,6 +71,7 @@ Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28
 - `research.nyc-jobs.citywide-monitor.2026-08-20`
 - `research.nyc-oti-product-management-ranking.2026-08-20`
 - `research.nycac.dcla-listening-session.2026-08-29`
+- `research.recent-delivery.2026-10-18`
 - `source.application.nyc-oti.confirmations.2026-08-31`
 - `source.application.nyc-oti.pit-crew-volume-update.2026-08-20`
 - `source.application.nyc-oti.product-manager.784450.2026-08-31`

@@ -3,7 +3,7 @@
 
 **Source commit:** `c38ee22e0b894a2bd7a4eaad5ffae64f85a201b5`
 **Generation time:** 2026-10-18T09:57:06-04:00
-**Source fingerprint:** `df1e80c04cc7151cace9646404b762e9ce1660b99bfea852c9f751e512090b38`
+**Source fingerprint:** `74009626db9b5d287fff1d232d45831514436ba66e18e6ba64acb0ca1a6e0b85`
 
 - [Photography knowledge loop](../../indexes/photography.md) - `has_asset` (frontmatter)
 - [Photographic source return for DCLA, KC Town Hall, and Council fieldwork](../../research-runs/photographic-source-return-2026-07-26.md) - `has_asset` (frontmatter)

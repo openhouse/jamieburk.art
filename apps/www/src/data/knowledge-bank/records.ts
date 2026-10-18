@@ -1,4 +1,5 @@
 import { agencyGraph } from "./agency-graph.ts";
+import { recentDeliveryOctober2026 } from "./recent-delivery-2026-10.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
@@ -40,6 +41,7 @@ import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...recentDeliveryOctober2026.intakeItems,
     {
       id: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
       kind: "photo-lead",
@@ -96,6 +98,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems
   ],
   observations: [
+    ...recentDeliveryOctober2026.observations,
     {
       id: "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
       intakeId: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
@@ -151,6 +154,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations
   ],
   sources: [
+    ...recentDeliveryOctober2026.sources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -315,6 +319,7 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilFunding.agencyRelations
   ],
   claims: [
+    ...recentDeliveryOctober2026.claims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -621,6 +626,7 @@ const knowledgeBankInput = {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
+      "SRC-RECENT-DCLA-ARTICLE",
       "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
       "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "SRC-NYCAC-NPR-CABARET-2017-09-20",
@@ -648,6 +654,8 @@ const knowledgeBankInput = {
       "SRC-NYCAC-SHOESTRING-PHOTO-2017"
     ],
     occurrences: [
+      { id: "recent-wonderville", claimId: "CLM-RECENT-WONDERVILLE-2026-10", projection: "case-study" },
+      { id: "recent-animation", claimId: "CLM-RECENT-DCLA-ANIMATION-2026-10", projection: "case-study", sourceIds: ["SRC-RECENT-DCLA-ARTICLE"] },
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14"] },
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
@@ -662,6 +670,13 @@ const knowledgeBankInput = {
       { id: "shared-campaign-infrastructure", claimId: "CLM-NYCAC-SHARED-CAMPAIGN-INFRASTRUCTURE-2017", projection: "case-study", sourceIds: ["SRC-JAMIE-NYCAC-SHOESTRING-ACCOUNT-2026", "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-SHOESTRING-PHOTO-2017"] },
       { id: "crs-campaign-memory-system", claimId: "CLM-CRS-CAMPAIGN-MEMORY-SYSTEM-2026", projection: "case-study" },
       { id: "crs-provenance-redline", claimId: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026", projection: "case-study" }
+    ]
+  }, {
+    id: "technical-operations",
+    surface: "/work/technical-operations",
+    sourceOrder: [],
+    occurrences: [
+      { id: "recent-red-hook", claimId: "CLM-RECENT-RED-HOOK-2026-10", projection: "technical-operations" }
     ]
   }, {
     id: "kc-town-hall",

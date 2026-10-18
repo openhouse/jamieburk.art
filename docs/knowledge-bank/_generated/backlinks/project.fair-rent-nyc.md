@@ -3,7 +3,7 @@
 
 **Source commit:** `c38ee22e0b894a2bd7a4eaad5ffae64f85a201b5`
 **Generation time:** 2026-10-18T09:57:06-04:00
-**Source fingerprint:** `df1e80c04cc7151cace9646404b762e9ce1660b99bfea852c9f751e512090b38`
+**Source fingerprint:** `74009626db9b5d287fff1d232d45831514436ba66e18e6ba64acb0ca1a6e0b85`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -47,6 +47,7 @@
 - [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `related_to` (frontmatter)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `prose_link` (markdown)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
+- [Recent delivery — bounded portfolio update](../../research-runs/recent-delivery-2026-10-18.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

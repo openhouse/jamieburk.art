@@ -1,6 +1,27 @@
 {
   "sources": [
     {
+      "id": "SRC-RECENT-DCLA-ARTICLE",
+      "title": "I Imagine a Brooklyn Where",
+      "organization": "Creative New York / Lyle Gallery",
+      "author": "Lin Tyrpien",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-10-03",
+      "canonicalUrl": "https://www.creativenewyork.co/p/i-imagine-a-brooklyn-where",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Lin Tyrpien, I Imagine a Brooklyn Where, Creative New York; publication observed October 3, 2026.",
+      "publicNote": "Lin wrote the article. Its embedded photo animation is credited to Jamie Burkart for NYC Artist Coalition.",
+      "doesNotEstablish": [
+        "exact publication date",
+        "current page availability",
+        "exact media edition",
+        "permission to reuse the article, photographs, voices or music",
+        "policy impact"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1230,6 +1251,79 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-RECENT-WONDERVILLE-2026-10",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition held its October 5, 2026 meeting at Wonderville. Jamie prepared and sent a two-page production guide to the venue and fellow organizers. It set out the proposed room layout, equipment needs, timing and questions for venue staff. The venue answered technical questions before the gathering. Organizing and day-of delivery remained shared work.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "A sent production plan does not establish that every cue or setup was performed.",
+        "This text-only summary excludes private correspondence, participant identities and the original production guide."
+      ]
+    },
+    {
+      "id": "CLM-RECENT-DCLA-ANIMATION-2026-10",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie made a photo animation for NYC Artist Coalition about the city’s August 26, 2026 arts listening session at 651 ARTS. By October 3, an article written by Lin Tyrpien included the animation and credited Jamie’s contribution.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-RECENT-DCLA-ARTICLE",
+          "relationship": "direct-support",
+          "supports": [
+            "published animation credit",
+            "Lin's article authorship"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "October 3 is the publication-observation date, not an independently established publication date.",
+        "Linking the article does not authorize embedding or copying the animation or its underlying media.",
+        "The current public page could not be reopened during the October 18 review; the dated observation remains the evidence."
+      ]
+    },
+    {
+      "id": "CLM-RECENT-RED-HOOK-2026-10",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "By October 7, 2026, Jamie had edited and delivered seven oral-history recordings for Rusty Zimmerman’s Red Hook portrait project. He kept current files separate from earlier edits so the handoff was clear. He also prepared a 50-label QR-code proof, checked that each QR code matched its intended destination, and inspected all 13 pages. This work covered audio delivery and print preparation, not exhibition installation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Jamie explicitly approved a limited text-only summary naming Rusty and the project on October 18; recordings, participant names and private messages remain excluded.",
+        "Delivery and proof checks do not establish client acceptance, payment, physical printing or installation.",
+        "Public track titles do not establish which delivered audio edition was published."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -3206,6 +3300,7 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
+        "SRC-RECENT-DCLA-ARTICLE",
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
         "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
         "SRC-NYCAC-NPR-CABARET-2017-09-20",
@@ -3233,6 +3328,19 @@
         "SRC-NYCAC-SHOESTRING-PHOTO-2017"
       ],
       "occurrences": [
+        {
+          "id": "recent-wonderville",
+          "claimId": "CLM-RECENT-WONDERVILLE-2026-10",
+          "projection": "case-study"
+        },
+        {
+          "id": "recent-animation",
+          "claimId": "CLM-RECENT-DCLA-ANIMATION-2026-10",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-RECENT-DCLA-ARTICLE"
+          ]
+        },
         {
           "id": "cabaret-safety-organizing",
           "claimId": "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
@@ -3356,6 +3464,18 @@
           "id": "crs-provenance-redline",
           "claimId": "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
           "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "recent-red-hook",
+          "claimId": "CLM-RECENT-RED-HOOK-2026-10",
+          "projection": "technical-operations"
         }
       ]
     },

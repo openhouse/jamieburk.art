@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { Claim } from "@/components/citations";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -177,6 +178,25 @@ export default function TechnicalOperationsPage() {
             </article>
           ))}
         </div>
+      </section>
+      <section aria-labelledby="recent-delivery" className="jb-reading mt-14">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="recent-delivery">
+          Recent delivery: Red Hook portrait project
+        </h2>
+        <div className="mt-4 leading-8 text-jb-ink/76">
+          <Claim
+            as="p"
+            claimId="CLM-RECENT-RED-HOOK-2026-10"
+            projection="technical-operations"
+            surface="/work/technical-operations"
+          />
+        </div>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          For a community-event example, see the{" "}
+          <Link className="text-jb-blue underline" href="/work/fair-rent-nyc">
+            Wonderville production handoff
+          </Link>.
+        </p>
       </section>
       <section aria-labelledby="capability-evidence" className="mt-14">
         <div className="jb-reading">

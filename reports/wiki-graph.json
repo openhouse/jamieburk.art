@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-10-18T09:57:06-04:00",
   "sourceCommit": "c38ee22e0b894a2bd7a4eaad5ffae64f85a201b5",
-  "sourceFingerprint": "df1e80c04cc7151cace9646404b762e9ce1660b99bfea852c9f751e512090b38",
+  "sourceFingerprint": "74009626db9b5d287fff1d232d45831514436ba66e18e6ba64acb0ca1a6e0b85",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4661,8 +4661,8 @@
       "sensitivity": "moderate",
       "summary": "Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.",
       "aliases": [],
-      "lastReviewed": "2026-08-12",
-      "reviewBy": "2026-09-19"
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "project.harry-j-epstein",
@@ -5323,6 +5323,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-03",
       "reviewBy": "2026-10-03"
+    },
+    {
+      "id": "research.recent-delivery.2026-10-18",
+      "path": "docs/knowledge-bank/research-runs/recent-delivery-2026-10-18.md",
+      "title": "Recent delivery — bounded portfolio update",
+      "kind": "research-run",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "moderate",
+      "summary": "Three text-only examples connect recent work to delivered materials, a gathering that occurred and an observed publication.",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "source.aclu.charizma-williams",
@@ -20936,6 +20949,14 @@
       "context": null
     },
     {
+      "from": "research.recent-delivery.2026-10-18",
+      "type": "related_to",
+      "to": "project.fair-rent-nyc",
+      "source": "frontmatter",
+      "href": "../projects/fair-rent-nyc.md",
+      "context": null
+    },
+    {
       "from": "source.aclu.charizma-williams",
       "type": "related_to",
       "to": "opportunity.aclu.senior-project-manager.8620968002",
@@ -27245,6 +27266,15 @@
       "to": "research.nycac.frontline-advocacy.2026-08-12",
       "fragment": null,
       "line": 25,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/fair-rent-nyc.md",
+      "from": "project.fair-rent-nyc",
+      "toPath": "docs/knowledge-bank/research-runs/recent-delivery-2026-10-18.md",
+      "to": "research.recent-delivery.2026-10-18",
+      "fragment": null,
+      "line": 39,
       "kind": "link"
     },
     {
