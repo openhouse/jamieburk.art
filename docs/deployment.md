@@ -17,9 +17,16 @@ The C review app was checked on October 13, 2026. Its deploy branch is `main`,
 its domain is `staging-c.jamieburk.art`, and its runtime/build policy is
 `noindex`. Use the approved C pull-request commit from an isolated checkout:
 
-```bash
-git push dokku@staging.jamieburk.art:jamieburkart-staging-c HEAD:main
-```
+Set the `staging-c` remote to
+`dokku@staging.jamieburk.art:jamieburkart-staging-c`. Run
+`npm run preflight:staging:c` to check the candidate with C's site URLs and
+noindex policy. It rejects a missing/different effective push destination,
+multiple push destinations, Git push URL rewrites or conflicting inherited
+environment. The generic `preflight:staging` targets a different application.
+
+After approval and checks, push the exact reviewed commit SHA to that remote's
+`main` ref; do not substitute an unverified `HEAD`. The preflight does not deploy
+or grant image-use permission. A noindex staging site is still publicly reachable.
 
 Before pushing, read the app's current domain, build arguments and running
 revision and retain the previous commit for rollback. After pushing, compare the

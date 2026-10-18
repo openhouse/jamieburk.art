@@ -1074,9 +1074,9 @@
       "proofId": "nyc-artist-coalition-public-web-infrastructure"
     },
     "agencyGraph": {
-      "expectedEntityCount": 32,
-      "expectedRelationCount": 34,
-      "approvedGraphSha256": "5471c699a6f92a46f974dcbe898f89cf101dff44ea646d51d61c6752e8ede829",
+      "expectedEntityCount": 33,
+      "expectedRelationCount": 36,
+      "approvedGraphSha256": "e56a8e80e7bd025ebcad176eba3ea7b27110ada40aaf2f9f46e9b302bb7a6a1b",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",

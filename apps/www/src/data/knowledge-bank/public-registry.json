@@ -1231,6 +1231,47 @@
   ],
   "claims": [
     {
+      "id": "CLM-RED-HOOK-SEVEN-ORAL-HISTORIES",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "For Rusty Zimmerman's Free Portrait Project in Red Hook, I edited seven oral-history recordings to accompany painted portraits of their subjects.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Jamie is a contributor to a collaborative project, not the sole producer or sole audio editor of the exhibition.",
+        "Seven edited recordings are not 50 recordings or 50 portraits authored by Jamie.",
+        "No audience impact or playback verification is established."
+      ]
+    },
+    {
+      "id": "CLM-RED-HOOK-EXHIBITION-QR-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "I also helped prepare, print, and install QR codes for an exhibition of all 50 portraits.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The exhibition count is not a count of Jamie's edited recordings.",
+        "Helping with production does not establish sole responsibility, QR design authorship, every code's playback result or exhibition leadership."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -3069,6 +3110,23 @@
     }
   ],
   "pages": [
+    {
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "red-hook-audio",
+          "claimId": "CLM-RED-HOOK-SEVEN-ORAL-HISTORIES",
+          "projection": "technical-operations"
+        },
+        {
+          "id": "red-hook-exhibition",
+          "claimId": "CLM-RED-HOOK-EXHIBITION-QR-SUPPORT",
+          "projection": "technical-operations"
+        }
+      ]
+    },
     {
       "id": "about",
       "surface": "/about",

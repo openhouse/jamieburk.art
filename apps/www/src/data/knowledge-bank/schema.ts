@@ -292,6 +292,8 @@ export const agencyRelationSchema = z.object({
     "co-led",
     "founding-member-of",
     "implemented-and-maintained",
+    "edited",
+    "helped-produce",
     "organized",
     "advocated-for",
     "testified-for",

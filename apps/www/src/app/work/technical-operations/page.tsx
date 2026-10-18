@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { Route } from "next";
 import { EngagementPathwayCTA } from "@/components/EngagementPathwayCTA";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { Claim } from "@/components/citations";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -176,6 +177,15 @@ export default function TechnicalOperationsPage() {
               </dl>
             </article>
           ))}
+        </div>
+      </section>
+      <section aria-labelledby="red-hook-heading" className="jb-reading mt-14" id="red-hook">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="red-hook-heading">
+          Oral histories and exhibition support
+        </h2>
+        <div className="mt-4 space-y-4 leading-8 text-jb-ink/76">
+          <Claim as="p" claimId="CLM-RED-HOOK-SEVEN-ORAL-HISTORIES" projection="technical-operations" surface="/work/technical-operations" />
+          <Claim as="p" claimId="CLM-RED-HOOK-EXHIBITION-QR-SUPPORT" projection="technical-operations" surface="/work/technical-operations" />
         </div>
       </section>
       <section aria-labelledby="capability-evidence" className="mt-14">

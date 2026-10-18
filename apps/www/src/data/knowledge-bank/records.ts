@@ -1,4 +1,5 @@
 import { agencyGraph } from "./agency-graph.ts";
+import { redHookKnowledge } from "./red-hook-2026-10.ts";
 import { archiveProductionJuly2026 } from "./archive-production-2026-07.ts";
 import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-2026-07.ts";
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
@@ -40,6 +41,7 @@ import { wowListProductFitAugust2026 } from "./wowlist-product-fit-2026-08.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...redHookKnowledge.intakeItems,
     {
       id: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
       kind: "photo-lead",
@@ -96,6 +98,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.intakeItems
   ],
   observations: [
+    ...redHookKnowledge.observations,
     {
       id: "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
       intakeId: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
@@ -151,6 +154,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.observations
   ],
   sources: [
+    ...redHookKnowledge.sources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -309,12 +313,14 @@ const knowledgeBankInput = {
     ...nycacPressArchive.sources,
     ...projectWebsiteKnowledgeAugust2026.sources
   ],
-  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities],
+  entities: [...agencyGraph.entities, ...kcTownHallCouncilFunding.entities, ...redHookKnowledge.entities],
   agencyRelations: [
+    ...redHookKnowledge.agencyRelations,
     ...agencyGraph.agencyRelations,
     ...kcTownHallCouncilFunding.agencyRelations
   ],
   claims: [
+    ...redHookKnowledge.claims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -462,6 +468,7 @@ const knowledgeBankInput = {
     ...nycacPressArchive.claims
   ],
   researchInquiries: [
+    ...redHookKnowledge.researchInquiries,
     {
       id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
       project: "callnyc",
@@ -544,6 +551,14 @@ const knowledgeBankInput = {
     { id: "COR-HJE-THICK-ARTS-CHRONOLOGY-2026", claimId: "CLM-HJE-THICK-ARTS-FIRST-CLIENT-2009-2015", previousText: "Harry J. Epstein Company client chronology beginning in 2012", replacementText: "Harry J. Epstein Company was a client from 2009 through 2015 and became Thick Arts LLC's first client when Jamie formalized the practice in 2012.", reason: "Jamie corrected the client period and first-client relationship; the New York Department of State independently establishes July 6, 2012 as the LLC's initial filing date.", decidedAt: "2026-08-14", affectedSurfaces: ["/work", "knowledge-bank"], status: "active" }
   ],
   pages: [{
+    id: "technical-operations",
+    surface: "/work/technical-operations",
+    sourceOrder: [],
+    occurrences: [
+      { id: "red-hook-audio", claimId: "CLM-RED-HOOK-SEVEN-ORAL-HISTORIES", projection: "technical-operations" },
+      { id: "red-hook-exhibition", claimId: "CLM-RED-HOOK-EXHIBITION-QR-SUPPORT", projection: "technical-operations" }
+    ]
+  }, {
     id: "about",
     surface: "/about",
     sourceOrder: [

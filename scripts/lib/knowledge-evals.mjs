@@ -65,7 +65,13 @@ const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   // Re-reviewed 2026-08-21 after the public hiring projection was shortened
   // while the canonical lifecycle, no-receipt/no-expenditure boundary,
   // collective-credit limits, and field-practice evidence remained intact.
-  sharedPublicSurfacesSha256: "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
+  // 2026-10-18 structural review from the previously bound 594eeb80f candidate:
+  // the existing generic ContactCTA became EngagementPathwayCTA, then this task
+  // added the Red Hook text section and Claim import. KC Town Hall claims,
+  // evidence and project links are unchanged. The generic CTA changed from
+  // /resume and email to /contact; this does not alter KC Town Hall claims.
+  // This digest update grants no new human or subjective review pass.
+  sharedPublicSurfacesSha256: "e02cec5ade7e945d3096939511c4eda0f4fbb17ec6ad5812b15c18b439129933",
   publicReviewReportSha256: "94814964151def3aa2a285e85644a8dfad7879736cf125c5906359e2f02e2696"
 });
 // Re-reviewed 2026-08-21 after governed public-safe records gained new linked
