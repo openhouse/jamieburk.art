@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-10-13T14:39:28-04:00",
   "sourceCommit": "a2ea9d1fce74a17adccf87381be7bcb66c35e2c5",
-  "sourceFingerprint": "65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7",
+  "sourceFingerprint": "9619a33c8f16afb01cb420bd3c2fedd2afdd7326419d6cc3d1ad339a875dbb6c",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -3869,7 +3869,7 @@
       "sensitivity": "low",
       "summary": "A federated practice that separates semantic meaning, evidentiary support, and source custody before composing human-reviewed outputs.\n",
       "aliases": [],
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-10-18",
       "reviewBy": "2027-01-18"
     },
     {
@@ -4518,6 +4518,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-14",
       "reviewBy": "2026-11-14"
+    },
+    {
+      "id": "project.knowledge-ecosystem-refresh.2026-10",
+      "path": "docs/knowledge-bank/projects/knowledge-ecosystem-refresh-2026-10.md",
+      "title": "Knowledge ecosystem implementation review",
+      "kind": "project",
+      "status": "maintained",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "A bounded reading of recent public branches distinguishes implemented reference tools from proposed protocols, then repairs demonstrated publication checks.\n",
+      "aliases": [],
+      "lastReviewed": "2026-10-18",
+      "reviewBy": "2026-11-18"
     },
     {
       "id": "project.let-nyc-dance",
@@ -18357,6 +18370,14 @@
       "context": null
     },
     {
+      "from": "project.knowledge-ecosystem-refresh.2026-10",
+      "type": "related_to",
+      "to": "method.source-backed-team-memory",
+      "source": "frontmatter",
+      "href": "../methods/source-backed-team-memory.md",
+      "context": null
+    },
+    {
       "from": "project.let-nyc-dance",
       "type": "part_of",
       "to": "organization.nyc-artist-coalition",
@@ -24814,7 +24835,7 @@
       "toPath": "docs/knowledge-bank/capabilities/technical-operations.md",
       "to": "capability.technical-operations",
       "fragment": null,
-      "line": 153,
+      "line": 159,
       "kind": "link"
     },
     {
@@ -24823,7 +24844,16 @@
       "toPath": "docs/knowledge-bank/case-studies/anonymized-team-knowledge-opportunity/README.md",
       "to": "index.anonymized-team-knowledge-opportunity-case-study",
       "fragment": null,
-      "line": 178,
+      "line": 184,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "from": "method.source-backed-team-memory",
+      "toPath": "docs/knowledge-bank/projects/knowledge-ecosystem-refresh-2026-10.md",
+      "to": "project.knowledge-ecosystem-refresh.2026-10",
+      "fragment": null,
+      "line": 35,
       "kind": "link"
     },
     {
@@ -25742,6 +25772,24 @@
       "to": "project.kc-town-hall.tired-of-tires",
       "fragment": null,
       "line": 173,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/knowledge-ecosystem-refresh-2026-10.md",
+      "from": "project.knowledge-ecosystem-refresh.2026-10",
+      "toPath": "docs/knowledge-bank/methods/source-backed-team-memory.md",
+      "to": "method.source-backed-team-memory",
+      "fragment": null,
+      "line": 61,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/projects/knowledge-ecosystem-refresh-2026-10.md",
+      "from": "project.knowledge-ecosystem-refresh.2026-10",
+      "toPath": "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
+      "to": null,
+      "fragment": null,
+      "line": 64,
       "kind": "link"
     },
     {

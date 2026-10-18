@@ -1,0 +1,115 @@
+{
+  "reviewerId": "cec-irl-independent-public-reader-two-20261018",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "lens": "Prof. Margaret Morse lens: inhabited systems",
+  "evaluator": "Fictional advisory evaluator; not Margaret Morse, real participation, endorsement or human approval.",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "candidatePathCount": 159,
+  "score": 4,
+  "pass": true,
+  "passScope": "This independent reader's bounded PR-015 judgment only; three-reader aggregation and exact-candidate human release approval remain separate.",
+  "evidence": [
+    {
+      "criterion": "Visible artistic, civic, technical and social threshold within two clicks",
+      "result": "pass",
+      "references": [
+        "/",
+        "/about",
+        "apps/www/src/app/about/page.tsx"
+      ],
+      "finding": "The rendered homepage states the literal technical project manager role, then makes the screen/room relationship visible. Its About navigation reaches Systems people can inhabit in one click. That section joins Open House, WOWList, Sunday Dinner/196, coalition work and the current graph practice without replacing the professional positioning with a chronological artist biography."
+    },
+    {
+      "criterion": "At least three public-safe project continuities",
+      "result": "pass",
+      "references": [
+        "/work/wowlist",
+        "/work/196-sunday-dinner",
+        "/work/fair-rent-nyc",
+        "/work/kc-town-hall"
+      ],
+      "finding": "WOWList translates scenes, places and shared vocabulary into editable event text and followed communities, with Richard Caceres and organizers retained in the credit. Sunday Dinner/196 makes welcome, orientation, independent access, participant agency and continuity operational through explicitly redacted workflow reconstructions. Coalition material connects public invitations, shared naming/letter-making, facilitation and the next gathering; the campaign surface is presented as one part of a collective room. KC's resident-service flyer and matched before/after photographs connect a recurring public promise with one actual collection rather than substituting an abstract civic-benefit assertion."
+    },
+    {
+      "criterion": "People can inhabit, influence, remember and continue the systems",
+      "result": "pass",
+      "references": [
+        "/about",
+        "/work/196-sunday-dinner",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "The distinctiveness is legible: interfaces invite participation, hosting conditions preserve agency, shared records hold disagreements and correction paths, and handoffs allow someone else to continue. The lab's team-pressure proposal tests whether a newcomer can find, trace and correct context. It explicitly remains a proposal and research method, not proof of an already successful client pilot. This makes care a concrete operating constraint rather than a decorative personality claim."
+    },
+    {
+      "criterion": "Collective credit, participant privacy and protected-source exclusion",
+      "result": "pass",
+      "references": [
+        "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+        "apps/www/src/data/knowledge-bank/public-registry.json",
+        "apps/www/src/data/photography.ts",
+        "/about",
+        "/work/kc-spaces-fund"
+      ],
+      "finding": "The Open House projection describes initiation and communal governance without reproducing the article. The public source note withholds faculty testimonial and raw educational records; no testimonial is used on the inspected rendered pages. WOWList has shared founder credit, coalition outcomes remain collective, and KC Spaces Fund separates web implementation from fundraising or grant-selection authority. Photography records identify approved public-Git/staging occurrences while production/indexing approval remains separately represented. Participant-level operating records and resident addresses are not projected."
+    },
+    {
+      "criterion": "DESIGN.md composition supports the practice",
+      "result": "pass-with-bounded-observation",
+      "references": [
+        "DESIGN.md",
+        "rendered /about desktop screenshot",
+        "rendered /work/kc-town-hall desktop screenshot"
+      ],
+      "finding": "The inspected desktop composition uses calm ruled sections, readable type and restrained blue links. The About sequence is not nested in a card dashboard. KC's loaded photographs and their adjacent captions make a real place and bounded service result visible. The images contribute evidence rather than acting as wallpaper."
+    }
+  ],
+  "gaps": [
+    "This is one advisory reader, not the required three-reader median or human acceptance.",
+    "No full four-width accessibility, contrast or keyboard audit was performed in this bounded lens review; it must not substitute for those separate gates.",
+    "Historical dates remain material: HJE ended in 2015, WOWList's demonstrated workflows are historical, and residency planning is not proof of a completed residency.",
+    "The current lab's human usefulness remains open; its synthetic prototype is not client-adoption evidence."
+  ],
+  "safety_findings": [
+    "No blocking privacy, testimonial, sole-causation or protected-educational-record projection was found in the inspected candidate surfaces.",
+    "The current research/proposed-pilot boundary and the distinctions among a platform poll, attendance, governance and policy causation are explicit.",
+    "This score grants no source access, contact, publication, merge, deployment or production-indexing authority."
+  ],
+  "recommendation": "Retain this candidate for aggregate review. Its strongest evidence is the continuity between the room, the invitation, the public interface and the handoff. Do not replace the bounded documentary limits with stronger outcome claims to make the story sound smoother.",
+  "provenance": {
+    "reviewedOn": "2026-10-18",
+    "rubric": ".agents/evals/portfolio-production-readiness.json PR-015, frozen 0-4 scale",
+    "designContract": "DESIGN.md",
+    "fingerprintMethod": "Independently recomputed with professorCandidateRelativePaths and fingerprintProfessorCandidate exports; 159 paths matched the expected hash.",
+    "priorScorecardsInspected": false,
+    "patchIntentInspected": false,
+    "optimizerNotesInspected": false,
+    "privateRepositoryInspectedForThisReview": false,
+    "participatedInCandidateOptimization": false,
+    "renderedBase": "http://127.0.0.1:3218",
+    "renderedPages": [
+      "/",
+      "/about",
+      "/work/kc-town-hall",
+      "/lab/source-backed-team-memory"
+    ],
+    "sourcePagesRead": [
+      "/about",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/harry-j-epstein",
+      "/work/callnyc",
+      "/work/kc-town-hall",
+      "/work/kc-spaces-fund",
+      "/lab/source-backed-team-memory"
+    ],
+    "screenshotsObserved": [
+      "Live desktop About sequence, including recursive-method paragraph and WOWList relationships/model/interface/continuity rows",
+      "Live desktop KC Town Hall matched before-and-after collection photographs with captions and scope note"
+    ],
+    "supplementalGuidelines": "Web Interface Guidelines were consulted for the bounded visual inspection; they did not replace or alter the frozen PR-015 rubric.",
+    "repositoryEdits": false
+  }
+}

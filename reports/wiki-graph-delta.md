@@ -3,13 +3,13 @@
 
 **Source commit:** `a2ea9d1fce74a17adccf87381be7bcb66c35e2c5`
 **Generation time:** 2026-10-13T14:39:28-04:00
-**Source fingerprint:** `65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7`
+**Source fingerprint:** `9619a33c8f16afb01cb420bd3c2fedd2afdd7326419d6cc3d1ad339a875dbb6c`
 
 Compared with the graph artifact at immutable baseline `4b6bc3bff48f4fbefdda2f42aec327645f6a357c` (the original develop snapshot).
 
-- Nodes added: 398
+- Nodes added: 399
 - Nodes removed: 0
-- Edges added: 1402
+- Edges added: 1403
 - Edges removed: 0
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -299,6 +299,7 @@ Compared with the graph artifact at immutable baseline `4b6bc3bff48f4fbefdda2f42
 - `person.zack-parker`
 - `portfolio.work.kc-spaces-fund`
 - `project.kc-town-hall.tired-of-tires`
+- `project.knowledge-ecosystem-refresh.2026-10`
 - `projection.photo.colophon.east-river`
 - `projection.photo.fair-rent-nyc.market-hotel-banner`
 - `projection.photo.fair-rent-nyc.market-hotel-covers`

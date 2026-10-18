@@ -1,131 +1,149 @@
 {
   "runVersion": 3,
-  "judgeId": "b-repair2-composite-a",
+  "judgeId": "ecosystem-composite-reader-a-20261018",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
-  "candidateFingerprint": "d2bf3203016d62acb61bfb68231e98925c67944ba559adc9955337eff2d67809",
-  "verdict": "accepted",
+  "candidateFingerprint": "d1563aacc299db29f7b1db19032105d234b723002fce589f5467b5686b77b337",
+  "verdict": "held",
   "scores": [
     {
       "criterionId": "COMP-001",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The verifier confirmed all 2,172 candidate files and all 199 semantic copies.",
-        "The recomputed preflight confirmed fourteen matching frozen branch decisions and availability of every frozen commit object.",
-        "The integration register explicitly identifies the integration branch, develop base, and reference-only treatment of frozen branches."
+        "The frozen rubric and integration register identify all fourteen A-N source heads exactly once, with an explicit feature/knowledge-h integration branch and develop base.",
+        "Fresh deterministic evaluation found 14/14 matching decisions and zero missing frozen commit objects.",
+        "The evaluator reports that the mutable feature/evals-K remote-tracking ref moved; it continues to resolve and evaluate the separately frozen commit rather than replacing the inventory."
       ],
-      "rationale": "The frozen inventory remains intact. Movement of the mutable K reference is reported separately and does not replace its frozen head."
+      "rationale": "The distinction between immutable source inventory and later mutable branch movement is implemented and visible. The integration runbook keeps the A-N sources reference-only; this review made no repository edits."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All fourteen register entries specify a decision, substantive rationale, destination paths, and verification criteria.",
-        "The register matches its frozen reviewed digest, and destination existence checks pass.",
-        "The website projection decision and deliberate architectural non-additions are explicit."
+        "docs/integration/feature-evals-composite.json contains fourteen adopt/adapt/already-present/reject decisions with substantial rationale, existing destinations and criterion references.",
+        "The F/G/K/M/N decisions explicitly adapt independent review, lifecycle queries, append/collision behavior, runbook guidance and frozen recursive governance into the H-derived architecture rather than copying alternative systems.",
+        "The website decision says integration alone is not justification for adding public copy. The independently computed register digest matches 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d."
       ],
-      "rationale": "The integration decisions are inspectable and describe concrete adaptations into existing destinations."
+      "rationale": "The register is an inspectable decision record rather than a branch checklist. Both canonical implementation destinations and deliberate non-projection are specified. A fresh in-memory decorative-rationale mutation was rejected."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The recomputed preflight found all eleven canonical files and no forbidden parallel lifecycle roots.",
-        "The application citation imports resolve through the redacted public registry.",
-        "The public registry contains 64 public sources, 42 claims, and nine page plans, without protected locator, internal excerpt, or internal claim fields."
+        "Fresh evaluation found all eleven required canonical files and no forbidden parallel lifecycle roots.",
+        "schema.ts, records.ts, agency-graph.ts, public.ts and proofs.ts preserve distinct canonical knowledge and public projection responsibilities.",
+        "The inspected app citation components import the redacted public interface, not records.ts. public.ts reads the public registry, omits protected source locators and internal excerpts, and rejects inactive or unauthorized claim surfaces.",
+        "The complete base portfolio suite digest matches 09bf36049d6947d5200814ee7afe6ab4810ba7797d98ee573ef7eba1a2bdd8d7."
       ],
-      "rationale": "Canonical research records and selective public projections remain separate within one architecture."
+      "rationale": "The candidate keeps one governed architecture while allowing a selective website composition. Source custody is not conflated with browser-visible evidence or permission to publish."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent read-only probes verified identical-record replay, linked duplicate preservation, and rejection of changed content under an existing ID.",
-        "Lifecycle queries returned mature held claims, unresolved inquiries, corrections, and projection counts.",
-        "The lifecycle query reported zero orphan sources."
+        "The complete lifecycle-operations.ts implementation preserves identical replay as already-present, appends a new-ID repeated artifact as duplicate-preserved with duplicateOfIntakeId, and rejects a changed stable-ID record.",
+        "Fresh lifecycle tests pass for all three intake behaviors and for held claims, unresolved inquiries, corrections, active projections and zero orphan sources.",
+        "The lifecycle query implementation separately exposes intake, duplicates, unresolved inquiries, mature held claims, uncited active claims, unobserved claims, orphan sources, corrections and projection counts."
       ],
-      "rationale": "Intake preserves incoming evidence without silently replacing existing records, and lifecycle states remain queryable."
+      "rationale": "Both the read implementation and fresh tests support append safety and queryability. The review did not enroll or promote any actual source."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The recomputed validator passed 331 sources, 119 claims, 34 agency relations, and five corrections; derived Wiki and employment outputs were current.",
-        "Agency records distinguish individual implementation, shared organizing, collective campaigns, and institutional enactment.",
-        "Rendered coalition counts distinguish platform responses from attendance and the retrievable population from a complete account export.",
-        "Independent probing confirmed that a protected source cannot acquire a public URL."
+        "Fresh canonical evaluation validated 333 sources, 120 claims, 34 agency relations and five corrections; derived Wiki and employment outputs were current.",
+        "Fifteen focused lifecycle/citation tests passed, including correction retirement, private/metadata-only exclusion and source-note behavior. The public-safety command passed, retaining eleven careful-claim guardrail warnings.",
+        "Schema evidence relationships distinguish direct support, corroboration, context, boundary, contradiction and private support. Source records preserve doesNotEstablish boundaries.",
+        "The inspected agency graph separates Jamie initiating Open House from participant collective governance, shared Shop Shows and coalition contribution, and institutional legislative authority.",
+        "The NYC Artist Coalition population record identifies its inspected surfaces, July 2026 snapshot, 3,123-record retrievable union, 5,124 profile counter, 2,001 unrecovered remainder, and shared-account authorship limitations. It explicitly refuses lifetime completeness, impact or individual authorship inferences."
       ],
-      "rationale": "The reviewed claims retain evidence roles, source limitations, collective credit, correction history, and bounded population denominators."
+      "rationale": "The numerical and attribution boundaries remain available alongside affirmative claims. Fresh checks found no broken canonical references or protected leakage in their tested scope; this is not a new legal or publication clearance."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The homepage, Technical Operations page, resume, and lead case studies clearly identify Jamie's role, actions, purposes, and usable results.",
-        "The rendered About page connects artistic, civic, technical, and social practice through WOWList, Sunday Dinner, and coalition participation.",
-        "WOWList supplies organizer workflows and continuation records; the coalition supplies invitation, participatory naming, collaborative action, and a subsequent meeting; KC Town Hall supplies eligibility, intake, delivery, recycling handoff, and reporting.",
-        "The lab demonstrates revision through the CallNYC chronology correction propagated across public surfaces.",
-        "All six current professor-lens component scorecards match their public candidate; the recomputed component evaluator passes 18 of 18 criteria."
+        "Direct source reading and rendered review of About, the historical cases and the lab preserve a concise technical-project-management role while connecting artistic, civic, technical, relational and social work. There is no public proofs or knowledge-bank mirror route.",
+        "WOWList connects shared calendars and scene vocabulary with an editable event model, public interface, organizer use, support and tutorial handoff. Coalition formation connects invitation, discussion, naming/letter interfaces, a bounded poll result and a later meeting invitation. KC connects a resident request pathway to one documented pickup and recycling/reporting handoff without asserting sole ownership.",
+        "HJE states its historical period and labels its workflow reconstruction. Sunday Dinner/196 shows hospitality and residency-planning handoffs while distinguishing planning from a completed residency. These limits protect the through-line from invented delivery claims.",
+        "The frozen rendered lab supplies an actual learn-and-revise trace: recovered source chronology corrects CallNYC from 2014-2015 to 2016 and propagates that correction to the work index, case study and resume while retaining the prior wording and reason. The reader-return prototype is visibly synthetic and AI-assisted, with human usefulness still open.",
+        "Current component review evidence retains one PR-016 reader's 3/4 dissent about a third complete current/Jamie-specific loop rather than erasing it. The composite deterministic professor-lens aggregate passes 18/18, but this judgment also relies on direct composition and source reading, not that aggregate alone."
       ],
-      "rationale": "The site is a purposeful portfolio projection. Its participation and systems sequences are reconstructable without treating reconstructions, proposals, photographs, or unresolved feedback causality as stronger evidence."
+      "rationale": "For this composite criterion, the method and its observe/model/prototype/use/learn/revise/handoff pattern are reconstructable across bounded public examples and the concrete correction trace. This does not mean every historical project proves every stage, that all projects are current deployments, or that a resident-feedback-to-redesign chain has been recovered. Those narrower gaps remain stated. Supported agency is visible without turning collective or institutional outcomes into Jamie's sole achievement."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "All five required human-evidence controls remain explicitly open under the frozen blind-spot digest.",
-        "Each control specifies required evidence, anti-gaming constraints, a next action, and a projection boundary.",
-        "Current hiring reports explicitly identify their simulated profiles as deterministic advisory evidence.",
-        "Browser interaction observations retain human screen-reader, browser zoom, visual approval, deployment, and indexing gates."
+        "The complete blind-spot control file and its guide explicitly distinguish governed absence from recovered evidence or external validation.",
+        "All five required human-evidence controls remain open: collaborator corroboration, collective review, unfamiliar hiring-reader usability, job-search funnel learning and external validity.",
+        "The controls give concrete required evidence, closure conditions, anti-gaming prohibitions, next actions and public-projection boundaries; for example, five unfamiliar hiring readers across two role families and at least three permissioned collaborator notes across two project families.",
+        "The independently computed blind-spot digest matches 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db."
       ],
-      "rationale": "Governed absence remains distinct from recovered evidence. Machine review does not close collaborator, hiring-usability, funnel, or external-validity gaps."
+      "rationale": "These are actionable evidence gaps, not claims of completion. Neither the current component judgments nor this composite review is represented as a human usability session, collaborator consent, endorsement or an employment outcome."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        "The recomputed semantic rubric digest matches the separately pinned frozen digest.",
-        "The base portfolio suite, integration register, and blind-spot controls match their reviewed digests.",
-        "Independent read-only mutation probes rejected branch omission, fabricated heads, decorative register content, checksum-refreshed semantic weakening, base-suite weakening, optimizer self-grading, and synthesized human closure.",
-        "The evaluator requires every blocking criterion to pass rather than compensating failures with other scores."
+        "The independently computed rubric digest equals both the frozen suite value and separately pinned implementation constant. Register, base suite and blind-spot digests also match their reviewed bindings.",
+        "Seven fresh read-only in-memory mutation probes passed: omitted branch, decorative rationale, checksum-refreshed semantic weakening, fabricated frozen head, checksum-refreshed optimizer self-grading, synthesized closure of human corroboration, and stale derived output.",
+        "The inspected mutation-test sources additionally cover source-tree material/binary changes, public reviewer label separation, complete-judgment binding, structurally complete synthetic human-evidence instructions, non-compensable blocking failures and private locator leakage. Private-locator mutation tests were inspected but not executed because they temporarily write repository files.",
+        "The evaluator uses every blocking criterion rather than an average to determine acceptance; the present missing COMP-009 evidence therefore leaves its aggregate unaccepted even though COMP-001 through COMP-008 pass."
       ],
-      "rationale": "The reviewed governance resists the tested forms of score gaming and preserves grader separation."
+      "rationale": "The frozen governance has both semantic locks and meaningful adversarial checks. This independent reviewer did not optimize the public candidate, alter the rubric or supply synthetic holdouts. A separately commissioned review is not a real person's participation or approval."
     },
     {
       "criterionId": "COMP-009",
-      "score": 4,
-      "pass": true,
+      "score": 0,
+      "pass": false,
       "evidence": [
-        "The independently recomputed complete candidate fingerprint matches the commissioned fingerprint.",
-        "All 44 supplied screenshot checksums match their receipts.",
-        "The responsive evidence independently validates against the current public-surface fingerprint, with complete coverage of fifteen routes at four widths.",
-        "This judgment supplies one distinct exact-candidate advisory review under REVIEW.md; the recorder adds its complete judgment digest."
+        "The whole-tree fingerprint was independently recomputed as d1563aacc299db29f7b1db19032105d234b723002fce589f5467b5686b77b337 over 2,198 files. The source enumeration excludes only the two declared final holdout records.",
+        "The parent confirmed that two separate read-only reviewers were commissioned, neither optimized the candidate, and the other review was still in progress. Separate commissioning is not an accepted second judgment.",
+        "Historical/current composite result records were not consulted for this blind review. Fresh deterministic evaluation was invoked with an explicitly empty holdouts array, so its zero supplied holdouts means not observed in this review, not an assertion that no files exist.",
+        "The frozen criterion literally requires two complete accepted judgments, all nine criteria scored four, current deterministic checks and open human production gates. This single review cannot establish that aggregate stopping state."
       ],
-      "rationale": "This review is eligible as one required exact-candidate judgment. It does not establish another review or close the combined two-review stopping gate. Human production approval remains open."
+      "rationale": "Hold the stopping decision. I can verify this candidate and produce one independent judgment, but I cannot honestly attest that two completed judgments accept it while the second is unfinished. The frozen not-observed rule prohibits conditional or anticipatory acceptance. This is an evidence/protocol hold, not a newly found public-copy or privacy defect."
     }
   ],
-  "notObserved": [],
-  "findings": [
-    "Settled initial and restored viewport evidence resolves the apparent sticky-header overlap for the four tested routes. These browser observations do not constitute human accessibility acceptance.",
-    "WOWList support records and KC Town Hall delivery evidence do not establish particular feedback-caused redesigns. The candidate explicitly preserves those limits.",
-    "The public composition remains lengthy, especially on mobile, but its headings, introductory proof summaries, artifacts, and direct navigation preserve the required professional and practice continuity.",
-    "Named-person participation, collaborator corroboration, human hiring usability, external validity, exact production approval, deployment verification, and indexing authority remain separate open gates."
+  "notObserved": [
+    "COMP-009: two completed, accepted, separately commissioned composite holdouts for this exact candidate and rubric; only this judgment is being completed here."
   ],
-  "recommendation": "Accept this candidate as one independent composite advisory judgment. The combined evaluator must establish the second qualifying exact-candidate judgment before declaring the stopping condition satisfied. Preserve all unresolved human and production gates.",
+  "findings": [
+    "Blocking: COMP-009's aggregate stopping state is not observed. Do not convert two commissions, a single positive content review, or passing component medians into two accepted composite judgments.",
+    "Preserved component dissent: a current PR-016 reviewer rates the candidate 3/4 because current-use and the third Jamie-specific learning loop are weaker. This dissent is meaningful even though the specified component median passes.",
+    "Nonblocking source-history observation: the mutable feature/evals-K ref has moved; the exact frozen source object remains available and is used.",
+    "No blocking privacy or sole-credit problem was found in the inspected public surfaces and tested canonical projection. Human corroboration, client usefulness, production approval, indexing approval and deployment remain separate open states."
+  ],
+  "recommendation": "Preserve this held review without rewriting its missing evidence into a pass. Retain the candidate-bound positive findings for COMP-001 through COMP-008. Complete the separately commissioned counterpart and have the release owner address the literal COMP-009 stopping protocol without silently changing this frozen rubric or treating this receipt as production approval.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "b-repair2-composite-a",
-    "reviewedAt": "2026-10-13T18:51:18Z",
-    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
-    "judgmentSha256": "bd72c510a235b8df244407476e082ee0da55e7bc302f9a9fc35f0f43421731b5"
+    "reviewerLabel": "ecosystem-composite-reader-a-20261018",
+    "reviewedAt": "2026-10-18T13:54:43Z",
+    "judgmentSha256": "7480fafcd7ae411e5c1104e5238bf0431190d0fb04a4ad3f8f7d002911228afe",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
+  },
+  "provenance": {
+    "evaluator": "Independent fictionalized advisory evaluator; not a real scholar, collaborator, hiring reader, human approver or representative of any named person.",
+    "candidateFileCount": 2198,
+    "method": "Read-only independent review of the complete frozen composite rubric, canonical integration and lifecycle evidence, selected source/agency/population records, current component evidence after freeze, and rendered public composition. No public candidate optimization, repository edits, prior/current composite judgments or optimizer summary were used.",
+    "freshChecks": [
+      "Whole-source-tree candidate and semantic rubric digests independently recomputed.",
+      "Composite deterministic evaluation with explicitly empty holdouts: COMP-001 through COMP-008 pass; COMP-009 not observed.",
+      "Fifteen lifecycle/citation regression tests passed.",
+      "Seven read-only mutation probes passed.",
+      "Public-safety check passed with eleven preserved careful-claim guardrail warnings."
+    ],
+    "renderedScope": "The earlier independent component review inspected the main portfolio, About, HJE, WOWList, Sunday Dinner, coalition, KC and lab public surfaces. After composite freeze, About and its linked lab were freshly observed, including the actual correction trace. No full mobile/accessibility audit or fresh external-source availability audit is claimed.",
+    "authority": "This receipt does not authorize submission, publication, merge, staging deployment, production deployment or indexing. It does not authenticate reviewer process identity. Private orchestration remains separate."
   }
 }

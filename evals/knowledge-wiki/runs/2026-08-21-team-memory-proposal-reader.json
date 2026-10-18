@@ -2,40 +2,37 @@
   "id": "team-memory-proposal-reader-2026-08-21",
   "schemaVersion": 1,
   "status": "complete",
-  "evaluatedAt": "2026-08-21T15:30:46.320Z",
-  "publicOrigin": "https://staging-b.jamieburk.art",
+  "evaluatedAt": "2026-10-18T13:49:22.742Z",
+  "publicOrigin": "http://127.0.0.1:3218",
   "pagePath": "/lab/source-backed-team-memory",
   "readerId": "reader.protected-team-memory-prospect",
-  "pageSourceSha256": "32f15da27b356ffb90751d0ed56c130ffb91ee8790e09c2af9a258c8f8746dcc",
-  "publicPageTextSha256": "3bbdfad00fd1f3c362d0814f4f154f3d089aca61862f827b2c78d77830b9bd20",
+  "pageSourceSha256": "de117ce5ce4c0567ec67e58ac1b6b00885ebc6b25ae91d18d79ad62975579018",
+  "publicPageTextSha256": "62c3b9930a3474138e54817b68fa0dca32b0aa823b76df0ee266f47c5361ab39",
   "scenarioSha256": "a752e9057fc1dd93e298caa089d3125ea1c27620fc73889ceedabf6cc29c0d10",
-  "promptSha256": "ac53600c9c87a9b793bd11af5c124486fb6fc7191ad6e1cfc293c0401a43aff3",
+  "promptSha256": "ca5158184ed1563f69e85e90ab773b78a96972835dc29769ab63066a0f85fddb",
   "promptVersion": "team-memory-proposal-reader-v2",
   "actualPersonParticipated": false,
+  "sourceCapture": "Rendered local production build; not an observation of the deployed staging site.",
   "result": {
     "readerId": "reader.protected-team-memory-prospect",
     "verdict": "pass",
     "decision": "hire-for-focused-pilot",
-    "rationale": "The proposal is specific enough to authorize a bounded paid pilot now. It identifies a recognizable problem—lost product rationale and onboarding context—and proposes a two-week engagement using three to five approved sources, named participants, concrete deliverables, a tested handoff, and an explicit continue/revise/stop decision. Privacy, correction, provenance, access, consent, and human review are treated as operating requirements. The page also honestly distinguishes an early method from a proven platform or completed client implementation. The public correction trace supplies limited but relevant evidence that the candidate can trace sources, revise records, and propagate corrections across outputs.",
+    "actualPersonParticipated": false,
     "strengths": [
-      "A concrete first use case centered on one slipping decision trail rather than a company-wide system.",
-      "Deliverables directly support onboarding and decision memory: a start-here page, decision record, open-question list, source notes, access notes, and correction path.",
-      "Adoption is tested through observable teammate tasks: finding, tracing, correcting, and protecting information.",
-      "The source-custody model separates access, evidence, consent, and publication authority.",
-      "Clear exclusions reduce surveillance, indiscriminate-ingestion, and parallel-bureaucracy risks.",
-      "Success conditions and the continue/revise/stop gate make the engagement reversible and accountable.",
-      "Maturity boundaries are candid: this is an emerging practice, not demonstrated SaaS or claimed client adoption."
+      "The page identifies a recognizable team problem: a new engineer cannot recover product rationale, decisions, and open questions without reconstructing meetings and private messages. That problem fits the proposed engagement directly.",
+      "The proposed two-week sprint is concrete and bounded: one sponsor, one working lead, two or three testing teammates, and three to five approved sources around one decision trail. It promises a start-here page, decision record, open-question list, source and access notes, correction path, and tested handoff that fit existing work.",
+      "Acceptance conditions are observable: a newcomer finds the rationale and open questions, traces a decision to its source, can correct or protect the record, and helps the team make a continue/revise/stop decision. Company-wide rollout and continuing maintenance require separate agreement.",
+      "The cited synthetic implementation and CallNYC date-correction trace provide modest but relevant public evidence of implementation and accountable record maintenance. The page openly distinguishes this evidence from participant testing, client deployment, and real-team usefulness.",
+      "Privacy and correction practices are part of the operating proposal. The page separates access from publication permission and preserves disagreement instead of forcing it into apparent certainty. Together, these specifics justify choosing a small paid pilot while normal scope, confidentiality, budget, and contract agreement remain necessary."
     ],
     "missingEvidence": [
-      "A redacted example showing the complete set of pilot deliverables working together in a realistic team workflow.",
-      "Independent evidence from a prior team engagement demonstrating reduced onboarding time or context loss.",
-      "Details about how the method integrates with common repositories, meeting tools, and documentation systems without adding excessive maintenance.",
-      "Indicative pricing, sponsor time requirements, security handling, and post-sprint ownership expectations."
+      "The page provides no observed outcome showing a real engineering newcomer understanding a decision or onboarding more effectively. Synthetic checks and a portfolio correction do not establish that benefit.",
+      "The ongoing maintenance effort and the smallest useful deliverable set are not demonstrated in a team's existing tools. A named maintenance owner and sustainable correction routine need validation.",
+      "The page does not demonstrate how a real user community's disagreement changes a product decision. Cultural sensitivity and preservation of disagreement are credible intentions, not measured outcomes."
     ],
-    "constructiveCritique": "The page makes the proposed use unusually clear, but its architectural explanation is longer and better evidenced than its delivery record. A compact, redacted pilot packet—with before-and-after workflow, teammate test results, maintenance burden, and sponsor decision—would make the hiring case more concrete. Adding indicative engagement assumptions would also reduce uncertainty between interest and authorization.",
-    "validateNext": "In kickoff, validate the method against one representative approved decision trail: establish a baseline, have a new or less-contextual teammate use the prototype to find the rationale, trace its source, identify open or protected material, and submit a correction, then measure usefulness and maintenance effort before authorizing any expansion.",
-    "actualPersonParticipated": false,
-    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate, review the candidate, or make this decision, and the result is not the named person's endorsement or budget authorization."
+    "constructiveCritique": "The page opens with graph terminology and later repeats the architecture. The concrete team problem and proposed engagement are much more persuasive; the conceptual density raises an avoidable concern about overhead for a small team. The deliverable list could become a parallel documentation burden unless the kickoff identifies the smallest useful set and places it in tools the team already uses. Name the person who will maintain it after the sprint and the routine in which corrections will happen. Public evidence establishes a synthetic prototype and a portfolio correction, not demonstrated improvement in a real engineering team's onboarding or judgment. The paid pilot should test that gap directly, including whether a newcomer can explain a contested decision rather than merely locate a page. The proposal treats community and cultural knowledge respectfully, but the page does not demonstrate how a real community member's disagreement changes a team's product decision. Keep that as a question for a bounded trial, not an assumed benefit.",
+    "validateNext": "Choose one real product decision that a newcomer currently struggles to understand, obtain approval for its small source set, and observe the newcomer attempting the task in the team's existing workspace. Agree with the decision owner on what a sound explanation must retain, including uncertainty or disagreement. Repeat the task with the proposed handoff and check whether the person can explain the rationale, trace support, identify what remains open, and make a correction with less reconstruction effort. Confirm a maintenance owner and assess the ongoing effort before expanding scope.",
+    "boundary": "This is a fictionalized public-page model simulation. The named person did not participate, review the candidate, approve the proposal, or make a hiring decision. This result is not the named person's endorsement or budget authorization. It does not authorize an engagement, source access, publication, or deployment."
   },
   "boundary": "This is an independent model simulation of an explicitly fictionalized public-page reader lens. The named person did not participate or endorse Jamie; a pass is not budget authorization, a contract, or a promise of work."
 }

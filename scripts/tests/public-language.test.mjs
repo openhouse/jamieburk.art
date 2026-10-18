@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
 import test from "node:test";
 
 import {
@@ -10,6 +12,7 @@ import {
 } from "../check-public-language.mjs";
 import {
   evaluateRenderedMarkup,
+  evaluateRenderedPublicLanguage,
   inspectablePublicMarkup
 } from "../check-rendered-public-language.mjs";
 
@@ -143,4 +146,94 @@ test("the rendered gate checks visible copy and metadata but ignores application
     ["bounded", "bound"]
   );
   assert.doesNotMatch(inspectablePublicMarkup("<script>bounded</script>"), /bounded/);
+});
+
+test("a configured phrase cannot bypass source checks by wrapping across lines", () => {
+  const findings = evaluatePublicText({
+    config,
+    relativePath: "apps/www/src/content/lab/example.mdx",
+    text: "Introduction.\n1,846\nusers"
+  });
+  assert.deepEqual(findings.map(({ patternId, line }) => ({ patternId, line })), [
+    { patternId: "wowlist-raw-user-count", line: 2 }
+  ]);
+});
+
+test("an internal field exemption cannot hide adjacent public copy on the same line", () => {
+  const findings = evaluatePublicText({
+    config,
+    relativePath: "apps/www/src/data/photography.ts",
+    text: 'knowledgeStatus: "bound", caption: "1,846 users"'
+  });
+  assert.deepEqual(findings.map(({ term }) => term), ["1,846 users"]);
+});
+
+test("rendered checks enforce configured phrases as well as standalone terms", () => {
+  const findings = evaluateRenderedMarkup({
+    config, relativePath: "example.html", html: "<p>1,846 users</p>"
+  });
+  assert.deepEqual(findings.map(({ patternId }) => patternId), ["wowlist-raw-user-count"]);
+});
+
+test("inline markup, entities, comments and line breaks preserve a rendered phrase", () => {
+  for (const html of [
+    "<p>1,846 <strong>users</strong></p>",
+    "<p>1,846&nbsp;us&#101;rs</p>",
+    "<p>1,846<!-- editorial comment -->\nusers</p>",
+    "<p>1,846<br/>users</p>",
+    '<p data-detail="a > b">1,846&#x20;users</p>'
+  ]) {
+    const findings = evaluateRenderedMarkup({ config, relativePath: "example.html", html });
+    assert.deepEqual(findings.map(({ patternId }) => patternId), ["wowlist-raw-user-count"], html);
+  }
+});
+
+test("reader-visible metadata, accessibility text and button values use the same policy", () => {
+  for (const html of [
+    '<meta name="description" content="1,846 users">',
+    '<button aria-label="1,846 users">View</button>',
+    '<img alt="1,846 users" src="/example.jpg">',
+    '<input type="submit" value="1,846 users">'
+  ]) {
+    const findings = evaluateRenderedMarkup({ config, relativePath: "example.html", html });
+    assert.deepEqual(findings.map(({ patternId }) => patternId), ["wowlist-raw-user-count"], html);
+  }
+});
+
+test("source exemptions never follow an internal field into rendered text", () => {
+  const findings = evaluateRenderedMarkup({
+    config, relativePath: "apps/www/src/data/photography.ts", html: '<p>knowledgeStatus: "bound"</p>'
+  });
+  assert.deepEqual(findings.map(({ term }) => term), ["bound"]);
+});
+
+test("non-reader markup and separate block elements cannot create false findings", () => {
+  const html = '<p class="bounded" data-detail="a > 1,846 users">1,846</p><p>users</p>' +
+    '<a href="/bounded">View</a><script>"bounded"</script><style>.hinge{}</style>' +
+    '<!-- bounded --><input type="hidden" value="bounded"><input type="text" value="bounded">';
+  assert.deepEqual(evaluateRenderedMarkup({ config, relativePath: "example.html", html }), []);
+});
+
+test("an empty rendered build fails closed instead of claiming a clean corpus", async () => {
+  const buildRoot = await mkdtemp(path.join(os.tmpdir(), "public-language-empty-"));
+  try {
+    await assert.rejects(evaluateRenderedPublicLanguage({ buildRoot }), /No built HTML pages/);
+  } finally {
+    await rm(buildRoot, { recursive: true, force: true });
+  }
+});
+
+test("the rendered filesystem check discovers nested pages and applies configured phrases", async () => {
+  const buildRoot = await mkdtemp(path.join(os.tmpdir(), "public-language-nested-"));
+  try {
+    await mkdir(path.join(buildRoot, "work", "new"), { recursive: true });
+    await writeFile(path.join(buildRoot, "work", "new", "page.html"), "<p>1,846 users</p>");
+    const result = await evaluateRenderedPublicLanguage({ buildRoot });
+    assert.equal(result.renderedPages, 1);
+    assert.deepEqual(result.findings.map(({ path: file, patternId }) => ({ file, patternId })), [
+      { file: "work/new/page.html", patternId: "wowlist-raw-user-count" }
+    ]);
+  } finally {
+    await rm(buildRoot, { recursive: true, force: true });
+  }
 });

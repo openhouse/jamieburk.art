@@ -5,6 +5,7 @@ import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { hjeClientChronologyAugust2026 } from "./hje-client-chronology-2026-08.ts";
 import { knowledgeWikiGraphEcosystemAugust2026 } from "./knowledge-wiki-graph-ecosystem-2026-08.ts";
+import { knowledgeReadingPrototypeOctober2026 } from "./knowledge-reading-prototype-2026-10.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
 import { kcTownHallFieldPractice } from "./kctownhall-field-practice.ts";
 import { kcTownHallResidentServiceAugust2026 } from "./kctownhall-resident-service-2026-08.ts";
@@ -64,6 +65,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.intakeItems,
     ...hjeClientChronologyAugust2026.intakeItems,
     ...knowledgeWikiGraphEcosystemAugust2026.intakeItems,
+    ...knowledgeReadingPrototypeOctober2026.intakeItems,
     ...socialMediaProductionJuly2026.intakeItems,
     ...teamMemoryResponseAugust2026.intakeItems,
     ...dclaListeningSession.intakeItems,
@@ -119,6 +121,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.observations,
     ...hjeClientChronologyAugust2026.observations,
     ...knowledgeWikiGraphEcosystemAugust2026.observations,
+    ...knowledgeReadingPrototypeOctober2026.observations,
     ...socialMediaProductionJuly2026.observations,
     ...teamMemoryResponseAugust2026.observations,
     ...dclaListeningSession.observations,
@@ -278,6 +281,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.sources,
     ...hjeClientChronologyAugust2026.sources,
     ...knowledgeWikiGraphEcosystemAugust2026.sources,
+    ...knowledgeReadingPrototypeOctober2026.sources,
     ...socialMediaProductionJuly2026.sources,
     ...teamMemoryResponseAugust2026.sources,
     ...dclaListeningSession.sources,
@@ -426,6 +430,7 @@ const knowledgeBankInput = {
     },
     ...archiveProductionJuly2026.claims,
     ...knowledgeWikiGraphEcosystemAugust2026.claims,
+    ...knowledgeReadingPrototypeOctober2026.claims,
     ...callNycSocialPopulationJuly2026.claims,
     ...googleDriveProductionJuly2026.claims,
     ...historicalKnowledge.claims,
@@ -806,6 +811,8 @@ const knowledgeBankInput = {
     sourceOrder: [
       "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
       "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+      "SRC-KNOWLEDGE-READER-RETURN-CODE-2026",
+      "SRC-KNOWLEDGE-READER-RETURN-TESTS-2026",
       "SRC-AI-EVALS-CERTIFICATE-2026",
       "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "SRC-CALLNYC-POLITICO-2016-03-14",
@@ -815,6 +822,11 @@ const knowledgeBankInput = {
       {
         id: "knowledge-wiki-graph-method",
         claimId: "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+        projection: "case-study"
+      },
+      {
+        id: "knowledge-reader-return-prototype",
+        claimId: "CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026",
         projection: "case-study"
       },
       { id: "source-backed-memory-method", claimId: "CLM-SOURCE-BACKED-MEMORY-METHOD-2026", projection: "case-study" },

@@ -155,6 +155,30 @@ export default function SourceBackedTeamMemoryPage() {
           </p>
         </section>
         <section className="mt-12 border-b border-jb-ink/12 pb-12">
+          <h2 className="text-3xl font-semibold text-jb-ink">
+            From a proposal to a working prototype
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            <Claim
+              claimId="CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026"
+              projection="case-study"
+              surface="/lab/source-backed-team-memory"
+              pageId="source-backed-team-memory"
+              occurrenceId="knowledge-reader-return-prototype"
+            />
+          </p>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            The aim is practical: someone picking up a reading should be able
+            to see what changed, why it changed, and what remains disputed.
+            Automated checks help catch missing context; they do not decide
+            whether a person understood it or agreed with it.
+          </p>
+          <p className="mt-4 text-sm leading-6 text-jb-ink/70">
+            Synthetic examples only; not a participant pilot or a client deployment.
+            Built with AI assistance. Human usefulness remains an open question.
+          </p>
+        </section>
+        <section className="mt-12 border-b border-jb-ink/12 pb-12">
           <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-jb-ink">
             Start with one team pressure people can feel
           </h2>

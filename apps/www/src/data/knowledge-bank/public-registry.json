@@ -267,6 +267,47 @@
       ]
     },
     {
+      "id": "SRC-KNOWLEDGE-READER-RETURN-CODE-2026",
+      "title": "Synthetic reader-return reference implementation",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart's portfolio project, AI-assisted implementation",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/6118a99b49bbe2b771ed6c8a48b938d7035e5b15/scripts/rfcs/knowledge-reading.mjs",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Synthetic reader-return reference implementation, revision 6118a99, reviewed October 18, 2026.",
+      "publicNote": "Public code accepts synthetic packets only and returns a candidate for review, not an authorized action.",
+      "doesNotEstablish": [
+        "live source integration",
+        "human semantic accuracy",
+        "participant pilot",
+        "client deployment",
+        "publication permission"
+      ]
+    },
+    {
+      "id": "SRC-KNOWLEDGE-READER-RETURN-TESTS-2026",
+      "title": "Reader-return prototype regression cases",
+      "organization": "openhouse / jamieburk.art",
+      "author": "Jamie Burkart's portfolio project, AI-assisted tests",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-10-18",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/6118a99b49bbe2b771ed6c8a48b938d7035e5b15/scripts/rfcs/knowledge-reading.test.mjs",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Reader-return prototype regression tests, revision 6118a99, reviewed October 18, 2026.",
+      "publicNote": "Author-built synthetic controls test the specified behavior; they are not independent human validation.",
+      "doesNotEstablish": [
+        "measured usefulness for a real team",
+        "external validation",
+        "adoption",
+        "release approval"
+      ]
+    },
+    {
       "id": "SRC-SOCIAL-ARCHIVE-INVENTORY-2026-07-15",
       "title": "Portfolio social-media archival production inventory",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -1690,6 +1731,48 @@
         "Repository roles do not map one-to-one onto graph responsibilities.",
         "Do not expose protected repository topology, source locators, or private records.",
         "Do not imply a completed client deployment, production platform, market validation, or automatic trust."
+      ]
+    },
+    {
+      "id": "CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I have built a synthetic reader-return prototype that keeps disagreements visible, ties corrections to exact source editions, and distinguishes a reference from a next action.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/lab/source-backed-team-memory"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KNOWLEDGE-READER-RETURN-CODE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "implemented reference prototype",
+            "source edition and disagreement controls",
+            "reference is not an action"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KNOWLEDGE-READER-RETURN-TESTS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "executable synthetic behavior checks"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "AI-assisted development; synthetic examples only.",
+        "Not a participant pilot or a client deployment.",
+        "The broader shared-memory proposal remains under investigation; no human outcome or publication authority follows from a passing test."
       ]
     },
     {
@@ -3753,6 +3836,8 @@
       "sourceOrder": [
         "SRC-KNOWLEDGE-WIKI-RFC-0005-2026",
         "SRC-KNOWLEDGE-WIKI-RFC-0006-2026",
+        "SRC-KNOWLEDGE-READER-RETURN-CODE-2026",
+        "SRC-KNOWLEDGE-READER-RETURN-TESTS-2026",
         "SRC-AI-EVALS-CERTIFICATE-2026",
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-POLITICO-2016-03-14",
@@ -3762,6 +3847,11 @@
         {
           "id": "knowledge-wiki-graph-method",
           "claimId": "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026",
+          "projection": "case-study"
+        },
+        {
+          "id": "knowledge-reader-return-prototype",
+          "claimId": "CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026",
           "projection": "case-study"
         },
         {

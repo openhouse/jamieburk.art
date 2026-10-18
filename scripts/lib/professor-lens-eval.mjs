@@ -43,17 +43,17 @@ export const professorCandidateRelativePaths = [
 ].sort();
 
 const finalScorecardRelativePaths = [
-  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-1.json",
-  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-2.json",
-  "docs/qa/evals-H/margaret-morse-repair-2026-10-13-3.json",
-  "docs/qa/evals-H/warren-sack-repair-2026-10-13-1.json",
-  "docs/qa/evals-H/warren-sack-repair-2026-10-13-2.json",
-  "docs/qa/evals-H/warren-sack-repair-2026-10-13-3.json"
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-1-PR-015.json",
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-2-PR-015.json",
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-3-PR-015.json",
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-1-PR-016.json",
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-2-PR-016.json",
+  "docs/qa/evals-H/knowledge-ecosystem-reader-2026-10-18-3-PR-016.json"
 ];
 
 // Three separately commissioned advisory readers assessed these exact bytes.
 // Historical held judgments remain preserved and are not rebound to this repair.
-const approvedCandidateSha256 = "4ffaee5e9e8f6bcb62cfa1dd4f1bd9b8ed016e9ca80fdaf3883aabfb88c7a53d";
+const approvedCandidateSha256 = "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606";
 
 const forbiddenPublicPatterns = [
   { label: "student identifier", pattern: /student id.{0,12}\b\d{7}\b/i },

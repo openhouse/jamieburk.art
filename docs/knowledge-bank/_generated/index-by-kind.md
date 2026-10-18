@@ -3,7 +3,7 @@
 
 **Source commit:** `a2ea9d1fce74a17adccf87381be7bcb66c35e2c5`
 **Generation time:** 2026-10-13T14:39:28-04:00
-**Source fingerprint:** `65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7`
+**Source fingerprint:** `9619a33c8f16afb01cb420bd3c2fedd2afdd7326419d6cc3d1ad339a875dbb6c`
 
 ## application
 
@@ -389,6 +389,7 @@
 - [KC Spaces Fund](../projects/kc-spaces-fund-orientation.md) - `project.kc-spaces-fund`
 - [KC Town Hall orientation](../projects/kc-town-hall-orientation.md) - `project.kc-town-hall`
 - [Tired of Tires resident service](../projects/tired-of-tires-resident-service.md) - `project.kc-town-hall.tired-of-tires`
+- [Knowledge ecosystem implementation review](../projects/knowledge-ecosystem-refresh-2026-10.md) - `project.knowledge-ecosystem-refresh.2026-10`
 - [Let NYC Dance](../projects/let-nyc-dance.md) - `project.let-nyc-dance`
 - [NTER CHNG](../projects/nter-chng.md) - `project.nter-chng`
 - [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) - `project.nyc-artist-coalition`

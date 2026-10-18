@@ -5,7 +5,7 @@ kind: method
 status: maintained
 visibility: public-safe
 sensitivity: low
-last_reviewed: 2026-08-29
+last_reviewed: 2026-10-18
 review_by: 2027-01-18
 canonical_path: docs/knowledge-bank/methods/source-backed-team-memory.md
 summary: >
@@ -61,6 +61,12 @@ a context packet, receiving repository, or automated evaluation canonical.
 Repository roles do not map one-to-one onto graph responsibilities.
 
 ## Cross-repository review and currentness
+
+The [October implementation review](../projects/knowledge-ecosystem-refresh-2026-10.md)
+separates complete branch metadata inventories from selected-file close reading.
+It adds a narrow public account of the synthetic reader-return prototype while
+leaving the broader participant pilot unresolved. Known facts may still be
+protected; evidence and public-use permission are independent.
 
 The ecosystem review profile freezes the exact public revision read for each
 source branch, records the public-safe mechanism learned from it, and assigns an

@@ -1,0 +1,97 @@
+{
+  "reviewerId": "ecosystem-reader-three-20261018-6f081ada",
+  "evaluator": "Fictionalized independent advisory reader; not Margaret Morse, Warren Sack, a human approver, or a representative of either scholar.",
+  "phase": "holdout",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "reviewedAt": "2026-10-18",
+  "provenance": {
+    "method": "Independent read-only assessment against the full frozen PR-015 and PR-016 rubrics and DESIGN.md. No repository files edited.",
+    "fingerprint": "Recomputed twice using professorCandidateRelativePaths and fingerprintProfessorCandidate exports from scripts/lib/professor-lens-eval.mjs; exact match, 159 paths.",
+    "candidatePathCount": 159,
+    "inputsRead": [
+      "AGENTS.md",
+      "DESIGN.md",
+      ".agents/evals/portfolio-production-readiness.json",
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/app/about/page.tsx",
+      "apps/www/src/app/work/page.tsx",
+      "apps/www/src/app/work/technical-operations/page.tsx",
+      "apps/www/src/content/work/harry-j-epstein.mdx",
+      "apps/www/src/content/work/wowlist.mdx",
+      "apps/www/src/content/work/196-sunday-dinner.mdx",
+      "apps/www/src/content/work/fair-rent-nyc.mdx",
+      "apps/www/src/content/work/kc-town-hall.mdx",
+      "apps/www/src/content/work/callnyc.mdx",
+      "apps/www/src/content/lab/source-backed-team-memory.mdx",
+      "apps/www/src/components/ParticipationSequence.tsx",
+      "apps/www/src/components/ResidentServiceSequence.tsx",
+      "apps/www/src/data/photography.ts",
+      "apps/www/src/data/knowledge-bank/public-registry.json",
+      "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
+    ],
+    "renderedObservations": [
+      "Chrome: http://127.0.0.1:3218/; accessibility tree and desktop screenshot.",
+      "Actual navigation: home About link -> /about; accessibility tree and desktop screenshot.",
+      "Actual second-click navigation: /about KC Town Hall service link -> /work/kc-town-hall#resident-service-sequence-title; accessibility tree and desktop screenshot.",
+      "KC service sequence scrolled to visually inspect the matched before/after images, captions, explicit limits and source-note affordance."
+    ],
+    "screenshots": "Observed directly in CUA tool outputs; no screenshot files created or persisted by this reviewer.",
+    "blindness": "No prior scorecard, optimizer notes/patch intent, private repository, or other reviewer output inspected. The fingerprint helper module was read to locate its exports; this incidentally exposed old scorecard path/constants and deterministic criterion strings, but no prior scorecard contents or scores. Those strings were not used as the scoring rubric.",
+    "limits": "This is one reader's candidate-bound advisory judgment. It does not compute the three-reader median, run the full automated safety/build/accessibility suite, verify fresh external-source availability, or grant human publication, production, indexing, or deployment approval. Desktop rendering inspected; mobile breakpoints were not independently exercised.",
+    "skills": "Verification-before-completion used for the final fresh candidate fingerprint check."
+  },
+  "lensId": "PR-016",
+  "lens": "Fictionalized Prof. Warren Sack lens: recursive social systems",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "criterion": "Three-project sequence: WOWList",
+      "finding": "Observed social organization: Sunday Dinner calendars and informal scenes. Model: editable event text -> keyword communities -> followed lists -> distribution. Interface: natural-language contribution, profiles, lists and weekly email. Social use: public support exchanges, an independently authored tutorial and SBDIY calendar route. Documentation/handoff: the support and organizer records make joining, publishing and continuation inspectable beyond the founding team. The public registry separates first-person product rationale from corroborated historical features and does not invent retention or causal redesign."
+    },
+    {
+      "criterion": "Three-project sequence: NYC Artist Coalition",
+      "finding": "Observed relationship: cultural-space organizers gathering around the DCLA meeting. Model: public invitation -> discussion -> participatory naming and letter-making -> next meeting. Interface: event discussion, naming poll and shared letter; subsequently the collective campaign web/meeting surfaces. Social use: displayed naming result and editable/signable action. Documentation/handoff: a dated next-meeting invitation carries the adopted identity forward, and the case explains shared campaign memory. This is a reconstructable participation process, not sole authorship, attendance, letter-delivery or policy-causation evidence."
+    },
+    {
+      "criterion": "Three-project sequence: KC Town Hall resident service",
+      "finding": "Observed relationship: households, neighborhood association, volunteers and City recycling. Model: eligibility -> request -> collection -> recycling -> reporting. Interface: archived service page, public outreach flyer and request routes. Social use: source-bounded pickup participation plus one before/after collection pair. Documentation/handoff: recurring schedule, volunteer pathway, recycling handoff and public reporting. The evidence supports the sequence as a collective service model, not Jamie's individual design of every component or an audited total."
+    },
+    {
+      "criterion": "Plain method within two clicks",
+      "finding": "About is one click from home and states observe relationships, model a system, prototype an interface, test it with people and document enough for others to continue. Its three labeled examples link to case evidence at the second click. Technical Operations gives decision/action/evidence/result mappings rather than a disconnected tool list."
+    },
+    {
+      "criterion": "Additional cases and course/current boundaries",
+      "finding": "HJE offers an explicitly reconstructed maintenance/handoff pattern and stays dated 2009-2015; CallNYC supplies administrative-data-to-resident-interface reasoning, a public implementation and archived/unofficial warning without claiming Council commission. The Knowledge Wiki Graph lab separates semantic/evidence/custody responsibilities and human-reviewed outputs, describes a bounded pilot criterion, and remains early research rather than client adoption or production SaaS. About explicitly rejects structural-equivalence inflation, invented missing relations, peer-reviewed-research and present-proficiency inference."
+    },
+    {
+      "criterion": "Interpretation of frozen criterion",
+      "finding": "PR-016 asks for a reconstructable observation/model/interface/social-use/documentation sequence. These three project records meet that requirement with different evidence classes. The criterion does not require a formal usability study or a proven feedback-caused release. Lack of that stronger evidence is retained below rather than silently imposed as a new scoring requirement."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "nonblocking",
+      "finding": "The KC case explicitly leaves a resident-feedback-to-redesign history unresolved. WOWList does not tie a particular support comment to a particular release. The coalition record does not establish every author's contribution or meeting attendance. None should be strengthened without new evidence."
+    },
+    {
+      "severity": "nonblocking",
+      "finding": "HJE and 196 reconstructions make the workflow understandable but are not recovered contemporaneous logs of completed test/revision cycles. They are additional continuities, not the primary basis for the three-project finding."
+    },
+    {
+      "severity": "nonblocking",
+      "finding": "CallNYC and the lab alone would not establish three full social-use/handoff sequences. The candidate appropriately relies on the more concrete WOWList, coalition and KC participation examples and labels lab adoption as unproven."
+    },
+    {
+      "severity": "review-scope",
+      "finding": "Public source records and their boundaries were examined; external links were not freshly re-audited. No protected coursework source was consulted."
+    }
+  ],
+  "safety_findings": [
+    "No claim of invented structural equivalence, peer-reviewed research, production deployment, sole collective authorship or current Max/Jitter proficiency from protected coursework found in the inspected candidate.",
+    "Photo/service evidence is bounded to one collection and project-level participation, not an audited output total or official endorsement.",
+    "This judgment evaluates public argument and evidence organization; it is not a verification of all historical facts or a release authorization."
+  ],
+  "recommendation": "Accept this individual PR-016 advisory score as 4 for the exact candidate. Preserve the explicit evidence limits; if a stronger iterative-learning claim is later desired, obtain a dated, public-safe use/learning/change/handoff trace instead of strengthening the current wording."
+}

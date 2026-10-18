@@ -1,0 +1,146 @@
+{
+  "reviewerId": "cec-irl-independent-public-reader-two-20261018",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "lens": "Prof. Warren Sack lens: recursive social systems",
+  "evaluator": "Fictional advisory evaluator; not Warren Sack, real participation, endorsement or human approval.",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "candidatePathCount": 159,
+  "score": 4,
+  "pass": true,
+  "passScope": "This independent reader's bounded PR-016 judgment only; three-reader aggregation and exact-candidate human release approval remain separate.",
+  "evidence": [
+    {
+      "criterion": "Three-project systems-sequence trace",
+      "result": "pass",
+      "project": "WOWList",
+      "references": [
+        "/about",
+        "/work/wowlist",
+        "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"
+      ],
+      "sequence": {
+        "observeRelationships": "Sunday Dinner calendars and organizer scenes reveal needs organized around interests and places.",
+        "modelSystem": "Editable event text connects to keyword communities, followed lists and distribution.",
+        "prototypeInterface": "The product uses natural-language event text instead of a complex event form; the displayed model is labeled reconstruction.",
+        "socialUse": "Public support exchanges, an independent organizer tutorial and the SBDIY route document use beyond the founding pair.",
+        "documentHandoff": "Joining/publishing guidance, tutorial and local calendar routes allow other organizers to operate and continue their own calendar work."
+      },
+      "limit": "This is historical product-use evidence, not proof of present availability, retention or a specific support comment causing a release."
+    },
+    {
+      "criterion": "Three-project systems-sequence trace",
+      "result": "pass",
+      "project": "NYC Artist Coalition participation path",
+      "references": [
+        "/about",
+        "/work/fair-rent-nyc",
+        "apps/www/src/components/ParticipationSequence.tsx"
+      ],
+      "sequence": {
+        "observeRelationships": "Cultural-space organizers need a way to gather around the DCLA meeting.",
+        "modelSystem": "Invitation, shared discussion, participatory naming/letter-making and the next general meeting form a recoverable participation path.",
+        "prototypeInterface": "Public event discussion and a shared editable letter provide concrete entry and contribution surfaces; campaign websites are one additional interface.",
+        "socialUse": "The documented naming poll and event-discussion invitation show participation without being inflated into attendance or a legal founding vote.",
+        "documentHandoff": "The subsequent March 6 invitation carries the coalition identity and participation path forward; later campaign infrastructure preserves sources and next steps."
+      },
+      "limit": "The sequence does not establish every author's contribution, letter delivery, attendance or sole policy causation."
+    },
+    {
+      "criterion": "Three-project systems-sequence trace",
+      "result": "pass",
+      "project": "KC Town Hall Tired of Tires",
+      "references": [
+        "/about",
+        "/work/kc-town-hall#resident-service-sequence-title",
+        "apps/www/src/components/ResidentServiceSequence.tsx"
+      ],
+      "sequence": {
+        "observeRelationships": "Households, volunteers, the neighborhood association and City recycling are named parts of the service relationship.",
+        "modelSystem": "Eligibility, request, scheduled collection, recycling and public reporting form an explicit service model.",
+        "prototypeInterface": "The archived public service page and redacted outreach flyer explain who can request what and how the recurring service works.",
+        "socialUse": "Matched photographs show one completed collection; the source trail separately supports Jamie's participation in pickup work.",
+        "documentHandoff": "The recurring schedule, volunteer path, recycling handoff and public reporting make the operational chain and its continuation recoverable."
+      },
+      "limit": "The case does not establish an audited program total or a feedback-to-redesign chain. Those finer learning claims are explicitly left unresolved."
+    },
+    {
+      "criterion": "Plain method within two clicks and connected information architecture",
+      "result": "pass",
+      "references": [
+        "/ -> /about",
+        "/about -> project case studies",
+        "/work/technical-operations"
+      ],
+      "finding": "The rendered About page names all five moves in plain language and immediately grounds them in three distinct participation systems. The reader can reconstruct who uses each interface, the relationships it models, and what lets others continue. Technical Operations supplies a complementary decision/action/evidence/result structure. These are not merely disconnected tool lists."
+    },
+    {
+      "criterion": "Coursework-versus-current-proof and anti-overclaim audit",
+      "result": "pass",
+      "references": [
+        "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
+        "apps/www/src/data/knowledge-bank/public-registry.json",
+        "/about",
+        "/work/callnyc",
+        "/lab/source-backed-team-memory"
+      ],
+      "finding": "The protected Social Information Spaces prototype is absent from the active public registry inspected. No current Max/Jitter proficiency, disciplinary invention, structural equivalence, peer-reviewed research or faculty endorsement is asserted. CallNYC is an archived independent prototype, not a commissioned City service. The current lab distinguishes a working synthetic reader-return implementation from a participant pilot, client deployment and useful human handoff still to be tested. HJE's historical reconstruction and residency planning are not smuggled in as current production proof."
+    },
+    {
+      "criterion": "Current research continuity is inspectable without overclaiming adoption",
+      "result": "pass",
+      "references": [
+        "/lab/source-backed-team-memory",
+        "CLM-KNOWLEDGE-WIKI-GRAPH-ECOSYSTEM-2026"
+      ],
+      "finding": "The semantic/evidence/custody distinction supplies a concrete information architecture. The public lab shows a synthetic correction mechanism and a real CallNYC date correction propagated across public outputs. That supports current method development and documentary continuity; the separate proposed two-week engagement is not counted as delivered work."
+    }
+  ],
+  "gaps": [
+    "One reader cannot establish the required three-reader median; this pass does not certify complete production readiness.",
+    "The three full traces use currently public-safe evidence from dated projects, not three currently operating products. Dates and statuses must remain explicit.",
+    "No formal user-study result, precise feedback-to-release causal chain, audited service total or client adoption was established. None was required to reconstruct the stated observation/model/interface/social-use/documentation sequence, and none should be inferred.",
+    "The full mobile, keyboard, contrast and route matrix was outside this review."
+  ],
+  "safety_findings": [
+    "No blocking sole-authorship, official-authority, production-deployment or historical-tool-proficiency inflation was found in inspected surfaces.",
+    "The bounded comparison explains its limits instead of inventing missing relationships to complete a symmetrical diagram.",
+    "The fictional named lens is evaluative only and cannot confer faculty, participant or human-release approval."
+  ],
+  "recommendation": "Retain for aggregate review. The five-stage method is reconstructable through three distinct evidence forms, and the candidate earns trust by separating reconstruction, actual use, continuation and unresolved causal detail. Keep those distinctions intact in any later shortening.",
+  "provenance": {
+    "reviewedOn": "2026-10-18",
+    "rubric": ".agents/evals/portfolio-production-readiness.json PR-016, frozen 0-4 scale",
+    "designContract": "DESIGN.md",
+    "fingerprintMethod": "Independently recomputed with professorCandidateRelativePaths and fingerprintProfessorCandidate exports; 159 paths matched the expected hash.",
+    "priorScorecardsInspected": false,
+    "patchIntentInspected": false,
+    "optimizerNotesInspected": false,
+    "privateRepositoryInspectedForThisReview": false,
+    "participatedInCandidateOptimization": false,
+    "renderedBase": "http://127.0.0.1:3218",
+    "renderedPages": [
+      "/",
+      "/about",
+      "/work/kc-town-hall",
+      "/lab/source-backed-team-memory"
+    ],
+    "sourcePagesRead": [
+      "/about",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/harry-j-epstein",
+      "/work/callnyc",
+      "/work/kc-town-hall",
+      "/work/kc-spaces-fund",
+      "/lab/source-backed-team-memory"
+    ],
+    "screenshotsObserved": [
+      "Live desktop About sequence with five-stage method and project-specific trace",
+      "Live desktop KC matched collection photographs and scope note"
+    ],
+    "repositoryEdits": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "evaluator": "Independent simulated advisory evaluator; inhabited-systems reading. No real named person participated.",
+  "reviewerId": "public-ecology-reader-one",
+  "phase": "holdout",
+  "lensId": "PR-015",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "path": "apps/www/src/app/about/page.tsx:50",
+      "finding": "The through-line is explicit, concise, and professionally situated: Open House's communal decision-making and many-perspective documentation lead into WOWList, Sunday Dinner / 196, NYC Artist Coalition, and Knowledge Wiki Graphs. It connects artistic, civic, technical, and social practice through people recognizing relationships, participating, remembering, and continuing."
+    },
+    {
+      "path": "apps/www/src/content/work/wowlist.mdx:73",
+      "finding": "First continuity: Sunday Dinner calendars become collaboratively editable event text and keyword communities; public support, an independent organizer tutorial, and SBDIY provide specific evidence of people learning to enter and use the system. Shared credit with Richard Caceres and communities remains explicit."
+    },
+    {
+      "path": "apps/www/src/content/work/196-sunday-dinner.mdx:47",
+      "finding": "Second continuity: the residency and gathering reconstructions show hospitality as a design practice, including learning what the artist needs, configuring space, supporting independent access, arranging food and welcome, and preserving minimal continuity records. Reconstructions, participant privacy, and the difference between plans and completed outcomes are identified."
+    },
+    {
+      "path": "apps/www/src/content/work/fair-rent-nyc.mdx:63",
+      "finding": "Third continuity: listening meetings, priority ballots, public event pages, shared web infrastructure, and follow-through connect collective participation to durable civic operations. ParticipationSequence presents a website, a working session, and a public room as related interfaces; recollection is distinguished from independently retained implementation evidence."
+    },
+    {
+      "path": "apps/www/src/app/lab/source-backed-team-memory/page.tsx:121",
+      "finding": "A fourth continuity treats knowledge as present in people, language, artifacts, and relationships. The photographed shared working map is collectively credited, and the prototype is explicitly synthetic with human usefulness open."
+    },
+    {
+      "path": "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md:14",
+      "finding": "The public source note summarizes the Open House article instead of republishing it. It withholds faculty testimonials and raw educational records and explains their limited rubric-design role."
+    },
+    {
+      "path": "apps/www/src/data/knowledge-bank/public-registry.json",
+      "finding": "Reviewed the about-page citation plan, all 14 referenced source records, the connected project claims and boundaries. Open House is an active bounded claim with collective-governance support; private-source workflow claims are visibly limited, and social signals are not converted into attendance or impact."
+    },
+    {
+      "path": "apps/www/src/data/photography.ts:130",
+      "finding": "Relevant images have explicit dimensions, alt text, caption, courtesy credit, allowed placements, publication status, and separate production/indexing state. The Sunday Dinner occurrence records human rights and represented-person review without exposing identities or participant records."
+    },
+    {
+      "path": "http://127.0.0.1:3218/ -> /about -> /work/wowlist",
+      "finding": "Independently clicked the homepage About link and then its WOWList link. About is one click and project evidence two clicks from home. Observed rendered homepage, About method, WOWList, Sunday Dinner, coalition, and lab; also verified the work index and remaining evidence routes render. Screenshots of homepage, About method, WOWList, Sunday Dinner, and coalition were inspected in the browser session."
+    }
+  ],
+  "gaps": [
+    "A runtime image defect remains outside this content-lens pass: Sunday Dinner's main photo rendered blank at the browser's default desktop viewport; the image was complete with naturalWidth 0 after scrolling. Its optimized URL requested width 1920. This must remain a visual/runtime hold until separately resolved; the text and the other observed participatory photographs still satisfy the inhabited-systems content criteria.",
+    "The four-width accessibility/overflow matrix and every lazy image were not independently audited by this evaluator. No claim of passing DESIGN.md's full visual acceptance matrix is made.",
+    "Public registry/source-note consistency was reviewed, but underlying protected records and new participant permissions were intentionally not accessed. Approval records are statements in the supplied candidate, not new approvals obtained by this evaluator.",
+    "This is one independent scorecard. The three-judge median requirement cannot be established by one reader."
+  ],
+  "safety_findings": [
+    "No raw Open House article, faculty testimonial, private correspondence, student identifier, or participant-level operating values were observed on the reviewed public surfaces.",
+    "Collective credit is specific: Richard Caceres, Julia Fredenburg in the Sunday Dinner milestone, NYC Artist Coalition, organizers, hosts, and wider communities are retained.",
+    "Production/indexing approval for several photographs remains open in the manifest; this advisory content pass grants no release permission."
+  ],
+  "recommendation": "PASS for this individual inhabited-systems content reading. Keep runtime image verification and human release decisions separate. The portfolio explains why participation, hospitality, place, and care shape its operating work without becoming an artist biography.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T13:40:49Z",
+    "scope": "Read-only frozen PR-015/PR-016 and DESIGN.md review of the supplied public candidate; no prior scorecards, private repositories, or implementation intent consulted. Recomputed fingerprint before and after review with professorCandidateRelativePaths and fingerprintProfessorCandidate using Node 26.5.0; 159 paths matched. Rendered local preview supplied after source review; screenshot observations are in the evaluator tool transcript, not separate saved files.",
+    "nohumanapproval": true,
+    "candidatePathCount": 159,
+    "pathsInspected": [
+      "AGENTS.md",
+      "DESIGN.md",
+      ".agents/evals/portfolio-production-readiness.json (complete PR-015, PR-016 and scale/thresholds)",
+      "scripts/lib/professor-lens-eval.mjs (fingerprint exports; no result files)",
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/app/about/page.tsx",
+      "apps/www/src/app/work/page.tsx",
+      "apps/www/src/app/work/technical-operations/page.tsx",
+      "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+      "apps/www/src/content/work/wowlist.mdx",
+      "apps/www/src/content/work/196-sunday-dinner.mdx",
+      "apps/www/src/content/work/fair-rent-nyc.mdx",
+      "apps/www/src/content/work/kc-town-hall.mdx",
+      "apps/www/src/content/work/callnyc.mdx",
+      "apps/www/src/content/lab/source-backed-team-memory.mdx",
+      "apps/www/src/components/ParticipationSequence.tsx",
+      "apps/www/src/components/ResidentServiceSequence.tsx",
+      "apps/www/src/components/SiteHeader.tsx",
+      "apps/www/src/components/Hero.tsx",
+      "apps/www/src/data/photography.ts (relevant occurrences)",
+      "apps/www/src/data/knowledge-bank/public-registry.json (relevant claims, source records, and about citation plan)",
+      "apps/www/src/data/knowledge-bank/records.ts (about citation occurrences)",
+      "apps/www/src/data/knowledge-bank/historical-knowledge.ts (Open House and held social-information-spaces records)",
+      "apps/www/src/data/knowledge-bank/knowledge-reading-prototype-2026-10.ts",
+      "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
+    ]
+  }
+}

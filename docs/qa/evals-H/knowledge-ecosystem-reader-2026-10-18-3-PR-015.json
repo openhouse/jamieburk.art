@@ -1,0 +1,89 @@
+{
+  "reviewerId": "ecosystem-reader-three-20261018-6f081ada",
+  "evaluator": "Fictionalized independent advisory reader; not Margaret Morse, Warren Sack, a human approver, or a representative of either scholar.",
+  "phase": "holdout",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "reviewedAt": "2026-10-18",
+  "provenance": {
+    "method": "Independent read-only assessment against the full frozen PR-015 and PR-016 rubrics and DESIGN.md. No repository files edited.",
+    "fingerprint": "Recomputed twice using professorCandidateRelativePaths and fingerprintProfessorCandidate exports from scripts/lib/professor-lens-eval.mjs; exact match, 159 paths.",
+    "candidatePathCount": 159,
+    "inputsRead": [
+      "AGENTS.md",
+      "DESIGN.md",
+      ".agents/evals/portfolio-production-readiness.json",
+      "apps/www/src/app/page.tsx",
+      "apps/www/src/app/about/page.tsx",
+      "apps/www/src/app/work/page.tsx",
+      "apps/www/src/app/work/technical-operations/page.tsx",
+      "apps/www/src/content/work/harry-j-epstein.mdx",
+      "apps/www/src/content/work/wowlist.mdx",
+      "apps/www/src/content/work/196-sunday-dinner.mdx",
+      "apps/www/src/content/work/fair-rent-nyc.mdx",
+      "apps/www/src/content/work/kc-town-hall.mdx",
+      "apps/www/src/content/work/callnyc.mdx",
+      "apps/www/src/content/lab/source-backed-team-memory.mdx",
+      "apps/www/src/components/ParticipationSequence.tsx",
+      "apps/www/src/components/ResidentServiceSequence.tsx",
+      "apps/www/src/data/photography.ts",
+      "apps/www/src/data/knowledge-bank/public-registry.json",
+      "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md"
+    ],
+    "renderedObservations": [
+      "Chrome: http://127.0.0.1:3218/; accessibility tree and desktop screenshot.",
+      "Actual navigation: home About link -> /about; accessibility tree and desktop screenshot.",
+      "Actual second-click navigation: /about KC Town Hall service link -> /work/kc-town-hall#resident-service-sequence-title; accessibility tree and desktop screenshot.",
+      "KC service sequence scrolled to visually inspect the matched before/after images, captions, explicit limits and source-note affordance."
+    ],
+    "screenshots": "Observed directly in CUA tool outputs; no screenshot files created or persisted by this reviewer.",
+    "blindness": "No prior scorecard, optimizer notes/patch intent, private repository, or other reviewer output inspected. The fingerprint helper module was read to locate its exports; this incidentally exposed old scorecard path/constants and deterministic criterion strings, but no prior scorecard contents or scores. Those strings were not used as the scoring rubric.",
+    "limits": "This is one reader's candidate-bound advisory judgment. It does not compute the three-reader median, run the full automated safety/build/accessibility suite, verify fresh external-source availability, or grant human publication, production, indexing, or deployment approval. Desktop rendering inspected; mobile breakpoints were not independently exercised.",
+    "skills": "Verification-before-completion used for the final fresh candidate fingerprint check."
+  },
+  "lensId": "PR-015",
+  "lens": "Fictionalized Prof. Margaret Morse lens: inhabited systems",
+  "score": 4,
+  "pass": true,
+  "evidence": [
+    {
+      "criterion": "Visible interdisciplinary threshold and role clarity",
+      "finding": "Home names the technical project management/product operations role immediately. About is one primary-navigation click away and opens with the same role before 'Systems people can inhabit'. The Open House lineage then explicitly connects artistic, civic, technical and social practice; it is a concise threshold, not an artist biography."
+    },
+    {
+      "criterion": "At least three project continuities",
+      "finding": "WOWList makes scene vocabulary and shared calendars into editable event text, keyword communities and organizer distribution. Sunday Dinner/196 makes hospitality, orientation, independent access and return into two visibly labeled handoff reconstructions while withholding participant values. Coalition work connects invitation, participatory naming/letter-making, the working room, a shared campaign site and later meetings. KC adds an unusually concrete relationship between a public service promise and the inhabited street where delivery occurred."
+    },
+    {
+      "criterion": "Why this is not conventional administration",
+      "finding": "The structures let people enter, influence, remember and continue: organizers write in their own community language; coalition participants can name and edit; resident artists retain agency; continuity records protect rather than expose relationships. These are operational choices tied to public examples, not generic values."
+    },
+    {
+      "criterion": "Design and embodiment",
+      "finding": "The rendered homepage uses a full photographic threshold with readable role text and credit, not a dashboard. The About page uses editorial typography and rule-separated examples. The KC matched images are evidence of one change in a real place, with precise captions and limited conclusions. The coalition and shared-table photographic records connect the digital surface with bodies, attention and place; registered photo metadata marks authorized placements while production/indexing remain open."
+    },
+    {
+      "criterion": "Source and credit boundaries",
+      "finding": "Open House is a short canonical claim grounded in a dated public article; the public-safe source note explicitly withholds raw educational records, private correspondence and unapproved testimonial material. Richard Caceres and organizer communities retain WOWList credit. Coalition outcomes remain collective. Sunday Dinner publishes schema-level reconstructions, not participant rows. HJE dates and 196 planning-vs-completed-residency distinction are explicit."
+    }
+  ],
+  "gaps": [
+    {
+      "severity": "nonblocking",
+      "finding": "Some operating detail is necessarily a redacted reconstruction. The 196 template is not proof of a completed residency and the protected aggregate is not a precise attendance census; the candidate states these limits."
+    },
+    {
+      "severity": "nonblocking",
+      "finding": "The About page is long after its concise opening. Its subheadings and linked examples keep the argument navigable, but an additional summary could improve scanning. This is not needed to satisfy this lens."
+    },
+    {
+      "severity": "review-scope",
+      "finding": "This reader did not rerun mobile, source-exclusion, metadata or full publication-gate checks. Those independent gates remain required."
+    }
+  ],
+  "safety_findings": [
+    "No blocking privacy, sole-credit or testimonial projection issue found in the inspected public surfaces and public registry excerpts.",
+    "Human rights/represented-person and release states were read as recorded assertions in photography.ts, not recreated as new permissions by this review.",
+    "No protected raw source was inspected; the review does not turn protected-source custody into public-release authority."
+  ],
+  "recommendation": "Accept this individual PR-015 advisory score as 4 for these exact bytes. Preserve the redaction, collective credit and photo-release boundaries. Do not interpret it as the aggregate gate passing or as human approval."
+}

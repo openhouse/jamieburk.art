@@ -30,7 +30,7 @@ async function collectFiles(targetPath) {
 export function evaluatePublicText({ config, relativePath, text }) {
   const exemptions = config.lineExemptions
     .filter((entry) => entry.path === relativePath)
-    .map((entry) => new RegExp(entry.pattern, "i"));
+    .map((entry) => new RegExp(entry.pattern, "gi"));
   const termPattern = new RegExp(
     `\\b(?:${config.forbiddenStandaloneTerms
       .map(escapeRegularExpression)
@@ -46,32 +46,33 @@ export function evaluatePublicText({ config, relativePath, text }) {
     expression: new RegExp(entry.pattern, "gi")
   }));
 
-  return text.split(/\r?\n/).flatMap((line, index) => {
-    if (exemptions.some((pattern) => pattern.test(line))) return [];
-    const matches = scanStandaloneTerms
-      ? [...line.matchAll(termPattern)].map((match) => ({
-          match,
-          patternId: null
-        }))
-      : [];
-    for (const entry of forbiddenPatterns) {
-      matches.push(
-        ...[...line.matchAll(entry.expression)].map((match) => ({
-          match,
-          patternId: entry.id
-        }))
-      );
-    }
-    return matches
-      .sort((a, b) => (a.match.index ?? 0) - (b.match.index ?? 0))
-      .map(({ match, patternId }) => ({
+  // Keep source offsets while exempting only the configured field expression.
+  // An internal state must not hide neighboring public prose on the same line.
+  const inspectable = exemptions.reduce((value, expression) =>
+    value.replace(expression, (match) => match.replace(/[^\r\n]/g, " ")), text);
+  const matches = scanStandaloneTerms
+    ? [...inspectable.matchAll(termPattern)].map((match) => ({ match, patternId: null }))
+    : [];
+  for (const entry of forbiddenPatterns) {
+    matches.push(...[...inspectable.matchAll(entry.expression)].map((match) => ({
+      match,
+      patternId: entry.id
+    })));
+  }
+  return matches
+    .sort((a, b) => (a.match.index ?? 0) - (b.match.index ?? 0))
+    .map(({ match, patternId }) => {
+      const line = inspectable.slice(0, match.index).split(/\r?\n/).length;
+      return {
         path: relativePath,
-        line: index + 1,
+        line,
         term: match[0],
         patternId,
-        excerpt: line.trim()
-      }));
-  });
+        excerpt: match[0].includes("\n")
+          ? match[0].replace(/\s+/g, " ").trim()
+          : text.split(/\r?\n/)[line - 1].trim()
+      };
+    });
 }
 
 export async function evaluatePublicLanguage({

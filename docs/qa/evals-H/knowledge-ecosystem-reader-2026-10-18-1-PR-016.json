@@ -1,0 +1,75 @@
+{
+  "evaluator": "Independent simulated advisory evaluator; recursive-social-systems reading. No real named person participated.",
+  "reviewerId": "public-recursion-reader-one",
+  "phase": "holdout",
+  "lensId": "PR-016",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "score": 3,
+  "pass": false,
+  "evidence": [
+    {
+      "path": "apps/www/src/app/about/page.tsx:99",
+      "finding": "The exact method is plainly stated: observe relationships, model a system, prototype an interface, test it with people, and document enough for others to continue. A verified homepage navigation click reaches it, and linked cases are reachable on the second click."
+    },
+    {
+      "path": "apps/www/src/app/about/page.tsx:117",
+      "finding": "WOWList supplies the strongest complete historical sequence: shared calendars reveal relationships; natural-language event text and keyword communities model them; publishing, profiles, follows, and weekly email provide interfaces; external organizers use the platform; support records and a tutorial support onboarding and continuation. Current relaunch claims remain limited to a threshold and tester invitation."
+    },
+    {
+      "path": "apps/www/src/app/about/page.tsx:161",
+      "finding": "Coalition formation supplies a second reconstructable participation sequence: public invitation, discussion, naming and shared-letter interface, displayed poll response, and the next general meeting carrying the identity forward. This is a legitimate social interface, with explicit limits on authorship, attendance, letter delivery, and policy causality."
+    },
+    {
+      "path": "apps/www/src/app/about/page.tsx:205",
+      "finding": "Tired of Tires supplies a clear project-level service model, intake interface, delivered collection, recycling handoff, and public reporting. The candidate carefully limits Jamie's demonstrated individual role to participation in pickup work and explicitly leaves the resident-feedback-to-redesign history unresolved."
+    },
+    {
+      "path": "apps/www/src/content/work/callnyc.mdx:45",
+      "finding": "CallNYC links source-data categories to issue pathways and public guidance with surviving implementation and public interaction evidence. The candidate keeps it archived, independent, and unofficial; Council social responses are not evidence of resident usability or a user-informed handoff."
+    },
+    {
+      "path": "apps/www/src/app/lab/source-backed-team-memory/page.tsx:157",
+      "finding": "The lab now names an implemented synthetic reader-return prototype, exact-edition controls, retained disagreement, and reference/action separation. The correction trace from an incorrect CallNYC date to 2016 is concrete. Synthetic tests, AI assistance, lack of participant pilot, and open human usefulness are all visibly stated."
+    },
+    {
+      "path": "apps/www/src/data/knowledge-bank/historical-knowledge.ts:265",
+      "finding": "The social-information-spaces coursework projection remains held, with no public surfaces. Protected educational evidence does not become a claim of structural-equivalence invention, peer-reviewed work, current Max/Jitter proficiency, sole collective authorship, or production deployment."
+    },
+    {
+      "path": "apps/www/src/app/work/technical-operations/page.tsx:52",
+      "finding": "The role-fit page distinguishes demonstrated operating work from missing end-to-end product and resident-research evidence. That boundary makes the public account trustworthy but cannot itself fill the missing loop."
+    }
+  ],
+  "gaps": [
+    "The frozen requirement for three current public-safe projects with the full sequence is not fully observed. WOWList's complete use evidence is historical while its contemporary calendar remains open; the coalition loop is anchored in 2017; KC Town Hall is a historical project whose source boundaries establish Jamie's pickup participation, not his observation/model/prototype decisions. These are valuable current portfolio examples, but their presence does not demonstrate three current completed loops.",
+    "Even if 'current projects' is read as projects currently represented in the portfolio, the third complete Jamie-specific sequence remains weaker: KC Town Hall expressly leaves individual component authorship and feedback-to-redesign evidence open. Sunday Dinner/196 shows operating and planning reconstructions but no separately inspectable full observation-to-prototype-to-use trace. The synthetic lab cannot supply observed human or collective use while its own page says human usefulness remains open.",
+    "No formal user study or causal support-comment-to-release proof is demanded here. The narrower missing evidence is a third bounded account of what Jamie observed, how it changed the model/interface, how others actually used it, and what they could continue afterward.",
+    "Sunday Dinner's main photo failed during the rendered visit; the full DESIGN.md viewport and lazy-image matrix is not independently satisfied by this review.",
+    "This is one independent scorecard; the three-judge median requirement is not established."
+  ],
+  "safety_findings": [
+    "No coursework-derived current proficiency, invention, production, or sole-author claims were observed on the reviewed website surfaces.",
+    "Historical, reconstructed, proposed, and synthetic evidence are explicitly separated. These limits should be preserved even though they prevent a maximum score under the frozen criterion.",
+    "No new human participation, consent, client adoption, or release authority follows from this advisory review."
+  ],
+  "recommendation": "HOLD for the full PR-016 requirement, with a strong/application-ready score of 3. The method and two substantial historical participation sequences are clear and inspectable. Preserve the third-sequence and current-use gaps instead of converting project-level participation or synthetic tests into evidence they do not supply.",
+  "provenance": {
+    "reviewedAt": "2026-10-18T13:40:49Z",
+    "scope": "Same read-only source and rendered-route scope as the PR-015 scorecard in this report. Independently recomputed expected candidate fingerprint over 159 paths before and after review. No prior scorecards, private repositories, or parent implementation intent consulted.",
+    "nohumanapproval": true,
+    "candidatePathCount": 159,
+    "pathsInspectedReference": "PR-015.provenance.pathsInspected in this same report",
+    "renderedRoutes": [
+      "/",
+      "/about",
+      "/work",
+      "/work/technical-operations",
+      "/work/wowlist",
+      "/work/196-sunday-dinner",
+      "/work/fair-rent-nyc",
+      "/work/kc-town-hall",
+      "/work/callnyc",
+      "/lab/source-backed-team-memory"
+    ]
+  }
+}

@@ -40,6 +40,28 @@ function expectFailure(name, mutate, expected) {
   });
 }
 
+test("implemented reader-return prototype has a narrow, pinned public claim", () => {
+  const candidate = loadCandidate();
+  const claim = candidate.knowledgeBank.claims.find(item => item.id === "CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026");
+  assert.ok(claim, "implemented prototype is absent from the canonical claim layer");
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.match(claim.projections[0].text, /synthetic.*prototype/i);
+  assert.deepEqual(claim.projections[0].surfaces, ["/lab/source-backed-team-memory"]);
+  for (const evidence of claim.evidence) {
+    const source = candidate.knowledgeBank.sources.find(item => item.id === evidence.sourceId);
+    assert.equal(source?.visibility, "public");
+    assert.match(source?.canonicalUrl ?? "", /github\.com\/openhouse\/jamieburk\.art\/blob\/[a-f0-9]{40}\//);
+  }
+});
+
+expectFailure("prototype copy cannot lose its visible human-validation boundary", candidate => {
+  candidate.labPage = candidate.labPage.replace("Synthetic examples only; not a participant pilot or a client deployment.", "Validated with real teams.");
+}, /prototype.*boundary/i);
+
+expectFailure("knowing a fact does not clear it for public use", candidate => {
+  candidate.labCopy = candidate.labCopy.replace("Known material has evidence; it is not necessarily public-safe.", "Known material is public-safe or source-backed.");
+}, /known.*public-safe/i);
+
 expectFailure(
   "the shared-memory proposition cannot lose a contextual lineage",
   (candidate) => {

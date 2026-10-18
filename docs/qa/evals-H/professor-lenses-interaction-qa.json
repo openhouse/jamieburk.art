@@ -1,10 +1,10 @@
 {
   "reportVersion": 5,
-  "checkedAt": "2026-10-13T18:03:26.620Z",
-  "baseUrl": "http://localhost:3213",
-  "publicSurfaceFingerprint": "13ed9060d7cdb135affeb193a0e6e252ff0e8db9019a4675702b8d4aa61cd110",
+  "checkedAt": "2026-10-18T13:40:29.336Z",
+  "baseUrl": "http://127.0.0.1:3218",
+  "publicSurfaceFingerprint": "93db784e753d99f1bba4077c5b8de3fc6a259d4cdde61805b8d3dd07998fc56d",
   "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
-  "publicSurfaceFileCount": 156,
+  "publicSurfaceFileCount": 157,
   "method": "Fresh Playwright keyboard interaction, visible-focus checks, DOM reading order and CSS viewport reflow observations on the Node 26 production build; not a human screen-reader or assistive-technology session.",
   "keyboard": {
     "desktopTabSequence": [

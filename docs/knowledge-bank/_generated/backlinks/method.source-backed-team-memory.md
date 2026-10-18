@@ -3,7 +3,7 @@
 
 **Source commit:** `a2ea9d1fce74a17adccf87381be7bcb66c35e2c5`
 **Generation time:** 2026-10-13T14:39:28-04:00
-**Source fingerprint:** `65b95e916b0df409796486fc0add8e2978db1e500db1f6463df184047915d0e7`
+**Source fingerprint:** `9619a33c8f16afb01cb420bd3c2fedd2afdd7326419d6cc3d1ad339a875dbb6c`
 
 - [Civic, cultural, and technical translation](../../capabilities/civic-cultural-and-technical-translation.md) - `prose_link` (markdown)
 - [Technical Operations](../../capabilities/technical-operations.md) - `prose_link` (markdown)
@@ -32,6 +32,8 @@
 - [Jamie Burkart](../../people/jamie-burkart.md) - `prose_link` (markdown)
 - [Technical Operations portfolio projection](../../projections/work-technical-operations.md) - `related_to` (frontmatter)
 - [CallNYC](../../projects/callnyc.md) - `uses_method` (frontmatter)
+- [Knowledge ecosystem implementation review](../../projects/knowledge-ecosystem-refresh-2026-10.md) - `prose_link` (markdown)
+- [Knowledge ecosystem implementation review](../../projects/knowledge-ecosystem-refresh-2026-10.md) - `related_to` (frontmatter)
 - [Knowledge Wiki Graph collective-map occurrence](../../projections/photography/knowledge-wiki-collective-map.md) - `related_to` (frontmatter)
 - [Jamie's Perspective](../../case-studies/anonymized-team-knowledge-opportunity/02-jamie-perspective.md) - `uses_method` (frontmatter)
 - [The Prospective Sponsor's Perspective](../../case-studies/anonymized-team-knowledge-opportunity/01-prospective-sponsor-perspective.md) - `uses_method` (frontmatter)

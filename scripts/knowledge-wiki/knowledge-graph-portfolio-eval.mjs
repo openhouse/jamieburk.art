@@ -89,6 +89,16 @@ export function evaluateKnowledgeGraphPortfolio(candidate) {
   ].join("\n");
 
   check(candidate.labPage.includes("Knowledge Wiki Graphs"), "lab page lacks the successor title");
+  check(
+    candidate.labPage.includes('claimId="CLM-KNOWLEDGE-READER-RETURN-PROTOTYPE-2026"') &&
+      candidate.labPage.includes("Synthetic examples only; not a participant pilot or a client deployment.") &&
+      candidate.labPage.includes("Built with AI assistance."),
+    "implemented prototype lacks a cited rendering or visible human-validation boundary"
+  );
+  check(
+    candidate.labCopy.includes("Known material has evidence; it is not necessarily public-safe."),
+    "known material must not be equated with public-safe material"
+  );
   check(candidate.labPage.includes("graphLayers"), "lab page lacks an at-a-glance graph model");
   for (const term of ["Semantic graph", "Evidence graph", "Source-custody graph"]) {
     check(publicCopy.includes(term), `public explanation is missing ${term}`);

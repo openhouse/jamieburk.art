@@ -1,0 +1,131 @@
+{
+  "runVersion": 3,
+  "judgeId": "b-repair2-composite-a",
+  "grader": "independent_llm_judge",
+  "independentFromOptimizer": true,
+  "rubricSha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
+  "candidateFingerprint": "d2bf3203016d62acb61bfb68231e98925c67944ba559adc9955337eff2d67809",
+  "verdict": "accepted",
+  "scores": [
+    {
+      "criterionId": "COMP-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The verifier confirmed all 2,172 candidate files and all 199 semantic copies.",
+        "The recomputed preflight confirmed fourteen matching frozen branch decisions and availability of every frozen commit object.",
+        "The integration register explicitly identifies the integration branch, develop base, and reference-only treatment of frozen branches."
+      ],
+      "rationale": "The frozen inventory remains intact. Movement of the mutable K reference is reported separately and does not replace its frozen head."
+    },
+    {
+      "criterionId": "COMP-002",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All fourteen register entries specify a decision, substantive rationale, destination paths, and verification criteria.",
+        "The register matches its frozen reviewed digest, and destination existence checks pass.",
+        "The website projection decision and deliberate architectural non-additions are explicit."
+      ],
+      "rationale": "The integration decisions are inspectable and describe concrete adaptations into existing destinations."
+    },
+    {
+      "criterionId": "COMP-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed preflight found all eleven canonical files and no forbidden parallel lifecycle roots.",
+        "The application citation imports resolve through the redacted public registry.",
+        "The public registry contains 64 public sources, 42 claims, and nine page plans, without protected locator, internal excerpt, or internal claim fields."
+      ],
+      "rationale": "Canonical research records and selective public projections remain separate within one architecture."
+    },
+    {
+      "criterionId": "COMP-004",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Independent read-only probes verified identical-record replay, linked duplicate preservation, and rejection of changed content under an existing ID.",
+        "Lifecycle queries returned mature held claims, unresolved inquiries, corrections, and projection counts.",
+        "The lifecycle query reported zero orphan sources."
+      ],
+      "rationale": "Intake preserves incoming evidence without silently replacing existing records, and lifecycle states remain queryable."
+    },
+    {
+      "criterionId": "COMP-005",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed validator passed 331 sources, 119 claims, 34 agency relations, and five corrections; derived Wiki and employment outputs were current.",
+        "Agency records distinguish individual implementation, shared organizing, collective campaigns, and institutional enactment.",
+        "Rendered coalition counts distinguish platform responses from attendance and the retrievable population from a complete account export.",
+        "Independent probing confirmed that a protected source cannot acquire a public URL."
+      ],
+      "rationale": "The reviewed claims retain evidence roles, source limitations, collective credit, correction history, and bounded population denominators."
+    },
+    {
+      "criterionId": "COMP-006",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The homepage, Technical Operations page, resume, and lead case studies clearly identify Jamie's role, actions, purposes, and usable results.",
+        "The rendered About page connects artistic, civic, technical, and social practice through WOWList, Sunday Dinner, and coalition participation.",
+        "WOWList supplies organizer workflows and continuation records; the coalition supplies invitation, participatory naming, collaborative action, and a subsequent meeting; KC Town Hall supplies eligibility, intake, delivery, recycling handoff, and reporting.",
+        "The lab demonstrates revision through the CallNYC chronology correction propagated across public surfaces.",
+        "All six current professor-lens component scorecards match their public candidate; the recomputed component evaluator passes 18 of 18 criteria."
+      ],
+      "rationale": "The site is a purposeful portfolio projection. Its participation and systems sequences are reconstructable without treating reconstructions, proposals, photographs, or unresolved feedback causality as stronger evidence."
+    },
+    {
+      "criterionId": "COMP-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All five required human-evidence controls remain explicitly open under the frozen blind-spot digest.",
+        "Each control specifies required evidence, anti-gaming constraints, a next action, and a projection boundary.",
+        "Current hiring reports explicitly identify their simulated profiles as deterministic advisory evidence.",
+        "Browser interaction observations retain human screen-reader, browser zoom, visual approval, deployment, and indexing gates."
+      ],
+      "rationale": "Governed absence remains distinct from recovered evidence. Machine review does not close collaborator, hiring-usability, funnel, or external-validity gaps."
+    },
+    {
+      "criterionId": "COMP-008",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The recomputed semantic rubric digest matches the separately pinned frozen digest.",
+        "The base portfolio suite, integration register, and blind-spot controls match their reviewed digests.",
+        "Independent read-only mutation probes rejected branch omission, fabricated heads, decorative register content, checksum-refreshed semantic weakening, base-suite weakening, optimizer self-grading, and synthesized human closure.",
+        "The evaluator requires every blocking criterion to pass rather than compensating failures with other scores."
+      ],
+      "rationale": "The reviewed governance resists the tested forms of score gaming and preserves grader separation."
+    },
+    {
+      "criterionId": "COMP-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "The independently recomputed complete candidate fingerprint matches the commissioned fingerprint.",
+        "All 44 supplied screenshot checksums match their receipts.",
+        "The responsive evidence independently validates against the current public-surface fingerprint, with complete coverage of fifteen routes at four widths.",
+        "This judgment supplies one distinct exact-candidate advisory review under REVIEW.md; the recorder adds its complete judgment digest."
+      ],
+      "rationale": "This review is eligible as one required exact-candidate judgment. It does not establish another review or close the combined two-review stopping gate. Human production approval remains open."
+    }
+  ],
+  "notObserved": [],
+  "findings": [
+    "Settled initial and restored viewport evidence resolves the apparent sticky-header overlap for the four tested routes. These browser observations do not constitute human accessibility acceptance.",
+    "WOWList support records and KC Town Hall delivery evidence do not establish particular feedback-caused redesigns. The candidate explicitly preserves those limits.",
+    "The public composition remains lengthy, especially on mobile, but its headings, introductory proof summaries, artifacts, and direct navigation preserve the required professional and practice continuity.",
+    "Named-person participation, collaborator corroboration, human hiring usability, external validity, exact production approval, deployment verification, and indexing authority remain separate open gates."
+  ],
+  "recommendation": "Accept this candidate as one independent composite advisory judgment. The combined evaluator must establish the second qualifying exact-candidate judgment before declaring the stopping condition satisfied. Preserve all unresolved human and production gates.",
+  "publicReview": {
+    "provider": "independent-codex-review",
+    "reviewerLabel": "b-repair2-composite-a",
+    "reviewedAt": "2026-10-13T18:51:18Z",
+    "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted.",
+    "judgmentSha256": "bd72c510a235b8df244407476e082ee0da55e7bc302f9a9fc35f0f43421731b5"
+  }
+}

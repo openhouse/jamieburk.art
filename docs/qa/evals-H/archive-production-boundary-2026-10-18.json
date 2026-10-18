@@ -1,0 +1,37 @@
+{
+  "reviewerId": "public-archive-boundary-reader-one",
+  "reviewedAt": "2026-10-18T13:44:22Z",
+  "reviewType": "Independent supplementary source-and-boundary review; separate from frozen PR-015/PR-016 judgments",
+  "baselineCommit": "6118a99b49bbe2b771ed6c8a48b938d7035e5b15",
+  "archiveScope": "The JSON object assembled by scripts/lib/knowledge-evals.mjs:2024: 14 original intakes, 28 observations, 17 sources, 8 claims, 4 inquiries, FairRentNYC and lab page citation plans, four proof-coverage targets, FairRentNYC MDX, full lab page source, and archive-production project note.",
+  "expectedExistingDigest": "388046b6a79c394825771a72178bf13b3c15aafdfd497b03dfa5a809e500342c",
+  "independentlyComputedCurrentDigest": "d18ee7b9ec62b3bc32e1d60e495ff0e18490fd528c15a36bf0d003a30858d041",
+  "reconstructedBaselineDigest": "388046b6a79c394825771a72178bf13b3c15aafdfd497b03dfa5a809e500342c",
+  "decision": "SOURCE_AND_BOUNDARY_PASS; existing deterministic approval binding remains mismatched until a separately recorded rebind",
+  "findings": [
+    {"path": "apps/www/src/app/lab/source-backed-team-memory/page.tsx:157", "finding": "The only lab-source change versus 6118a99 is a 24-line section naming a synthetic reader-return prototype and its narrow behavior. Immediate text states that checks do not decide comprehension or agreement, examples are synthetic, no participant pilot or client deployment has occurred, the work used AI assistance, and human usefulness remains open."},
+    {"path": "apps/www/src/data/knowledge-bank/records.ts:811", "finding": "The lab citation plan adds precisely two public implementation/test sources and one new claim occurrence. Existing sources and occurrences remain in their prior relative order."},
+    {"path": "apps/www/src/data/knowledge-bank/public-registry.json", "finding": "Parsed comparison with the registry at 6118a99 found two added source records, one added claim, and one changed lab page plan; zero removed or changed prior sources or claims. No other page plan changed."},
+    {"path": "apps/www/src/data/knowledge-bank/knowledge-reading-prototype-2026-10.ts", "finding": "The new claim is independently scoped to one active lab projection. It has intake, observation, two public source records, evidence relationships, limitations, anti-claims, review metadata, and an explicit unresolved shared-memory-pilot inquiry. Sources name AI-assisted authorship and use immutable 40-character GitHub revision URLs."},
+    {"path": "scripts/rfcs/knowledge-reading.mjs:6", "finding": "Inspected the complete implementation. It rejects non-synthetic packets and real repository identities, requires exact-revision-shaped references and bounded paths, preserves previous disagreements and alternatives, checks resolution scope, rejects an action attached to a reference-only fragment, and returns only a review candidate. It performs no provider IO or external writes. The new public wording accurately describes this narrow behavior."},
+    {"path": "scripts/rfcs/knowledge-reading.test.mjs", "finding": "The implementation and test file have no diff from pinned revision 6118a99. Independent Node 26.5.0 execution passed 39 of 39 synthetic regression tests. These are author-built development controls, not external validation or human-outcome evidence."},
+    {"path": "apps/www/src/data/knowledge-bank/archive-production-2026-07.ts", "finding": "The entire original archive module has no diff from 6118a99. Inspected its current claim boundaries and inquiry states: creative-technology projections remain held; shared M.C. Schmidt, Michael Rees, Drew Bolton, and Garrett Fuselier credit is retained; BAPLab contribution specificity remains open; NTER CHNG component labor remains undivided; participant messages/contact data remain excluded; and the original source-backed-memory method remains early with no client adoption."},
+    {"path": "docs/knowledge-bank/projects/archive-production-2026-07-14.md", "finding": "The project note is unchanged and preserves the distinction between source maturity and public composition. FairRentNYC MDX and proof-coverage.ts are also unchanged. Replacing only the current lab source and its new citation-plan entries with the baseline values reproduces the old approved digest exactly, isolating the digest change."},
+    {"path": "scripts/lib/knowledge-evals.mjs:2040", "finding": "Independent checks found all original held projections still held with no surfaces, all six private source IDs and protected locator IDs excluded from the public registry, and no URLs on those private source records."}
+  ],
+  "changeBoundaries": [
+    "This adds a public-code-supported implementation claim; it does not upgrade the protected proposal into outcome evidence.",
+    "Exact-edition checks validate supplied reference identity and shape; they do not fetch or establish the truth of a referenced source, and the public page does not claim otherwise.",
+    "No original archive claim, credit, source, inquiry, protection rule, or held projection was strengthened or removed.",
+    "The old archive digest includes the whole lab source and citation plan; therefore the mismatch is expected after a valid page addition. The current original archive counts remain 14/28/17/8/4.",
+    "The frozen archive lab occurrence/source lists still describe the baseline. The added occurrence and two sources also make those equality checks stale. A record update must explicitly preserve the prior list order and append/insert only these reviewed entries; changing a hash alone would not satisfy the full current contract."
+  ],
+  "heldHumanGates": [
+    "Jamie editorial review of the exact candidate remains separate; this reviewer is an AI advisory evaluator and supplies no human approval.",
+    "Human comprehension, meaningful correction, adoption, participant usefulness, and client-pilot outcomes remain unobserved and unapproved.",
+    "No source access, publication, outreach, merge, deployment, or indexing permission is created by the implementation, tests, or this review.",
+    "Existing collaborator-sensitive archive material and production/indexing states remain governed by their original human decisions."
+  ],
+  "actionsTaken": ["Read public checkout and baseline Git objects", "Computed scoped digests in memory", "Ran the existing 39 synthetic tests", "Saved this report only; no repository edits, hash rebinding, threshold changes, or source-body access"],
+  "nohumanapproval": true
+}

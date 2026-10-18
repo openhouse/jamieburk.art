@@ -1,0 +1,23 @@
+{
+  "reviewerId": "public-recursion-reader-one",
+  "phase": "holdout-coverage-addendum",
+  "lensId": "PR-016",
+  "candidateSha256": "80b8e9aed465c6c7085eeb5f22b1a6db2d886c3b5e18a5aa59b01e1a1fb39606",
+  "originalReportPreserved": "knowledge-ecosystem-reader-2026-10-18-1-PR-016.json",
+  "reason": "The parent identified an omitted linked HJE case and requested a coverage check without changing the criteria or consulting prior scores.",
+  "pathsAddedToInspection": [
+    "apps/www/src/content/work/harry-j-epstein.mdx (complete)",
+    "apps/www/src/data/proofs.ts:73 (HJE stewardship and revenue-contribution records)",
+    "apps/www/src/data/work.ts:103 (HJE project framing, 2009-2015 chronology, and artifacts)",
+    "apps/www/src/data/knowledge-bank/proof-coverage.ts:3 (HJE coverage states)",
+    "apps/www/src/data/knowledge-bank/hje-client-chronology-2026-08.ts:129 (relationship claim and chronology inquiry)",
+    "Rendered /work/harry-j-epstein at http://127.0.0.1:3218, including DOM and screenshot"
+  ],
+  "finding": "HJE makes another full operating sequence reconstructable: customer/team friction, a scoped requirement, incremental implementation, inspection of the public path with stakeholder/analytical signals, and reusable patterns plus ownership and next actions. It is explicitly a public-safe reconstruction derived from governed claims, not an original company document. The 2009-2015 engagement remains visibly historical, and the source records explicitly prohibit treating HJE as a current client.",
+  "coverageCorrection": "The original report's suggestion that no third full Jamie-specific pattern can be reconstructed under a 'currently represented portfolio projects' interpretation is too broad after inspecting HJE. The HJE specimen supplies a third intelligible historical pattern, although underlying original operating records are withheld. Do not count their privacy as a defect or demand a formal study or one-comment-to-release causal log.",
+  "effectOnJudgment": "Score remains 3 and pass remains false under the literal frozen requirement for three current projects with the sequence demonstrated. The remaining gap is contemporary project coverage: HJE is historical, the third current lab is synthetic and expressly has no participant pilot, and WOWList's current return does not yet restore the calendar. If 'current public-safe projects' was intended to mean cases currently included on the website rather than contemporary practice, that is a rubric-interpretation ambiguity; the historical sequence count is substantially met. This addendum narrows the rationale and does not silently reinterpret the frozen criterion.",
+  "score": 3,
+  "pass": false,
+  "nohumanapproval": true,
+  "noPriorScoresConsulted": true
+}

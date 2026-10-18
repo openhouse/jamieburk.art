@@ -1,0 +1,221 @@
+{
+  "completedRows": 17,
+  "last": {
+    "width": 375,
+    "route": "/work"
+  },
+  "failures": [
+    {
+      "viewport": 375,
+      "path": "/",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 9,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fjamie-east-river.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-shoestring-facilitation.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Ffair-rent-nyc%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [
+        {
+          "url": "/_next/static/media/7f06be3f780a819a-s.p.woff2",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "font",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/css/3c4949b7ab564eae.css",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "stylesheet",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/media/b7ae23d8a9c319da-s.p.woff2",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "font",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/webpack-8cb9074e7ea25fcb.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/87c73c54-f46fec743414da25.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/main-app-4bdaa81140a04b65.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/825-c05caa0ed4a7dfd4.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/968-6e2c087d2ee0393a.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/604-d4b623369f20cf7b.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/app/page-a7a7ca8d2aa35c74.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        }
+      ],
+      "cancelledSpeculativePrefetches": []
+    },
+    {
+      "viewport": 375,
+      "path": "/work",
+      "httpStatus": 200,
+      "axeVersion": "4.12.1",
+      "violations": [],
+      "overflowElements": 0,
+      "brokenImagesAfterScroll": 7,
+      "unloadedImagesAfterScroll": 0,
+      "unlabeledImages": 0,
+      "h1Count": 1,
+      "mainPresent": true,
+      "imageSources": [
+        "/_next/image?url=%2Fartifacts%2Fhje%2Fpublic-site.png&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fkc-town-hall-roof-work.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fnycac-market-hotel-banner.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fcallnyc%2Foriginal-launch.png&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fkc-spaces-fund%2Fpublic-site.webp&w=3840&q=75",
+        "/_next/image?url=%2Fartifacts%2Fwowlist%2Fpublic-threshold.webp&w=3840&q=75",
+        "/_next/image?url=%2Fimages%2Ffield-notes%2Fsunday-dinner-shared-map.webp&w=3840&q=75"
+      ],
+      "failedRequests": [
+        {
+          "url": "/_next/static/media/7f06be3f780a819a-s.p.woff2",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "font",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/media/b7ae23d8a9c319da-s.p.woff2",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "font",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/css/3c4949b7ab564eae.css",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "stylesheet",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/webpack-8cb9074e7ea25fcb.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/87c73c54-f46fec743414da25.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/968-6e2c087d2ee0393a.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/main-app-4bdaa81140a04b65.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/825-c05caa0ed4a7dfd4.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/604-d4b623369f20cf7b.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        },
+        {
+          "url": "/_next/static/chunks/app/work/page-a7a7ca8d2aa35c74.js",
+          "error": "net::ERR_ABORTED",
+          "resourceType": "script",
+          "rsc": null,
+          "routerPrefetch": null,
+          "segmentPrefetch": null
+        }
+      ],
+      "cancelledSpeculativePrefetches": []
+    }
+  ]
+}
