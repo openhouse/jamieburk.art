@@ -1,11 +1,11 @@
 {
   "runVersion": 4,
   "reviewScope": "substantive-COMP-001-through-COMP-008",
-  "judgeId": "composite-substantive-reader-b",
+  "judgeId": "dcla-composite-final-b",
   "grader": "independent_llm_judge",
   "independentFromOptimizer": true,
   "rubricSha256": "6ad0d6a0cbbbe972e65754e6cec7ab501227c91aaa13be8dd30bba65cb07d0f7",
-  "candidateFingerprint": "ef07f61e4dda99c70def844fc95780306736ce8f16d63283770f45edb7eb5f0c",
+  "candidateFingerprint": "29b49032636a857f8bd4bd18bfcc87df170800aaba3965bc9c11a682a78f7368",
   "verdict": "accepted",
   "scores": [
     {
@@ -13,122 +13,118 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        ".agents/evals/feature-evals-composite.json:required_branch_heads",
-        "docs/integration/feature-evals-composite.json:policy and decisions",
-        "scripts/lib/composite-integration-eval.mjs:COMP-001"
+        ".agents/evals/feature-evals-composite.json records fourteen distinct A-N heads, a separately pinned family digest and the refs/remotes/origin namespace.",
+        "docs/integration/feature-evals-composite.json assigns feature/knowledge-h as the writable integration branch and develop as the pull-request base, explicitly making the frozen source branches reference-only.",
+        "A fresh read-only evaluateCompositeIntegration({holdouts: []}) found 14/14 matching decisions, zero unavailable frozen commit objects and no mutable-reference mismatches."
       ],
-      "rationale": "Independently recomputed the candidate and rubric digests and resolved all fourteen declared A-N hashes as Git commit objects. The register contains each frozen branch once, retains feature/knowledge-h and develop as the integration and base branches, and explicitly keeps source branches reference-only. The read-only pre-review check reports no missing frozen objects or mutable-reference discrepancy."
+      "rationale": "The inventory identifies exact immutable source objects and keeps integration work separate from the reference branches. The implementation checks the frozen object identities rather than allowing a mutable branch label or a refreshed suite checksum to substitute a different family. I inspected the register and verification logic; no source branch was changed during this review."
     },
     {
       "criterionId": "COMP-002",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/integration/feature-evals-composite.json:decisions and websiteDecision",
-        "docs/integration/feature-evals-composite.md",
-        "scripts/tests/composite-integration.test.mjs:integration destination and decorative explanation mutations"
+        "docs/integration/feature-evals-composite.json contains fourteen substantive decisions with strengths, rationale, existing destination paths and named verification criteria; its digest is 9a5c075d6b34ebc0d5a21386305b1ab83ce21c169108ebe1fca25362422ff67d.",
+        "The G and K decisions adapt progression, append safety and lifecycle querying into historical-knowledge.ts and lifecycle-operations.ts; N adapts frozen governance into the existing evaluator.",
+        "docs/integration/feature-evals-composite.md explains the retained H-derived composition, rejected parallel roots and deliberate decision not to add public copy merely to display integration work."
       ],
-      "rationale": "All fourteen decisions state an allowed disposition, a concrete strength, an integration rationale, existing destination files, and verification IDs. The register distinguishes retained H contracts from adapted append/query and governance behavior, rejects wholesale parallel architectures, and deliberately retains the selected website composition. Its independently recomputed canonical digest matches the frozen binding; the relevant missing-destination and decorative-record mutations passed."
+      "rationale": "The decisions explain what is already present, what behavior is adapted and why an alternative branch tree is not imported. The destinations and implementations make the adopted contracts inspectable. The website decision is an editorial selection with a stated purpose, not an assumption that all integrated knowledge must become a public page."
     },
     {
       "criterionId": "COMP-003",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/schema.ts",
-        "apps/www/src/data/knowledge-bank/records.ts",
-        "apps/www/src/data/knowledge-bank/index.ts",
-        "apps/www/src/data/knowledge-bank/public.ts",
-        "scripts/generate-public-citations.mjs",
-        "apps/www/src/data/proofs.ts",
-        "apps/www/src/components/citations/Claim.tsx"
+        "apps/www/src/data/knowledge-bank/records.ts composes domain records into knowledgeBankSchema; schema.ts keeps intake, observations, source records, evidence relationships, claims, agency, inquiries, corrections and projections distinct.",
+        "apps/www/src/data/knowledge-bank/public.ts parses the generated public registry, omits internal evidence excerpts and locators, and rejects inactive or unauthorized claim projections; index.ts exports this public interface and schema rather than the canonical record body.",
+        "The fresh pre-review evaluator found all eleven canonical files and none of the three forbidden parallel lifecycle roots. Public app/component imports inspected did not import canonical records, historical knowledge, agency or lifecycle modules directly.",
+        "apps/www/src/data/proofs.ts retains support levels, evidence classes, wording, guardrails, protected boundaries and review dates as the separate public-safe proof layer."
       ],
-      "rationale": "The H-derived schema and assembled records remain the canonical knowledge model, with lifecycle operations consuming that model. None of the three forbidden parallel roots exists. The public citation import chain uses the generated redacted registry and schema, not canonical records; the generator omits protected locators, internal excerpts, and evidence locators, and selects active projections and renderable evidence. Public projection lookup rejects inactive or unauthorized surface use. The proof layer remains a public-safe authored projection with evidence-coverage validation."
+      "rationale": "There is one canonical knowledge model with deliberate domain modules and a redacted rendering boundary. The app consumes selected projections and the public-safe proof layer; it does not expose an interactive archive or a second lifecycle model. The code and generated registry agree with the architecture described in citational-care.md."
     },
     {
       "criterionId": "COMP-004",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts",
-        "scripts/tests/lifecycle-operations.test.mjs",
-        "docs/knowledge-bank/intake-and-maturation.md"
+        "apps/www/src/data/knowledge-bank/lifecycle-operations.ts compares complete records for stable-ID replay, rejects changed content under an existing ID, and preserves a new-ID artifact match as a linked duplicate without mutating the input bank.",
+        "queryKnowledgeLifecycle exposes open and duplicate intake, unresolved inquiries, mature held claims, uncited active claims, unobserved claims, orphan sources, corrections and projection counts.",
+        "A fresh execution of scripts/tests/lifecycle-operations.test.mjs passed all four tests with zero failures, including the changed-content collision and duplicate-preservation cases."
       ],
-      "rationale": "Read the append and query implementation and independently ran all four lifecycle tests successfully under Node 26.5.0. Identical stable records return already-present without changing the bank; a new ID for the same artifact is retained and linked as a duplicate; changed content under an existing ID throws. Queries expose open intake and inquiries, mature held claims, corrections, projection counts, uncited/unobserved claims, and orphan sources. The current bank contains held knowledge and open inquiries and reports no orphan source."
+      "rationale": "The append behavior preserves both identity and provenance: an exact replay returns the same bank, a new record for the same defined artifact remains visible, and a conflicting stable ID cannot silently replace evidence. The query surface exposes held and unresolved work instead of treating only active projections as knowledge."
     },
     {
       "criterionId": "COMP-005",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/data/knowledge-bank/records.ts",
-        "apps/www/src/data/knowledge-bank/agency-graph.ts",
-        "apps/www/src/data/knowledge-bank/public-registry.json",
-        "scripts/lib/citation-validation.mjs",
-        "scripts/tests/knowledge-evals.test.mjs",
-        "scripts/tests/citations.test.mjs",
-        "apps/www/src/content/work/fair-rent-nyc.mdx",
-        "apps/www/src/content/work/kc-town-hall.mdx"
+        "The fresh pre-review evaluation validated 336 sources, 123 claims, 38 agency relations and five corrections, with current derived Wiki and employment outputs.",
+        "apps/www/src/data/knowledge-bank/agency-graph.ts distinguishes Jamie initiating Open House from collective participant governance and keeps advocacy separate from institutional action. The recent-delivery records separately type creation, delivery, shared organizing and platform-listed collaboration.",
+        "CLM-RECENT-DCLA-ANIMATION-2026-10 separates the October 3 article observation from the October 7 platform date and does not equate media editions. SRC-DCLA-INSTAGRAM-REEL-2026-10 retains permission-needed, review-needed and metadata-only media states; the public case study links outward without embedding the media.",
+        "CLM-DCLA-REEL-COLLABORATORS-2026 remains held with no surfaces and rejects commissioning, endorsement and equal creative-authorship inferences.",
+        "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE preserves the July 2026 retrievable union of 3,123 records, its 685/2,438 record partition and the 2,001 profile-counted recovery gap. It does not claim a lifetime export, individual authorship or impact.",
+        "records.ts preserves CallNYC chronology, narrower hackathon wording, event time and Cabaret hearing-date corrections; historical-knowledge.ts keeps the protected coursework claim held."
       ],
-      "rationale": "The independent read-only validation passed for 334 sources, 122 claims, 37 agency relations, and five corrections, with current derived Wiki and employment outputs. Inspected records distinguish direct, corroborating, contextual, boundary, and private evidence roles and retain does-not-establish statements. Open House separates initiation from collective governance; the CCED award separates Jamie's proposal/presentation work, shared development, institutional authority, and non-disbursement. The coalition X claim identifies the July capture, 3,123-record retrievable union, 5,124 profile counter, and 2,001-record recovery gap without converting circulation into authorship or impact. Twenty independently executed targeted correction, privacy, and population mutation tests passed."
+      "rationale": "The inspected source-to-claim relationships state both support and non-establishment boundaries. Public wording stays inside those boundaries: the DCLA credit does not make Jamie the article author or an institutional commissionee; a delivered production guide does not prove every cue occurred; and a public social corpus does not become a complete account or an impact measure. The HJE revenue statement remains the approved, careful contribution claim, with private financial evidence excluded and further corroboration still open."
     },
     {
       "criterionId": "COMP-006",
       "score": 4,
       "pass": true,
       "evidence": [
-        "apps/www/src/app/page.tsx",
-        "apps/www/src/components/Hero.tsx",
-        "apps/www/src/app/about/page.tsx",
-        "apps/www/src/app/work/technical-operations/page.tsx",
-        "apps/www/src/app/resume/page.tsx",
-        "apps/www/src/content/work/harry-j-epstein.mdx",
-        "apps/www/src/content/work/callnyc.mdx",
-        "apps/www/src/content/work/wowlist.mdx",
-        "apps/www/src/content/work/196-sunday-dinner.mdx",
-        "apps/www/src/content/work/fair-rent-nyc.mdx",
-        "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
-        "docs/knowledge-bank/projects/ucsc-professor-lenses-2026-07-15.md",
-        "docs/qa/evals-H/2026-10-18-browser-home-mobile.png",
-        "docs/qa/evals-H/2026-10-18-browser-about-desktop.png"
+        "apps/www/src/app/page.tsx, Hero.tsx, CapabilityGrid.tsx and the Technical Operations page establish the target role, provide selected paths to projects and organize decisions around Jamie's action, an artifact and what became usable.",
+        "apps/www/src/app/about/page.tsx connects the collectively governed Open House account to artistic, civic, technical and social practice, then makes relationships, models, interfaces, use and continuity concrete through linked project accounts.",
+        "The WOWList case connects organizer language to followable communities, publishing and support; the Sunday Dinner/196 case supplies dated gathering evidence and explicitly reconstructed onboarding/continuity workflows; the coalition case connects listening, shared priorities, public interfaces, documentation and the October 2026 production handoff.",
+        "The CallNYC case identifies an independent 2016 prototype and prominently retains its archived unofficial status. The lab identifies early research, labels its synthetic example and presents the client sprint and acceptance conditions prospectively.",
+        "The six current professor-lens component scorecards bind to a079f551ff217b7da94238aca5630d056d71508a5f10a8ab3d112755c9d78de2, independently recomputed during this review. Their fictional-lens and coverage limits remain explicit.",
+        "Representative retained images inspected: docs/qa/evals-H/dcla-release-home-375.png, docs/qa/evals-H/dcla-release-about-1280.png, docs/qa/evals-H/dcla-release-2026-10-18/fair-rent-reel-375.png and docs/qa/evals-H/dcla-release-2026-10-18/resume-375-focus.png. The four home/About image hashes and both reel image hashes match their records."
       ],
-      "rationale": "The site is a selected portfolio with a clear role, a short route through lead evidence, named project decisions, and usable results; it does not mirror the bank, and mature held claims remain unprojected. Jamie's actions are explicit while co-building, coalition achievement, and institutional decisions keep their respective credit. Open House, WOWList, hospitality/residency operations, civic work, and the current knowledge method preserve artistic, relational, civic, technical, and social continuity. The HJE listen/frame/implement/verify/continue specimen, coalition source and decision records, WOWList's organizer-driven product choice, and residency orientation/handoff make the recurring systems method reconstructable. Past examples are allowed to demonstrate that method; the lab's synthetic example and proposed sprint are not treated as delivered client validation. I visually inspected the saved mobile homepage and desktop About captures, alongside their source and current browser record."
+      "rationale": "The site remains a composed portfolio: role, practical decisions and selected proof lead the reader, while held knowledge stays off public archive routes. Jamie is visible as an actor without erasing co-builders, participants or institutional responsibility. Three distinct supported project traces make observation, modeling, interface-making, social use, learning and handoff reconstructable. This is a bounded interpretation of dated working methods, not a claim that each project followed the same formal research protocol or is deployed today. My judgment follows the source and composition directly rather than inheriting the component scores."
     },
     {
       "criterionId": "COMP-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json",
-        "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md",
-        "docs/qa/pre-launch-eval-audit-2026-07-28.md",
-        "apps/www/src/app/work/technical-operations/page.tsx:evidenceBoundaries",
-        "apps/www/src/app/lab/source-backed-team-memory/page.tsx:proposed acceptance conditions"
+        "docs/knowledge-bank/data/blind-spot-controls-2026-07.json retains all five required human-evidence controls as open under digest 9a9cbdc5f93499774f08edec0d38e900d4ad245d6c05df90f46b101fc8e063db.",
+        "Each control states baseline, missing evidence, closure requirements, anti-gaming rules, next action and public-projection limits. Collaborator silence, simulated usability and AI archival analysis cannot become human corroboration or approval.",
+        "docs/knowledge-bank/projects/blind-spot-evaluation-controls.md and docs/qa/pre-launch-eval-audit-2026-07-28.md distinguish governed absence and mutation-test coverage from external validation, calibrated judges or hiring outcomes.",
+        "The Technical Operations and lab pages disclose evidence limits and proposed work; recent-delivery claims keep acceptance, payment, installation, media rights and policy impact separate from the observed output."
       ],
-      "rationale": "All five required human-evidence controls remain explicitly open: collaborator corroboration, collective review, hiring usability, job-funnel learning, and external validity. Each names the missing evidence, anti-gaming rules, next action, and public projection boundary. Their independently recomputed digest matches the frozen binding. The controls define passing as governed absence, prohibit fabricated testimony and simulated human validation, and preserve dissent and private raw records. Public pages identify evidence limits and proposed acceptance conditions; internal checks and this judgment do not close those human gates."
+      "rationale": "Passing this criterion correctly means that the missing evidence is governed and actionable. The candidate does not manufacture witness statements, participant permission, unfamiliar-reader results, job-funnel success or calibration data to improve a score. The controls preserve disagreement and future correction as necessary inputs, while production and indexing remain separate human decisions."
     },
     {
       "criterionId": "COMP-008",
       "score": 4,
       "pass": true,
       "evidence": [
-        ".agents/evals/feature-evals-composite.json",
-        ".agents/evals/portfolio-production-readiness.json",
-        "scripts/lib/composite-integration-eval.mjs:FROZEN_COMPOSITE_RUBRIC_SHA256 and frozenGovernance",
-        "scripts/tests/composite-integration.test.mjs",
-        "scripts/tests/knowledge-evals.test.mjs"
+        "computeCompositeRubricDigest reproduced 6ad0d6a0cbbbe972e65754e6cec7ab501227c91aaa13be8dd30bba65cb07d0f7. scripts/lib/composite-integration-eval.mjs separately pins this digest and the branch-family digest and binds the full base suite, integration register, blind-spot controls and branch namespace.",
+        "scripts/tests/composite-integration.test.mjs uses explicitly synthetic in-memory fixtures to reject branch omission, fabricated heads, decorative decisions, checksum-only weakening, stale output, self-grading, synthesized human evidence, missing or malformed judgments, stale candidate identity and blocker compensation.",
+        "scripts/tests/knowledge-evals.test.mjs includes source-role, public-locator, raw-payload, population-disposition, chronology and institutional-authority mutation cases. The supplied completed technical log records 85 commands with no positive test-failure count or error marker; the separate composite log records 52 passing tests and zero failures. My additional fresh read-only composite test execution also completed with 52 passes, zero failures and exit status 0.",
+        "evaluateCompositeIntegration({holdouts: []}) exposes the eight passing pre-review technical criteria while returning accepted false, so technical success cannot substitute for the independently commissioned pair.",
+        "The complete 2,268-file source-tree fingerprint matched the commission both before and after substantive inspection, with only the two declared holdout records excluded by the frozen identity contract."
       ],
-      "rationale": "Independently recomputed the semantic rubric, complete base suite, integration register, and blind-spot digests; all match the frozen values. The separate code pin and frozen branch digest prevent a mutable checksum refresh from authorizing semantic weakening or fabricated heads. The contract forbids optimizer self-grading and not-observed passes and requires every blocking criterion. Independently executed composite mutations passed for omitted branches, fabricated heads, decorative decisions, checksum-only weakening, stale derived outputs, self-grading, synthesized human evidence, malformed judgments, and blocker compensation. Targeted knowledge mutations additionally rejected private URL and raw-body leakage. Synthetic regression judgments remain in-memory test inputs, not human evidence or actual independent reviews."
+      "rationale": "The semantic lock is stronger than a mutable checksum assertion, and the stopping decision cannot average away a failure or let a reviewer self-score the aggregate. The negative tests exercise the claimed failure modes while identifying synthetic fixtures as tests rather than real reviews. This supports the governance contract without claiming that internal checks establish external validity or human release authority."
     }
   ],
   "notObserved": [],
-  "findings": [],
-  "recommendation": "Accept COMP-001 through COMP-008 for this exact frozen candidate. Coverage comprises relevant canonical, public-composition, privacy, governance, and mutation source inspection; existing technical/browser records; two saved viewport images inspected directly; and 76 independently executed read-only tests under Node 26.5.0. This is not a fresh live-browser session or a certification of CI, staging, production, a future review pair, or COMP-009. The release operator must separately verify the complete independent pair and required verification executions. Human corroboration, collective review, hiring usability, job-funnel learning, external validity, production, indexing, and any additional media approval retain their separate gates.",
+  "findings": [
+    "Scope: read-only substantive assessment of COMP-001 through COMP-008, including the frozen rubric and register, canonical architecture and selected source/claim/agency/correction records, public page composition, lifecycle and evaluator implementations, mutation coverage, technical logs, current component scorecards and representative retained captures. COMP-009 is intentionally unscored.",
+    "No protocol deviation: no memory, Git history or diffs, previous composite judgments, optimizer narrative, or another current composite review was opened. The candidate repository was not modified and no server was started or stopped.",
+    "The retained browser evidence binds to public-surface fingerprint 755a23985cd9c3d2e72f29cb08c9f551b5ada93a9d1d5292377a00457d40b493 over 155 runtime/build inputs. This review did not conduct a live browser session. The full matrix reports 60 route/viewport observations, zero reported violations, overflow, broken or unlabeled images, and explicit verified prefetch cancellations.",
+    "Coverage limit: most full-page matrix captures are not retained in public Git and were not treated as visually inspected evidence. Human screen-reader and browser-zoom review, and image/pseudo-element contrast cases not measurable by the automated checker, remain open. The responsive validator explicitly reports manualReviewComplete false and no established conformance claim.",
+    "The current component scorecards report a mobile-menu disclosure that remains open after route selection and overlays upper content until manually closed. This is retained as a nonblocking navigation-friction finding for the commissioned composition criteria; the evidence also records keyboard reachability, successful route navigation and the ability to close the menu. It is not silently treated as fixed.",
+    "Coverage limit: protected source bodies, original participant records, client financial evidence and source-specific consent were not independently re-audited. The review assessed their public-safe canonical support and restrictions. External article availability, reel playback, full media rights, hosted CI, deployed containers and production routing were not independently verified in this commission.",
+    "The DCLA article source explicitly does not establish current availability or the exact embedded media edition; its October 3 observation remains distinct from the separately reviewed Instagram edition. The linked media is not approved for copying, embedding or rehosting by this judgment.",
+    "No calibrated-human-judge, collaborator-corroboration, hiring-usability, job-funnel, client-adoption or impact claim is credited. Those governed absences remain open and do not prevent evaluating the narrower internal contracts.",
+    "The eval-audit skill informed scrutiny of concrete failure taxonomy, binary decisions, synthetic fixtures and unvalidated-judge limits; verification-before-completion informed fresh fingerprint, lifecycle, pre-review evaluator and retained-artifact binding checks."
+  ],
+  "recommendation": "Accept this independent substantive judgment for COMP-001 through COMP-008 on the exact bound candidate. Preserve the listed limitations and navigation finding. The coordinator must still validate the complete independent pair and deterministic aggregate; this judgment grants no merge, publication, production deployment, indexing, consent or media-rights approval.",
   "publicReview": {
     "provider": "independent-codex-review",
-    "reviewerLabel": "composite-substantive-reader-b",
-    "reviewedAt": "2026-10-18T19:16:59Z",
-    "judgmentSha256": "73b3e5b31c3742f6aba507246a19d937b18605a1888aa0107cab204829f8604e",
+    "reviewerLabel": "dcla-composite-final-b",
+    "reviewedAt": "2026-10-18T20:59:00.537Z",
+    "judgmentSha256": "d0b6174801d98072b3c558f586ebbd7674386d51f93fc1c5f31e6df4b4b02c39",
     "attestation": "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted."
   }
 }
