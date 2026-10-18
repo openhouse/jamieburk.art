@@ -21,8 +21,13 @@ import { checkGeneratedOutputs, compileWiki } from "../knowledge-wiki/lib.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d";
+export const FROZEN_COMPOSITE_RUBRIC_SHA256 = "6ad0d6a0cbbbe972e65754e6cec7ab501227c91aaa13be8dd30bba65cb07d0f7";
 export const FROZEN_BRANCH_HEADS_SHA256 = "efa94ea9c3b7190deca61024093d30e4d78a2efdebf04b78b5d6857d9df7a002";
+const SUBSTANTIVE_CRITERION_IDS = [
+  "COMP-001", "COMP-002", "COMP-003", "COMP-004",
+  "COMP-005", "COMP-006", "COMP-007", "COMP-008"
+];
+const SUBSTANTIVE_REVIEW_SCOPE = "substantive-COMP-001-through-COMP-008";
 
 function readJson(relativePath) {
   return JSON.parse(readFileSync(path.join(repoRoot, relativePath), "utf8"));
@@ -116,6 +121,7 @@ export function computeCompositeCandidateFingerprint(suite, { fileOverrides = {}
 export function holdoutJudgmentPayload(run) {
   return {
     runVersion: run.runVersion,
+    reviewScope: run.reviewScope,
     judgeId: run.judgeId,
     grader: run.grader,
     independentFromOptimizer: run.independentFromOptimizer,
@@ -375,6 +381,12 @@ export function evaluateCompositeIntegration({
   ));
 
   const actualRubricDigest = computeCompositeRubricDigest(suite);
+  const substantiveReviewContract = suite.version === 2 &&
+    suite.holdout_provenance.run_version === 4 &&
+    suite.holdout_provenance.review_scope === SUBSTANTIVE_REVIEW_SCOPE &&
+    JSON.stringify(suite.holdout_provenance.scored_criterion_ids) ===
+      JSON.stringify(SUBSTANTIVE_CRITERION_IDS) &&
+    suite.holdout_provenance.aggregate_criterion_id === "COMP-009";
   const frozenGovernance = actualRubricDigest === suite.rubric_sha256 &&
     actualRubricDigest === FROZEN_COMPOSITE_RUBRIC_SHA256 &&
     baseSuiteDigest === suite.base_suite.sha256 &&
@@ -386,6 +398,7 @@ export function evaluateCompositeIntegration({
     suite.grader_separation.instrumented_absence_counts_as_external_validation === false &&
     portfolioSuite.launch_thresholds.all_blocking_evals_must_pass === true &&
     portfolioSuite.launch_thresholds.human_production_approval_required === true &&
+    substantiveReviewContract &&
     derivedCurrentness.pass;
   results.push(criterion(
     "COMP-008",
@@ -403,45 +416,76 @@ export function evaluateCompositeIntegration({
   const candidateFiles = listCompositeCandidateFiles(suite);
   const candidateFileSet = new Set(candidateFiles);
   const sourceTreeBound = suite.candidate_identity.strategy === "git-source-tree" &&
+    suite.holdout_runs.length === 2 && new Set(suite.holdout_runs).size === 2 &&
     JSON.stringify([...suite.candidate_identity.exclude_only].sort()) ===
       JSON.stringify([...suite.holdout_runs].sort()) &&
     suite.canonical_files.every((relativePath) => candidateFileSet.has(relativePath)) &&
     suite.evidence_bundle_files.every((relativePath) => candidateFileSet.has(relativePath));
-  const requiredCriterionIds = suite.criteria.map((entry) => entry.id);
-  const reviewerLabels = holdouts.map((run) => run.publicReview?.reviewerLabel);
+  const nonemptyText = (value) => typeof value === "string" && value.trim().length > 0;
+  const reviewerLabels = holdouts.map((run) =>
+    typeof run.publicReview?.reviewerLabel === "string" ? run.publicReview.reviewerLabel.trim() : ""
+  );
+  const judgeIds = holdouts.map((run) => typeof run.judgeId === "string" ? run.judgeId.trim() : "");
   const publicReviewPass = holdouts.length === 2 &&
     new Set(reviewerLabels).size === 2 &&
+    judgeIds.every(nonemptyText) && new Set(judgeIds).size === 2 &&
     holdouts.every((run) => {
       const publicReview = run.publicReview ?? {};
       const reviewedAt = Date.parse(publicReview.reviewedAt);
       return run.runVersion === suite.holdout_provenance.run_version &&
         publicReview.provider === suite.holdout_provenance.provider &&
-        typeof publicReview.reviewerLabel === "string" &&
-        publicReview.reviewerLabel.length > 0 &&
+        nonemptyText(publicReview.reviewerLabel) &&
         /^[a-f0-9]{64}$/.test(publicReview.judgmentSha256 ?? "") &&
         publicReview.judgmentSha256 === computeHoldoutJudgmentDigest(run) &&
         publicReview.attestation === "Review judgment recorded for this exact candidate; this public receipt does not authenticate reviewer process identity, and private process identifiers and local machine locators are intentionally omitted." &&
         Number.isFinite(reviewedAt);
     });
   const stableHoldouts = sourceTreeBound && publicReviewPass && holdouts.length === 2 &&
-    new Set(holdouts.map((run) => run.judgeId)).size === 2 &&
+    substantiveReviewContract &&
     holdouts.every((run) =>
+      run.reviewScope === SUBSTANTIVE_REVIEW_SCOPE &&
       run.grader === "independent_llm_judge" &&
       run.independentFromOptimizer === true &&
       run.rubricSha256 === suite.rubric_sha256 &&
       run.candidateFingerprint === candidateFingerprint &&
       run.verdict === "accepted" &&
       Array.isArray(run.notObserved) && run.notObserved.length === 0 &&
-      requiredCriterionIds.every((id) =>
-        run.scores.some((score) => score.criterionId === id && score.score === 4 && score.pass === true)
+      Array.isArray(run.findings) && run.findings.every(nonemptyText) &&
+      nonemptyText(run.recommendation) &&
+      Array.isArray(run.scores) && run.scores.length === SUBSTANTIVE_CRITERION_IDS.length &&
+      run.scores.every((score) => score !== null && typeof score === "object") &&
+      new Set(run.scores.map((score) => score.criterionId)).size === SUBSTANTIVE_CRITERION_IDS.length &&
+      run.scores.every((score) =>
+        SUBSTANTIVE_CRITERION_IDS.includes(score.criterionId) &&
+        score.score === 4 && score.pass === true &&
+        Array.isArray(score.evidence) && score.evidence.length > 0 && score.evidence.every(nonemptyText) &&
+        (score.rationale === undefined || nonemptyText(score.rationale))
       )
     );
+  const preReviewCriteria = structuredClone(results);
+  for (const result of results) {
+    result.technicalPass = result.pass;
+    result.reviewPass = stableHoldouts && holdouts.every((run) =>
+      run.scores.some((score) => score.criterionId === result.id && score.score === 4 && score.pass === true)
+    );
+    result.pass = result.technicalPass && result.reviewPass;
+    result.score = result.pass ? 4 : 0;
+    if (!result.reviewPass) result.findings.push(
+      "The exact-candidate substantive review pair does not yet accept this criterion; technical evidence is reported separately."
+    );
+  }
+  const aggregatePass = stableHoldouts && preReviewCriteria.every((result) => result.pass);
   results.push(criterion(
     "COMP-009",
-    stableHoldouts,
-    `${holdouts.length}/2 public-safe holdout judgments target ${candidateFiles.length} source-tree files at candidate ${candidateFingerprint}.`,
-    stableHoldouts ? [] : [
-      "Two accepted, public-safe holdout judgments for the exact source-tree candidate are not yet present; separate commissioning is an orchestration gate outside public Git."
+    aggregatePass,
+    `${holdouts.length}/2 public-safe substantive judgments target ${candidateFiles.length} source-tree files at candidate ${candidateFingerprint}; COMP-009 is computed from the completed pair, not self-scored.`,
+    aggregatePass ? [] : [
+      ...(stableHoldouts ? [] : [
+        "Two complete, distinct, accepted COMP-001 through COMP-008 judgments for the exact source-tree candidate are not yet present; separate commissioning is an orchestration gate outside public Git."
+      ]),
+      ...preReviewCriteria.filter((result) => !result.pass).map((result) =>
+        `${result.id}: required technical evidence has not passed.`
+      )
     ]
   ));
 
@@ -449,6 +493,7 @@ export function evaluateCompositeIntegration({
     suiteId: suite.suite_id,
     rubricSha256: actualRubricDigest,
     candidateFingerprint,
+    preReviewCriteria,
     criteria: results,
     accepted: results.every((item) => item.pass),
     score: results.reduce((sum, item) => sum + item.score, 0),

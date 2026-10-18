@@ -114,7 +114,7 @@ that an agent, test, or informal participant has human decision authority.
 | [0014](./0014-weekly-practice-review-and-commitment-protocol.md) | Weekly Practice Review and Commitment Protocol | `proposed` | Jamie Burkart |
 | [0015](./0015-source-bound-correspondence.md) | Source-bound correspondence readings and coverage | `proposed` | Jamie Burkart |
 | [0016](./0016-irl-changelog-graph-component.md) | IRL Changelog as a Source-Bound Knowledge Graph Component | `implementing` | Jamie Burkart |
-| [0018](./0018-non-circular-composite-release-review.md) | Non-circular composite release review | `proposed` | Jamie Burkart |
+| [0018](./0018-non-circular-composite-release-review.md) | Non-circular composite release review | `accepted` | Jamie Burkart |
 
 ## Validation
 

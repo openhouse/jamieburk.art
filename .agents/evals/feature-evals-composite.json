@@ -1,13 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "suite_id": "feature-evals-composite-integration",
   "title": "Feature eval family composite integration",
   "objective": "Integrate the strongest contracts from feature/evals-A through feature/evals-N into one public-safe, inspectable knowledge and portfolio system without importing parallel architectures or weakening human approval boundaries.",
   "source_branch": "feature/knowledge-h",
   "pull_request_base": "develop",
   "starting_commit": "934c1bdff4a478da56fde3a125d905e7e326b6f2",
-  "frozen_at": "2026-07-28",
-  "rubric_sha256": "00d01d1d68c4a84806a2342829cb565baa6b9e8f53b0bc53aa8f3e7fda17e82d",
+  "frozen_at": "2026-10-18",
+  "rubric_sha256": "6ad0d6a0cbbbe972e65754e6cec7ab501227c91aaa13be8dd30bba65cb07d0f7",
   "base_suite": {
     "path": ".agents/evals/portfolio-production-readiness.json",
     "required_version": 3,
@@ -84,13 +84,25 @@
     "purpose": "Bind canonical knowledge, public rendering, accessibility, indexing, validation, runtime, and release dependencies to one exact candidate while avoiding a circular digest over the two holdout result records."
   },
   "holdout_provenance": {
-    "run_version": 3,
+    "run_version": 4,
     "provider": "independent-codex-review",
     "distinct_reviewer_labels_required": true,
     "judgment_payload_digest_required": true,
     "private_process_identifiers_prohibited": true,
     "private_local_locators_prohibited": true,
-    "authentication_scope": "Public-safe review receipts bind distinct reviewer labels and complete judgments to the exact candidate without publishing private process identifiers or local machine locators. Human production approval remains required."
+    "authentication_scope": "Public-safe review receipts bind distinct reviewer labels and complete judgments to the exact candidate without publishing private process identifiers or local machine locators. Human production approval remains required.",
+    "review_scope": "substantive-COMP-001-through-COMP-008",
+    "scored_criterion_ids": [
+      "COMP-001",
+      "COMP-002",
+      "COMP-003",
+      "COMP-004",
+      "COMP-005",
+      "COMP-006",
+      "COMP-007",
+      "COMP-008"
+    ],
+    "aggregate_criterion_id": "COMP-009"
   },
   "evidence_bundle_files": [
     ".agents/evals/feature-evals-composite.json",
@@ -140,12 +152,12 @@
     "scripts/tests/composite-integration.test.mjs",
     "scripts/tests/knowledge-evals.test.mjs",
     "scripts/tests/lifecycle-operations.test.mjs",
-    "docs/qa/evals-H/margaret-morse-final-a.json",
-    "docs/qa/evals-H/margaret-morse-final-b.json",
-    "docs/qa/evals-H/margaret-morse-final-c.json",
-    "docs/qa/evals-H/warren-sack-final-a.json",
-    "docs/qa/evals-H/warren-sack-final-b.json",
-    "docs/qa/evals-H/warren-sack-final-c.json",
+    "docs/qa/evals-H/margaret-morse-final-2026-10-18-a.json",
+    "docs/qa/evals-H/margaret-morse-final-2026-10-18-b.json",
+    "docs/qa/evals-H/margaret-morse-final-2026-10-18-c.json",
+    "docs/qa/evals-H/warren-sack-final-2026-10-18-a.json",
+    "docs/qa/evals-H/warren-sack-final-2026-10-18-b.json",
+    "docs/qa/evals-H/warren-sack-final-2026-10-18-c.json",
     "package.json"
   ],
   "holdout_runs": [
@@ -251,15 +263,17 @@
     {
       "id": "COMP-009",
       "title": "Stable exact-candidate stopping decision",
-      "grader": "hybrid",
+      "grader": "deterministic",
       "blocking": true,
       "pass_criteria": [
-        "Two separately commissioned holdout judgments accept the same candidate fingerprint against the same rubric digest.",
-        "The candidate fingerprint binds the complete Git source tree except the two declared holdout records.",
-        "Each public receipt binds a distinct reviewer label, review time, provider, and complete judgment digest to the exact candidate without publishing private process identifiers or machine locators.",
-        "The repository states that public receipt labels do not authenticate process identity; separate commissioning is established in private orchestration and remains outside public Git.",
-        "Every composite criterion scores 4 with no not-observed evidence.",
-        "Deterministic checks pass and unresolved human production approval remains open."
+        "Two separately commissioned independent substantive judgments accept COMP-001 through COMP-008 for the same candidate fingerprint and rubric digest.",
+        "The candidate fingerprint binds the complete Git source tree except the same two declared holdout records; no further exclusions are allowed.",
+        "Each public receipt has the declared substantive review scope, exactly the eight substantive scores at 4, no duplicate or extra criterion, and no not-observed evidence. Reviewers do not score COMP-009.",
+        "Each public receipt binds a distinct nonblank judge ID and reviewer label, review time, provider, and complete immutable judgment digest, including review scope, without publishing private process identifiers or machine locators.",
+        "Public receipt labels do not authenticate process identity. The release operator verifies two distinct independently commissioned review processes and retains a private attestation bound to this candidate and both payload digests outside public Git.",
+        "All required technical evidence and both independent judgments pass for every substantive criterion; neither technical success nor one review can override missing evidence or dissent.",
+        "The deterministic aggregate condition passes only after the complete valid pair exists. Two complete verification executions must pass at 36/36 against the same source tree, rubric, review digests and technical evidence.",
+        "Exact-commit CI and staging-container verification remain separate release checks. Unresolved human production, indexing and media approval remain open."
       ]
     }
   ]

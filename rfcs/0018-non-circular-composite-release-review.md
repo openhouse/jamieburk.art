@@ -1,7 +1,7 @@
 ---
 rfc: 18
 title: Non-circular composite release review
-stage: proposed
+stage: accepted
 start_date: 2026-10-18
 authors:
   - Portfolio engineering agent
@@ -11,7 +11,7 @@ review_areas:
   - privacy-governance
   - deployment
   - developer-experience
-implementation: null
+implementation: scripts/lib/composite-integration-eval.mjs
 supersedes: []
 superseded_by: null
 ---
@@ -23,7 +23,8 @@ superseded_by: null
 Separate independent substantive judgments from deterministic verification of the
 completed review pair. Keep all nine blocking criteria, the 36/36 stopping score,
 two independent reviewers, exact-candidate binding, full checks and human approval
-boundaries. This proposed RFC is not permission to change the frozen contract.
+boundaries. Jamie authorized this two-stage repair on October 18, 2026. This is
+a new review run; it does not turn an earlier held result into a pass.
 
 ## Motivation
 
@@ -128,10 +129,23 @@ still require Jamie's separate approval. This RFC does not approve new media.
 
 ## Decision gates
 
-Jamie must explicitly authorize the two-stage contract revision. Passing tests,
-this proposal or a PR update cannot advance that decision. Record the approved
-scope and date here before implementation. A new rubric/version is a new run,
-not a passing result for the previous held run.
+Jamie explicitly answered “Proceed” on October 18, 2026, to the request to
+implement this two-stage repair and deploy staging once every gate passes.
+Implementation is authorized; release still depends on fresh evidence. Production,
+indexing, new media and unresolved human-validation decisions remain separate.
+A new rubric/version is a new run, not a passing result for the previous held run.
+
+## Implementation record
+
+- Suite version 2 and judgment version 4 separate eight substantive judgments
+  from deterministic pair verification.
+- The previous suite, protocol and two held receipts are preserved in
+  `docs/evals/history/2026-10-18-pre-rfc0018/`.
+- Implementation: `scripts/lib/composite-integration-eval.mjs`.
+- Regression tests: `scripts/tests/composite-integration.test.mjs`.
+- Operating protocol: `docs/evals/feature-evals-composite.md`.
+- Fresh review, CI and staging results must be recorded against their actual
+  candidate; this accepted design is not itself a passing result.
 
 ## Drawbacks
 
@@ -147,5 +161,4 @@ review would sacrifice the blind initial judgments and is not proposed.
 
 ## Unresolved questions
 
-- Await Jamie's decision on the two-stage protocol.
 - Human accessibility, collaborator and production gates remain separate and open.
