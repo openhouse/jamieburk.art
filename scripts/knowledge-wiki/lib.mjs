@@ -25,6 +25,9 @@ export const defaultRepoRoot = path.resolve(
 export const wikiRelativeRoot = "docs/knowledge-bank";
 export const generatedRelativeRoot = `${wikiRelativeRoot}/_generated`;
 
+// Preserve A's comparison edition across local fetches and hosted builds.
+export const graphDeltaBaseCommit = "a8fdd57617c3667ac4d9db7d28f57e9022c11a81";
+
 function compareText(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
 }
@@ -1346,9 +1349,7 @@ function graphDeltaMarkdown(result, baseGraph) {
   const lines = [
     generatedHeader("Knowledge Wiki graph delta", result).trimEnd(),
     "",
-    baseGraph
-      ? "Compared with the graph artifact on `origin/develop`."
-      : "`origin/develop` has no Knowledge Wiki graph artifact; the bounded pilot is reported as an addition.",
+    `Compared with the graph artifact at immutable commit \`${graphDeltaBaseCommit}\`.`,
     "",
     `- Nodes added: ${addedNodes.length}`,
     `- Nodes removed: ${removedNodes.length}`,
@@ -1368,14 +1369,15 @@ function graphDeltaMarkdown(result, baseGraph) {
 function loadBaseGraph(repoRoot) {
   try {
     return JSON.parse(
-      execFileSync("git", ["show", "origin/develop:reports/wiki-graph.json"], {
+      execFileSync("git", ["show", `${graphDeltaBaseCommit}:reports/wiki-graph.json`], {
         cwd: repoRoot,
         encoding: "utf8",
+        maxBuffer: 16 * 1024 * 1024,
         stdio: ["ignore", "pipe", "ignore"]
       })
     );
-  } catch {
-    return null;
+  } catch (error) {
+    throw new Error(`Cannot load immutable Wiki graph baseline ${graphDeltaBaseCommit}; fetch full Git history and check the baseline artifact.`, { cause: error });
   }
 }
 
