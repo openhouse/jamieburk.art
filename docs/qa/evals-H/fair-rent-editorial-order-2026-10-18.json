@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-18",
+  "baselineCommit": "93bac7fd5e7dfecdf04ed8881417c97c25078086",
+  "scope": "Bounded contribution-first editorial order and aligned citations; no new public factual claims or assets",
+  "candidateBindings": {
+    "apps/www/src/content/work/fair-rent-nyc.mdx": "9695bf996f231cc45c7cb7ae0cb5e56f9724456fa7bf34009f298bdf5f6663e9",
+    "apps/www/src/data/knowledge-bank/records.ts": "430bf92a53639fe7586cc711232333cd733f1a0e710c046afeb3b419e4570472",
+    "apps/www/src/data/knowledge-bank/public-registry.json": "4c5d4eb1fa66041fcb0ceef917c7c6fc3c88ca793c0604bf2921bb4136e09ab3",
+    "scripts/tests/citations.test.mjs": "87938f643cfc8cf792fcdded4b8fa31fdd86811cc84cbef3554af56b2d7d6031",
+    "scripts/lib/knowledge-evals.mjs": "b1c22b79e62ba8051a1b35f20741c1a1bc11c88e1a9b89a1740ff6a3ee17130e",
+    "evals/knowledge-bank/evals.json": "c74f47003218b79ad9ba4ba5a86b3959bdcab23633b3a4037d61cdd47cd78eb5"
+  },
+  "hillClimb": {
+    "criterion": "Personal contribution appears before the detailed historical narrative",
+    "baseline": "What I did was the third main MDX section",
+    "candidate": "What I did is the second main MDX section",
+    "semanticBodiesChanged": false,
+    "newPublicClaims": 0,
+    "regression": "New authored-order reference test fails against the previous citation plan and passes after alignment",
+    "measuredHiringReaderImprovement": false
+  },
+  "independentModelReview": {
+    "blockingFindings": 0,
+    "sectionBodiesUnchanged": 5,
+    "claimOccurrencesUnchanged": 14,
+    "sourceSetUnchanged": 25,
+    "realHumanParticipation": false
+  },
+  "focused": {
+    "citationTests": {
+      "passed": 12,
+      "failed": 0
+    },
+    "knowledgeTests": {
+      "passed": 245,
+      "failed": 0
+    },
+    "publicSafety": "pass with 11 existing careful-claim warnings retained"
+  },
+  "app": {
+    "typecheck": "pass",
+    "lint": "pass",
+    "build": "pass",
+    "fullWorkspaceCommand": "typecheck, lint and build run separately with successful results"
+  },
+  "renderedSmoke": {
+    "scope": "one-route four-width rendered smoke check, not the full accessibility or reader matrix",
+    "engine": "installed Chrome via Playwright; Python Playwright and bundled Chromium unavailable",
+    "rows": [
+      {
+        "width": 360,
+        "status": 200,
+        "headings": [
+          "What to know first",
+          "At a glance",
+          "Context",
+          "What I did",
+          "The website was one part of the room",
+          "Documented organizing and testimony",
+          "What became usable",
+          "Outcome and proof",
+          "Sources and notes",
+          "At a glance",
+          "Primary artifacts",
+          "Artifact gallery",
+          "Scope and sources",
+          "Public links",
+          "Credits"
+        ],
+        "errors": [],
+        "h1Count": 1,
+        "mainCount": 1,
+        "viewportWidth": 360,
+        "scrollWidth": 360,
+        "missingCitationTargets": [],
+        "sha256": "9075e878ce3958a483512dbbc0abe75ac051bd3fdca60e793d22904410a4c49b",
+        "screenshotRetainedInPublicGit": false
+      },
+      {
+        "width": 375,
+        "status": 200,
+        "headings": [
+          "What to know first",
+          "At a glance",
+          "Context",
+          "What I did",
+          "The website was one part of the room",
+          "Documented organizing and testimony",
+          "What became usable",
+          "Outcome and proof",
+          "Sources and notes",
+          "At a glance",
+          "Primary artifacts",
+          "Artifact gallery",
+          "Scope and sources",
+          "Public links",
+          "Credits"
+        ],
+        "errors": [],
+        "h1Count": 1,
+        "mainCount": 1,
+        "viewportWidth": 375,
+        "scrollWidth": 375,
+        "missingCitationTargets": [],
+        "sha256": "120f6282d6d898cf0111fa1be06d9cdd93b8d4488462f097c6379202230dfaea",
+        "screenshotRetainedInPublicGit": false
+      },
+      {
+        "width": 768,
+        "status": 200,
+        "headings": [
+          "What to know first",
+          "At a glance",
+          "Context",
+          "What I did",
+          "The website was one part of the room",
+          "Documented organizing and testimony",
+          "What became usable",
+          "Outcome and proof",
+          "Sources and notes",
+          "At a glance",
+          "Primary artifacts",
+          "Artifact gallery",
+          "Scope and sources",
+          "Public links",
+          "Credits"
+        ],
+        "errors": [],
+        "h1Count": 1,
+        "mainCount": 1,
+        "viewportWidth": 768,
+        "scrollWidth": 768,
+        "missingCitationTargets": [],
+        "sha256": "e9c34bd35920804f730fd0e99058737a1ca2cf512f237d6d5956c95371bc282c",
+        "screenshotRetainedInPublicGit": false
+      },
+      {
+        "width": 1280,
+        "status": 200,
+        "headings": [
+          "What to know first",
+          "At a glance",
+          "Context",
+          "What I did",
+          "The website was one part of the room",
+          "Documented organizing and testimony",
+          "What became usable",
+          "Outcome and proof",
+          "Sources and notes",
+          "At a glance",
+          "Primary artifacts",
+          "Artifact gallery",
+          "Scope and sources",
+          "Public links",
+          "Credits"
+        ],
+        "errors": [],
+        "h1Count": 1,
+        "mainCount": 1,
+        "viewportWidth": 1280,
+        "scrollWidth": 1280,
+        "missingCitationTargets": [],
+        "sha256": "99021f3bb2d3e22105961bd91d0b2941735c7b33cbe5b51948abc4666afe6870",
+        "screenshotRetainedInPublicGit": false
+      }
+    ],
+    "visualInspection": {
+      "widths": [
+        360,
+        1280
+      ],
+      "finding": "Contribution section and citations legible with no observed overlap in the inspected viewport captures",
+      "fullAccessibilityMatrix": false
+    }
+  },
+  "broaderChecks": {
+    "chainedCheck": "fail at professor-lens exact-candidate gate",
+    "wikiHillclimb": "fail at candidate-bound accessibility evidence; wiki test 349 of 350 passed",
+    "independentDiagnostic": {
+      "totalSteps": 89,
+      "passed": 78,
+      "failed": 10,
+      "separatelyVerifiedAppStep": 1,
+      "failedCommands": [
+        "npm run evals:professor-lenses",
+        "npm run test:professor-lenses",
+        "npm run test:accessibility-evidence",
+        "npm run evals:composite",
+        "npm run test:composite",
+        "npm run photos:check",
+        "npm run photos:test",
+        "npm run test:pre-launch",
+        "npm run wiki:test",
+        "npm run wiki:eval"
+      ]
+    },
+    "reason": "Prior full visual matrix and professor-lens scorecards do not bind the changed page; full-tree composite holdouts remain unavailable. These failures propagate through photo, wiki and pre-launch gates.",
+    "newFullTreeHoldouts": false,
+    "releaseReady": false
+  },
+  "logHashes": {
+    "irl-public-build-20261018.log": "80912c6eed163b891891bb367f99e7f8864edb547497b61e801f7474280357e5",
+    "irl-public-typecheck-20261018.log": "031afcfcf1bcab9d801e9f651488d9007de3ee15e3706f5047c633b751cc5f46",
+    "irl-public-lint-20261018.log": "ff786c3ea74942fb6c029548352c4ae071dbc2ae466187880a0693183f0530a7",
+    "irl-public-check-20261018.log": "26c724bff48344b8811873712af54678f8bb158b4b1a4be36bf375217247d4d7",
+    "irl-public-hillclimb-20261018.log": "e77585ca674074a3098ab0f917d2793f78e111995d56a6ce55b728167bbcfb90"
+  },
+  "authority": {
+    "publicContentApprovalUnchanged": true,
+    "newHumanApprovalClaimed": false,
+    "hostedCI": "not-run",
+    "merged": false,
+    "deployed": false
+  },
+  "limitations": [
+    "Four-width smoke verification is not the required 60-row accessibility matrix.",
+    "No stale visual or reader receipt was relabeled current.",
+    "Machine review and deterministic improvements do not grant release authorization."
+  ]
+}

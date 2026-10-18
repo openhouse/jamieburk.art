@@ -288,13 +288,13 @@
     "archiveProduction": {
       "reviewedAt": "2026-07-15",
       "bindingReviewedAt": "2026-10-18",
-      "bindingReviewReport": "docs/qa/evals-H/archive-production-boundary-2026-10-18.json",
+      "bindingReviewReport": "evals/knowledge-bank/runs/2026-10-18-fair-rent-editorial-order-review.md",
       "expectedIntakeCount": 14,
       "expectedObservationCount": 28,
       "expectedSourceCount": 17,
       "expectedClaimCount": 8,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "d18ee7b9ec62b3bc32e1d60e495ff0e18490fd528c15a36bf0d003a30858d041",
+      "approvedContentSha256": "4c3ca56df781a8ac4e3da781ac29a5f690d2e8f473f3ffc88a3413ae69d12505",
       "intakeIds": [
         "INTAKE-HORSE-LORDS-TRUTHERS-NPR-2016",
         "INTAKE-CLAUDETTE-ARORA-2022",

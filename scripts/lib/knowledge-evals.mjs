@@ -91,9 +91,9 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   canonicalKnowledgeSha256: "29ff741260694cc37b8e5534632fd852551085ceeb706692e1b988a5963be586",
   reviewConfigurationSha256: "e456b7cdc66033c60d0d526d2794aec91be7470c35834ae776db9cc44b3dea9b",
   articleSourcesSha256: "a9ecb8c4724f7b6cf9b25cc806effe587694071a41fd2a8bb638402be009d7e7",
-  governanceBindingsSha256: "ab1e3d00c61159adc19e54a5241dea2b932c23f341f4ad8a70950d3ffcfb7114",
+  governanceBindingsSha256: "d5a368dad97d4da9d963d7a31f7f174e0eba9a6afc48205ee961c0dae8decd96",
   publicReportSha256: "ce9475a9aecda99f2d7c58c099d657a14e5512a557b58b25d3736803996e9769",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727",
+  caseStudyMdxSha256: "9695bf996f231cc45c7cb7ae0cb5e56f9724456fa7bf34009f298bdf5f6663e9",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
 });
@@ -129,7 +129,7 @@ const NYCAC_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "8c188485aa7340c8f33b82d9112cd9238d59db77236033ac13d8426e52feac2e",
   publicReportSha256: "6ad87ec58dec3fbb3b1b73271b6562d3adf86d1adf61c9d28598f2e1736fad04",
   proofProjectionSha256: "7e6d12c463cb77f5c1cb0307dc8c2a79dec0ceb8f7fc1863ccb1b651f6b04e0e",
-  caseStudyMdxSha256: "4c0e0e8b20c891e34f5bd87908d79681fd82415762f8b46be302d02ba5dfd727"
+  caseStudyMdxSha256: "9695bf996f231cc45c7cb7ae0cb5e56f9724456fa7bf34009f298bdf5f6663e9"
 });
 const BLIND_SPOT_CONTROL_REVIEW_LOCKS = Object.freeze({
   manifestSha256: "fb76f31059d537dbeca324ae564009e08b20081dcb3af26fae8846bf8d106d42",

@@ -28,6 +28,29 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
+test("FairRentNYC citation plan follows authored claim order without widening evidence", () => {
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+  const mdx = readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8");
+  const authoredClaims = [...mdx.matchAll(/<Claim\b([\s\S]*?)\/>/g)].map((match) => {
+    const attributes = Object.fromEntries([...match[1].matchAll(/(\w+)="([^"]+)"/g)].map((attribute) => [attribute[1], attribute[2]]));
+    const occurrence = attributes.occurrenceId
+      ? page.occurrences.find((item) => item.id === attributes.occurrenceId)
+      : page.occurrences.find((item) => item.claimId === attributes.claimId);
+    assert.ok(occurrence, `Missing page plan for ${attributes.claimId}`);
+    assert.equal(occurrence.claimId, attributes.claimId);
+    assert.equal(occurrence.projection, attributes.projection);
+    assert.equal(page.surface, attributes.surface);
+    getClaimProjection(attributes.claimId, attributes.projection, attributes.surface);
+    return occurrence;
+  });
+  assert.deepEqual(authoredClaims.map((item) => item.id), page.occurrences.map((item) => item.id));
+  const firstSources = [...new Set(authoredClaims.flatMap((item) =>
+    resolveCitationOccurrence(page.id, item.id).sources.map((source) => source.source.id)
+  ))];
+  assert.deepEqual(firstSources, page.sourceOrder);
+  assert.deepEqual(firstSources, resolveCitationReferences(page.id).map((item) => item.source.id));
+});
+
 test("KC Town Hall keeps the hiring-facing award, transition, and planning records distinct", () => {
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "jamie-secured-cced-award").sources.map((item) => item.source.id),
