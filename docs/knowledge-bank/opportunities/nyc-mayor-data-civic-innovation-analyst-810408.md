@@ -39,6 +39,16 @@ hard_screens:
     text: Verify a directly relevant example of analysis and visualization and the other technical skills stated by the employer.
     state: review-needed
     disposition: verify
+one_year_success_conditions:
+  - At least one pilot has a documented baseline, feedback from users, an agency owner, and a clear decision to advance, revise or stop.
+  - Project leads and agency partners can retrace the evidence and operational requirements behind any recommendation.
+one_year_risk_conditions:
+  - Coordination and slide production leave too little room for direct analysis and testing.
+  - A prototype is treated as delivered before an agency has an owner, baseline, resources or capacity to run it.
+interview_questions:
+  - How is time divided among direct analysis, field research, and project coordination?
+  - What distinguishes a pilot ready for the Efficiency Team from one that needs more discovery?
+  - What starting pay is attainable within the posted band?
 role_requirements:
   - id: requirement.nyc-mayor-810408.analysis
     importance: critical
