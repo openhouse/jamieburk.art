@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "rfc": 14,
+  "stage": "proposed",
+  "authority": {
+    "decision_owner": "Jamie Burkart",
+    "implementation_authorized": false,
+    "adoption_authorized": false,
+    "publication_authorized": false
+  },
+  "cadence": {
+    "interval": "weekly",
+    "operator_budget_minutes": 30,
+    "decision_facing_page_limit": 1,
+    "evidence_window_required": true
+  },
+  "commitment_policy": {
+    "default_active_limit": 3,
+    "fewer_allowed": true,
+    "suggested_lanes_are_quotas": false,
+    "suggested_lanes": [
+      "public-portfolio-and-product",
+      "collective-or-civic-under-collective-authority",
+      "paid-practice-or-career-conversion"
+    ],
+    "required_fields": [
+      "outcome",
+      "voluntary-owner",
+      "decision-authority",
+      "next-evidence",
+      "exit-condition",
+      "privacy-and-publication-disposition"
+    ],
+    "full_slate_admission": "one-in-one-out",
+    "outgoing_dispositions": [
+      "completed",
+      "delegated-with-opt-in",
+      "deferred",
+      "declined",
+      "archived"
+    ],
+    "preservation_creates_commitment": false
+  },
+  "gathering_policy": {
+    "governing_verb_count": 1,
+    "allowed_verbs": [
+      "understand",
+      "repair",
+      "advise",
+      "deliberate",
+      "decide",
+      "commit"
+    ],
+    "closure_receipt_required": true,
+    "closure_fields": [
+      "purpose-result",
+      "changed",
+      "unresolved",
+      "decisions-and-authority",
+      "voluntary-owners",
+      "unassigned-needs",
+      "information-disposition",
+      "next-evidence-review-or-stop"
+    ]
+  },
+  "agency_policy": {
+    "other_people_require_opt_in": true,
+    "attendance_creates_ownership": false,
+    "silence_creates_ownership": false,
+    "unassigned_work_remains_visible": true,
+    "map_dimensions": [
+      "people",
+      "interests",
+      "resources",
+      "decision-authority",
+      "voluntary-commitments",
+      "unassigned-needs"
+    ]
+  },
+  "commercial_boundary": {
+    "bespoke_work_requires_explicit_state": true,
+    "allowed_states": [
+      "paid-written-authorization",
+      "separate-project-or-employment-process",
+      "bounded-donation",
+      "stop"
+    ],
+    "goodwill_creates_unlimited_unpaid_work": false
+  },
+  "information_partition": {
+    "public_allowed": [
+      "general-method",
+      "synthetic-eval-case",
+      "non-identifying-aggregate-process-status",
+      "approved-public-outcome",
+      "approved-public-artifact"
+    ],
+    "public_forbidden": [
+      "private-person-identity",
+      "private-message-body",
+      "private-transcript-text",
+      "relationship-state",
+      "negotiation-state",
+      "protected-locator",
+      "private-graph-topology"
+    ],
+    "private_sidecar_allowed": [
+      "relationship-chronology",
+      "negotiation-state",
+      "private-interpretation",
+      "participant-restricted-record",
+      "decision-context",
+      "governed-source-pointer"
+    ],
+    "source_vault_required": [
+      "raw-account-export",
+      "credential",
+      "unrestricted-recording",
+      "provider-archive"
+    ],
+    "public_backlink_to_private": false,
+    "separate_publication_packet_required": true
+  },
+  "automation": {
+    "may": [
+      "inventory-sources",
+      "identify-missing-fields",
+      "count-active-commitments",
+      "detect-full-slate",
+      "validate-closure-structure",
+      "flag-placement-mismatch",
+      "draft-review-packet"
+    ],
+    "may_not": [
+      "choose-priorities",
+      "assign-people",
+      "infer-opt-in",
+      "manufacture-deadlines",
+      "resolve-commercial-state",
+      "resolve-collective-decision",
+      "score-human-worth",
+      "expose-private-material",
+      "publish",
+      "merge",
+      "deploy",
+      "index"
+    ]
+  },
+  "human_gates": [
+    "RFC acceptance",
+    "implementation authorization",
+    "private canary authorization",
+    "other-person opt-in",
+    "collective decision authority",
+    "paid-work written authorization or bounded donation",
+    "public projection approval",
+    "merge",
+    "deployment",
+    "production indexing"
+  ]
+}

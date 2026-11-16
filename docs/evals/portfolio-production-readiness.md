@@ -96,6 +96,32 @@ The optimizing agent must not grade its own patch. A holdout LLM judge receives
 only the frozen rubric, candidate URLs, and evidence bundle. It does not receive
 the patch intent, prior scores, or implementation discussion.
 
+### Visitor-language regression review
+
+Before a copy change ships, run `npm run test:public-language` and the build's
+`public-language:verify` gate. The static check covers every generated HTML
+page, including shared components, metadata and accessible labels. The live
+check starts the built production server, discovers page routes from the build
+manifests, and also requests dynamic `/work` and valid/invalid filter states.
+Unresolved parameter routes and failed requests are failures, not empty passes.
+Use `npm run evals:public-language:live -- --base-url https://staging-a.jamieburk.art`
+to check those same routes after deployment. The phrase checks inspect
+known editorial-instruction phrases after joining inline text and decoding common
+HTML entities; internal data fields and application scripts are not visitor copy.
+Keep `publicSafety.note` and `knownOpenProtected.editorialOpen` as editorial
+records, never case-study disclosures.
+
+Independent reader review must also ask: does each sentence explain the work,
+support a visitor's decision, or state a useful limit? Remove instructions to
+authors, approval reminders and publishing backlog from visitor-facing prose.
+Keep genuine limitations, reconstruction labels, archived-service warnings,
+source distinctions and collective credit. Do not simply ban words such as
+"approved", "artifact" or "private": those can describe the work accurately.
+
+The phrase gate is a regression check, not a semantic classifier or a substitute
+for human approval. New paraphrases need review and a focused fixture. Include
+both a rejected specimen and legitimate neighboring language when extending it.
+
 ## Evidence Bundle
 
 Every run should identify:

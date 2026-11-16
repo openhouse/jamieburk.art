@@ -103,6 +103,21 @@ test("promotes verified City matches provisionally and quarantines external lead
   assert.equal(snapshot.leads.find((lead) => lead.organization === "Polimorphic").disposition, "official-verification-required");
 });
 
+test("official City deadline replaces missing or stale newsletter deadlines in both projections", () => {
+  for (const newsletterDeadline of [null, "2026-09-01"]) {
+    const snapshot = buildBetaNycSnapshot({
+      post: { id: 123, date: "2026-08-20T18:39:02", link: "https://www.beta.nyc/example", title: { rendered: "This week in NYC’s #CivicTech!" } },
+      leads: [{ ...extractNewsletterOpportunities(newsletterHtml)[0], deadline: newsletterDeadline }],
+      cityRows: [cfbRow],
+      asOf: "2026-08-20",
+      config: { strongMatchThreshold: { composite: 78, fit: 75, secure: 65 } }
+    });
+    assert.equal(snapshot.leads[0].deadline, "2026-10-13");
+    assert.equal(snapshot.provisionalStrongMatches[0].deadline, "2026-10-13");
+    assert.equal(snapshot.provisionalStrongMatches[0].qualificationReview, "human-review-required");
+  }
+});
+
 test("verified external-employer rules can promote an open strong match while retaining human review", () => {
   const leads = extractNewsletterOpportunities(newsletterHtml);
   const polimorphicUrl = "https://app.trinethire.com/companies/381666-polimorphic/jobs";

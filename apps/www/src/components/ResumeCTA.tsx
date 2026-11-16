@@ -10,7 +10,7 @@ export function ResumeCTA() {
         documentation systems, civic technology, and public-facing tools.
       </p>
       <div className="mt-5">
-        <JBButton href={site.resumePath} variant="secondary" download>
+        <JBButton href={site.resumePath} variant="inverse" download>
           Download resume PDF
         </JBButton>
       </div>

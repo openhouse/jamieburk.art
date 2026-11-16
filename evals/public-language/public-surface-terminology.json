@@ -3,6 +3,17 @@
   "id": "public-surface-terminology",
   "currentRunPath": "evals/public-language/runs/2026-08-20-public-surface-terminology-hillclimb.json",
   "purpose": "Keep visitor-facing portfolio prose and hiring artifacts clear, specific, and free of internal systems vocabulary.",
+  "renderedReviewPrinciple": "Visitor copy explains the work, its evidence and useful limits. Editorial instructions, approval reminders and publishing machinery stay internal. These patterns catch known regressions, not every possible paraphrase; independent reader review remains required. Do not ban legitimate descriptions of approval workflows, artifacts, privacy or collective work.",
+  "forbiddenRenderedPatterns": [
+    { "id": "editorial-approved-artifact", "pattern": "\\bapproved\\s+(?:resume|portfolio|publication)\\s+artifact\\b" },
+    { "id": "editorial-public-safe-command", "pattern": "\\buse\\s+only\\s+public[- ]safe\\s+claims\\b" },
+    { "id": "editorial-credit-command", "pattern": "\\bcollective[- ]work\\s+language\\s+is\\s+required\\b" },
+    { "id": "editorial-page-command", "pattern": "\\bthis\\s+page\\s+must\\s+make\\b" },
+    { "id": "editorial-organizer-command", "pattern": "\\bkeep\\s+public\\s+organizer\\s+credit\\b" },
+    { "id": "editorial-approval-placeholder", "pattern": "\\bTODO\\s*:\\s*Jamie\\s+approval\\s+required\\b" },
+    { "id": "editorial-portfolio-label", "pattern": "\\bpublic[- ]safe\\s+portfolio\\b" },
+    { "id": "editorial-publication-backlog", "pattern": "\\brequire\\s+(?:separate\\s+review\\s+before\\s+publication|specific\\s+approval|consent\\s+and\\s+approval)\\b" }
+  ],
   "forbiddenStandaloneTerms": [
     "bound",
     "bounded",

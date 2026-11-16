@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Fair Rent NYC
 
-**Source commit:** `29745b537e57bab69f5ddc6207c3ab6e8fbd8e38`
-**Generation time:** 2026-08-31T19:49:24-04:00
-**Source fingerprint:** `27afac39e74b521c997131bff364951dbf4aad94786db9486c2f911a8d142bd4`
+**Source commit:** `366586dba15e37a1b60b3de3400decfdf99265dd`
+**Generation time:** 2026-11-16T13:55:21-05:00
+**Source fingerprint:** `e66028120932b70de9af7a0b6d1de391ab60972470c02ae0a7e9bf110379eb7b`
 
 - [FairRentNYC: 2019 03 18 small business rally 1 [2oqjovyl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-2oqjovylzb.md) - `related_to` (frontmatter)
 - [FairRentNYC: 2019 03 18 small business rally 1 [hur5tftl]](../../assets/photographs/project-sites/fair-rent-nyc-2019-03-18-small-business-rally-1-hur5tftldj.md) - `related_to` (frontmatter)
@@ -47,6 +47,8 @@
 - [Homepage screen-and-room Shoestring Press occurrence](../../projections/photography/home-screen-room-shoestring.md) - `related_to` (frontmatter)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `prose_link` (markdown)
 - [DCLA listening-session portraits and follow-through intake](../../sources/dcla-listening-session-2026-08-26.md) - `related_to` (frontmatter)
+- [Recent delivery — bounded portfolio update](../../research-runs/recent-delivery-2026-10-18.md) - `related_to` (frontmatter)
+- [Published listening-session animation on Instagram](../../sources/dcla-animation-instagram-2026-10.md) - `related_to` (frontmatter)
 - [Active New York State commercial rent stabilization bills](../../sources/commercial-rent-public-support/active-state-bills-2025-2026.md) - `related_to` (frontmatter)
 - [Late-July 2026 current-workstream review](../../sources/working/current-workstream-2026-07-27.md) - `related_to` (frontmatter)
 - [Jimmy's Corner rally: Small Business Rent Stabilization statements](../../testimony/commercial-rent-public-support/2026-04-10-jimmys-corner-rally-statements.md) - `related_to` (frontmatter)

@@ -12,6 +12,12 @@ the maintained portfolio and Knowledge Wiki. Tailoring may change emphasis,
 order, and terminology; it must not invent experience, metrics, authority, or
 individual credit for collective work.
 
+## Default for newly discovered opportunities
+
+Every typed opportunity now enters the OTI evidence-first preparation workflow automatically when the Knowledge Wiki graph rebuilds. There is no per-employer admission allowlist. [RFC 0017](../rfcs/0017-default-opportunity-packets.md) defines the ten stages, and [the generated admission queue](../reports/opportunity-packets.json) records the current work. Preparation continues through an authorized worker; this graph hook does not itself call models or connected document services.
+
+Use the same source-backed tailoring, living writer voice, deterministic preflight, eligible fictional reader reviews, bounded revisions, native Google Docs, exact-file PDF inspection and application guide described below. Admission is not completion. Missing evidence remains a hold; existing candidacies and historical artifacts retain their state. New opportunities do not automatically enter the public résumé selector or authorize publication or submission. Existing fixed portfolio registries below describe the maintained public suite, not an exemption for new private packets.
+
 ## Current hiring suite
 
 `evals/resumes/hiring-reader-portfolio.json` requires one dated resume for every

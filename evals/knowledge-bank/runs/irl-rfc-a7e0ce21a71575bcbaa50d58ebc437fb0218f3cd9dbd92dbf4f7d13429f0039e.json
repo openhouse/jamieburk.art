@@ -1,0 +1,1281 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-06 14:27:28 UTC",
+  "scope": "Public RFC 0016 proposal and synthetic semantic model; no live journal migration",
+  "evaluation": {
+    "schema_version": 1,
+    "rfc": 16,
+    "stage": "proposed",
+    "scope": "synthetic-review-model-only",
+    "passed": true,
+    "scenarios": {
+      "total": 33,
+      "passed": 33,
+      "failed": 0,
+      "results": [
+        {
+          "id": "private-reading-is-review-not-action",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "late-recovery-does-not-exist-in-earlier-record-view",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "later-development-does-not-correct-previous-account",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "updated",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "updated",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "correction-preserves-earlier-entry",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "corrected",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "corrected",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "earlier-view-does-not-see-later-correction",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "challenge-remains-contested-not-settled",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "contested-reading"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "contested",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "contested-reading"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "contested",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "correction-needs-explicit-prior-target",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "revision-kind-mismatch"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "revision-kind-mismatch"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "development-cannot-assert-correction",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "revision-kind-mismatch"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "revision-kind-mismatch"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "self-reference-is-not-a-valid-revision",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "revision-target-not-prior"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "revision-target-not-prior"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "missing-graph-node-is-not-a-resolved-link",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unresolved-relation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unresolved-relation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "claim-is-not-an-about-person-or-project-edge",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "wrong-relation-target-type"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "wrong-relation-target-type"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "unknown-relation-fails-closed",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unknown-relation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unknown-relation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "duplicate-entry-id-is-not-overwritten",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "duplicate-entry-id"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "duplicate-entry-id"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "legacy-schema-requires-explicit-migration",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unsupported-entry-version"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unsupported-entry-version"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "local-sequence-is-not-global-identity",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unnamespaced-entry-id"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unnamespaced-entry-id"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "source-revision-mismatch-is-not-current-evidence",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-source-revision"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-source-revision"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "summary-cannot-be-promoted-to-direct-evidence",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-source-revision"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-source-revision"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "missing-citation-does-not-pass-review",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "missing-citation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "missing-citation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "changed-source-marks-dependent-reading-stale",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "source-not-current"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "stale",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "source-not-current"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "stale",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "unavailable-source-does-not-certify-freshness",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "source-not-current"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "stale",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "source-not-current"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "stale",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "withdrawn-source-withholds-reading",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "retention-review-required"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "withheld",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "retention-review-required"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "withheld",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "invalid-calendar-date-is-not-normalized",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "invalid-chronology"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "invalid-chronology"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "source-capture-cannot-postdate-recording",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "invalid-chronology"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "invalid-chronology"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "unknown-learning-time-is-not-event-time",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "claimed-learning-needs-a-cited-basis",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-learning-time"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "unbound-learning-time"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "unknown-event-window-stays-visible-as-uncertain",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "unknown-event-time"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": null
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "unknown-event-time"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": null
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "public-request-reveals-no-private-identifiers",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "public-journal-export-forbidden"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "public-journal-export-forbidden"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "recording-cannot-activate-a-commitment",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "authority-promotion"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "authority-promotion"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "requesting-external-action-does-not-execute-it",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "authority-promotion"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "authority-promotion"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "analysis-is-not-participant-authored-voice",
+          "passed": true,
+          "actual": {
+            "decision": "deny",
+            "reasons": [
+              "participant-impersonation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "deny",
+            "reasons": [
+              "participant-impersonation"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "divergent-history-requires-reviewed-rebase",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "history-conflict"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "history-conflict"
+            ],
+            "entries": [],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "later-correction-does-not-silently-resolve-a-challenge",
+          "passed": true,
+          "actual": {
+            "decision": "hold",
+            "reasons": [
+              "contested-reading"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "contested",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:three",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "hold",
+            "reasons": [
+              "contested-reading"
+            ],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "contested",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:three",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        },
+        {
+          "id": "later-development-does-not-erase-a-correction-warning",
+          "passed": true,
+          "actual": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "corrected",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:three",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          },
+          "expected": {
+            "decision": "ready-for-human-review",
+            "reasons": [],
+            "entries": [
+              {
+                "id": "irl:synthetic:one",
+                "status": "corrected",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:two",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              },
+              {
+                "id": "irl:synthetic:three",
+                "status": "recorded",
+                "learned_at": null,
+                "historical_reconstruction": true
+              }
+            ],
+            "implementation_authorized": false,
+            "migration_authorized": false,
+            "publication_authorized": false,
+            "activates_work": false
+          }
+        }
+      ]
+    },
+    "candidate_fingerprint": "a7e0ce21a71575bcbaa50d58ebc437fb0218f3cd9dbd92dbf4f7d13429f0039e",
+    "inputs": [
+      {
+        "path": ".github/workflows/irl-changelog.yml",
+        "sha256": "de62a3da96f0919f42e016479a40647e01d36e1e5fcd796be17f04377447d16c"
+      },
+      {
+        "path": "docs/architecture/additive-irl-changelog.md",
+        "sha256": "6489bc8062133000253a342dfb3919d3b9ce2aaf1f55a792e8256f79a7a48326"
+      },
+      {
+        "path": "evals/knowledge-bank/irl-changelog-rfc-cases.mjs",
+        "sha256": "ef9815b231f3b60e695aff4488d61609488558227d0e1eff1596125a89b8c1a6"
+      },
+      {
+        "path": "package.json",
+        "sha256": "fe59fd8494bcfa1ea2f458a3b4a5d3469d5c108bff92c3e8d8927f480bf7f5a3"
+      },
+      {
+        "path": "rfcs/0016-irl-changelog-graph-component.contract.json",
+        "sha256": "bb212122022030005dae3f631ac66125231edb4052e330b0cd35840227933c11"
+      },
+      {
+        "path": "rfcs/0016-irl-changelog-graph-component.md",
+        "sha256": "1b2f2314f41de5755ebf17ed05fccbdc4736f52bdc47c5c83836258be68c0279"
+      },
+      {
+        "path": "rfcs/README.md",
+        "sha256": "9eb22e6fa06fea6dbb887006e801a5425cf3496ccdb5f3fa3415ad306b23345b"
+      },
+      {
+        "path": "scripts/check-rfcs.mjs",
+        "sha256": "3680ada17a025b389e54bcbfeec513d0f4de0a0c1aec7d4c19e093142be0b7b5"
+      },
+      {
+        "path": "scripts/irl-changelog/journal.mjs",
+        "sha256": "3095aa2c39104889f56c62c6f9b17a9ba157a15ce85ac87eb1c5e5a9ca28667e"
+      },
+      {
+        "path": "scripts/irl-changelog/journal.test.mjs",
+        "sha256": "24e584d8a5865aedae5c9cdcff69964cefa67825eb6862bb75be683764baf846"
+      },
+      {
+        "path": "scripts/rfcs/irl-changelog-eval.mjs",
+        "sha256": "7e0891cf8ae646888961ffe02e52ab9ca19c991e580b8bf3fc5ee010bd966241"
+      },
+      {
+        "path": "scripts/rfcs/irl-changelog-eval.test.mjs",
+        "sha256": "43ff6344303fd8297a1e441efe3fff50ffe0a3d3ccad6e9d3077af7a7f4cebc6"
+      }
+    ],
+    "implementation_authorized": false,
+    "migration_authorized": false,
+    "publication_authorized": false,
+    "activates_work": false,
+    "human_editorial_review_established": false
+  },
+  "hill_climb": [
+    {
+      "phase": "semantic model stub",
+      "tests": 31,
+      "passed": 0,
+      "failed": 31,
+      "failure_kind": "assertion failures"
+    },
+    {
+      "phase": "initial implementation",
+      "tests": 31,
+      "passed": 30,
+      "failed": 1,
+      "observation": "An unknown relation was masked by the missing-context check."
+    },
+    {
+      "phase": "specific relation rejection",
+      "tests": 31,
+      "passed": 31,
+      "failed": 0
+    },
+    {
+      "phase": "compound revision adversaries",
+      "tests": 33,
+      "passed": 31,
+      "failed": 2,
+      "observation": "Later edges overwrote contested and corrected warnings."
+    },
+    {
+      "phase": "preserve stronger revision warnings",
+      "tests": 33,
+      "passed": 33,
+      "failed": 0
+    },
+    {
+      "phase": "receipt and CLI stubs",
+      "tests": 36,
+      "passed": 33,
+      "failed": 3
+    },
+    {
+      "phase": "candidate-bound receipt and failing CLI exit",
+      "tests": 36,
+      "passed": 36,
+      "failed": 0
+    }
+  ],
+  "verified_checks": [
+    {
+      "command": "npm run test:irl-rfc",
+      "tests": 36,
+      "passed": 36,
+      "exit_code": 0
+    },
+    {
+      "command": "node --test scripts/rfcs/*.test.mjs",
+      "tests": 141,
+      "passed": 141,
+      "exit_code": 0
+    },
+    {
+      "command": "npm run test:irl-changelog",
+      "tests": 15,
+      "passed": 15,
+      "exit_code": 0
+    },
+    {
+      "command": "npm run test:audio-runtime",
+      "tests": 46,
+      "passed": 46,
+      "exit_code": 0
+    },
+    {
+      "command": "npm run test:mail-runtime",
+      "tests": 32,
+      "passed": 32,
+      "exit_code": 0
+    },
+    {
+      "command": "npm run check:rfcs",
+      "numbered_rfcs": 16,
+      "exit_code": 0
+    },
+    {
+      "command": "npm run public-safety",
+      "exit_code": 0,
+      "warning_count": 11
+    },
+    {
+      "command": "relative RFC link existence check",
+      "relative_links": 13,
+      "missing": 0,
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 1,
+      "gate": "evals:professor-lenses",
+      "reason": "The required final holdouts do not match the current public candidate; full release readiness is not established."
+    }
+  ],
+  "editorial_review": {
+    "type": "AI-assisted source-grounded design critique",
+    "reviewed_artifacts": [
+      "existing additive journal architecture note",
+      "shared append utility and regressions",
+      "RFC template and related governance RFCs",
+      "new RFC and synthetic model"
+    ],
+    "findings": "Temporal and revision conflation, unstable cross-journal identity, untyped graph targets, evidence-currentness limits, and warning precedence.",
+    "human_validation": false,
+    "fictionalized_lenses_are_not_reviewers": true,
+    "calibrated_judge": false
+  },
+  "limits": [
+    "Finite synthetic cases are not a real-world accuracy estimate.",
+    "This receipt establishes candidate and deterministic review-model state, not human approval.",
+    "No live journal, source custody, private migration, contact, publication, merge or deployment is authorized.",
+    "Receipts are excluded from their own fingerprint; every evaluator and integration input is included."
+  ]
+}

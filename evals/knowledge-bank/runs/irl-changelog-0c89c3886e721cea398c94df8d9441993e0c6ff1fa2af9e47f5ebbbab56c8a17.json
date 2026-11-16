@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-06T13:37:30.693Z",
+  "runtime": "v26.5.0",
+  "scope": "generic additive journal and synthetic regressions only",
+  "candidate_fingerprint": "0c89c3886e721cea398c94df8d9441993e0c6ff1fa2af9e47f5ebbbab56c8a17",
+  "inputs": [
+    {
+      "path": ".github/workflows/irl-changelog.yml",
+      "sha256": "fa7dd1ff3bf4e106f6bd999238e4523e1a61fade5b70f9a2494683f49777d1a6"
+    },
+    {
+      "path": "docs/architecture/additive-irl-changelog.md",
+      "sha256": "431ffc12f842a3674e8d9cbf242507d3565f77e733f4110a5ffcf11d306b8803"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f55a7f2a5c103238d534e970ab7b54eff7f036c16571af25d2d4620d4641427c"
+    },
+    {
+      "path": "scripts/irl-changelog/journal.mjs",
+      "sha256": "3095aa2c39104889f56c62c6f9b17a9ba157a15ce85ac87eb1c5e5a9ca28667e"
+    },
+    {
+      "path": "scripts/irl-changelog/journal.test.mjs",
+      "sha256": "24e584d8a5865aedae5c9cdcff69964cefa67825eb6862bb75be683764baf846"
+    }
+  ],
+  "baseline": {
+    "kind": "unguarded append assertion-first test run",
+    "runtime": "Node 24.2.0",
+    "tests": 15,
+    "passed": 3,
+    "failed": 12
+  },
+  "final_core": {
+    "tests": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "command": "npm run precheck",
+      "exit_code": 0,
+      "output_sha256": "603066d05dfbb42ff09b0a080ee81c68fb8e3afa28ff2bd32fe29a37c417d275",
+      "test_counts": [
+        46,
+        32,
+        15
+      ]
+    },
+    {
+      "command": "npm run check:rfcs",
+      "exit_code": 0,
+      "output_sha256": "d98f969c22e0d60fe78e85a0c3870f1d08bca0a2ba6585d302a552b08f1a16e3"
+    },
+    {
+      "command": "npm run evals:weekly-practice-review",
+      "exit_code": 0,
+      "output_sha256": "cd2e34097425fba79d8cb692c9cbfab6abf1c273ad3fb8485e8104a58cd1a11e"
+    },
+    {
+      "command": "npm run test:weekly-practice-review",
+      "exit_code": 0,
+      "output_sha256": "27841ed2357b730c1dfc503660c97f98897dbf6211105a0d3076773c4107725d",
+      "test_counts": [
+        18
+      ]
+    },
+    {
+      "command": "npm run public-safety",
+      "exit_code": 0,
+      "output_sha256": "4b552dd9a22c7af6a5789e27856317f50652b08996d619edae68a2e9f3a681ca"
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 1,
+      "output_sha256": "b5d539da8fa33db52e2f8206448f56d6d97248713185f8f440ad0cb91ca1cfcb",
+      "test_counts": [
+        46,
+        32,
+        15,
+        11,
+        7
+      ]
+    }
+  ],
+  "whole_repo_gate": "held: missing exact-candidate final professor-lens scorecards; focused checks do not authorize release",
+  "adoption_authorized": false,
+  "publication_authorized": false,
+  "merge_authorized": false,
+  "metric_boundary": "Behavioral software regressions, not a calibrated judgment of people or life outcomes."
+}

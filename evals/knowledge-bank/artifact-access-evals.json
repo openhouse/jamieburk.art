@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "feature": "artifact-specific-existing-source-reading",
+  "parent_rfc": 13,
+  "evaluator_kind": "deterministic-behavioral-tests",
+  "command": "npm run test:audio-runtime",
+  "test_files": ["scripts/audio-workflow/artifact-access.test.mjs"],
+  "failure_modes": [
+    "feature-restriction-overextended-to-event",
+    "actual-event-restriction-ignored",
+    "ambiguous-restriction-scope",
+    "unbound-source-authorization",
+    "new-provider-transfer-inferred",
+    "private-reading-treated-as-publication",
+    "malformed-inventory-crash",
+    "protected-locator-in-error-output"
+  ],
+  "evidence_policy": "Synthetic fixtures only; no private source identity, content or topology. Tests assess structural behavior, not legal permission or interpretive quality.",
+  "hard_gates_cannot_be_averaged_away": true,
+  "human_gates_satisfied": false
+}

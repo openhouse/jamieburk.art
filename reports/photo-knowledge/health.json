@@ -31,8 +31,8 @@
   "failedHardGates": [],
   "failedCriteria": [],
   "candidate": {
-    "fingerprint": "693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019",
-    "fileCount": 261,
+    "fingerprint": "abe2882585eecb337c1c1dc7e753ca82ec0835937b41b3a555361deefac88fbf",
+    "fileCount": 262,
     "files": [
       "apps/www/public/artifacts/wowlist/public-threshold.webp",
       "apps/www/public/images/artifacts/kc-town-hall-tired-of-tires-flyer.webp",
@@ -293,6 +293,7 @@
       "scripts/check-photo-knowledge-evals.mjs",
       "scripts/photo-knowledge/cli.mjs",
       "scripts/photo-knowledge/lib.mjs",
+      "scripts/photo-knowledge/temporal-retrieval.mjs",
       "scripts/photo-knowledge/verify-private-binding.mjs",
       "scripts/tests/photo-knowledge.test.mjs"
     ]

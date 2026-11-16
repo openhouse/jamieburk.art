@@ -1,8 +1,11 @@
+import { recentDeliveryOctober2026 } from "./recent-delivery-2026-10.ts";
+
 const reviewedAt = "2026-07-14";
 const reviewedBy = ["Jamie Burkart", "Codex public-source review"];
 
 export const agencyGraph = {
   entities: [
+    ...recentDeliveryOctober2026.entities,
     { id: "ENT-JAMIE-BURKART", name: "Jamie Burkart", kind: "person", aliases: ["James Burkart"], publicSafe: true },
     { id: "ENT-JULIA-FREDENBERG", name: "Julia Fredenberg", kind: "person", aliases: [], publicSafe: true },
     { id: "ENT-NYC-ARTIST-COALITION", name: "NYC Artist Coalition", kind: "collective", aliases: ["NYC Arts Coalition"], publicSafe: true },
@@ -32,6 +35,7 @@ export const agencyGraph = {
     { id: "ENT-CURE-INITIATIVE", name: "Coordinating a United Resolution with Establishments", kind: "program", aliases: ["CURE"], publicSafe: true }
   ],
   agencyRelations: [
+    ...recentDeliveryOctober2026.agencyRelations,
     {
       id: "REL-WATERWAYS-RAFT-ORIGIN",
       project: "waterways-raft",

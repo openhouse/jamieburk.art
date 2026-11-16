@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "feature": "situated-transcript-voice-readings",
+  "parent_rfc": 13,
+  "evaluator_kind": "deterministic-behavioral-tests",
+  "command": "npm run test:audio-runtime",
+  "test_files": [
+    "scripts/audio-workflow/audio-workflow.test.mjs",
+    "scripts/audio-workflow/situated-voices.test.mjs"
+  ],
+  "evidence_policy": "Synthetic boundary fixtures, not human-label calibration or a literary-quality score.",
+  "failure_modes": [
+    "missing-speaker-entry",
+    "mentioned-person-treated-as-speaker",
+    "wrong-speaker-citation",
+    "fabricated-quotation",
+    "collapsed-fragment-time",
+    "stale-source-reading",
+    "unrelated-repair-corpus",
+    "stale-downstream-receipt",
+    "private-to-public-projection",
+    "unsafe-output-path",
+    "authored-page-overwrite",
+    "false-completion-on-hold"
+  ],
+  "audit": {
+    "error_analysis": "Observed artifact-count-only completion gap; red-green behavioral regressions and private adapter traces.",
+    "evaluator_design": "Binary behavior assertions; no similarity score or compensating average.",
+    "judge_validation": "No LLM judge is used; interpretation quality and speaker verification remain unvalidated human review.",
+    "human_review": "Rendered private Markdown links to source turns; no automated impersonation or approval.",
+    "labeled_data": "Synthetic tests plus bounded private draft readings. No human-labeled held-out corpus; no TPR/TNR claim.",
+    "pipeline_hygiene": "Recipe and corpus fingerprints; input drift invalidates completion; independent CI runtime tests."
+  },
+  "hard_gates_cannot_be_averaged_away": true,
+  "public_corpus_access": false,
+  "human_gates_satisfied": false
+}

@@ -284,6 +284,9 @@ export const agencyRelationSchema = z.object({
   project: stableIdSchema,
   actorIds: z.array(stableIdSchema).min(1),
   action: z.enum([
+    "created",
+    "listed-as-post-collaborator",
+    "delivered",
     "originated",
     "spearheaded",
     "initiated",

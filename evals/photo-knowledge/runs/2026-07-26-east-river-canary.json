@@ -1,15 +1,15 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "runId": "2026-07-26-east-river-canary",
-  "recordedAt": "2026-07-26",
+  "recordedAt": "2026-10-18",
   "baseBranch": "features/layout-C",
   "baseCommit": "fea303e54c6b5fae36caee872a2a7450501f9e11",
-  "implementationBranch": "feature/photo-knowledge-C",
-  "sourceCommit": "9b068c2df40f71cc3db3f147a81756743a593bb6",
-  "candidateFingerprint": "693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019",
-  "candidateFileCount": 261,
+  "implementationBranch": "work/2026-09-03-A",
+  "sourceCommit": "316bb9bc43dc37bc1c3504ce73ef9e96350eab16",
+  "candidateFingerprint": "abe2882585eecb337c1c1dc7e753ca82ec0835937b41b3a555361deefac88fbf",
+  "candidateFileCount": 262,
   "derivativeSha256": "748b6f12e2845dd7dc1ca3fa3f35d61c26a468150b7e3d6d386ae3622d996621",
-  "privateBindingVerification": "verified",
+  "privateBindingVerification": "verified-carried-forward",
   "publicGit": "approved",
   "staging": "approved",
   "production": "open",
@@ -20,5 +20,13 @@
     "Jamie production approval",
     "indexing approval",
     "new crop, destination, context, or permission review"
-  ]
+  ],
+  "carryForwardPolicyVersion": 1,
+  "bindingRelevantFingerprint": "588bb64836229931727d7236a633f3eecfe8bd95446479260ff86d37d1946741",
+  "bindingRelevantItemCount": 23,
+  "carriedForwardFromCandidateFingerprint": "693c52971e05684c8e7430b312391e208b5607bff86f233e5ea0abbf43037019",
+  "carriedForwardFromCandidateFileCount": 261,
+  "carriedForwardFromSourceCommit": "9b068c2df40f71cc3db3f147a81756743a593bb6",
+  "carriedForwardFromReceiptSha256": "91cf3c304a8512ab1098b0bf4c818e00ddc010ffb6855b2f5d80c2a2fa9202dc",
+  "carriedForwardFromPrivateBindingVerification": "verified"
 }

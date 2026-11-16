@@ -2,8 +2,10 @@
 
 **Suite:** `.agents/evals/feature-evals-composite.json`
 **Integration register:** `docs/integration/feature-evals-composite.json`
-**Writable branch:** `feature/knowledge-h`
-**Pull-request base:** `develop`
+**Frozen integration origin:** `feature/knowledge-h`, originally based on `develop`
+**Current release branch:** `work/2026-09-03-A`
+**Current pull-request base:** `work/2026-09-01-A`
+**Protocol:** suite version 2; review receipt version 4; RFC 0018 accepted October 18, 2026
 
 ## Purpose
 
@@ -22,7 +24,7 @@ The nine blocking criteria cover:
 6. selective public composition and practice continuity;
 7. honest blind-spot governance;
 8. frozen anti-gaming and grader separation;
-9. two independent exact-candidate holdouts.
+9. deterministic verification of two independent exact-candidate judgments.
 
 Every criterion scores either `4` or `0`. There is no partial-credit path around
 a blocker. The complete suite passes at `36/36` only.
@@ -33,11 +35,24 @@ a blocker. The complete suite passes at `36/36` only.
 2. Evaluate before editing.
 3. Select the highest-priority failed blocker.
 4. Make the smallest coherent patch.
-5. Run deterministic tests before editorial judges.
-6. Run mutation tests and a blind holdout.
+5. Run every non-pair technical check and mutation test before editorial judges.
+   Report the missing-pair aggregate as HOLD. `preReviewCriteria` describes only
+   the eight technical results; it is not independent acceptance or release.
+6. Commission two fresh blind reviewers. Each judges COMP-001 through COMP-008
+   only, under `substantive-COMP-001-through-COMP-008`. Each receipt contains
+   exactly those eight criterion IDs once, scores at 4 or 0, evidence, findings,
+   unavailable evidence and a recommendation. Neither reviewer scores COMP-009.
 7. Retain only an improvement without a privacy, credit, accessibility, or
    comprehension regression.
-8. Require two complete passes against the same candidate fingerprint.
+8. Run the complete unchanged `npm run check` after both judgments exist. Every
+   substantive criterion requires its technical evidence and both independent
+   acceptances. COMP-009 verifies the complete pair; a missing, duplicate, stale,
+   altered, extra-scope or failing judgment blocks completion.
+9. Require two complete verification executions against the same candidate
+   fingerprint, rubric, review payload digests and technical evidence. Recompute
+   fingerprints before and after each. Keep aggregate logs outside the source tree.
+10. Bind the verified source tree to the commit tested by CI. Verify the actual
+    running container separately after an authorized staging release.
 
 The candidate fingerprint covers the raw bytes of every tracked or unignored
 file in the Git source tree. Only the two declared holdout result records are excluded. This
@@ -53,9 +68,23 @@ The composite evaluator also fails canonical-integrity and frozen-governance
 criteria when Knowledge Wiki generated views or employment-context reports are
 stale, so a passing component result cannot conceal an out-of-date derived
 surface.
-Distinct holdouts must bind full prompt text, read-only native process session,
-model, timing, result transport, and all judgment provenance. These are auditable
-process receipts, not a claim of cryptographic platform authentication.
+Distinct holdouts must bind full prompt text, read-only review process, model,
+timing, result transport, and all judgment provenance in private commissioning
+evidence. Before release, retain a private attestation that two distinct processes
+were separately commissioned, bound to the candidate and both payload digests.
+Do not publish process IDs or local locators. Public labels and digests are not
+proof of process identity. Missing commissioning evidence holds release.
+
+The immutable judgment digest includes the substantive review scope. The final
+evaluator requires distinct nonblank judge IDs and reviewer labels, the exact
+eight-score roster, complete current bindings and no unavailable required evidence.
+The coordinator may package receipts but cannot revise a reviewer's judgment.
+
+## Preserved history
+
+The pre-RFC0018 rubric, protocol and held judgments are preserved unchanged in
+`docs/evals/history/2026-10-18-pre-rfc0018/`. The owner-approved protocol starts a
+new run. Historical holds remain holds and are not evidence of new acceptance.
 
 ## Human boundary
 

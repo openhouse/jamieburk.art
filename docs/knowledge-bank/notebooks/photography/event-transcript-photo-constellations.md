@@ -102,6 +102,25 @@ For one governed event at a time:
 8. Record a public-safe encounter note describing aggregate discoveries,
    limitations, and new research questions. Keep the image-level join private.
 
+## Timestamp-led retrieval
+
+Use capture time, not import time, file creation time, or the date a photograph
+was sent in a message. Preserve the original timestamp and its provenance in
+the private record. A search window and a capture time each need an explicit
+UTC offset before comparison; an unknown offset remains a hold. Compare
+instants across midnight and daylight-saving changes rather than matching
+calendar-date strings. A supplied offset does not itself verify the camera's
+time-zone setting or clock accuracy.
+
+Declare any known clock uncertainty. Overlap within that uncertainty produces
+an uncertain candidate, not an exact match. The pure
+`evaluateTemporalPhotoCandidate` helper in the photo-knowledge runtime returns
+only `candidate`, `uncertain-candidate`, `outside-window`, or `hold`. It does not
+read or change Apple Photos. It cannot establish identity, event membership,
+a caption, or publication permission. An outside-window result describes one
+comparison, not the absence of relevant photographs from the library. The
+synthetic temporal regressions run as part of `npm run photos:test`.
+
 ## Speaker-to-image annotation
 
 A transcript turn may help locate frames made while a person was speaking.

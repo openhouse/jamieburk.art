@@ -17,6 +17,13 @@ export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+export function pageRegistryBinding(registry, pageId) {
+  return {
+    publicBoundary: registry.publicBoundary,
+    page: registry.pages?.find((entry) => entry.pageId === pageId) ?? null
+  };
+}
+
 export function loadColophonCandidate(root = repoRoot) {
   const config = readJson(root, configPath);
   const packet = config.publicPacket;
@@ -191,13 +198,15 @@ export function evaluateColophonPageOwners(
       check(
         "exact-candidate-bindings",
         run.pageSourceSha256 === sha256(pageSource) &&
-          run.registrySha256 === sha256(JSON.stringify(registry)) &&
+          run.registryBinding === "page-and-public-boundary-v1" &&
+          run.pageRegistrySha256 ===
+            sha256(JSON.stringify(pageRegistryBinding(registry, config.pageId))) &&
           run.promptVersion === config.modelGate.promptVersion &&
           run.defaultPublicPageTextSha256 === sha256(defaultRenderedText) &&
           run.publicPageTextSha256 === sha256(renderedText) &&
           run.desktopScreenshotSha256 === sha256(desktopScreenshot) &&
           run.mobileScreenshotSha256 === sha256(mobileScreenshot),
-        "The editorial run is stale or is not bound to this page, registry, rendered text, and responsive screenshots."
+        "The editorial run is stale or is not bound to this page assignment, public authority boundary, rendered text, and responsive screenshots."
       );
       check(
         "public-fictionalized-run",

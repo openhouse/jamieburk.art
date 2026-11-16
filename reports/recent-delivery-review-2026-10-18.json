@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-18",
+  "recordType": "bounded-delivery-projection-review",
+  "baselineCommit": "492658187e5016b13c5ef4e72866ae9f12d7da5e",
+  "bindings": {
+    "apps/www/src/data/knowledge-bank/recent-delivery-2026-10.ts": "dadfeeaceba857a3d6139290f9e2a249b69642968299078b685faffc7237cb9c",
+    "apps/www/src/data/knowledge-bank/records.ts": "34e4eaf189825da450618a6a02e08cbb1af911a12cf8c9eb4d5da3028272b45f",
+    "apps/www/src/data/knowledge-bank/agency-graph.ts": "f14389ecb2c0dabfa7c4a86cc8b0a6e73731a2b4aaa6f07c2156be936b691a85",
+    "apps/www/src/data/knowledge-bank/schema.ts": "befca2386a4238e937a9039fdfb92f76446d975a181e822fae0911ea818472a5",
+    "apps/www/src/data/knowledge-bank/public-registry.json": "cd8614905f8571298510f325ec1cb9285c6afc5bfb8bb836c11b4fc8e1f53165",
+    "apps/www/src/content/work/fair-rent-nyc.mdx": "5db9d849fc92246dcab6d9bb79ac9559e9627f913dad9a285cc18da050e3d7ea",
+    "apps/www/src/app/work/technical-operations/page.tsx": "c7ac502d5eef945b1bcd639abc8507a32d28e01ca20ebcbda9080dd81a72670d",
+    "docs/knowledge-bank/research-runs/recent-delivery-2026-10-18.md": "91944bd0d9f12b9c2b004ea5ce28da8dc6e094c8ab81bb510f8070eba45c57be",
+    "scripts/lib/recent-delivery.mjs": "3c09a77bb6ded7c922beeab26f13d7ec21ae7a21e7b557ddd4598878d9733b7e",
+    "scripts/tests/recent-delivery.test.mjs": "9e756169eaccc326bfd1e7be2670670a41234701273d292156c3480b3f5c9c0d",
+    "scripts/check-recent-delivery.mjs": "12b4daca54a01f426d7234f036d9b76e9433e80875b364b880669991f27538c4",
+    "package.json": "b3bb22245ead3fe7d6927fdbcc16150514d4b0c646b2ea4854842cf88ee2d308"
+  },
+  "scope": {
+    "claims": 3,
+    "publicSurfaces": [
+      "/work/fair-rent-nyc",
+      "/work/technical-operations"
+    ],
+    "newMedia": false
+  },
+  "iterations": [
+    {
+      "finding": "Unsupported delivery-state promotions were not checked.",
+      "change": "Added source-bound state, date, credit, scope and surface checks with unsafe mutations.",
+      "result": "Focused deterministic checks pass; they do not authenticate source facts or consent."
+    },
+    {
+      "finding": "A neighboring negation could mask affirmative acceptance or installation.",
+      "change": "Split clauses and retested affirmative and negative counterexamples.",
+      "result": "Adversarial cases rejected without weakening valid boundary wording."
+    },
+    {
+      "finding": "Two uncited Claim components were absent from the public registry.",
+      "change": "Added failing direct-resolution tests, then registered the two projections through existing page plans.",
+      "result": "All three summaries resolve; protected evidence remains excluded."
+    },
+    {
+      "finding": "Agency labels implied presentation, ongoing maintenance or ownership beyond the source.",
+      "change": "Used created and delivered, removed ownership and added the existing contextual source for event date and venue.",
+      "result": "Bounded independent editorial review passed."
+    },
+    {
+      "finding": "An observed delivery state was stated as an exact delivery date.",
+      "change": "Added a failing date regression, changed the claim to By October 7 and eventDate to null, and corrected the research note.",
+      "result": "43 focused tests pass on final wording."
+    }
+  ],
+  "localVerification": {
+    "focused": {
+      "command": "npm run test:recent-delivery",
+      "passed": 43,
+      "failed": 0
+    },
+    "contracts": {
+      "command": "npm run evals:recent-delivery",
+      "pass": true,
+      "claims": 3
+    },
+    "citations": {
+      "command": "npm run check:citations",
+      "pass": true
+    },
+    "typecheck": {
+      "command": "npm run typecheck",
+      "pass": true
+    },
+    "lint": {
+      "command": "npm run lint",
+      "pass": true
+    },
+    "publicSafety": {
+      "command": "npm run public-safety",
+      "pass": true,
+      "existingCarefulClaimWarnings": 11
+    },
+    "build": {
+      "command": "npm run build",
+      "pass": true,
+      "renderedHtmlPages": 16,
+      "livePageRequests": 17
+    },
+    "browser": {
+      "engine": "headless Chrome",
+      "viewportWidths": [
+        390,
+        1280
+      ],
+      "changedRoutes": 2,
+      "viewsChecked": 4,
+      "horizontalOverflow": false,
+      "pageErrors": 0,
+      "visualReview": "The changed sections were visually inspected at both widths. This is not a comprehensive accessibility audit."
+    }
+  },
+  "editorialReview": {
+    "kind": "independent-model-editorial-review",
+    "realPersonParticipation": false,
+    "humanConsent": false,
+    "criteria": {
+      "role-action-result": "PASS",
+      "outcome-credit-date-limits": "PASS",
+      "privacy-citation": "PASS",
+      "reader-burden": "PASS"
+    },
+    "candidateBindings": "First eight content/record files above; source note included. Private originals and live external events were not independently reverified by this reviewer."
+  },
+  "broadGates": {
+    "status": "NOT_CONVERGED",
+    "wholePortfolio": "npm run check stops at expired professor-lens candidate bindings: 0/6 current final scorecards.",
+    "knowledgeBank": "Baseline evaluated at 5/5; shared-page, citation-order and agency-population changes invalidate prior archive, KC Town Hall and NYCAC Facebook review locks. Current canonical validation has zero errors, but 12 criteria remain below minimum. Old judgments were not relabeled current.",
+    "wiki": "npm run wiki:hillclimb reaches wiki:test: 346/347 passed; responsive-accessibility candidate evidence is stale. Remaining chained wiki:eval was not reached.",
+    "nextRequiredReview": "Fresh exact-candidate whole-page and agency-roster review before those review locks may be deliberately rebound."
+  },
+  "hostedCI": "Not observed for the new commit when this pre-push receipt was written.",
+  "humanFinalPageAcceptance": "pending",
+  "mergeAuthorized": false,
+  "deploymentPerformed": false,
+  "limits": [
+    "Historical source returns do not claim fresh access to original accounts.",
+    "Text scope does not authorize recordings, third-party identities, messages or media reuse.",
+    "Model review and deterministic checks are not human endorsement or release approval."
+  ]
+}

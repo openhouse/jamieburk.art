@@ -24,6 +24,8 @@ relations:
 
 Reviewed August 29, 2026. Related projects: [NYC Artist Coalition](../projects/nyc-artist-coalition-2017.md) and [Fair Rent NYC](../projects/fair-rent-nyc.md).
 
+Later evidence is recorded separately in the [October 18 published-animation source return](dcla-animation-instagram-2026-10.md). The planning states below describe the August review, not the current publication state.
+
 ## What this review can establish
 
 The event is the **August 26, 2026 Brooklyn artist listening session at 651 ARTS**, as identified in the reviewed upstream event summary and Jamie's participant-supplied context. The later follow-up is consistent with that date. This is a new event, not the earlier DCLA work in this portfolio.

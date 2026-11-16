@@ -34,7 +34,8 @@ export type ArtifactType =
 
 export type KnownOpenProtected = {
   known: string;
-  open: string;
+  open?: string;
+  editorialOpen?: string;
   protected: string;
 };
 

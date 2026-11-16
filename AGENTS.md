@@ -86,6 +86,13 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 
 The website should read as a composed portfolio, not a claims database.
 
+Keep editorial instructions and publication backlog out of visitor-facing copy.
+Fields such as `publicSafety.note` and `knownOpenProtected.editorialOpen` guide
+authors; do not render them in components. Preserve reader-useful limitations,
+collective credit, reconstruction labels and archived-service warnings. Run the
+public-language source, rendered and live-route gates after copy changes; add
+negative and legitimate-neighbor fixtures for newly observed leakage patterns.
+
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
 ## Chad Lens
@@ -95,6 +102,16 @@ work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
 ## Recursive Evals
+
+Every newly discovered or materially changed opportunity inherits the OTI
+evidence-first packet process in `resumes/README.md`; do not wait for a second
+request or maintain a separate per-role allowlist. Run `npm run wiki:graph` at
+intake; it admits every typed opportunity to `reports/opportunity-packets.json`.
+Complete the ten preparation stages in `scripts/opportunity-packets.mjs` using
+authorized source access. Events and unclassified leads first receive a routing
+decision, not invented job applications. Native Docs/PDF, voice, reader review,
+and human gates cannot be replaced by a successful scaffolding check. Never
+publish private opportunity details or submit applications automatically.
 
 Use `.agents/evals/portfolio-production-readiness.json` for recursive launch
 improvement. Hard gates are invariants and cannot be averaged away by a high
@@ -116,7 +133,45 @@ model, package, repository, or cross-system proposals. Follow
 `exploring` RFC is preserved for review; it is not implementation authorization.
 Agents may draft, critique, prototype, and test an RFC but may not advance a
 decision that the RFC reserves for Jamie or another named human decision owner.
+
+## Paired Private Workspace
+
+For every permitted transcript ingest or repair, the audio workflow must refresh
+one cited situated writer's voice entry per attributed speaker. Use the
+source-bound `wiki` stage and its explicit private-root/voice-manifest inputs.
+Complete generated reading tasks from permitted source context; do not mark
+pending entries as close readings. Preserve source hashes, fragment/time/line
+citations, attribution uncertainty, and interpretive limits. Never treat a
+person mentioned in a transcript as its speaker, impersonate a participant,
+or publish a private person page. Run `npm run test:audio-runtime` for changes
+to this contract.
+
+When `.workspace-pair.local.json` is present, this checkout participates in the
+paired public/private development protocol defined by RFC 0011.
+
+- Use `npm run pair:switch -- <branch>` instead of a raw branch switch.
+- Run `npm run pair:status` before committing, pushing, or updating a pull
+  request.
+- Keep head branch, base branch, pull-request title, and draft posture aligned.
+- Keep commits, checks, descriptions, approvals, merges, and rollback
+  independent.
+- Never commit the counterpart repository name, URL, pull request, local path,
+  private IDs, source locators, or protected topology here.
+- Never make a public build, test, deployment, or rollback depend on private
+  access.
+- A paired branch or review is coordination evidence, not publication, merge,
+  deployment, consent, rights, or relationship authority.
 ## Scope Rules
+
+Correspondence runtime changes use synthetic fixtures only in this repository.
+Never add private mailbox inventories, coverage counts, source identifiers,
+subjects, people mappings, or excerpts to public code, eval receipts, or PRs.
+The private adapter owns source custody and per-message readings. Run
+`npm run test:mail-runtime` after changing the shared protocol. A recipient is
+not an author; a quoted reply is not a separately recovered outgoing message.
+New or revised sources require cited analysis before their entries are current.
+The runtime projects approved-for-private-analysis inputs; it does not grant
+source access, perform autonomous mailbox collection, or approve publication.
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
 private document browser, full photo archive, heavy animation, or major framework

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-13-kcth-shared-surface-review",
+  "reviewedAt": "2026-10-13T17:10:07Z",
+  "reviewer": "Codex independent source-bounded review of the portfolio copy changes",
+  "reviewMode": "Source comparison, canonical-record inspection, existing built HTML inspection, and read-only evaluator diagnostics; not a blind holdout or human approval.",
+  "baselineCommit": "da44f49ed68cf2eeff3b9d3060dafb3e04d7a462",
+  "baselineSelection": "HEAD at review time, compared with the uncommitted candidate files.",
+  "reviewedLock": "KCTH_FIELD_PRACTICE_REVIEW_LOCKS.sharedPublicSurfacesSha256",
+  "hashInput": "UTF-8 contents of apps/www/src/data/work.ts, one newline, then apps/www/src/app/work/technical-operations/page.tsx, in that order.",
+  "previousSha256": "02c67969a3b67c3d2b024c5ebcf9b8b5233b547d17b9124c8c5073fc9d61ba00",
+  "reviewedSha256": "49d5bdc1e2895aecdee9c2bfb5f54ec8275b69a734b0f4b814c8d702e12ff18f",
+  "fileComparisons": [
+    {
+      "path": "apps/www/src/data/work.ts",
+      "baselineSha256": "2e1e8e061b9539d57edfe675747a2a7c4556e1a2ea79b451dca60a844c9f8a09",
+      "reviewedSha256": "3df7f8bdf730b90501a54c602648ffff4880e691747834f925170e2e96d7e36f",
+      "changes": "The schema makes Open optional and adds editorialOpen. Five publishing-backlog strings for other projects move from open to editorialOpen without changing their text.",
+      "kcTownHallBlockByteIdentical": true
+    },
+    {
+      "path": "apps/www/src/app/work/technical-operations/page.tsx",
+      "baselineSha256": "c6a71236f08f715cb519d4cf9a104be7425989f3d5ccebf04819ea05debb83b8",
+      "reviewedSha256": "c6a71236f08f715cb519d4cf9a104be7425989f3d5ccebf04819ea05debb83b8",
+      "byteIdentical": true
+    }
+  ],
+  "relatedRenderingReview": [
+    "CaseStudyBlocks omits absent Open entries and stops rendering publicSafety.note editorial instructions; it retains careNote, Known, Protected, Source basis, links, and credits. KC Town Hall has a nonempty Open entry and careNote, both retained.",
+    "SiteFooter removes the internal publishing label. The resume removes its approval-process note and shortens its introduction. Neither change adds KC Town Hall claims.",
+    "The KC Town Hall case-study MDX, resident-service sequence, held field-practice module, canonical records, proof projection, and public archival review report are unchanged."
+  ],
+  "invariants": {
+    "heldClaims": "All four field-practice claims remain use-with-care, with hold projections and empty public surfaces: Phase One field delivery, neighborhood survey practice, individual tire-service role, and Cleveland Avenue contribution.",
+    "sourceBasis": "The proposal corroborates founder/project-manager attribution, project scope, and contemporaneous progress. Participant-memory details remain research leads. No source, source relationship, evidence support, or canonical wording was strengthened.",
+    "completion": "The record still does not independently establish a general-contractor title or actual Phase One completion in 2019; no such claim was added to the public site.",
+    "collectiveCredit": "Jamie and Julia's project roles, professional teams, neighborhood-association program identity, and collaborator credit remain distinct from individual component authorship and institutional authority.",
+    "serviceUnits": "Social workflow records remain distinct from completed pickups, households served, and audited outcomes. The rendered photograph sequence describes one completed collection and expressly excludes an audited program total.",
+    "funding": "The rendered case study retains that securing the award does not assign Board or Council authority, erase shared project credit, or imply payment to Jamie. The governed funding lifecycle is unchanged.",
+    "privacy": "Protected source custody, private-source locators, resident records, financial and property details, credentials, and subscriber data remain excluded from public output. No new asset or raw record was introduced.",
+    "publicUncertainty": "The existing KC Town Hall Open entry continues to withhold the receiving organization's identity, legal form, timing, and transfer scope, and to disclose the unrecovered recalled testimony transcript."
+  },
+  "diagnosticsBeforeLockUpdate": {
+    "command": "DEBUG_FIELD_PRACTICE=1 node scripts/check-knowledge-evals.mjs",
+    "runtime": "Node 26.5.0",
+    "onlyDifferingLock": "sharedPublicSurfacesSha256",
+    "otherSixLocksMatch": true,
+    "counts": true,
+    "intakes": true,
+    "observations": true,
+    "sources": true,
+    "claims": true,
+    "overclaimFree": true,
+    "epistemicallyBounded": true,
+    "outcomeInflationFree": true,
+    "heldFromRenderedProof": true,
+    "evidenceClosed": true,
+    "inquiries": true,
+    "coverage": true,
+    "report": true,
+    "safety": true,
+    "counterfactual": "Supplying only the HEAD version of the shared hash input through the evaluator's in-memory override restored accepted=true and weightedScore=5. The actual candidate scored 1.6 solely through the stale-lock dependency. No files were changed for this diagnostic."
+  },
+  "verificationAfterLockUpdate": {
+    "checkedAt": "2026-10-13T17:13:50Z",
+    "knowledgeCheck": "Passed: 5/5 across 32 criteria. The tool's 2/2 holdout count refers to the existing recorded holdouts, not new reviews from this pass.",
+    "professionalRecordIntegration": "Passed: 12 records, 7 canonical references, 4 governed gaps.",
+    "knowledgeTests": "Passed: 212/212 tests, including protected-source publication, premature projection, completion, individual-role, service-unit, alternate-surface and approval-refresh mutation controls.",
+    "knowledgeTestCommand": "node --test scripts/tests/knowledge-evals.test.mjs",
+    "runtime": "Node 26.5.0",
+    "diffCheck": "Passed. The evaluator change is limited to the one reviewed hash and its receipt comment."
+  },
+  "decision": "The reviewed copy changes preserve the field-practice invariants. Updated only the shared-public-surfaces lock to the reviewed hash and retained the entire existing gate.",
+  "processBasis": "evals/knowledge-bank/runs/2026-08-21-knowledge-eval-review-lock-rebind.md",
+  "limits": [
+    "This is a fresh AI review of the stated files and boundaries, not new archival corroboration, eyewitness testimony, a human collaborator statement, or an outcome audit.",
+    "No historical holdout result is relabeled as a fresh review. Composite holdouts, complete deterministic checks, and any required human publication or release decisions remain separate.",
+    "This receipt authorizes no claim promotion, private-source publication, consent inference, merge, or deployment. Further changes to the hash input require another exact-content review."
+  ]
+}

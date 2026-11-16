@@ -13,6 +13,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import matter from "gray-matter";
 import ts from "typescript";
 
+export { evaluateTemporalPhotoCandidate } from "./temporal-retrieval.mjs";
+
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "../.."

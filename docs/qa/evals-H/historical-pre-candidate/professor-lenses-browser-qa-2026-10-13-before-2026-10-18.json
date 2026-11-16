@@ -1,0 +1,98 @@
+{
+  "reportVersion": 8,
+  "checkedAt": "2026-10-13T17:25:53.770Z",
+  "baseUrl": "http://127.0.0.1:3224",
+  "publicSurfaceFingerprint": "5c7bef4604398e05e5d809a1b423e54e70d039da910d771fdf22132e59ff7bf7",
+  "publicSurfaceFingerprintPolicy": "v2-runtime-build-inputs",
+  "publicSurfaceFileCount": 154,
+  "captureMethod": "Fresh Playwright Chromium viewport captures of the exact Node 26 production build, paired with the complete 60-row responsive accessibility matrix. These exact captures were visually inspected while the unchanged-candidate matrix continued.",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "route": "/",
+          "name": "desktop",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "httpStatus": 200,
+          "sha256": "ed2ed1cab0fd460c88e17baf0c0df9755dccf7d65d3c61534e5f9c10558c24d0",
+          "file": "candidate-home-desktop.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
+        },
+        {
+          "route": "/",
+          "name": "mobile",
+          "requestedViewport": {
+            "width": 375,
+            "height": 812
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 812,
+          "httpStatus": 200,
+          "sha256": "7afa0d1b72e771a0c5e0bcbc8dec534043cf9c337a3e54733abaa968d2b5b02e",
+          "file": "candidate-home-viewport.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About - Jamie Burkart",
+      "h1Count": 1,
+      "screenshots": [
+        {
+          "route": "/about",
+          "name": "desktop-through-line",
+          "requestedViewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "pixelWidth": 1280,
+          "pixelHeight": 900,
+          "httpStatus": 200,
+          "sha256": "06711757e56bf06e021ecb43c1bdf036f7d07a052b2b1081518a274b1e7bffa5",
+          "file": "professor-lenses-about-desktop.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
+        },
+        {
+          "route": "/about",
+          "name": "mobile-through-line",
+          "requestedViewport": {
+            "width": 375,
+            "height": 1200
+          },
+          "pixelWidth": 375,
+          "pixelHeight": 1200,
+          "httpStatus": 200,
+          "sha256": "03ecf72d7f01f852a719c8a778935fbbff6690bf074c25528ccdeac7e07af048",
+          "file": "professor-lenses-about-mobile.png",
+          "capturedAt": "2026-10-13T17:19:12.174Z",
+          "pageErrors": []
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "verification": "Fresh home viewport and About through-line captures, complete responsive route matrix, and separate keyboard/mobile/reflow observations are bound to this public candidate. Human visual and accessibility approval remains separate.",
+  "browserDiagnostics": [],
+  "screenshotCapturedAt": "2026-10-13T17:19:12.174Z",
+  "visualInspection": {
+    "performed": true,
+    "observations": [
+      "Desktop and mobile homepage captures show the role, name, value statement, actions, photo caption, and credit without clipping or overlap.",
+      "Desktop and mobile About captures frame Systems people can inhabit and the stated recursive method beneath the sticky navigation.",
+      "A later duplicate capture produced during smooth scrolling was rejected; retained images are the inspected earlier captures of the identical public-surface fingerprint."
+    ],
+    "boundary": "Agent visual inspection is not human accessibility review, endorsement, or publication approval."
+  }
+}

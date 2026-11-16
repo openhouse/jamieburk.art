@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "2026-09-05-weekly-practice-review-rfc-hillclimb",
+  "rfc": 14,
+  "objective": "Turn comprehensive weekly evidence into a small commitment slate while preserving gathering purpose, voluntary agency, paid-work boundaries, privacy, and human authority.",
+  "eval_audit": {
+    "highest_impact_finding": {
+      "area": "pipeline-hygiene",
+      "status": "problem-exists",
+      "finding": "A weekly protocol intended to reduce burden proposed a 60-minute operator budget; all behavioral invariants passed while the reader-burden criterion failed.",
+      "fix": "Reduce the operator budget to 30 minutes without changing the one-page decision surface or any hard gate."
+    },
+    "error_analysis": {
+      "status": "bounded-synthetic-cases-present",
+      "finding": "The 17 cases encode observed project-specific failure modes: commitment proliferation, preservation-obligation collapse, purposeless gathering, inferred ownership, unpaid bespoke work, privacy leakage, automation overreach, and surveillance.",
+      "limitation": "Synthetic cases do not establish real-world usability; a separate human-reviewed two-week private canary remains required after acceptance."
+    },
+    "evaluator_design": {
+      "status": "ok",
+      "finding": "Objective policy boundaries use deterministic binary decisions and exact reason codes rather than an LLM judge or similarity metric."
+    },
+    "judge_validation": {
+      "status": "not-applicable-to-deterministic-gate",
+      "finding": "No LLM judge is used for this RFC gate. Future qualitative canary interpretation must not be presented as a calibrated judge without human labels."
+    },
+    "human_review": {
+      "status": "required",
+      "finding": "The evaluator can establish structural consistency but cannot accept the RFC, choose priorities, assign people, validate lived usefulness, or authorize publication."
+    },
+    "labeled_data": {
+      "status": "insufficient-for-effectiveness-claim",
+      "finding": "There are no completed real weekly cycles labeled for reduced mental load, improved closure, or distributed agency."
+    }
+  },
+  "baseline": {
+    "candidate_fingerprint": "91803c7d9f1f24153c25dc3a45f176e7437d8904b8e65b69fdb120ebca393883",
+    "score": 0.9,
+    "hard_failure_count": 0,
+    "scenario_pass_count": 17,
+    "scenario_total": 17,
+    "test_pass_count": 17,
+    "test_total": 18,
+    "lowest_scoring_criterion": "operator_review_budget",
+    "operator_budget_minutes": 60
+  },
+  "bounded_change": {
+    "description": "Reduce only the proposed weekly operator budget from 60 minutes to 30 minutes while retaining the one-page decision surface, three-commitment default, one-in-one-out admission, one governing verb, closure receipt, voluntary ownership, commercial boundary, three-plane information placement, and human gates.",
+    "files": [
+      "rfcs/0014-weekly-practice-review-and-commitment-protocol.md",
+      "rfcs/0014-weekly-practice-review-and-commitment-protocol.contract.json"
+    ]
+  },
+  "final_candidate": {
+    "candidate_fingerprint": "49b3bcf515519dd7b2fefa8cbeabe5769e83c3f5e6c71df81d5387fa68c4b19d",
+    "score": 1,
+    "hard_failure_count": 0,
+    "scenario_pass_count": 17,
+    "scenario_total": 17,
+    "test_pass_count": 18,
+    "test_total": 18,
+    "operator_budget_minutes": 30,
+    "implementation_authorized": false,
+    "adoption_authorized": false,
+    "publication_authorized": false
+  },
+  "decision": "keep",
+  "human_gates_remaining": [
+    "RFC acceptance",
+    "implementation authorization",
+    "private two-week canary authorization",
+    "other-person opt-in",
+    "collective decision authority",
+    "paid-work written authorization or bounded donation",
+    "public projection approval",
+    "merge",
+    "deployment",
+    "production indexing"
+  ]
+}

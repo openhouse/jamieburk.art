@@ -1,0 +1,80 @@
+[
+  {
+    "width": 375,
+    "state": "normal",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(26, 35, 43) none 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-375-normal.png"
+  },
+  {
+    "width": 375,
+    "state": "hover",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(26, 35, 43) none 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-375-hover.png"
+  },
+  {
+    "width": 375,
+    "state": "focus",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(209, 162, 63) solid 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-375-focus.png"
+  },
+  {
+    "width": 1280,
+    "state": "normal",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(26, 35, 43) none 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-1280-normal.png"
+  },
+  {
+    "width": 1280,
+    "state": "hover",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(26, 35, 43) none 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-1280-hover.png"
+  },
+  {
+    "width": 1280,
+    "state": "focus",
+    "color": "rgb(47, 111, 137)",
+    "background": "rgb(255, 255, 255)",
+    "border": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "outline": "rgb(209, 162, 63) solid 3px",
+    "href": "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "download": true,
+    "contrast": 5.59124505280645,
+    "screenshot": "resume-1280-focus.png"
+  }
+]

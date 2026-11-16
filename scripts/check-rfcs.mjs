@@ -4,6 +4,12 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import matter from "gray-matter";
+import { evaluateMinimumViableFederationRFC } from "./rfcs/minimum-viable-federation-eval.mjs";
+import { evaluatePrivateVaultSidecarRFC } from "./rfcs/private-vault-sidecar-eval.mjs";
+import { evaluatePublicEngagementPathwayRFC } from "./rfcs/public-engagement-pathway-eval.mjs";
+import { evaluateAudioKnowledgeWorkflowRFC } from "./rfcs/audio-to-knowledge-workflow-eval.mjs";
+import { evaluateWeeklyPracticeReviewRFC } from "./rfcs/weekly-practice-review-eval.mjs";
+import { evaluateIrlChangelogRFC } from "./rfcs/irl-changelog-eval.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rfcRoot = path.join(repoRoot, "rfcs");
@@ -122,10 +128,127 @@ for (const name of proposalFiles) {
   }
 }
 
+try {
+  const federationEvaluation = evaluateMinimumViableFederationRFC({ repoRoot });
+  for (const criterion of federationEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+      `minimum viable federation hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of federationEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+      `minimum viable federation scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0010-minimum-viable-federation-canary.md"),
+    `minimum viable federation evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const sidecarEvaluation = evaluatePrivateVaultSidecarRFC({ repoRoot });
+  for (const criterion of sidecarEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+      `private vault sidecar hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of sidecarEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+      `private vault sidecar scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0011-private-vault-sidecar.md"),
+    `private vault sidecar evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const pathwayEvaluation = evaluatePublicEngagementPathwayRFC({ repoRoot });
+  for (const criterion of pathwayEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of pathwayEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+      `public engagement pathway scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0012-public-engagement-pathway.md"),
+    `public engagement pathway evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const audioWorkflowEvaluation = evaluateAudioKnowledgeWorkflowRFC({ repoRoot });
+  for (const criterion of audioWorkflowEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+      `audio-to-knowledge workflow hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of audioWorkflowEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+      `audio-to-knowledge workflow scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0013-governed-audio-to-knowledge-workflow.md"),
+    `audio-to-knowledge workflow evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const weeklyReviewEvaluation = evaluateWeeklyPracticeReviewRFC({ repoRoot });
+  for (const criterion of weeklyReviewEvaluation.hard_failures) {
+    fail(
+      path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+      `weekly practice review hard criterion failed: ${criterion}`
+    );
+  }
+  for (const scenario of weeklyReviewEvaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(
+      path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+      `weekly practice review scenario failed: ${scenario.id}`
+    );
+  }
+} catch (error) {
+  fail(
+    path.join(rfcRoot, "0014-weekly-practice-review-and-commitment-protocol.md"),
+    `weekly practice review evaluation could not run: ${error.message}`
+  );
+}
+
+try {
+  const evaluation = evaluateIrlChangelogRFC({ repoRoot });
+  for (const scenario of evaluation.scenarios.results.filter((item) => !item.passed)) {
+    fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), `IRL semantic scenario failed: ${scenario.id}`);
+  }
+  if (!evaluation.passed) fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), "IRL review model failed");
+} catch (error) {
+  fail(path.join(rfcRoot, "0016-irl-changelog-graph-component.md"), `IRL evaluation could not run: ${error.message}`);
+}
+
 if (failures.length) {
   console.error("RFC check failed:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log(`RFC check passed: ${proposalFiles.length} numbered proposal(s), all indexed and structurally valid.`);
+console.log(
+  `RFC check passed: ${proposalFiles.length} numbered proposal(s), all indexed, structurally valid, and behaviorally checked.`
+);

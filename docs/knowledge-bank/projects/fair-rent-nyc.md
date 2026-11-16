@@ -5,8 +5,8 @@ kind: project
 status: maintained
 visibility: public-safe
 sensitivity: moderate
-last_reviewed: 2026-08-12
-review_by: 2026-09-19
+last_reviewed: 2026-10-18
+review_by: 2026-11-18
 canonical_path: docs/knowledge-bank/projects/fair-rent-nyc.md
 summary: Collective commercial-rent-stabilization campaign connecting cultural-space and small-business experience with legislative, legal, public-data, and organizing work.
 credit_scope: collective
@@ -65,6 +65,15 @@ City and state lanes remain aligned but not interchangeable. Report review is
 not report authorship. Public-official or staff coordination is not endorsement,
 enactment, or sole campaign leadership. The composite portfolio wording remains
 held for Jamie's review.
+
+## October 2026 delivery
+
+The [recent delivery review](../research-runs/recent-delivery-2026-10-18.md)
+adds two bounded examples to the case study: the production guide delivered
+before the October 5 Wonderville meeting, and the listening-session animation
+observed in Lin Tyrpien's published article by October 3. The later records
+advance these particular items beyond planning, without revising unrelated
+historical claims or clearing the underlying media for reuse.
 
 ## Boundary
 
