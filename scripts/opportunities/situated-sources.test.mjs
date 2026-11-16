@@ -71,6 +71,25 @@ test('maximum salary below the requested floor is excluded', () => {
 test('a salary band spanning the floor is not a guaranteed qualifying offer', () => {
   assert.ok(screenCandidate(candidate, '2026-08-30').reasons.includes('salary-offer-needs-confirmation'));
 });
+test('ceiling-only compensation stays on hold even with all other screens confirmed', () => {
+  const job = { ...candidate, eligibility: 'confirmed', salaryMin: 105000, salaryMax: 110000 };
+  const review = screenCandidate(job, '2026-08-30', { salaryFloor: 110000 });
+  assert.equal(review.state, 'review-needed');
+  assert.equal(review.llmEligible, false);
+  assert.deepEqual(review.reasons, ['salary-only-at-ceiling']);
+  assert.deepEqual(screenCandidate(job, '2026-08-30', { salaryFloor: 109999 }).reasons, ['salary-offer-needs-confirmation']);
+  assert.equal(screenCandidate(job, '2026-08-30', { salaryFloor: 110001 }).state, 'excluded');
+  assert.equal(screenCandidate({ ...job, salaryMin: 110000 }, '2026-08-30', { salaryFloor: 110000 }).state, 'review-ready');
+});
+test('an invalid configured salary floor cannot promote a candidate', () => {
+  const job = { ...candidate, eligibility: 'confirmed' };
+  for (const salaryFloor of [NaN, -1, '100000', null]) {
+    const review = screenCandidate(job, '2026-08-30', { salaryFloor });
+    assert.equal(review.state, 'review-needed');
+    assert.equal(review.llmEligible, false);
+    assert.ok(review.reasons.includes('salary-policy-needs-confirmation'));
+  }
+});
 test('unresolved civil-service eligibility holds promotion and costly reader work', () => {
   const result = screenCandidate(candidate, '2026-08-30');
   assert.equal(result.state, 'review-needed');

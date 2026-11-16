@@ -41,9 +41,12 @@ export function screenCandidate(job, asOf, { salaryFloor = 100000, fitFloor = 85
   if (!date(asOf)) throw new Error('A valid explicit review date is required');
   if (!date(job.deadline)) unknowns.push('deadline-needs-confirmation');
   else if (job.deadline < asOf) exclusions.push('expired');
-  if (job.annualSalary !== true || !Number.isFinite(job.salaryMin) || !Number.isFinite(job.salaryMax) || job.salaryMin > job.salaryMax) unknowns.push('salary-needs-confirmation');
+  if (!Number.isFinite(salaryFloor) || salaryFloor <= 0) unknowns.push('salary-policy-needs-confirmation');
+  else if (job.annualSalary !== true || !Number.isFinite(job.salaryMin) || !Number.isFinite(job.salaryMax) || job.salaryMin > job.salaryMax) unknowns.push('salary-needs-confirmation');
   else if (job.salaryMax < salaryFloor) exclusions.push('salary-below-floor');
-  else if (job.salaryMin < salaryFloor) unknowns.push('salary-offer-needs-confirmation');
+  else if (job.salaryMin < salaryFloor) {
+    unknowns.push(job.salaryMax === salaryFloor ? 'salary-only-at-ceiling' : 'salary-offer-needs-confirmation');
+  }
   if (job.locationFit === false) exclusions.push('location-mismatch');
   else if (job.locationFit !== true) unknowns.push('location-needs-confirmation');
   if (job.eligibility === 'ineligible') exclusions.push('qualification-mismatch');

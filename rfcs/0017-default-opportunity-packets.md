@@ -40,6 +40,13 @@ Admission means a preparation job exists. Readiness means its evidence checks ha
 
 `scripts/opportunity-packets.mjs` defines one ten-stage method. `wiki:graph` admits all graph opportunity nodes to `reports/opportunity-packets.json`. Repeated identities merge provenance; changed source bytes invalidate reviews. Historical or withdrawn roles remain visible. Unknown types route to classification instead of generating meaningless résumés. An authorized private worker can consume public-safe admissions without introducing a public dependency on private storage.
 
+For situated candidate review, a salary ceiling below the required floor excludes
+a role. When only the top of the posted band meets the floor, retain an explicit
+ceiling-only hold, even when every other screen passes. A wider band that spans
+the floor still requires compensation confirmation. An absent or invalid
+compensation policy cannot clear the screen. Discovery admission and a posting
+range never establish the applicant's actual offer.
+
 Stages cover official research, eligibility/evidence, current voice, tailored Markdown, preflight, fictional reader review, bounded revision, native Docs, inspected PDF export, and human handoff. Native documents and model reviews require real connected operations; the deterministic engine does not pretend to perform them.
 
 ## Security and privacy
