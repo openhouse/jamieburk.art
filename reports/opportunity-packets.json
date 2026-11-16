@@ -3,6 +3,35 @@
   "method": "oti-evidence-first-v1",
   "packets": [
     {
+      "id": "nyc-mayor-810408",
+      "title": "NYC Mayor's Office — Data and Civic Innovation Analyst 810408",
+      "method": "oti-evidence-first-v1",
+      "sources": [
+        {
+          "path": "docs/knowledge-bank/opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+          "sha256": "2107aa6c9a77d59c4c050cd23df0d845b40f7e01bea7b4154be48787480228a8"
+        }
+      ],
+      "source_hash": "0c4a021f872f30951f1f316ffc600fd9f21733ef22c715f4f66560f346a90ece",
+      "required_stages": [
+        "official-posting-and-form",
+        "eligibility-and-evidence",
+        "current-writer-voice",
+        "tailored-markdown",
+        "deterministic-preflight",
+        "fictional-reader-review",
+        "bounded-revision-and-retest",
+        "native-google-docs",
+        "pdf-export-and-all-page-review",
+        "field-guide-and-human-handoff"
+      ],
+      "suspended": null,
+      "next_action": "official-posting-and-form",
+      "ready": false,
+      "submission_authorized": false,
+      "publication_authorized": false
+    },
+    {
       "id": "nyc-oti-cec-797003",
       "title": "NYC OTI / Civic Engagement Commission — Programs Project Manager 797003",
       "method": "oti-evidence-first-v1",

@@ -1,15 +1,15 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Knowledge Wiki graph delta
 
-**Source commit:** `97885e6455f68e3cecd30808faa1379d3d960c3b`
-**Generation time:** 2026-10-18T19:05:43-04:00
-**Source fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
+**Source commit:** `75b57df7ae928278405e3f099128030cb202ac0e`
+**Generation time:** 2026-11-16T13:48:17-05:00
+**Source fingerprint:** `904c09bd8a2b2fabd72888697be62c8e017d5fd52b3a0f4bf20c950be21f0c76`
 
 Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28f57e9022c11a81`.
 
-- Nodes added: 91
+- Nodes added: 93
 - Nodes removed: 0
-- Edges added: 366
+- Edges added: 371
 - Edges removed: 8
 - New type-aware orphans: 0
 - Current rights-review records: 185
@@ -29,6 +29,7 @@ Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28
 - `method.civic-match-opportunity-loop`
 - `method.private-application-status-loop`
 - `opportunity.circle-o.operations-manager.2026`
+- `opportunity.nyc-mayor.data-civic-innovation-analyst.810408`
 - `opportunity.nyc-oti.cec-programs-project-manager.797003`
 - `opportunity.nyc-oti.pit-senior-product-designer.782373`
 - `opportunity.nyc-oti.product-manager.784450`
@@ -81,6 +82,7 @@ Compared with the graph artifact at immutable commit `a8fdd57617c3667ac4d9db7d28
 - `source.circle-o.open-positions.2026`
 - `source.circle-o.operations-manager-application.2026`
 - `source.civic-match.candidate-network`
+- `source.jobs.nyc-mayor.data-civic-innovation-analyst.810408`
 - `source.jobs.oti.cec-programs-project-manager.797003`
 - `source.jobs.oti.executive-director-product-management.789563`
 - `source.jobs.oti.pit-senior-product-designer.782373`

@@ -1,9 +1,9 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Backlinks to Technical Operations
 
-**Source commit:** `97885e6455f68e3cecd30808faa1379d3d960c3b`
-**Generation time:** 2026-10-18T19:05:43-04:00
-**Source fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
+**Source commit:** `75b57df7ae928278405e3f099128030cb202ac0e`
+**Generation time:** 2026-11-16T13:48:17-05:00
+**Source fingerprint:** `904c09bd8a2b2fabd72888697be62c8e017d5fd52b3a0f4bf20c950be21f0c76`
 
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `prose_link` (markdown)
 - [NYC OTI Senior Product Manager 782366 application milestone](../../applications/nyc-oti-senior-product-manager-782366.md) - `related_to` (frontmatter)
@@ -24,6 +24,7 @@
 - [Benepass - Product Operations Manager](../../opportunities/benepass-product-operations.md) - `related_to` (frontmatter)
 - [CodePath - Senior Program Manager, Claude Corps](../../opportunities/codepath-claude-corps.md) - `related_to` (frontmatter)
 - [CodePath - Engineering Project Manager](../../opportunities/codepath-engineering-project-manager.md) - `related_to` (frontmatter)
+- [NYC Mayor's Office — Data and Civic Innovation Analyst 810408](../../opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md) - `related_to` (frontmatter)
 - [NYC OTI / Civic Engagement Commission — Programs Project Manager 797003](../../opportunities/oti-cec-programs-project-manager-797003.md) - `related_to` (frontmatter)
 - [NYC OTI - Product Manager 784450](../../opportunities/oti-product-manager-784450.md) - `related_to` (frontmatter)
 - [NYC OTI - PIT Crew Senior Product Manager 782366](../../opportunities/oti-senior-product-manager-782366.md) - `related_to` (frontmatter)

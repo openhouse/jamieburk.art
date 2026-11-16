@@ -1,7 +1,7 @@
 <!-- GENERATED FILE. DO NOT EDIT. -->
 # Opportunity requirement coverage
 
-**Wiki fingerprint:** `8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b`
+**Wiki fingerprint:** `904c09bd8a2b2fabd72888697be62c8e017d5fd52b3a0f4bf20c950be21f0c76`
 
 Statuses preserve the difference between visible proof, Wiki-only proof, source work, experience gaps, and hard screens.
 
@@ -69,6 +69,13 @@ Statuses preserve the difference between visible proof, Wiki-only proof, source 
 | `requirement.codepath.technical-test-fluency` | critical | source-needed | source | Verify current hands-on evidence and prepare a bounded technical demonstration if supportable. |
 | `requirement.codepath.proportionate-process` | critical | visible-proven | none | Explain one instance of intentionally removing or declining process. |
 | `requirement.codepath.ai-automation` | important | visible-qualified | wording | Demonstrate one measured automation loop tied to delivery or QA. |
+
+## NYC Mayor's Office — Data and Civic Innovation Analyst 810408
+
+| Requirement | Importance | Status | Gap | Next action |
+|---|---|---|---|---|
+| `requirement.nyc-mayor-810408.analysis` | critical | source-needed | source | Inspect a directly relevant analysis with a traceable dataset and method. |
+| `requirement.nyc-mayor-810408.handoff` | important | source-needed | source | Inspect a dated workflow and handoff example for its actual actor and outcome. |
 
 ## NYC OTI / Civic Engagement Commission — Programs Project Manager 797003
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T19:05:43-04:00",
-  "sourceCommit": "97885e6455f68e3cecd30808faa1379d3d960c3b",
-  "sourceFingerprint": "8eb84a60ec1e192ea62987c78575225362add0b287c81a7ac3c8f0b12faa3c9b",
+  "generatedAt": "2026-11-16T13:48:17-05:00",
+  "sourceCommit": "75b57df7ae928278405e3f099128030cb202ac0e",
+  "sourceFingerprint": "904c09bd8a2b2fabd72888697be62c8e017d5fd52b3a0f4bf20c950be21f0c76",
   "rootId": "index.knowledge-wiki",
   "nodes": [
     {
@@ -4016,6 +4016,19 @@
       "reviewBy": "2026-08-16"
     },
     {
+      "id": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "path": "docs/knowledge-bank/opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "title": "NYC Mayor's Office — Data and Civic Innovation Analyst 810408",
+      "kind": "opportunity",
+      "status": "governed-open",
+      "visibility": "public-safe",
+      "sensitivity": "low",
+      "summary": "Supports municipal research, data visualization, process mapping, pilots and agency handoffs from the Innovation Team.",
+      "aliases": [],
+      "lastReviewed": "2026-11-16",
+      "reviewBy": "2026-11-30"
+    },
+    {
       "id": "opportunity.nyc-oti.cec-programs-project-manager.797003",
       "path": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
       "title": "NYC OTI / Civic Engagement Commission — Programs Project Manager 797003",
@@ -5726,6 +5739,19 @@
       "aliases": [],
       "lastReviewed": "2026-08-13",
       "reviewBy": "2026-08-16"
+    },
+    {
+      "id": "source.jobs.nyc-mayor.data-civic-innovation-analyst.810408",
+      "path": "docs/knowledge-bank/sources/jobs-nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "title": "NYC City Jobs — Data and Civic Innovation Analyst 810408",
+      "kind": "source",
+      "status": "maintained",
+      "visibility": "public",
+      "sensitivity": "low",
+      "summary": "Exact City job identifier, terms, I-team remit and two qualification sections; application entry observed but full form unverified.",
+      "aliases": [],
+      "lastReviewed": "2026-11-16",
+      "reviewBy": "2026-11-30"
     },
     {
       "id": "source.jobs.oti.cec-programs-project-manager.797003",
@@ -14560,6 +14586,14 @@
     {
       "from": "index.knowledge-wiki.employment-context",
       "type": "related_to",
+      "to": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "source": "frontmatter",
+      "href": "../opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "context": "Public source record for analysis and prototype handoffs in the Mayor's Office Innovation Team."
+    },
+    {
+      "from": "index.knowledge-wiki.employment-context",
+      "type": "related_to",
       "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
       "source": "frontmatter",
       "href": "../opportunities/oti-cec-programs-project-manager-797003.md",
@@ -17171,6 +17205,36 @@
       "to": "source.jobs.codepath.engineering-project-manager.5160542007",
       "source": "frontmatter",
       "href": "../sources/jobs-codepath-engineering-project-manager-5160542007.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "type": "evidence:direct-support",
+      "to": "source.jobs.nyc-mayor.data-civic-innovation-analyst.810408",
+      "source": "evidence",
+      "confidence": "high",
+      "supports": [
+        "identity",
+        "terms",
+        "role responsibilities",
+        "qualification wording",
+        "résumé and cover-letter requirement"
+      ]
+    },
+    {
+      "from": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "type": "related_to",
+      "to": "capability.technical-operations",
+      "source": "frontmatter",
+      "href": "../capabilities/technical-operations.md",
+      "context": null
+    },
+    {
+      "from": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "type": "uses_source",
+      "to": "source.jobs.nyc-mayor.data-civic-innovation-analyst.810408",
+      "source": "frontmatter",
+      "href": "../sources/jobs-nyc-mayor-data-civic-innovation-analyst-810408.md",
       "context": null
     },
     {
@@ -21426,6 +21490,14 @@
       "context": null
     },
     {
+      "from": "source.jobs.nyc-mayor.data-civic-innovation-analyst.810408",
+      "type": "supports",
+      "to": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "source": "frontmatter",
+      "href": "../opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "context": null
+    },
+    {
       "from": "source.jobs.oti.cec-programs-project-manager.797003",
       "type": "supports",
       "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
@@ -24179,7 +24251,7 @@
       "toPath": "docs/knowledge-bank/evaluations/named-public-reader-acceptance-2026-08-13.md",
       "to": "evaluation.named-public-reader-acceptance.2026-08-13",
       "fragment": null,
-      "line": 116,
+      "line": 120,
       "kind": "link"
     },
     {
@@ -24188,7 +24260,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-technical-operations.md",
       "to": "opportunity.nyc-oti.technical-operations-manager.782369",
       "fragment": null,
-      "line": 122,
+      "line": 126,
       "kind": "link"
     },
     {
@@ -24197,14 +24269,14 @@
       "toPath": "docs/knowledge-bank/opportunities/uibk-studio3-postdoc-arch-15927.md",
       "to": "opportunity.uibk.studio3.postdoc.arch-15927",
       "fragment": null,
-      "line": 131,
+      "line": 135,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
-      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
+      "toPath": "docs/knowledge-bank/opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "to": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
       "fragment": null,
       "line": 14,
       "kind": "link"
@@ -24215,7 +24287,7 @@
       "toPath": "docs/knowledge-bank/opportunities/aclu-product-discovery.md",
       "to": "opportunity.aclu.product-manager-discovery.8482872002",
       "fragment": null,
-      "line": 144,
+      "line": 148,
       "kind": "link"
     },
     {
@@ -24224,7 +24296,7 @@
       "toPath": "docs/knowledge-bank/opportunities/codepath-claude-corps.md",
       "to": "opportunity.codepath.claude-corps.5182020007",
       "fragment": null,
-      "line": 145,
+      "line": 149,
       "kind": "link"
     },
     {
@@ -24233,7 +24305,7 @@
       "toPath": "docs/knowledge-bank/opportunities/asana-ai-implementation.md",
       "to": "opportunity.asana.ai-implementation.8027437",
       "fragment": null,
-      "line": 146,
+      "line": 150,
       "kind": "link"
     },
     {
@@ -24242,16 +24314,7 @@
       "toPath": "docs/knowledge-bank/opportunities/permitflow-product-operations.md",
       "to": "opportunity.permitflow.product-operations.8a6e6066",
       "fragment": null,
-      "line": 147,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
-      "to": "opportunity.circle-o.operations-manager.2026",
-      "fragment": null,
-      "line": 15,
+      "line": 151,
       "kind": "link"
     },
     {
@@ -24260,25 +24323,16 @@
       "toPath": "docs/knowledge-bank/opportunities/source-backed-team-memory.md",
       "to": "opportunity.protected.source-backed-memory-consulting.2026",
       "fragment": null,
-      "line": 151,
+      "line": 155,
       "kind": "link"
     },
     {
       "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
       "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
-      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "toPath": "docs/knowledge-bank/opportunities/oti-cec-programs-project-manager-797003.md",
+      "to": "opportunity.nyc-oti.cec-programs-project-manager.797003",
       "fragment": null,
-      "line": 16,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
-      "to": "opportunity.aclu.senior-project-manager.8620968002",
-      "fragment": null,
-      "line": 17,
+      "line": 18,
       "kind": "link"
     },
     {
@@ -24287,7 +24341,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-context-coverage-2026-07-18.md",
       "to": "evaluation.employment-context.coverage.2026-07-18",
       "fragment": null,
-      "line": 177,
+      "line": 181,
       "kind": "link"
     },
     {
@@ -24296,7 +24350,7 @@
       "toPath": "docs/knowledge-bank/evaluations/employment-leadership-context-2026-08-13.md",
       "to": "evaluation.employment-leadership-context.2026-08-13",
       "fragment": null,
-      "line": 178,
+      "line": 182,
       "kind": "link"
     },
     {
@@ -24305,16 +24359,7 @@
       "toPath": "reports/wiki-opportunity-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 179,
-      "kind": "link"
-    },
-    {
-      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
-      "from": "index.knowledge-wiki.employment-context",
-      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
-      "to": "opportunity.benepass.product-operations.7f963a7a",
-      "fragment": null,
-      "line": 18,
+      "line": 183,
       "kind": "link"
     },
     {
@@ -24323,7 +24368,7 @@
       "toPath": "reports/wiki-career-trajectory-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 180,
+      "line": 184,
       "kind": "link"
     },
     {
@@ -24332,7 +24377,7 @@
       "toPath": "reports/wiki-source-channel-coverage.md",
       "to": null,
       "fragment": null,
-      "line": 181,
+      "line": 185,
       "kind": "link"
     },
     {
@@ -24341,7 +24386,7 @@
       "toPath": "reports/wiki-opportunity-discovery.md",
       "to": null,
       "fragment": null,
-      "line": 182,
+      "line": 186,
       "kind": "link"
     },
     {
@@ -24350,7 +24395,7 @@
       "toPath": "reports/hiring-acceptance-public.md",
       "to": null,
       "fragment": null,
-      "line": 183,
+      "line": 187,
       "kind": "link"
     },
     {
@@ -24359,7 +24404,43 @@
       "toPath": "reports/hiring-acceptance-gap-resolution.md",
       "to": null,
       "fragment": null,
-      "line": 184,
+      "line": 188,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/circle-o-operations-manager-2026.md",
+      "to": "opportunity.circle-o.operations-manager.2026",
+      "fragment": null,
+      "line": 19,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/codepath-engineering-project-manager.md",
+      "to": "opportunity.codepath.engineering-project-manager.5160542007",
+      "fragment": null,
+      "line": 20,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/aclu-senior-project-manager.md",
+      "to": "opportunity.aclu.senior-project-manager.8620968002",
+      "fragment": null,
+      "line": 21,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/indexes/employment-context.md",
+      "from": "index.knowledge-wiki.employment-context",
+      "toPath": "docs/knowledge-bank/opportunities/benepass-product-operations.md",
+      "to": "opportunity.benepass.product-operations.7f963a7a",
+      "fragment": null,
+      "line": 22,
       "kind": "link"
     },
     {
@@ -24368,7 +24449,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-senior-product-manager-782366.md",
       "to": "opportunity.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 19,
+      "line": 23,
       "kind": "link"
     },
     {
@@ -24377,7 +24458,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-speed-operations-manager-789810.md",
       "to": "opportunity.nyc-oti.speed-operations-manager.789810",
       "fragment": null,
-      "line": 20,
+      "line": 24,
       "kind": "link"
     },
     {
@@ -24386,7 +24467,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-product-manager-784450.md",
       "to": "opportunity.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 21,
+      "line": 25,
       "kind": "link"
     },
     {
@@ -24395,7 +24476,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-speed-senior-product-manager-789610.md",
       "to": "opportunity.nyc-oti.speed-senior-product-manager.789610",
       "fragment": null,
-      "line": 22,
+      "line": 26,
       "kind": "link"
     },
     {
@@ -24404,7 +24485,7 @@
       "toPath": "docs/knowledge-bank/opportunities/oti-pit-senior-product-designer-782373.md",
       "to": "opportunity.nyc-oti.pit-senior-product-designer.782373",
       "fragment": null,
-      "line": 23,
+      "line": 27,
       "kind": "link"
     },
     {
@@ -24413,7 +24494,7 @@
       "toPath": "docs/knowledge-bank/opportunities/peu-chief-strategy-officer-787960.md",
       "to": "opportunity.nyc-peu.chief-strategy-officer.787960",
       "fragment": null,
-      "line": 24,
+      "line": 28,
       "kind": "link"
     },
     {
@@ -24422,7 +24503,7 @@
       "toPath": "docs/knowledge-bank/organizations/nyc-public-engagement-unit.md",
       "to": "organization.nyc-public-engagement-unit",
       "fragment": null,
-      "line": 25,
+      "line": 29,
       "kind": "link"
     },
     {
@@ -24431,7 +24512,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-oti-product-management-ranking-2026-08-20.md",
       "to": "research.nyc-oti-product-management-ranking.2026-08-20",
       "fragment": null,
-      "line": 33,
+      "line": 37,
       "kind": "link"
     },
     {
@@ -24440,7 +24521,7 @@
       "toPath": "docs/knowledge-bank/sources/betanyc-civic-tech-newsletter-2026-08-20.md",
       "to": "source.betanyc.civic-tech-newsletter",
       "fragment": null,
-      "line": 47,
+      "line": 51,
       "kind": "link"
     },
     {
@@ -24449,7 +24530,7 @@
       "toPath": "docs/knowledge-bank/research-runs/nyc-jobs-citywide-monitor-2026-08-20.md",
       "to": "research.nyc-jobs.citywide-monitor.2026-08-20",
       "fragment": null,
-      "line": 69,
+      "line": 73,
       "kind": "link"
     },
     {
@@ -24458,7 +24539,7 @@
       "toPath": "docs/knowledge-bank/methods/civic-match-opportunity-loop.md",
       "to": "method.civic-match-opportunity-loop",
       "fragment": null,
-      "line": 78,
+      "line": 82,
       "kind": "link"
     },
     {
@@ -24467,7 +24548,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-senior-product-manager-782366.md",
       "to": "application.nyc-oti.senior-product-manager.782366",
       "fragment": null,
-      "line": 89,
+      "line": 93,
       "kind": "link"
     },
     {
@@ -24476,7 +24557,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-product-manager-784450.md",
       "to": "application.nyc-oti.product-manager.784450",
       "fragment": null,
-      "line": 90,
+      "line": 94,
       "kind": "link"
     },
     {
@@ -24485,7 +24566,7 @@
       "toPath": "docs/knowledge-bank/applications/nyc-oti-speed-operations-manager-789810.md",
       "to": "application.nyc-oti.speed-operations-manager.789810",
       "fragment": null,
-      "line": 91,
+      "line": 95,
       "kind": "link"
     },
     {
@@ -26457,6 +26538,15 @@
       "to": "source.codepath.leadership.2026",
       "fragment": null,
       "line": 13,
+      "kind": "link"
+    },
+    {
+      "fromPath": "docs/knowledge-bank/opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "from": "opportunity.nyc-mayor.data-civic-innovation-analyst.810408",
+      "toPath": "docs/knowledge-bank/sources/jobs-nyc-mayor-data-civic-innovation-analyst-810408.md",
+      "to": "source.jobs.nyc-mayor.data-civic-innovation-analyst.810408",
+      "fragment": null,
+      "line": 4,
       "kind": "link"
     },
     {
