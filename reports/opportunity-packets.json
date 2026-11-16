@@ -9,10 +9,10 @@
       "sources": [
         {
           "path": "docs/knowledge-bank/opportunities/nyc-mayor-data-civic-innovation-analyst-810408.md",
-          "sha256": "2107aa6c9a77d59c4c050cd23df0d845b40f7e01bea7b4154be48787480228a8"
+          "sha256": "d49562c0d5dce2d3726242e12df2a4b86bd821fbc2dda1c39778999886fd75b4"
         }
       ],
-      "source_hash": "0c4a021f872f30951f1f316ffc600fd9f21733ef22c715f4f66560f346a90ece",
+      "source_hash": "1ae2899ab57aab828b88f621ee8a9414352ae7d11ddf3b0263e37fd13205fa3c",
       "required_stages": [
         "official-posting-and-form",
         "eligibility-and-evidence",
