@@ -1,27 +1,25 @@
-# BetaNYC opportunity review — 2026-10-13
+# BetaNYC opportunity review — 2026-11-16
 
-Source: [This week in NYC’s #CivicTech – October 9, 2026](https://www.beta.nyc/2026/10/09/newsletter-2026-week41/)
+Source: [This week in NYC’s #CivicTech – November 12, 2026](https://www.beta.nyc/2026/11/12/newsletter-2026-week46/)
 
-The issue surfaced 19 leads. 1 cleared the maintained strong-match gate. Promotion is provisional only; official-posting, named-reader, and human review remain required.
+The issue surfaced 17 leads. 0 cleared the maintained strong-match gate. Promotion is provisional only; official-posting, named-reader, and human review remain required.
 
 | Rank | Role | Organization | Fit | Secure | Composite | Disposition |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 1 | Project Manager | NYC Employees’ Retirement System | 79 | 78 | 78.55 | provisional-strong-match |
-| 2 | Project Manager | NYC Department of Environmental Protection | 53 | 68 | 59.75 | not-promoted |
-| 3 | Public Safety Master Scheduler | NYC Office of Technology and Innovation | 39 | 63 | 49.8 | not-promoted |
-| 4 | Program Lead, Data Systems & Counts Management | NYC Department of Transportation | 49 | 48 | 48.55 | not-promoted |
-| 5 | Data Scientist | NYC Department of Transportation | 47 | 48 | 47.45 | not-promoted |
-| 6 | Deputy Commissioner for Policy and External Affairs | NYC Taxi & Limousine Commission | 41 | 40 | 40.55 | not-promoted |
-| — | Data Analyst | Benchmark Analytics | — | — | — | official-verification-required |
-| — | Design Researcher, bilingual English and Spanish | Superbloom | — | — | — | official-verification-required |
-| — | Digital and Communications Manager | NY Renews | — | — | — | official-verification-required |
-| — | Director, Digital Strategy, Communications | Vera Institute of Justice | — | — | — | official-verification-required |
-| — | Environmental Tech Lab 2026-27 challenge | NYC Department of Environmental Protection and Partnership Fund for New York City | — | — | — | official-verification-required |
-| — | Facilitation services for the Interagency Task Force for Public Realm Private Partner Support (RFP) | City Parks Foundation | — | — | — | official-verification-required |
-| — | Instructional Design Specialist | Constructive Dialogue Institute | — | — | — | official-verification-required |
-| — | Multimedia Production Program Manager | NYS Department of Environmental Conservation | — | — | — | official-verification-required |
-| — | Open call for proposals | Atlassian Foundation | — | — | — | official-verification-required |
-| — | Policy & Research Analyst | Times Square Alliance | — | — | — | official-verification-required |
-| — | Product Designer | Frontline Education | — | — | — | official-verification-required |
-| — | Program Manager, Data and AI | Bloomberg Philanthropies | — | — | — | official-verification-required |
-| — | Senior Web Designer | Madeo Studio | — | — | — | official-verification-required |
+| 1 | Program Manager | Manhattan District Attorney’s Office | 97 | 75 | 87.1 | not-promoted |
+| 2 | GIS and Data Manager | NYC Department of Transportation | 69 | 48 | 59.55 | not-promoted |
+| 3 | Project Coordinator, School Safety | NYC Department of Transportation | 57 | 55 | 56.1 | not-promoted |
+| 4 | Senior Programmer Analyst | NYC Department of Social Services | 39 | 58 | 47.55 | not-promoted |
+| 5 | Wiretap Specialist | Bronx District Attorney’s Office | 35 | 55 | 44 | not-promoted |
+| 6 | Community Organizing and Engagement Intern | NYC Commission on Racial Equity | 37 | 40 | 38.35 | not-promoted |
+| 7 | Data Content Analyst II | Bronx District Attorney’s Office | 37 | 40 | 38.35 | not-promoted |
+| 8 | Senior Advisor to the Chief Information Officer | NYC Department of Environmental Protection | 39 | 33 | 36.3 | not-promoted |
+| 9 | Chief Information Officer | NYC Department of Buildings | 27 | 35 | 30.6 | not-promoted |
+| — | 2027 PiTech Impact Studio partners | Cornell Tech | — | — | — | official-verification-required |
+| — | Claude Corps fellowship | CodePath | — | — | — | official-verification-required |
+| — | Digital Mobilization Lead | Human Impacts Institute | — | — | — | official-verification-required |
+| — | Distinguished Lecturer, Data and Society | CUNY Macaulay Honors College | — | — | — | official-verification-required |
+| — | FOSDEM 2027 main track talks | FOSDEM | — | — | — | official-verification-required |
+| — | Movement Sustainability Lead | Human Impacts Institute | — | — | — | official-verification-required |
+| — | Open roles, all remote | Nava PBC | — | — | — | official-verification-required |
+| — | Open Source Design devroom talks | Open Source Design, FOSDEM 2027 | — | — | — | official-verification-required |
